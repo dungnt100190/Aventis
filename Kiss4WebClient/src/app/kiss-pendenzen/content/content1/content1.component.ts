@@ -12,7 +12,9 @@ import { PenService } from '../../pen.service';
   providers: [PenService],
 })
 export class Content1Component {
-
+  content1: any;
+  gridBox_displayExpr: '';
+  now: string;
   gridDataSource: any;
   _gridBoxValue: number[] = [3];
   _gridSelectedRowKeys: number[] = [3];
