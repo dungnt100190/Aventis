@@ -40,8 +40,9 @@ namespace Kiss4Web.IdentityServer
                         IdentityServerConstants.StandardScopes.Email,
                         IdentityServerConstants.StandardScopes.Address,
                         "api"
-                    }
-                }
+                    },
+					AllowedCorsOrigins = new List<string>{"http://localhost:4300"}
+				}
             };
         }
     }

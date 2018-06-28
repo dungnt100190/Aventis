@@ -154,19 +154,19 @@ namespace Kiss4Web
             services.AddSingleton(x => _container.GetInstance<IExceptionTranslator>());
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             var httpsCertificate = new X509Certificate2("localhost.pfx", "TFHbiWtjzrraFBwAWvTWLjyfNhtdTogTJzPQQWcnBqGyBXUbANniJUQswwpnJzWe");
-            services.Configure<KestrelServerOptions>(o =>
-            {
-                o.AddServerHeader = false;
-                o.Listen(IPAddress.Any, 80);
-                o.Listen(IPAddress.Any, 443, listenOptions => listenOptions.UseHttps(httpsCertificate));
-            });
+            //services.Configure<KestrelServerOptions>(o =>
+            //{
+            //    o.AddServerHeader = false;
+            //    o.Listen(IPAddress.Any, 80);
+            //    //o.Listen(IPAddress.Any, 443, listenOptions => listenOptions.UseHttps(httpsCertificate));
+            //});
             services.AddMemoryCache();
             services.AddDevExpressControls();
             var mvcBuilder = services
                 .AddMvc(options =>
                 {
-                    options.SslPort = 443;
-                    options.Filters.Add(new RequireHttpsAttribute());
+                    //options.SslPort = 443;
+                    //options.Filters.Add(new RequireHttpsAttribute());
                     options.Filters.Add(typeof(RootExceptionFilterAttribute));
                     //options.Filters.Add(new AuthorizeFilter(defaultPolicy));
                 })

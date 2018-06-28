@@ -1,7 +1,7 @@
 {
   "api": {
     "baseUrl": "/",
-    "baseUrlToken": "https://identityserver.aventis.website"
+    "baseUrlToken": "http://localhost:5000"
   },
   "paths": {
     "imagesRoot": "/assets/images/",
