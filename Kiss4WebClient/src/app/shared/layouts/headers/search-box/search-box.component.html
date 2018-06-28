@@ -1,0 +1,13 @@
+<div id="searchBoxData">
+    <dx-select-box 
+        [(items)]="searchBoxsData" 
+        valueExpr="ID"
+        placeholder="Suchen..."
+        displayExpr="Name"
+        width="450px"
+        [searchEnabled]="true">
+        <div *dxTemplate="let data of 'dropDownButton'">
+            <img src="/assets/icon/search.png" class="custom-icon" />
+        </div>
+    </dx-select-box>
+</div>

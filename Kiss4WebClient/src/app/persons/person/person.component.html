@@ -1,0 +1,17 @@
+<app-layout [isNavbar]="true">
+    <div class="layout-content">
+        <app-left-sidebar [isNavbar]="true">
+                <app-selected-actions 
+                [selectedActions]="personsSandbox.selectedAction$ | async" 
+                (onItemClick)="onClickSelectAction($event.itemData)"
+                (onDeleteClick)="onDeleteSelectAction($event.itemData)">
+                </app-selected-actions>
+
+        </app-left-sidebar>
+
+        <section id="wrapper-content">
+            <router-outlet></router-outlet>
+        </section>
+    </div>
+
+</app-layout>

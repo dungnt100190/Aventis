@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevExpress.AspNetCore.Reporting" Version="18.1.3-ctp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Kiss4Web.Infrastructure.Authentication\Kiss4Web.Infrastructure.Authentication.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Infrastructure.DataAccess\Kiss4Web.Infrastructure.DataAccess.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Infrastructure.ErrorHandling\Kiss4Web.Infrastructure.ErrorHandling.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Infrastructure.I18N\Kiss4Web.Infrastructure.I18N.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Infrastructure.Mediator\Kiss4Web.Infrastructure.Mediator.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Model\Kiss4Web.Model.csproj" />
+  </ItemGroup>
+
+</Project>

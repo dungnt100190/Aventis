@@ -1,0 +1,21 @@
+.error-wrapper {
+    .error-label {
+        color: $color-redLight;
+    }
+}
+
+a {
+    color: $color-base;
+    &:hover {
+        color: $color-base-hover;
+    }
+}
+
+.display-none {
+    display: none;
+    visibility: hidden;
+}
+
+.float-right {
+    float: right!important;
+}

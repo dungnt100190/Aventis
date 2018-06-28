@@ -1,0 +1,68 @@
+{
+  "api": {
+    "baseUrl": "https://api.aventis.website/",
+    "baseUrlToken": "https://identityserver.aventis.website"
+  },
+  "paths": {
+    "imagesRoot": "/assets/images/",
+    "userImageFolder": "/assets/images/users/"
+  },
+  "localization": {
+    "languages": [
+      {
+        "code": "de",
+        "name": "DE",
+        "culture": "de-CH",
+        "flag": "famfamfam-flag-de"
+      },
+      {
+        "code": "en",
+        "name": "EN",
+        "culture": "en-EN",
+        "flag": "famfamfam-flag-gb"
+      },
+      {
+        "code": "fr",
+        "name": "FR",
+        "culture": "fr-CH",
+        "flag": "famfamfam-flag-fr"
+      },
+      {
+        "code": "it",
+        "name": "IT",
+        "culture": "it-CH",
+        "flag": "famfamfam-flag-it"
+      }
+    ],
+    "defaultLanguage": "de"
+  },
+  "notifications": {
+    "options": {
+      "timeOut": 5000,
+      "showProgressBar": true,
+      "pauseOnHover": true,
+      "position": [
+        "top",
+        "right"
+      ],
+      "theClass": "sy-notification"
+    },
+    "unauthorizedEndpoints": [
+      "api/persons",
+      "api/personen",
+      "api/fall-navigator/trees"
+    ],
+    "notFoundEndpoints": [
+      "api/persons",
+      "connect/token",
+      "api/trees"
+    ]
+  },
+  "tokens": {
+    "client_id": "webclient.ro",
+    "client_secret": "EA59A39A-B03D-4985-A4FA-9297663A1858",
+    "grant_type": "password",
+    "scope": "api"
+  },
+  "debugging": false
+}

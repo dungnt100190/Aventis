@@ -1,0 +1,36 @@
+<header class="wrap-header">
+    <div class="header-container">
+        <div class="header-logo">
+            <!-- Logo display-->
+            <a class="logo" title="Aventis" tabindex="1" routerLink="{{ homePage }}">
+                <img src="/assets/images/logo-without-title.png" title="Aventis">
+                <span>aventis</span>
+            </a>
+        </div>
+
+        <div id="nav-collapse-toggle" (click)="onToggleNav(isToggleNav, $event)">
+            <i class="fa fa-2x fa-angle-double-down"></i>
+        </div>
+
+        <div class="nav-collapse">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="header-menu">
+                <kiss-menu-header tabindex="2" [itemMenus]="itemMenus" (select)="selectMenu.emit($event)">loading menu...</kiss-menu-header>
+            </div>
+
+            <div class="header-languageSelectorWrapper float-right">
+                <language-selector (select)="selectLanguage.emit($event)" [selectedLanguage]="selectedLanguage" [availableLanguages]="availableLanguages">
+                </language-selector>
+            </div>
+
+            <div class="header-profileBarWrapper float-right">
+                <profile-bar (logout)="logout.emit($event)" [userImage]="userImage" [userEmail]="userEmail">
+                </profile-bar>
+            </div>
+
+            <div class="header-search-box float-right">
+                <kiss-search-box class="header-search" [searchBoxsData]="searchBoxsData">loading search...</kiss-search-box>
+            </div>
+        </div>
+    </div>
+</header>

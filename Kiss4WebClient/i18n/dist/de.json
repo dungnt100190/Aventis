@@ -1,0 +1,90 @@
+{
+	"ServerError401": "Der Zugriff ist nicht erlaubt. Bitte einloggen.",
+  "ServerError403": "Der Zugriff ist nicht erlaubt. Bitte geben Sie die korrekten Informationen ein.",
+  "ServerError404": "Es ist ein Fehler aufgetreten. Bitte kontaktieren Sie Ihren Administrator.",
+  "ServerError500": "Es ist ein Fehler aufgetreten. Bitte kontaktieren Sie Ihren Administrator.",
+  "ServerError502": "502 Schlechter Gateway-Fehler. Bitte kontaktieren Sie Ihren Administrator.",
+  "SuccessNotificationTitle": "erfolgreich",
+  "ErrorNotificationTitle": "Fehler",
+  "InfoNotificationTitle": "Info",
+  "WarningNotificationTitle": "Warnung",
+  "SaveBtn": "Speichern",
+  "EditBtn": "Bearbeiten",
+  "CancelBtn": "Stornieren",
+  "BackBtn": "Nazad",
+  "GridEmptyLabel": "Keine Ergebnisse verfügbar",
+
+  "ConfirmDialog": {
+    "Title": "Bitte bestätigen",
+    "Content": "Möchten Sie das Formular schließen, ohne Änderungen zu speichern?",
+    "SubmitBtn": "Die",
+    "CancelBtn": "Nicht"
+  }
+,
+	"Auth": {
+    "UserName": "Nutzername",
+    "Email": "Email",
+    "Password": "Passwort",
+    "ConfirmPassword": "Bestätigen Sie Ihr Passwort",
+    "EmailFormatError": "Die E-Mail-Adresse hat nicht das richtige Format",
+    "EmailRequiredError": "E-Mail-Adresse ist erforderlich",
+    "UserNameRequiredError": "Nutzername is required",
+    "PasswordRequiredError": "Passwort ist erforderlich",
+    "ConfirmPasswordError": "Die Passwörter stimmen nicht überein",
+    "PasswordLengthError": "Das Passwort muss mindestens 6 Zeichen lang sein",
+    "Authen":"Authentifizienung",
+    "Umgebung": "Umgebung",
+    "Login": {
+      "Title": "Einloggen",
+      "Submit": "Einloggen",
+      "RegisterLink": "Mach ein Konto"
+    }
+  }
+,
+  "Sidebar": {
+    "Menu": "Speisekarte",
+    "ProductsItem": "Produkte",
+    "PersonsItem": "Personen"
+  },
+
+  "ProfileActionBar": {
+    "Logout": "Überprüfen Sie heraus"
+  },
+
+  "PageNotFound": {
+    "Title": "Hoppla, Seite nicht gefunden",
+    "Subtitle": "Bitte gehen Sie zurück zur vorherigen Seite",
+    "Button": "Rückkehr"
+  },
+  "pageGateWay": {
+    "Title": "Hoppla, 502 Schlechter Gateway-Fehler",
+    "Subtitle": "Bitte gehen Sie zurück zur vorherigen Seite",
+    "Button": "Rückkehr"
+  },
+  "DossierFilter": {
+    "Active": "aktiv",
+    "Closed": "abgeschlossen",
+    "Archived": "Archiveiert",
+    "IncludeGroup": "Gruppe",
+    "IncludeGuest": "Gast",
+    "IncludeTasks": "Aufgaben"
+  },
+  "Navigator": {
+    "Title": "Ordnermenü"
+  }
+,
+  "Persons": {
+    "Title": "Personen"
+  },
+  "PersonDetails": {
+    "FirstName": "Vorname",
+    "SurName": "Nachname",
+    "Address": "Address",
+    "Avatar": "Avatar",
+    "Validation": {
+      "FirstName": "Der Vorname ist erforderlich.",
+      "SurName": "Der sichere Name ist erforderlich.",
+      "Address": "Die Adresse ist erforderlich."
+    }
+  }
+,"ctlFallNavigator":{"btnFall":">Fall","btnGotoPendenzen":"> Pendenzen","btnNeuerFall":"neuer Fall ...","edtAbgeschlossene":"abgeschlossen","edtAHVNummer":"AHV-Nr.","edtAktive":"aktiv","edtArchivierte":"archiviert","edtGastrecht":"Gastrecht","edtGemeinde":"Gemeinde","edtGruppe":"Gruppe","edtKategorie":"Kategorie","edtVersNr":"Vers.-Nr.","edtZusatz":"Zusatz","lblAnzahlPersonen":"Anzahl Personen: 22","btnFallInfo":"Fallinfo","colAHVNummer":"AHV-Nr.","colGemeinde":"Gemeinde","colKategorie":"Kategorie","colName":"Person","colPendenzen":"fäll. Pendenzen","colVersNr":"Vers.-Nr.","colZusatz":"Zusatz","qryModul":"Soll der Datensatz gelöscht werden ?"}}

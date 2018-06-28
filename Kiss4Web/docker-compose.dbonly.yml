@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  kiss4-db-test:
+    image: "aventis.azurecr.io/kiss4web-db"
+    environment:
+      SA_PASSWORD: "D0102A72-7838-4078-9829-DBD038018C18"
+      ACCEPT_EULA: "Y"
+    ports:
+     - 1435:1433

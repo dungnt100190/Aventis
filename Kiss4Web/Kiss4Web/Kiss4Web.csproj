@@ -1,0 +1,79 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+    <ApplicationInsightsResourceId>/subscriptions/0ff4a405-6bf8-4e5b-90f9-6f4e25b67c29/resourcegroups/AventisDev/providers/microsoft.insights/components/Kiss4Web</ApplicationInsightsResourceId>
+    <ApplicationInsightsAnnotationResourceId>/subscriptions/0ff4a405-6bf8-4e5b-90f9-6f4e25b67c29/resourcegroups/AventisDev/providers/microsoft.insights/components/Kiss4Web</ApplicationInsightsAnnotationResourceId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="App_Data\WebDav\Storage\" />
+    <Folder Include="Migrations\" />
+    <Folder Include="Reports\XtraReports\" />
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IdentityServer4" Version="2.2.0" />
+    <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="2.6.0" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.2.1" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.7" />
+    <PackageReference Include="NWebsec.AspNetCore.Middleware" Version="2.0.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="2.1.1" />
+    <PackageReference Include="Serilog.Sinks.ApplicationInsights" Version="2.6.0" />
+    <PackageReference Include="SimpleInjector" Version="4.2.1" />
+    <PackageReference Include="SimpleInjector.Integration.AspNetCore" Version="4.2.1" />
+    <PackageReference Include="SimpleInjector.Integration.AspNetCore.Mvc" Version="4.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Kiss4Web.Infrastructure.Authentication\Kiss4Web.Infrastructure.Authentication.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Infrastructure.Authorization\Kiss4Web.Infrastructure.Authorization.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Infrastructure.CircuitBreakers\Kiss4Web.Infrastructure.CircuitBreakers.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Infrastructure.Configuration\Kiss4Web.Infrastructure.Configuration.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Infrastructure.DataAccess\Kiss4Web.Infrastructure.DataAccess.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Infrastructure.DocumentCreation\Kiss4Web.Infrastructure.DocumentCreation.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Infrastructure.DocumentEdit\Kiss4Web.Infrastructure.DocumentEdit.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Infrastructure.ErrorHandling\Kiss4Web.Infrastructure.ErrorHandling.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Infrastructure.I18N\Kiss4Web.Infrastructure.I18N.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Infrastructure.Kiss4Configuration\Kiss4Web.Infrastructure.Kiss4Configuration.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Infrastructure.Mediator\Kiss4Web.Infrastructure.Mediator.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Infrastructure.Messaging\Kiss4Web.Infrastructure.Messaging.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Infrastructure.Modularity\Kiss4Web.Infrastructure.Modularity.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Infrastructure.Reporting\Kiss4Web.Infrastructure.Reporting.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Modules.Basis\Kiss4Web.Modules.Basis.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Modules.Fibu\Kiss4Web.Modules.Fibu.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Modules.Sozialhilfe\Kiss4Web.Modules.Sozialhilfe.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="localhost.pfx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

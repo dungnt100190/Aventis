@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+
+#  kiss4web:
+#    image: kiss4web
+#    build:
+#      context: .
+#      dockerfile: Kiss4Web/Dockerfile
+#    ports:
+#     - 8002:80
+#    environment:
+#     - DockerConnectionString=Server=kiss4-db,1434;Database=KiSS_Standard_R4939;user=sa;password=D0102A72-7838-4078-9829-DBD038018C18;
+#    depends_on:
+#     - kiss4-db-test
+#     - kiss4web-identityserver-test
+     
+  kiss4web-identityserver-test:
+    image: kiss4web-identityserver-test
+    build:
+      context: .
+      dockerfile: Kiss4Web.IdentityServer/Dockerfile
+    ports:
+     - 5002:80
+    environment:
+      DockerConnectionString: 'Server=kiss4-db-test;Database=KiSS_Standard_R4939;user=sa;password=D0102A72-7838-4078-9829-DBD038018C18;'
+    depends_on:
+     - kiss4-db-test
+
+  kiss4-db-test:
+    image: "aventis.azurecr.io/kiss4web-db"
+    environment:
+      SA_PASSWORD: "D0102A72-7838-4078-9829-DBD038018C18"
+      ACCEPT_EULA: "Y"
+    ports:
+     - 1435:1433

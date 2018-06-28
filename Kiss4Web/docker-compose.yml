@@ -1,0 +1,50 @@
+version: '3.4'
+
+services:
+  kiss4web:
+    image: kiss4web
+    build:
+      context: .
+      dockerfile: Kiss4Web/Dockerfile
+    ports:
+     - 8001:80
+     - 8002:443
+    environment:
+      DockerConnectionString: "Server=kiss4-db,1433;Database=KiSS_Standard_R4939;user=sa;password=D0102A72-7838-4078-9829-DBD038018C18;"
+    depends_on:
+     - kiss4-db
+     - kiss4web-identityserver
+     
+  kiss4web-identityserver:
+    image: kiss4web-identityserver
+    build:
+      context: .
+      dockerfile: Kiss4Web.IdentityServer/Dockerfile
+    ports:
+     - 5000:80
+    environment:
+      DockerConnectionString: "Server=kiss4-db,1433;Database=KiSS_Standard_R4939;user=sa;password=D0102A72-7838-4078-9829-DBD038018C18;"
+    depends_on:
+     - kiss4-db
+
+  kiss4-db:
+    image: "aventis.azurecr.io/kiss4web-db"
+    environment:
+      SA_PASSWORD: "D0102A72-7838-4078-9829-DBD038018C18"
+      ACCEPT_EULA: "Y"
+    ports:
+     - 1433:1433
+
+#  kiss4-db-base:
+#    image: "microsoft/mssql-server-linux"
+#    environment:
+#      SA_PASSWORD: "D0102A72-7838-4078-9829-DBD038018C18"
+#      ACCEPT_EULA: "Y"
+#    volumes:
+#      - db-backup:/var/opt/mssql/backup
+#    ports:
+#     - 1403:1433
+#
+#volumes:
+#  db-backup:
+

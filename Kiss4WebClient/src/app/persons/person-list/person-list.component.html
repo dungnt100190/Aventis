@@ -1,0 +1,21 @@
+<app-toolbars [titlePage]="titlePage" [actionNew]="actionNew" (newEvent)="onNewClick()">
+</app-toolbars>
+<page-content>
+
+  <div body>
+    <div class="grid-wrapper">
+      <dx-data-grid id="person-grid-wrapper" [dataSource]="personsData" [allowColumnReordering]="true" [allowColumnResizing]="true"
+        [columnAutoWidth]="true" [showRowLines]="true" [showBorders]="true" keyExpr="id" (onRowClick)="onSelect($event.data)">
+        <dxi-column dataField="name" caption="{{'PersonDetails.FirstName' | translate}}"></dxi-column>
+        <dxi-column dataField="vorname" caption="{{'PersonDetails.SurName' | translate}}"></dxi-column>
+        <dxi-column dataField="nnummer" caption="{{'PersonDetails.Address' | translate}}"></dxi-column>
+        <dxo-remote-operations [sorting]="true" [paging]="true">
+        </dxo-remote-operations>
+        <dxo-paging [pageSize]="10"></dxo-paging>
+        <dxo-pager [showPageSizeSelector]="true" [allowedPageSizes]="[10, 15, 20]"></dxo-pager>
+        <dxo-selection mode="single"></dxo-selection>
+      </dx-data-grid>
+    </div>
+    <spinner [isRunning]="personsSandbox.personsLoading$ | async"></spinner>
+  </div>
+</page-content>

@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace Kiss4Web.Model
+{
+    public partial class KesAuftragBaPerson
+    {
+        public int KesAuftragBaPersonId { get; set; }
+        public int BaPersonId { get; set; }
+        public int KesAuftragId { get; set; }
+        public string Creator { get; set; }
+        public DateTime Created { get; set; }
+        public string Modifier { get; set; }
+        public DateTime Modified { get; set; }
+        public byte[] KesAuftragBaPersonTs { get; set; }
+
+        public BaPerson BaPerson { get; set; }
+        public KesAuftrag KesAuftrag { get; set; }
+    }
+}

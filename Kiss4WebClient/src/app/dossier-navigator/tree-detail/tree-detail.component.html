@@ -1,0 +1,24 @@
+<app-toolbars [titlePage]="titlePage" (backEvent)="goBack()">
+</app-toolbars>
+<page-content>
+  <div body>
+    <div id="form-container">
+      <h3>This is dossiers detail</h3>
+      <dx-form id="tree-detail" #treeForm [(formData)]="formData" colCount="auto" labelLocation="left" [colCountByScreen]="colCountByScreen"
+        [screenByWidth]="getSizeScreen">
+
+        <dxi-item itemType="group" colSpan="3">
+          <dxi-item dataField="name" editorType="dxTextBox" [editorOptions]="{ name: 'tree-name', width: '100%' }">
+            <dxo-label text="name"></dxo-label>
+          </dxi-item>
+          <dxi-item dataField="ahvNummer" editorType="dxTextBox" [editorOptions]="{ name: 'tree-ahvNummer', width: '100%' }">
+            <dxo-label text="ahvNummer"></dxo-label>
+          </dxi-item>
+        </dxi-item>
+
+        <dxi-item itemType="empty" colSpan="1" width="100%"></dxi-item>
+      </dx-form>
+    </div>
+  </div>
+
+</page-content>

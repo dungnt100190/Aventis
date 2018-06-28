@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Kiss4Web.Infrastructure.ErrorHandling\Kiss4Web.Infrastructure.ErrorHandling.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Infrastructure.Mediator\Kiss4Web.Infrastructure.Mediator.csproj" />
+  </ItemGroup>
+
+</Project>

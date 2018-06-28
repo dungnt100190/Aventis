@@ -1,0 +1,52 @@
+<div id="nav-filters">
+    <div class="filter-container">
+        <div class="filter-control">
+            <dx-check-box
+            [(value)]="filter.Active"
+            name="ckbActive"
+            text="{{'ctlFallNavigator.edtAktive' | translate}}"
+            (onValueChanged)="onFiltersChanged.ckbActive($event)">
+            </dx-check-box>
+        </div>
+        <div class="filter-control">
+            <dx-check-box
+            [(value)]="filter.Closed"
+            name="ckbClosed"
+            text="{{'ctlFallNavigator.edtAbgeschlossene' | translate}}"
+            (onValueChanged)="onFiltersChanged.ckbClosed($event)">
+            </dx-check-box>
+        </div>
+        <div class="filter-control">
+            <dx-check-box
+            [(value)]="filter.Archived"
+            name="ckbArchived"
+            text="{{'ctlFallNavigator.edtArchivierte' | translate}}"
+            (onValueChanged)="onFiltersChanged.ckbArchived($event)">
+            </dx-check-box>
+        </div>  
+        <div class="filter-control">        
+            <dx-check-box
+            [(value)]="filter.IncludeGroup"
+            name="ckbIncludeGroup"
+            text="{{'ctlFallNavigator.edtGruppe' | translate}}"
+            (onValueChanged)="onFiltersChanged.ckbIncludeGroup($event)">
+            </dx-check-box>
+        </div>
+        <div class="filter-control">
+            <dx-check-box
+            [(value)]="filter.IncludeGuest"
+            name="ckbIncludeGuest"
+            text="{{'ctlFallNavigator.edtGastrecht' | translate}}"
+            (onValueChanged)="onFiltersChanged.ckbIncludeGuest($event)">
+            </dx-check-box>
+        </div>
+        <div class="filter-control">
+            <dx-check-box
+            [(value)]="filter.IncludeTasks"
+            name="ckbIncludeTasks"
+            text="{{'ctlFallNavigator.IncludeTasks' | translate}}"
+            (onValueChanged)="onFiltersChanged.ckbIncludeTasks($event)">
+            </dx-check-box>
+        </div>
+    </div>
+</div>

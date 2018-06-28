@@ -1,0 +1,22 @@
+<div class="selected-actions box-dossier" *ngIf="(selectedActions.length > 0)">
+  <div class="selected-actions-container">
+    <dx-list
+          [(dataSource)]="selectedActions"
+          [allowItemDeleting]="allowDeleting"
+          focusStateEnabled="false"
+          [itemDeleteMode]="deleteType"
+          [showSelectionControls]="false"
+          [selectionMode]="selectionMode"
+          [height]="height"
+          (onItemClick)="onClickItem($event)"
+          (onItemDeleted)="onDeleteItem($event)">
+          <div *dxTemplate="let data of 'item'" class="sidebar-item" routerLink="/{{ data.url }}" [routerLinkActive]="'current'">
+              <div class="item">
+                <div class="icon"> <img src="{{ iconUrl }}{{ data.data.iconId }}.png"> </div>
+                <div class="name">{{ data.name }}</div>
+                <div class="age">(w 44)</div>
+              </div>
+          </div>
+      </dx-list>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="container active">
+  <div class="card animation"></div>
+  <div class="card animation">
+    <div class="pen-title">
+      <img src="/assets/images/avt.png" />
+      <h1>Aventis</h1>
+    </div>
+    <h1 class="title animation">Login</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit($event, loginForm.value)" id="loginfrm" enctype="application/x-www-form-urlencoded">
+      <div class="input-container">
+        <input type="text" id="username" name="username" [formControl]="username" required="required" autocomplete="off" />
+        <label for="username" *ngIf="!submitted">{{ 'Auth.UserName' | translate }}</label>
+        <label for="username" *ngIf="submitted && username.hasError('required')" class="error-label">{{ 'Auth.UserNameRequiredError' | translate }}</label>
+        <div class="bar"></div>
+      </div>
+      <div class="input-container">
+        <input type="password" id="password" name="password" [formControl]="password" required="required" />
+        <label for="password" *ngIf="!submitted">{{ 'Auth.Password' | translate }}</label>
+        <label for="password" *ngIf="submitted && password.hasError('required')" class="error-label">{{ 'Auth.PasswordRequiredError' | translate }}</label>
+        <div class="bar"></div>
+      </div>
+      <div class="button-container">
+        <button type="submit">
+          <span>{{ 'Auth.Login.Submit' | translate }}</span>
+        </button>
+      </div>
+      <div class="footer">
+        <a href="#">Forgot your password?</a>
+      </div>
+    </form>
+  </div>
+
+</div>
+<!-- <a id="portfolio" href="#" title="View my portfolio!"><i class="fa fa-pencil-alt"></i></a>
+<a id="codepen" href="#" title="Follow me!"><i class="fa fa-codepen"></i></a> -->
+<div class="pen-copyright animation">
+  <span>
+    <!-- <i class='fa fa-copyright'></i> 2018 Diartis AG, Diartis AG, Bahnhofstrasse 41, 5600 Lenzburg</span> -->
+    <i class='fa fa-copyright'></i>&nbsp;{{ copyRightName }} Aventis</span>
+</div>
+
+<spinner [isRunning]="authSandbox.loginLoading$ | async"></spinner>

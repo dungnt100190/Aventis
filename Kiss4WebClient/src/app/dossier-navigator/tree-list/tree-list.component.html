@@ -1,0 +1,67 @@
+<app-toolbars [titlePage]="titlePage">
+</app-toolbars>
+<page-content>
+    <div header>
+        <dossier-nav-filters [filter]="dossierSandbox.filterDossier$ | async" (ValuedActive)="dossierSandbox.OnFiltersChanged.onCkbActive($event)"
+            (ValuedClosed)="dossierSandbox.OnFiltersChanged.onCkbClosed($event)" (ValuedArchived)="dossierSandbox.OnFiltersChanged.onCkbArchived($event)"
+            (ValuedIncludeGroup)="dossierSandbox.OnFiltersChanged.onCkbIncludeGroup($event)" (ValuedIncludeGuest)="dossierSandbox.OnFiltersChanged.onCkbIncludeGuest($event)"
+            (ValuedIncludeTasks)="dossierSandbox.OnFiltersChanged.onCkbIncludeTasks($event)">
+        </dossier-nav-filters>
+    </div>
+
+    <div body>
+        <div class="trees-list">
+            <dx-tree-list id="navigator-tree" [dataSource]="dossierSandbox.dossierDatas$ | async" keyExpr="id" parentIdExpr="parentId"
+                [showRowLines]="true" [columnAutoWidth]="true" [autoExpandAll]="true" (onRowClick)="onSelect($event.data)">
+
+                <!-- <dxi-column dataField="id" caption="Name" ></dxi-column> -->
+                <!-- <dxi-column dataField="parentId" caption="Parent ID"></dxi-column> -->
+                <!-- <dxi-column dataField="type" caption="Type"></dxi-column> -->
+                <!-- <dxi-column dataField="iconId" caption="IconID"></dxi-column> -->
+                <!-- <dxi-column dataField="baPersonId" caption="BaPersonID"></dxi-column> -->
+                <!-- <dxi-column dataField="userId" caption="UserID"></dxi-column> -->
+                <dxi-column dataField="name" caption="{{'ctlFallNavigator.colName' | translate}}" cellTemplate="tree-Name-Template" cssClass="treeNote" ></dxi-column>
+                <dxi-column dataField="b" caption="B" [width]="100" alignment="center" cellTemplate="tree-B-Template"></dxi-column>
+                <dxi-column dataField="f" caption="F" [width]="100" alignment="center" cellTemplate="tree-F-Template"></dxi-column>
+                <dxi-column dataField="s" caption="S" [width]="100" alignment="center" cellTemplate="tree-S-Template"></dxi-column>
+                <dxi-column dataField="i" caption="I" [width]="100" alignment="center" cellTemplate="tree-I-Template"></dxi-column>
+                <dxi-column dataField="m" caption="M" [width]="100" alignment="center" cellTemplate="tree-M-Template"></dxi-column>
+                <dxi-column dataField="a" caption="A" [width]="100" alignment="center" cellTemplate="tree-A-Template"></dxi-column>
+                <dxi-column dataField="k" caption="K" [width]="100" alignment="center" cellTemplate="tree-K-Template"></dxi-column>
+                <dxi-column dataField="ahvNummer" caption="{{'ctlFallNavigator.colAHVNummer' | translate}}"></dxi-column>
+                <!-- <dxi-column dataField="faLeistungId" caption="FaLeistungID"></dxi-column> -->
+                <dxi-column dataField="versichertennummer" caption="Versichertennummer"></dxi-column>
+                <dxo-selection mode="single"></dxo-selection>
+
+                <div *dxTemplate="let options of 'tree-Name-Template'">
+                    <div class="img" *ngIf="options.data.iconId" style.background-image="url('{{icon_Name_Url}}{{options.data.iconId}}.png')"></div>
+                    <span *ngIf="options.data.id" class="name" >{{options.data.name}}</span>
+                </div>
+                <div *dxTemplate="let options of 'tree-B-Template'">
+                    <div class="img" *ngIf="options.data.b && options.data.b > 0" style.background-image="url('{{icon_Characters_Url}}{{options.data.b}}.svg')"></div>
+                </div>
+                <div *dxTemplate="let options of 'tree-F-Template'">
+                    <div class="img" *ngIf="options.data.f && options.data.f > 0" style.background-image="url('{{icon_Characters_Url}}{{options.data.f}}.svg')"></div>
+                </div>
+                <div *dxTemplate="let options of 'tree-S-Template'">
+                    <div class="img" *ngIf="options.data.s && options.data.s > 0" style.background-image="url('{{icon_Characters_Url}}{{options.data.s}}.svg')"></div>
+                </div>
+                <div *dxTemplate="let options of 'tree-I-Template'">
+                    <div class="img" *ngIf="options.data.i && options.data.i > 0" style.background-image="url('{{icon_Characters_Url}}{{options.data.i}}.svg')"></div>
+                </div>
+                <div *dxTemplate="let options of 'tree-M-Template'">
+                    <div class="img" *ngIf="options.data.m && options.data.m > 0" style.background-image="url('{{icon_Characters_Url}}{{options.data.m}}.svg')"></div>
+                </div>
+                <div *dxTemplate="let options of 'tree-A-Template'">
+                    <div class="img" *ngIf="options.data.a && options.data.a > 0" style.background-image="url('{{icon_Characters_Url}}{{options.data.a}}.svg')"></div>
+                </div>
+                <div *dxTemplate="let options of 'tree-K-Template'">
+                    <div class="img" *ngIf="options.data.k && options.data.k > 0" style.background-image="url('{{icon_Characters_Url}}{{options.data.k}}.svg')"></div>
+                </div>
+            </dx-tree-list>
+        </div>
+
+        <spinner [isRunning]="dossierSandbox.dossierLoading$ | async"></spinner>
+    </div>
+
+</page-content>

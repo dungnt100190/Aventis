@@ -1,0 +1,12 @@
+﻿-- access to azure docker registry
+-- create the service principal
+--az ad sp create-for-rbac --scopes /subscriptions/0ff4a405-6bf8-4e5b-90f9-6f4e25b67c29/resourcegroups/AventisDev/providers/Microsoft.ContainerRegistry/registries/aventis --role Reader --password {pwd}
+-- login
+docker login aventis.azurecr.io -u 78ca446d-e2d1-43c6-a46a-e18d35c79c8e -p {pwd}
+
+-- this step is done manually to provide a db image - it would be nice to automate it as well
+docker ps
+docker exec -it 32e /opt/mssql-tools/bin/sqlcmd -S localhost    -U SA -P "D0102A72-7838-4078-9829-DBD038018C18"   -Q "RESTORE DATABASE KiSS_Standard_R4939 FROM DISK = '/var/opt/mssql/backup/KiSS_Standard_R4939.bak' WITH MOVE 'KiSS_Standard_R4939_Primary' TO '/var/opt/mssql/data/KiSS_Standard_R4939_Primary.mdf', MOVE 'KiSS_Standard_R4939_Daten1' TO '/var/opt/mssql/data/KiSS_Standard_R4939_Daten1.ndf', MOVE 'KiSS_Standard_R4939_System' TO '/var/opt/mssql/data/KiSS_Standard_R4939_System.ndf', MOVE 'KiSS_Standard_R4939_Daten2' TO '/var/opt/mssql/data/KiSS_Standard_R4939_Daten2.ndf', MOVE 'KiSS_Standard_R4939_Daten3' TO '/var/opt/mssql/data/KiSS_Standard_R4939_Daten3.ndf', MOVE 'KiSS_Standard_R4939_Logging' TO '/var/opt/mssql/data/KiSS_Standard_R4939_Logging.ndf', MOVE 'KiSS_Standard_R4939_Log' TO '/var/opt/mssql/data/KiSS_Standard_R4939_Log.ndf'" 
+
+
+

@@ -1,0 +1,7 @@
+﻿See https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/powershell
+PMC:
+
+Scaffold-DbContext -Connection "Server=127.0.0.1;Database=KiSS_Standard_R4939;user=sa;password=D0102A72-7838-4078-9829-DBD038018C18;" -o Entities -Context Kiss4DbContext -Provider Microsoft.EntityFrameworkCore.SqlServer -StartupProject Kiss4Web -Project Kiss4Web.Model -f --use-database-names
+
+cli:
+dotnet ef dbcontext scaffold "Server=127.0.0.1;Database=KiSS_Standard_R4939;user=sa;password=D0102A72-7838-4078-9829-DBD038018C18;" Microsoft.EntityFrameworkCore.SqlServer -o Entities -f -c Kiss4DbContext -s Kiss4Web -p Kiss4Web.Model -f --use-database-names

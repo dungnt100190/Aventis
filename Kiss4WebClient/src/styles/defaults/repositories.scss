@@ -1,0 +1,86 @@
+// min-width/-height -> from smallest to largest
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .wrapper-main {
+        header.wrap-header {
+            .nav-collapse {
+                position: absolute;
+                right: 0;
+                height: 100vh;
+                z-index: 2;
+                background: #e3e3e4;
+                color: #fff;
+                top: 45px;
+                z-index: 999;
+                display: none;
+                &.toggle--nav {
+                    display: block;
+                }
+            }
+            #nav-collapse-toggle {
+                display: block!important;
+            }
+        }
+    }
+
+    .layout-content #wrapper-content section .page-content .ms-Viewport {
+        height: 500px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-height: 480px) {}
+
+@media screen and (min-height: 480px) and (min-width: 320px) {}
+
+@media screen and (min-width: 640px) {}
+
+@media screen and (min-width: 1024px) {
+    .wrapper-main {
+        header.wrap-header {
+            .nav-collapse {
+                display: block;
+            }           
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {}
+
+// device
+@media screen and (min-device-width: 320px) and (max-device-width: 767px) {}
+
+// max-width/-height <- from largest to smallest
+@media screen and (max-width: 1023px) {
+    .wrapper-main {
+        header.wrap-header {
+            .nav-collapse {
+                position: absolute;
+                right: 0;
+                height: 100vh;
+                z-index: 2;
+                background: #e3e3e4;
+                color: #fff;
+                top: 45px;
+                z-index: 999;
+                display: none;
+                &.toggle--nav {
+                    display: block;
+                }
+            }
+            #nav-collapse-toggle {
+                display: block!important;
+            }
+        }
+    }
+}
+
+@media screen and (max-height: 767px) and (min-height: 320px) {}
+
+@media screen and (max-width: 767px) and (min-width: 320px) {}
+
+@media screen and (max-width: 639px) {}
+
+// no units
+@media screen and (orientation: landscape) {}
+
+@media screen and (orientation: portrait) {}

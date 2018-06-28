@@ -1,0 +1,30 @@
+<app-toolbars [titlePage]="titlePage" (backEvent)="goBack()" [isBack]="true">
+</app-toolbars>
+<page-content>
+
+    <div body>
+        <div id="form-container">
+
+            <dx-form id="PersonForm" #personForm [formData]="personsSandbox.personDetails$ | async" colCount="auto" labelLocation="left"
+                [colCountByScreen]="colCountByScreen" [screenByWidth]="getSizeScreen" validationGroup="FormPersonValidate">
+
+                <dxi-item itemType="group" colSpan="3">
+                    <dxi-item dataField="name" editorType="dxTextBox" [editorOptions]="{ name: 'person-firstName', width: '100%' }">
+                        <dxo-label text="{{ 'PersonDetails.FirstName' | translate }}"></dxo-label>
+                        <dxi-validation-rule type="required" message="{{ 'PersonDetails.Validation.FirstName' | translate }}"></dxi-validation-rule>
+                    </dxi-item>
+                    <dxi-item dataField="vorname" editorType="dxTextBox" [editorOptions]="{ name: 'person-surname', width: '100%' }">
+                        <dxo-label text="{{ 'PersonDetails.SurName' | translate }}"></dxo-label>
+                        <dxi-validation-rule type="required" message="{{ 'PersonDetails.Validation.SurName' | translate }}"></dxi-validation-rule>
+                    </dxi-item>
+                    <dxi-item dataField="nnummer" editorType="dxTextBox" [editorOptions]="{ name: 'person-address', width: '100%' }">
+                        <dxo-label text="{{ 'PersonDetails.Address' | translate }}"></dxo-label>
+                        <dxi-validation-rule type="required" message="{{ 'PersonDetails.Validation.Address' | translate }}"></dxi-validation-rule>
+                    </dxi-item>
+                </dxi-item>
+
+                <dxi-item itemType="empty" colSpan="1" width="100%"></dxi-item>
+            </dx-form>
+        </div>
+    </div>
+</page-content>

@@ -1,0 +1,89 @@
+{
+  "ServerError401": "Access not allowed. Please login.",
+  "ServerError403": "Access forbidden. Please provide correct credentials",
+  "ServerError404": "An error occurred. Please contact your administrator",
+  "ServerError500": "An error occurred. Please contact your administrator",
+  "ServerError502": "502 Bad Gate way. Please contact your administrator",
+  "SuccessNotificationTitle": "Success",
+  "ErrorNotificationTitle": "Error",
+  "InfoNotificationTitle": "Info",
+  "WarningNotificationTitle": "Warning",
+  "SaveBtn": "Save",
+  "EditBtn": "Edit",
+  "CancelBtn": "Cancel",
+  "BackBtn": "Back",
+  "GridEmptyLabel": "No available items",
+
+  "ConfirmDialog": {
+    "Title": "Please confirm",
+    "Content": "Do you want to leave without saving the changes?",
+    "SubmitBtn": "Yes",
+    "CancelBtn": "No"
+  }
+,
+	"Auth": {
+    "UserName": "User Name",
+    "Email": "Email",
+    "Password": "Password",
+    "ConfirmPassword": "Confirm Password",
+    "EmailFormatError": "Email is not in valid format",
+    "EmailRequiredError": "Email is required",
+    "UserNameRequiredError": "User Name is required",
+    "PasswordRequiredError": "Password is required",
+    "ConfirmPasswordError": "Passwords mismatch",
+    "PasswordLengthError": "Passwords must contain at least 6 characters",
+    "Authen":"Authentition",
+    "Umgebung": "Environment",
+    "Login": {
+      "Title": "Login",
+      "Submit": "Login"
+    }
+  }
+,
+  "Sidebar": {
+    "Menu": "Menu",
+    "ProductsItem": "Products",
+    "PersonsItem": "Persons"
+  },
+
+  "ProfileActionBar": {
+    "Logout": "Logout"
+  },
+
+  "PageNotFound": {
+    "Title": "Ooops, Page Not Found",
+    "Subtitle": "Please, return to the previous page",
+    "Button": "Go back"
+  },
+  "pageGateWay": {
+    "Title": "Ooops, 502 Bad Gateway Error",
+    "Subtitle": "Please, return to the previous page",
+    "Button": "Go back"
+  },
+  "DossierFilter": {
+    "Active": "aktiv",
+    "Closed": "abgeschlossen",
+    "Archived": "Archiveiert",
+    "IncludeGroup": "Gruppe",
+    "IncludeGuest": "IncludeGuest",
+    "IncludeTasks": "IncludeTasks"
+  },
+  "Navigator": {
+    "Title": "Dossier Menu"
+  }  
+,
+  "Persons": {
+    "Title": "Persons"
+  },
+  "PersonDetails": {
+    "FirstName": "First Name",
+    "SurName": "Sur Name",
+    "Address": "Address",
+    "Avatar": "Avatar",
+    "Validation": {
+      "FirstName": "The First Name is required.",
+      "SurName": "The Sure Name is required.",
+      "Address": "The Address is required."
+    }
+  }
+}

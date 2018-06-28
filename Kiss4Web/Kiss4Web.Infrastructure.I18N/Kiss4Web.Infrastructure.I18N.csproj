@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="1.50.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Kiss4Web.Infrastructure.Mediator\Kiss4Web.Infrastructure.Mediator.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Infrastructure.Modularity\Kiss4Web.Infrastructure.Modularity.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Infrastructure\Kiss4Web.Infrastructure.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Model\Kiss4Web.Model.csproj" />
+  </ItemGroup>
+
+</Project>
