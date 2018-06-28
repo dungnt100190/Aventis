@@ -10,7 +10,12 @@ import { Component } from '@angular/core';
   ]
 })
 export class Content3Component {
+
   withTitleVisible: boolean;
+  content1: any;
+  gridBoxValue: any;
+  gridDataSource: any;
+
   constructor() {
     this.withTitleVisible = false;
   }
