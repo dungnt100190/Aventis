@@ -6,7 +6,8 @@ import { Effect, Actions } from '@ngrx/effects';
 import { Action } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 import { PendenzenApiClient } from '../../../kiss-pendenzen/pendenzenApiClient.service';
-import * as pendenzenActions from '../actions/pendenzen.actions';
+import * as PendenzenAction from '../actions/pendenzen.action';
+import { Pendenzen } from '@app/shared/models/pendenzen/pendenzen.model';
 
 @Injectable()
 export class PendenzensEffects {
@@ -20,11 +21,11 @@ export class PendenzensEffects {
    */
   @Effect()
   getPendenzens$: Observable<Action> = this.actions$
-    .ofType(pendenzenActions.ActionTypes.LOAD)
-    .map((action: pendenzenActions.LoadAction) => action.payload)
+    .ofType(PendenzenAction.ActionTypes.LOAD)
+    .map((action: PendenzenAction.LoadAction) => action.payload)
     .switchMap(state => {
       return this.pendenzenApiClient.getListPendenzen()
-        .map(items => new pendenzenActions.LoadSuccessAction(items))
-        .catch(error => Observable.of(new pendenzenActions.LoadFailAction()));
+        .map(Pendenzen => new PendenzenAction.LoadSuccessAction(Pendenzen))
+        .catch(error => Observable.of(new PendenzenAction.LoadFailAction()));
     });
 }

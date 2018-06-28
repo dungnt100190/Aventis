@@ -8,19 +8,19 @@ import { PendenzenSandbox } from "@app/kiss-pendenzen/pendenzen.sandbox";
   styleUrls: ['./pendenzen.component.css']
 })
 export class PendenzenComponent extends BaseComponent implements OnInit {
+
   constructor(
     injector: Injector,
-    public pendenzenSandbox: PendenzenSandbox
+    //public pendenzenSandbox: PendenzenSandbox
   ) {
     super(injector)
   }
+
   ngOnInit(): void {
-    this.pendenzenSandbox.loadListPendenzen();
-
+    //this.pendenzenSandbox.loadListPendenzen();
   }
 
-  onBtnClick(e) {
-    this.pendenzenSandbox.btnClickEvent();
-
-  }
+  //onBtnClick(e) {
+  //  this.pendenzenSandbox.btnClickEvent();
+  //}
 }

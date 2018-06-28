@@ -1,4 +1,5 @@
 import { Action } from '@ngrx/store';
+import { Pendenzen } from '../../models/pendenzen/pendenzen.model';
 import { type } from '../../utility';
 
 export const ActionTypes = {
@@ -16,16 +17,15 @@ export const ActionTypes = {
   
   export class LoadSuccessAction implements Action {
     type = ActionTypes.LOAD_SUCCESS;
-    constructor(public payload?: any[]) { }
+    constructor(public payload: Array<Pendenzen>) { }
   }
   
   export class LoadFailAction implements Action {
     type = ActionTypes.LOAD_FAIL;
-    constructor(public  payload?: any) { }
+    constructor(public payload?: any) { }
   }
   
-  
-  export type Actions
+  export type Action
     = LoadAction
     | LoadSuccessAction
     | LoadFailAction;

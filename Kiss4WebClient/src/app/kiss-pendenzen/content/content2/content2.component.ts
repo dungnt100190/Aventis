@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
-import { PenService, Order } from '../../pen.service';
+import { Component, OnInit, Injector } from '@angular/core';
+//import { PenService, Order } from '../../pen.service';
+import { PendenzenSandbox } from '@app/kiss-pendenzen/pendenzen.sandbox';
+import { BaseComponent } from '@app/shared/components/base.component';
+import { Pendenzen } from '@app/shared/models/pendenzen/pendenzen.model';
 
 @Component({
   selector: 'kiss-pendenzen-content2',
@@ -9,10 +12,10 @@ import { PenService, Order } from '../../pen.service';
     '../../../app.component.css',
     '../content.component.css'
   ],
-  providers: [PenService],
+  //providers: [PenService],
 })
-export class Content2Component {
-  orders: Order[];
+export class Content2Component extends BaseComponent implements OnInit {
+  //orders: Order[];
   showFilterRow: boolean;
   showHeaderFilter: boolean;
   allMode: string;
@@ -22,11 +25,28 @@ export class Content2Component {
   calculateFilterExpression: any;
   saleAmountHeaderFilter: any;
 
-  constructor(service: PenService) {
-    this.orders = service.getOrders();
+  pendenzenData: Pendenzen[];
+
+  constructor(
+    injector: Injector,
+    public pendenzenSandbox: PendenzenSandbox
+  ) {
+    super(injector);
+  }
+
+  ngOnInit() {
     this.showFilterRow = true;
     this.showHeaderFilter = true;
     this.allMode = 'allPages';
-    this.checkBoxesMode = 'onClick'
+    this.checkBoxesMode = 'onClick';
+    this.pendenzenSandbox.loadListPendenzen();
+    this.loadPendenzenData();
+  }
+
+  private loadPendenzenData() {
+    this.pendenzenSandbox.pendenzenData$.subscribe(data => {
+      this.pendenzenData = data;
+      if (data) { console.log(data); }
+    });
   }
 }

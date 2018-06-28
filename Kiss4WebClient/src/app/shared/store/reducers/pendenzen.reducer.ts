@@ -1,7 +1,8 @@
 import '@ngrx/core/add/operator/select';
 import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs/Observable';
-import * as actions from '../actions/pendenzen.actions';
+import * as Action from '../actions/pendenzen.action';
+import { Pendenzen } from '../../models/pendenzen/pendenzen.model';
 
 interface processState<T = boolean> {
     loading: T;
@@ -13,27 +14,29 @@ export interface State extends processState {
   loading: boolean;
   loaded: boolean;
   failed: boolean;
-  data: any[];
+  data: Array<Pendenzen>;
+  //pendenzen: Pendenzen;
 };
 
 const INITIAL_STATE: State = {
   loading: false,
   loaded: false,
   failed: false,
-  data: []
+  data: [],
+  //pendenzen: new Pendenzen()
 };
 
-export function reducer(state = INITIAL_STATE, action: actions.Actions): State {
+export function reducer(state = INITIAL_STATE, action: Action.Action): State {
   if (!action) return state;
   switch (action.type) {
     
-    case actions.ActionTypes.LOAD: {
+    case Action.ActionTypes.LOAD: {
       return Object.assign({}, state, {
         loading: true
       });
     }
 
-    case actions.ActionTypes.LOAD_SUCCESS: {
+    case Action.ActionTypes.LOAD_SUCCESS: {
       return Object.assign({}, state, {
         loaded: true,
         loading: false,
@@ -42,7 +45,7 @@ export function reducer(state = INITIAL_STATE, action: actions.Actions): State {
       });
     }
 
-    case actions.ActionTypes.LOAD_FAIL: {
+    case Action.ActionTypes.LOAD_FAIL: {
       return Object.assign({}, state, {
         loaded: false,
         loading: false,
@@ -61,3 +64,4 @@ export const getData = (state: State) => state.data;
 export const getLoading = (state: State) => state.loading;
 export const getLoaded = (state: State) => state.loaded;
 export const getFailed = (state: State) => state.failed;
+//export const getPendenzen = (state: State) => state.pendenzen;
