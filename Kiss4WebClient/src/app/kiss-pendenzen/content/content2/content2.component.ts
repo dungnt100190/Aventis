@@ -17,6 +17,10 @@ export class Content2Component {
   showHeaderFilter: boolean;
   allMode: string;
   checkBoxesMode: string;
+  currentFilter: any;
+  orderHeaderFilter: any;
+  calculateFilterExpression: any;
+  saleAmountHeaderFilter: any;
 
   constructor(service: PenService) {
     this.orders = service.getOrders();
