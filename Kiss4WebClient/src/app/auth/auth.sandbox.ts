@@ -63,7 +63,7 @@ export class AuthSandbox extends Sandbox {
           localStorage.setItem('user.userId', userInfo.sub);
           localStorage.setItem('user', userInfo.LogonName);
         }
-        if (this.router.url === environment.page.login) { return this.router.navigate([environment.page.dossier]); }
+        if (this.router.url === environment.page.login) { return this.router.navigate([environment.page.pendenzen]); }
       } else {
         // clear state appState
         this.appState$.dispatch(new settingsActions.ResetState());

@@ -32,12 +32,14 @@ import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { TranslateModule } from 'ng2-translate';
 import { SimpleNotificationsModule } from 'angular2-notifications';
+//import { DxDataGridModule, DxSelectBoxModule, DxDateBoxModule, DxDropDownBoxModule, DxFormModule, DxTextAreaModule, DxButtonModule, DxPopoverModule, DxTabPanelModule, DxTreeViewModule, DxTemplateModule, DxBoxModule } from 'devextreme-angular';
 
 // app
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from 'environments/environment.prod';
 import { AppSandbox } from '@app/app.sandbox';
+import { LayoutContainersModule } from '@app/shared/layouts/layout.module';
 
 /**
  * Calling functions or calling new is not supported in metadata when using AoT.
@@ -69,7 +71,7 @@ export function configServiceFactory(config: ConfigService) {
     HttpServiceModule.forRoot(),
     UtilityModule.forRoot(),
     AppRoutingModule,
-
+    LayoutContainersModule.forRoot(),
     /**
      * StoreModule.provideStore is imported once in the root module, accepting a reducer
      * function or object map of reducer functions. If passed an object of
@@ -101,6 +103,19 @@ export function configServiceFactory(config: ConfigService) {
     EffectsModule.run(SettingsEffects),
     EffectsModule.run(MenusEffects),
     EffectsModule.run(SearchBoxDatasEffects),
+
+    //DxButtonModule,
+    //DxBoxModule,
+    //DxDateBoxModule,
+    //DxDataGridModule,
+    //DxDropDownBoxModule,
+    //DxFormModule,
+    //DxPopoverModule,
+    //DxSelectBoxModule,
+    //DxTextAreaModule,
+    //DxTabPanelModule,
+    //DxTreeViewModule,
+    //DxTemplateModule
   ],
   providers: [
     Title,

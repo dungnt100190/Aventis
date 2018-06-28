@@ -19,9 +19,9 @@ export const MenusMock: MenuModel[] = [
             sort: 2
         }, {
             id: '1_3',
-            name: 'Ad hoc Reports',
+            name: 'Pendenzen',
             iconSrc: 'assets/icon/item-menu.png',
-            url: '/test3',
+            url: '/pendenzen',
             sort: 3
         }]
     },

@@ -85,6 +85,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kiss4Web.Infrastructure.Rep
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kiss4Web.Infrastructure.Reporting.Test", "tests\Kiss4Web.Infrastructure.Reporting.Test\Kiss4Web.Infrastructure.Reporting.Test.csproj", "{5ACE2E49-6B72-4ED9-B7D8-C48C4B3476D6}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kiss4Web.Modules.Pendenzen", "Kiss4Web.Modules.Pendenzen\Kiss4Web.Modules.Pendenzen.csproj", "{649D7383-31CE-4E31-A996-F5F604C3DCA1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -227,6 +229,10 @@ Global
 		{5ACE2E49-6B72-4ED9-B7D8-C48C4B3476D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5ACE2E49-6B72-4ED9-B7D8-C48C4B3476D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5ACE2E49-6B72-4ED9-B7D8-C48C4B3476D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{649D7383-31CE-4E31-A996-F5F604C3DCA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{649D7383-31CE-4E31-A996-F5F604C3DCA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{649D7383-31CE-4E31-A996-F5F604C3DCA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{649D7383-31CE-4E31-A996-F5F604C3DCA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,6 @@
 import { RouterModule } from '@angular/router';
 import {
-  NgModule
+  NgModule, ModuleWithProviders
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -57,4 +57,11 @@ export const CONTAINERS = [
   providers: [LayoutSandbox]
 })
 
-export class LayoutContainersModule { }
+export class LayoutContainersModule { 
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: LayoutContainersModule,
+      providers: [LayoutSandbox]
+    }
+  }
+}

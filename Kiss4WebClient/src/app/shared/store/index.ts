@@ -23,6 +23,7 @@ import * as fromPersonDetails from './reducers/person-details.reducer';
 import * as fromMenus from './reducers/menus.reducer';
 import * as fromSearchBoxData from './reducers/search-box.reducer';
 import * as fromDossiersData from './reducers/dossier.reducer';
+import * as fromPendenzen from './reducers/pendenzen.reducer';
 
 /**
  * We treat each reducer like a table in a database. This means
@@ -36,6 +37,7 @@ export interface State {
   menus: fromMenus.State;
   searchBoxDatas: fromSearchBoxData.State;
   dossierDatas: fromDossiersData.State;
+  fromPendenzen: fromPendenzen.State;
 }
 
 /**
@@ -52,7 +54,8 @@ export const reducers = {
   personDetails: fromPersonDetails.reducer,
   menus: fromMenus.reducer,
   searchBoxDatas: fromSearchBoxData.reducer,
-  dossierDatas: fromDossiersData.reducer
+  dossierDatas: fromDossiersData.reducer,
+  fromPendenzen: fromPendenzen.reducer
 };
 
 export function store(state: any, action: any) {
@@ -136,3 +139,24 @@ export const getDossierTreesFailed = createSelector(getDossierTreeDataState, fro
 export const getDossierTreesData = createSelector(getDossierTreeDataState, fromDossiersData.getTrees);
 export const getFiltersDossier = createSelector(getDossierTreeDataState, fromDossiersData.getFilters);
 export const getTreeDetail = createSelector(getDossierTreeDataState, fromDossiersData.getTreeDetail);
+
+/**
+ * Pendenzen Stores function
+ */
+export const getPendenzenState = (state: State) => state.fromPendenzen;
+export const getPendenzenData = createSelector(
+  getPendenzenState,
+  fromPendenzen.getData
+);
+export const getPendenzenLoading = createSelector(
+  getPendenzenState,
+  fromPendenzen.getLoading
+);
+export const getPendenzenLoaded = createSelector(
+  getPendenzenState,
+  fromPendenzen.getLoaded
+);
+export const getPendenzenFailed = createSelector(
+  getPendenzenState,
+  fromPendenzen.getFailed
+);

@@ -7,6 +7,7 @@ export const environment = {
   production: false,
   page: {
     login: '/login',
-    dossier: '/dossier'
+    dossier: '/dossier',
+    pendenzen: '/pendenzen'
   }
 };

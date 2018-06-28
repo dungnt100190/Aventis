@@ -8,6 +8,7 @@
         //Fallführung = 2,
         Sozialhilfe = 3,
 
-        Fibu = 14
+        Fibu = 14,
+		Pendenzen = 21
     }
 }

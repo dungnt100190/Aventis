@@ -48,6 +48,7 @@
     <ProjectReference Include="..\Kiss4Web.Infrastructure.Reporting\Kiss4Web.Infrastructure.Reporting.csproj" />
     <ProjectReference Include="..\Kiss4Web.Modules.Basis\Kiss4Web.Modules.Basis.csproj" />
     <ProjectReference Include="..\Kiss4Web.Modules.Fibu\Kiss4Web.Modules.Fibu.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Modules.Pendenzen\Kiss4Web.Modules.Pendenzen.csproj" />
     <ProjectReference Include="..\Kiss4Web.Modules.Sozialhilfe\Kiss4Web.Modules.Sozialhilfe.csproj" />
   </ItemGroup>
 
