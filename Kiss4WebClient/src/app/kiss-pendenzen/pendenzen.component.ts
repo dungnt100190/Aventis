@@ -4,7 +4,7 @@ import { PendenzenSandbox } from "@app/kiss-pendenzen/pendenzen.sandbox";
 
 @Component({
   selector: 'kiss-pendenzen',
-  templateUrl: './pen.component.html',
+  templateUrl: './pendenzen.component.html',
   styleUrls: ['./pendenzen.component.css']
 })
 export class PendenzenComponent extends BaseComponent implements OnInit {
@@ -16,7 +16,7 @@ export class PendenzenComponent extends BaseComponent implements OnInit {
   }
   ngOnInit(): void {
     this.pendenzenSandbox.loadListPendenzen();
-    
+
   }
 
   onBtnClick(e) {

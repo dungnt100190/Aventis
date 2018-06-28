@@ -1,0 +1,14 @@
+.left-nav {
+    padding: 25px 0 25px 20px;
+}
+
+.left-nav-header {
+    font-size: 28px;
+    font-weight: 500;
+    color: #3CA9F8;
+}
+
+a {
+    color: #39474F;
+    text-decoration:none;
+}

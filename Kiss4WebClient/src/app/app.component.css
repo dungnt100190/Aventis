@@ -1,0 +1,159 @@
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url(../assets/fonts/HelveticaNeueMedium.woff) format("woff");
+}
+
+.app-main {
+  font-family: "Helvetica Neue";
+  font-size: 14px;
+}
+
+.m0 {
+  margin: 0;
+}
+
+.mt25 {
+  margin-top: 25px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mb15 {
+  margin-bottom: 15px;
+}
+
+.ml-45 {
+  margin-left: -45px;
+}
+
+.pl5 {
+  padding-left: 5px;
+}
+
+.pl10 {
+  padding-left: 10px;
+}
+
+.pl15 {
+  padding-left: 15px;
+}
+
+.pl20 {
+  padding-left: 20px;
+}
+
+.pl30 {
+  padding-left: 30px;
+}
+
+.pr15 {
+  padding-right: 15px;
+}
+
+.pr20 {
+  padding-right: 20px;
+}
+
+.pr30 {
+  padding-right: 30px;
+}
+
+.pt5 {
+  padding-top: 5px;
+}
+
+.pt20 {
+  padding-top: 20px;
+}
+
+.pb5 {
+  padding-bottom: 5px;
+}
+
+.pb10 {
+  padding-bottom: 10px;
+}
+
+.pb15 {
+  padding-bottom: 15px;
+}
+
+.pb20 {
+  padding-bottom: 20px;
+}
+
+.pb25 {
+  padding-bottom: 25px;
+}
+
+.flr {
+  float: right;
+}
+
+.fll {
+  float: left;
+}
+
+.w95 {
+  width: 95%;
+}
+
+::ng-deep .options {
+  padding: 20px;
+  margin-top: 20px;
+  background-color: rgba(191, 191, 191, 0.15);
+  position: relative;
+}
+
+::ng-deep .caption {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+::ng-deep .option {
+  margin-top: 10px;
+}
+
+::ng-deep .checkboxes-mode {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+::ng-deep .option > .dx-selectbox {
+  width: 150px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+::ng-deep .option > span {
+  margin-right: 10px;
+}
+
+::ng-deep .dx-field-label {
+  width: 100%;
+}
+/* left-nav */
+::ng-deep #left-nav .dx-treeview .dx-treeview-node:not(.dx-treeview-item-with-checkbox).dx-state-focused > .dx-treeview-item {
+  background-color: transparent;
+}
+
+  ::ng-deep #left-nav .dx-treeview .dx-treeview-node:not(.dx-treeview-item-with-checkbox).dx-state-focused > .dx-treeview-item * {
+    color: #3ca9f8;
+  }
+
+/* layout */
+
+::ng-deep .dx-layout-manager .dx-field-item:not(.dx-last-col) {
+  padding-right: 40px;
+}
+
+::ng-deep .dx-layout-manager .dx-field-item:not(.dx-first-col) {
+  padding-left: 40px;
+}
+
+.wrapper-main {
+  overflow: auto !important;
+}

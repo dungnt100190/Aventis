@@ -1,0 +1,48 @@
+.app-content {
+    padding: 25px 20px 15px 20px;
+}
+
+.app-content-header-left {
+    color: #39474F;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.app-content1, .app-content2, .app-content3 {
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 4px 0 rgba(0,21,41,0.12);
+}
+
+.app-content1-header, .app-content2-header, .app-content3-header {
+    padding: 15px;
+    border-bottom: 1px solid #D9D9D9;
+    color: #39474F;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.app-content1-body, .app-content2-body, .app-content3-body {
+    background: #fff;
+    padding: 25px 20px 20px 20px;
+}
+
+.app-content1-name, .app-content3-name {
+    color: #39474F;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.app-content-footer {
+    font-size: 12px;
+    font-weight: 500;
+    color: #9b9b9b;
+    padding-top: 45px;
+}
+
+.app-content-footer-right {
+    text-align: right;
+}
+
+.popover-hover:hover {
+    background-color: #f3f5f7;
+}

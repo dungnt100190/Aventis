@@ -1,0 +1,13 @@
+<div class="left-nav">
+    <div class="left-nav-header pb20">
+        <span style="cursor:pointer" (click)="openNav()">
+            <i class="fa fa-bars pr20"></i>
+            <span id="left-nav-header-title">Navigation</span>
+        </span>
+    </div>
+    <div id="left-nav-body" >
+        <dx-tree-view
+            [items]="parentItems">
+        </dx-tree-view>
+    </div>
+</div>

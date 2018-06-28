@@ -1,0 +1,114 @@
+<div class="app-content3">
+  <div class="app-content3-header">
+    <dx-box direction="row" width="100%">
+      <dxi-item [ratio]="12">
+        <div id="app-content3-header-title" class="dx-field">
+          <div class="dx-field-value-static app-content3-header-title">
+            Detail
+          </div>
+        </div>
+      </dxi-item>
+      <dxi-item [ratio]="3" class="pl10">
+        <dx-button height="40" [text]="'InBearbeitung'" [type]="'default'"></dx-button>
+      </dxi-item>
+      <dxi-item [ratio]="3" class="pl10">
+        <dx-button height="40" [text]="'ZurMaske'" [type]="'default'"></dx-button>
+      </dxi-item>
+      <dxi-item [ratio]="3" class="pl10">
+        <dx-button height="40" [text]="'Weiterleiten'" [type]="'default'"></dx-button>
+      </dxi-item>
+      <dxi-item [ratio]="3" class="pl10">
+        <dx-button height="40" [text]="'Erledigt'" [type]="'default'"></dx-button>
+      </dxi-item>
+      <dxi-item [ratio]="3" class="pl10">
+        <dx-button height="40" [text]="'NeuePendenz'" [type]="'default'"></dx-button>
+      </dxi-item>
+      <dxi-item [ratio]="3" class="pl10">
+        <dx-button height="40" [text]="'Bearbeiten'" [type]="'default'"></dx-button>
+      </dxi-item>
+      <dxi-item [ratio]="1">
+        <div class="dx-field">
+          <div class="dx-field-value-static">
+            <div id="link3" (click)="toggleWithTitle()">
+              <i class="dx-icon dx-icon-overflow" style="width: 24px; height: 24px; font-size:24px; line-height:24px;"></i>
+            </div>
+          </div>
+        </div>
+      </dxi-item>
+      <dxi-item [ratio]="0">
+        <dx-popover target="#link3" position="bottom" [width]="300" [showTitle]="true" title="Spaltenauswahl" [(visible)]="withTitleVisible">
+          <div *dxTemplate="let data = model of 'content'">
+            <div class="pt5 pb5 popover-hover">
+              Excel Export
+            </div>
+            <div class="pt5 pb5 popover-hover">
+              Grid drucken
+            </div>
+            <div class="pt5 pb5 popover-hover">
+                Schnellfilterzeile
+                anzeigen/ausblenden
+            </div>
+            <div class="pt5 pb5 popover-hover">
+                Gruppierungsbereich
+                anzeigen/ausblenden
+            </div>
+            <div class="pt5 pb5 popover-hover">
+                Suche anzeigen/ausblenden
+            </div>
+            <div class="pt5 pb5 popover-hover">
+                Filtereditor anzeigen/ausblenden
+            </div>
+            <div class="pt5 pb5 popover-hover">
+                Grid Einstellungen
+            </div>
+          </div>
+        </dx-popover>
+      </dxi-item>
+    </dx-box>
+  </div>
+  <div class="app-content3-body">
+    <!--<dx-form id="content1" [formData]="content1">
+      <dxi-item itemType="group" [colCount]="2">
+        <dxi-item itemType="group">
+          <dxi-item dataField="Status"></dxi-item>
+          <dxi-item dataField="Pendenz Typ" editorType="dxSelectBox" [editorOptions]="{ items: positions, value: '' }"></dxi-item>
+          <dxi-item dataField="Betreff"></dxi-item>
+          <dxi-item dataField="Beschreibung" editorType="dxTextArea" [editorOptions]="{ height: 90 }" [colSpan]="2"></dxi-item>
+          <dxi-item dataField="Ersteller"></dxi-item>
+          <dxi-item dataField="Empfänger">
+            <dx-drop-down-box [(value)]="gridBoxValue" valueExpr="ID" displayExpr="CompanyName" placeholder="Select a value..." [showClearButton]="true"
+              [dataSource]="gridDataSource">
+              <div *dxTemplate="let data of 'content'">
+                <dx-data-grid [dataSource]="gridDataSource" [columns]="['CompanyName', 'City', 'Phone']" [selection]="{ mode: 'multiple' }"
+                  [hoverStateEnabled]="true" [paging]="{ enabled: true, pageSize: 10 }" [scrolling]="{ mode: 'infinite' }"
+                  [height]="345" [(selectedRowKeys)]="gridBoxValue">
+                </dx-data-grid>
+              </div>
+            </dx-drop-down-box>
+          </dxi-item>
+          <dxi-item dataField="Fallträger">
+            <dx-drop-down-box [(value)]="gridBoxValue" valueExpr="ID" displayExpr="CompanyName" placeholder="Select a value..." [showClearButton]="true"
+              [dataSource]="gridDataSource">
+              <div *dxTemplate="let data of 'content'">
+                <dx-data-grid [dataSource]="gridDataSource" [columns]="['CompanyName', 'City', 'Phone']" [selection]="{ mode: 'multiple' }"
+                  [hoverStateEnabled]="true" [paging]="{ enabled: true, pageSize: 10 }" [scrolling]="{ mode: 'infinite' }"
+                  [height]="345" [(selectedRowKeys)]="gridBoxValue">
+                </dx-data-grid>
+              </div>
+            </dx-drop-down-box>
+          </dxi-item>
+          <dxi-item dataField="Leistung" editorType="dxSelectBox" [editorOptions]="{ items: positions, value: '' }"></dxi-item>
+        </dxi-item>
+        <dxi-item itemType="group">
+          <dxi-item dataField="Leistungsverantw"></dxi-item>
+          <dxi-item dataField="betrifft Person" editorType="dxSelectBox" [editorOptions]="{ items: positions, value: '' }"></dxi-item>
+          <dxi-item dataField="Antwort" editorType="dxTextArea" [editorOptions]="{ height: 90 }" [colSpan]="2"></dxi-item>
+          <dxi-item dataField="Erfasst" editorType="dxDateBox" [editorOptions]="{ value: null, width: '50%' }"></dxi-item>
+          <dxi-item dataField="Fällig" editorType="dxDateBox" [editorOptions]="{ value: null, width: '50%' }"></dxi-item>
+          <dxi-item dataField="Bearbeitung"></dxi-item>
+          <dxi-item dataField="Erledigt"></dxi-item>
+        </dxi-item>
+      </dxi-item>
+    </dx-form>-->
+  </div>
+</div>

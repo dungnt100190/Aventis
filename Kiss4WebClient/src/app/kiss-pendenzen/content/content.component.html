@@ -1,0 +1,98 @@
+<div class="app-content">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="app-content-header-left">
+        <span>Pendenzenverwaltung</span>
+        <span class="pl10">offene</span>
+        <span class="pl10">(1)</span>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="app-content-header-right">
+        <div class="flr">
+          <div class="fll">
+            <div class="dx-field-value">
+              <dx-button height="40" width="200" [text]="'Verarbeiten'" [type]="'default'"></dx-button>
+            </div>
+          </div>
+          <div class="fll">
+            <div class="dx-field">
+              <div class="dx-field-value-static">
+                <i class="dx-icon dx-icon-print" style="width: 24px; height: 24px; font-size:24px; line-height:24px;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="fll">
+            <div class="dx-field">
+              <div class="dx-field-value-static">
+                <i class="fa fa-file-excel-o" style="width: 24px; height: 24px; font-size:24px; line-height:24px;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="fll">
+            <div class="dx-field">
+              <div class="dx-field-value-static">
+                <i class="dx-icon dx-icon-column-chooser" style="width: 24px; height: 24px; font-size:24px; line-height:24px;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="fll">
+            <div class="dx-field">
+              <div class="dx-field-value-static">
+                <div id="link2" (click)="toggleWithTitle()">
+                  <i class="dx-icon dx-icon-overflow" style="width: 24px; height: 24px; font-size:24px; line-height:24px;"></i>
+                </div>
+                <dx-popover target="#link2" position="bottom" [width]="300" [showTitle]="true" title="Spaltenauswahl" [(visible)]="withTitleVisible">
+                  <div *dxTemplate="let data = model of 'content'">
+                    <div class="pt5 pb5 popover-hover">
+                      Excel Export
+                    </div>
+                    <div class="pt5 pb5 popover-hover">
+                      Grid drucken
+                    </div>
+                    <div class="pt5 pb5 popover-hover">
+                      Schnellfilterzeile anzeigen/ausblenden
+                    </div>
+                    <div class="pt5 pb5 popover-hover">
+                      Gruppierungsbereich anzeigen/ausblenden
+                    </div>
+                    <div class="pt5 pb5 popover-hover">
+                      Suche anzeigen/ausblenden
+                    </div>
+                    <div class="pt5 pb5 popover-hover">
+                      Filtereditor anzeigen/ausblenden
+                    </div>
+                    <div class="pt5 pb5 popover-hover">
+                      Grid Einstellungen
+                    </div>
+                  </div>
+                </dx-popover>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pt20">
+    <div>
+      <kiss-pendenzen-content1></kiss-pendenzen-content1>
+    </div>
+    <div class="pt20">
+      <kiss-pendenzen-content2></kiss-pendenzen-content2>
+    </div>
+    <div class="pt20">
+      <kiss-pendenzen-content3></kiss-pendenzen-content3>
+    </div>
+  </div>
+  <div class="row app-content-footer">
+    <div class="col-md-6">
+      Copyright © 2018 by CMC Global
+    </div>
+    <div class="col-md-6">
+      <div class="app-content-footer-right">
+        Version 1.0-beta
+      </div>
+    </div>
+  </div>
+</div>
