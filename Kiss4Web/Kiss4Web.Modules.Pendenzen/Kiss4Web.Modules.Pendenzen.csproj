@@ -8,4 +8,12 @@
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.7" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Kiss4Web.Infrastructure.Authorization\Kiss4Web.Infrastructure.Authorization.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Infrastructure.Crud\Kiss4Web.Infrastructure.Crud.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Infrastructure.DataAccess\Kiss4Web.Infrastructure.DataAccess.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Infrastructure.Mediator\Kiss4Web.Infrastructure.Mediator.csproj" />
+    <ProjectReference Include="..\Kiss4Web.Model\Kiss4Web.Model.csproj" />
+  </ItemGroup>
+
 </Project>

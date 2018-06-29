@@ -1,8 +1,12 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Dapper;
+using Kiss4Web.Model.Pendenzen;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Threading.Tasks;
+using Kiss4Web.Infrastructure.Mediator;
 
 namespace Kiss4Web.Modules.Pendenzen
 {
@@ -13,11 +17,31 @@ namespace Kiss4Web.Modules.Pendenzen
 		{ }
 
 		[HttpGet]
-		[Route("api/Pendenzen/GetListPendenzen")]
-		public IEnumerable<Task> GetListPendenzen()
+		[Route("api/Pendenzen/RefreshNavBarItems")]
+		public NavBarItemsModel RefreshNavBarItems()
 		{
-			List<Task> listContact = new List<Task>();
-			listContact.Add(new Task
+			var navbarItems = new NavBarItemsModel
+			{
+				ItmMeineFaellig = 1,
+				ItmMeineOffen = 2,
+				ItmMeineInBearbeitung = 3,
+				ItmMeineErstellt = 4,
+				ItmMeineErhalten = 5,
+				ItmMeineZuVisieren = 6,
+				ItmVersandteFaellig = 7,
+				ItmVersandteZuVisieren = 8,
+				ItmVersandteAllgemein = 9,
+				ItmVersandteOffen = 10
+			};
+			return navbarItems;
+		}
+
+		[HttpGet]
+		[Route("api/Pendenzen/GetListPendenzen")]
+		public IEnumerable<TaskModel> GetListPendenzen()
+		{
+			List<TaskModel> listContact = new List<TaskModel>();
+			listContact.Add(new TaskModel
 			{
 				OrderNumber = 1111,
 				OrderDate = DateTime.Now,
@@ -26,7 +50,7 @@ namespace Kiss4Web.Modules.Pendenzen
 				Employee = "DungNT",
 				CustomerStoreCity = "Ha Noi"
 			});
-			listContact.Add(new Task
+			listContact.Add(new TaskModel
 			{
 				OrderNumber = 2222,
 				OrderDate = DateTime.Now.AddHours(1),
@@ -35,7 +59,7 @@ namespace Kiss4Web.Modules.Pendenzen
 				Employee = "TrongNN",
 				CustomerStoreCity = "Da Nang"
 			});
-			listContact.Add(new Task
+			listContact.Add(new TaskModel
 			{
 				OrderNumber = 3333,
 				OrderDate = DateTime.Now.AddHours(2),
@@ -46,15 +70,5 @@ namespace Kiss4Web.Modules.Pendenzen
 			});
 			return listContact;
 		}
-	}
-
-	public class Task
-	{
-		public int OrderNumber { get; set; }
-		public DateTime OrderDate { get; set; }
-		public DateTime DeliveryDate { get; set; }
-		public double SaleAmount { get; set; }
-		public string Employee { get; set; }
-		public string CustomerStoreCity { get; set; }
 	}
 }

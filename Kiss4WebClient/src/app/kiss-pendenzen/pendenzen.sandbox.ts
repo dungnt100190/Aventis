@@ -6,11 +6,13 @@ import * as store from '../shared/store';
 import { UtilService } from '../shared/utility';
 import * as PendenzenAction from '../shared/store/actions/pendenzen.action';
 import { Observable } from 'rxjs/Observable';
+import { debug } from 'util';
 
 @Injectable()
 export class PendenzenSandbox extends Sandbox {
 
   public pendenzenData$: Observable<any> = this.appState$.select(store.getPendenzenData);
+  public navbarItems$: Observable<any> = this.appState$.select(store.getNavBarItems);
 
   constructor(
     protected appState$: Store<store.State>,
@@ -21,16 +23,16 @@ export class PendenzenSandbox extends Sandbox {
   }
 
   /**
-* Load list pendenzen from the server
-*/
+  * Load list pendenzen from the server
+  */
   public loadListPendenzen(): void {
     this.appState$.dispatch(new PendenzenAction.LoadAction());
   }
 
-  //btnClickEvent(e?: any) {
-  //  // alert('clicked button');
-  //  this.pendenzenData$.subscribe(data => {
-  //    if (data) { console.log(data); }
-  //  });
-  //}
+  /**
+  * Load navbarItems from the server
+  */
+  public LoadNavBarItems(): void {
+    this.appState$.dispatch(new PendenzenAction.LoadNavBarAction());
+  }
 }

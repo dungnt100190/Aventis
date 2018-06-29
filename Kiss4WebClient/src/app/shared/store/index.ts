@@ -148,6 +148,10 @@ export const getPendenzenData = createSelector(
   getPendenzenState,
   fromPendenzen.getData
 );
+export const getNavBarItems = createSelector(
+  getPendenzenState,
+  fromPendenzen.getNavBarItems
+);
 export const getPendenzenLoading = createSelector(
   getPendenzenState,
   fromPendenzen.getLoading

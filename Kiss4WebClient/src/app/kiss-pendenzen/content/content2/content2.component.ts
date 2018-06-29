@@ -1,5 +1,4 @@
 import { Component, OnInit, Injector } from '@angular/core';
-//import { PenService, Order } from '../../pen.service';
 import { PendenzenSandbox } from '@app/kiss-pendenzen/pendenzen.sandbox';
 import { BaseComponent } from '@app/shared/components/base.component';
 import { Pendenzen } from '@app/shared/models/pendenzen/pendenzen.model';
@@ -12,10 +11,8 @@ import { Pendenzen } from '@app/shared/models/pendenzen/pendenzen.model';
     '../../../app.component.css',
     '../content.component.css'
   ],
-  //providers: [PenService],
 })
 export class Content2Component extends BaseComponent implements OnInit {
-  //orders: Order[];
   showFilterRow: boolean;
   showHeaderFilter: boolean;
   allMode: string;
@@ -45,8 +42,10 @@ export class Content2Component extends BaseComponent implements OnInit {
 
   private loadPendenzenData() {
     this.pendenzenSandbox.pendenzenData$.subscribe(data => {
-      this.pendenzenData = data;
-      if (data) { console.log(data); }
+      if (data) {
+        console.log(data);
+        this.pendenzenData = data;
+      }
     });
   }
 }
