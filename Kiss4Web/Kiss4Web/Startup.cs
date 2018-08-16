@@ -59,6 +59,13 @@ namespace Kiss4Web
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(builder =>
+                   builder.AllowAnyOrigin()
+                   .AllowAnyHeader()
+                   .AllowAnyMethod());
+
+
             var supportedCultures = new[] { new CultureInfo(Languages.Deutsch), new CultureInfo(Languages.Français), new CultureInfo(Languages.Italiano) };
             app.UseRequestLocalization(new RequestLocalizationOptions
             {
@@ -81,6 +88,7 @@ namespace Kiss4Web
             app.UseXfo(o => o.Deny());
             app.UseRedirectValidation(o => o.AllowSameHostRedirectsToHttps());
 
+            
             app.UseAuthentication();
             app.UseMvc();
 
@@ -123,6 +131,8 @@ namespace Kiss4Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
+
             var builder = new SqlConnectionStringBuilder(Configuration["DockerConnectionString"] ?? Configuration.GetConnectionString("DefaultConnection"));
             var overrideDbHost = Configuration.GetValue<string>("DbHost");
             if (overrideDbHost != null)

@@ -1,159 +1,206 @@
+/* override father layout css */
+.wrapper-main {
+    overflow: auto !important;
+  }
+/* general */
 @font-face {
-  font-family: "Helvetica Neue";
-  src: url(../assets/fonts/HelveticaNeueMedium.woff) format("woff");
+    font-family: "Helvetica Neue";
+    src: url(../assets/fonts/HelveticaNeueMedium.woff) format("woff");
 }
-
 .app-main {
-  font-family: "Helvetica Neue";
-  font-size: 14px;
+    font-family: "Helvetica Neue";
+    font-size: 14px;
 }
-
+/* margin */
 .m0 {
-  margin: 0;
+    margin: 0;
 }
-
 .mt25 {
-  margin-top: 25px;
+    margin-top: 25px;
 }
-
 .mb10 {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
-
 .mb15 {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
-
+.ml10 {
+    margin-left: 10px;
+}
 .ml-45 {
-  margin-left: -45px;
+    margin-left: -45px;
 }
-
-.pl5 {
-  padding-left: 5px;
-}
-
-.pl10 {
-  padding-left: 10px;
-}
-
-.pl15 {
-  padding-left: 15px;
-}
-
-.pl20 {
-  padding-left: 20px;
-}
-
-.pl30 {
-  padding-left: 30px;
-}
-
-.pr15 {
-  padding-right: 15px;
-}
-
-.pr20 {
-  padding-right: 20px;
-}
-
-.pr30 {
-  padding-right: 30px;
-}
-
+/* padding */
 .pt5 {
-  padding-top: 5px;
+    padding-top: 5px;
 }
-
+.pt10 {
+    padding-top: 10px;
+}
 .pt20 {
-  padding-top: 20px;
+    padding-top: 20px;
 }
-
+.pr15 {
+    padding-right: 15px;
+}
+.pr20 {
+    padding-right: 20px;
+}
+.pr30 {
+    padding-right: 30px;
+}
 .pb5 {
-  padding-bottom: 5px;
+    padding-bottom: 5px;
 }
-
 .pb10 {
-  padding-bottom: 10px;
+    padding-bottom: 10px;
 }
-
 .pb15 {
-  padding-bottom: 15px;
+    padding-bottom: 15px;
 }
-
 .pb20 {
-  padding-bottom: 20px;
+    padding-bottom: 20px;
 }
-
 .pb25 {
-  padding-bottom: 25px;
+    padding-bottom: 25px;
 }
-
+.pl5 {
+    padding-left: 5px;
+}
+.pl10 {
+    padding-left: 10px;
+}
+.pl15 {
+    padding-left: 15px;
+}
+.pl20 {
+    padding-left: 20px;
+}
+.pl30 {
+    padding-left: 30px;
+}
+/* float */
 .flr {
-  float: right;
+    float: right;
 }
-
 .fll {
-  float: left;
+    float: left;
 }
-
+/* width */
 .w95 {
-  width: 95%;
+    width: 95%;
 }
-
+/* vertical */
+.vertical-middle {
+    vertical-align: middle;
+}
+/* override devextreme css */
 ::ng-deep .options {
-  padding: 20px;
-  margin-top: 20px;
-  background-color: rgba(191, 191, 191, 0.15);
-  position: relative;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: rgba(191, 191, 191, 0.15);
+    position: relative;
 }
-
 ::ng-deep .caption {
-  font-size: 18px;
-  font-weight: 500;
+    font-size: 18px;
+    font-weight: 500;
 }
-
 ::ng-deep .option {
-  margin-top: 10px;
+   margin-top: 10px;
 }
-
-::ng-deep .checkboxes-mode {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-}
-
-::ng-deep .option > .dx-selectbox {
-  width: 150px;
-  display: inline-block;
-  vertical-align: middle;
+/* display grid checkbox */
+::ng-deep .dx-datagrid-rowsview .dx-select-checkboxes-hidden > tbody > tr > td > .dx-select-checkbox {
+    display: inline-block;
 }
 
 ::ng-deep .option > span {
-  margin-right: 10px;
+    margin-right: 10px;
 }
 
 ::ng-deep .dx-field-label {
-  width: 100%;
+    width: 100%;
 }
-/* left-nav */
+/* custom left-nav */
 ::ng-deep #left-nav .dx-treeview .dx-treeview-node:not(.dx-treeview-item-with-checkbox).dx-state-focused > .dx-treeview-item {
-  background-color: transparent;
-}
-
-  ::ng-deep #left-nav .dx-treeview .dx-treeview-node:not(.dx-treeview-item-with-checkbox).dx-state-focused > .dx-treeview-item * {
+    background-color: transparent;
     color: #3ca9f8;
-  }
-
-/* layout */
-
+}
+::ng-deep .dx-treeview .dx-treeview-node:not(.dx-treeview-item-with-checkbox).dx-state-selected > .dx-treeview-item {
+    background-color: transparent;
+    color: #3ca9f8;
+}
+::ng-deep #left-nav .dx-treeview .dx-treeview-node:not(.dx-treeview-item-with-checkbox).dx-state-focused > .dx-treeview-item * {
+    color: #3ca9f8;
+}
+::ng-deep .left-content .dx-treeview-node.dx-state-selected > .dx-item > .dx-item-content {
+    color: #3ca9f8;
+}
+/* custom layout */
 ::ng-deep .dx-layout-manager .dx-field-item:not(.dx-last-col) {
-  padding-right: 40px;
+    padding-right: 40px;
 }
-
 ::ng-deep .dx-layout-manager .dx-field-item:not(.dx-first-col) {
-  padding-left: 40px;
+    padding-left: 40px;
 }
-
-.wrapper-main {
-  overflow: auto !important;
+/* custom grid header */
+::ng-deep .gridHeaderCss {
+    font-weight: bold;
+}
+::ng-deep tr.dx-row.dx-column-lines.dx-header-row {
+    background-color: #f3f5f7;
+}
+/* custom button */
+::ng-deep .dx-button-has-text .dx-button-content {
+    padding: 5px 10px 10px;
+}
+::ng-deep .dx-button {
+    margin-left: 10px;
+}
+/* custom grid summary */
+::ng-deep .dx-datagrid-text-content {
+    overflow: inherit;
+}
+/* custom dropdown box icon */
+::ng-deep .dx-dropdowneditor.dx-dropdowneditor-active .dx-dropdowneditor-icon, .dx-dropdowneditor-button.dx-state-active .dx-dropdowneditor-icon {
+    background-color: unset;
+}
+::ng-deep .dx-dropdowneditor.dx-state-hover .dx-dropdowneditor-icon {
+    background-color: unset;
+}
+/* custom border input */
+::ng-deep .dx-texteditor {
+    background: #fff;
+    border: 1px solid #b9b8b8;
+    border-radius: 4px;
+}
+/* custom popover */
+.g-popover-body {
+    font-size: 13px;
+    margin: -20px -20px -14px -20px;
+}
+.g-popover-not-title {
+    font-size: 13px;
+    margin: -20px;
+}
+.g-popover-row, .g-popover-last-row {
+    padding: 3px 50px 3px 10px;
+    cursor: pointer;
+}
+.g-popover-row {
+    border-bottom: 1px solid #ddd;  
+}
+.g-popover-row:hover, .g-popover-last-row:hover {
+    background-color: #f5f5f5;
+}
+/* custom grid popover icons */
+.g-icon {
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 3px;
+}
+/* custom calendar */
+::ng-deep .dx-calendar-cell {
+    font-size: 14px;
 }

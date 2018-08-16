@@ -8,9 +8,14 @@ import { Component, Output, EventEmitter, ChangeDetectionStrategy, Input } from 
 })
 export class ProfileBarComponent {
 
-  @Input() userImage: string;
-  @Input() userEmail: string;
+  isLogout = false;
+  @Input() userImage = '';
+  @Input() userEmail = '';
   @Output() logout: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
+
+  toggleLogout() {
+    this.isLogout = !this.isLogout;
+  }
 }

@@ -1,0 +1,60 @@
+{
+    "Navigation": {
+        "Navigation": "Navigation",
+        "MyPendencies": "Meine Pendenzen",
+        "Overdue": "fällige",
+        "Open": "offene",
+        "InProcessing": "in Bearbeitung",
+        "SelfCreated": "selber erstellte",
+        "Obtained": "erhaltene",
+        "ToBeSighted": "zu visierende",
+        "ToTheGroup": "an die Gruppe",
+        "Completed": "erledigte",
+        "CreatedPendingTrends": "Erstellte Pendenzen",
+        "General": "allgemeine",
+        "Search": "Suchen",
+        "SearchForPending": "Pendenzen suchen"
+    },
+    "Content": {
+        "PendenzenverwaltungOpen": "Pendenzenverwaltung offene",
+        "ToProcess": "Verarbeiten",
+        "Search_": "Suche",
+        "Status": "Status",
+        "PendencyType": "Pendenz Typ",
+        "Subject": "Betreff",
+        "Creator": "Ersteller",
+        "Receiver": "Empfänger",
+        "NameClient": "Name Klient/in",
+        "FirstNameClient": "Vorname Klient/in",
+        "CaseNumber": "Fallnummer",
+        "PerformanceResponsible": "Leistungsverantw.",
+        "OrganizationalUnit": "Organisationseinheit",
+        "Detected": "Erfasst",
+        "Due": "Fallig",
+        "Processing": "Bearbeitung",
+        "Done": "Erledigt",
+        "Detail": "Detail",
+        "Description": "Beschreibung",
+        "TragerCase": "Fallträger",
+        "Power": "Leistung",
+        "ConcernsPerson": "betrifft Person",
+        "Answer": "Antwort",
+        "InProcessing": "in Bearbeitung",
+        "ToTheMask": "zur Maske",
+        "HandOff": "Weiterleiten",
+        "NewPendency": "Neue Pendenz",
+        "Edit": "Bearbeiten"
+    },
+    "Popover": {
+        "ExcelExport": "Excel Export",
+        "GridPrint": "Grid drucken",
+        "ShowHideFastFilterLine": "Schnellfilterzeile anzeigen/ausblenden",
+        "ShowHideGroupingArea": "Gruppierungsbereich anzeigen/ausblenden",
+        "ShowHideSearch": "Suche anzeigen/ausblenden",
+        "ShowHideFilterEditor": "Filtereditor anzeigen/ausblenden",
+        "GridSettings": "Grid Einstellungen"
+    },
+    "Grid": {
+        "NumberOfRecords": "Anzahi Datensätze"
+    }
+}

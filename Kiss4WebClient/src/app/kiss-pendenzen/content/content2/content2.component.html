@@ -1,27 +1,77 @@
-<div class="app-content2">
-    <div class="app-content2-header">
-        <span>List data</span>
-    </div>
-    <div class="app-content2-body">
-        <dx-data-grid id="gridContainer" [dataSource]="pendenzenData" [rowAlternationEnabled]="true">
-            <dxo-selection [selectAllMode]="allMode" [showCheckBoxesMode]="checkBoxesMode" mode="multiple"></dxo-selection>
+<div id="filter-app-content" class="app-content2">
+
+    <div id="filter-body" class="app-content2-body">
+        <dx-data-grid #pendenzenDatagrid id="gridContainer" [dataSource]="pendenzenData" keyExpr="id" (onCellClick)="onSelectionChanged($event)"
+            [columnAutoWidth]="true" [rowAlternationEnabled]="true" [allowColumnResizing]="true" [showBorders]="true" [(sorting)]="sortingLabel"
+            [noDataText]="'Keine Daten'" [selectedRowKeys]="selectedKeys" [disabled]="isDisabled"> 
+            <!-- (onEditorPrepared)="onEditorPreparingDatagrid($event)"  -->
+
+            <!-- <dxo-export [enabled]="false" fileName="WorkingList" [allowExportSelectedData]="false"></dxo-export> -->
+            <!-- <dxo-column-chooser [enabled]="true"></dxo-column-chooser> -->
+            <!-- <dxo-group-panel [visible]="true"></dxo-group-panel> -->
+            <!-- <dxo-filter-row [visible]="true" [applyFilter]="currentFilter"></dxo-filter-row> -->
+            <!-- <dxo-header-filter [visible]="true"></dxo-header-filter> -->
+            <!-- <dxo-load-panel [enabled]="true" [text]="'Laden...'"></dxo-load-panel> -->
+            <dxo-selection mode="multiple" [showCheckBoxesMode]="'onClick'"></dxo-selection>
+            <dxo-scrolling columnRenderingMode="virtual"></dxo-scrolling>
             <dxo-paging [pageSize]="10"></dxo-paging>
-            <dxo-filter-row [visible]="showFilterRow" [applyFilter]="currentFilter"></dxo-filter-row>
-            <dxo-header-filter [visible]="showHeaderFilter"></dxo-header-filter>
-            <dxi-column dataField="orderNumber" [width]="140" caption="Invoice Number">
-                <dxo-header-filter [groupInterval]="10000"></dxo-header-filter>
+            <dxo-filter-row [visible]="true" [(operationDescriptions)]="operationDescriptions" [(resetOperationText)]="resetOperationText"></dxo-filter-row>
+            <dxo-header-filter [visible]="true" [(texts)]="headerFilterTexts"></dxo-header-filter>
+            <dxo-search-panel [visible]="true" [width]="260" placeholder="Suche..."></dxo-search-panel>
+
+            <dxi-column  dataField="fallig" caption="Fällig" headerCellTemplate="titleHeaderTemplate" width="100" dataType="date" format="dd.MM.yyyy" [editorOptions]="{ calendarOptions: {firstDayOfWeek:1} }">
             </dxi-column>
-            <dxi-column dataField="orderDate" alignment="right" dataType="date" [width]="120" [calculateFilterExpression]="calculateFilterExpression">
-                <dxo-header-filter [dataSource]="orderHeaderFilter"></dxo-header-filter>
+
+            <dxi-column dataField="betreff" caption="Betreff" headerCellTemplate="titleHeaderTemplate" width="150">
             </dxi-column>
-            <dxi-column dataField="deliveryDate" alignment="right" dataType="datetime" format="M/d/yyyy, HH:mm" [width]="180"></dxi-column>
-            <dxi-column dataField="saleAmount" alignment="right" format="currency">
-                <dxo-header-filter [dataSource]="saleAmountHeaderFilter"></dxo-header-filter>
+
+            <dxi-column dataField="leistungsverantw" caption="Leistung" headerCellTemplate="titleHeaderTemplate" width="100">
             </dxi-column>
-            <dxi-column dataField="employee"></dxi-column>
-            <dxi-column dataField="customerStoreCity" caption="City">
-                <dxo-header-filter [allowSearch]="true"></dxo-header-filter>
+
+            <dxi-column dataField="falltrager" caption="Fallträger" headerCellTemplate="titleHeaderTemplate" width="150">
             </dxi-column>
+
+            <dxi-column dataField="fallnummer" caption="Fallnummer" headerCellTemplate="titleHeaderTemplate" width="100">
+            </dxi-column>
+
+            <dxi-column dataField="person" caption="Person" headerCellTemplate="titleHeaderTemplate" width="150">
+            </dxi-column>
+
+            <dxi-column dataField="ersteller" caption="Ersteller" headerCellTemplate="titleHeaderTemplate" width="150">
+            </dxi-column>
+
+            <dxi-column dataField="empfanger" caption="Empfänger" headerCellTemplate="titleHeaderTemplate" width="150">
+            </dxi-column>
+
+            <dxi-column dataField="status" caption="Status" headerCellTemplate="titleHeaderTemplate" width="150">
+            </dxi-column>
+
+            <dxi-column dataField="erfasst" caption="Erfasst" headerCellTemplate="titleHeaderTemplate" width="100" dataType="date" format="dd.MM.yyyy" [editorOptions]="{ calendarOptions: {firstDayOfWeek:1} }">
+            </dxi-column>
+
+            <dxi-column dataField="bearbeitung" caption="Bearbeitung" headerCellTemplate="titleHeaderTemplate" width="100" dataType="date"
+                format="dd.MM.yyyy" [editorOptions]="{ calendarOptions: {firstDayOfWeek:1} }">
+            </dxi-column>
+
+            <dxi-column dataField="erledigt" caption="Erledigt" headerCellTemplate="titleHeaderTemplate" width="100" dataType="date"
+                format="dd.MM.yyyy" [editorOptions]="{ calendarOptions: {firstDayOfWeek:1} }">
+            </dxi-column>
+
+            <dxi-column dataField="antwort" caption="Antwort" headerCellTemplate="titleHeaderTemplate" width="150">
+            </dxi-column>
+
+            <dxi-column [allowFiltering]="false" [allowSorting]="false" cellTemplate="cellTemplate" [width]="40">
+            </dxi-column>
+
+            <div *dxTemplate="let info of 'titleHeaderTemplate'">
+                <span style="font-weight: 500; color: #000;">{{info.column.caption}}</span>
+            </div>
+
+            <div *dxTemplate="let data of 'cellTemplate'">
+                <button style="border: 0; background: unset">
+                    <i class="fa fa-ellipsis-h"></i>
+                </button>
+            </div>
         </dx-data-grid>
     </div>
 </div>

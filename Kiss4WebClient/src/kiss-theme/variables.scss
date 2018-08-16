@@ -1,0 +1,82 @@
+/* Colors definition */
+$color-black: #000 !default;
+$color-white: #fff !default;
+$color-grey-ultralight: #f9f9f9 !default;
+$color-grey-verylight: #ebebeb !default;
+$color-grey-light: #ccc !default;
+$color-grey: #869ba6 !default;
+$color-grey-dark: #6d6f70 !default;
+$color-grey-verydark: #333 !default;
+$color-red: #ee5a5a !default;
+$color-redLight: #f57676 !default;
+$color-border-light: #ddd !default;
+/* Site specific */
+
+$color-theme-black: #2f2f30 !default;
+$color-theme-grey: #DEE9EE !default;
+$color-theme-blue: #87bcd3 !default;
+$color-theme-lightBlue: #def5ff !default;
+$color-theme-violet: #353535 !default;
+$color-theme-darkviolet: #2a2a2a !default;
+// The path
+$path: "/assets";
+$path-image: "#{$path}/images";
+$path-icon: "#{$path}/icon";
+$color-base-hover : lighten(#337ab7, 35%); //#337ab7;//06c5fb
+$color-base : #337ab7;
+$color-lightgray : #ebebeb;
+$base-ft : "Helvetica Neue",
+"Segoe UI",
+Helvetica,
+Verdana,
+sans-serif !default;
+$base-fz : 14px !default;
+$base-fw : 500 !default;
+$padding-content: 15px !default;
+$header-height: 60px !default;
+$dx-border-color: #dddddd !default;
+$dx-focus-border-color: $color-base;
+$base-border-color: $color-base;
+$color-bg-body: #f1f1f1 !default;
+// button
+$color-default: #E5EDF4 !default;
+$color-primary: $color-base;
+// data grid
+$table-heade-bg : #6a6a6a !default; //b7b7b7
+$table-head-fz : $base-fz+2;
+$table-head-color : #ffffff !default;
+$table-row-border-color : #ebebeb !default;
+$table-row-color : #000000 !default;
+$table-row-hover : #b2b2b2 !default;
+$table-row-selected : #ceecff !default; //fff8e8
+$table-row-font-weight : $base-fw;
+//Header
+$color-total-notification: #c74204 !default; //f05a1f
+$color-lable-user: #3e5876 !default; //989898
+$url-icon-user: '#{$path-icon}/user-male-black-shape.png';
+$url-icon-bell: '#{$path-icon}/bell.png';
+//search Box
+$searchbox-input-color-bg:#ebebeb !default;
+$searchbox-popup-content-color-bg:#004a63 !default;
+$searchbox-header-group-color-border-bottom:#003040 !default;
+$searchbox-header-group-color-bg:#004a63 !default;
+$searchbox-body-group-color-bg:#016587 !default;
+$searchbox-item-body-color-bg:#016584 !default;
+$searchbox-item-selected-active-color-bg:#e9f8ff !default;
+$searchbox-transition-width: .2s !default;
+//Layout Left
+$color-layout-left-bg: #eeeeee !default;
+$menulefft-title-color-bg: #337ab7 !default; //06c5fb
+// Component Menu Dosiers
+$color-border-top-node-treeview: #f1f1f1 !default;
+$icon-treeview-toggle-opened:"\f016";
+$icon-treeview-toggle-close:"\f010";
+$color-node-treeview-focused:#ceecff;
+$url-icon-popover: '#{$path-icon}/menu-ver.png';
+$url-icon-popover-white: '#{$path-icon}/menu-ver-w.png';
+$height-left-menu-dosiers: 200px;
+$height-left-menu-dosiers-scenario: 100px;
+// form details
+$form-detail-label-color : #3e5876 !default; //525252
+$col-padding-right-not-last-col: 85px !default; // + 15px padding-right = 100px
+$dxform-detail-border-color: $color-lightgray;

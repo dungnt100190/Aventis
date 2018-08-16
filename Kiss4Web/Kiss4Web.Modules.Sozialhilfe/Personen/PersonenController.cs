@@ -8,7 +8,7 @@ namespace Kiss4Web.Modules.Sozialhilfe.Personen
 {
     public class PersonenController : Controller
     {
-        private readonly IMediator _mediator;
+        private readonly IMediator _mediator; 
 
         public PersonenController(IMediator mediator)
         {

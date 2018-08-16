@@ -1,0 +1,60 @@
+{
+  "Navigation": {
+    "Navigation": "Navigation",
+    "MyPendencies": "My Pendencies",
+    "Overdue": "overdue",
+    "Open": "open",
+    "InProcessing": "in Processing",
+    "SelfCreated": "self created",
+    "Obtained": "obtained",
+    "ToBeSighted": "to be sighted",
+    "ToTheGroup": "to the group",
+    "Completed": "completed",
+    "CreatedPendingTrends": "Created Pending Trends",
+    "General": "general",
+    "Search": "Search",
+    "SearchForPending": "Search for Pending"
+  },
+  "Content": {
+    "PendenzenverwaltungOpen": "Pendenzenverwaltung open",
+    "ToProcess": "To process",
+    "Search_": "Search",
+    "Status": "Status",
+    "PendencyType": "Pendency Type",
+    "Subject": "Subject",
+    "Creator": "Creator",
+    "Receiver": "Receiver",
+    "NameClient": "Name Client",
+    "FirstNameClient": "First Name Client",
+    "CaseNumber": "Case number",
+    "PerformanceResponsible": "Performance Responsible",
+    "OrganizationalUnit": "Organizational unit",
+    "Detected": "Detected",
+    "Due": "Due",
+    "Processing": "Processing",
+    "Done": "Done",
+    "Detail": "Detail",
+    "Description": "Description",
+    "TragerCase": "Trager case",
+    "Power": "Power",
+    "ConcernsPerson": "Concerns Person",
+    "Answer": "Answer",
+    "InProcessing": "in Processing",
+    "ToTheMask": "to The Mask",
+    "HandOff": "Hand off",
+    "NewPendency": "New Pendency",
+    "Edit": "Edit"
+  },
+  "Popover": {
+    "ExcelExport": "Excel Export",
+    "GridPrint": "Grid print",
+    "ShowHideFastFilterLine": "Show / Hide fast filter line",
+    "ShowHideGroupingArea": "Show / hide grouping area",
+    "ShowHideSearch": "Show / hide search",
+    "ShowHideFilterEditor": "Show / Hide filter editor",
+    "GridSettings": "Grid settings"
+  },
+  "Grid": {
+    "NumberOfRecords": "Number of Records"
+  }
+}

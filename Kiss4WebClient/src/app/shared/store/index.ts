@@ -148,9 +148,25 @@ export const getPendenzenData = createSelector(
   getPendenzenState,
   fromPendenzen.getData
 );
+export const getPendenzenDetail = createSelector(
+  getPendenzenState,
+  fromPendenzen.getDetail
+);
 export const getNavBarItems = createSelector(
   getPendenzenState,
   fromPendenzen.getNavBarItems
+);
+export const processTask = createSelector(
+  getPendenzenState,
+  fromPendenzen.processTask
+);
+export const searchOptionPendenzen = createSelector(
+  getPendenzenState,
+  fromPendenzen.getData
+);
+export const getErsteller = createSelector(
+  getPendenzenState,
+  fromPendenzen.getErsteller
 );
 export const getPendenzenLoading = createSelector(
   getPendenzenState,
@@ -163,4 +179,36 @@ export const getPendenzenLoaded = createSelector(
 export const getPendenzenFailed = createSelector(
   getPendenzenState,
   fromPendenzen.getFailed
+);
+export const loadMasterData = createSelector(
+  getPendenzenState,
+  fromPendenzen.loadMasterData
+);
+export const getEmpfanger = createSelector(
+  getPendenzenState,
+  fromPendenzen.getEmpfanger
+);
+export const getLeistungsverantw = createSelector(
+  getPendenzenState,
+  fromPendenzen.getLeistungsverantw
+);
+export const getFalltrager = createSelector(
+  getPendenzenState,
+  fromPendenzen.getFalltrager
+);
+export const getLeistungPerson = createSelector(
+  getPendenzenState,
+  fromPendenzen.getLeistungPerson
+);
+export const updateTask = createSelector(
+  getPendenzenState,
+  fromPendenzen.updateTask
+);
+export const getDataSearch = createSelector(
+  getPendenzenState,
+  fromPendenzen.getDataSearch
+);
+export const getLeistungsverantwCreate = createSelector(
+  getPendenzenState,
+  fromPendenzen.getLeistungsverantwCreate
 );

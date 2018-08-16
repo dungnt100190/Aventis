@@ -1,114 +1,319 @@
-<div class="app-content3">
-  <div class="app-content3-header">
-    <dx-box direction="row" width="100%">
-      <dxi-item [ratio]="12">
-        <div id="app-content3-header-title" class="dx-field">
-          <div class="dx-field-value-static app-content3-header-title">
-            Detail
-          </div>
-        </div>
-      </dxi-item>
-      <dxi-item [ratio]="3" class="pl10">
-        <dx-button height="40" [text]="'InBearbeitung'" [type]="'default'"></dx-button>
-      </dxi-item>
-      <dxi-item [ratio]="3" class="pl10">
-        <dx-button height="40" [text]="'ZurMaske'" [type]="'default'"></dx-button>
-      </dxi-item>
-      <dxi-item [ratio]="3" class="pl10">
-        <dx-button height="40" [text]="'Weiterleiten'" [type]="'default'"></dx-button>
-      </dxi-item>
-      <dxi-item [ratio]="3" class="pl10">
-        <dx-button height="40" [text]="'Erledigt'" [type]="'default'"></dx-button>
-      </dxi-item>
-      <dxi-item [ratio]="3" class="pl10">
-        <dx-button height="40" [text]="'NeuePendenz'" [type]="'default'"></dx-button>
-      </dxi-item>
-      <dxi-item [ratio]="3" class="pl10">
-        <dx-button height="40" [text]="'Bearbeiten'" [type]="'default'"></dx-button>
-      </dxi-item>
-      <dxi-item [ratio]="1">
-        <div class="dx-field">
-          <div class="dx-field-value-static">
-            <div id="link3" (click)="toggleWithTitle()">
-              <i class="dx-icon dx-icon-overflow" style="width: 24px; height: 24px; font-size:24px; line-height:24px;"></i>
+<div class="app-content3" id="app-content3">
+  <!-- Begin header -->
+  <div class="app-content3-header" id="app-content3-header">
+    <div class="row">
+      <div class="col-md-1" style="padding-top: 4px;" id="app-content3-header-title">
+        <span>Detail</span>
+      </div>
+      <div class="col-md-11" style="font-size: 18px" id="app-content3-header-body">
+        <div class="float-right">
+          <div class="row">
+            <div class="col-md-12">
+              <dx-button id="app-content3-header-body-button-inBearbeitung" height="30" text="{{ 'Button.Status.Inprogress' | translate }}"
+                [type]="'default'" (onClick)="onClickInProcessing()" [disabled]="disableBtnInProcessing"></dx-button>
+              <dx-button id="app-content3-header-body-button-zurMaske" height="30" text="{{ 'Button.Status.TotheMask' | translate }}" [type]="'default'"
+                [disabled]=true></dx-button>
+              <dx-button id="app-content3-header-body-button-Weiterleiten" height="30" text="{{ 'Button.Status.Forward' | translate }}"
+                [type]="'default'" (onClick)="showAssigneePopup()" [disabled]="disableBtnAssign"></dx-button>
+              <dx-button id="app-content3-header-body-button-Erledigt" height="30" text="{{ 'Button.Status.Done' | translate }}" [type]="'default'"
+                (onClick)="onClickFinishTask()" [visible]="visibleBtnFinish" [disabled]="disableBtnFinish"></dx-button>
+              <dx-button height="30" [text]="'Anfangszustandsdossier erstellen'" [type]="'default'" (onClick)="onClickAnfangszustandsdossier()"
+                [visible]="visibleBtnAnfangszustandsdossier" [disabled]="disableBtnAnfangszustandsdossier"></dx-button>
+              <dx-button height="30" [text]="'Bewilligen'" [type]="'default'" (onClick)="onClickApproveTask()" [visible]="visibleBtnApprove"
+                [disabled]="true"></dx-button>
+              <dx-button height="30" [text]="'Ablehnen'" [type]="'default'" (onClick)="onClickRejectTask()" [visible]="visibleBtnReject"
+                [disabled]="true"></dx-button>
+              <dx-button id="app-content3-header-body-button-NeuePendenz" height="30" text="{{ 'Button.Add' | translate }}" [type]="'default'"
+                [visible]="visibleBtnAddNewTask" [disabled]="disableBtnAddNewTask" (onClick)="onClickAddNewTask()"></dx-button>
+              <dx-button id="app-content3-header-body-button-Bearbeiten" height="30" text="{{ 'Button.Edit' | translate }}" [type]="'default'"
+                [visible]="visibleBtnEditTask" [disabled]="disableBtnEditTask" (onClick)="onClickEditTask()"></dx-button>
+              <dx-button id="app-content3-header-body-button-Speichern" height="30" text="{{ 'Button.Save' | translate }}" [type]="'default'"
+                [visible]="visibleBtnSave" (onClick)="onClickSave()"></dx-button>
+              <dx-button id="app-content3-header-body-button-Abbrechen" height="30" text="{{ 'Button.Cancel' | translate }}" [type]="'default'"
+                [visible]="visibleBtnCancel" (onClick)="onClickCancel()"></dx-button>
+              <span style="vertical-align: middle;">
+                <i class="dx-icon dx-icon-overflow" id="app-content3-header-body-icon-overflow" style="font-size:24px;"></i>
+              </span>
             </div>
           </div>
         </div>
-      </dxi-item>
-      <dxi-item [ratio]="0">
-        <dx-popover target="#link3" position="bottom" [width]="300" [showTitle]="true" title="Spaltenauswahl" [(visible)]="withTitleVisible">
-          <div *dxTemplate="let data = model of 'content'">
-            <div class="pt5 pb5 popover-hover">
-              Excel Export
-            </div>
-            <div class="pt5 pb5 popover-hover">
-              Grid drucken
-            </div>
-            <div class="pt5 pb5 popover-hover">
-                Schnellfilterzeile
-                anzeigen/ausblenden
-            </div>
-            <div class="pt5 pb5 popover-hover">
-                Gruppierungsbereich
-                anzeigen/ausblenden
-            </div>
-            <div class="pt5 pb5 popover-hover">
-                Suche anzeigen/ausblenden
-            </div>
-            <div class="pt5 pb5 popover-hover">
-                Filtereditor anzeigen/ausblenden
-            </div>
-            <div class="pt5 pb5 popover-hover">
-                Grid Einstellungen
-            </div>
-          </div>
-        </dx-popover>
-      </dxi-item>
-    </dx-box>
+      </div>
+    </div>
   </div>
-  <div class="app-content3-body">
-    <dx-form id="content1" [formData]="content1">
-      <dxi-item itemType="group" [colCount]="2">
-        <dxi-item itemType="group">
-          <dxi-item dataField="Status"></dxi-item>
-          <dxi-item dataField="Pendenz Typ" editorType="dxSelectBox" [editorOptions]="{ items: '', value: '' }"></dxi-item>
-          <dxi-item dataField="Betreff"></dxi-item>
-          <dxi-item dataField="Beschreibung" editorType="dxTextArea" [editorOptions]="{ height: 90 }" [colSpan]="2"></dxi-item>
-          <dxi-item dataField="Ersteller"></dxi-item>
-          <dxi-item dataField="Empfänger">
-            <dx-drop-down-box [(value)]="gridBoxValue" valueExpr="ID" displayExpr="CompanyName" placeholder="Select a value..." [showClearButton]="true"
-              [dataSource]="gridDataSource">
+  <!-- End header -->
+  <!-- Begin body -->
+  <div class="app-content3-body" id="app-content3-body" style="display: none">
+    <dx-form id="content3" [showColonAfterLabel]=false [(formData)]="pendenzenDetail">
+      <dxi-item itemType="group" id="app-content3-body-form-item" [colCount]="2">
+        <!-- left col -->
+        <dxi-item itemType="group" id="app-content3-body-form-item-group1">
+          <dxi-item dataField="status" id="app-content3-body-form-status" [label]="{text: 'Status'}">
+            <dx-text-box [value]="valueStatus" [disabled]="isReadOnlyStatus">
+            </dx-text-box>
+          </dxi-item>
+          <dxi-item id="app-content3-body-form-pendenzTyp" dataField="pendenzTyp" [label]="{text: 'Pendenz Typ'}">
+            <dx-select-box [(value)]="pendenzenDetail.pendenzTyp" [placeholder]="'Auswählen...'" [disabled]="isReadOnlyPendenzTyp" [dataSource]="dataTaskType"
+              valueExpr="value" displayExpr="name" (onValueChanged)="onChangeTaskType('pendenzTyp',$event)" [noDataText]="'Keine Daten verfügbar'">
+            </dx-select-box>
+          </dxi-item>
+          <dxi-item id="app-content3-body-form-betreff" dataField="betreff" [label]="{text: 'Betreff'}">
+            <dx-text-box [(value)]="pendenzenDetail.betreff" [disabled]="isReadOnlyBetreff" [showClearButton]="!isReadOnlyBetreff" [maxLength]="maxLengthSubject"
+              [showClearButton]="!isReadOnlyBetreff" [(isValid)]="isBetreffValid" [(validationError)]="betreffValidationError"
+              (onValueChanged)="onBetreffValueChanged('betreff',$event)">
+              <!-- <dx-validator>
+                <dxi-validation-rule type="required" message="Das Feld 'Betreff' darf nicht leer bleiben !"></dxi-validation-rule>
+              </dx-validator> -->
+            </dx-text-box>
+          </dxi-item>
+          <dxi-item id="app-content3-body-form-beschreibung" dataField="beschreibung" [label]="{text: 'Beschreibung'}">
+            <dx-text-area [(value)]="pendenzenDetail.beschreibung" [height]="90" [maxLength]="valueMaxlengthDescription" [disabled]="isReadOnlyBeschreibung"
+              [(isValid)]="isDescriptionValid" [(validationError)]="descriptionValidationError" (onValueChanged)="onDescriptionValueChanged('beschreibung', $event)">
+            </dx-text-area>
+          </dxi-item>
+          <dxi-item id="app-content3-body-form-Ersteller" dataField="" [label]="{text: 'Ersteller'}">
+            <dx-text-box [(value)]="pendenzenDetail.ersteller" [disabled]="isReadOnlyErsteller" (onValueChanged)="onChanged('ersteller',$event)">`
+            </dx-text-box>
+          </dxi-item>
+          <dxi-item id="app-content3-body-form-empfanger" dataField="empfanger" [label]="{text: 'Empfänger'}">
+            <dx-drop-down-box [dataSource]="gridReceiverData" [(value)]="grid31BoxValue" [(opened)]="isGridReceiverOpened" valueExpr="id"
+              placeholder="Auswählen..." [showClearButton]="!isReadOnlyEmpfanger" [displayExpr]="grid31Box_displayExpr" [disabled]="isReadOnlyEmpfanger"
+              [(isValid)]="isEmpfangerValid" [(validationError)]="empfangerValidationError" (onValueChanged)="onEmpfangerValueChanged('empfanger', $event)">
+              <!-- <dx-validator>
+                <dxi-validation-rule type="required" message="Das Feld 'Empfänger' darf nicht leer bleiben !"></dxi-validation-rule>
+              </dx-validator> -->
               <div *dxTemplate="let data of 'content'">
-                <dx-data-grid [dataSource]="gridDataSource" [columns]="['CompanyName', 'City', 'Phone']" [selection]="{ mode: 'multiple' }"
-                  [hoverStateEnabled]="true" [paging]="{ enabled: true, pageSize: 10 }" [scrolling]="{ mode: 'infinite' }"
-                  [height]="345" [(selectedRowKeys)]="gridBoxValue">
+                <dx-data-grid #empfangerDatagrid id="app-content3-body-form-drop-down-box-empfanger-grid" [dataSource]="gridReceiverData"
+                  [columns]="['typ', 'kurzel', 'name', 'abteilung']" [selection]="{ mode: 'single' }" [hoverStateEnabled]="true"
+                  [scrolling]="{ mode: 'infinite' }" [height]="345" [(selectedRowKeys)]="grid31SelectedRowKeys" [showBorders]="true"
+                  (onSelectionChanged)="onGrid31SelectionChanged($event)" [(sorting)]="sortingLabel" [noDataText]="'Keine Daten'">
+                  <dxo-filter-row [visible]="true" [(operationDescriptions)]="operationDescriptions" [(resetOperationText)]="resetOperationText"></dxo-filter-row>
+                  <dxo-summary>
+                    <dxi-total-item column="typ" summaryType="count" displayFormat="Anzahi Datensätze: {0}">
+                    </dxi-total-item>
+                  </dxo-summary>
                 </dx-data-grid>
               </div>
             </dx-drop-down-box>
           </dxi-item>
-          <dxi-item dataField="Fallträger">
-            <dx-drop-down-box [(value)]="gridBoxValue" valueExpr="ID" displayExpr="CompanyName" placeholder="Select a value..." [showClearButton]="true"
-              [dataSource]="gridDataSource">
+          <dxi-item id="app-content3-body-form-falltrager" dataField="falltrager" [label]="{text: 'Fallträger'}">
+            <dx-drop-down-box [dataSource]="gridFalltragerData" [(value)]="grid32BoxValue" [(opened)]="isgrid32Opened" valueExpr="id"
+              placeholder="Auswählen..." [showClearButton]="true" [displayExpr]="grid32Box_displayExpr" [disabled]="isReadOnlyFalltrager"
+              (onValueChanged)="onChanged('falltrager',$event)">
               <div *dxTemplate="let data of 'content'">
-                <dx-data-grid [dataSource]="gridDataSource" [columns]="['CompanyName', 'City', 'Phone']" [selection]="{ mode: 'multiple' }"
-                  [hoverStateEnabled]="true" [paging]="{ enabled: true, pageSize: 10 }" [scrolling]="{ mode: 'infinite' }"
-                  [height]="345" [(selectedRowKeys)]="gridBoxValue">
+                <dx-data-grid #falltragerDatagrid id="app-content3-body-form-drop-down-box-falltrager-grid" [dataSource]="gridFalltragerData"
+                  [columns]="['id', 'name', 'vorname', 'benutzer']" [selection]="{ mode: 'single' }" [hoverStateEnabled]="true"
+                  [scrolling]="{ mode: 'infinite' }" [height]="345" [(selectedRowKeys)]="grid32SelectedRowKeys" [showBorders]="true"
+                  (onSelectionChanged)="onGrid32SelectionChanged($event)" [(sorting)]="sortingLabel" [noDataText]="'Keine Daten'">
+                  <dxo-filter-row [visible]="true" [(operationDescriptions)]="operationDescriptions" [(resetOperationText)]="resetOperationText"></dxo-filter-row>
+                  <dxo-summary>
+                    <dxi-total-item column="id" summaryType="count" displayFormat="Anzahi Datensätze: {0}">
+                    </dxi-total-item>
+                  </dxo-summary>
                 </dx-data-grid>
               </div>
             </dx-drop-down-box>
           </dxi-item>
-          <dxi-item dataField="Leistung" editorType="dxSelectBox" [editorOptions]="{ items: '', value: '' }"></dxi-item>
+          <dxi-item id="app-content3-body-form-leistung" dataField="leistung" [label]="{text: 'Leistung'}">
+            <dx-select-box [(value)]="pendenzenDetail.leistung" [placeholder]="'Auswählen...'" [disabled]="isReadOnlyLeistung" [dataSource]="dataLeistung"
+              editorType="dxSelectBox" [searchEnabled]="true" valueExpr="value" displayExpr="name" (onValueChanged)="onChangeLeistung('leistung', $event)"
+              [noDataText]="'Keine Daten verfügbar'">
+            </dx-select-box>
+
+          </dxi-item>
         </dxi-item>
-        <dxi-item itemType="group">
-          <dxi-item dataField="Leistungsverantw"></dxi-item>
-          <dxi-item dataField="betrifft Person" editorType="dxSelectBox" [editorOptions]="{ items: '', value: '' }"></dxi-item>
-          <dxi-item dataField="Antwort" editorType="dxTextArea" [editorOptions]="{ height: 90 }" [colSpan]="2"></dxi-item>
-          <dxi-item dataField="Erfasst" editorType="dxDateBox" [editorOptions]="{ value: null, width: '50%' }"></dxi-item>
-          <dxi-item dataField="Fällig" editorType="dxDateBox" [editorOptions]="{ value: null, width: '50%' }"></dxi-item>
-          <dxi-item dataField="Bearbeitung"></dxi-item>
-          <dxi-item dataField="Erledigt"></dxi-item>
+        <!-- right col -->
+        <dxi-item itemType="group" id="app-content3-body-form-item-group2">
+          <dxi-item dataField="leistungsverantw" [label]="{text: 'Leistungsverantw.'}">
+            <dx-text-box id="app-content3-body-form-leistungsverantw" [value]="pendenzenDetail.leistungsverantName" [disabled]="true">
+            </dx-text-box>
+          </dxi-item>
+          <dxi-item id="app-content3-body-form-betrifftPerson" [label]="{text: 'betrifft Person'}" editorType="dxSelectBox">
+            <dx-select-box [(value)]="pendenzenDetail.personId" [placeholder]="'Auswählen...'" [disabled]="isReadOnlyBetrifftPerson"
+              [dataSource]="dataBetrifftPerson" editorType="dxSelectBox" [searchEnabled]="true" valueExpr="value" displayExpr="name"
+              (onValueChanged)="onChangeBetrifftPerson('betrifftPerson', $event)" [noDataText]="'Keine Daten verfügbar'">
+            </dx-select-box>
+          </dxi-item>
+          <dxi-item id="app-content3-body-form-antwort" dataField="antwort" [label]="{text: 'Antwort'}">
+            <dx-text-area [(value)]="pendenzenDetail.antwort" [height]="90" [maxLength]="valueMaxlengthAnswer" [disabled]="isReadOnlyAntwort"
+              [(isValid)]="isAnswerValid" [(validationError)]="answerValidationError" (onValueChanged)="onAnswerValueChanged('antwort', $event)">
+            </dx-text-area>
+          </dxi-item>
+          <dxi-item id="app-content3-body-form-erfasst" dataField="erfasst" [label]="{text: 'Erfasst'}">
+            <dx-date-box [(value)]="pendenzenDetail.erfasst" type="date" displayFormat="dd.MM.yyyy" width="50%" [showClearButton]="true"
+              [disabled]="isReadOnlyErfasst" [showClearButton]="!isReadOnlyErfasst" (onInitialized)="onInitializedDateBox($event)">
+            </dx-date-box>
+          </dxi-item>
+          <dxi-item id="app-content3-body-form-fallig" dataField="fallig" [label]="{text: 'Fällig'}">
+            <dx-date-box [(value)]="pendenzenDetail.fallig" type="date" displayFormat="dd.MM.yyyy" width="50%" [showClearButton]="true"
+              [acceptCustomValue]="false" [disabled]="isReadOnlyFallig" [showClearButton]="!isReadOnlyFallig" (onValueChanged)="onChanged('fallig', $event)"
+              (onInitialized)="onInitializedDateBox($event)">
+            </dx-date-box>
+          </dxi-item>
+          <dxi-item id="app-content3-body-form-Bearbeitung" dataField="" [label]="{text: 'Bearbeitung'}">
+            <div class="pt10">
+              {{pendenzenDetail.bearbeitungName}}
+            </div>
+          </dxi-item>
+          <dxi-item id="app-content3-body-form-Erledigt" dataField="" [label]="{text: 'Erledigt'}">
+            <div class="pt10">
+              {{pendenzenDetail.erledigtName}}
+            </div>
+          </dxi-item>
         </dxi-item>
       </dxi-item>
     </dx-form>
   </div>
+
+  <div class="app-content3-body" id="app-content3-body-lable">
+    <dx-form id="content3" [showColonAfterLabel]=false [(formData)]="pendenzenDetail">
+      <dxi-item itemType="group" id="app-content3-body-form-item" [colCount]="2">
+        <!-- left col -->
+        <dxi-item itemType="group" id="app-content3-body-form-item-group1">
+          <dxi-item dataField="status" id="app-content3-body-form-status" [label]="{text: 'Status'}">
+            <div>{{valueStatus}}</div>
+          </dxi-item>
+          <dxi-item id="app-content3-body-form-pendenzTyp" dataField="pendenzTyp" [label]="{text: 'Pendenz Typ'}">
+            <div>{{pendenzenDetail.taskTypeName}}</div>
+          </dxi-item>
+          <dxi-item id="app-content3-body-form-betreff" dataField="betreff" [label]="{text: 'Betreff'}">
+
+            <div>{{pendenzenDetail.betreff}}</div>
+          </dxi-item>
+          <dxi-item id="app-content3-body-form-beschreibung" dataField="beschreibung" [label]="{text: 'Beschreibung'}">
+            <dx-text-area [(value)]="pendenzenDetail.beschreibung" [height]="90" [readOnly]="true">
+            </dx-text-area>
+          </dxi-item>
+          <dxi-item id="app-content3-body-form-Ersteller" dataField="" [label]="{text: 'Ersteller'}">
+
+            <div>{{pendenzenDetail.ersteller}}</div>
+          </dxi-item>
+          <dxi-item id="app-content3-body-form-empfanger" dataField="empfanger" [label]="{text: 'Empfänger'}">
+
+            <div>{{pendenzenDetail.empfangerName}}</div>
+          </dxi-item>
+          <dxi-item id="app-content3-body-form-falltrager" dataField="falltrager" [label]="{text: 'Fallträger'}">
+
+            <div>{{pendenzenDetail.falltragerName}}</div>
+          </dxi-item>
+          <dxi-item id="app-content3-body-form-leistung" dataField="leistung" [label]="{text: 'Leistung'}">
+
+            <div>{{pendenzenDetail.leistungName}}</div>
+
+          </dxi-item>
+        </dxi-item>
+        <!-- right col -->
+        <dxi-item itemType="group" id="app-content3-body-form-item-group2">
+          <dxi-item dataField="leistungsverantw" [label]="{text: 'Leistungsverantw.'}">
+
+            <div>{{pendenzenDetail.leistungsverantName}}</div>
+          </dxi-item>
+          <dxi-item id="app-content3-body-form-betrifftPerson" dataField="betrifftPerson" [label]="{text: 'betrifft Person'}" editorType="dxSelectBox">
+
+            <div>{{pendenzenDetail.betrifftPersonName}}</div>
+          </dxi-item>
+          <dxi-item id="app-content3-body-form-antwort" dataField="antwort" [label]="{text: 'Antwort'}">
+            <dx-text-area [(value)]="pendenzenDetail.antwort" [height]="90" [readOnly]="true">
+            </dx-text-area>
+          </dxi-item>
+          <dxi-item id="app-content3-body-form-erfasst" dataField="erfasst" [label]="{text: 'Erfasst'}">
+
+            <div>{{erfasstLabel}}</div>
+          </dxi-item>
+          <dxi-item id="app-content3-body-form-fallig" dataField="fallig" [label]="{text: 'Fällig'}">
+
+            <div>{{falligLabel}}</div>
+          </dxi-item>
+          <dxi-item id="app-content3-body-form-Bearbeitung" dataField="" [label]="{text: 'Bearbeitung'}">
+            <div class="pt10">
+              {{pendenzenDetail.bearbeitungName}}
+            </div>
+          </dxi-item>
+          <dxi-item id="app-content3-body-form-Erledigt" dataField="" [label]="{text: 'Erledigt'}">
+            <div class="pt10">
+              {{pendenzenDetail.erledigtName}}
+            </div>
+          </dxi-item>
+        </dxi-item>
+      </dxi-item>
+    </dx-form>
+  </div>
+
+  <!-- End body -->
 </div>
+<!-- assignee popup -->
+<dx-popup id="app-content3-body-popup" class="popup" title="Pendenz weiterleiten" [width]="600" [height]="'auto'" [dragEnabled]="false"
+  [closeOnOutsideClick]="true" [(visible)]="assigneePopupVisible" (onHiding)="assigneePopupHiding($event)">
+  <div *dxTemplate="let data of 'content'">
+    <form id="app-content3-body-popup-form">
+      <!-- Assignee grid1 -->
+      <div class="dx-field">
+        <div class="dx-field-label" id="app-content3-body-popup-form-WeiterleitenAn-label">Weiterleiten an</div>
+        <div class="dx-field-value" style="width: 100%">
+          <dx-drop-down-box id="app-content3-body-popup-form-WeiterleitenAn-drop-down-box" [dataSource]="gridReceiverData" [(value)]="assigneeBoxValue"
+            [(opened)]="isAssigneeGridOpened" valueExpr="id" placeholder="Auswählen..." [displayExpr]="assigneeBox_displayExpr"
+            [(isValid)]="isAssigneeValid" [(validationError)]="assigneeValidationError" (onValueChanged)="onAssigneeValueChanged($event)">
+            <!-- <dx-validator>
+              <dxi-validation-rule type="required" message="Das Feld 'Weiterleiten an' darf nicht leer bleiben !"></dxi-validation-rule>
+            </dx-validator> -->
+            <div *dxTemplate="let data of 'content'">
+              <dx-data-grid #assigneeDataGrid id="app-content3-body-popup-form-WeiterleitenAn-drop-down-box-grid" [dataSource]="gridReceiverData"
+                [columns]="['typ', 'kurzel', 'name', 'abteilung']" [selection]="{ mode: 'single' }" [hoverStateEnabled]="true"
+                [scrolling]="{ mode: 'infinite' }" [height]="345" [(selectedRowKeys)]="assigneeSelectedRowKeys" [showBorders]="true"
+                (onSelectionChanged)="onAssigneeGridSelectionChanged($event)" [(sorting)]="sortingLabel" [noDataText]="'Keine Daten'">
+                <dxo-filter-row [visible]="true" [(operationDescriptions)]="operationDescriptions" [(resetOperationText)]="resetOperationText"></dxo-filter-row>
+                <dxo-summary>
+                  <dxi-total-item column="typ" summaryType="count" displayFormat="Anzahi Datensätze: {0}">
+                  </dxi-total-item>
+                </dxo-summary>
+              </dx-data-grid>
+            </div>
+          </dx-drop-down-box>
+        </div>
+      </div>
+      <div class="dx-field">
+        <div class="dx-field-label" id="app-content3-body-popup-form-Mitteilung-label">Mitteilung</div>
+        <div class="dx-field-value" style="width: 100%">
+          <dx-text-area id="app-content3-body-popup-form-Mitteilung-text-area" [height]="90" [maxLength]="maxLengthMessageForward"
+            [(value)]="messageForwardArea">
+          </dx-text-area>
+        </div>
+      </div>
+      <div style="text-align: right">
+        <dx-button id="app-content3-body-popup-form-button-Weiterleiten" height="30" text="Weiterleiten" type="default" (onClick)="saveAssignee()">
+        </dx-button>
+        <dx-button id="app-content3-body-popup-form-button-Abbrechen" height="30" text="Abbrechen" type="default" (onClick)="cancelAssignee()">
+        </dx-button>
+      </div>
+    </form>
+  </div>
+</dx-popup>
+<!--popup confirm-->
+<dx-popup class="popup" [width]="300" [height]="160" [showTitle]="true" title="" [dragEnabled]="false" [closeOnOutsideClick]="false"
+  [(visible)]="popupConfirmVisible">
+  <div *dxTemplate="let data of 'content'">
+    <div>
+      <span>Fenster trotz der nicht gespeicherten Daten schliessen ?</span>
+    </div>
+    <div style="float: right">
+      <p>
+        <dx-button height="30" [text]="'Ja'" [type]="'default'" (onClick)="onClickYes()"></dx-button>
+        <dx-button height="30" [text]="'Nein'" [type]="'default'" (onClick)="onClickNo()"></dx-button>
+      </p>
+    </div>
+  </div>
+</dx-popup>
+
+<dx-popup class="popup" [width]="500" [height]="175" [showTitle]="true" title="" [dragEnabled]="false" [closeOnOutsideClick]="false"
+  [(visible)]="anfangszustandsdossierPopupVisible">
+  <div *dxTemplate="let data of 'content'">
+    <div style="text-align: center; margin-bottom: 30px;">
+      <span>Es wird ein Anfangzustand angelegt, wollen Sie fortfahren?</span>
+    </div>
+    <div style="float: right">
+      <p>
+        <dx-button height="30" [text]="'Ja'" [type]="'default'" (onClick)="onClickAnfangszustandsdossierYes()"></dx-button>
+        <dx-button height="30" [text]="'Nein'" [type]="'default'" (onClick)="onClickAnfangszustandsdossierNo()"></dx-button>
+      </p>
+    </div>
+  </div>
+</dx-popup>

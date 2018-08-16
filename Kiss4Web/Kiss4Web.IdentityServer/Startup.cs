@@ -26,6 +26,8 @@ namespace Kiss4Web.IdentityServer
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
+
             var builder = new SqlConnectionStringBuilder(Configuration["DockerConnectionString"] ?? Configuration.GetConnectionString("DefaultConnection"));
             // override for VSTS
             var overrideDbHost = Configuration.GetValue<string>("DbHost");
@@ -59,6 +61,10 @@ namespace Kiss4Web.IdentityServer
                 app.UseDeveloperExceptionPage();
             }
             app.UseIdentityServer();
+            app.UseCors(builder =>
+                   builder.AllowAnyOrigin()
+                   .AllowAnyHeader()
+                   .AllowAnyMethod());
         }
     }
 }

@@ -59,6 +59,10 @@ namespace Kiss4Web.IdentityServer
                     {
                         context.IssuedClaims.Add(new Claim(Kiss4WebClaims.IsUserSuperAdmin, bool.TrueString));
                     }
+
+                    context.IssuedClaims.Add(new Claim(Kiss4WebClaims.UserId, user.Id.ToString()));
+
+
                 }
             }
         }

@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -14,6 +15,12 @@
     <ProjectReference Include="..\Kiss4Web.Infrastructure.DataAccess\Kiss4Web.Infrastructure.DataAccess.csproj" />
     <ProjectReference Include="..\Kiss4Web.Infrastructure.Mediator\Kiss4Web.Infrastructure.Mediator.csproj" />
     <ProjectReference Include="..\Kiss4Web.Model\Kiss4Web.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Web">
+      <HintPath>System.Web</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

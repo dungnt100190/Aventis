@@ -1,120 +1,243 @@
-<div class="app-content1">
-    <div class="app-content1-header">
-        <span>Suche</span>
+<div class="app-content1" id="search-app-content">
+    <!-- begin header -->
+    <div class="app-content1-header" id="search-app-content-header">
+        <div class="row" id="search-row">
+            <div class="col-md-6" style="padding-top: 4px;" id="search-row-col-1">
+                <span id="search-text-view">Suche</span>
+            </div>
+            <!-- <div class="col-md-6" style="text-align: right;" id="search-row-col-2">
+                <dx-button [disabled]="isDisabled" id="search-search-button" height="30" [text]="'Suche'" [type]="'default'" (onClick)="search()"></dx-button>
+            </div> -->
+        </div>
     </div>
-    <div class="app-content1-body">
-        <dx-form id="content1" [formData]="content1">
-            <dxi-item itemType="group" [colCount]="2">
-                
-                <dxi-item itemType="group">
-                    <dxi-item dataField="Status" editorType="dxSelectBox" [editorOptions]="{ items: '', value: '' }"></dxi-item>
-                    <dxi-item dataField="Pendenz Typ" editorType="dxSelectBox" [editorOptions]="{ items: '', value: '' }"></dxi-item>
-                    <dxi-item dataField="Betreff"></dxi-item>
-                    <dxi-item dataField="Ersteller">
-                        <dx-drop-down-box [(value)]="_gridBoxValue" valueExpr="ID" displayExpr="CompanyName" placeholder="Select a value..." [showClearButton]="true"
-                            [dataSource]="gridDataSource">
-                            <div *dxTemplate="let data of 'content'">
-                                <dx-data-grid [dataSource]="gridDataSource" [columns]="['CompanyName', 'City', 'Phone']" [selection]="{ mode: 'multiple' }"
-                                    [hoverStateEnabled]="true" [scrolling]="{ mode: 'infinite' }" [height]="345" [(selectedRowKeys)]="_gridBoxValue">
+    <!-- end header -->
+    <!-- begin body -->
+    <div class="app-content1-body" id="search-app-content-body">
+        <dx-form  [disabled]="isDisabled" id="content1" [showColonAfterLabel]=false [(formData)] = "frmSearchOption">
+            <dxi-item id="search-body" itemType="group" [colCount]="2">
+                <!-- begin left body -->
+                <dxi-item itemType="group" id="search-body-left">
+                    <dxi-item id="search-body-left-status" dataField="Status" [label]="{text: 'Status'}" editorType="dxSelectBox">
+                        <dx-select-box id="search-body-left-status-select"
+                            placeholder="Auswählen..."
+                            [dataSource]="itemsStatus"
+                            valueExpr="value"
+                            displayExpr="name"
+                            [showClearButton]="true"
+                            [acceptCustomValue]="true"
+                            (onValueChanged)="onGetValueStatus($event)"
+                            [noDataText]="'Keine Daten verfügbar'"
+                            [(value)]="idStatusSelected">
+                        </dx-select-box>
+                    </dxi-item>
+                    <dxi-item id="search-body-left-type" dataField="Pendenz Typ" [label]="{text: 'Pendenz Typ'}" editorType="dxSelectBox">
+                        <dx-select-box id="search-body-left-type-select"
+                            placeholder="Auswählen..."
+                            [dataSource]="itemsPendenzTyp"
+                            valueExpr="value"
+                            displayExpr="name"
+                            [showClearButton]="true"
+                            [acceptCustomValue]="true"
+                            (onValueChanged)="onGetPendenzTyp($event)"
+                            [noDataText]="'Keine Daten verfügbar'"
+                            [(value)]="idPendenzType">
+                        </dx-select-box>
+                    </dxi-item>
+                    <dxi-item id="search-body-left-subject" dataField="betreff" [label]="{text: 'Betreff'}" [editorOptions]="{ onValueChanged: onValueChangedBetreff }"></dxi-item> <!--[editorOptions]="{ onValueChanged: handleBetreffChanged }"-->
+                    <!-- Ersteller grid1 -->
+                    <dxi-item id="search-body-left-creator" dataField="Ersteller" [label]="{text: 'Ersteller'}">
+                        <dx-drop-down-box id="search-body-left-creator-dropdown"
+                        [dataSource]="grid1DataSource"
+                        [(opened)]="isgrid1Opened"
+                        [(value)]="grid1BoxValue"
+                        valueExpr="id"
+                        [placeholder]="'Auswählen...'"
+                        [showClearButton]="true"
+                        [displayExpr]="grid1Box_displayExpr">
+                            <div id="search-body-left-creator-dropdown-content" *dxTemplate="let data of 'content'">
+                                <dx-data-grid id="search-body-left-creator-dropdown-grid"
+                                    [dataSource]="grid1DataSource"
+                                    [columns]="['typ', 'name', 'kurzel', 'abteilung']"
+                                    [selection]="{ mode: 'single' }"
+                                    [hoverStateEnabled]="true"
+                                    [scrolling]="{ mode: 'infinite' }"
+                                    [height]="345"
+                                    [(selectedRowKeys)]="grid1SelectedRowKeys"
+                                    [showBorders]="true"
+                                    (onSelectionChanged)="onGetErsteller($event)"
+                                    [(sorting)]="sortingLabel"
+                                    [noDataText]="'Keine Daten'">
+                                    <dxo-filter-row [visible]="true" [(operationDescriptions)]="operationDescriptions" [(resetOperationText)]="resetOperationText"></dxo-filter-row>
                                     <dxo-summary>
-                                        <dxi-total-item column="CompanyName" summaryType="count" displayFormat="Anzahi Datensätze: {0}">
+                                        <dxi-total-item  column="name" summaryType="count" displayFormat="Anzahi Datensätze: {0}">
                                         </dxi-total-item>
                                     </dxo-summary>
                                 </dx-data-grid>
                             </div>
                         </dx-drop-down-box>
                     </dxi-item>
-                    <dxi-item dataField="Empfänger">
-                        <dx-drop-down-box [(value)]="_gridBoxValue" valueExpr="ID" [displayExpr]="gridBox_displayExpr" placeholder="Select a value..."
-                            [showClearButton]="true" [dataSource]="gridDataSource">
+                    <!-- Empfänger grid2 -->
+                    <dxi-item id="search-body-left-receiver"  dataField="Empfänger" [label]="{text: 'Empfänger'}">
+                        <dx-drop-down-box id="search-body-left-receiver-dropdown"
+                        [dataSource]="grid2DataSource"
+                        [(value)]="grid2BoxValue"
+                        [(opened)]="isgrid2Opened"
+                        valueExpr="id"
+                        [placeholder]="'Auswählen...'"
+                        [showClearButton]="true"
+                        [displayExpr]="grid1Box_displayExpr">
                             <div *dxTemplate="let data of 'content'">
-                                <dx-data-grid [dataSource]="gridDataSource" [columns]="['CompanyName', 'City', 'Phone']" [selection]="{ mode: 'single' }"
-                                    [hoverStateEnabled]="true" [scrolling]="{ mode: 'infinite' }" [height]="345" [(selectedRowKeys)]="gridSelectedRowKeys">
-                                    <dxo-summary>
-                                        <dxi-total-item column="CompanyName" summaryType="count" displayFormat="Anzahi Datensätze: {0}">
+                                <dx-data-grid id="search-body-left-receiver-dropdown-grid"
+                                    [dataSource]="grid2DataSource"
+                                    [columns]="['typ', 'kurzel', 'name', 'abteilung']"
+                                    [selection]="{ mode: 'single' }"
+                                    [hoverStateEnabled]="true"
+                                    [scrolling]="{ mode: 'infinite' }"
+                                    [height]="345"
+                                    [(selectedRowKeys)]="grid2SelectedRowKeys"
+                                    [showBorders]="true"
+                                    (onSelectionChanged)="onGetEmpfamger($event)"
+                                    [(sorting)]="sortingLabel"
+                                    [noDataText]="'Keine Daten'">
+                                    <dxo-filter-row [visible]="true" [(operationDescriptions)]="operationDescriptions" [(resetOperationText)]="resetOperationText"></dxo-filter-row>
+                                    <dxo-summary >
+                                        <dxi-total-item column="Typ" summaryType="count" displayFormat="Anzahi Datensätze: {0}">
                                         </dxi-total-item>
                                     </dxo-summary>
                                 </dx-data-grid>
                             </div>
                         </dx-drop-down-box>
                     </dxi-item>
-                    <dxi-item dataField="Name Klient/in"></dxi-item>
-                    <dxi-item dataField="Vorname Klient/in"></dxi-item>
-                </dxi-item>
 
-                <dxi-item itemType="group">
-                    <dxi-item dataField="Fallnummer"></dxi-item>
-                    <dxi-item dataField="Leistungsverantw">
-                        <dx-drop-down-box [(value)]="_gridBoxValue" valueExpr="ID" displayExpr="CompanyName" placeholder="Select a value..." [showClearButton]="true"
-                            [dataSource]="gridDataSource">
+                    <dxi-item id="search-body-left-name" dataField="nameKlientIn" [label]="{text: 'Name Klient/in'}" [editorOptions]="{ onValueChanged: onNameKlientInValueChanged }"></dxi-item>  <!--[editorOptions]="{ onValueChanged: handleNameChanged }"-->
+                    <dxi-item id="search-body-left-firstname" dataField="vornameKlientIn" [label]="{text: 'Vorname Klient/in'}" [editorOptions]="{ onValueChanged: onVornameKlientInValueChanged }"></dxi-item> <!--[editorOptions]="{ onValueChanged: handleVornameChanged }"-->
+                </dxi-item>
+                <!-- end left body -->
+                <!-- begin right body -->
+                <dxi-item id="search-body-right" itemType="group">
+                    <dxi-item id="search-body-right-fallnummer" dataField="fallnummer" [label]="{text: 'Fallnummer'}" [editorOptions]="{ onValueChanged: onFallnummerValueChanged, mask: '999999999', maskChar: ' '}"></dxi-item> <!--[editorOptions]="{ onValueChanged: handleFallnummerChanged }"-->
+                    <!-- Leistungsverantw grid3 -->
+                    <dxi-item id="search-body-right-leistungsverantw" dataField="Leistungsverantw" [label]="{text: 'Leistungsverantw.'}">
+                        <dx-drop-down-box id="search-body-right-leistungsverantw-dropdown"
+                        [dataSource]="grid3DataSource"
+                        [(value)]="grid3BoxValue"
+                        [(opened)]="isgrid3Opened"
+                        valueExpr="userId"
+                        placeholder="Auswählen..."
+                        [showClearButton]="true"
+                        [displayExpr]="grid3Box_displayExpr">
                             <div *dxTemplate="let data of 'content'">
-                                <dx-data-grid [dataSource]="gridDataSource" [columns]="['CompanyName', 'City', 'Phone']" [selection]="{ mode: 'multiple' }"
-                                    [hoverStateEnabled]="true" [paging]="{ enabled: true, pageSize: 10 }" [scrolling]="{ mode: 'infinite' }"
-                                    [height]="345" [(selectedRowKeys)]="_gridBoxValue">
+                                <dx-data-grid id="search-body-right-leistungsverantw-dropdown-grid"
+                                    [dataSource]="grid3DataSource"
+                                    [columns]="['name', 'logonName', 'displayText']"
+                                    [selection]="{ mode: 'single' }"
+                                    [hoverStateEnabled]="true"
+                                    [scrolling]="{ mode: 'infinite' }"
+                                    [height]="345"
+                                    [(selectedRowKeys)]="grid3SelectedRowKeys"
+                                    [showBorders]="true"
+                                    (onSelectionChanged)="onGetLeistungsverantw($event)"
+                                    [(sorting)]="sortingLabel"
+                                    [noDataText]="'Keine Daten'">
+                                    <dxo-filter-row [visible]="true" [(operationDescriptions)]="operationDescriptions" [(resetOperationText)]="resetOperationText"></dxo-filter-row>
+                                    <dxo-summary>
+                                        <dxi-total-item column="Name" summaryType="count" displayFormat="Anzahi Datensätze: {0}">
+                                        </dxi-total-item>
+                                    </dxo-summary>
                                 </dx-data-grid>
                             </div>
                         </dx-drop-down-box>
                     </dxi-item>
-                    <dxi-item dataField="Organisationseinheit" editorType="dxSelectBox" [editorOptions]="{ items: '', value: '' }"></dxi-item>
-                    <dxi-item dataField="Erfasst" itemType="group" [colCount]="2">
-                        <dx-box direction="row" width="100%">
-                            <dxi-item [ratio]="5">
-                                <dx-date-box [value]="now" type="date" width="100%">
+
+                    <dxi-item id="search-body-right-organization" dataField="Organisationseinheit" [label]="{text: 'Organisationseinheit'}" editorType="dxSelectBox">
+                        <dx-select-box id="search-body-right-organization-select"
+                            [placeholder]="'Auswählen...'"
+                            [dataSource]="itemsOrganisationseinheit"
+                            valueExpr="value"
+                            displayExpr="name"
+                            [showClearButton]="true"
+                            [acceptCustomValue]="true"
+                            (onValueChanged)="onGetValueOrganisationseinheit($event)"
+                            [noDataText]="'Keine Daten verfügbar'"
+                            [(value)]="idOrganisationseinheit">
+                        </dx-select-box>
+                    </dxi-item>
+
+                    <dxi-item id="search-body-right-detected" dataField="Erfasst" [label]="{text: 'Erfasst'}" itemType="group" [colCount]="2">
+                        <dx-box id="search-body-right-detected-box" direction="row" width="100%">
+                            <dxi-item id="search-body-right-detected-box-item1" [ratio]="5">
+                                <dx-date-box id="search-body-right-detected-box-item1-date" type="date" displayFormat="dd.MM.yyyy" width="100%" [showClearButton]="true" [(value)]="strFromErfasst" [acceptCustomValue]="false" (onInitialized)="onInitializedDateBox($event)" (onValueChanged)="onErfasstFromValueChanged($event)">
                                 </dx-date-box>
                             </dxi-item>
-                            <dxi-item [ratio]="1">
+                            <dxi-item id="search-body-right-detected-box-item2" [ratio]="1">
+                                <div id="search-body-right-detected-bridge" class="two-date-bridge">
+                                    <label id="search-body-right-detected-bridge-label">-</label>
+                                </div>
                             </dxi-item>
-                            <dxi-item [ratio]="5">
-                                <dx-date-box [value]="now" type="date" width="100%">
+                            <dxi-item id="search-body-right-detected-box-item3" [ratio]="5">
+                                <dx-date-box id="search-body-right-detected-box1-item3-date" type="date" displayFormat="dd.MM.yyyy" width="100%" [showClearButton]="true" [(value)]="strToErfasst" [acceptCustomValue]="false" (onInitialized)="onInitializedDateBox($event)" (onValueChanged)="onErfasstToValueChanged($event)">
                                 </dx-date-box>
                             </dxi-item>
                         </dx-box>
                     </dxi-item>
-                    <dxi-item dataField="Fällig" itemType="group" [colCount]="2">
-                        <dx-box direction="row" width="100%">
-                            <dxi-item [ratio]="5">
-                                <dx-date-box [value]="now" type="date" width="100%">
+
+                    <dxi-item id="search-body-right-due" dataField="Fällig" [label]="{text: 'Fällig'}" itemType="group" [colCount]="2">
+                        <dx-box id="search-body-right-due-box" direction="row" width="100%">
+                            <dxi-item id="search-body-right-due-box-item1" [ratio]="5">
+                                <dx-date-box id="search-body-right-due-box-item1-date" type="date" displayFormat="dd.MM.yyyy" width="100%" [showClearButton]="true" [(value)]="strFromFallig" [acceptCustomValue]="false" (onInitialized)="onInitializedDateBox($event)" (onValueChanged)="onFalligFromValueChanged($event)">
                                 </dx-date-box>
                             </dxi-item>
-                            <dxi-item [ratio]="1">
+                            <dxi-item id="search-body-right-due-box-item2" [ratio]="1">
+                                <div id="search-body-right-due-bridge" class="two-date-bridge">
+                                    <label>-</label>
+                                </div>
                             </dxi-item>
-                            <dxi-item [ratio]="5">
-                                <dx-date-box [value]="now" type="date" width="100%">
-                                </dx-date-box>
-                            </dxi-item>
-                        </dx-box>
-                    </dxi-item>
-                    <dxi-item dataField="Bearbeitung" itemType="group" [colCount]="2">
-                        <dx-box direction="row" width="100%">
-                            <dxi-item [ratio]="5">
-                                <dx-date-box [value]="now" type="date" width="100%">
-                                </dx-date-box>
-                            </dxi-item>
-                            <dxi-item [ratio]="1">
-                            </dxi-item>
-                            <dxi-item [ratio]="5">
-                                <dx-date-box [value]="now" type="date" width="100%">
+                            <dxi-item id="search-body-right-due-box-item3" [ratio]="5">
+                                <dx-date-box id="search-body-right-due-box-item3-date" type="date" displayFormat="dd.MM.yyyy" width="100%" [showClearButton]="true" [(value)]="strToFallig" [acceptCustomValue]="false" (onInitialized)="onInitializedDateBox($event)" (onValueChanged)="onFalligToValueChanged($event)">
                                 </dx-date-box>
                             </dxi-item>
                         </dx-box>
                     </dxi-item>
-                    <dxi-item dataField="Erledigt" itemType="group" [colCount]="2">
-                        <dx-box direction="row" width="100%">
-                            <dxi-item [ratio]="5">
-                                <dx-date-box [value]="now" type="date" width="100%">
+
+                    <dxi-item id="search-body-right-processing" dataField="Bearbeitung" [label]="{text: 'Bearbeitung'}" itemType="group" [colCount]="2">
+                        <dx-box id="search-body-right-processing-box" direction="row" width="100%">
+                            <dxi-item id="search-body-right-processing-box-item1" [ratio]="5">
+                                <dx-date-box id="search-body-right-processing-box-item1-date" type="date" displayFormat="dd.MM.yyyy" width="100%" [showClearButton]="true" [(value)]="strFromBearbeitung" [acceptCustomValue]="false" (onInitialized)="onInitializedDateBox($event)" (onValueChanged)="onBearbeitungFromValueChanged($event)">
                                 </dx-date-box>
                             </dxi-item>
-                            <dxi-item [ratio]="1">
+                            <dxi-item id="search-body-right-processing-box-item2" [ratio]="1">
+                                <div id="search-body-right-processing-bridge" class="two-date-bridge">
+                                    <label id="search-body-right-processing-bridge-label">-</label>
+                                </div>
                             </dxi-item>
-                            <dxi-item [ratio]="5">
-                                <dx-date-box [value]="now" type="date" width="100%">
+                            <dxi-item id="search-body-right-processing-box-item3" [ratio]="5">
+                                <dx-date-box id="search-body-right-processing-box-item3-date" type="date" displayFormat="dd.MM.yyyy" width="100%" [showClearButton]="true" [(value)]="strToBearbeitung" [acceptCustomValue]="false" (onInitialized)="onInitializedDateBox($event)" (onValueChanged)="onBearbeitungToValueChanged($event)">
+                                </dx-date-box>
+                            </dxi-item>
+                        </dx-box>
+                    </dxi-item>
+
+                    <dxi-item id="search-body-right-done" dataField="Erledigt" [label]="{text: 'Erledigt'}" itemType="group" [colCount]="2" >
+                        <dx-box id="search-body-right-done-box" direction="row" width="100%">
+                            <dxi-item id="search-body-right-done-box-item1" [ratio]="5">
+                                <dx-date-box id="search-body-right-done-box-item1-date" type="date" displayFormat="dd.MM.yyyy" width="100%" [showClearButton]="true" [(value)]="strFromErledigt" [acceptCustomValue]="false" (onInitialized)="onInitializedDateBox($event)" (onValueChanged)="onErledigtFromValueChanged($event)">
+                                </dx-date-box>
+                            </dxi-item>
+                            <dxi-item id="search-body-right-done-box-item2" [ratio]="1">
+                                <div id="search-body-right-done-bridge" class="two-date-bridge">
+                                    <label id="search-body-right-done-bridge-label">-</label>
+                                </div>
+                            </dxi-item>
+                            <dxi-item id="search-body-right-done-box-item3"  [ratio]="5">
+                                <dx-date-box id="search-body-right-done-box-item3-date" type="date" displayFormat="dd.MM.yyyy" width="100%" [showClearButton]="true" [(value)]="strToErledigt" [acceptCustomValue]="false" (onInitialized)="onInitializedDateBox($event)" (onValueChanged)="onErledigtToValueChanged($event)">
                                 </dx-date-box>
                             </dxi-item>
                         </dx-box>
                     </dxi-item>
                 </dxi-item>
-
+                <!-- end right body -->
             </dxi-item>
         </dx-form>
     </div>
+    <!-- end body -->
 </div>

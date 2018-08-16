@@ -21,7 +21,6 @@ export class DocumentGenerationComponent implements OnInit {
 
   onDocClick(documents) {
     if (documents === undefined || !documents) { return; }
-    // console.log('documents log: ', documents);
     this.onClickEvent.emit(documents);
   }
 }

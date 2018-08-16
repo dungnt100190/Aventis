@@ -28,7 +28,8 @@ export class AppSandbox extends Sandbox {
     this.translate.addLangs(languages);
     this.translate.setDefaultLang(localization.defaultLanguage);
 
-    const selectedLang = browserLang.match(/en|de|fr|it/) ? browserLang : localization.defaultLanguage;
+    // const selectedLang = browserLang.match(/en|de|fr|it/) ? browserLang : localization.defaultLanguage;
+    const selectedLang = localization.defaultLanguage;
     const selectedCulture = localization.languages.filter(lang => lang.code === selectedLang)[0].culture;
 
     this.translate.use(selectedLang);

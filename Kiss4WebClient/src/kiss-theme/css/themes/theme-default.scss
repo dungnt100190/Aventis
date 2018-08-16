@@ -1,0 +1,95 @@
+@import '../../reset';
+@import '../../variables';
+@import '../../mixins-css3';
+@import '../../shared/forms';
+@import '../../shared/grids';
+@import '../../shared/controls';
+@import '../../shared/utilities';
+@import '../../shared/repositories';
+body.theme--default {
+  font-family: $base-ft;
+  font-size: $base-fz;
+  font-weight: $base-fw;
+  color: $color-black;
+  background-color: $color-bg-body;
+}
+
+.theme--default {
+  .wrapper-main {
+    position: relative;
+    &.toggle--sidebar {
+      .sidebar {
+        // width: 15px;
+        -webkit-transform: translateX(-285px) !important;
+        -moz-transform: translateX(-285px) !important;
+        -ms-transform: translateX(-285px) !important;
+        -o-transform: translateX(-285px) !important;
+        transform: translateX(-285px) !important;
+        >.sider-bar-panel-hidden {
+          background-color: darken($color: $color-bg-body, $amount: 10);
+          >.sidebar-content {
+            p {
+              display: block !important;
+            }
+          }
+        }
+        >.sider-bar-panel-content {
+          display: none;
+          .sidebar-header {
+            h3 {
+              display: none;
+            }
+          }
+        }
+        >div {
+          &.sider-bar-panel-hidden {
+            height: 100%;
+          }
+        }
+      }
+      #wrapper-content {
+        width: calc(100% - 45px);
+      }
+    }
+  }
+  #app-navbar {
+    height: 45px;
+    background: $color-base;
+    color: $color-white;
+    border-top: 1px solid $color-grey-light;
+    right: 5px;
+    left: 0;
+    top: 0;
+    position: absolute;
+  }
+  .layout-content {
+    position: relative;
+    margin: 45px 0;
+    height: 100vh;
+    width: 100%;
+    #wrapper-content {
+      width: calc(100% - 0px); // 330px
+      padding: 45px 0;
+      height: 100%;
+      position: relative;
+      float: right;
+      padding: 0;
+      @include css3-prefix(transition, width 0.3s);
+      >h1 {
+        margin: 15px 0 5px 0;
+        padding: 5px 0;
+        font-size: 24px;
+        border-bottom: 1px solid $color-grey-light;
+      }
+      .page-content {
+        position: relative;
+        top: 45px;
+        height: 100%;
+        .inner {
+          height: calc(100% - 145px);
+          overflow: auto;
+        }
+      }
+    }
+  }
+}

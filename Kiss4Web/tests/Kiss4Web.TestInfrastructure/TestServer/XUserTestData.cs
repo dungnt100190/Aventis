@@ -10,6 +10,28 @@ namespace Kiss4Web.TestInfrastructure.TestServer
             IsSameEntity = userNew => (userDb => userDb.LogonName == userNew.LogonName);
         }
 
+        public readonly XUser NewAdmin = new XUser
+        {
+            FirstName = "Support",
+            LastName = "New",
+            PasswordHash = "kR9Y+JkxEwo=", // 123456
+            GenderCode = 1,
+            LogonName = "new_admin",
+            ShortName = "ns",
+            IsUserAdmin = true
+        };
+
+        public readonly XUser DiagAdmin = new XUser
+        {
+            FirstName = "Support",
+            LastName = "Diartis",
+            PasswordHash = "kR9Y+JkxEwo=", // 123456
+            GenderCode = 1,
+            LogonName = "diag_admin",
+            ShortName = "ds",
+            IsUserAdmin = true
+        };
+
         public readonly XUser Administrator = new XUser
         {
             FirstName = "Jaques",
@@ -31,7 +53,9 @@ namespace Kiss4Web.TestInfrastructure.TestServer
             ShortName = "fuh"
         };
 
+        public const string NewAdminPassword = "123456";
         public const string AdminPassword = "topsecretunittestpassword";
+        public const string DiagAdminPassword = "123456";
         public const string SozialarbeiterPassword = "topsecretunittestpassword";
 
         protected override void ResetAutoIdentity(XUser entity)

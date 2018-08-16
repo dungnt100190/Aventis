@@ -31,6 +31,7 @@
         "../node_modules/devextreme/dist/css/dx.light.css",
         "../node_modules/jquery-ui/themes/base/all.css",
         "../node_modules/devexpress-reporting/css/web-document-viewer-light.min.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "styles.scss"
       ],
       "scripts": [

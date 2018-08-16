@@ -23,11 +23,9 @@ export class SelectedActionsComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.selectedActions);
   }
 
   onClickItem(e: any): void {
-    console.log(e);
     this.onItemClick.emit(e);
   }
 

@@ -17,7 +17,6 @@ export class ReportViewerComponent {
 
   onDocClick(report) {
     if (report === undefined || !report) { return; }
-    // console.log('documents log: ', documents);
     this.onClickEvent.emit(report);
   }
 }

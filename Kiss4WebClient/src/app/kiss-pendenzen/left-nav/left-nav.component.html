@@ -7,7 +7,11 @@
     </div>
     <div id="left-nav-body" >
         <dx-tree-view
-            [items]="parentItems">
+                      [disabled]="isDisabled"
+            [items]="parentItems"
+            selectionMode="single"
+            [selectByClick]="true"
+            (onItemClick)="clickTreeView($event)">
         </dx-tree-view>
     </div>
 </div>

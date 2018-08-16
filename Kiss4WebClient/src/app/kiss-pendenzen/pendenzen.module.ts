@@ -23,6 +23,8 @@ import { Content2Component } from '../kiss-pendenzen/content/content2/content2.c
 import { Content3Component } from '../kiss-pendenzen/content/content3/content3.component';
 import { PenService } from '../kiss-pendenzen/pen.service';
 
+// import './localization';
+
 @NgModule({
   imports: [
     CommonModule,

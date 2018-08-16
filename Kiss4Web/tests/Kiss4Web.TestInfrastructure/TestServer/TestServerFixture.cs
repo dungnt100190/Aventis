@@ -23,12 +23,12 @@ namespace Kiss4Web.TestInfrastructure.TestServer
     /// </summary>
     public class TestServerFixture : IDisposable
     {
-        public const string Authority = "https://kiss4web-identityserver";
+        public const string Authority = "http://localhost:5000";
         private readonly TestDataInserter _testData;
 
         public TestServerFixture()
         {
-            const string connectionString = "Server=127.0.0.1,1435;Database=KiSS_Standard_R4939;user=sa;password=D0102A72-7838-4078-9829-DBD038018C18;";
+            const string connectionString = "server=192.168.35.205,1433;initial catalog=KiSS_Ivos_TestDB_R4929_1;user id=testKiss;";
             DockerStarter.TryStartDbContainer(connectionString);
             DateTime = new TestDateTimeProvider();
 
@@ -79,7 +79,7 @@ namespace Kiss4Web.TestInfrastructure.TestServer
 
         public void Dispose()
         {
-            _testData.Remove().Wait();
+            //_testData.Remove().Wait();
             TestServer.Dispose();
         }
 
@@ -88,7 +88,17 @@ namespace Kiss4Web.TestInfrastructure.TestServer
             var userTestData = TestData<XUserTestData>();
             XUser user;
             string password;
-            if (testUser == TestUser.Administrator)
+            if (testUser == TestUser.NewAdmin)
+            {
+                user = userTestData.NewAdmin;
+                password = XUserTestData.NewAdminPassword;
+            }
+            else if (testUser == TestUser.DiagAdmin)
+            {
+                user = userTestData.DiagAdmin;
+                password = XUserTestData.DiagAdminPassword;
+            }
+            else if (testUser == TestUser.Administrator)
             {
                 user = userTestData.Administrator;
                 password = XUserTestData.AdminPassword;

@@ -19,8 +19,8 @@
             </div>
 
             <div class="header-languageSelectorWrapper float-right">
-                <language-selector (select)="selectLanguage.emit($event)" [selectedLanguage]="selectedLanguage" [availableLanguages]="availableLanguages">
-                </language-selector>
+                <kiss-languages (select)="selectLanguage.emit($event)" [selectedLanguage]="selectedLanguage" [availableLanguages]="availableLanguages">
+                </kiss-languages>
             </div>
 
             <div class="header-profileBarWrapper float-right">

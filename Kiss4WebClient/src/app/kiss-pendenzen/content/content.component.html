@@ -1,98 +1,105 @@
-<div class="app-content">
-  <div class="row">
-    <div class="col-md-6">
-      <div class="app-content-header-left">
-        <span>Pendenzenverwaltung</span>
-        <span class="pl10">offene</span>
-        <span class="pl10">(1)</span>
+
+<div class="app-content" id="app-content" style="position: relative">
+    <!-- start header -->
+    <div class="row">
+      <!-- left header -->
+      <div class="col-md-8">
+        <div class="app-content-header-left" id="app-content-header-left">
+          <span>Pendenzenverwaltung</span>
+          <span>{{selectedItem}}</span>
+        </div>
       </div>
-    </div>
-    <div class="col-md-6">
-      <div class="app-content-header-right">
-        <div class="flr">
-          <div class="fll">
-            <div class="dx-field-value">
-              <dx-button height="40" width="200" [text]="'Verarbeiten'" [type]="'default'"></dx-button>
-            </div>
-          </div>
-          <div class="fll">
-            <div class="dx-field">
-              <div class="dx-field-value-static">
-                <i class="dx-icon dx-icon-print" style="width: 24px; height: 24px; font-size:24px; line-height:24px;"></i>
-              </div>
-            </div>
-          </div>
-          <div class="fll">
-            <div class="dx-field">
-              <div class="dx-field-value-static">
-                <i class="fa fa-file-excel-o" style="width: 24px; height: 24px; font-size:24px; line-height:24px;"></i>
-              </div>
-            </div>
-          </div>
-          <div class="fll">
-            <div class="dx-field">
-              <div class="dx-field-value-static">
-                <i class="dx-icon dx-icon-column-chooser" style="width: 24px; height: 24px; font-size:24px; line-height:24px;"></i>
-              </div>
-            </div>
-          </div>
-          <div class="fll">
-            <div class="dx-field">
-              <div class="dx-field-value-static">
-                <div id="link2" (click)="toggleWithTitle()">
-                  <i class="dx-icon dx-icon-overflow" style="width: 24px; height: 24px; font-size:24px; line-height:24px;"></i>
+      <!-- right header -->
+      <div class="col-md-4" id="app-content-header-right">
+        <div class="float-right">
+          <dx-button [disabled]="true" id="app-content-header-right-button" height="30" [text]="'Verarbeiten'" [type]="'default'"></dx-button>
+          <span class="app-content-header-right-icons" id="app-content-header-right-span-icon-print">
+            <i class="dx-icon dx-icon-print" id="app-content-header-right-icon-print" style="font-size:24px;"></i>
+          </span>
+          <span class="app-content-header-right-icons" id="app-content-header-right-span-icon-excel" (click)="exportedExcel()">
+            <i class="fa fa-file-excel-o" id="app-content-header-right-icon-excel" style="font-size:21px;"></i>
+          </span>
+          <span class="app-content-header-right-icons" id="app-content-header-right-span-column-chooser" (click) = "columnChooser()">
+            <i class="dx-icon dx-icon-column-chooser" id="app-content-header-right-column-chooser" style="font-size:24px;"></i>
+          </span>
+          <span id="popover1" class="app-content-header-right-icons" (click)="togglePopover1()">
+            <i class="dx-icon dx-icon-overflow" id="app-content-header-right-icon-overflow" style="font-size:24px;"></i>
+          </span>
+          <dx-popover id="app-content-header-popover1"
+            target="#popover1"
+            position="bottom"
+            [width]="263"
+            [showTitle]="true"
+            titleTemplate="
+              <div style='background-color: #cccccc; width: 261px; height: 32px; margin: -6px -20px;' id='app-content-header-popover1-title-template'>
+                <div style='font-weight: 600; padding: 6px 10px;' >
+                  <span>Spaltenauswahl</span>
                 </div>
-                <dx-popover target="#link2" position="bottom" [width]="300" [showTitle]="true" title="Spaltenauswahl" [(visible)]="withTitleVisible">
-                  <div *dxTemplate="let data = model of 'content'">
-                    <div class="pt5 pb5 popover-hover">
-                      Excel Export
-                    </div>
-                    <div class="pt5 pb5 popover-hover">
-                      Grid drucken
-                    </div>
-                    <div class="pt5 pb5 popover-hover">
-                      Schnellfilterzeile anzeigen/ausblenden
-                    </div>
-                    <div class="pt5 pb5 popover-hover">
-                      Gruppierungsbereich anzeigen/ausblenden
-                    </div>
-                    <div class="pt5 pb5 popover-hover">
-                      Suche anzeigen/ausblenden
-                    </div>
-                    <div class="pt5 pb5 popover-hover">
-                      Filtereditor anzeigen/ausblenden
-                    </div>
-                    <div class="pt5 pb5 popover-hover">
-                      Grid Einstellungen
-                    </div>
-                  </div>
-                </dx-popover>
+              </div>"
+            [(visible)]="popover1Visible">
+            <div *dxTemplate="let data = model of 'content'">
+              <div class="g-popover-body" id="app-content-header-popover1-body">
+                <div class="g-popover-row" (click)="exportedExcel()" id="app-content-header-popover1-body-excel-export">
+                  Excel Export
+                </div>
+                <div class="g-popover-row" id="app-content-header-popover1-body-grid-drucken">
+                  Grid drucken 
+                  <!-- - Print -->
+                </div>
+                <div class="g-popover-row" (click)="fillterRow()" id="app-content-header-popover1-body-schnellfilterzeile">
+                  Schnellfilterzeile anzeigen/ausblenden 
+                  <!-- - Fillter Row -->
+                </div>
+                <div class="g-popover-row" (click)="grouping()" id="app-content-header-popover1-body-gruppierungsbereich">
+                  Gruppierungsbereich anzeigen/ausblenden 
+                  <!-- - Grouping Area -->
+                </div>
+                <div class="g-popover-row" (click)="search()" id="app-content-header-popover1-body-suche">
+                  Suche anzeigen/ausblenden 
+                  <!-- - Search -->
+                </div>
+                <div class="g-popover-row" (click)="fillterRow()" id="app-content-header-popover1-body-filtereditor">
+                  Filtereditor anzeigen/ausblenden 
+                  <!-- - Filter builder -->
+                </div>
+                <div class="g-popover-last-row" (click)="columnChooser()" id="app-content-header-popover1-body-grid-einstellungen">
+                  Grid Einstellungen 
+                  <!-- - Grid setting -->
+                </div>
               </div>
+            </div>
+          </dx-popover>
+        </div>
+      </div>
+
+    </div>
+    <!-- end header -->
+    <!-- begin error area -->
+    <div id="error-container" class="error-container">
+      <div class="error-wrapper">
+        <div class="error-close-control">
+          <span class="dx-icon-close icon" style="background: #337ab7;" (click)="closeErrorMessageArea()"></span>
+        </div>
+        <div class="error-content" *ngFor="let ele of validationSummary">
+          <div class="pt5">
+            <div class="row margin0">
+                <div class="warning-icon">!</div>
+                <div class="error-message">{{ele.message}}</div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="pt20">
-    <div>
+    <!-- end error area -->
+    <!-- start body -->
+    <div class="pt20">
       <kiss-pendenzen-content1></kiss-pendenzen-content1>
-    </div>
-    <div class="pt20">
-      <kiss-pendenzen-content2></kiss-pendenzen-content2>
-    </div>
-    <div class="pt20">
-      <kiss-pendenzen-content3></kiss-pendenzen-content3>
-    </div>
-  </div>
-  <div class="row app-content-footer">
-    <div class="col-md-6">
-      Copyright © 2018 by CMC Global
-    </div>
-    <div class="col-md-6">
-      <div class="app-content-footer-right">
-        Version 1.0-beta
+      <div class="pt20">
+        <kiss-pendenzen-content2></kiss-pendenzen-content2>
+      </div>
+      <div class="pt20">
+        <kiss-pendenzen-content3></kiss-pendenzen-content3>
       </div>
     </div>
+    <!-- end body -->
   </div>
-</div>

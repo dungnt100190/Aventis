@@ -1,163 +1,463 @@
-import { Component } from '@angular/core';
-import { PenService } from '../../pen.service';
+import { Component, OnInit, Injector, ViewChild } from '@angular/core';
+import CustomStore from 'devextreme/data/custom_store';
+import { ErstellerModel } from '@app/shared/models/pendenzen/ersteller.model';
+import { BaseComponent } from '@app/shared/components/base.component';
+import { PendenzenSandbox } from '@app/kiss-pendenzen/pendenzen.sandbox';
+import { PendenzenService, NavBarItem, NavBarLoad } from '@app/kiss-pendenzen/pendenzen.service';
+import { MasterData } from '@app/shared/models/pendenzen/masterData.model';
+import { EmpfangerModel } from '@app/shared/models/pendenzen/empfanger.model';
+import { Leistungsverantw } from '@app/shared/models/pendenzen/leistungsverantw.model';
+
+import { SearchPendenzen } from '@app/shared/models/pendenzen/searchPendenzen.model';
+
+import * as moment from 'moment';
+import { DxFormComponent } from 'devextreme-angular';
 
 @Component({
-  selector: 'kiss-pendenzen-content1',
-  templateUrl: './content1.component.html',
-  styleUrls: [
-    './content1.component.css',
-    '../../../app.component.css',
-    '../content.component.css'
-  ],
-  providers: [PenService],
+    selector: 'kiss-pendenzen-content1',
+    templateUrl: './content1.component.html',
+    styleUrls: [
+        './content1.component.css',
+        '../../../app.component.css',
+        '../content.component.css'
+    ],
 })
-export class Content1Component {
-  content1: any;
-  gridBox_displayExpr: '';
-  now: string;
-  gridDataSource: any;
-  _gridBoxValue: number[] = [3];
-  _gridSelectedRowKeys: number[] = [3];
-  dateFormat = 'dd/MM/yyyy';
+export class Content1Component extends BaseComponent implements OnInit {
+    @ViewChild(DxFormComponent) dxFormComponent: DxFormComponent;
+    frmSearchOption: any;
+    // select box
+    itemsStatus: any;
+    itemsPendenzTyp: any;
+    itemsOrganisationseinheit: any;
+    // dropdown
+    isgrid1Opened: false;
+    isgrid2Opened: boolean;
+    isgrid3Opened: boolean;
 
-  constructor(service: PenService) {
+    // grid
+    grid1DataSource: any;
+    _grid1BoxValue: number;
+    _grid1SelectedRowKeys: number[];
 
-    this.gridDataSource = [{
-      "ID": 1,
-      "CompanyName": "Premier Buy",
-      "Address": "7601 Penn Avenue South",
-      "City": "Richfield",
-      "State": "Minnesota",
-      "Zipcode": 55423,
-      "Phone": "(612) 291-1000",
-      "Fax": "(612) 291-2001",
-      "Website": "http://www.nowebsitepremierbuy.com"
-    }, {
-      "ID": 2,
-      "CompanyName": "ElectrixMax",
-      "Address": "263 Shuman Blvd",
-      "City": "Naperville",
-      "State": "Illinois",
-      "Zipcode": 60563,
-      "Phone": "(630) 438-7800",
-      "Fax": "(630) 438-7801",
-      "Website": "http://www.nowebsiteelectrixmax.com"
-    }, {
-      "ID": 3,
-      "CompanyName": "Video Emporium",
-      "Address": "1201 Elm Street",
-      "City": "Dallas",
-      "State": "Texas",
-      "Zipcode": 75270,
-      "Phone": "(214) 854-3000",
-      "Fax": "(214) 854-3001",
-      "Website": "http://www.nowebsitevideoemporium.com"
-    }, {
-      "ID": 4,
-      "CompanyName": "Screen Shop",
-      "Address": "1000 Lowes Blvd",
-      "City": "Mooresville",
-      "State": "North Carolina",
-      "Zipcode": 28117,
-      "Phone": "(800) 445-6937",
-      "Fax": "(800) 445-6938",
-      "Website": "http://www.nowebsitescreenshop.com"
-    }, {
-      "ID": 5,
-      "CompanyName": "Braeburn",
-      "Address": "1 Infinite Loop",
-      "City": "Cupertino",
-      "State": "California",
-      "Zipcode": 95014,
-      "Phone": "(408) 996-1010",
-      "Fax": "(408) 996-1012",
-      "Website": "http://www.nowebsitebraeburn.com"
-    }, {
-      "ID": 6,
-      "CompanyName": "PriceCo",
-      "Address": "30 Hunter Lane",
-      "City": "Camp Hill",
-      "State": "Pennsylvania",
-      "Zipcode": 17011,
-      "Phone": "(717) 761-2633",
-      "Fax": "(717) 761-2334",
-      "Website": "http://www.nowebsitepriceco.com"
-    }, {
-      "ID": 7,
-      "CompanyName": "Ultimate Gadget",
-      "Address": "1557 Watson Blvd",
-      "City": "Warner Robbins",
-      "State": "Georgia",
-      "Zipcode": 31093,
-      "Phone": "(995) 623-6785",
-      "Fax": "(995) 623-6786",
-      "Website": "http://www.nowebsiteultimategadget.com"
-    }, {
-      "ID": 8,
-      "CompanyName": "EZ Stop",
-      "Address": "618 Michillinda Ave.",
-      "City": "Arcadia",
-      "State": "California",
-      "Zipcode": 91007,
-      "Phone": "(626) 265-8632",
-      "Fax": "(626) 265-8633",
-      "Website": "http://www.nowebsiteezstop.com"
-    }, {
-      "ID": 9,
-      "CompanyName": "Clicker",
-      "Address": "1100 W. Artesia Blvd.",
-      "City": "Compton",
-      "State": "California",
-      "Zipcode": 90220,
-      "Phone": "(310) 884-9000",
-      "Fax": "(310) 884-9001",
-      "Website": "http://www.nowebsiteclicker.com"
-    }, {
-      "ID": 10,
-      "CompanyName": "Store of America",
-      "Address": "2401 Utah Ave. South",
-      "City": "Seattle",
-      "State": "Washington",
-      "Zipcode": 98134,
-      "Phone": "(206) 447-1575",
-      "Fax": "(206) 447-1576",
-      "Website": "http://www.nowebsiteamerica.com"
-    }, {
-      "ID": 11,
-      "CompanyName": "Zone Toys",
-      "Address": "1945 S Cienega Boulevard",
-      "City": "Los Angeles",
-      "State": "California",
-      "Zipcode": 90034,
-      "Phone": "(310) 237-5642",
-      "Fax": "(310) 237-5643",
-      "Website": "http://www.nowebsitezonetoys.com"
-    }, {
-      "ID": 12,
-      "CompanyName": "ACME",
-      "Address": "2525 E El Segundo Blvd",
-      "City": "El Segundo",
-      "State": "California",
-      "Zipcode": 90245,
-      "Phone": "(310) 536-0611",
-      "Fax": "(310) 536-0612",
-      "Website": "http://www.nowebsiteacme.com"
-    }]
-  }
+    grid2DataSource: any;
+    _grid2BoxValue: number;
+    _grid2SelectedRowKeys: number[];
 
-  get gridBoxValue(): number[] {
-    return this._gridBoxValue;
-  }
+    grid3DataSource: any;
+    _grid3BoxValue: number;
+    _grid3SelectedRowKeys: number[];
 
-  set gridBoxValue(value: number[]) {
-    this._gridBoxValue = value || [];
-  }
-  get gridSelectedRowKeys(): number[] {
-    return this._gridSelectedRowKeys;
-  }
+    lstErsteller: ErstellerModel[] = [];
+    lstEmpfanger: EmpfangerModel[] = [];
+    lstLeistungsverantw: Leistungsverantw[] = [];
+    objMaster: MasterData;
 
-  set gridSelectedRowKeys(value: number[]) {
-    this._gridSelectedRowKeys = value;
-  }
+    idStatusSelected: number;
+    idPendenzType: number;
+    idErsteller: number;
+    idEmpfanger: number;
+    idOrganisationseinheit: number;
+    idLeistungsverantw: number;
+    strFromErfasst: string;
+    strToErfasst: string;
+    strFromFallig: string;
+    strToFallig: string;
+    strFromBearbeitung: string;
+    strToBearbeitung: string;
+    strFromErledigt: string;
+    strToErledigt: string;
+    objSearchOption: SearchPendenzen;
+    isDisabled: boolean;
+
+    navBarLoad: NavBarLoad;
+
+    // conffig
+    //-- filter row
+    operationDescriptions: Object = {
+        between: "Zwischen",
+        contains: "Enthält",
+        endsWith: "Endet mit",
+        equal: "Ist gleich",
+        greaterThan: "Größer als",
+        greaterThanOrEqual: "Größer oder gleich",
+        lessThan: "Kleiner als",
+        lessThanOrEqual: "Kleiner oder gleich",
+        notContains: "Enthält nicht",
+        notEqual: "Ist nicht gleich",
+        startsWith: "Beginnt mit"
+    };
+    resetOperationText: string = "Zurücksetzen";
+    //-- sorting
+    sortingLabel: Object = {
+        ascendingText: "Aufsteigend sortieren",
+        clearText: "Sortierung aufheben",
+        descendingText: "Absteigend sortieren",
+    }
+
+    // Searching
+    waitSearching: any;
+
+    constructor(injector: Injector, public pendenzenSandbox: PendenzenSandbox, private service: PendenzenService) {
+        super(injector);
+        this.service.listenIsAddAndEdit().subscribe((item: any ) => {
+          this.isDisabled = item.isAddOrEdit || false;
+        });
+        this.onValueChangedBetreff = this.onValueChangedBetreff.bind(this);
+        this.onNameKlientInValueChanged = this.onNameKlientInValueChanged.bind(this);
+        this.onVornameKlientInValueChanged = this.onVornameKlientInValueChanged.bind(this);
+        this.onFallnummerValueChanged = this.onFallnummerValueChanged.bind(this);
+    }
+
+    ngOnInit(): void {
+        this.pendenzenSandbox.LoadMasterData();
+        this.pendenzenSandbox.GetErsteller();
+        this.pendenzenSandbox.GetEmpfanger();
+        this.pendenzenSandbox.GetLeistungsverantw();
+        this.grid1DataSource = this.makeAsyncDataSource1();
+        this.grid2DataSource = this.makeAsyncDataSource2();
+        this.grid3DataSource = this.makeAsyncDataSource3();
+        this.loadMasterData();
+        this.listenNvabar();
+    }
+
+    onInitializedDateBox(e) {
+        e.component.option("calendarOptions", 
+        {
+            firstDayOfWeek:1
+        });
+    }
+
+    // Listen event from nvabar
+    listenNvabar()
+    {
+        this.service.listenNavbarItem().subscribe((m: any) => {
+            if (m !== undefined) {
+                this.navBarLoad = m;
+                this.clearSearchCondition();
+            }
+        });
+    }
+    
+    loadMasterData(): any {
+        this.pendenzenSandbox.loadMasterData$.subscribe(data => {
+            this.itemsStatus = data.status;
+            this.itemsPendenzTyp = data.pendenzType;
+            this.itemsOrganisationseinheit = data.organisationseinheit;
+        })
+    }
+
+    // grid 1
+    getErsteller() {
+        this.pendenzenSandbox.getErsteller$.subscribe(data => {
+            data.forEach(el => {
+                let erstellerTemp = new ErstellerModel();
+                erstellerTemp.id = el.id,
+                    erstellerTemp.typ = el.typ,
+                    erstellerTemp.name = el.name,
+                    erstellerTemp.kurzel = el.kurzel,
+                    erstellerTemp.abteilung = el.abteilung
+                this.lstErsteller.push(erstellerTemp);
+            });
+        });
+        return this.lstErsteller;
+    }
+
+
+    onGetValueStatus(event: any) {
+        this.idStatusSelected = event.value;
+
+        this.searchOnChange();
+    }
+
+    onGetPendenzTyp(event: any) {
+        this.idPendenzType = event.value;
+
+        this.searchOnChange();
+    }
+
+    onValueChangedBetreff() {
+        this.searchOnChange();
+    }
+
+    onGetErsteller(event: any) {
+        if(event.selectedRowsData.length === 0) 
+            this.idErsteller = null;
+        else
+            this.idErsteller = event.selectedRowsData[0].id;
+        this.isgrid1Opened = false;
+
+        this.searchOnChange();
+    }
+
+    onGetEmpfamger(event: any) {
+        if(event.selectedRowsData.length === 0) 
+            this.idEmpfanger = null;
+        else
+            this.idEmpfanger = event.selectedRowsData[0].id;
+        this.isgrid2Opened = false;
+
+        this.searchOnChange();
+    }
+
+    onNameKlientInValueChanged() {
+        this.searchOnChange();
+    }
+
+    onVornameKlientInValueChanged() {
+        this.searchOnChange();
+    }
+
+    onFallnummerValueChanged() {
+        this.searchOnChange();
+    }
+
+    onGetLeistungsverantw(event: any) {
+        if(event.selectedRowsData.length === 0) 
+            this.idLeistungsverantw = null;
+        else
+            this.idLeistungsverantw = event.selectedRowsData[0].userId;
+        this.isgrid3Opened = false;
+
+        this.searchOnChange();
+    }
+
+    onGetValueOrganisationseinheit(event: any) {
+        this.idOrganisationseinheit = event.value;
+
+        this.searchOnChange();
+    }
+
+    onErfasstFromValueChanged(e) {
+        this.searchOnChange();
+    }
+
+    onErfasstToValueChanged(e) {
+        this.searchOnChange();
+    }
+
+    onFalligFromValueChanged(e) {
+        this.searchOnChange();
+    }
+
+    onFalligToValueChanged(e) {
+        this.searchOnChange();
+    }
+
+    onBearbeitungFromValueChanged(e) {
+        this.searchOnChange();
+    }
+
+    onBearbeitungToValueChanged(e) {
+        this.searchOnChange();
+    }
+
+    onErledigtFromValueChanged(e) {
+        this.searchOnChange();
+    }
+
+    onErledigtToValueChanged(e) {
+        this.searchOnChange();
+    }
+
+
+
+    makeAsyncDataSource1() {
+        const data1 = this.getErsteller();
+        return new CustomStore({
+            loadMode: "raw",
+            key: "id",
+            load: function () {
+                return data1;
+            }
+        });
+    };
+
+    get grid1BoxValue(): number {
+        return this._grid1BoxValue;
+    }
+
+    set grid1BoxValue(value: number) {
+        this._grid1SelectedRowKeys = value && [value] || [];
+        this._grid1BoxValue = value;
+    }
+
+    get grid1SelectedRowKeys(): number[] {
+        return this._grid1SelectedRowKeys;
+    }
+
+    set grid1SelectedRowKeys(value: number[]) {
+        this._grid1BoxValue = value.length && value[0] || null;
+        this._grid1SelectedRowKeys = value;
+    }
+
+    grid1Box_displayExpr(item) {
+        let displayExpr = "";
+        if (item.kurzel)
+            displayExpr += item.kurzel + " - ";
+        if (item.name)
+            displayExpr += item.name;
+        if (item.abteilung)
+            displayExpr += " (" + item.abteilung + ")";
+        return item && displayExpr;
+    }
+
+    // grid2
+    getEmpfanger(): any {
+        this.pendenzenSandbox.getEmpfanger$.subscribe(data => {
+            data.forEach(el => {
+                let empfangerTemp = new EmpfangerModel();
+                empfangerTemp.id = el.id,
+                    empfangerTemp.typ = el.typ,
+                    empfangerTemp.name = el.name,
+                    empfangerTemp.kurzel = el.kurzel,
+                    empfangerTemp.abteilung = el.abteilung
+                this.lstEmpfanger.push(empfangerTemp);
+            });
+        })
+        return this.lstEmpfanger;
+    }
+
+    makeAsyncDataSource2() {
+        const data2 = this.getEmpfanger();
+        return new CustomStore({
+            loadMode: "raw",
+            key: "id",
+            load: function () {
+                return data2;
+            }
+        });
+    };
+
+    get grid2BoxValue(): number {
+        return this._grid2BoxValue;
+    }
+
+    set grid2BoxValue(value: number) {
+        this._grid2SelectedRowKeys = value && [value] || [];
+        this._grid2BoxValue = value;
+    }
+
+    get grid2SelectedRowKeys(): number[] {
+        return this._grid2SelectedRowKeys;
+    }
+
+    set grid2SelectedRowKeys(value: number[]) {
+        this._grid2BoxValue = value.length && value[0] || null;
+        this._grid2SelectedRowKeys = value;
+    }
+
+    // grid2Box_displayExpr = grid1Box_displayExpr
+
+    // grid 3
+    getLeistungsverantw() {
+        this.pendenzenSandbox.getLeistungsverantw$.subscribe(data => {
+            data.forEach(el => {
+                let leistungsverantwTemp = new Leistungsverantw();
+                leistungsverantwTemp.userId = el.userId,
+                    leistungsverantwTemp.name = el.name,
+                    leistungsverantwTemp.logonName = el.logonName,
+                    leistungsverantwTemp.displayText = el.displayText,
+                    this.lstLeistungsverantw.push(leistungsverantwTemp);
+            });
+        })
+        return this.lstLeistungsverantw;
+    }
+
+    makeAsyncDataSource3() {
+        const data3 = this.getLeistungsverantw();
+        return new CustomStore({
+            loadMode: "raw",
+            key: "userId",
+            load: function () {
+                return data3;
+            }
+        });
+    };
+
+    get grid3BoxValue(): number {
+        return this._grid3BoxValue;
+    }
+
+    set grid3BoxValue(value: number) {
+        this._grid3SelectedRowKeys = value && [value] || [];
+        this._grid3BoxValue = value;
+    }
+
+    get grid3SelectedRowKeys(): number[] {
+        return this._grid3SelectedRowKeys;
+    }
+
+    set grid3SelectedRowKeys(value: number[]) {
+        this._grid3BoxValue = value.length && value[0] || null;
+        this._grid3SelectedRowKeys = value;
+    }
+
+    grid3Box_displayExpr(item) {
+        return item && item.displayText;
+    }
+
+    // handle search
+    search() {
+        this.objSearchOption = new SearchPendenzen();
+        this.objSearchOption.idMenu = this.navBarLoad !== undefined && this.navBarLoad.id !== undefined ? this.navBarLoad.id : '1_2';
+        this.objSearchOption.idStatus = this.idStatusSelected;
+        this.objSearchOption.idPendenzTyp = this.idPendenzType;
+        this.objSearchOption.betreff = this.frmSearchOption.betreff;
+        this.objSearchOption.idErsteller = this.idErsteller;
+        this.objSearchOption.idEmpfanger = this.idEmpfanger;
+        this.objSearchOption.nameKlientIn = this.frmSearchOption.nameKlientIn;
+        this.objSearchOption.vornameKlientIn = this.frmSearchOption.vornameKlientIn;
+        this.objSearchOption.fallnummer = this.frmSearchOption.fallnummer.split(' ').join('');
+        this.objSearchOption.idLeistungsverantw = this.idLeistungsverantw;
+        this.objSearchOption.idOrganisationseinheit = this.idOrganisationseinheit;
+        if (this.strFromErfasst !== undefined && this.strFromErfasst !== null)
+            this.objSearchOption.fromErfasst = moment(this.strFromErfasst).format('YYYY-MM-DD');
+
+        if (this.strToErfasst !== undefined && this.strToErfasst !== null)
+            this.objSearchOption.toErfasst = moment(this.strToErfasst).format('YYYY-MM-DD');
+
+        if (this.strFromFallig !== undefined && this.strFromFallig !== null)
+            this.objSearchOption.fromFallig = moment(this.strFromFallig).format('YYYY-MM-DD');
+
+        if (this.strToFallig !== undefined && this.strToFallig !== null)
+            this.objSearchOption.toFallig = moment(this.strToFallig).format('YYYY-MM-DD');
+
+        if (this.strFromBearbeitung !== undefined && this.strFromBearbeitung !== null)
+            this.objSearchOption.fromBearbeitung = moment(this.strFromBearbeitung).format('YYYY-MM-DD');
+
+        if (this.strToBearbeitung !== undefined && this.strToBearbeitung !== null)
+            this.objSearchOption.toBearbeitung = moment(this.strToBearbeitung).format('YYYY-MM-DD');
+
+        if (this.strFromErledigt !== undefined && this.strFromErledigt !== null)
+            this.objSearchOption.fromErledigt = moment(this.strFromErledigt).format('YYYY-MM-DD');
+
+        if (this.strToErledigt !== undefined && this.strToErledigt !== null)
+            this.objSearchOption.toErledigt = moment(this.strToErledigt).format('YYYY-MM-DD');
+
+        this.service.actionSearchOption(this.objSearchOption);
+    }
+
+    searchOnChange() {
+        clearTimeout( this.waitSearching );
+        this.waitSearching = setTimeout(()=> this.search(), 1000)
+    }
+
+    clearSearchCondition() {
+        this.idStatusSelected = null;
+        this.idPendenzType = null;
+        this.grid1BoxValue = null;
+        this.grid2BoxValue = null;
+        this.grid3BoxValue = null;
+        this.idOrganisationseinheit = null;
+        this.dxFormComponent.instance.resetValues();
+        this.strFromErfasst = null;
+        this.strToErfasst = null;
+        this.strFromFallig = null;
+        this.strToFallig = null;
+        this.strFromBearbeitung = null;
+        this.strToBearbeitung = null;
+        this.strFromErledigt = null;
+        this.strToErledigt = null;
+    }
 
 }

@@ -1,6 +1,6 @@
 import { ElementRef } from '@angular/core';
 import { custom } from 'devextreme/ui/dialog';
-
+import * as moment from 'moment';
 const typeCache: { [label: string]: boolean } = {};
 
 type Predicate = (oldValues: Array<any>, newValues: Array<any>) => boolean;

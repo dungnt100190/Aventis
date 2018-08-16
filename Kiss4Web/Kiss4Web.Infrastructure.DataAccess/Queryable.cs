@@ -37,6 +37,25 @@ namespace Kiss4Web.Infrastructure.DataAccess
             return _dbSet.AsEnumerable().GetEnumerator();
         }
 
+
+        public IQueryable<TEntity> GetList()
+        {
+            return _dbSet.AsQueryable();
+        }
+
+        public virtual IQueryable<TEntity> GetByCondition(Expression<Func<TEntity, bool>> filter)
+        {
+            return _dbSet.Where(filter);
+        }
+
+        public virtual TEntity GetDetailByCondition(Expression<Func<TEntity, bool>> filter)
+        {
+            return _dbSet.Where(filter).FirstOrDefault();
+        }
+        public virtual TEntity GetByID(object id)
+        {
+            return _dbSet.Find(id);
+        }
         IAsyncEnumerator<TEntity> IAsyncEnumerable<TEntity>.GetEnumerator()
         {
             //        return _dbSet.ToAsyncEnumerable().GetEnumerator();

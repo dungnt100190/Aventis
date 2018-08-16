@@ -18,7 +18,8 @@ var localizationSourceFilesEN = [
   "./i18n/general.en.json",
   "./i18n/auth.en.json",
   "./i18n/components.en.json",
-  "./i18n/persons.en.json"
+  "./i18n/persons.en.json",
+  "./i18n/kiss/CtlPendenzenVerwaltung.en.json"
 ];
 
 var localizationSourceFilesDE = [
@@ -26,11 +27,13 @@ var localizationSourceFilesDE = [
   "./i18n/auth.de.json",
   "./i18n/components.de.json",
   "./i18n/persons.de.json",
-  "./i18n/kiss/CtlFallNavigator.de.json"
+  "./i18n/kiss/CtlFallNavigator.de.json",
+  "./i18n/kiss/CtlPendenzenVerwaltung.de.json"
 ];
 
 var localizationSourceFilesFr = [
-  "./i18n/kiss/CtlFallNavigator.fr.json"
+  "./i18n/kiss/CtlFallNavigator.fr.json",
+  "./i18n/kiss/CtlPendenzenVerwaltung.fr.json"
 ];
 
 var localizationSourceFilesIt = [

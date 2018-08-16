@@ -1,9 +1,11 @@
 <div class="profileActionBar">
-    <div class="profileActionBar-anchor">
+    <div class="profileActionBar-anchor" (click)="toggleLogout()">
         <a class="profileActionBar-imgWrapper">
             <img src="{{ userImage }}" alt="">
         </a>
-        <span>{{ userEmail }}</span>
-        <span (click)="logout.emit($event)" class="profileActionBar-logout">{{ 'ProfileActionBar.Logout' | translate }}</span>
+        <span class="profileActionBar-name">{{ userEmail }}
+            <i class="fa fa-caret-down"></i>
+        </span>
     </div>
+    <span [ngClass]="{'is-show': isLogout, '': false}" (click)="logout.emit($event)" class="profileActionBar-logout">{{ 'ProfileActionBar.Logout' | translate }}</span>
 </div>

@@ -15,5 +15,6 @@ export class PendenzenComponent extends BaseComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.setTitle("Pendenzenwaltung")
   }
 }

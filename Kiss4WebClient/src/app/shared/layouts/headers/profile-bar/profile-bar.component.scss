@@ -1,25 +1,41 @@
 @import "../../../../../styles/variables";
 .profileActionBar {
     height: 100%;
+    width: 160px;
+    padding: 0 5px;
+    span {
+        color: #869ba6;
+        &:hover {
+            color: #869ba6;
+        }
+    }
 }
 
 .profileActionBar-anchor {
-    min-width: 150px;
-    padding: 0 15px;
-    height: 100%;
+    width: 100%;
+    padding-top: 0;
+    height: 37px;
     position: relative;
     span,
     i {
-        display: block;
-        color: $color-grey;
+        color: #869ba6;
     }
 }
 
 .profileActionBar-logout {
+    display: none;
     cursor: pointer;
-    &:hover {
-        text-decoration: underline;
-    }
+    z-index: 999;
+    background: #fff;
+    text-align: right;
+    padding: 10px;
+    border: 1px solid #ebebeb;
+    margin-top: 3px;
+    border-top: 0;
+    -webkit-box-shadow: 0 3px 7px 0 rgba(0,0,0,.24);
+    -ms-box-shadow: 0 3px 7px 0 rgba(0,0,0,.24);
+    -o-box-shadow: 0 3px 7px 0 rgba(0,0,0,.24);
+    box-shadow: 0 3px 7px 0 rgba(0,0,0,.24);
 }
 
 .profileActionBar-imgWrapper {
@@ -27,7 +43,7 @@
     vertical-align: middle;
     width: 35px;
     height: 35px;
-    border: 1px solid $color-grey-verylight;
+    border: 1px solid #ebebeb;
     border-radius: 50%;
     overflow: hidden;
     margin-right: 5px;
@@ -40,7 +56,7 @@
 }
 
 .profileActionBar-menu {
-    background-color: $color-white;
+    background-color: #fff;
     width: 203px;
     -webkit-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.24);
     -moz-box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.24);
@@ -53,14 +69,14 @@
 .profileActionBar-menu {
     border-radius: 0;
     * {
-        color: $color-grey;
+        color: #869ba6;
     }
 }
 
 .profileActionBar-list {
     width: 100%;
     &:hover {
-        background-color: $color-theme-lightBlue;
+        background-color: #def5ff;
     }
 }
 
@@ -75,4 +91,23 @@
     i {
         margin-right: 10px;
     }
+}
+
+.profileActionBar-anchor span.profileActionBar-name {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.profileActionBar-anchor span {
+    padding: 10px 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.profileActionBar-logout.is-show {
+    display: block;
 }

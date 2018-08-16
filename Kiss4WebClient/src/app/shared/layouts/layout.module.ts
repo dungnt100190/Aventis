@@ -17,7 +17,7 @@ import { HeaderComponent } from './headers/header.component';
 import { HorizontalNavigationComponent } from './headers/horizontal-navigation/horizontal-navigation.component';
 import { SearchBoxComponent } from './headers/search-box/search-box.component';
 import { ProfileBarComponent } from './headers/profile-bar/profile-bar.component';
-import { LanguageSelectorComponent } from './headers/languages/languageSelector.component';
+import { LanguagesComponent } from './headers/languages/languages.component';
 import { NotificationBoxComponent } from './headers/notification-box/notification-box.component';
 import { SelectedActionsComponent } from './left-sidebars/selected-actions/selected-actions.component';
 import { BreadCrumbComponent } from './contents/bread-crumb/bread-crumb.component';
@@ -35,7 +35,7 @@ export const CONTAINERS = [
   HorizontalNavigationComponent,
   SearchBoxComponent,
   ProfileBarComponent,
-  LanguageSelectorComponent,
+  LanguagesComponent,
   NotificationBoxComponent,
   SelectedActionsComponent,
   BreadCrumbComponent,

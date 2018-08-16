@@ -41,8 +41,15 @@ namespace Kiss4Web.IdentityServer
                         IdentityServerConstants.StandardScopes.Address,
                         "api"
                     },
-					AllowedCorsOrigins = new List<string>{"http://localhost:4300"}
-				}
+					//AllowedCorsOrigins = new List<string>{"http://localhost:4300"}
+                    AllowedCorsOrigins = new List<string>{
+                        "http://192.168.35.140:4300",
+                        "http://192.168.35.140:8001",
+                        "http://192.168.35.140:8001/api",
+                        "http://localhost:4300",
+                        "http://localhost:8001/api"
+                    }
+                }
             };
         }
     }
