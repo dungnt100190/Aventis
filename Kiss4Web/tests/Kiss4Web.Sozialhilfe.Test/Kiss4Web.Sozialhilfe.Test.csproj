@@ -37,12 +37,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>SozialHilfe_CtlWhSpezialkonto_GetAusgabekonti.feature</DependentUpon>
     </Compile>
+    <Compile Update="Pendenzen\Pendenzen.feature.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Pendenzen.feature</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <None Update="Features\Ausgabekonti\SozialHilfe_CtlWhSpezialkonto_GetAusgabekonti.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>SozialHilfe_CtlWhSpezialkonto_GetAusgabekonti.feature.cs</LastGenOutput>
+    </None>
+    <None Update="Pendenzen\Pendenzen.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Pendenzen.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
 

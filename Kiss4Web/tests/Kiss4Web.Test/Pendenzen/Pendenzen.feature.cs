@@ -10,14 +10,14 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Kiss4Web.Test.Features
+namespace Kiss4Web.Test.Pendenzen
 {
     using TechTalk.SpecFlow;
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.3.2.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("Pendenzen", SourceFile="Features\\Pendenzen.feature", SourceLine=0)]
+    [TechTalk.SpecRun.FeatureAttribute("Pendenzen", SourceFile="Pendenzen\\Pendenzen.feature", SourceLine=0)]
     public partial class PendenzenFeature
     {
         
@@ -61,41 +61,20 @@ namespace Kiss4Web.Test.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Get count of navbar items", new string[] {
+        [TechTalk.SpecRun.ScenarioAttribute("Login", new string[] {
                 "servicetest"}, SourceLine=3)]
-        public virtual void GetCountOfNavbarItems()
+        public virtual void Login()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get count of navbar items", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login", new string[] {
                         "servicetest"});
 #line 4
 this.ScenarioSetup(scenarioInfo);
 #line 5
- testRunner.When("Call LoadNavBarItems", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                        "ItmMeineFaellig",
-                        "ItmMeineOffen",
-                        "ItmMeineInBearbeitung",
-                        "ItmMeineErstellt",
-                        "ItmMeineErhalten",
-                        "ItmMeineZuVisieren",
-                        "ItmVersandteFaellig",
-                        "ItmVersandteZuVisieren",
-                        "ItmVersandteAllgemein",
-                        "ItmVersandteOffen"});
-            table1.AddRow(new string[] {
-                        "13",
-                        "46",
-                        "7",
-                        "45",
-                        "0",
-                        "0",
-                        "82",
-                        "0",
-                        "182",
-                        "182"});
+ testRunner.Given("User is on Login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 6
- testRunner.Then("the NavBarItems should be", ((string)(null)), table1, "Then ");
+ testRunner.When("user login as administrator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 7
+ testRunner.Then("redirect to page Pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

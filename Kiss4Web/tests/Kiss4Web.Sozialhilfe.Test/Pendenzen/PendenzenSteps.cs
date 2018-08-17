@@ -4,7 +4,6 @@ using Kiss4Web.TestInfrastructure;
 using Kiss4Web.TestInfrastructure.Client;
 using Kiss4Web.TestInfrastructure.TestData.Dynamic;
 using Kiss4Web.TestInfrastructure.TestServer;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,7 +16,6 @@ namespace Kiss4Web.Sozialhilfe.Test.Pendenzen
     {
         private ServiceResult<NavBarItemItem> _navBarItem;
         private DynamicTestDataManager _testDataManager;
-        private int _userId;
 
         public PendenzenSteps(TestServerFixture integrationTestEnvironment) : base(integrationTestEnvironment)
         {
@@ -29,94 +27,75 @@ namespace Kiss4Web.Sozialhilfe.Test.Pendenzen
             _testDataManager = IntegrationTestEnvironment.CreateTestDataManager();
         }
 
-        //[Given(@"these BaPerson")]
-        //public async Task GivenTheseBaPersonAsync(Table table)
-        //{
-        //    await _testDataManager.Insert<BaPerson>(table);
-        //}
+        [Given(@"these Tasks")]
+        public async Task GivenTheseTasks(Table table)
+        {
+            await _testDataManager.Insert<Xtask>(table);
+        }
         
-        //[Given(@"these vwUser")]
-        //public async Task GivenTheseVwUserAsync(Table table)
-        //{
-        //    await _testDataManager.Insert<XUser>(table);
-        //}
+        [Given(@"id of menu item")]
+        public void GivenIdOfMenuItem()
+        {
+            ScenarioContext.Current.Pending();
+        }
         
-        //[Given(@"these Xmodul")]
-        //public async Task GivenTheseXmodulAsync(Table table)
-        //{
-        //    await _testDataManager.Insert<XModul>(table);
-        //}
+        [Given(@"Task Id")]
+        public void GivenTaskId()
+        {
+            ScenarioContext.Current.Pending();
+        }
         
-        //[Given(@"these FaFall")]
-        //public void GivenTheseFaFallAsync(Table table)
-        //{
-        //    //await _testDataManager.Insert<FaFall>(table);
-        //    ScenarioContext.Current.Pending();
-        //}
+        [Given(@"search condition")]
+        public void GivenSearchCondition(Table table)
+        {
+            ScenarioContext.Current.Pending();
+        }
         
-        //[Given(@"these FaLeistung")]
-        //public void GivenTheseFaLeistung(Table table)
-        //{
-        //    ScenarioContext.Current.Pending();
-        //}
-        
-        //[Given(@"these XOrgUnit")]
-        //public void GivenTheseXOrgUnit(Table table)
-        //{
-        //    ScenarioContext.Current.Pending();
-        //}
-        
-        //[Given(@"these XOrgUnit_User")]
-        //public void GivenTheseXOrgUnit_User(Table table)
-        //{
-        //    ScenarioContext.Current.Pending();
-        //}
-        
-        //[Given(@"these XLOVCode")]
-        //public void GivenTheseXLOVCode(Table table)
-        //{
-        //    ScenarioContext.Current.Pending();
-        //}
-        
-        //[Given(@"these vwPersonSimple")]
-        //public void GivenTheseVwPersonSimple(Table table)
-        //{
-        //    ScenarioContext.Current.Pending();
-        //}
-        
-        //[Given(@"these FaPendenzgruppe")]
-        //public void GivenTheseFaPendenzgruppe(Table table)
-        //{
-        //    ScenarioContext.Current.Pending();
-        //}
-        
-        //[Given(@"these Tasks")]
-        //public void GivenTheseTasks(Table table)
-        //{
-        //    ScenarioContext.Current.Pending();
-        //}
-        
-        //[Given(@"curent userId is (.*)")]
-        //public void GivenCurentUserIdIs(int userId)
-        //{
-        //    _userId = userId;
-        //}
-        
-        [When(@"Call LoadNavBarItems")]
+        [When(@"call LoadNavBarItems")]
         public async Task WhenCallLoadNavBarItems()
         {
             var client = await IntegrationTestEnvironment.GetClient(TestUser.NewAdmin);
             _navBarItem = await client.GetAsJsonAsync<NavBarItemItem>(Url.LoadNavBarItems, null);
         }
-
-        [Then(@"the NavBarItems should be")]
-        public void ThenTheNavBarItemsShouldBe(Table table)
+        
+        [When(@"call GetPendenzenData")]
+        public void WhenCallGetPendenzenData()
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [When(@"call GetPendenzenDetail")]
+        public void WhenCallGetPendenzenDetail()
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [When(@"call SearchPendenzen")]
+        public void WhenCallSearchPendenzen()
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [Then(@"the count of navbar items should be")]
+        public void ThenTheCountOfNavbarItemsShouldBe(Table table)
         {
             var navbarItemReceived = new List<NavBarItemItem>();
             navbarItemReceived.Add(_navBarItem.Result);
 
             var expected = _testDataManager.CreateSetWithLookup<NavBarItemItem>(table).ToList();
             navbarItemReceived.ShouldBePartially(expected, table.Header);
+        }
+        
+        [Then(@"the list of Task should be")]
+        public void ThenTheListOfTaskShouldBe(Table table)
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [Then(@"the detail data of Task should be")]
+        public void ThenTheDetailDataOfTaskShouldBe(Table table)
+        {
+            ScenarioContext.Current.Pending();
         }
 
         [AfterScenario]

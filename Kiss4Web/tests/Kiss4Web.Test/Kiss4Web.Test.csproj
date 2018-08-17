@@ -74,12 +74,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CodeBinding\PendenzenSteps.cs" />
-    <Compile Include="Features\Pendenzen.feature.cs">
+    <Compile Include="Pendenzen\Pendenzen.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Pendenzen.feature</DependentUpon>
     </Compile>
+    <Compile Include="Pendenzen\PendenzenSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -87,7 +87,7 @@
     <None Include="Default.srprofile">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Features\Pendenzen.feature">
+    <None Include="Pendenzen\Pendenzen.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Pendenzen.feature.cs</LastGenOutput>
     </None>
