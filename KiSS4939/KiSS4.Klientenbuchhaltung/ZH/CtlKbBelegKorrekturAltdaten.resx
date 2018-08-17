@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryMigDetailBuchung.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>359, 17</value>
+  </metadata>
+  <metadata name="qryKbBuchungBrutto.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>205, 17</value>
+  </metadata>
+  <data name="qryKbBuchungBrutto.SelectStatement" xml:space="preserve">
+    <value>SELECT
+  KBU.KbBuchungBruttoID,
+  KBU.BgBudgetID,
+  KBU.BgKostenartID,
+  BKA.KontoNr,
+  BgKostenart = BKA.KontoNr + ' ' + BKA.Name,
+  KBU.BelegDatum,
+  KBU.Kostenstelle,
+  KBU.Hauptvorgang,
+  KBU.Teilvorgang,
+  BgKostenartHauptvorgang = BKA.Hauptvorgang,
+  BgKostenartTeilvorgang = BKA.Teilvorgang,
+  BgKostenartHauptvorgangAbtretung = BKA.HauptvorgangAbtretung,
+  BgKostenartTeilvorgangAbtretung = BKA.TeilvorgangAbtretung,  
+  KBU.Belegart,
+  KBU.BgSplittingArtCode,
+  KBU.Weiterverrechenbar,
+  KBU.Quoting,
+  KBU.FaLeistungID,
+  KBU.ValutaDatum,
+  KBU.KbBuchungStatusCode,
+  KBU.Text,
+  KBU.Abgetreten,
+  KBU.TransferDatum,
+  KBU.PscdKennzeichen,
+  BelegNr = KBU.BelegNr,
+  Betrag = KBU.Betrag,
+  KBP.Anzahl,
+  KBP.BaPersonID,
+  KBP.VerwPeriodeVon,
+  KBP.VerwPeriodeBis,
+  LT = PLT.NameVorname + ' (' + convert(varchar,PLT.BaPersonID) + ')',
+  LTBaPersonID = PLT.BaPersonID,
+  BetrifftPerson = BEP.NameVorname + ' (' + convert(varchar,BEP.BaPersonID) + ')',
+  BetrifftBaPersonID = BEP.BaPersonID,
+  Storno = CASE WHEN KBU.Text like 'STO %' THEN CAST(1 as bit) ELSE CAST(0 as bit) END,
+  Splittingart = SPL.ShortText,
+  BgSplittingartCode = BKA.BgSplittingartCode,
+  TextFix = '',
+  TextVariabel = KBU.Text,
+  LEI.FaFallID,
+  BUD.BgFinanzplanID,
+  SelectedHaushaltDatumVon = GetDate(),
+  SelectedHaushaltDatumBis = GetDate(),
+  SelectedHaushaltProleistPersonenIDs = ''
+FROM KbBuchungBrutto                      KBU
+  LEFT  JOIN BgKostenart                  BKA ON BKA.BgKostenartID = KBU.BgKostenartID
+  LEFT  JOIN (SELECT KbBuchungBruttoID, Anzahl = Count(*), BaPersonID = MIN(BaPersonID), VerwPeriodeVon = MIN(VerwPeriodeVon), VerwPeriodeBis = MAX(VerwPeriodeBis)
+              FROM KbBuchungBruttoPerson
+              GROUP BY KbBuchungBruttoID) KBP ON KBP.KbBuchungBruttoID = KBU.KbBuchungBruttoID
+  LEFT  JOIN FaLeistung                   LEI ON LEI.FaLeistungID = KBU.FaLeistungID
+  LEFT  JOIN BgBudget                     BUD ON BUD.BgBudgetID = KBU.BgBudgetID
+  LEFT  JOIN vwPerson                     PLT ON PLT.BaPersonID = LEI.BaPersonID
+  LEFT  JOIN vwPerson                     BEP ON BKA.Quoting = 0 AND BEP.BaPersonID = KBP.BaPersonID
+  LEFT  JOIN XLOVCode                     SPL ON SPL.LOVName = 'BgSplittingart' AND SPL.Code = BKA.BgSplittingartCode
+WHERE  KBU.MigDetailBuchungID = {0}</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="edtVerwPeriodeVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtVerwPeriodeBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtValutaDatum.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <metadata name="qryKbBuchungBruttoPerson.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryKbBuchungBruttoPerson.SelectStatement" xml:space="preserve">
+    <value>   SELECT
+     KbBuchungBruttoPersonID,
+     KbBuchungBruttoID = KBP.KbBuchungBruttoID,
+     Person = PER.Name + IsNull(', ' + PER.Vorname, '') + ' (' + 
+                           ISNULL(CONVERT(varchar,dbo.fnGetAgeMortal(PER.Geburtsdatum, GetDate(),PER.Sterbedatum)),'-') + ',' +
+                           ISNULL(PER.GeschlechtKurz,'?') + ')',
+     BaPersonID = PER.BaPersonID,
+     Text = KBP.Buchungstext,
+     Betrag = KBP.Betrag,
+     VerwPeriodeVon = KBP.VerwPeriodeVon,
+     VerwPeriodeBis = KBP.VerwPeriodeBis
+   FROM #TempKbBuchungBruttoPerson KBP
+     INNER  JOIN vwPerson PER ON PER.BaPersonID = KBP.BaPersonID
+   WHERE  KBP.KbBuchungBruttoID = {0}</value>
+  </data>
+  <data name="picTitel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAGdJREFUOE+ljwsK
+        wDAIQ3v/U3kzRzpTRAp++iC4Ql9mVxG1OUIB5n/s81SwRWLnMl5SEWkV7Mss4LSkHCFOS8oRuDboPGEL
+        AN8UWwVIZLQBgTwu6MqEQkwZxR7IZAP/x1tSbpKPY60P8WfNTgsTudkAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="qryMigDetailBuchung.SelectStatement" xml:space="preserve">
+    <value>DECLARE @MigDetailBuchung TABLE (MigDetailBuchungID int primary key)
+
+INSERT @MigDetailBuchung
+SELECT BUC.MigDetailBuchungID
+FROM   MigDetailBuchung BUC
+       INNER JOIN FaLeistung      LEI ON LEI.FaLeistungID = BUC.FaLeistungID
+       LEFT  JOIN KbBuchungBrutto BRU ON BRU.MigDetailBuchungID = BUC.MigDetailBuchungID AND
+                                         BRU.KbBuchungBruttoID = (SELECT MAX(KbBuchungBruttoID) FROM KbBuchungBrutto WHERE MigDetailBuchungID = BUC.MigDetailBuchungID)
+WHERE BUC.BuchungsStatusCode = 1 /*Korrekt*/
+      AND BUC.LeistungsArtNrProLeist IS NOT NULL 
+
+-- AND LEI.FaFallID = 765
+
+--- AND LEI.FaFallID = {edtSucheFaFallID}
+--- AND BUC.BaPersonID = {edtSucheBetrifftPerson.LookupID}
+--- AND BUC.KissLeistungsart = {edtSucheLA.LookupID}
+--- AND BUC.Buchungstext like '%' + {edtSucheBuchungstext} + '%'
+--- AND BUC.BuchungsDatum &gt;= {edtSucheBuchungsDatumVon}
+--- AND BUC.BuchungsDatum &lt;= {edtSucheBuchungsDatumBis}
+--- AND BUC.NummernKreis = {edtSucheNummernkreis}
+--- AND BUC.BelegNummer = {edtSucheBelegNr}
+--- AND ({edtSucheNurKorrigierte} = 0 OR BRU.KbBuchungBruttoID is not null)
+
+-- Belege, gruppiert nach BelegNr,BaPersonID,LA
+SELECT 
+  Anzahl              = COUNT(*),
+  FaFallID            = MIN(FAL.FaFallID),
+  MigDetailBuchungID  = MIN(BUC.MigDetailBuchungID),
+  BuchungID           = BUC.BelegNummer,
+  BuchungsDatum       = MIN(BUC.BuchungsDatum),
+  BaPersonID          = CASE WHEN ISNULL(BKA.Quoting,0) = 0 THEN MIN(BUC.BaPersonID) END,
+  BetrifftPerson      = CASE WHEN ISNULL(BKA.Quoting,0) = 0
+                        THEN MIN(PRS.NameVorname) 
+                        ELSE CONVERT(varchar, COUNT(DISTINCT BUC.BaPersonID)) + ' Personen'
+                        END,
+  BelegNr             = MIN(BUC.NummernKreis + '-' + convert(varchar(20),BUC.BelegNummer)),
+  LA                  = CASE WHEN BUC.LeistungsArtNrProLeist BETWEEN 9000 AND 9999 THEN 'V' ELSE '' END + BUC.KissLeistungsart,
+  Buchungstext        = MIN(BUC.Buchungstext),
+  VerwPeriodeVon      = MIN(BUC.VerwendungVon),
+  VerwPeriodeBis      = MAX(BUC.VerwendungBis),
+  ValutaDatum         = MIN(BUC.FaelligkeitsDatum),
+  ErfassungsDatum     = MIN(BUC.ErfassungsDatum),
+  Bar                 = CASE WHEN BUC.NummernKreis like 'B%' THEN 'b' END,
+  Betrag              = SUM(-BUC.Betrag),
+  EA                  = CASE WHEN SUBSTRING(BUC.NummernKreis, 1, 1) IN ('B','D','E','F') THEN 'A' ELSE 'E' END,
+  EinAus              = CASE WHEN SUBSTRING(BUC.NummernKreis, 1, 1) IN ('B','D','E','F') THEN 'Ausgabe' ELSE 'Einnahme' END,
+  ZusatzText          = MIN('ProLeist: LA ' + CONVERT(varchar,BUC.LeistungsArtNrProLeist) + ', Fall ' + CONVERT(varchar,BUC.FallProleist) + 
+                        IsNull(', Person ' + CONVERT(varchar,BUC.PersonProleist),'') +
+                        ' -- KiSS: LA ' + BKA.KontoNr + ' ' + BKA.Name),
+  KbBuchungStatusCode = MAX(case when BRU.KbBuchungBruttoID is not null then 8 else 6 end),
+  FaLeistungID        = MIN(BUC.FaLeistungID),
+  KbBuchungBruttoID   = MIN(BRU.KbBuchungBruttoID),
+  BgKostenartID       = MIN(BKA.BgKostenartID),
+  KontoNr             = MIN(BKA.KontoNr),
+  BgKostenart         = MIN(BKA.KontoNr + ' ' + BKA.Name),
+  BgSplittingartCode  = MIN(BKA.BgSplittingartCode),
+  Splittingart        = MIN(SPL.ShortText),
+  Hauptvorgang        = MIN(CASE WHEN SUBSTRING(BUC.NummernKreis, 1, 1) IN ('B','D','E','F') THEN BKA.Hauptvorgang ELSE BKA.HauptvorgangAbtretung END),
+  Teilvorgang         = MIN(CASE WHEN SUBSTRING(BUC.NummernKreis, 1, 1) IN ('B','D','E','F') THEN BKA.Teilvorgang ELSE BKA.TeilvorgangAbtretung END),
+  BgKostenartHauptvorgang = BKA.Hauptvorgang,
+  BgKostenartTeilvorgang = BKA.Teilvorgang,
+  BgKostenartHauptvorgangAbtretung = BKA.HauptvorgangAbtretung,
+  BgKostenartTeilvorgangAbtretung = BKA.TeilvorgangAbtretung,
+  Abgetreten          = CONVERT(bit,CASE WHEN SUBSTRING(BUC.NummernKreis, 1, 1) IN ('B','D','E','F') THEN 0 ELSE 1 END),
+  Belegart            = MIN(BKA.Belegart),
+  Weiterverrechenbar  = BKA.Weiterverrechenbar,
+  Quoting             = IsNull(BKA.Quoting,0),
+  Kostenstelle        = MIN(CONVERT(VARCHAR,ORG.Kostenstelle)),
+  LT                  = MIN(PLT.Name + IsNull(', ' + PLT.Vorname, '')),
+  LTBaPersonID        = MIN(PLT.BaPersonID),
+  FallBaPersonID      = MIN(FAL.BaPersonID)
+	
+FROM @MigDetailBuchung TMP
+  INNER JOIN dbo.MigDetailBuchung  BUC (READUNCOMMITTED) ON BUC.MigDetailBuchungID = TMP.MigDetailBuchungID
+  INNER JOIN dbo.FaLeistung        FLE (READUNCOMMITTED) ON FLE.FaLeistungID = BUC.FaLeistungID
+  INNER JOIN dbo.FaFall            FAL (READUNCOMMITTED) ON FAL.FaFallID = FLE.FaFallID
+  INNER JOIN dbo.vwPerson              PRS (READUNCOMMITTED) ON PRS.BaPersonID = BUC.BaPersonID
+  LEFT  JOIN dbo.BgKostenart       BKA (READUNCOMMITTED)ON BKA.KontoNr = BUC.KissLeistungsart
+  LEFT  JOIN dbo.KbBuchungBrutto   BRU (READUNCOMMITTED) ON BRU.MigDetailBuchungID = BUC.MigDetailBuchungID AND
+                                                            BRU.KbBuchungBruttoID = (SELECT MAX(KbBuchungBruttoID) 
+                                                                                     FROM   KbBuchungBrutto 
+                                                                                     WHERE MigDetailBuchungID = BUC.MigDetailBuchungID)
+  LEFT  JOIN dbo.XOrgUnit_User     O2U (READUNCOMMITTED) ON FLE.UserID = O2U.UserID and O2U.OrgUnitMemberCode = 2 /*Mitglied*/
+  LEFT  JOIN dbo.XOrgUnit          ORG (READUNCOMMITTED) ON ORG.OrgUnitID = O2U.OrgUnitID
+  LEFT  JOIN dbo.BaPerson          PLT (READUNCOMMITTED) ON PLT.BaPersonID = FLE.BaPersonID
+  LEFT  JOIN dbo.XLOVCode          SPL (READUNCOMMITTED) ON SPL.LOVName = 'BgSplittingart' AND SPL.Code = BKA.BgSplittingartCode
+  LEFT  JOIN dbo.XLOVCode          GES (READUNCOMMITTED) ON GES.LOVName = 'BaGeschlecht' AND GES.Code = PRS.GeschlechtCode
+GROUP BY 
+  BUC.NummernKreis,BUC.BelegNummer,CASE WHEN ISNULL(BKA.Quoting,0) = 0 THEN BUC.BaPersonID END,
+  CASE WHEN BUC.LeistungsArtNrProLeist BETWEEN 9000 AND 9999 THEN 'V' ELSE '' END + BUC.KissLeistungsart,
+  BKA.Weiterverrechenbar,BKA.Quoting, BKA.Hauptvorgang, BKA.Teilvorgang, BKA.HauptvorgangAbtretung, BKA.TeilvorgangAbtretung
+ORDER BY BelegNr,LA,BetrifftPerson
+
+-- Detailpositionen
+SELECT 
+  MigDetailBuchungID  = BUC.MigDetailBuchungID,
+  BetrifftPersonID    = CASE WHEN ISNULL(BKA.Quoting,0) = 0 THEN BUC.BaPersonID END,
+  BaPersonID          = BUC.BaPersonID,
+  LA                  = CASE WHEN BUC.LeistungsArtNrProLeist BETWEEN 9000 AND 9999 THEN 'V' ELSE '' END + BUC.KissLeistungsart,
+  Person              = PRS.Name + IsNull(', ' + PRS.Vorname, '') + ' (' + 
+                        ISNULL(CONVERT(varchar,dbo.fnGetAgeMortal(PRS.Geburtsdatum, GetDate(),PRS.Sterbedatum)),'-') + ',' +
+                        ISNULL(GES.ShortText,'?') + ')',
+  BelegNr             = BUC.NummernKreis + '-' + convert(varchar(20),BUC.BelegNummer),
+  BuchungsDatum       = BUC.BuchungsDatum,
+  Buchungstext        = BUC.Buchungstext,
+  VerwPeriodeVon      = BUC.VerwendungVon,
+  VerwPeriodeBis      = BUC.VerwendungBis,
+  Betrag              = -BUC.Betrag
+FROM @MigDetailBuchung TMP
+  INNER JOIN dbo.MigDetailBuchung  BUC (READUNCOMMITTED) ON BUC.MigDetailBuchungID = TMP.MigDetailBuchungID
+  LEFT  JOIN dbo.BgKostenart       BKA (READUNCOMMITTED) ON BKA.KontoNr = BUC.KissLeistungsart
+  INNER JOIN dbo.BaPerson          PRS (READUNCOMMITTED) ON PRS.BaPersonID = BUC.BaPersonID
+  LEFT  JOIN dbo.XLOVCode          GES (READUNCOMMITTED) ON GES.LOVName = 'BaGeschlecht' AND GES.Code = PRS.GeschlechtCode
+ORDER BY BelegNr,LA,BaPersonID,VerwPeriodeVon
+</value>
+  </data>
+  <data name="edtSucheBuchungsDatumBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtSucheBuchungsDatumVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+</root>

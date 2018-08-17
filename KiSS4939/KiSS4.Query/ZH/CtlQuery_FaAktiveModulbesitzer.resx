@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>declare @Person table (
+  BaPersonID int,
+  FUserID     int,
+  SUserID     int,
+  IUserID     int,
+  VUserID     int,
+  AUserID     int
+)
+
+insert @Person (BaPersonID)
+select distinct BaPersonID
+from   FaLeistung 
+where  DatumBis is null
+
+
+update P
+set    FUserID = (select top 1 FAL.UserID
+                  from   FaLeistung FAL
+                  where  FAL.BaPersonID = P.BaPersonID and
+                         FAL.ModulID = 2 and
+                         FAL.DatumBis is null
+                  order by FAL.DatumVon desc),
+       SUserID = (select top 1 FAL.UserID
+                  from   FaLeistung FAL
+                  where  FAL.BaPersonID = P.BaPersonID and
+                         FAL.ModulID = 3 and
+                         FAL.DatumBis is null
+                  order by FAL.DatumVon desc),
+       IUserID = (select top 1 FAL.UserID
+                  from   FaLeistung FAL
+                  where  FAL.BaPersonID = P.BaPersonID and
+                         FAL.ModulID = 4 and
+                         FAL.DatumBis is null
+                  order by FAL.DatumVon desc),
+       VUserID = (select top 1 FAL.UserID
+                  from   FaLeistung FAL
+                  where  FAL.BaPersonID = P.BaPersonID and
+                         FAL.ModulID = 5 and
+                         FAL.DatumBis is null
+                  order by FAL.DatumVon desc),
+       AUserID = (select top 1 FAL.UserID
+                  from   FaLeistung FAL
+                  where  FAL.BaPersonID = P.BaPersonID and
+                         FAL.ModulID = 6 and
+                         FAL.DatumBis is null
+                  order by FAL.DatumVon desc)
+from   @Person P
+
+select Person = PRS.Name + isNull(', ' + PRS.Vorname,''),
+       [SAR Fallführung]   = F.LastName + isNull(', ' + F.FirstName,''),
+       [SAR Sozialhilfe]   = S.LastName + isNull(', ' + S.FirstName,''),
+       [SAR Inkasso]       = I.LastName + isNull(', ' + I.FirstName,''),
+       [SAR Vormundschaft] = V.LastName + isNull(', ' + V.FirstName,''),
+       [SAR Asyl]          = A.LastName + isNull(', ' + A.FirstName,''),
+       -- Zusatz              = PRS.NavigatorZusatz,
+       AHVNummer       = PRS.AHVNummer,
+       NNummer         = PRS.NNummer,
+       Geburtsdatum    = PRS.Geburtsdatum,
+       Geschlecht      = case PRS.GeschlechtCode
+                         when 1 then 'm'
+                         when 2 then 'f'
+                         else '?'
+                         end,
+       Strasse         = ADR.Strasse,
+       StrasseNr       = ADR.HausNr,
+       PLZ             = ADR.PLZ,
+       Ort             = ADR.Ort,
+       Kanton          = ADR.Kanton,
+       Zivilstand      = ZIV.Text,
+       Nationalität    = NAT.Text,
+       Heimatort            = HEI.Text,
+       [Heimatort Kanton]    = HEI.Value2,
+       --[Zuständige Gemeinde] = (select top 1 GMD.Text
+       --                        from   FaLeistung FAL
+       --                             inner join XLOVCode GMD on GMD.Lovname = 'GemeindeSozialdienst' and
+       --                                               GMD.Code = FAL.GemeindeCode
+       --                  where  FAL.BaPersonID = PRS.BaPersonID
+       --                order by FAL.ModulID,FAL.DatumVon desc),
+       BaPersonID$ = PRS.BaPersonID
+from   @Person P
+       inner join BaPerson        PRS on PRS.BaPersonID = P.BaPersonID
+       left  join BaAdresse DWO on DWO.BaPersonID = PRS.BaPersonID and
+                                          DWO.AdresseCode = 1
+       left  join BaAdresse       ADR on ADR.BaAdresseID = DWO.BaAdresseID
+       left  join BaLand          NAT on NAT.BaLandID = PRS.NationalitaetCode
+       left  join XLOVCode         ZIV on ZIV.Code = PRS.ZivilstandCode and
+                                          ZIV.LovName = 'Zivilstand'
+       left  join XLOVCode         HEI on HEI.Code = PRS.HeimatGemeindeCode and
+                                         HEI.LovName = 'Gemeinde'
+       left  join XUser            F   on F.UserID = P.FUserID
+       left  join XUser            S   on S.UserID = P.SUserID
+       left  join XUser            I   on I.UserID = P.IUserID
+       left  join XUser            V   on V.UserID = P.VUserID
+       left  join XUser            A   on A.UserID = P.AUserID
+
+where 1 = 1
+-- AND (PRS.PersonSichtbarSDFlag = dbo.fnGetPersonSichtbarFlag({GetLogonName}) or PRS.PersonSichtbarSDFlag = 1) 
+--- and {edtSAR} in (FUserID,SUserID,IUSerID,VUserID,AUserID)
+--- and PRS.Name + isNull(', ' + PRS.Vorname,'') like {edtKlient} + '%'</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="xDocument.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAF1JREFUOE9jZAAC
+        Y2Pj/yAaGzh79iwjhjhIw///MzGwmJjYfxDGqSEtjeE/MgYpBhmEoYmQDSANKM7GpQHZmVg1oDsJxgdp
+        pI4N2EIKJjbqJLIiDqSJEMaVovGKAwBnM3PWBP8PfwAAAABJRU5ErkJggg==
+</value>
+  </data>
+</root>

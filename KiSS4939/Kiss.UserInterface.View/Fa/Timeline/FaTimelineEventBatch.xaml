@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="Kiss.UserInterface.View.Fa.Timeline.FaTimelineEventBatch"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Timeline="clr-namespace:Kiss.UserInterface.View.Fa.Timeline"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:Common="clr-namespace:Kiss.UserInterface.View.Common"
+             mc:Ignorable="d"
+             d:DesignHeight="32"
+             d:DesignWidth="32">
+    <Grid >
+        <Grid x:Name="gridTimeLineImage">
+            <Image x:Name="ImageTimeLine" Source="pack://application:,,,/Kiss.UserInterface.View;component/Images/Batch.png"/>
+            <Border BorderBrush="Black" BorderThickness="1" CornerRadius="2" Background="WhiteSmoke" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                <TextBlock x:Name="Zahl" FontSize="10" FontWeight="Bold" Text="{Binding DataItem.Events.Count}" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="2"/>
+            </Border>
+        </Grid>
+
+        <Popup x:Name="Balloon" Placement="Bottom" AllowsTransparency="True">
+            <i:Interaction.Behaviors>
+                <Common:OpenPopupOnMouseOverBehavior x:Name="popupBehavior" PopupParent="{Binding ElementName=gridTimeLineImage}"  />
+            </i:Interaction.Behaviors>
+            <Timeline:FaTimelineEventDetailList TimelineItems="{Binding DataItem.Events}" BalloonRootHorizontalOffset="{Binding ElementName=popupBehavior, Path=PopupRootHorizontalOffset}"/>
+        </Popup>
+    </Grid>
+</UserControl>

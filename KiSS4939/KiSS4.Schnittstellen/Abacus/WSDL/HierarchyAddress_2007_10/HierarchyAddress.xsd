@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--This XSD (W3C Schema) has been written by ABACUS AbaConnect-->
+<!--Created at: Tue Mar 24 13:55:33 CET 2009-->
+<xs:schema xmlns:xs='http://www.w3.org/2001/XMLSchema' targetNamespace='http://www.abacus.ch/abaconnect/2007.10/adre/HierarchyAddress' xmlns:hierarchyaddress='http://www.abacus.ch/abaconnect/2007.10/adre/HierarchyAddress' xmlns:hierarchyaddresstypes='http://www.abacus.ch/abaconnect/2007.10/adre/HierarchyAddressTypes' xmlns:act='http://www.abacus.ch/abaconnect/2007.10/core/AbaConnectTypes' elementFormDefault='qualified' attributeFormDefault='unqualified'>
+  <xs:import namespace='http://www.abacus.ch/abaconnect/2007.10/core/AbaConnectTypes' schemaLocation='AbaConnectTypes.xsd'/>
+  <xs:import namespace='http://www.abacus.ch/abaconnect/2007.10/adre/HierarchyAddressTypes' schemaLocation='HierarchyAddressTypes.xsd'/>
+  <xs:element name='DeleteRequest' type='hierarchyaddress:RequestType'>
+    <xs:annotation>
+      <xs:documentation>HierarchyAddress-: </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name='DeleteResponse' type='hierarchyaddress:ResponseType'>
+    <xs:annotation>
+      <xs:documentation>HierarchyAddress-: </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name='InsertRequest' type='hierarchyaddress:RequestType'>
+    <xs:annotation>
+      <xs:documentation>HierarchyAddress-: </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name='InsertResponse' type='hierarchyaddress:ResponseType'>
+    <xs:annotation>
+      <xs:documentation>HierarchyAddress-: </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name='UpdateRequest' type='hierarchyaddress:RequestType'>
+    <xs:annotation>
+      <xs:documentation>HierarchyAddress-: </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name='UpdateResponse' type='hierarchyaddress:ResponseType'>
+    <xs:annotation>
+      <xs:documentation>HierarchyAddress-: </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name='SaveRequest' type='hierarchyaddress:RequestType'>
+    <xs:annotation>
+      <xs:documentation>HierarchyAddress-: </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name='SaveResponse' type='hierarchyaddress:ResponseType'>
+    <xs:annotation>
+      <xs:documentation>HierarchyAddress-: </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name='DefaultValuesRequest' type='hierarchyaddress:RequestType'>
+    <xs:annotation>
+      <xs:documentation>HierarchyAddress-: </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name='DefaultValuesResponse' type='hierarchyaddress:ResponseType'>
+    <xs:annotation>
+      <xs:documentation>HierarchyAddress-: </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name='FindRequest' type='hierarchyaddress:RequestType'>
+    <xs:annotation>
+      <xs:documentation>HierarchyAddress-: </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name='FindResponse' type='hierarchyaddress:ResponseType'>
+    <xs:annotation>
+      <xs:documentation>HierarchyAddress-: </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name='IsFinishedRequest' type='act:RequestFinishedType'>
+    <xs:annotation>
+      <xs:documentation>HierarchyAddress-: </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name='IsFinishedResponse' type='hierarchyaddress:ResponseType'>
+    <xs:annotation>
+      <xs:documentation>HierarchyAddress-: </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name='RequestType'>
+    <xs:sequence>
+      <xs:element name='AbaConnectParam' type='act:RequestParameterType' minOccurs='1' maxOccurs='1'/>
+      <xs:element name='ApplicationParam' type='act:ApplicationParameterType' minOccurs='0' maxOccurs='1'/>
+      <xs:element name='FindParam' type='act:FindType' minOccurs='0' maxOccurs='1'/>
+      <xs:element name='Data' type='hierarchyaddresstypes:HierarchyAddressAbaDefaultType' minOccurs='0'/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name='ResponseType'>
+    <xs:sequence>
+      <xs:element name='ResponseMessage' type='act:ACResponseType'/>
+      <xs:element name='DataContainer' type='hierarchyaddress:DataContainerType' minOccurs='0'/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name='DataContainerType'>
+    <xs:sequence>
+      <xs:element name='Data' type='hierarchyaddresstypes:HierarchyAddressAbaDefaultType' minOccurs='0' maxOccurs='unbounded'/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

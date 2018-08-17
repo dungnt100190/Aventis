@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="FAMOZ_SD01_CREATE_WS_chbehvs006" resourceRoot="" soapui-version="3.6.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="MI_SD01_CREATE_WSBinding" type="wsdl" bindingName="{http://stzh.ch/FAMOZ_SD01_CREATE_WS}MI_SD01_CREATE_WSBinding" soapVersion="1_1" anonymous="optional" definition="http://chbehvs006:88/PscdMock/FAMOZ_SD01_CREATE_WS.asmx?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://chbehvs006:88/PscdMock/FAMOZ_SD01_CREATE_WS.asmx</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://sap.com/xi/WebService/soap1.1" name="MI_SD01_CREATE_WS" bindingOperationName="MI_SD01_CREATE_WS" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://chbehvs006:88/PscdMock/FAMOZ_SD01_CREATE_WS.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:sap-com:document:sap:rfc:functions">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:_-STZH_-SOZ_CD_F2_BELEG_CREATE>
+         <!--Optional:-->
+         <CALLER_ID>?</CALLER_ID>
+         <!--Optional:-->
+         <DOCUMENTHEADER>
+            <!--Optional:-->
+            <DOC_NO>?</DOC_NO>
+            <!--Optional:-->
+            <DOC_TYPE>?</DOC_TYPE>
+            <!--Optional:-->
+            <DOC_DATE>?</DOC_DATE>
+            <!--Optional:-->
+            <POST_DATE>?</POST_DATE>
+            <!--Optional:-->
+            <NET_DATE>?</NET_DATE>
+            <!--Optional:-->
+            <REF_DOC_NO>?</REF_DOC_NO>
+            <!--Optional:-->
+            <PAYMENT_LOT>?</PAYMENT_LOT>
+            <!--Optional:-->
+            <PAYMENT_LOT_POS>?</PAYMENT_LOT_POS>
+         </DOCUMENTHEADER>
+         <!--Optional:-->
+         <PAYMENTINFO>
+            <!--Optional:-->
+            <PAYMENT_TYPE>?</PAYMENT_TYPE>
+            <!--Optional:-->
+            <RECEIVER_BANK_COUNTRY>?</RECEIVER_BANK_COUNTRY>
+            <!--Optional:-->
+            <RECEIVER_BANK_KEY>?</RECEIVER_BANK_KEY>
+            <!--Optional:-->
+            <RECEIVER_BANK_ACCOUNT>?</RECEIVER_BANK_ACCOUNT>
+            <!--Optional:-->
+            <RECEIVER_BANK_IBAN>?</RECEIVER_BANK_IBAN>
+            <!--Optional:-->
+            <RECEIVER_ESR_ACCOUNT>?</RECEIVER_ESR_ACCOUNT>
+            <!--Optional:-->
+            <RECEIVER_ESR_REFERENCE>?</RECEIVER_ESR_REFERENCE>
+            <!--Optional:-->
+            <RECEIVER_ESR_CHECKDIGIT>?</RECEIVER_ESR_CHECKDIGIT>
+            <!--Optional:-->
+            <RECEIVER_NAME1>?</RECEIVER_NAME1>
+            <!--Optional:-->
+            <RECEIVER_NAME2>?</RECEIVER_NAME2>
+            <!--Optional:-->
+            <RECEIVER_STREET>?</RECEIVER_STREET>
+            <!--Optional:-->
+            <RECEIVER_HOUSE_NO>?</RECEIVER_HOUSE_NO>
+            <!--Optional:-->
+            <RECEIVER_POST_CODE>?</RECEIVER_POST_CODE>
+            <!--Optional:-->
+            <RECEIVER_CITY>?</RECEIVER_CITY>
+            <!--Optional:-->
+            <RECEIVER_COUNTRY>?</RECEIVER_COUNTRY>
+            <!--Optional:-->
+            <RECEIVER_TXT1>?</RECEIVER_TXT1>
+            <!--Optional:-->
+            <RECEIVER_TXT2>?</RECEIVER_TXT2>
+            <!--Optional:-->
+            <RECEIVER_TXT3>?</RECEIVER_TXT3>
+            <!--Optional:-->
+            <SENDER_BANK_ACCOUNT>?</SENDER_BANK_ACCOUNT>
+            <!--Optional:-->
+            <SENDER_BANK_IBAN>?</SENDER_BANK_IBAN>
+            <!--Optional:-->
+            <SENDER_NAME1>?</SENDER_NAME1>
+            <!--Optional:-->
+            <SENDER_NAME2>?</SENDER_NAME2>
+            <!--Optional:-->
+            <SENDER_STREET>?</SENDER_STREET>
+            <!--Optional:-->
+            <SENDER_HOUSE_NO>?</SENDER_HOUSE_NO>
+            <!--Optional:-->
+            <SENDER_POST_CODE>?</SENDER_POST_CODE>
+            <!--Optional:-->
+            <SENDER_CITY>?</SENDER_CITY>
+            <!--Optional:-->
+            <SENDER_COUNTRY>?</SENDER_COUNTRY>
+         </PAYMENTINFO>
+         <!--Optional:-->
+         <PARTNERPOSITIONS>
+            <!--Zero or more repetitions:-->
+            <item>
+               <!--Optional:-->
+               <ITEM>?</ITEM>
+               <!--Optional:-->
+               <TRANSACTION_TYPE>?</TRANSACTION_TYPE>
+               <!--Optional:-->
+               <TRANSACTION_CODE>?</TRANSACTION_CODE>
+               <!--Optional:-->
+               <REVERSAL>?</REVERSAL>
+               <!--Optional:-->
+               <TEXT>?</TEXT>
+               <!--Optional:-->
+               <AMOUNT_LOC_CURR>?</AMOUNT_LOC_CURR>
+               <!--Optional:-->
+               <REFERENCE_DOCUMENT>?</REFERENCE_DOCUMENT>
+               <!--Optional:-->
+               <REFERENCE_ITEM>?</REFERENCE_ITEM>
+               <!--Optional:-->
+               <COST_CENTER>?</COST_CENTER>
+            </item>
+         </PARTNERPOSITIONS>
+      </urn:_-STZH_-SOZ_CD_F2_BELEG_CREATE>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://sap.com/xi/WebService/soap1.1"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="MI_SD01_CREATE_WSBinding1" type="wsdl" bindingName="{http://stzh.ch/FAMOZ_SD01_CREATE_WS}MI_SD01_CREATE_WSBinding1" soapVersion="1_2" anonymous="optional" definition="http://chbehvs006:88/PscdMock/FAMOZ_SD01_CREATE_WS.asmx?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://chbehvs006:88/PscdMock/FAMOZ_SD01_CREATE_WS.asmx?WSDL"><con:part><con:url>http://chbehvs006:88/PscdMock/FAMOZ_SD01_CREATE_WS.asmx?WSDL</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://stzh.ch/FAMOZ_SD01_CREATE_WS" xmlns:s0="urn:sap-com:document:sap:rfc:functions" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://stzh.ch/FAMOZ_SD01_CREATE_WS" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="urn:sap-com:document:sap:rfc:functions">
+      <s:element name="_-STZH_-SOZ_CD_F2_BELEG_CREATE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="CALLER_ID" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="DOCUMENTHEADER" type="s0:_-STZH_-SOZ_CD_F2_BAPIDFKKKO"/>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="PAYMENTINFO" type="s0:_-STZH_-SOZ_CD_F2_BAPI_PAYMENT"/>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="PARTNERPOSITIONS" type="s0:ArrayOf_STZH_SOZ_CD_F2_BAPIDFKKOP"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="_-STZH_-SOZ_CD_F2_BAPIDFKKKO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="DOC_NO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="DOC_TYPE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="DOC_DATE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="POST_DATE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="NET_DATE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="REF_DOC_NO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="PAYMENT_LOT" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="PAYMENT_LOT_POS" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="_-STZH_-SOZ_CD_F2_BAPI_PAYMENT">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="PAYMENT_TYPE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="RECEIVER_BANK_COUNTRY" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="RECEIVER_BANK_KEY" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="RECEIVER_BANK_ACCOUNT" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="RECEIVER_BANK_IBAN" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="RECEIVER_ESR_ACCOUNT" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="RECEIVER_ESR_REFERENCE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="RECEIVER_ESR_CHECKDIGIT" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="RECEIVER_NAME1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="RECEIVER_NAME2" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="RECEIVER_STREET" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="RECEIVER_HOUSE_NO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="RECEIVER_POST_CODE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="RECEIVER_CITY" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="RECEIVER_COUNTRY" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="RECEIVER_TXT1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="RECEIVER_TXT2" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="RECEIVER_TXT3" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="SENDER_BANK_ACCOUNT" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="SENDER_BANK_IBAN" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="SENDER_NAME1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="SENDER_NAME2" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="SENDER_STREET" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="SENDER_HOUSE_NO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="SENDER_POST_CODE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="SENDER_CITY" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="SENDER_COUNTRY" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOf_STZH_SOZ_CD_F2_BAPIDFKKOP">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" form="unqualified" name="item" type="s0:_-STZH_-SOZ_CD_F2_BAPIDFKKOP"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="_-STZH_-SOZ_CD_F2_BAPIDFKKOP">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="ITEM" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="TRANSACTION_TYPE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="TRANSACTION_CODE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="REVERSAL" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="TEXT" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="AMOUNT_LOC_CURR" type="s:decimal"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="REFERENCE_DOCUMENT" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="REFERENCE_ITEM" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="COST_CENTER" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="_-STZH_-SOZ_CD_F2_BELEG_CREATE.Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="DOCUMENTNUMBER" type="s:string"/>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="PARTNERPOSITIONS" type="s0:ArrayOf_STZH_SOZ_CD_F2_BAPIDFKKOP"/>
+            <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="RETURN" type="s0:BAPIRET2"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BAPIRET2">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="TYPE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="ID" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="NUMBER" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="MESSAGE" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="LOG_NO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="LOG_MSG_NO" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="MESSAGE_V1" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="MESSAGE_V2" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="MESSAGE_V3" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="MESSAGE_V4" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="PARAMETER" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="ROW" type="s:integer"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="FIELD" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="SYSTEM" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="MI_SD01_CREATE_WSSoapIn">
+    <wsdl:part name="parameters" element="s0:_-STZH_-SOZ_CD_F2_BELEG_CREATE"/>
+  </wsdl:message>
+  <wsdl:message name="MI_SD01_CREATE_WSSoapOut">
+    <wsdl:part name="parameters" element="s0:_-STZH_-SOZ_CD_F2_BELEG_CREATE.Response"/>
+  </wsdl:message>
+  <wsdl:portType name="MI_SD01_CREATE_WSBinding">
+    <wsdl:operation name="MI_SD01_CREATE_WS">
+      <wsdl:input message="tns:MI_SD01_CREATE_WSSoapIn"/>
+      <wsdl:output message="tns:MI_SD01_CREATE_WSSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MI_SD01_CREATE_WSBinding" type="tns:MI_SD01_CREATE_WSBinding">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="MI_SD01_CREATE_WS">
+      <soap:operation soapAction="http://sap.com/xi/WebService/soap1.1" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MI_SD01_CREATE_WSBinding1" type="tns:MI_SD01_CREATE_WSBinding">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="MI_SD01_CREATE_WS">
+      <soap12:operation soapAction="http://sap.com/xi/WebService/soap1.1" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FAMOZ_SD01_CREATE_WS">
+    <wsdl:port name="MI_SD01_CREATE_WSBinding" binding="tns:MI_SD01_CREATE_WSBinding">
+      <soap:address location="http://chbehvs006:88/PscdMock/FAMOZ_SD01_CREATE_WS.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="MI_SD01_CREATE_WSBinding1" binding="tns:MI_SD01_CREATE_WSBinding1">
+      <soap12:address location="http://chbehvs006:88/PscdMock/FAMOZ_SD01_CREATE_WS.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://chbehvs006:88/PscdMock/FAMOZ_SD01_CREATE_WS.asmx</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://sap.com/xi/WebService/soap1.1" name="MI_SD01_CREATE_WS" bindingOperationName="MI_SD01_CREATE_WS" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://chbehvs006:88/PscdMock/FAMOZ_SD01_CREATE_WS.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:urn="urn:sap-com:document:sap:rfc:functions">
+   <soap:Header/>
+   <soap:Body>
+      <urn:_-STZH_-SOZ_CD_F2_BELEG_CREATE>
+         <!--Optional:-->
+         <CALLER_ID>?</CALLER_ID>
+         <!--Optional:-->
+         <DOCUMENTHEADER>
+            <!--Optional:-->
+            <DOC_NO>123456</DOC_NO>
+            <!--Optional:-->
+            <DOC_TYPE></DOC_TYPE>
+            <!--Optional:-->
+            <DOC_DATE></DOC_DATE>
+            <!--Optional:-->
+            <POST_DATE></POST_DATE>
+            <!--Optional:-->
+            <NET_DATE></NET_DATE>
+            <!--Optional:-->
+            <REF_DOC_NO></REF_DOC_NO>
+            <!--Optional:-->
+            <PAYMENT_LOT></PAYMENT_LOT>
+            <!--Optional:-->
+            <PAYMENT_LOT_POS></PAYMENT_LOT_POS>
+         </DOCUMENTHEADER>
+         <!--Optional:-->
+         <PAYMENTINFO>
+            <!--Optional:-->
+            <PAYMENT_TYPE></PAYMENT_TYPE>
+            <!--Optional:-->
+            <RECEIVER_BANK_COUNTRY></RECEIVER_BANK_COUNTRY>
+            <!--Optional:-->
+            <RECEIVER_BANK_KEY></RECEIVER_BANK_KEY>
+            <!--Optional:-->
+            <RECEIVER_BANK_ACCOUNT></RECEIVER_BANK_ACCOUNT>
+            <!--Optional:-->
+            <RECEIVER_BANK_IBAN></RECEIVER_BANK_IBAN>
+            <!--Optional:-->
+            <RECEIVER_ESR_ACCOUNT></RECEIVER_ESR_ACCOUNT>
+            <!--Optional:-->
+            <RECEIVER_ESR_REFERENCE></RECEIVER_ESR_REFERENCE>
+            <!--Optional:-->
+            <RECEIVER_ESR_CHECKDIGIT></RECEIVER_ESR_CHECKDIGIT>
+            <!--Optional:-->
+            <RECEIVER_NAME1></RECEIVER_NAME1>
+            <!--Optional:-->
+            <RECEIVER_NAME2></RECEIVER_NAME2>
+            <!--Optional:-->
+            <RECEIVER_STREET></RECEIVER_STREET>
+            <!--Optional:-->
+            <RECEIVER_HOUSE_NO></RECEIVER_HOUSE_NO>
+            <!--Optional:-->
+            <RECEIVER_POST_CODE></RECEIVER_POST_CODE>
+            <!--Optional:-->
+            <RECEIVER_CITY></RECEIVER_CITY>
+            <!--Optional:-->
+            <RECEIVER_COUNTRY></RECEIVER_COUNTRY>
+            <!--Optional:-->
+            <RECEIVER_TXT1></RECEIVER_TXT1>
+            <!--Optional:-->
+            <RECEIVER_TXT2></RECEIVER_TXT2>
+            <!--Optional:-->
+            <RECEIVER_TXT3></RECEIVER_TXT3>
+            <!--Optional:-->
+            <SENDER_BANK_ACCOUNT></SENDER_BANK_ACCOUNT>
+            <!--Optional:-->
+            <SENDER_BANK_IBAN></SENDER_BANK_IBAN>
+            <!--Optional:-->
+            <SENDER_NAME1></SENDER_NAME1>
+            <!--Optional:-->
+            <SENDER_NAME2></SENDER_NAME2>
+            <!--Optional:-->
+            <SENDER_STREET></SENDER_STREET>
+            <!--Optional:-->
+            <SENDER_HOUSE_NO></SENDER_HOUSE_NO>
+            <!--Optional:-->
+            <SENDER_POST_CODE></SENDER_POST_CODE>
+            <!--Optional:-->
+            <SENDER_CITY></SENDER_CITY>
+            <!--Optional:-->
+            <SENDER_COUNTRY></SENDER_COUNTRY>
+         </PAYMENTINFO>
+         <!--Optional:-->
+         <PARTNERPOSITIONS>
+            <!--Zero or more repetitions:-->
+            <item>
+               <!--Optional:-->
+               <ITEM></ITEM>
+               <!--Optional:-->
+               <TRANSACTION_TYPE></TRANSACTION_TYPE>
+               <!--Optional:-->
+               <TRANSACTION_CODE></TRANSACTION_CODE>
+               <!--Optional:-->
+               <REVERSAL></REVERSAL>
+               <!--Optional:-->
+               <TEXT></TEXT>
+               <!--Optional:-->
+               <AMOUNT_LOC_CURR>0</AMOUNT_LOC_CURR>
+               <!--Optional:-->
+               <REFERENCE_DOCUMENT></REFERENCE_DOCUMENT>
+               <!--Optional:-->
+               <REFERENCE_ITEM></REFERENCE_ITEM>
+               <!--Optional:-->
+               <COST_CENTER></COST_CENTER>
+            </item>
+         </PARTNERPOSITIONS>
+      </urn:_-STZH_-SOZ_CD_F2_BELEG_CREATE>
+   </soap:Body>
+</soap:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://stzh.ch/FAMOZ_SD01_CREATE_WS/MI_SD01_CREATE_WSBinding/MI_SD01_CREATE_WSRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/></con:soapui-project>

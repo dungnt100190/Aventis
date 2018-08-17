@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>DECLARE @auswSucheNach INT;
+DECLARE @auswStatusHeute INT;
+
+SET @auswSucheNach = 1; -- Status heute
+---SET @auswSucheNach = {edtSucheNach};
+
+SET @auswStatusHeute = 3; -- aktiv und abgeschlossen
+---SET @auswStatusHeute = {edtStatusHeute};
+
+SELECT 
+  BaPersonID$             = LEI.BaPersonID,
+  [Eröffnung]             = LEI.DatumVon,
+  [Pers. Nr.]             = LEI.BaPersonID,
+  [Name]                  = PRS.Name,
+  [Vorname]               = PRS.Vorname,
+  [Sozialhilfebezug ab]   = JOB.SozialhilfebezugAb,
+  [Sozialhilfebezug]      = dbo.fnLOVText('KaSozialhilfebezug', JOB.KaSozialhilfebezugCode),
+  [Geschlecht]            = dbo.fnLOVText('Geschlecht', PRS.GeschlechtCode),
+  [Alter]                 = PRS.[Alter],
+  [Geburtsdatum]          = PRS.Geburtsdatum,
+  [Nationalität]          = PRS.Nationalitaet,  
+  [Ausbildung]            = dbo.fnLOVText('KaVermittlBiBerufsbil', 
+                                (SELECT TOP 1 KaA.[KaVermittlBiBerufsbilCode]
+                                 FROM [KaAusbildung]  KaA
+                                   INNER JOIN FaLeistung LEIK ON LEIK.FaLeistungID = KaA.FaLeistungID                                                                                              
+                                 WHERE LEIK.BaPersonID = LEI.BaPersonID
+                                 ORDER BY KaA.KaAusbildungID DESC)),
+  [E-Mail]                = PRS.EMail,
+  [Anmeldung]             = dbo.fnLOVText('KaVermittlungBiBIPSiAnmeldung', JOB.AnmeldungCode),  
+  [Einsatz ab]            = (SELECT TOP 1 CASE WHEN EIN.Abschluss IS NULL THEN EIN.EinsatzVon ELSE NULL END
+                             FROM dbo.KaVermittlungVorschlag       VOR WITH (READUNCOMMITTED) 
+                               INNER JOIN dbo.KaVermittlungEinsatz EIN WITH (READUNCOMMITTED) ON EIN.KaVermittlungVorschlagID = VOR.KaVermittlungVorschlagID
+                             WHERE VOR.FaLeistungID = LEI.FaLeistungID
+                             ORDER BY EIN.EinsatzVon DESC),
+  [Zuständig]             = USR.NameVorname,
+  [Zuweiser]              = CASE WHEN JOB.ZuweiserID &lt; 0 
+                              THEN XUR.LastName + ISNULL(', ' + XUR.FirstName, '')
+                              ELSE OKO.Name + ISNULL(', ' + OKO.Vorname, '')
+                            END,
+  [Institution]           = CASE WHEN JOB.ZuweiserID &lt; 0 
+                              THEN ISNULL(XOU.ItemName, '')
+                              ELSE ISNULL(ORG.Name, '')
+                            END,  
+ [Vorschläge]            = CASE WHEN @auswSucheNach = 1 
+                              THEN -- Status heute
+                                (SELECT COUNT(*) 
+                                FROM dbo.KaVermittlungVorschlag VOR WITH (READUNCOMMITTED) 
+                                 WHERE VOR.FaLeistungID = LEI.FaLeistungID
+                                )
+                              ELSE -- Zeitraum
+                               (SELECT COUNT(*) 
+                                 FROM dbo.KaVermittlungVorschlag VOR WITH (READUNCOMMITTED) 
+                                 WHERE VOR.FaLeistungID IN (SELECT LEI1.FaLeistungID 
+                                                            FROM dbo.FaLeistung LEI1 WITH (READUNCOMMITTED) 
+                                                            WHERE LEI1.BaPersonID = LEI.BaPersonID
+                                                              AND LEI1.ModulID = 7
+                                                              AND LEI1.FaProzessCode = 711
+                                                              ---AND (LEI1.DatumBis IS NULL OR LEI1.DatumBis &gt;= {edtZeitraumVon})
+                                                              ---AND LEI1.DatumVon &lt;= {edtZeitraumBis}
+                                                           )
+                                   ---AND VOR.VorschlagErfasst BETWEEN {edtZeitraumVon} AND {edtZeitraumBis}
+                                )
+                            END,                            
+  [Einsätze]              = CASE WHEN @auswSucheNach = 1 
+                              THEN -- Status heute
+                                (SELECT COUNT(*)
+                                 FROM dbo.KaVermittlungVorschlag VOR WITH (READUNCOMMITTED) 
+                                  INNER JOIN dbo.KaVermittlungEinsatz EIN WITH (READUNCOMMITTED) ON EIN.KaVermittlungVorschlagID = VOR.KaVermittlungVorschlagID
+                                 WHERE VOR.FaLeistungID = LEI.FaLeistungID)
+                              ELSE -- Zeitraum
+                                (SELECT COUNT(*) 
+                                 FROM dbo.KaVermittlungVorschlag VOR WITH (READUNCOMMITTED) 
+                                  INNER JOIN dbo.KaVermittlungEinsatz EIN WITH (READUNCOMMITTED) ON EIN.KaVermittlungVorschlagID = VOR.KaVermittlungVorschlagID
+                                 WHERE VOR.FaLeistungID IN (SELECT LEI1.FaLeistungID 
+                                                            FROM dbo.FaLeistung LEI1 WITH (READUNCOMMITTED) 
+                                                            WHERE LEI1.BaPersonID = LEI.BaPersonID
+                                                              AND LEI1.ModulID = 7
+                                                              AND LEI1.FaProzessCode = 711
+                                                              ---AND (LEI1.DatumBis IS NULL OR LEI1.DatumBis &gt;= {edtZeitraumVon})
+                                                              ---AND LEI1.DatumVon &lt;= {edtZeitraumBis}
+                                                           )
+                                   ---AND (EIN.Abschluss IS NULL OR EIN.Abschluss &gt;= {edtZeitraumVon})
+                                   ---AND EIN.EinsatzVon &lt;= {edtZeitraumBis}
+                                )
+                            END,
+  [Abschluss]             = JOB.AbschlussDatum,
+  [Aus Vermittlung]       = CASE WHEN JOB.AustrittgrundCode = 1 THEN CONVERT(BIT, 1) ELSE CONVERT(BIT, 0) END,
+  [Aus Einsatz]           = CASE WHEN JOB.AustrittgrundCode = 2 THEN CONVERT(BIT, 1) ELSE CONVERT(BIT, 0) END,
+  [Abschlussgrund]        = dbo.fnLOVText('KaVermittlungDossierRetourAnSDGrund', JOB.DossierRetourAnSDGrundCode),
+  [Phase]                 = CASE 
+                              WHEN JOB.AustrittgrundCode = 1 THEN 'aus Vermittlung' 
+                              WHEN JOB.AustrittgrundCode = 2 THEN 'aus Einsatz' 
+                              ELSE ''
+                            END
+FROM dbo.FaLeistung                  LEI WITH (READUNCOMMITTED)
+  LEFT JOIN dbo.vwPerson             PRS ON PRS.BaPersonID = LEI.BaPersonID
+  LEFT JOIN dbo.KaJobtimal           JOB WITH (READUNCOMMITTED) ON JOB.FaLeistungID = LEI.FaLeistungID
+  LEFT JOIN dbo.vwUser               USR ON USR.UserID = LEI.UserID
+  LEFT JOIN dbo.BaInstitutionKontakt OKO WITH(READUNCOMMITTED) ON OKO.BaInstitutionKontaktID = JOB.ZuweiserID
+  LEFT JOIN dbo.XUser                XUR WITH(READUNCOMMITTED) ON XUR.UserID = -JOB.ZuweiserID
+  LEFT JOIN dbo.BaInstitution        ORG WITH(READUNCOMMITTED) ON ORG.BaInstitutionID = OKO.BaInstitutionID
+  LEFT JOIN dbo.XOrgUnit_User        OUU WITH(READUNCOMMITTED) ON OUU.UserID = -JOB.ZuweiserID
+                                                              AND (OUU.OrgUnitMemberCode = 1 OR OUU.OrgUnitMemberCode = 2)
+  LEFT JOIN dbo.XOrgUnit             XOU WITH(READUNCOMMITTED) ON XOU.OrgUnitID = OUU.OrgUnitID    
+  
+  
+  
+WHERE LEI.ModulID = 7
+  AND LEI.FaProzessCode = 711
+  AND (@auswStatusHeute = 3 -- aktiv und abgeschlossen
+    OR (@auswStatusHeute = 1 AND (LEI.DatumBis IS NULL OR LEI.DatumBis &gt;= GETDATE())) -- aktiv
+    OR (@auswStatusHeute = 2 AND LEI.DatumBis IS NOT NULL AND LEI.DatumBis &lt; GETDATE()) -- abgeschlossen
+  )
+  ---AND (LEI.DatumBis IS NULL OR LEI.DatumBis &gt;= {edtZeitraumVon})
+  ---AND LEI.DatumVon &lt;= {edtZeitraumBis}
+  ---AND LEI.UserID = {edtZustaendigKA.LookupID}
+ORDER BY PRS.NameVorname;
+</value>
+  </data>
+  <metadata name="qryVertrag.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>255, 17</value>
+  </metadata>
+  <data name="qryVertrag.SelectStatement" xml:space="preserve">
+    <value>DECLARE @auswStatusHeute INT
+
+SET @auswStatusHeute = 3 -- aktiv und abgeschlossen
+---SET @auswStatusHeute = {edtStatusHeute}
+
+SELECT	
+      BaPersonID$ = PRS.BaPersonID,
+	[Pers. Nr.] = PRS.BaPersonID,
+	[Name] = PRS.Name,
+	[Vorname] = PRS.Vorname,
+	[Einsatz ab] = EIN.EinsatzVon,
+	[Einsatzplatz] = EIP.Bezeichnung,
+	[Betrieb] = BET.BetriebName,
+	[Datum Vertrag] = VER.Datum,
+	[Vertrag-Typ] = dbo.fnLOVText('KaJobtimalVertragTyp', VER.KaJobtimalVertragTypCode)       
+FROM dbo.KaJobtimalVertrag VER WITH (READUNCOMMITTED)	
+	LEFT JOIN dbo.KaVermittlungVorschlag VOR WITH (READUNCOMMITTED) ON VOR.KaVermittlungVorschlagID = VER.KaVermittlungVorschlagID
+	LEFT JOIN dbo.KaVermittlungEinsatz EIN WITH (READUNCOMMITTED) ON EIN.KaVermittlungVorschlagID = VER.KaVermittlungVorschlagID
+	LEFT JOIN dbo.KaEinsatzplatz EIP WITH (READUNCOMMITTED) ON EIP.KaEinsatzplatzID = VOR.KaEinsatzplatzID
+	LEFT JOIN dbo.FaLeistung LEI WITH (READUNCOMMITTED) ON LEI.FaLeistungID = VOR.FaLeistungID
+	LEFT JOIN dbo.vwPerson PRS ON PRS.BaPersonID = LEI.BaPersonID
+	LEFT JOIN dbo.KaBetrieb BET WITH (READUNCOMMITTED) ON BET.KaBetriebID = EIP.KaBetriebID
+WHERE LEI.ModulID = 7
+AND LEI.FaProzessCode = 711
+AND (@auswStatusHeute = 3 -- aktiv und abgeschlossen
+	OR (@auswStatusHeute = 1 AND (LEI.DatumBis is null OR LEI.DatumBis &gt;= GetDate())) -- aktiv
+	OR (@auswStatusHeute = 2 AND LEI.DatumBis is not null AND LEI.DatumBis &lt; GetDate()) -- abgeschlossen
+	)
+---AND (LEI.DatumBis is null or LEI.DatumBis &gt;= {edtZeitraumVon})
+---AND LEI.DatumVon &lt;= {edtZeitraumBis}
+---AND LEI.UserID = {edtZustaendigKA.LookupID}
+ORDER BY PRS.NameVorname, VER.Datum DESC</value>
+  </data>
+  <metadata name="qryVorschlaege.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>119, 17</value>
+  </metadata>
+  <data name="qryVorschlaege.SelectStatement" xml:space="preserve">
+    <value>
+DECLARE @auswStatusHeute INT
+
+SET @auswStatusHeute = 3 -- aktiv und abgeschlossen
+---SET @auswStatusHeute = {edtStatusHeute}
+
+SELECT	BaPersonID$ = PRS.BaPersonID,	
+	Einsatzplatz = EIP.Bezeichnung,
+	[Pers. Nr.] = LEI.BaPersonID,
+	[Name] = PRS.Name,
+	[Vorname] = PRS.Vorname,
+	[Geschlecht] = dbo.fnLOVText('Geschlecht', PRS.GeschlechtCode),
+	[Alter] = PRS.[Alter],
+	[Geburtsdatum] = PRS.Geburtsdatum,
+	[Nationalität] = PRS.Nationalitaet,	
+	[Eröffnung Phase] = LEI.DatumVon,
+	[Vorschlag erfasst] = VOR.VorschlagErfasst,
+	[Interner Betrieb] = convert(bit, CASE WHEN BET.CharakterCode = 3 THEN 1 ELSE 0 END),
+	[Pensum] = EIN.Arbeitspensum,
+	[Leistungsfähigkeit] = EIN.Leistungsfaehigkeit,
+	[Einsatz ab] = EIN.EinsatzVon,
+	[Einsatzende] = EIN.Abschluss,
+	[durch] = dbo.fnLOVText('KaVermittlungEinsatzAbschlussDurch', EIN.BIBIPSIAbschlussDurchCode),
+	[Grund Einsatzende] = dbo.fnLOVText('KaJobtimalEinsatzendeGrund', EIN.SIAbschlussGrundCode),	
+	[Betrieb] = BET.BetriebName,
+	[Charakter] = dbo.fnLOVText('KaBetriebCharakter', BET.CharakterCode)
+FROM dbo.KaVermittlungVorschlag VOR WITH (READUNCOMMITTED)
+	LEFT JOIN dbo.KaVermittlungEinsatz EIN WITH (READUNCOMMITTED) ON EIN.KaVermittlungVorschlagID = VOR.KaVermittlungVorschlagID
+	LEFT JOIN dbo.KaEinsatzplatz EIP WITH (READUNCOMMITTED) ON EIP.KaEinsatzplatzID = VOR.KaEinsatzplatzID
+	LEFT JOIN dbo.FaLeistung LEI WITH (READUNCOMMITTED) ON LEI.FaLeistungID = VOR.FaLeistungID
+	LEFT JOIN dbo.vwPerson PRS ON PRS.BaPersonID = LEI.BaPersonID
+	LEFT JOIN dbo.KaBetrieb BET WITH (READUNCOMMITTED) ON BET.KaBetriebID = EIP.KaBetriebID	
+WHERE LEI.ModulID = 7
+AND LEI.FaProzessCode = 711
+AND (@auswStatusHeute = 3 -- aktiv und abgeschlossen
+	OR (@auswStatusHeute = 1 AND (LEI.DatumBis is null OR LEI.DatumBis &gt;= GetDate())) -- aktiv
+	OR (@auswStatusHeute = 2 AND LEI.DatumBis is not null AND LEI.DatumBis &lt; GetDate()) -- abgeschlossen
+	)
+---AND (LEI.DatumBis is null or LEI.DatumBis &gt;= {edtZeitraumVon})
+---AND LEI.DatumVon &lt;= {edtZeitraumBis}
+---AND LEI.UserID = {edtZustaendigKA.LookupID}
+ORDER BY PRS.NameVorname
+</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="edtZeitraumBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtZeitraumVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+</root>

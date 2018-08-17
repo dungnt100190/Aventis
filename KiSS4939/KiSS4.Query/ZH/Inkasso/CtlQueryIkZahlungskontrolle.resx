@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>DECLARE 
+  @Modul INT,
+  @Art INT,
+  @Per DATETIME
+
+-- Von Maske übernehmen: 
+SET @Modul = 4
+---set @Modul = {edtModul}
+SET @Art = 2
+---set @Art = {edtKontrolleFuer} -- 1 = Ratenplan, 2 = Forderungen
+SET @Per = CONVERT(DATETIME, GETDATE()) -- von Maskeneingabe
+---set @Per = {edtSaldoPer} -- von Maskeneingabe
+
+-- Zum Testen: 
+--set @Art = 1 -- 1 = Ratenplan, 2 = Forderungen
+--set @Per = convert(datetime, '20080808') -- von Maskeneingabe
+--set @Modul = 4
+
+SELECT
+
+LST.FaLeistungID,
+LST.FaProzessCode,
+
+FRDLeistung = FRDper.FaLeistungID,
+FRDRechtstitel_per = FRDper.IkRechtstitelID,
+FRD_ID = FRDper.IkForderungID,
+
+--POSein_einmalig = POSein.Einmalig,
+--POSRechtstitel_ein = POSein.IkRechtstitelID,
+--POSein_ID = POSein.IkPositionID,
+
+
+
+
+  -- Fall/Leistungsangaben
+  [Fall-Nr.] = LST.FaFallID,
+  FPersonID = F.BaPersonID,
+
+  -- Schuldnerangaben
+  [Pers.-Nr.] = P.BaPersonID,
+  [NameVorname] = P.NameVorname,
+  [Titel] = P.Titel,
+  [Strasse] = P.WohnsitzStrasse + ISNULL(' ' + P.WohnsitzHausNr, ''),
+  [Zusatz] = P.WohnsitzAdressZusatz,
+  [Postfach] = P.WohnsitzPostfach,
+  [PLZ, Ort] = P.WohnsitzPLZOrt,
+
+  -- Saldo
+  [Saldo per] = CASE  
+    -- bei Ratenplan wenn Dauer bis &lt; als Eingabedatum ist dann [Dauer bis Ratenplan]
+    WHEN @Art = 1 AND RP.DatumBis &lt; @Per THEN RP.DatumBis 
+    ELSE @Per -- Aus Selektionsmaske
+  END,
+
+  -- Forderungen
+--  POS.Einmalig,
+--  POS.IkForderungEinmaligCode,
+--  FRD.IkForderungPeriodischCode,
+
+  [Forderungstitel] = CASE 
+    WHEN @Art = 1 THEN '[Ratenplan]'
+    --WHEN @Art = 2 AND POS.Einmalig = 1 THEN LovFTE.Text
+    ELSE LovFTP.Text
+  END,
+/*
+  [Forderungen] = CONVERT(MONEY, CASE 
+    WHEN @Art = 1 THEN -- bei Ratenplan  
+      RP.BetragProMonat*(CONVERT(INT, DATEDIFF(MONTH, RP.DatumVon, RP.DatumBis) + 1))
+    ELSE 
+    (
+      SELECT SUM(K.Betrag) FROM dbo.KbBuchung K WITH(READUNCOMMITTED)
+      WHERE K.ModulID = @Modul
+      AND K.FaLeistungID = LST.FaLeistungID
+      AND K.Schuldner_BaPersonID = LST.SchuldnerBaPersonID
+      AND K.ValutaDatum &lt; CASE  
+        -- bei Ratenplan wenn Dauer bis &lt; als Eingabedatum ist dann [Dauer bis Ratenplan]
+        WHEN @Art = 1 and RP.DatumBis &lt; @Per THEN RP.DatumBis 
+        ELSE @Per -- Aus Selektionsmaske 
+      END
+      AND K.IkForderungArtCode in (1,2,3,4,30)
+    )
+  END ),
+
+  -- Zahlungen
+  [Zahlungen] = (
+    --SELECT SUM(Z.Betrag) FROM dbo.fnKbBuchung_Zahlungen(@Art) ZR
+    --WHERE ZR.RatenplanID = RP.RatenplanID 
+      --AND ZR.FaLeistung = 
+  --)
+
+    CASE WHEN @Art = 1 THEN 
+    (
+      -- Bei Ratenplan alle Zahlungen suchen, die zu den Forderungen des Ratenplanes gehören.
+      -- Bei Zahlungen jeweils immer alle Daten anzeigen.
+      SELECT SUM(OP.Betrag) FROM dbo.KbOPAusgleich OP WITH(READUNCOMMITTED)
+      INNER JOIN dbo.KbBuchung Z WITH(READUNCOMMITTED) ON Z.KbBuchungID = OP.OpBuchungID
+      WHERE Z.ModulID = @Modul
+      AND Z.FaLeistungID = LST.FaLeistungID
+      AND Z.Schuldner_BaPersonID = LST.SchuldnerBaPersonID
+      AND Z.IkForderungArtCode in (1,2,3,4,30)
+      AND (
+        -- nach allen einmaligen Forderungen suchen, welche im Ratenplan selektiert sind
+        EXISTS(
+          SELECT top 1 RPF.IkPositionID 
+          FROM dbo.IkRatenplanForderung RPF WITH(READUNCOMMITTED)
+          WHERE RPF.IkRatenplanID = RP.IkRatenplanID
+            AND RPF.IkPositionID IS NOT NULL
+            AND RPF.IkPositionID = Z.IkPositionID
+        )
+        -- nach allen periodischen Forderungen suchen, welche im Ratenplan selektiert sind
+        OR EXISTS(
+          SELECT TOP 1 RPF.IkForderungID 
+          FROM dbo.IkRatenplanForderung RPF WITH(READUNCOMMITTED)
+          INNER JOIN dbo.IkForderung F WITH (READUNCOMMITTED) ON F.IkForderungID = RPF.IkForderungID
+          INNER JOIN dbo.IkForderungPosition Q WITH (READUNCOMMITTED) ON Q.IkForderungID = RPF.IkForderungID
+          WHERE RPF.IkRatenplanID = RP.IkRatenplanID
+            AND RPF.IkForderungID IS NOT NULL
+            AND Q.IkPositionID = Z.IkPositionID
+        )
+      )
+    )
+    WHEN @Art = 2 AND POS.IkPositionID IS NOT NULL THEN (
+      -- nicht Ratenplan, einmalige Forderungen: Summe aller Zahlungen 
+      -- TODO
+      SELECT SUM(OP.Betrag) FROM dbo.KbOPAusgleich OP WITH(READUNCOMMITTED)
+      INNER JOIN dbo.KbBuchung Z WITH(READUNCOMMITTED) ON Z.KbBuchungID = OP.OpBuchungID
+      WHERE Z.IkPositionID = POS.IkPositionID
+      AND Z.Schuldner_BaPersonID = LST.SchuldnerBaPersonID
+    )
+    ELSE (
+      -- nicht Ratenplan, periodische Forderungen: Summe aller Zahlungen 
+      -- TODO
+      SELECT SUM(OP.Betrag) FROM dbo.KbOPAusgleich OP WITH(READUNCOMMITTED)
+      INNER JOIN dbo.KbBuchung Z WITH(READUNCOMMITTED) ON Z.KbBuchungID = OP.OpBuchungID
+      WHERE Z.IkPositionID IN (
+        SELECT P.IkPositionID FROM dbo.IkPosition P WITH (READUNCOMMITTED) 
+        LEFT JOIN dbo.IkForderungPosition FP WITH (READUNCOMMITTED) ON FP.IkPositionID = P.IkPositionID
+      )
+      AND Z.Schuldner_BaPersonID = LST.SchuldnerBaPersonID
+    )
+  END ),
+  [Saldo] = 0, --[Forderungen] - [Zahlungen],
+
+  -- letzte Zahlung aus KbBuchung
+  [Betrag letzte Zahlg.] = KLZ.Betrag,
+  [Datum letzte Zahlg.] = KLZ.ValutaDatum,
+  [Tage letzte Zahlg.] = CONVERT(INT, DATEDIFF(DAY, KLZ.ValutaDatum, GETDATE())),
+  [per./ein.] = CASE 
+    WHEN @Art = 1 THEN NULL
+    WHEN @Art = 2 AND POS.Einmalig = 1 THEN 'E'
+    ELSE 'P'
+  END,
+*/
+
+  -- Angaben Ratenplan
+  [Ratenplan] = RP.Bezeichnung,
+  [Vereinbarung vom] = RP.VereinbarungVom,
+  [Vereinbarung] = LovRP.Text,
+  [Rate pro Monat] = RP.BetragProMonat,
+  [RP Datum von] = RP.DatumVon,
+  [RP Datum bis] = RP.Datumbis,
+  [RP Monate] = CONVERT(INT, DATEDIFF(MONTH, RP.DatumVon, RP.DatumBis) + 1)
+
+  -- VU / UB Fall
+/*
+  [Unterstützg. Fall] = UVL.FaFallID,
+  [Unterstützg. Name] = UVP.NameVorname,
+  [Unterstützg. Geburt] = UVP.Geburtsdatum
+*/
+FROM dbo.FaLeistung LST WITH(READUNCOMMITTED)
+LEFT JOIN dbo.FaFall F WITH(READUNCOMMITTED) ON F.FaFallID = LST.FaFallID
+LEFT JOIN dbo.vwPerson P ON P.BaPersonID = LST.SchuldnerBaPersonID
+
+-- Suche über Ratenplan
+LEFT JOIN dbo.IkRatenplan RP WITH(READUNCOMMITTED) ON @Art = 1 AND RP.FaLeistungID = LST.FaLeistungID
+
+-- Suche über Forderungen, ausgehend von Leistung
+-- eine einmalige Forderung soll eine Zeile liefern
+-- eine periodeisch Forderung soll eine Zeile liefern
+LEFT JOIN dbo.IkRechtstitel RTL WITH (READUNCOMMITTED) ON @Art = 2 AND RTL.FaLeistungID = LST.FaLeistungID AND EXISTS(
+  SELECT F.IkForderungID FROM dbo.IkForderung F WITH (READUNCOMMITTED)
+  WHERE F.IkRechtstitelID = RTL.IkRechtstitelID
+    AND F.FaLeistungID IS NULL
+  UNION ALL
+  SELECT P.IkPositionID FROM dbo.IkPosition P WITH (READUNCOMMITTED)
+  WHERE P.IkRechtstitelID = RTL.IkRechtstitelID
+    AND P.FaLeistungID IS NULL
+)
+LEFT JOIN dbo.IkForderung FRDper WITH (READUNCOMMITTED) ON @Art = 2 AND FRDper.IkRechtstitelID = RTL.IkRechtstitelID --AND RTL.FaLeistungID IS NULL
+
+
+--LEFT JOIN dbo.IkPosition POSein WITH (READUNCOMMITTED) ON @Art = 2 AND POSein.IkRechtstitelID = RTL.IkRechtstitelID AND POSein.Einmalig = 1 
+
+/*
+LEFT JOIN dbo.IkForderung FRD WITH (READUNCOMMITTED) ON @Art = 2 AND (
+  (FRD.FaLeistungID = RTL.FaLeistungID AND RTL.IkRechtstitelID IS NULL) OR
+  (FRD.FaLeistungID = LST.FaLeistungID AND RTL.FaLeistungID IS NULL)
+)
+LEFT JOIN dbo.IkPosition POS WITH (READUNCOMMITTED) ON @Art = 2 AND POS.FaLeistungID = ISNULL(FRD.FaLeistungID, RTL.FaLeistungID) AND POS.Einmalig = 1
+
+-- Suche letzte Zahlung
+LEFT JOIN dbo.KbBuchung KLZ WITH (READUNCOMMITTED) ON KLZ.KbBuchungID = CASE 
+  WHEN @Art = 1 THEN 
+  (
+    SELECT TOP 1 OP.AusgleichBuchungID 
+    FROM dbo.KbOPAusgleich OP WITH(READUNCOMMITTED)
+    LEFT JOIN dbo.KbBuchung KF WITH(READUNCOMMITTED) ON KF.KbBuchungID = OP.OPBuchungID
+    WHERE KF.ModulID = @Modul
+      AND KF.FaLeistungID = LST.FaLeistungID
+      AND KF.Schuldner_BaPersonID = LST.SchuldnerBaPersonID
+      AND KF.IkForderungArtCode in (1,2,3,4,30)
+      AND (
+        -- nach allen einmaligen Forderungen suchen, welche im Ratenplan selektiert sind
+        EXISTS(
+          SELECT top 1 RPF.IkPositionID 
+          FROM dbo.IkRatenplanForderung RPF WITH(READUNCOMMITTED)
+          WHERE RPF.IkRatenplanID = RP.IkRatenplanID
+            AND RPF.IkPositionID IS NOT NULL
+            AND RPF.IkPositionID = KF.IkPositionID
+        )
+        -- nach allen periodischen Forderungen suchen, welche im Ratenplan selektiert sind
+        OR EXISTS(
+          SELECT TOP 1 RPF.IkForderungID 
+          FROM dbo.IkRatenplanForderung RPF WITH(READUNCOMMITTED)
+          INNER JOIN dbo.IkForderung F WITH (READUNCOMMITTED) ON F.IkForderungID = RPF.IkForderungID
+          INNER JOIN dbo.IkForderungPosition Q WITH (READUNCOMMITTED) ON Q.IkForderungID = RPF.IkForderungID
+          WHERE RPF.IkRatenplanID = RP.IkRatenplanID
+            AND RPF.IkForderungID IS NOT NULL
+            AND Q.IkPositionID = KF.IkPositionID
+        )
+      )
+
+  )
+END
+*/
+
+-- Suche VU Fall
+--LEFT JOIN dbo.FaLeistung UVL WITH(READUNCOMMITTED) ON UVL.FaFallID = LST.VUFaFallID
+--LEFT JOIN dbo.vwPerson UVP ON UVP.BaPersonID = UVL.BaPersonID
+
+-- Suche LOVs
+LEFT JOIN dbo.XLOVCode LovRP WITH(READUNCOMMITTED) 
+  ON LovRP.LOVName = 'IkRatenplanVereinbarung' AND LovRP.Code = RP.IkRatenplanVereinbarungCode
+LEFT JOIN dbo.XLOVCode LovFTE WITH(READUNCOMMITTED) 
+  ON LovFTE.LOVName = 'IkForderungEinmalig' AND LovFTE.Code = 0 --POS.IkForderungEinmaligCode
+LEFT JOIN dbo.XLOVCode LovFTP WITH(READUNCOMMITTED) 
+  ON LovFTP.LOVName = 'IkForderungPeriodisch' AND LovFTP.Code = 0 --FRD.IkForderungPeriodischCode
+
+WHERE LST.ModulID = @Modul 
+  AND LST.FaProzessCode IN (301,302,304,405,408,409,410)
+  AND (@Art = 2 OR RP.IkRatenplanID IS NOT NULL)
+
+and F.FaFallID = 51042
+
+
+
+/*
+Walter:
+- Es wird über KbBuchung gesucht, also egal, ob einmalige oder per. Forderungen
+  * Suche Forderungen, Feld Forderungen:
+    bei einmaligen jeweils eine Zeile
+    über ganze Periode eine zeile pro periode Forderung (über IkPosition)
+    Zahlungen: über ganze Periode eine zeile pro periode Forderung (über KbBuchung)
+
+- wenn eine Person meherere Ratenpläne hat, soll Person nur einmal oder zweimal erscheinen?
+  * pro Ratenplan soll es eine Zeile geben
+
+- Periodisch/Einmalig (P oder E) nicht möglich, wenn nicht einzelne Positionen angezeigt werden
+
+- Letzte Zahlung innerhalb Suche oder über alle Daten?
+  * auch nach Saldo per, über alles
+  * Zahlungen allgemein immer alle anzeigen
+*/</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>17, 17</value>
+  </data>
+  <data name="xDocument.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAF1JREFUOE9jZAAC
+        Y2Pj/yAaGzh79iwjhjhIw///MzGwmJjYfxDGqSEtjeE/MgYpBhmEoYmQDSANKM7GpQHZmVg1oDsJxgdp
+        pI4N2EIKJjbqJLIiDqSJEMaVovGKAwBnM3PWBP8PfwAAAABJRU5ErkJggg==
+</value>
+  </data>
+</root>

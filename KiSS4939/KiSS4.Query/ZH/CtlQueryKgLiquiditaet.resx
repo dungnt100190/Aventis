@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>DECLARE @OrgGruppeID int
+SET @OrgGruppeID = NULL
+--- SET @OrgGruppeID = {ctlOrgUnitTeamUser.SucheGruppe}
+
+DECLARE @TeamID int
+SET @TeamID = NULL
+--- SET @TeamID = {ctlOrgUnitTeamUser.SucheTeam}
+
+DECLARE @ValutaDatum Datetime
+SET @ValutaDatum = NULL
+--- SET @ValutaDatum = {edtSucheValutaBis}
+
+select USR.Sozialzentrum,
+       USR.OrgUnit,
+       USR.NameVorname,
+       Tage             = datediff(d,GetDate(),BUC.ValutaDatum),
+       Doc              = case when exists (select 1 from KgDokument where KgPositionID = BUC.KgPositionID) then 'x' else '' end,
+       Konto            = KTOS.KontoNr + ' ' + KTOS.KontoName,
+       KontoNr          = KTOS.KontoNr,
+       Kreditor         = KRE.Kreditor + CHAR(13) + CHAR(10) +
+                          KRE.ZusatzInfo,
+       KreditorLinie    = KRE.Kreditor + isnull(KRE.InstitutionAdresse,KRE.PersonAdresse) + KRE.Zahlungsweg,
+       Mandant          = PRS.NameVorname,
+       BaPersonID       = PRS.BaPersonID,
+       Zahlart          = ART.Text,
+       Sel              = case when BUC.KgBuchungStatusCode in (2,4) then convert(bit,0) end,
+       FallBaPersonID   = FAL.BaPersonID,
+       JumpToMBPfad     = 'CtlKgLeistung' + convert(varchar, LEI.FaLeistungID) +
+                          '\Masterbudget' + convert(varchar, BDG.KgMasterBudgetID) + 
+                          '\Monatsbudget' + convert(varchar, BDG.KgBudgetID),
+       ZKBSaldoKiss     = (select isNull(Vorsaldo,0)
+                           from   KgKonto
+                           where  KgPeriodeID = ISNULL(PER_AKT.KgPeriodeID, PER.KgPeriodeID) and
+                                  KgKontoartCode = 1 ) -- Kontokorrent
+                           +
+                          (select isnull(sum(case when B.SollKtoNr = K.KontoNr then B.Betrag else -B.Betrag end),0)
+                           from   KgBuchung B
+                                  inner join KgKonto K on K.KgPeriodeID = ISNULL(PER_AKT.KgPeriodeID, PER.KgPeriodeID) and
+                                                          K.KgKontoartCode = 1 -- Kontokorrent
+                           where  B.KgPeriodeID = ISNULL(PER_AKT.KgPeriodeID, PER.KgPeriodeID)
+                              AND B.Valutadatum &lt;= @ValutaDatum
+                              AND (B.SollKtoNr = K.KontoNr or B.HabenKtoNr = K.KontoNr)),
+       ZKBSaldoMT940     = $0.00, --wird aus Performance-Gründen anschliessend angereichert
+       PendenteBarbelege = (SELECT ISNULL(SUM(Betrag),0)
+                            FROM dbo.KgBuchung BUC WITH (READUNCOMMITTED)
+                              INNER JOIN dbo.KgPeriode PER WITH (READUNCOMMITTED) ON PER.KgPeriodeID = BUC.KgPeriodeID                                   
+                            WHERE PER.FaLeistungID = LEI.FaLeistungID
+                              AND KgAuszahlungsArtCode = 103 -- bar 
+                              AND KgBuchungStatusCode = 3 AND TransferDatum IS NOT NULL -- zu PSCD transferiert
+                              AND BarbezugDatum IS NOT NULL),
+       TotalEinzahlungen = (select isNull(sum(Betrag),0)
+                            from   KgZahlungseingang
+                            where  BaPersonID = LEI.BaPersonID and
+                                   Ausgeglichen = 0 and
+                                   (KgZahlungseingangArtCode between 300 and 399 or 
+                                    KgZahlungseingangArtCode = 100 or 
+                                    KgZahlungseingangArtCode is null)),
+       ZahlwegDatumVon   = ZAH.DatumVon,
+       ZahlwegDatumBis   = ZAH.DatumBis,
+       BUC.*,
+       FallBaPersonID$ = FAL.BaPersonID,
+       JumpToMBPfad$   = case when BDG.KgMasterBudgetID is null
+                         then 'CtlKgLeistung' + convert(varchar, LEI.FaLeistungID) +
+                              '\Masterbudget' + convert(varchar, BDG.KgBudgetID)
+                         else 'CtlKgLeistung' + convert(varchar, LEI.FaLeistungID) +
+                              '\Masterbudget' + convert(varchar, BDG.KgMasterBudgetID) + 
+                              '\Monatsbudget' + convert(varchar, BDG.KgBudgetID)
+                         end,
+       TotalAuszahlungen = CAST(NULL AS MONEY),
+       Saldovorschau     = CAST(NULL AS MONEY), 
+       Achtung           = CAST('' AS VARCHAR(10))                         
+into   #tmpZahllauf
+from   KgBuchung BUC
+       left  join KgPosition    POS  on POS.KgPositionID = BUC.KgPositionID
+       left  join KgBudget      BDG  on BDG.KgBudgetID = POS.KgBudgetID
+       inner join KgPeriode     PER  on PER.KgPeriodeID = BUC.KgPeriodeID
+       OUTER APPLY (SELECT KgPeriodeID
+                    FROM KgPeriode
+                    WHERE FaLeistungID = PER.FaLeistungID
+                      AND @ValutaDatum BETWEEN PeriodeVon AND PeriodeBis) PER_AKT
+       inner join FaLeistung    LEI  on LEI.FaLeistungID = PER.FaLeistungID
+       inner join FaFall        FAL  on FAL.FaFallID = LEI.FaFallID
+       inner join KgKonto       KTOS on KTOS.KgPeriodeID = BUC.KgPeriodeID and
+                                        KTOS.KontoNr = BUC.SollKtoNr -- Aufwandkonto
+       inner join KgKonto       KTOH on KTOH.KgPeriodeID = BUC.KgPeriodeID and
+                                        KTOH.KontoNr = BUC.HabenKtoNr and
+                                        KTOH.KgKontoArtCode = 3 -- Kreditorkonto
+       inner join vwPersonSimple PRS  on PRS.BaPersonID = LEI.BaPersonID
+       left  join vwKreditor    KRE  on KRE.BaZahlungswegID = BUC.BaZahlungswegID
+       left  join XLOVCode      ART  on ART.LOVName = 'KgAuszahlungsArt' and
+                                        ART.Code = BUC.KgAuszahlungsArtCode
+       left  join BaZahlungsweg ZAH  on ZAH.BaZahlungswegID = PER.BaZahlungswegID
+       inner join vwUser        USR  on USR.UserID = LEI.UserID
+where ((@OrgGruppeID IS NULL AND @TeamID IS NULL) OR USR.OrgUnitID IN (SELECT OrgUnitID FROM dbo.fnOrgUnitsOfTeam(@OrgGruppeID,@TeamID)))
+---  and LEI.UserID = {ctlOrgUnitTeamUser.SucheUserID.LookupID}
+and  BUC.KgBuchungStatusCode in (2,4,5) -- freigegeben + ausgedruckt +  Zahlauftrag fehlerhaft
+and  BUC.ValutaDatum is not null
+--- and BUC.ValutaDatum &lt;= {edtSucheValutaBis}
+--- and BUC.KgAuszahlungsArtCode = {edtSucheAuszahlungsArt}
+order by BUC.ValutaDatum, Mandant
+
+--MT940-Saldo anreichern
+UPDATE TMP
+  SET ZKBSaldoMT940 = ISNULL(SMT.Saldo, $0.00)
+FROM #tmpZahllauf TMP
+  OUTER APPLY (SELECT TOP 1 Saldo = SMT1.Saldo + ISNULL(BUC.Betrag, 0), Stichtag = SMT1.Stichtag
+                 FROM dbo.SstMT940Saldo SMT1 WITH (READUNCOMMITTED)
+                   OUTER APPLY (SELECT Betrag = SUM(KGZ.Betrag)
+                                FROM dbo.KgZahlungseingang KGZ WITH (READUNCOMMITTED)
+                                WHERE KGZ.PscdKontoKlient = SMT1.Kontonummer
+                                  AND KGZ.PscdKontoauszug &gt;= SMT1.PscdKontoauszugID --wir benötigen die Buchungen des Kontoauszugs (End-Saldo) und aller folgenden Kontoauszüge
+                                  AND (KGZ.Datum &lt;= @ValutaDatum OR @ValutaDatum IS NULL)) BUC  --solange das ValutaDatum der Buchungen des Kontoauszugs &lt;= dem Stichtag ist
+                 WHERE SMT1.BaPersonID = TMP.BaPersonID
+                   AND (SMT1.Stichtag &lt;= @ValutaDatum OR @ValutaDatum IS NULL)
+                 ORDER BY SMT1.Stichtag DESC, SMT1.Created DESC) SMT
+
+UPDATE TMP
+SET TotalAuszahlungen = (select sum(Betrag) from #tmpZahllauf where BaPersonID = TMP.BaPersonID)
+FROM #tmpZahllauf TMP 
+
+UPDATE #tmpZahllauf
+SET Saldovorschau = ISNULL(ZKBSaldoKiss, ZKBSaldoMT940) + 
+                    ISNULL(TotalEinzahlungen, 0) - 
+                    ISNULL(PendenteBarbelege, 0) - 
+                    ISNULL(TotalAuszahlungen, 0)
+
+UPDATE #tmpZahllauf
+SET Achtung       = CASE WHEN Saldovorschau &lt; 0 THEN '!' ELSE '' END +
+                    CASE WHEN GETDATE() NOT BETWEEN ISNULL(ZahlwegDatumVon, GETDATE()) and 
+                              ISNULL(ZahlwegDatumBis, GETDATE()) THEN '?' ELSE '' END
+
+-- Output
+SELECT * FROM #tmpZahllauf
+WHERE Saldovorschau &lt; 0
+
+drop table #tmpZahllauf</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="edtSucheValutaBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtErfassungDatum.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+</root>

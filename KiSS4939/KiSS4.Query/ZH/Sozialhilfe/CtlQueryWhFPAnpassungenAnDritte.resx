@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>-- angepqasste FP-Positionen Miete und KVG mit Zahlweg Dritte
+declare @BgPosition table (BgPositionID int)
+
+insert @BgPosition
+select BPO.BgPositionID
+from   BgPosition BPO
+       inner join BgPosition         BPO2 on BPO2.BgPositionID_CopyOf = BPO.BgPositionID  and BPO2.BgBudgetID = BPO.BgBudgetID
+       inner join BgBudget           BDG  on BDG.BgBudgetID = BPO.BgBudgetID
+       left  join BgAuszahlungPerson AUP  on AUP.BgPositionID = BPO.BgPositionID
+       left  join BaZahlungsweg      ZAH  on ZAH.BaZahlungswegID = AUP.BaZahlungswegID
+where  BDG.Masterbudget = 1 and
+       ZAH.BaInstitutionID is not null
+
+select distinct
+       SZ        = USR.Sozialzentrum,
+       OE        = USR.OrgUnit,
+       MA        = USR.NameVorname,
+       FallNr    = LEI.FaFallID, 
+       Klient    = PRS.NameVorname,
+       FP        = FPL.BgFinanzplanID,
+       Budget    = BDG.BgBudgetID,
+       Monat     = dbo.fnXKurzMonat(BDG.Monat), 
+       Text      = BPO.Buchungstext,
+       Jahr      = BDG.Jahr,
+       Datum1    = BPO.DatumVon,
+       Betrag1   = BPO.Betrag - BPO.Reduktion - BPO.Abzug,
+       Dritte1   = convert(bit,case when ZAH.BaInstitutionID is not null then 1 else 0 end),
+       Kreditor1 = INS.Name,
+       Status1   = dbo.fnLOVText('BgBewilligungStatus',BPO.BgBewilligungStatusCode),
+       Datum2    = BPO2.DatumVon,
+       Betrag2   = BPO2.Betrag - BPO2.Reduktion - BPO2.Abzug,
+       Status2   = dbo.fnLOVText('BgBewilligungStatus',BPO2.BgBewilligungStatusCode),
+       Dritte2   = convert(bit,case when ZAH2.BaInstitutionID is not null then 1 else 0 end),
+       Kreditor2 = isNull(INS2.Name,PRS2.Name + isnull(', ' + PRS2.Vorname,'')),
+       [MoBu Pos] = (select count(*) 
+                     from   BgPosition P
+                            inner join BgBudget B on B.BgBudgetId = P.BgBudgetID
+                     where  P.BgPositionID_CopyOf = BPO2.BgPositionID and
+                            B.Masterbudget = 0),
+       [ausbez.]  = (select count(distinct BUC.KbBuchungID) 
+                     from   BgPosition P
+                            inner join KbBuchungKostenart BUK on BUK.BgPositionID = P.BgPositionID
+                            inner join KbBuchung          BUC on BUC.KbBuchungID = BUK.KbBuchungID
+                     where  P.BgPositionID_CopyOf = BPO2.BgPositionID and
+                            BUC.KbBuchungStatusCode in (3,6,9)),
+       FallBaPersonID$ = FAL.BaPersonID,
+       BgFinanzplanID$ = FPL.BgFinanzplanID,
+       BgPositionID$   = BPO2.BgPositionID,
+       BgGruppeValue1$ = GRP.Value1
+from   @BgPosition T
+       inner join BgPosition         BPO  on BPO.BgPositionID = T.BgPositionID
+       inner join BgPosition         BPO2 on BPO2.BgPositionID_CopyOf = BPO.BgPositionID  and BPO2.BgBudgetID = BPO.BgBudgetID
+       inner join BgBudget           BDG  on BDG.BgBudgetID = BPO.BgBudgetID
+       left  join BgFinanzplan       FPL  on FPL.BgFinanzplanID = BDG.BgFinanzplanID
+       left  join FaLeistung         LEI  on LEI.FaLeistungID = FPL.FaLeistungID
+       inner join FaFall             FAL  on FAL.FaFallID = LEI.FaFallID
+       inner join vwPerson           PRS  on PRS.BaPersonID = LEI.BaPersonID
+       inner join vwUser             USR  on USR.UserID = LEI.UserID
+       left  join BgAuszahlungPerson AUP  on AUP.BgPositionID = BPO.BgPositionID
+       left  join BaZahlungsweg      ZAH  on ZAH.BaZahlungswegID = AUP.BaZahlungswegID
+       left  join BaInstitution      INS  on INS.BaInstitutionID = ZAH.BaInstitutionID
+       left  join BgAuszahlungPerson AUP2 on AUP2.BgPositionID = BPO2.BgPositionID
+       left  join BaZahlungsweg      ZAH2 on ZAH2.BaZahlungswegID = AUP2.BaZahlungswegID
+       left  join BaInstitution      INS2 on INS2.BaInstitutionID = ZAH2.BaInstitutionID
+       left  join vwPerson           PRS2 on PRS2.BaPersonID = ZAH2.BaPersonID
+       left  join BgPositionsart     POA  on POA.BgPositionsartID = BPO2.BgPositionsartID
+       left  join XLOVCode           GRP  on GRP.LOVName = 'BgGruppe' AND
+                                             GRP.Code = POA.BgGruppeCode
+where  BDG.Masterbudget = 1</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>17, 17</value>
+  </data>
+  <data name="xDocument.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAF1JREFUOE9jZAAC
+        Y2Pj/yAaGzh79iwjhjhIw///MzGwmJjYfxDGqSEtjeE/MgYpBhmEoYmQDSANKM7GpQHZmVg1oDsJxgdp
+        pI4N2EIKJjbqJLIiDqSJEMaVovGKAwBnM3PWBP8PfwAAAABJRU5ErkJggg==
+</value>
+  </data>
+</root>

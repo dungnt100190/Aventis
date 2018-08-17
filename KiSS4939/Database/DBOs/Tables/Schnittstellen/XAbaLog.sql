@@ -1,0 +1,30 @@
+CREATE TABLE [dbo].[XAbaLog](
+	[AbaLogID] [int] IDENTITY(1,1) NOT NULL,
+	[UserID] [int] NOT NULL,
+	[LogDate] [datetime] NOT NULL,
+	[SchnittstellenCode] [int] NULL,
+	[ParameterIn] [text] NULL,
+	[ParameterOut] [text] NULL,
+	[ExceptionMsg] [text] NULL,
+	[Remark] [text] NULL,
+ CONSTRAINT [PK_Schnittstellen_log] PRIMARY KEY CLUSTERED 
+(
+	[AbaLogID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [DATEN2]
+) ON [DATEN2] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+
+CREATE NONCLUSTERED INDEX [IX_XAbaLog_UserID] ON [dbo].[XAbaLog] 
+(
+	[UserID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [DATEN2]
+GO
+
+ALTER TABLE [dbo].[XAbaLog]  WITH CHECK ADD  CONSTRAINT [FK_Schnittstellen_log_XUser] FOREIGN KEY([UserID])
+REFERENCES [dbo].[XUser] ([UserID])
+GO
+
+ALTER TABLE [dbo].[XAbaLog] CHECK CONSTRAINT [FK_Schnittstellen_log_XUser]
+GO

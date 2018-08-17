@@ -1,0 +1,540 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{359FD7B4-D75A-45D4-AB77-8EBDDE41F339}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kiss.UI.Controls</RootNamespace>
+    <AssemblyName>Kiss.UI.Controls</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Mvvm.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    </Reference>
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Core.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Printing.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    </Reference>
+    <Reference Include="Interop.Excel2000, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Kiss.UserInterface.View, Version=4.6.30.514, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Build\Debug\System.Windows.Interactivity.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WPFLocalizeExtension">
+      <HintPath>..\packages\WpfLocalizeExtension.2.3\lib\net35\WPFLocalizeExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="XAMLMarkupExtensions, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\XAMLMarkupExtensions.1.2\lib\net40\XAMLMarkupExtensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusyPanel.cs" />
+    <Compile Include="ColumnDefinition.cs" />
+    <Compile Include="Bindings\SwitchBinding.cs" />
+    <Compile Include="ComplexBindingHelper.cs" />
+    <Compile Include="ControlResourceKeyExtension.cs" />
+    <Compile Include="ControlsHelper.cs" />
+    <Compile Include="Converter\BaseConverter.cs" />
+    <Compile Include="Converter\Bool2DefaultBooleanConverter.cs" />
+    <Compile Include="Converter\Betrag2AktivBoolConverter.cs" />
+    <Compile Include="Converter\Bool2CursorConverter.cs" />
+    <Compile Include="Converter\ColorPickConverter.cs" />
+    <Compile Include="Converter\DatabindingDebuggerConverter.cs" />
+    <Compile Include="Converter\DefaultBooleanToBooleanConverter.cs" />
+    <Compile Include="Converter\EnumLocalizationConverter.cs" />
+    <Compile Include="Converter\MultilineRowTextConverter.cs" />
+    <Compile Include="Converter\NullIdConverter.cs" />
+    <Compile Include="Converter\KbuStatusBeleg2BoolConverter.cs" />
+    <Compile Include="Converter\KbuStatusBeleg2ColorConverter.cs" />
+    <Compile Include="Converter\NullToCollapsedConverter.cs" />
+    <Compile Include="Converter\ObjectStateAdded2TrueConverter.cs" />
+    <Compile Include="Converter\ObjectStateAddedToFalseConverter.cs" />
+    <Compile Include="Converter\PostkontoNrFormattingConverter.cs" />
+    <Compile Include="Converter\RedIfNegativeConverter.cs" />
+    <Compile Include="Converter\True2GreenConverter.cs" />
+    <Compile Include="Converter\True2XConverter.cs" />
+    <Compile Include="DynamicColumnBindingHelper.cs" />
+    <Compile Include="KissPLZOrt.cs" />
+    <Compile Include="DateScale.xaml.cs">
+      <DependentUpon>DateScale.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DateScalePeriod.cs" />
+    <Compile Include="GridColumnSelection.cs" />
+    <Compile Include="Helper\CommitHelper.cs" />
+    <Compile Include="Helper\PopupHelper.cs" />
+    <Compile Include="KissGotoFall.xaml.cs">
+      <DependentUpon>KissGotoFall.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KissTextEditMultiline.cs" />
+    <Compile Include="LocalResources\ExportToExcelProviderRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExportToExcelProviderRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LocalResources\SearchControlRes.Designer.cs">
+      <DependentUpon>SearchControlRes.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="LocalResources\SearchParamsTextRes.Designer.cs">
+      <DependentUpon>SearchParamsTextRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="LocalResources\ValidationSummaryRes.Designer.cs">
+      <DependentUpon>ValidationSummaryRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="LocalResources\ValidationResultConverterRes.Designer.cs">
+      <DependentUpon>ValidationResultConverterRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SearchControl.xaml.cs">
+      <DependentUpon>SearchControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GridColumnMultiLookUp.cs" />
+    <Compile Include="Helper\KissGridLocalizer.cs" />
+    <Compile Include="Helper\MultiLookUpItemsProvider.cs" />
+    <Compile Include="KissButtonSearchBox.cs" />
+    <Compile Include="KissCheckedLookupEdit.cs" />
+    <Compile Include="KissCheckedLookupItem.cs" />
+    <Compile Include="KissComplexControl.cs" />
+    <Compile Include="KissDateRangeSlider.cs" />
+    <Compile Include="GridColumnButton.cs" />
+    <Compile Include="KissDialog.cs" />
+    <Compile Include="KissIntEdit.cs" />
+    <Compile Include="KissMoneyEdit.cs" />
+    <Compile Include="GridColumnBetrag.cs" />
+    <Compile Include="GridColumnCheckbox.cs" />
+    <Compile Include="Helper\KeyboardUtil.cs" />
+    <Compile Include="Helper\UIUtilities.cs" />
+    <Compile Include="GridColumnImageOnOff.cs" />
+    <Compile Include="GridColumnImage.cs" />
+    <Compile Include="GridColumnDate.cs" />
+    <Compile Include="Helper\IconHelper.cs" />
+    <Compile Include="Constant\LayoutConstant.cs" />
+    <Compile Include="Converter\Bool2GridLengthConverter.cs" />
+    <Compile Include="Converter\Bool2FontWeightConverter.cs" />
+    <Compile Include="Converter\BoolInvertConverter.cs" />
+    <Compile Include="Converter\ObjectState2ValueConverter.cs" />
+    <Compile Include="Converter\Null2BoolConverter.cs" />
+    <Compile Include="Converter\DateTime2StringConverter.cs" />
+    <Compile Include="Converter\MonthYearConverter.cs" />
+    <Compile Include="Converter\Boolean2ValueConverter.cs" />
+    <Compile Include="Converter\Decimal2StringConverter.cs" />
+    <Compile Include="Converter\MultiStringConcatinationConverter.cs" />
+    <Compile Include="Converter\NullableInt2IntConverter.cs" />
+    <Compile Include="Converter\String2BindingConverter.cs" />
+    <Compile Include="Converter\StringFormatConverter.cs" />
+    <Compile Include="Converter\SwitchConverter.cs" />
+    <Compile Include="Converter\ValidaionResult2ColorConverter.cs" />
+    <Compile Include="Converter\ValidationResultConverter.cs" />
+    <Compile Include="DateRange.xaml.cs">
+      <DependentUpon>DateRange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\Format\DateTimeFormatConverter.cs" />
+    <Compile Include="Helper\Format\ExcelFormatConverter.cs" />
+    <Compile Include="Helper\ExportToExcelProvider.cs" />
+    <Compile Include="Helper\Format\NumberFormatConverter.cs" />
+    <Compile Include="Helper\ResourceUtil.cs" />
+    <Compile Include="Converter\Integer2StringConverter.cs" />
+    <Compile Include="KissCalcEdit.cs" />
+    <Compile Include="KissButton.cs" />
+    <Compile Include="KissButtonSearchBoxDialog.xaml.cs">
+      <DependentUpon>KissButtonSearchBoxDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KissCheckBox.cs" />
+    <Compile Include="KissComboBox.cs" />
+    <Compile Include="KissDateEdit.cs" />
+    <Compile Include="KissDocumentEdit.xaml.cs">
+      <DependentUpon>KissDocumentEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KissGrid.cs" />
+    <Compile Include="KissGroupBox.cs" />
+    <Compile Include="KissLabel.cs" />
+    <Compile Include="KissLookupLabel.cs" />
+    <Compile Include="KissPasswordEdit.cs" />
+    <Compile Include="KissRadioButton.cs" />
+    <Compile Include="KissSearchControl.xaml.cs">
+      <DependentUpon>KissSearchControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KissTabControl.cs" />
+    <Compile Include="KissTabItem.cs" />
+    <Compile Include="KissTextEdit.cs" />
+    <Compile Include="GridColumnLookUp.cs" />
+    <Compile Include="KissToggleButton.cs" />
+    <Compile Include="Helper\RightHelper.cs" />
+    <Compile Include="MonthYearPicker.cs" />
+    <Compile Include="PickList.xaml.cs">
+      <DependentUpon>PickList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\PickListEntity.cs" />
+    <Compile Include="Helper\TextBoxMaskBehavior.cs" />
+    <Compile Include="Helper\TextBoxMaskType.cs" />
+    <Compile Include="GridColumnProzent.cs" />
+    <Compile Include="KissRangeSlider.cs" />
+    <Compile Include="SearchParamsText.xaml.cs">
+      <DependentUpon>SearchParamsText.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SelectedRangeChangedEventHandler.cs" />
+    <Compile Include="TimePeriodAnimation.cs" />
+    <Compile Include="TimePeriodAnimationBase.cs" />
+    <Compile Include="ValidationSummary.xaml.cs">
+      <DependentUpon>ValidationSummary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\ControlViewModelBase.cs" />
+    <Compile Include="VirtualCanvas\LinkedListExtensions.cs" />
+    <Compile Include="VirtualCanvas\MathExtensions.cs" />
+    <Compile Include="VirtualCanvas\PriorityQuadTree.cs" />
+    <Compile Include="VirtualCanvas\PriorityQueue.cs" />
+    <Compile Include="VirtualCanvas\RectExtensions.cs" />
+    <Compile Include="VirtualCanvas\VirtualPanel.cs" />
+    <Compile Include="VirtualCanvas\ZoomableCanvas.cs" />
+    <Page Include="DateScale.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KissGotoFall.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SearchControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DateRange.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GlobalResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KissButtonSearchBoxDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="KissDocumentEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KissSearchControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PickList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Properties\DesignTimeResources.xaml" Condition="'$(DesignTime)'=='true' OR ('$(SolutionPath)'!='' AND Exists('$(SolutionPath)') AND '$(BuildingInsideVisualStudio)'!='true' AND '$(BuildingInsideExpressionBlend)'!='true')">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
+    </Page>
+    <Page Include="SearchParamsText.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\KissComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\KissGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\KissPLZOrt.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\KissButtonSearchBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\BusyPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\KissCheckedLookupEdit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\KissCalcEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\KissDateRangeSlider.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\KissRangeSlider.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Window.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\KissGridColumns.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\KissDateEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\KissLabel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\KissLookupLabel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\KissRadioButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\KissTabControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\KissTextEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\MonthYearPicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ValidationSummary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="LocalResources\ExportToExcelProviderRes.fr.resx">
+      <DependentUpon>ExportToExcelProviderRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\ExportToExcelProviderRes.it.resx">
+      <DependentUpon>ExportToExcelProviderRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\ExportToExcelProviderRes.resx">
+      <SubType>Resource</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExportToExcelProviderRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\SearchControlRes.fr.resx">
+      <DependentUpon>SearchControlRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\SearchControlRes.it.resx">
+      <DependentUpon>SearchControlRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\SearchControlRes.resx">
+      <SubType>Resource</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SearchControlRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\SearchParamsTextRes.fr.resx">
+      <DependentUpon>SearchParamsTextRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\SearchParamsTextRes.it.resx">
+      <DependentUpon>SearchParamsTextRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\SearchParamsTextRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SearchParamsTextRes.Designer.cs</LastGenOutput>
+      <SubType>Resource</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\ValidationSummaryRes.fr.resx">
+      <DependentUpon>ValidationSummaryRes.resx</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\ValidationSummaryRes.it.resx">
+      <DependentUpon>ValidationSummaryRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\ValidationSummaryRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ValidationSummaryRes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\ValidationResultConverterRes.fr.resx">
+      <DependentUpon>ValidationResultConverterRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\ValidationResultConverterRes.it.resx">
+      <DependentUpon>ValidationResultConverterRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\ValidationResultConverterRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ValidationResultConverterRes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KiSS.AssemblyInfo\BIAG.AssemblyInfo.csproj">
+      <Project>{C3A41F2E-FBF1-4628-8F6A-764A22252624}</Project>
+      <Name>BIAG.AssemblyInfo</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.BL\Kiss.BL.csproj">
+      <Project>{317D103A-9D9E-4A5B-B08F-1E9B6BEEEC0E}</Project>
+      <Name>Kiss.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.BusinessLogic\Kiss.BusinessLogic.csproj">
+      <Project>{E70D5BFA-19A7-49CD-9C71-3DB46C8B111C}</Project>
+      <Name>Kiss.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.DbContext\Kiss.DbContext.csproj">
+      <Project>{A9733EC8-89E0-44A6-941D-A71868778675}</Project>
+      <Name>Kiss.DbContext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Infrastructure\Kiss.Infrastructure.csproj">
+      <Project>{94D23DEF-0BEC-4EAC-B6A8-A2AB6B3A0CF1}</Project>
+      <Name>Kiss.Infrastructure</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Interfaces\Kiss.Interfaces.csproj">
+      <Project>{936877A8-EC00-4267-8C62-344062912497}</Project>
+      <Name>Kiss.Interfaces</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Model\Kiss.Model.csproj">
+      <Project>{9EDABB4F-E42D-4791-9798-4581D35B19CC}</Project>
+      <Name>Kiss.Model</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.UI.Theme\DevExpress.Xpf.Themes.Kiss.csproj">
+      <Project>{20ACD936-50C4-4693-8D09-8FF5A7B687AF}</Project>
+      <Name>DevExpress.Xpf.Themes.Kiss</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.UI.ViewModel\Kiss.UI.ViewModel.csproj">
+      <Project>{1A3E5B94-900F-4F22-AAB9-0268CECB911E}</Project>
+      <Name>Kiss.UI.ViewModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.UserInterface.ViewModel\Kiss.UserInterface.ViewModel.csproj">
+      <Project>{9DA4AA23-AD46-4FF7-9909-8D4EB864D2B8}</Project>
+      <Name>Kiss.UserInterface.ViewModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Utilities\Kiss.Utilities.csproj">
+      <Project>{B523447C-56F2-4283-9531-81E31F82F454}</Project>
+      <Name>Kiss.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Icons\Excel.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Icons\Print.ico" />
+    <EmbeddedResource Include="Icons\Word.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Icons\App.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

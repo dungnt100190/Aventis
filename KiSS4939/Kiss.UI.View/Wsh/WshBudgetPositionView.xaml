@@ -1,0 +1,510 @@
+﻿<View:KissView
+    x:Class="Kiss.UI.View.Wsh.WshBudgetPositionView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:View="clr-namespace:Kiss.UI.View"
+    xmlns:ViewModel="clr-namespace:Kiss.UI.ViewModel.Wsh;assembly=Kiss.UI.ViewModel"
+    xmlns:Controls="clr-namespace:Kiss.UI.Controls;assembly=Kiss.UI.Controls"
+    xmlns:Constant="clr-namespace:Kiss.UI.Controls.Constant;assembly=Kiss.UI.Controls"
+    xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+    xmlns:dxe="clr-namespace:DevExpress.Xpf.Editors.Settings;assembly=DevExpress.Xpf.Core.v10.2" xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" mc:Ignorable="d"
+    d:DesignHeight="569"
+    d:DesignWidth="798">
+
+    <View:KissView.Resources>
+        <ViewModel:WshBudgetPositionVM x:Key="viewModel" />
+    </View:KissView.Resources>
+
+    <Grid Name="panRoot" Margin="{x:Static Constant:LayoutConstant.MarginOuterControl}" DataContext="{StaticResource ResourceKey=viewModel}">
+        <Grid.RowDefinitions>
+            <!--Top-->
+            <RowDefinition Height="Auto" />
+            <!--List-->
+            <RowDefinition Height="*"/>
+            <!--ValidationSummary:-->
+            <RowDefinition Height="Auto" />
+            <!--Space-->
+            <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightMainControl}" />
+            <!--Details-->
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!--Top panel-->
+        <Grid Name="panTop">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <!-- Month year picker -->
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="Auto" />
+                <!-- Kennzahlen -->
+                <ColumnDefinition />
+                <!-- BudgetMonate -->
+                <ColumnDefinition Width="Auto"/>
+                <!-- Button neue Ausgabe -->
+                <ColumnDefinition Width="Auto"/>
+                <!-- Button neue Einnahme -->
+                <ColumnDefinition Width="Auto" />
+                <!-- Button Auszahlvorschlag -->
+            </Grid.ColumnDefinitions>
+
+            <Controls:MonthYearPicker Name="edtMonthYear"
+                                      Width="130"
+                                      SelectedMonthYear="{Binding Path=SelectedMonthYear}"
+                                      VerticalAlignment="Center" 
+                                      SpinButtonsVisible="True"/>
+            <ListBox Grid.Column="3" ItemsSource="{Binding Budgetmonate}" BorderThickness="0" Margin="5" ScrollViewer.VerticalScrollBarVisibility="Hidden" Visibility="Collapsed">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="Black" BorderThickness="2" Background="MediumSeaGreen">
+                            <TextBlock Text="{Binding MonatJahr}" Margin="3 0 3 0" />
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+            </ListBox>
+            
+            <Controls:KissButton Grid.Column="4"
+                    VerticalAlignment="Center"
+                    Content="neue Ausgabe"
+                    Margin="0 0 0 0"
+                    Width="95"
+                    Command="{Binding Path=NeueAusgabeCommand}"/>
+
+            <Controls:KissButton Grid.Column="5"
+                    VerticalAlignment="Center"
+                    Content="neue Einname"
+                    Margin="6 0 10 0"
+                    Width="95"
+                    Command="{Binding Path=NeueEinnahmeCommand}"/>
+
+            <Controls:KissButton Grid.Column="6"
+                    Name="btnAuszahlvorschlag"
+                    Width="120"
+                    Margin="10 0 0 0"
+                    Content="Auszahlvorschlag"
+                    VerticalAlignment="Center"
+                    Click="btnAuszahlvorschlag_Click" />
+        </Grid>
+
+        <!--Liste-->
+        <Controls:KissGridDevX Grid.Row="1"
+                               Name="grdWshBudgetPosition"
+                               Margin="{x:Static Constant:LayoutConstant.MarginMainControlTop}"
+                               DataSource="{Binding Path=EntityList}"
+                               SelectedItem="{Binding Path=SelectedEntity, Mode=TwoWay}"
+                               FocusedRowDoubleClick="grdWshBudgetPosition_FocusedRowDoubleClick"
+                               AutoExpandAllGroups="True"
+                               CustomUnboundColumnData="grdWshBudgetPosition_CustomUnboundColumnData">
+
+            <Controls:KissGridDevX.TotalSummary>
+                <dxg:GridSummaryItem FieldName="BetragAusgabe" SummaryType="Sum" DisplayFormat="0.00" />
+                <dxg:GridSummaryItem FieldName="BetragEinnahme" SummaryType="Sum" DisplayFormat="0.00" />
+            </Controls:KissGridDevX.TotalSummary>
+            
+            <Controls:KissGridDevX.Columns>
+                <dxg:GridColumn Header="Kategorie" FieldName="WshPosition.Gruppierung" GroupIndex="0" Visible="False" AllowEditing="False" AllowMoving="False" />
+
+                <dxg:GridColumn DisplayMemberBinding="{Binding Path=Data.WshPosition.KbuKonto.KontoNr, RelativeSource={RelativeSource Self}}" FieldName="WshPosition.KbuKonto.KontoNr" Header="KOA" Width="40" FixedWidth="True"/>
+
+                <dxg:GridColumn DisplayMemberBinding="{Binding Path=Data.WshPosition.Text, RelativeSource={RelativeSource Self}}" FieldName="WshPosition.Text" Header="Text"  />
+
+                <Controls:GridColumnLookUp Header="betrifft" DisplayMemberBinding="{Binding Path=Data.WshPosition.BaPersonID, RelativeSource={RelativeSource Self}}" 
+                                           FieldName="WshPosition.BaPersonID" ItemsSource="{Binding Path=PersonenHaushaltAlle}" 
+                                           DisplayMember="NameVorname" ValueMember="BaPersonID" AllowNullInput="True" NullText="UE"/>
+
+                <dxg:GridColumn DisplayMemberBinding="{Binding Path=Data.AusgabeMonatlich, RelativeSource={RelativeSource Self}}" FieldName="AusgabeMonatlich" Header="Ausgabe" Width="75">
+                    <dxg:GridColumn.EditSettings>
+                        <dxe:CalcEditSettings DisplayFormat="0.00"/>
+                    </dxg:GridColumn.EditSettings>
+                </dxg:GridColumn>
+
+                <dxg:GridColumn DisplayMemberBinding="{Binding Path=Data.EinnahmeMonatlich, RelativeSource={RelativeSource Self}}" FieldName="EinnahmeMonatlich" Header="Einnahme" Width="75">
+                    <dxg:GridColumn.EditSettings>
+                        <dxe:CalcEditSettings DisplayFormat="0.00" />
+                    </dxg:GridColumn.EditSettings>
+                </dxg:GridColumn>
+
+                <dxg:GridColumn DisplayMemberBinding="{Binding Path=Data.WshPosition.EinnahmeEffektiv, RelativeSource={RelativeSource Self}}" FieldName="WshPosition.EinnahmeEffektiv" Header="eff." ToolTip="effektive Einnahme" Width="45">
+                    <dxg:GridColumn.EditSettings>
+                        <dxe:CalcEditSettings DisplayFormat="0.00"/>
+                    </dxg:GridColumn.EditSettings>
+                </dxg:GridColumn>
+                <dxg:GridColumn DisplayMemberBinding="{Binding Path=Data.WshPosition.IsGrundbudgetPositionText, RelativeSource={RelativeSource Self}}" FieldName="WshPosition.IsGrundbudgetPositionText" Header="G/B" ToolTip="Grundbudgetposition" Width="45"/>
+
+                <dxg:GridColumn FieldName="SdString" Header="S/D" ToolTip="Verwaltung SD/Dritte" Width="45" />                
+                <dxg:GridColumn Header="Dok" ToolTip="Dokument" Width="45" />
+
+                <Controls:GridColumnImage Header="Stat." ToolTip="Status" Width="50" FieldName="IconUnbound" IsEnabled="False" UnboundType="Object" />
+                
+                <dxg:GridColumn Header="Zahlinfo" Width="100" />
+
+                <dxg:GridColumn FieldName="GdaString" Header="G/DA" ToolTip="Dauerauftrag aktiviert" Width="45" />
+
+            </Controls:KissGridDevX.Columns>
+            <Controls:KissGridDevX.View>
+                <dxg:TableView Name="grvWshBudgetPosition"
+                               NavigationStyle="Row"
+                               ShowGroupPanel="False"
+                               ShowTotalSummary="True"
+                               BestFitMode="Smart"
+                               BestFitArea="All"
+                               BestFitMaxRowCount="50"
+                               AllowBestFit="True" />
+            </Controls:KissGridDevX.View>
+        </Controls:KissGridDevX>
+
+        <!--Validation-->
+        <Controls:ValidationSummary Grid.Row="2" ServiceResult="{Binding Path=ValidationResult}" />
+
+        <!--Details-->
+        <StackPanel Grid.Row="4" Name="panDetails">
+            <!--Kennzahlen-->
+            <GroupBox Name="grpKennzahlen"
+                      Header="Kennzahlen"
+                      Visibility="{Binding Path=IsKennzahlenPanelVisible, Converter={StaticResource BooleanToVisibilityConverter}}">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="UHDiff:" Margin="2,0" />
+                    <Label Content="0" Margin="2,0" />
+                    <Label Content="Soz. Existenzminimum:" Margin="2,0" />
+                    <Label Content="0" Margin="2,0" />
+                    <Label Content="Zulagen:" Margin="2,0" />
+                    <Label Content="0" Margin="2,0" />
+                    <Label Content="Ein-/Austrittsschwelle:" Margin="2,0" />
+                    <Label Content="0" Margin="2,0" />
+                    <Label Content="an Klient:" Margin="2,0" />
+                    <Label Content="0" Margin="2,0" />
+                    <Label Content="an Dritte:" Margin="2,0" />
+                    <Label Content="0" Margin="2,0" />
+                </StackPanel>
+            </GroupBox>
+
+            <Grid>
+                <Controls:KissCheckBox Content="Kennzahlen"
+                          IsChecked="{Binding Path=IsKennzahlenPanelVisible, Mode=TwoWay}"
+                          HorizontalAlignment="Left"
+                          Margin="0,0,0,10"/>
+
+                <ToggleButton x:Name="toggleButton"
+                          Content="Bearbeiten"
+                          HorizontalAlignment="Right"
+                          Margin="0,5,0,0"
+                          Background="{Binding Background, ElementName=border}"
+                          IsChecked="{Binding IsEditPanelVisible}"
+                          Padding="5 0 5 0" >
+                    <ToggleButton.Template>
+                        <ControlTemplate TargetType="ToggleButton">
+                            <Microsoft_Windows_Themes:ButtonChrome x:Name="Chrome"
+                                                               BorderBrush="{TemplateBinding BorderBrush}"
+                                                               Background="{TemplateBinding Background}"
+                                                               RenderMouseOver="{TemplateBinding IsMouseOver}"
+                                                               RenderPressed="{TemplateBinding IsPressed}"
+                                                               RenderDefaulted="{TemplateBinding Button.IsDefaulted}"
+                                                               SnapsToDevicePixels="true">
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup x:Name="CheckStates">
+                                        <VisualState x:Name="Checked">
+                                            <Storyboard>
+                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(ContentControl.Content)"
+                                                                           Storyboard.TargetName="contentPresenter">
+                                                    <DiscreteObjectKeyFrame KeyTime="0" Value="Bearbeiten beenden"/>
+                                                </ObjectAnimationUsingKeyFrames>
+                                            </Storyboard>
+                                        </VisualState>
+                                        <VisualState x:Name="Unchecked"/>
+                                        <VisualState x:Name="Indeterminate"/>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <ContentPresenter x:Name="contentPresenter"
+                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              Margin="{TemplateBinding Padding}"
+                                              RecognizesAccessKey="True"
+                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            </Microsoft_Windows_Themes:ButtonChrome>
+                        </ControlTemplate>
+                    </ToggleButton.Template>
+                </ToggleButton>
+            </Grid>
+            <!--Detailinfo-->
+            <GroupBox Name="grpDetailinfo"
+                      Header="Detailinfo Budgetposition"
+                      Visibility="{Binding Path=IsInfoPanelVisible, Converter={StaticResource BooleanToVisibilityConverter}}" Padding="10">
+                <TextBlock Name="lblDetailinfo" Text="{Binding Path=Detailinfo}" TextWrapping="Wrap" />
+            </GroupBox>
+
+            <!--Erfassung-->
+            <GroupBox Name="grpEdit"
+                      Header="Budgetposition erfassen"
+                      Visibility="{Binding Path=IsEditPanelVisible, Converter={StaticResource BooleanToVisibilityConverter}}"
+                      Padding="10"
+                      KeyboardNavigation.TabNavigation="Cycle">
+                <Grid Name="panEditDetails" Grid.Column="0" KeyboardNavigation.TabNavigation="Local">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControl}" />
+                        <RowDefinition />
+                        <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControl}" />
+                        <RowDefinition />
+                        <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControl}" />
+                        <RowDefinition />
+                        <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControl}" />
+                        <RowDefinition />
+                        <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControl}" />
+                        <RowDefinition />
+                        <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControl}" />
+                        <RowDefinition />
+                        <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControl}" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="85" />
+                        <ColumnDefinition Width="280" />
+                        <ColumnDefinition Width="40" />
+                        <ColumnDefinition Width="90" />
+                        <ColumnDefinition Width="200*" MaxWidth="280" />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Kategorie -->
+                    <Label Grid.Row="0" Grid.Column="0" Content="Kategorie"/>
+                    <Controls:KissLookupLabel
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        ItemsSource="{Binding Path=KategorieAlle}"
+                        DisplayMemberPath="Name"
+                        SelectedValuePath="WshKategorieID"
+                        SelectedValue="{Binding Path=SelectedEntity.WshPosition.WshKategorieID, Mode=TwoWay, Converter={StaticResource ResourceKey=NullableInt2IntConverter}}"
+                        HorizontalAlignment="Stretch"
+                        />
+
+                    <!-- KOA-->
+                    <Label Grid.Row="2" Grid.Column="0" Content="Kostenart"/>
+                    <Controls:KissButtonSearchBox     Name="edtKostenart"
+                                                      Grid.Row="2"
+                                                      Height="24"
+                                                      Grid.Column="1"
+                                                      SelectedItem="{Binding Path=SelectedEntity.WshPosition.KbuKonto, Mode=TwoWay, ValidatesOnDataErrors=True}" 
+                                                      SearchMethod="{Binding KontoSearchEventHandler}"
+                                                      DisplayMemberPath="DisplayedName"
+                                                      VerticalAlignment="Center" IsButtonPointVisible="False" IsButtonDeleteVisible="False" IsTabStop="True">
+                        <Controls:KissButtonSearchBox.SearchColumnPath>
+                            <Controls:GridColumnDefinition Fieldname="KontoNr" Title="Konto Nummer" />
+                            <Controls:GridColumnDefinition Fieldname="Name" Title="Name" />
+                        </Controls:KissButtonSearchBox.SearchColumnPath>
+                    </Controls:KissButtonSearchBox>
+
+
+                    <!-- Text -->
+                    <Label Grid.Row="4" Grid.Column="0" Content="Text"/>
+                    <Controls:KissTextEdit Grid.Row="4"
+                                 Grid.Column="1"
+                                 HorizontalAlignment="Stretch"
+                                 Text="{Binding Path=SelectedEntity.WshPosition.Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+
+                    <!-- Betrifft-->
+                    <Label Grid.Row="6" Grid.Column="0" Content="Betrifft"/>
+                    <Controls:KissComboBox Grid.Row="6"
+                                  Grid.Column="1"
+                                  ItemsSource="{Binding Path=PersonenHaushalt}"
+                                  ValueMember="BaPersonID"
+                                  HorizontalAlignment="Stretch"
+                                  EditValue="{Binding Path=SelectedEntity.WshPosition.BaPersonID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource ResourceKey=NullIdConverter}, ConverterParameter=-1}" 
+                                  DisplayMember="NameVornameAlter"
+                                  IsEnabled="{Binding Path=IsBetrifftEnabled}"/>
+
+                    <!-- Betrag -->
+                    <Label Grid.Row="8" Grid.Column="0" Content="Betrag" />
+                    <StackPanel Orientation="Horizontal" Grid.Row="8" Grid.Column="1">
+
+                        <!-- Betrag -->
+                        <Controls:KissMoneyEdit HorizontalAlignment="Left"
+                                             Width="73"
+                                             EditValue="{Binding Path=SelectedEntity.WshPosition.Betrag, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                                             Visibility="{Binding Path=SelectedEntity.HasTotalBetrag, Converter={StaticResource ResourceKey=BoolToVisibilityInverseConverter}}"
+                                             AllowNullInput="False"
+                                             />
+
+                        <!-- BetragMonatlich -->
+                        <Controls:KissMoneyEdit
+                                            HorizontalAlignment="Left"
+                                            Width="73"
+                                            EditValue="{Binding Path=SelectedEntity.BetragMonatlich, Mode=OneWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                                            Visibility="{Binding Path=SelectedEntity.HasTotalBetrag, Converter={StaticResource ResourceKey=BooleanToVisibilityConverter}}"
+                                            AllowNullInput="False"
+                                            IsEnabled="False"/>
+                        
+                        <!-- Betrag Total -->
+                        <Label Content="Total" Margin="20 0 10 0" Width="30" Visibility="{Binding Path=SelectedEntity.HasTotalBetrag, Converter={StaticResource ResourceKey=BooleanToVisibilityConverter}}"/>
+                        <Controls:KissMoneyEdit 
+                                            HorizontalAlignment="Left"
+                                            Width="73"
+                                            EditValue="{Binding Path=SelectedEntity.WshPosition.BetragTotal, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                                            Visibility="{Binding Path=SelectedEntity.HasTotalBetrag, Converter={StaticResource ResourceKey=BooleanToVisibilityConverter}}"
+                                            AllowNullInput="False"
+                                            />                        
+                                                                        
+                    </StackPanel>
+
+
+
+
+
+                    <!-- VerwPeriode -->
+                    <Label Grid.Row="10" Grid.Column="0" Content="Verw. periode" />
+                    <Controls:DateRange Grid.Row="10" HorizontalAlignment="Left" VerticalAlignment="Stretch"
+                                            Grid.Column="1"
+                                            DateFrom="{Binding Path=SelectedEntity.WshPosition.VerwPeriodeVon, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"
+                                            DateTo="{Binding Path=SelectedEntity.WshPosition.VerwPeriodeBis, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Height="24" IsTabStop="True" />
+
+                    <!-- Zahlungsart -->
+                    <Label Grid.Row="12"
+                           Grid.Column="0"
+                           Content="Zahlungsart"
+                           Visibility="{Binding Path=SelectedEntity.WshPosition.IstEinnahme, Converter={StaticResource ResourceKey=BoolToVisibilityInverseConverter}}"/>
+                    <Controls:KissComboBox Grid.Row="12"
+                                           Grid.Column="1"
+                                           HorizontalAlignment="Stretch"
+                                           ItemsSource="{Binding Path=ZahlungsArt}"
+                                           DisplayMember="Text"
+                                           ValueMember="Code"
+                                           EditValue="{Binding Path=SelectedEntity.WshPosition.KbuAuszahlungArtCode, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource ResourceKey=NullableInt2IntConverter}}"
+                                           Visibility="{Binding Path=SelectedEntity.WshPosition.IstEinnahme, Converter={StaticResource ResourceKey=BoolToVisibilityInverseConverter}}"
+                                           TextSearch.TextPath="Text"/>
+
+                    <!-- Periodizität -->
+                    <Label Grid.Row="14" Grid.Column="0" Content="Termin"
+                           Visibility="{Binding Path=SelectedEntity.WshPosition.IstEinnahme, Converter={StaticResource ResourceKey=BoolToVisibilityInverseConverter}}"/>
+                    <Controls:KissComboBox Grid.Row="14"
+                                           Grid.Column="1"
+                                           HorizontalAlignment="Stretch"
+                                           ItemsSource="{Binding Path=Periodizitaet}"
+                                           DisplayMember="Text"
+                                           ValueMember="Code"
+                                           EditValue="{Binding Path=SelectedEntity.WshPosition.WshPeriodizitaetCode, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource ResourceKey=NullableInt2IntConverter}}"
+                                           Visibility="{Binding Path=SelectedEntity.WshPosition.IstEinnahme, Converter={StaticResource ResourceKey=BoolToVisibilityInverseConverter}}"
+                                           TextSearch.TextPath="Text"/>
+
+                    <!-- Valuta -->
+                    <Label Grid.Column="3" Content="Fällig am"/>
+                    <Controls:KissDateEdit Grid.Column="4"
+                                           DateTime="{Binding Path=SelectedEntity.WshPosition.FaelligAm, Mode=TwoWay, ValidatesOnDataErrors=True}" 
+                                           Visibility="{Binding Path=IsFaelligAmDateTimeVisible, Converter={StaticResource ResourceKey=BooleanToVisibilityConverter}}"
+                                           AllowNullInput="True"
+                                           Width="100" HorizontalAlignment="Left"/>
+                    <Controls:KissTextEdit Grid.Column="4"
+                                           Text="{Binding Path=SelectedEntity.AuszahlTermine, Mode=TwoWay, ValidatesOnDataErrors=True}" 
+                                           Visibility="{Binding Path=IsFaelligAmDateTimeVisible, Converter={StaticResource ResourceKey=BoolToVisibilityInverseConverter}}"
+                                           IsReadOnly="True"/>
+
+                    <!-- Kreditor -->
+                    <Label Grid.Row="2"  Grid.Column="3" Content="Kreditor" 
+                           Visibility="{Binding Path=IsKreditorLookupVisible, Converter={StaticResource ResourceKey=BooleanToVisibilityConverter}}"/>
+                    
+                    <Controls:KissButtonSearchBox Grid.Row="2"
+                                                  Grid.Column="4"
+                                                  Height="24"
+                                                  SelectedItem="{Binding Path=SelectedEntity.SelectedZahlungsweg, Mode=TwoWay, ValidatesOnDataErrors=True}"
+                                                  SearchMethod="{Binding KreditorSearchEventHandler}"
+                                                  DisplayMemberPath="Name"
+                                                  IsButtonPointVisible="True"
+                                                  IsButtonDeleteVisible="False"
+                                                  IsHitTestVisible="True"
+                                                  IsTabStop="True"
+                                                  MinimalCharCount="3"
+                                                  Visibility="{Binding Path=IsKreditorLookupVisible, Converter={StaticResource ResourceKey=BooleanToVisibilityConverter}}" >
+                        <Controls:KissButtonSearchBox.SearchColumnPath>
+                            <Controls:GridColumnDefinition Fieldname="Type" Title="Typ" />
+                            <Controls:GridColumnDefinition Fieldname="Name" Title="Name" />
+                            <Controls:GridColumnDefinition Fieldname="Adresse" Title="Adresse" />
+                            <Controls:GridColumnDefinition Fieldname="Zahlungsweg" Title="Zahlungsweg" />
+                        </Controls:KissButtonSearchBox.SearchColumnPath>
+                    </Controls:KissButtonSearchBox>
+                    <!-- Kreditor Strasse und Hausnummmer -->
+                    <Controls:KissTextEdit Grid.Row="4"
+                                           Grid.Column="4"
+                                           Text="{Binding Path=SelectedEntity.SelectedZahlungsweg.StrasseUndHausnummer, Mode=OneWay}"
+                                           Visibility="{Binding Path=IsKreditorLookupVisible, Converter={StaticResource ResourceKey=BooleanToVisibilityConverter}}"
+                                           IsReadOnly="True"/>
+                    <!-- Kreditor Ort -->
+                    <Controls:KissTextEdit Grid.Row="6"
+                                           Grid.Column="4"
+                                           Text="{Binding Path=SelectedEntity.SelectedZahlungsweg.PLZundOrt, Mode=OneWay}"
+                                           Visibility="{Binding Path=IsKreditorLookupVisible, Converter={StaticResource ResourceKey=BooleanToVisibilityConverter}}"
+                                           IsReadOnly="True"/>
+                    <!-- Kreditor Kontoinfo -->
+                    <Controls:KissTextEdit Grid.Row="8"
+                                           Grid.Column="4"
+                                           Text="{Binding Path=SelectedEntity.SelectedZahlungsweg.Zahlungsweg, Mode=OneWay}"
+                                           Visibility="{Binding Path=IsKreditorLookupVisible, Converter={StaticResource ResourceKey=BooleanToVisibilityConverter}}"
+                                           IsReadOnly="True"/>
+
+                    <!-- Debitor -->
+                    <Label Grid.Row="2"
+                           Grid.Column="3"
+                           Content="Debitor"
+                           Visibility="{Binding Path=IsDebitorLookupVisible, Converter={StaticResource ResourceKey=BooleanToVisibilityConverter}}"/>
+
+                    <Controls:KissButtonSearchBox Grid.Row="2"
+                                                  Grid.Column="4"
+                                                  Height="24"
+                                                  SelectedItem="{Binding Path=SelectedEntity.SelectedDebitor, Mode=TwoWay, ValidatesOnDataErrors=True}"
+                                                  SearchMethod="{Binding DebitorSearchEventHandler}"
+                                                  DisplayMemberPath="Name"
+                                                  IsButtonPointVisible="True"
+                                                  IsButtonDeleteVisible="False"
+                                                  IsHitTestVisible="True"
+                                                  MinimalCharCount="3"
+                                                  Visibility="{Binding Path=IsDebitorLookupVisible, Converter={StaticResource ResourceKey=BooleanToVisibilityConverter}}" IsTabStop="True">
+                        <Controls:KissButtonSearchBox.SearchColumnPath>
+                            <Controls:GridColumnDefinition Fieldname="Type" Title="Typ" />
+                            <Controls:GridColumnDefinition Fieldname="Name" Title="Name" />
+                            <Controls:GridColumnDefinition Fieldname="Adresse" Title="Adresse" />
+                        </Controls:KissButtonSearchBox.SearchColumnPath>
+                    </Controls:KissButtonSearchBox>
+                    <!-- Debitor Strasse und Hausnummmer -->
+                    <Controls:KissTextEdit Grid.Row="4"
+                                           Grid.Column="4"
+                                           Text="{Binding Path=SelectedEntity.SelectedDebitor.StrasseHausNr, Mode=OneWay}"
+                                           Visibility="{Binding Path=IsDebitorLookupVisible, Converter={StaticResource ResourceKey=BooleanToVisibilityConverter}}"
+                                           IsReadOnly="True"/>
+                    <!-- Debitor Ort -->
+                    <Controls:KissTextEdit Grid.Row="6"
+                                           Grid.Column="4"
+                                           Text="{Binding Path=SelectedEntity.SelectedDebitor.PlzUndOrt, Mode=OneWay}"
+                                           Visibility="{Binding Path=IsDebitorLookupVisible, Converter={StaticResource ResourceKey=BooleanToVisibilityConverter}}"
+                                           IsReadOnly="True"/>
+
+                    <!-- Verwaltung SD -->
+                    <Label Grid.Row="8"
+                           Grid.Column="3"
+                           Content="Verwaltung SD"
+                           Visibility="{Binding Path=SelectedEntity.WshPosition.IstEinnahme, Converter={StaticResource ResourceKey=BooleanToVisibilityConverter}}" />
+                    <CheckBox Grid.Row="8"
+                                  Grid.Column="4"
+                                  IsChecked="{Binding Path=SelectedEntity.WshPosition.VerwaltungSD, Mode=TwoWay}"
+                                  Visibility="{Binding Path=SelectedEntity.WshPosition.IstEinnahme, Converter={StaticResource ResourceKey=BooleanToVisibilityConverter}}" VerticalAlignment="Center" HorizontalAlignment="Left" />
+
+                    <!-- Bemerkung -->
+                    <Label Grid.Row="10" Grid.Column="3"
+                           Content="Bemerkungen" />
+                    <Controls:KissTextEdit Name="edtBemerkung" Grid.Row="10" Grid.Column="4"
+                             AcceptsReturn="True"
+                             TextWrapping="Wrap"
+                             VerticalAlignment="Stretch"
+                             HorizontalAlignment="Stretch"
+                             Height="Auto"
+                             VerticalContentAlignment="Top"
+                             Text="{Binding Path=SelectedEntity.WshPosition.Bemerkung, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.RowSpan="5" />
+
+
+                </Grid>
+            </GroupBox>
+        </StackPanel>
+    </Grid>
+</View:KissView>

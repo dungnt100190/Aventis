@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryBaPerson.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>204, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>52</value>
+  </metadata>
+  <data name="qryBaPerson.SelectStatement" xml:space="preserve">
+    <value>DECLARE @MinAlter INT;
+DECLARE @MaxAlter INT;
+SELECT TOP 1 @MinAlter = ValueInt FROM dbo.XConfig WHERE KeyPath = 'System\IKAuszuege\MinimalAlter' ORDER BY DatumVon DESC;
+SELECT TOP 1 @MaxAlter = ValueInt FROM dbo.XConfig WHERE KeyPath = 'System\IKAuszuege\MaximalAlter' ORDER BY DatumVon DESC;
+
+select
+  PRS.BaPersonID, PRS.StatusPersonCode, PRS.Titel, PRS.Name, PRS.FruehererName, 
+  PRS.Vorname, PRS.Vorname2, PRS.Geburtsdatum, PRS.Sterbedatum, PRS.[Alter],
+  PRS.AHVNummer, PRS.Versichertennummer, PRS.NNummer, PRS.BFFNummer, PRS.ZEMISNummer, PRS.ZARNummer,
+  PRS.ZIPNr, PRS.KantonaleReferenznummer, PRS.GeschlechtCode, 
+  PRS.ZivilstandCode, PRS.ZivilstandDatum, 
+  PRS.Heimatort, PRS.HeimatgemeindeCode, PRS.HeimatgemeindeCodes, PRS.NationalitaetCode, PRS.ReligionCode, 
+  PRS.AuslaenderStatusCode, PRS.AuslaenderStatusGueltigBis, 
+  PRS.Telefon_P, PRS.Telefon_G, PRS.MobilTel1, PRS.MobilTel2, PRS.EMail, 
+  PRS.SprachCode, PRS.Unterstuetzt, PRS.Fiktiv, PRS.Bemerkung, PRS.EinwohnerregisterAktiv,
+  PRS.EinwohnerregisterID, PRS.EinwohnerregisterIDOhne0er,
+  PRS.DeutschVerstehenCode, PRS.WichtigerHinweisCode, 
+  PRS.ZuzugKtPLZ, PRS.ZuzugKtOrtCode, PRS.ZuzugKtOrt, PRS.ZuzugKtKanton, PRS.ZuzugKtLandCode, 
+  PRS.ZuzugKtDatum, PRS.ZuzugKtSeitGeburt, PRS.ZuzugGdePLZ, PRS.ZuzugGdeOrtCode, 
+  PRS.ZuzugGdeOrt, PRS.ZuzugGdeKanton, PRS.ZuzugGdeLandCode, PRS.ZuzugGdeDatum, 
+  PRS.ZuzugGdeSeitGeburt, 
+  PRS.UntWohnsitzPLZ, PRS.UntWohnsitzOrt, PRS.UntWohnsitzKanton, PRS.UntWohnsitzLandCode, 
+  PRS.WegzugPLZ, PRS.WegzugOrtCode, PRS.WegzugOrt, PRS.WegzugKanton, PRS.WegzugLandCode, 
+  PRS.WegzugDatum, PRS.WohnsitzWieBaPersonID, PRS.AufenthaltWieBaInstitutionID, 
+  PRS.ErwerbssituationCode, PRS.GrundTeilzeitarbeit1Code, PRS.GrundTeilzeitarbeit2Code, PRS.BaGrundNichtErwerbstaetigCode,
+  PRS.ErwerbsBrancheCode, PRS.ErlernterBerufCode, PRS.BerufCode, PRS.HoechsteAusbildungCode, 
+  PRS.AbgebrocheneAusbildungCode, PRS.ArbeitSpezFaehigkeiten, PRS.VerID, 
+  PRS.KbKostenstelleID, PRS.InCHSeit, PRS.InCHSeitGeburt, PRS.PUAnzahlVerlustscheine, 
+  PRS.PUKrankenkasse, PRS.PraemienuebernahmeVon, PRS.PraemienuebernahmeBis, 
+  PRS.PersonOhneLeistung, PRS.BaPersonTS, PRS.HCMCFluechtling, PRS.StellensuchendCode, 
+  PRS.ResoNr, PRS.NEAnmeldung,
+  Person = PRS.Name + isNull(', ' + PRS.Vorname, ''),
+  PRS.Modifier,
+  PRS.Modified,
+  HAU.OrgUnitID,
+  IKAuszugID = IKAPENDENT.SstIKAuszugID,
+  IKAuszugCheckboxChecked = CONVERT(bit, CASE WHEN IKAPENDENT.SstIKAuszugID IS NULL THEN 0 ELSE 1 END),
+  IKAuszugCheckboxEnabled = CONVERT(bit, CASE WHEN IKAPENDENT.SstIKAuszugID IS NULL OR (IKAPENDENT.SstIkAuszugAnforderungCode IN (1,4) AND IKAPENDENT.SstIkAuszugStatusCode = 1) THEN 1 ELSE 0 END),
+  IKAuszugComboboxEnabled = CONVERT(bit, CASE WHEN IKAPENDENT.SstIKAuszugID IS NOT NULL AND IKAPENDENT.SstIkAuszugAnforderungCode IN (2,3,4) AND IKAPENDENT.SstIkAuszugStatusCode = 1 THEN 1 ELSE 0 END),
+  IKAuszugComboboxJahr = CONVERT(varchar, IKAPENDENT.JahrVon),
+  IKAuszugErsterFinanzplanJahr = CONVERT(varchar, YEAR(FIP.DatumVon)), 
+  IKAuszugBemerkung = 
+			CASE WHEN ISNULL(PRS.[Alter], 0) &lt; @MinAlter THEN 'nicht möglich (Grund: Person ist jünger als ' + CONVERT(varchar, @MinAlter ) + ' Jahre)'
+			     WHEN ISNULL(PRS.[Alter], 0) &gt;= @MaxAlter THEN 'nicht möglich (Grund: Person ist ' + CONVERT(varchar, @MaxAlter ) + ' Jahre oder älter)'
+			     WHEN IKAPENDENT.Bemerkung IS NOT NULL THEN IKAPENDENT.Bemerkung
+ 				 WHEN FIP.BgFinanzplanID IS NULL THEN 'nicht möglich (Grund: Person ist nicht Teil einer W-Leistung)'
+				 WHEN IKASUCCESS.ImportDatum IS NOT NULL THEN 'Der letzte IK-Auszug wurde am ' + CONVERT(varchar, IKASUCCESS.ImportDatum, 104) + ' importiert'
+			END,
+  IKAPENDENT.SstIkAuszugAnforderungCode
+FROM vwPerson			PRS
+  LEFT JOIN BaHaus		HAU WITH (READUNCOMMITTED) ON HAU.BaStrasseID = PRS.WohnsitzStrasseCode AND (CAST( HAU.Hausnummer as varchar ) + IsNull(HAU.Suffix,'')) = PRS.WohnsitzHausNr
+  LEFT JOIN vwSstIkAuszug IKAPENDENT WITH (READUNCOMMITTED) ON IKAPENDENT.SstIKAuszugID = (SELECT TOP 1 SstIKAuszugID FROM vwSstIkAuszug WHERE BaPersonID = PRS.BaPersonID AND SstIkAuszugStatusCode IN (1, 2, 3, 4) ORDER BY AnforderungDatum DESC) -- Hole die neueste noch pendente IKAuszugs-Anforderung für diese Person
+  LEFT JOIN vwSstIkAuszug IKASUCCESS WITH (READUNCOMMITTED) ON IKASUCCESS.SstIKAuszugID = (SELECT TOP 1 SstIKAuszugID FROM vwSstIkAuszug WHERE BaPersonID = PRS.BaPersonID AND SstIkAuszugStatusCode = 5 ORDER BY AnforderungDatum DESC) -- Hole die letzte erfolgreich verarbeitete IKAuszugs-Anforderung für diese Person
+  LEFT JOIN BgFinanzplan FIP WITH (READUNCOMMITTED) ON FIP.BgFinanzplanID = (SELECT TOP 1 FPP2.BgFinanzplanID FROM BgFinanzplan_BaPerson FPP2 INNER JOIN BgFinanzplan FIP WITH (READUNCOMMITTED) ON FIP.BgFinanzplanID = FPP2.BgFinanzplanID WHERE FPP2.BaPersonID = PRS.BaPersonID AND FPP2.IstUnterstuetzt = 1 AND FIP.BgBewilligungStatusCode IN (5,9) ORDER BY FIP.DatumVon)
+WHERE PRS.BaPersonID = {0}
+</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnDatenblatt.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH/SURBVDhPlZJNTxNRFIbnz9C9C93ZdXXHpqxkUd2RdOPC
+        BBZgIg0hRBRSEhJpIrRAWikWSKFFCTYRAihoaVosLR/TbxGrAUPbaXk55w4DxRESJ3lyJ9P7Pued25Gk
+        umsqtAXfhxjeLkbhXYhg4n0YnuBXuAMbGPd/xqh/Da6ZVdRnxL3FYoHZbL6Wo5NTMIfHNbzyLOLO/UeX
+        Eg5brVaEQqF/wuJjCjNFEtidAQQ/Ri4lvEELxx40AiYT0NSA4tNmRFK4gPcV/9TQPzwrwhoS/+BwOAQi
+        nIqokMT0mB4x9JhbvvBGUfhdg+tdAs75pNpCJ6CgJtAaNDRBnE/2Z1Ww+13B62ASt+89VAU2m00ggu5z
+        gVtCS6/6CizQGnALFgzN7agCo9EIPkgh4DCeEyQiUsTdgCT4u8Ggf++qgCX1gkSfGmSJNHDrSoN4VoF9
+        WlYFBoMBGmI6teAwllouwizgBvKPKhJ5BdF0Bb2+lCqov3gTv+t1K78/E96voNub1gsGxxeQ/1VDgeA1
+        V6wic1jF/oEiJscyFWzKFazvlNH5JqsXDIzOU01FTLmJ1e0SOsZyegF/pnxA8ZyCb7Ru0cRoWqGpCr7s
+        lfEpWcLKdhnL8RLanAW9gD/TMFV0zO2C/yb7jIyXPhk9k2l0TWTwzJNFO01udeXxZORAL+BT/V/OAFnD
+        jDHaRSJoAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="dtpAuslaenderStatusGueltigBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="editInCHSeit.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="btnHeimatorte.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAADxJREFUOE9jYKA6
+        yMr6DzcTmU20RYPDAJArYJhop8MUDg4vYHMNyV6hXMN/YHrAhym3gZAJoy4gFEIweQAKTU0BRILJMAAA
+        AABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="edtSterbeDatum.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="edtGeburtstag.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="edtZivilstandSeit.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="edtWegzugDatum.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="edtNEAnmeldung.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="edtInCHseit2.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <metadata name="qryPraemienuebernahme.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>324, 17</value>
+  </metadata>
+  <data name="qryPraemienuebernahme.SelectStatement" xml:space="preserve">
+    <value>SELECT TOP 0
+  BaPraemienuebernahmeID, BaPersonID, Folgenummer, 
+  AnzahlVerlustscheine, Krankenkasse, DatumVon, DatumBis, 
+  BetroffenePersonen, BetragLetztePU, Ueberpruefungspflichtig, 
+  BaPraemienuebernahmeTS
+FROM BaPraemienuebernahme</value>
+  </data>
+  <metadata name="qryPraemienverbilligung.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>513, 17</value>
+  </metadata>
+  <data name="qryPraemienverbilligung.SelectStatement" xml:space="preserve">
+    <value>SELECT TOP 0
+  BaPraemienverbilligungID, BaPersonID, Jahr, Folgenummer, 
+  BetragAnspruch, BetragAuszahlung, ZahlungAn, LetzteMutation, 
+  Grund, BaPraemienverbilligungTS
+FROM BaPraemienverbilligung</value>
+  </data>
+</root>

@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{15D80CCB-6048-4580-9542-8041A2E0DBBD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KiSS4.Pendenzen</RootNamespace>
+    <AssemblyName>KiSS4.Pendenzen</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/KiSS4.Pendenzen/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <SignAssembly>false</SignAssembly>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Build\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <SignAssembly>false</SignAssembly>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SharpLibrary, Version=1.4.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CtlFrmPendenzenVerwaltung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlFrmPendenzenVerwaltung.Designer.cs">
+      <DependentUpon>CtlFrmPendenzenVerwaltung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlFallLeistungBetrifftPerson.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlFallLeistungBetrifftPerson.Designer.cs">
+      <DependentUpon>CtlFallLeistungBetrifftPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlPendenzBenutzerGruppen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlPendenzenVerwaltung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlPendenzenVerwaltung.Designer.cs">
+      <DependentUpon>CtlPendenzenVerwaltung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlPendenzVorlagentexte.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlPendenzVorlagentexte.Designer.cs">
+      <DependentUpon>CtlPendenzVorlagentexte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgPendenzErfassen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgPendenzErfassen.Designer.cs">
+      <DependentUpon>DlgPendenzErfassen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgPendenzSelektionVerarbeiten.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgPendenzSelektionVerarbeiten.Designer.cs">
+      <DependentUpon>DlgPendenzSelektionVerarbeiten.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgPendenzWeiterleiten.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CtlPendenzenAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrmPendenzenAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPendenzenAdmin.Designer.cs">
+      <DependentUpon>FrmPendenzenAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPendenzenVerwaltung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPendenzenVerwaltung.Designer.cs">
+      <DependentUpon>FrmPendenzenVerwaltung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor\Monitor.cs" />
+    <Compile Include="Monitor\IMonitor.cs" />
+    <Compile Include="Monitor\IPendenzProvider.cs" />
+    <Compile Include="Monitor\IPendenz.cs" />
+    <Compile Include="Monitor\Pendenz.cs" />
+    <Compile Include="Monitor\PendenzMonitor.cs" />
+    <Compile Include="Monitor\PendenzProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TaskAction.cs" />
+    <Compile Include="TaskActionUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CtlFrmPendenzenVerwaltung.resx">
+      <DependentUpon>CtlFrmPendenzenVerwaltung.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlFallLeistungBetrifftPerson.resx">
+      <DependentUpon>CtlFallLeistungBetrifftPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlPendenzBenutzerGruppen.resx">
+      <DependentUpon>CtlPendenzBenutzerGruppen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlPendenzenVerwaltung.resx">
+      <DependentUpon>CtlPendenzenVerwaltung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlPendenzVorlagentexte.resx">
+      <DependentUpon>CtlPendenzVorlagentexte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgPendenzErfassen.resx">
+      <DependentUpon>DlgPendenzErfassen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgPendenzSelektionVerarbeiten.resx">
+      <DependentUpon>DlgPendenzSelektionVerarbeiten.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlPendenzenAdmin.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CtlPendenzenAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPendenzenVerwaltung.resx">
+      <DependentUpon>FrmPendenzenVerwaltung.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KiSS.AssemblyInfo\BIAG.AssemblyInfo.csproj">
+      <Project>{C3A41F2E-FBF1-4628-8F6A-764A22252624}</Project>
+      <Name>BIAG.AssemblyInfo</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS.DBScheme\KiSS.DBScheme.csproj">
+      <Project>{48E78A43-B4AD-4426-9422-8ABB846CC345}</Project>
+      <Name>KiSS.DBScheme</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Infrastructure\Kiss.Infrastructure.csproj">
+      <Project>{94D23DEF-0BEC-4EAC-B6A8-A2AB6B3A0CF1}</Project>
+      <Name>Kiss.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Interfaces\Kiss.Interfaces.csproj">
+      <Project>{936877A8-EC00-4267-8C62-344062912497}</Project>
+      <Name>Kiss.Interfaces</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Common\KiSS4.Common.csproj">
+      <Project>{B9295AD3-0104-4E8D-88E6-14B4D2EDD647}</Project>
+      <Name>KiSS4.Common</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.DB\KiSS4.DB.csproj">
+      <Project>{94EF0808-6193-443F-ACE3-A54ABC4BDE8D}</Project>
+      <Name>KiSS4.DB</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Gui\KiSS4.Gui.csproj">
+      <Project>{9AB1DBC3-F48B-4CE0-A557-4D3B46149A98}</Project>
+      <Name>KiSS4.Gui</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

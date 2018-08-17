@@ -1,0 +1,1943 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p2="http://www.zuerich.ch/xmlns/eZH-0020/3" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:p1="http://stzh.ch/O101/eCH-0020/2.3" name="SI_O101_L_Anfrage_sync_ob" targetNamespace="http://stzh.ch/O101/eCH-0020/2.3" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_O101_L_Anfrage_sync_ob" />
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.ech.ch/xmlns/eCH-0006/2" targetNamespace="http://www.ech.ch/xmlns/eCH-0006/2" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:simpleType name="residencePermitType">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="01" />
+          <xsd:enumeration value="0102" />
+          <xsd:enumeration value="02" />
+          <xsd:enumeration value="0201" />
+          <xsd:enumeration value="0202" />
+          <xsd:enumeration value="03" />
+          <xsd:enumeration value="0301" />
+          <xsd:enumeration value="0302" />
+          <xsd:enumeration value="04" />
+          <xsd:enumeration value="0401" />
+          <xsd:enumeration value="0402" />
+          <xsd:enumeration value="05" />
+          <xsd:enumeration value="0503" />
+          <xsd:enumeration value="06" />
+          <xsd:enumeration value="0601" />
+          <xsd:enumeration value="0602" />
+          <xsd:enumeration value="060101" />
+          <xsd:enumeration value="060201" />
+          <xsd:enumeration value="060102" />
+          <xsd:enumeration value="060202" />
+          <xsd:enumeration value="07" />
+          <xsd:enumeration value="0701" />
+          <xsd:enumeration value="0702" />
+          <xsd:enumeration value="070101" />
+          <xsd:enumeration value="070201" />
+          <xsd:enumeration value="070102" />
+          <xsd:enumeration value="070202" />
+          <xsd:enumeration value="070103" />
+          <xsd:enumeration value="070104" />
+          <xsd:enumeration value="070204" />
+          <xsd:enumeration value="070105" />
+          <xsd:enumeration value="070205" />
+          <xsd:enumeration value="070206" />
+          <xsd:enumeration value="070907" />
+          <xsd:enumeration value="08" />
+          <xsd:enumeration value="0804" />
+          <xsd:enumeration value="09" />
+          <xsd:enumeration value="0905" />
+          <xsd:enumeration value="10" />
+          <xsd:enumeration value="1006" />
+          <xsd:enumeration value="100601" />
+          <xsd:enumeration value="100602" />
+          <xsd:enumeration value="100603" />
+          <xsd:enumeration value="11" />
+          <xsd:enumeration value="1107" />
+          <xsd:enumeration value="12" />
+          <xsd:enumeration value="1208" />
+          <xsd:enumeration value="1300" />
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.ech.ch/xmlns/eCH-0010/3" targetNamespace="http://www.ech.ch/xmlns/eCH-0010/3" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:simpleType name="foreignZipCodeType">
+        <xsd:restriction base="xsd:token">
+          <xsd:maxLength value="15" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="organisationNameType">
+        <xsd:restriction base="xsd:token">
+          <xsd:maxLength value="60" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="addressLineType">
+        <xsd:restriction base="xsd:token">
+          <xsd:maxLength value="60" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="lastNameType">
+        <xsd:restriction base="xsd:token">
+          <xsd:maxLength value="30" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="swissZipCodeType">
+        <xsd:restriction base="xsd:unsignedInt">
+          <xsd:minInclusive value="1000" />
+          <xsd:maxInclusive value="9999" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="postOfficeBoxNumberType">
+        <xsd:restriction base="xsd:unsignedInt">
+          <xsd:maxInclusive value="9999" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="localityType">
+        <xsd:restriction base="xsd:token">
+          <xsd:maxLength value="40" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="dwellingNumberType">
+        <xsd:restriction base="xsd:token">
+          <xsd:maxLength value="10" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="postOfficeBoxTextType">
+        <xsd:restriction base="xsd:token">
+          <xsd:maxLength value="15" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="titleType">
+        <xsd:restriction base="xsd:token">
+          <xsd:maxLength value="20" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="swissZipCodeIdType">
+        <xsd:restriction base="xsd:int" />
+      </xsd:simpleType>
+      <xsd:simpleType name="countryType">
+        <xsd:restriction base="xsd:token">
+          <xsd:maxLength value="2" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="mrMrsType">
+        <xsd:restriction base="xsd:token">
+          <xsd:enumeration value="1" />
+          <xsd:enumeration value="2" />
+          <xsd:enumeration value="3" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="swissZipCodeAddOnType">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="2" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="streetType">
+        <xsd:restriction base="xsd:token">
+          <xsd:maxLength value="60" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="houseNumberType">
+        <xsd:restriction base="xsd:token">
+          <xsd:maxLength value="12" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="firstNameType">
+        <xsd:restriction base="xsd:token">
+          <xsd:maxLength value="30" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="townType">
+        <xsd:restriction base="xsd:token">
+          <xsd:maxLength value="40" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="personMailAddressInfoType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" form="qualified" name="mrMrs" type="mrMrsType" />
+          <xsd:element minOccurs="0" form="qualified" name="title" type="titleType" />
+          <xsd:element minOccurs="0" form="qualified" name="firstName" type="firstNameType" />
+          <xsd:element form="qualified" name="lastName" type="lastNameType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="addressInformationType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" form="qualified" name="addressLine1" type="addressLineType" />
+          <xsd:element minOccurs="0" form="qualified" name="addressLine2" type="addressLineType" />
+          <xsd:sequence minOccurs="0">
+            <xsd:element form="qualified" name="street" type="streetType" />
+            <xsd:element minOccurs="0" form="qualified" name="houseNumber" type="houseNumberType" />
+            <xsd:element minOccurs="0" form="qualified" name="dwellingNumber" type="dwellingNumberType" />
+          </xsd:sequence>
+          <xsd:sequence minOccurs="0">
+            <xsd:element minOccurs="0" form="qualified" name="postOfficeBoxNumber" type="postOfficeBoxNumberType" />
+            <xsd:element form="qualified" name="postOfficeBoxText" type="postOfficeBoxTextType" />
+          </xsd:sequence>
+          <xsd:element minOccurs="0" form="qualified" name="locality" type="localityType" />
+          <xsd:element form="qualified" name="town" type="townType" />
+          <xsd:choice>
+            <xsd:sequence>
+              <xsd:element form="qualified" name="swissZipCode" type="swissZipCodeType" />
+              <xsd:element minOccurs="0" form="qualified" name="swissZipCodeAddOn" type="swissZipCodeAddOnType" />
+              <xsd:element minOccurs="0" form="qualified" name="swissZipCodeId" type="swissZipCodeIdType" />
+            </xsd:sequence>
+            <xsd:element minOccurs="0" form="qualified" name="foreignZipCode" type="foreignZipCodeType" />
+          </xsd:choice>
+          <xsd:element form="qualified" name="country" type="countryType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="mailAddressType">
+        <xsd:sequence>
+          <xsd:choice>
+            <xsd:element form="qualified" name="organisation" type="organisationMailAddressInfoType" />
+            <xsd:element form="qualified" name="person" type="personMailAddressInfoType" />
+          </xsd:choice>
+          <xsd:element form="qualified" name="addressInformation" type="addressInformationType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="organisationMailAddressInfoType">
+        <xsd:sequence>
+          <xsd:element form="qualified" name="organisationName" type="organisationNameType" />
+          <xsd:element minOccurs="0" form="qualified" name="organisationNameAddOn1" type="organisationNameType" />
+          <xsd:element minOccurs="0" form="qualified" name="organisationNameAddOn2" type="organisationNameType" />
+          <xsd:element minOccurs="0" form="qualified" name="title" type="titleType" />
+          <xsd:element minOccurs="0" form="qualified" name="firstName" type="firstNameType" />
+          <xsd:element minOccurs="0" form="qualified" name="lastName" type="lastNameType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="swissAddressInformationType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" form="qualified" name="addressLine1" type="addressLineType" />
+          <xsd:element minOccurs="0" form="qualified" name="addressLine2" type="addressLineType" />
+          <xsd:sequence minOccurs="0">
+            <xsd:element form="qualified" name="street" type="streetType" />
+            <xsd:element minOccurs="0" form="qualified" name="houseNumber" type="houseNumberType" />
+            <xsd:element minOccurs="0" form="qualified" name="dwellingNumber" type="dwellingNumberType" />
+          </xsd:sequence>
+          <xsd:element minOccurs="0" form="qualified" name="locality" type="localityType" />
+          <xsd:element form="qualified" name="town" type="townType" />
+          <xsd:sequence>
+            <xsd:element form="qualified" name="swissZipCode" type="swissZipCodeType" />
+            <xsd:element minOccurs="0" form="qualified" name="swissZipCodeAddOn" type="swissZipCodeAddOnType" />
+            <xsd:element minOccurs="0" form="qualified" name="swissZipCodeId" type="swissZipCodeIdType" />
+          </xsd:sequence>
+          <xsd:element form="qualified" name="country">
+            <xsd:simpleType>
+              <xsd:restriction base="countryType">
+                <xsd:enumeration value="CH" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.ech.ch/xmlns/eCH-0007/4" targetNamespace="http://www.ech.ch/xmlns/eCH-0007/4" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:simpleType name="municipalityIdType">
+        <xsd:restriction base="xsd:int">
+          <xsd:minInclusive value="1" />
+          <xsd:maxInclusive value="9999" />
+          <xsd:totalDigits value="4" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="historyMunicipalityId">
+        <xsd:restriction base="xsd:int" />
+      </xsd:simpleType>
+      <xsd:simpleType name="cantonAbbreviationType">
+        <xsd:restriction base="xsd:token">
+          <xsd:maxLength value="2" />
+          <xsd:enumeration value="ZH" />
+          <xsd:enumeration value="BE" />
+          <xsd:enumeration value="LU" />
+          <xsd:enumeration value="UR" />
+          <xsd:enumeration value="SZ" />
+          <xsd:enumeration value="OW" />
+          <xsd:enumeration value="NW" />
+          <xsd:enumeration value="GL" />
+          <xsd:enumeration value="ZG" />
+          <xsd:enumeration value="FR" />
+          <xsd:enumeration value="SO" />
+          <xsd:enumeration value="BS" />
+          <xsd:enumeration value="BL" />
+          <xsd:enumeration value="SH" />
+          <xsd:enumeration value="AR" />
+          <xsd:enumeration value="AI" />
+          <xsd:enumeration value="SG" />
+          <xsd:enumeration value="GR" />
+          <xsd:enumeration value="AG" />
+          <xsd:enumeration value="TG" />
+          <xsd:enumeration value="TI" />
+          <xsd:enumeration value="VD" />
+          <xsd:enumeration value="VS" />
+          <xsd:enumeration value="NE" />
+          <xsd:enumeration value="GE" />
+          <xsd:enumeration value="JU" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="municipalityNameType">
+        <xsd:restriction base="xsd:token">
+          <xsd:maxLength value="40" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="swissMunicipalityType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" form="qualified" name="municipalityId" type="municipalityIdType" />
+          <xsd:element form="qualified" name="municipalityName" type="municipalityNameType" />
+          <xsd:element minOccurs="0" form="qualified" name="cantonAbbreviation" type="cantonAbbreviationType" />
+          <xsd:element minOccurs="0" form="qualified" name="historyMunicipalityId" type="historyMunicipalityId" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.ech.ch/xmlns/eCH-0021/3" xmlns:eCH-0010="http://www.ech.ch/xmlns/eCH-0010/3" xmlns:eCH-0011="http://www.ech.ch/xmlns/eCH-0011/4" xmlns:eCH-0044="http://www.ech.ch/xmlns/eCH-0044/1" targetNamespace="http://www.ech.ch/xmlns/eCH-0021/3" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://www.ech.ch/xmlns/eCH-0011/4" />
+      <xsd:import namespace="http://www.ech.ch/xmlns/eCH-0010/3" />
+      <xsd:import namespace="http://www.ech.ch/xmlns/eCH-0044/1" />
+      <xsd:simpleType name="paperLockType">
+        <xsd:restriction base="eCH-0011:yesNoType" />
+      </xsd:simpleType>
+      <xsd:simpleType name="dataLockType">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="0" />
+          <xsd:enumeration value="1" />
+          <xsd:enumeration value="2" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="typeOfRelationshipType">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="1" />
+          <xsd:enumeration value="2" />
+          <xsd:enumeration value="3" />
+          <xsd:enumeration value="4" />
+          <xsd:enumeration value="5" />
+          <xsd:enumeration value="6" />
+          <xsd:enumeration value="7" />
+          <xsd:enumeration value="8" />
+          <xsd:enumeration value="9" />
+          <xsd:enumeration value="10" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="basedOnLawType">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="308" />
+          <xsd:enumeration value="309" />
+          <xsd:enumeration value="310" />
+          <xsd:enumeration value="311" />
+          <xsd:enumeration value="312" />
+          <xsd:enumeration value="368" />
+          <xsd:enumeration value="369" />
+          <xsd:enumeration value="370" />
+          <xsd:enumeration value="371" />
+          <xsd:enumeration value="372" />
+          <xsd:enumeration value="392" />
+          <xsd:enumeration value="393" />
+          <xsd:enumeration value="394" />
+          <xsd:enumeration value="395-1" />
+          <xsd:enumeration value="395-2" />
+          <xsd:enumeration value="397-a" />
+          <xsd:enumeration value="385" />
+          <xsd:enumeration value="386" />
+          <xsd:enumeration value="327-1" />
+          <xsd:enumeration value="393" />
+          <xsd:enumeration value="394" />
+          <xsd:enumeration value="395" />
+          <xsd:enumeration value="396" />
+          <xsd:enumeration value="397" />
+          <xsd:enumeration value="398" />
+          <xsd:enumeration value="399" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="householdNumberType">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="9" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="occupationType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" form="qualified" name="jobTitle">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:token">
+                <xsd:maxLength value="100" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element form="qualified" name="kindOfEmployment">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:length value="1" />
+                <xsd:enumeration value="0" />
+                <xsd:enumeration value="1" />
+                <xsd:enumeration value="2" />
+                <xsd:enumeration value="3" />
+                <xsd:enumeration value="4" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="employer">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:token">
+                <xsd:maxLength value="100" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="placeOfWork" type="eCH-0010:addressInformationType" />
+          <xsd:element minOccurs="0" form="qualified" name="placeOfEmployer" type="eCH-0010:addressInformationType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="placeOfOriginAddonType">
+        <xsd:sequence>
+          <xsd:element form="qualified" name="origin" type="eCH-0011:placeOfOriginType" />
+          <xsd:element minOccurs="0" form="qualified" name="reasonOfAcquisition">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:enumeration value="1" />
+                <xsd:enumeration value="2" />
+                <xsd:enumeration value="3" />
+                <xsd:enumeration value="4" />
+                <xsd:enumeration value="5" />
+                <xsd:enumeration value="6" />
+                <xsd:enumeration value="8" />
+                <xsd:enumeration value="9" />
+                <xsd:enumeration value="10" />
+                <xsd:enumeration value="11" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="naturalizationDate" type="xsd:date" />
+          <xsd:element minOccurs="0" form="qualified" name="expatriationDate" type="xsd:date" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="relationshipType">
+        <xsd:sequence>
+          <xsd:element form="qualified" name="typeOfRelationship" type="typeOfRelationshipType" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="basedOnLaw" type="basedOnLawType" />
+          <xsd:element minOccurs="0" form="qualified" name="basedOnLawAddOn">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:token">
+                <xsd:minLength value="1" />
+                <xsd:maxLength value="100" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element form="qualified" name="care" type="eCH-0011:yesNoType" />
+          <xsd:element form="qualified" name="partner">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice>
+                  <xsd:element form="qualified" name="personIdentification" type="eCH-0044:personIdentificationType" />
+                  <xsd:element form="qualified" name="personIdentificationPartner" type="eCH-0044:personIdentificationPartnerType" />
+                  <xsd:element form="qualified" name="partnerIdOrganisation" type="eCH-0011:partnerIdOrganisationType" />
+                </xsd:choice>
+                <xsd:element minOccurs="0" form="qualified" name="address" type="eCH-0010:mailAddressType" />
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="nameOfParentAtBirthType">
+        <xsd:choice>
+          <xsd:sequence>
+            <xsd:element form="qualified" name="firstName" type="eCH-0044:officialFirstNameType" />
+            <xsd:element form="qualified" name="officialName" type="eCH-0044:baseNameType" />
+          </xsd:sequence>
+          <xsd:sequence>
+            <xsd:element form="qualified" name="firstNameOnly" type="eCH-0044:officialFirstNameType" />
+          </xsd:sequence>
+          <xsd:sequence>
+            <xsd:element form="qualified" name="officialNameOnly" type="eCH-0044:baseNameType" />
+          </xsd:sequence>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.ech.ch/xmlns/eCH-0078/2" targetNamespace="http://www.ech.ch/xmlns/eCH-0078/2" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:simpleType name="infoTextType">
+        <xsd:restriction base="xsd:string" />
+      </xsd:simpleType>
+      <xsd:complexType name="infoType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" form="qualified" name="code">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="250" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="textEnglish" type="infoTextType" />
+          <xsd:element minOccurs="0" form="qualified" name="textGerman" type="infoTextType" />
+          <xsd:element minOccurs="0" form="qualified" name="textFrench" type="infoTextType" />
+          <xsd:element minOccurs="0" form="qualified" name="textItalian" type="infoTextType" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns:eCH-0020="http://www.ech.ch/xmlns/eCH-0020/2" xmlns:eCH-0007="http://www.ech.ch/xmlns/eCH-0007/4" xmlns:eCH-0044="http://www.ech.ch/xmlns/eCH-0044/1" xmlns:eCH-0010="http://www.ech.ch/xmlns/eCH-0010/3" xmlns:eCH-0078="http://www.ech.ch/xmlns/eCH-0078/2" xmlns:eCH-0021="http://www.ech.ch/xmlns/eCH-0021/3" xmlns="http://www.zuerich.ch/xmlns/eZH-0020/3" xmlns:eCH-0011="http://www.ech.ch/xmlns/eCH-0011/4" targetNamespace="http://www.zuerich.ch/xmlns/eZH-0020/3" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://www.ech.ch/xmlns/eCH-0011/4" />
+      <xsd:import namespace="http://www.ech.ch/xmlns/eCH-0044/1" />
+      <xsd:import namespace="http://www.ech.ch/xmlns/eCH-0078/2" />
+      <xsd:import namespace="http://www.ech.ch/xmlns/eCH-0020/2" />
+      <xsd:import namespace="http://www.ech.ch/xmlns/eCH-0007/4" />
+      <xsd:import namespace="http://www.ech.ch/xmlns/eCH-0010/3" />
+      <xsd:import namespace="http://www.ech.ch/xmlns/eCH-0021/3" />
+      <xsd:element name="dataRequestRequestLight">
+        <xsd:annotation>
+          <xsd:documentation>Service S01e Datenanfrage Light - Request</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element form="qualified" name="dataRequestHeader">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" form="qualified" name="techuserId">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="20" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element form="qualified" name="enduserId">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="20" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" form="qualified" name="enduserName">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="50" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element form="qualified" name="dataRequestBody" type="p2:eventDataRequestLight" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="dataRequestResponse">
+        <xsd:annotation>
+          <xsd:documentation>Service S01c Datenanfrage - Response</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:choice>
+            <xsd:element form="qualified" name="baseDelivery">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element form="qualified" name="numberOfMessages" type="eCH-0020:numberOfMessagesType" />
+                  <xsd:element maxOccurs="unbounded" form="qualified" name="messages" type="p2:eventBaseDelivery" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element form="qualified" name="dataRequestError" type="eCH-0078:infoType" />
+          </xsd:choice>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:simpleType name="typeOfDMPType">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="0">
+            <xsd:annotation>
+              <xsd:documentation>unbekannt</xsd:documentation>
+            </xsd:annotation>
+          </xsd:enumeration>
+          <xsd:enumeration value="1">
+            <xsd:annotation>
+              <xsd:documentation>Eigentümer</xsd:documentation>
+            </xsd:annotation>
+          </xsd:enumeration>
+          <xsd:enumeration value="2">
+            <xsd:annotation>
+              <xsd:documentation>Mieter</xsd:documentation>
+            </xsd:annotation>
+          </xsd:enumeration>
+          <xsd:enumeration value="3">
+            <xsd:annotation>
+              <xsd:documentation>Untermieter</xsd:documentation>
+            </xsd:annotation>
+          </xsd:enumeration>
+          <xsd:enumeration value="4">
+            <xsd:annotation>
+              <xsd:documentation>Heim</xsd:documentation>
+            </xsd:annotation>
+          </xsd:enumeration>
+          <xsd:enumeration value="5">
+            <xsd:annotation>
+              <xsd:documentation>Kontakt</xsd:documentation>
+            </xsd:annotation>
+          </xsd:enumeration>
+          <xsd:enumeration value="6">
+            <xsd:annotation>
+              <xsd:documentation>Amt</xsd:documentation>
+            </xsd:annotation>
+          </xsd:enumeration>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="DMPType">
+        <xsd:sequence>
+          <xsd:element form="qualified" name="typeOfDMP" type="p2:typeOfDMPType" />
+          <xsd:element form="qualified" name="partner">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:choice>
+                  <xsd:element form="qualified" name="personIdentification" type="eCH-0044:personIdentificationType" />
+                  <xsd:element form="qualified" name="personIdentificationPartner" type="eCH-0044:personIdentificationPartnerType" />
+                  <xsd:element form="qualified" name="partnerIdOrganisation" type="eCH-0011:partnerIdOrganisationType" />
+                </xsd:choice>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element form="qualified" name="address" type="p2:DMPAddressType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="additionalAddressesType">
+        <xsd:annotation>
+          <xsd:documentation>zusätzliche Adressen</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" form="qualified" name="addressATA" type="p2:additionalAddressesAddressType">
+            <xsd:annotation>
+              <xsd:documentation>Tatsächlicher Aufenthalt</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="addressZWW" type="p2:additionalAddressesAddressType">
+            <xsd:annotation>
+              <xsd:documentation>Adresse der Zweitwohnung</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="addressAusw" type="p2:additionalAddressesAddressType">
+            <xsd:annotation>
+              <xsd:documentation>Auswärtige Adresse</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="addressAbstimmung" type="p2:additionalAddressesAddressType">
+            <xsd:annotation>
+              <xsd:documentation>Abstimmungsadresse</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="NESTRegisterType">
+        <xsd:annotation>
+          <xsd:documentation>NEST Register Daten</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" form="qualified" name="effectiveDate" type="xsd:date">
+            <xsd:annotation>
+              <xsd:documentation>Effektivdatum SR</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="runNo">
+            <xsd:annotation>
+              <xsd:documentation>Laufnummer gültig ab SR</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:nonNegativeInteger">
+                <xsd:minInclusive value="0" />
+                <xsd:maxInclusive value="99" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="deliveryNo" type="xsd:integer">
+            <xsd:annotation>
+              <xsd:documentation>Belieferungsnummer</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="taxRegister">
+            <xsd:annotation>
+              <xsd:documentation>Steuerregister</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:nonNegativeInteger">
+                <xsd:minInclusive value="0" />
+                <xsd:maxInclusive value="99" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="createDat" type="xsd:date">
+            <xsd:annotation>
+              <xsd:documentation>Mutations-Erstellungsdatum</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="createTime" type="xsd:time">
+            <xsd:annotation>
+              <xsd:documentation>Mutationszeit</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="lockTaxId">
+            <xsd:annotation>
+              <xsd:documentation>Sperre Steuerausweis (für dritte Person)</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:nonNegativeInteger">
+                <xsd:minInclusive value="0" />
+                <xsd:maxInclusive value="99" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="OKVType">
+        <xsd:annotation>
+          <xsd:documentation>OKV Daten</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" form="qualified" name="deliveryNo" type="xsd:integer">
+            <xsd:annotation>
+              <xsd:documentation>Belieferungsnummer</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="showYear" type="xsd:gYear">
+            <xsd:annotation>
+              <xsd:documentation>Anzeigejahr</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="sequenceNumber">
+            <xsd:annotation>
+              <xsd:documentation>Folgenummer</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:nonNegativeInteger">
+                <xsd:minInclusive value="0" />
+                <xsd:maxInclusive value="999" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="jurisdiction" type="xsd:token">
+            <xsd:annotation>
+              <xsd:documentation>Zuständigkeit</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="household">
+            <xsd:annotation>
+              <xsd:documentation>Partnersystem-ID</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:nonNegativeInteger">
+                <xsd:minInclusive value="0" />
+                <xsd:maxInclusive value="999999999" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="personType" type="xsd:token">
+            <xsd:annotation>
+              <xsd:documentation>OKV Personenart</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="accountingYear" type="xsd:gYear">
+            <xsd:annotation>
+              <xsd:documentation>Abrechnungsjahr</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="healthInsurance">
+            <xsd:annotation>
+              <xsd:documentation>Kasse / Krankenkasse</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:nonNegativeInteger">
+                <xsd:minInclusive value="0" />
+                <xsd:maxInclusive value="9999" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="premiumCategory" type="xsd:token">
+            <xsd:annotation>
+              <xsd:documentation>Prämienkategorie</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="cheapening" type="xsd:token">
+            <xsd:annotation>
+              <xsd:documentation>Keine Prämienverbilligung</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="claim">
+            <xsd:annotation>
+              <xsd:documentation>Betrag Anspruch</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="13" />
+                <xsd:fractionDigits value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="payOut">
+            <xsd:annotation>
+              <xsd:documentation>Betrag Auszahlung</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="13" />
+                <xsd:fractionDigits value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="dateDisplay" type="xsd:date">
+            <xsd:annotation>
+              <xsd:documentation>Datum der Anzeige der Kasse</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="settlementFrom" type="xsd:gYearMonth">
+            <xsd:annotation>
+              <xsd:documentation>Abrechnungszeitraum von</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="settlementTo" type="xsd:gYearMonth">
+            <xsd:annotation>
+              <xsd:documentation>Abrechnungszeitraum bis</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="displayOnPerson" type="xsd:date">
+            <xsd:annotation>
+              <xsd:documentation>Datum der Anzeige der Person</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="insuranceFrom" type="xsd:gYearMonth">
+            <xsd:annotation>
+              <xsd:documentation>Per-Datum Versicherung</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="allocation" type="xsd:token">
+            <xsd:annotation>
+              <xsd:documentation>amtliche Zuteilung</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="eligibility" type="xsd:token">
+            <xsd:annotation>
+              <xsd:documentation>Anspruchsberechtigung</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="eligibilityGroup" type="xsd:token">
+            <xsd:annotation>
+              <xsd:documentation>Anspruchsgruppe</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="controlDataFrom" type="xsd:token">
+            <xsd:annotation>
+              <xsd:documentation>Herkunft der Steuerdaten</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="taxRates" type="xsd:token">
+            <xsd:annotation>
+              <xsd:documentation>Tarif der Steuerdaten</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="sourceTaxAmount">
+            <xsd:annotation>
+              <xsd:documentation>Quellensteuerbetrag"</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="13" />
+                <xsd:fractionDigits value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="taxAmount">
+            <xsd:annotation>
+              <xsd:documentation>Steuerbares Einkommen"</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="13" />
+                <xsd:fractionDigits value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="taxAssets">
+            <xsd:annotation>
+              <xsd:documentation>Steuerbares Vermögen"</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="13" />
+                <xsd:fractionDigits value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="exceptionType">
+            <xsd:annotation>
+              <xsd:documentation>Art der Ausnahme"</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:token">
+                <xsd:maxLength value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="beginException" type="xsd:gYearMonth">
+            <xsd:annotation>
+              <xsd:documentation>Beginn Ausnahme</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="endException" type="xsd:gYearMonth">
+            <xsd:annotation>
+              <xsd:documentation>Ende Ausnahme</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="lossFormNo">
+            <xsd:annotation>
+              <xsd:documentation>Verlustscheinnummer</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:token">
+                <xsd:maxLength value="12" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="totalLossForm">
+            <xsd:annotation>
+              <xsd:documentation>Anzahl total übernommene Verlustscheine</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:nonNegativeInteger">
+                <xsd:minInclusive value="0" />
+                <xsd:maxInclusive value="999" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="takePremiumFrom" type="xsd:gYearMonth">
+            <xsd:annotation>
+              <xsd:documentation>Zeitraum von letzte Prämienübernahme</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="takePremiumTo" type="xsd:gYearMonth">
+            <xsd:annotation>
+              <xsd:documentation>Zeitraum bis letzte Prämienübernahme</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="manInvolved" type="xsd:token">
+            <xsd:annotation>
+              <xsd:documentation>Mann betroffen</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="womanInvolved" type="xsd:token">
+            <xsd:annotation>
+              <xsd:documentation>Mann betroffen</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="childsInvolved">
+            <xsd:annotation>
+              <xsd:documentation>Anzahl Kinder betroffen</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:nonNegativeInteger">
+                <xsd:minInclusive value="0" />
+                <xsd:maxInclusive value="99" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="amountPremium">
+            <xsd:annotation>
+              <xsd:documentation>Betrag letzte Prämienübernahme</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="13" />
+                <xsd:fractionDigits value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="payDate" type="xsd:date">
+            <xsd:annotation>
+              <xsd:documentation>Auszahlungsdatum</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="createDate" type="xsd:date">
+            <xsd:annotation>
+              <xsd:documentation>Erstellungs-Mutationsdatum</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="createTime" type="xsd:time">
+            <xsd:annotation>
+              <xsd:documentation>Mutationszeit</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="userId">
+            <xsd:annotation>
+              <xsd:documentation>Sachbearbeitung</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:token">
+                <xsd:maxLength value="10" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="eventDataRequestLight">
+        <xsd:sequence>
+          <xsd:element form="qualified" name="requestPersonIdentification">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element form="qualified" name="personId">
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:token">
+                      <xsd:maxLength value="10" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="codeType">
+        <xsd:annotation>
+          <xsd:documentation>Kodierungen</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element form="qualified" name="codeType">
+            <xsd:annotation>
+              <xsd:documentation>Kodierungsart</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:token">
+                <xsd:maxLength value="4" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element form="qualified" name="code">
+            <xsd:annotation>
+              <xsd:documentation>Kodierung</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:token">
+                <xsd:maxLength value="8" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="codeDateTo" type="xsd:date">
+            <xsd:annotation>
+              <xsd:documentation>gültig bis</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="coredataType">
+        <xsd:annotation>
+          <xsd:documentation>Zusätzliche Personendaten</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" form="qualified" name="coName">
+            <xsd:annotation>
+              <xsd:documentation>Namensergänzung</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:token">
+                <xsd:maxLength value="100" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="partnerName">
+            <xsd:annotation>
+              <xsd:documentation>Partnerschaftsname</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:token">
+                <xsd:maxLength value="100" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="choiceNickname">
+            <xsd:annotation>
+              <xsd:documentation>Frei wählbarer Rufname</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:token">
+                <xsd:maxLength value="100" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="dateOfDeathFrom" type="xsd:date">
+            <xsd:annotation>
+              <xsd:documentation>Sterbedatum von</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="dateOfDenom" type="xsd:date">
+            <xsd:annotation>
+              <xsd:documentation>Effektivdatum Konfession</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="dateOfNameChange" type="xsd:date">
+            <xsd:annotation>
+              <xsd:documentation>Rechtskraft Namensänderung</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="dateOfNaturalization" type="xsd:date">
+            <xsd:annotation>
+              <xsd:documentation>Einbürgerungsdatum</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="personActive" type="eCH-0011:yesNoType">
+            <xsd:annotation>
+              <xsd:documentation>Person aktiv</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="swissType">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" form="qualified" name="placeOfOrigin" type="p2:placeOfOriginType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="additionalAddressesAddressType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" form="qualified" name="EGID" type="eCH-0011:EGIDType" />
+          <xsd:element minOccurs="0" form="qualified" name="EWID" type="eCH-0011:EWIDType" />
+          <xsd:element form="qualified" name="address" type="p2:addressInformationType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="anyPersonType">
+        <xsd:annotation>
+          <xsd:documentation>zusätzliche Daten zur Person</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" form="qualified" name="stay" type="p2:stayType">
+            <xsd:annotation>
+              <xsd:documentation>Aufenthalt</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="swiss" type="p2:swissType">
+            <xsd:annotation>
+              <xsd:documentation>Schweizer</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="placeOfOriginType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" form="qualified" name="originId" type="eCH-0007:municipalityIdType" />
+          <xsd:element form="qualified" name="originName">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="50" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element form="qualified" name="canton" type="eCH-0007:cantonAbbreviationType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="NESTTargetType">
+        <xsd:annotation>
+          <xsd:documentation>NEST Solldaten</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" form="qualified" name="taxYear" type="xsd:gYear">
+            <xsd:annotation>
+              <xsd:documentation>Steuerjahr</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="taxType">
+            <xsd:annotation>
+              <xsd:documentation>Steuerart</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:nonNegativeInteger">
+                <xsd:minInclusive value="0" />
+                <xsd:maxInclusive value="99" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="settlementCase">
+            <xsd:annotation>
+              <xsd:documentation>Abrechnungsfall</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:nonNegativeInteger">
+                <xsd:minInclusive value="0" />
+                <xsd:maxInclusive value="99" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="targetNo">
+            <xsd:annotation>
+              <xsd:documentation>Soll-Nummer</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:nonNegativeInteger">
+                <xsd:minInclusive value="0" />
+                <xsd:maxInclusive value="99" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="trancheNo">
+            <xsd:annotation>
+              <xsd:documentation>Tranchennummer</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:nonNegativeInteger">
+                <xsd:minInclusive value="0" />
+                <xsd:maxInclusive value="99" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="deliveryNo" type="xsd:integer">
+            <xsd:annotation>
+              <xsd:documentation>Belieferungsnummer</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="createDat" type="xsd:date">
+            <xsd:annotation>
+              <xsd:documentation>Mutations-Erstellungsdatum</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="createTime" type="xsd:time">
+            <xsd:annotation>
+              <xsd:documentation>Mutationszeit</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="cancelCode">
+            <xsd:annotation>
+              <xsd:documentation>Stornocode</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:nonNegativeInteger">
+                <xsd:minInclusive value="0" />
+                <xsd:maxInclusive value="99" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="ahvNo">
+            <xsd:annotation>
+              <xsd:documentation>AHV-Nummer</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:token">
+                <xsd:maxLength value="11" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="predispCode">
+            <xsd:annotation>
+              <xsd:documentation>Veranlagungscode</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:nonNegativeInteger">
+                <xsd:minInclusive value="0" />
+                <xsd:maxInclusive value="99" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="zurichTaxIncome">
+            <xsd:annotation>
+              <xsd:documentation>Zürich Steuerbares Einkommen</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="13" />
+                <xsd:fractionDigits value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="totalTaxIncome">
+            <xsd:annotation>
+              <xsd:documentation>Gesamt Steuerbares Vermögen</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="13" />
+                <xsd:fractionDigits value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="zurichTaxAssets">
+            <xsd:annotation>
+              <xsd:documentation>Zürich Steuerbares Einkommen</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="13" />
+                <xsd:fractionDigits value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="totalTaxAssets">
+            <xsd:annotation>
+              <xsd:documentation>Gesamt Steuerbares Vermögen</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="13" />
+                <xsd:fractionDigits value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="taxRates">
+            <xsd:annotation>
+              <xsd:documentation>Steuertarif</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:nonNegativeInteger">
+                <xsd:minInclusive value="0" />
+                <xsd:maxInclusive value="99" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="taxRegister">
+            <xsd:annotation>
+              <xsd:documentation>Steuerregister</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:nonNegativeInteger">
+                <xsd:minInclusive value="0" />
+                <xsd:maxInclusive value="99" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="billingDate" type="xsd:date">
+            <xsd:annotation>
+              <xsd:documentation>Faktura-Datum</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="noOfDays">
+            <xsd:annotation>
+              <xsd:documentation>Anzahl Tage</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:nonNegativeInteger">
+                <xsd:minInclusive value="0" />
+                <xsd:maxInclusive value="999" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="NESTType">
+        <xsd:annotation>
+          <xsd:documentation>NEST Daten</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="register" type="p2:NESTRegisterType" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="target" type="p2:NESTTargetType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="absenceType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" form="qualified" name="absence">
+            <xsd:annotation>
+              <xsd:documentation>Typ der Abwesenheit</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:token">
+                <xsd:length value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="absenceReason">
+            <xsd:annotation>
+              <xsd:documentation>Zweck der Abwesenheit</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:token">
+                <xsd:maxLength value="30" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="absenceFrom" type="xsd:date">
+            <xsd:annotation>
+              <xsd:documentation>Abwesend von</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="absenceTo" type="xsd:date">
+            <xsd:annotation>
+              <xsd:documentation>Abwesend bis</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="liabilityType">
+        <xsd:annotation>
+          <xsd:documentation>Pflichten</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element form="qualified" name="liablityType">
+            <xsd:annotation>
+              <xsd:documentation>Pflichtart</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:token">
+                <xsd:maxLength value="4" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element form="qualified" name="liabilityCode">
+            <xsd:annotation>
+              <xsd:documentation>Pflichtcode</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:token">
+                <xsd:maxLength value="8" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DMPAddressType">
+        <xsd:annotation>
+          <xsd:documentation>Drittmeldepflicht</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" form="qualified" name="EGID" type="eCH-0011:EGIDType" />
+          <xsd:element minOccurs="0" form="qualified" name="EWID" type="eCH-0011:EWIDType" />
+          <xsd:element form="qualified" name="address" type="eCH-0010:addressInformationType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="eventBaseDelivery">
+        <xsd:annotation>
+          <xsd:documentation>Lieferung Gesamtbestand</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element form="qualified" name="baseDeliveryPerson" type="eCH-0020:baseDeliveryPersonType" />
+          <xsd:element minOccurs="0" form="qualified" name="nameOfFather" type="eCH-0021:nameOfParentAtBirthType" />
+          <xsd:element minOccurs="0" form="qualified" name="nameOfMother" type="eCH-0021:nameOfParentAtBirthType" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="Relationship" type="eCH-0021:relationshipType" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="occupation" type="eCH-0021:occupationType" />
+          <xsd:element minOccurs="0" form="qualified" name="householdNumber" type="eCH-0021:householdNumberType" />
+          <xsd:element minOccurs="0" form="qualified" name="dataLock" type="eCH-0021:dataLockType" />
+          <xsd:element minOccurs="0" form="qualified" name="paperLock" type="eCH-0021:paperLockType" />
+          <xsd:choice>
+            <xsd:element form="qualified" name="hasMainResidence" type="eCH-0011:mainResidenceType" />
+            <xsd:element form="qualified" name="hasSecondaryResidence" type="eCH-0011:secondaryResidenceType" />
+            <xsd:element form="qualified" name="hasOtherResidence" type="eCH-0011:otherResidenceType" />
+          </xsd:choice>
+          <xsd:element minOccurs="0" form="qualified" name="extension" type="p2:extensionBaseDelivery" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="extensionBaseDelivery">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" form="qualified" name="coredata" type="p2:coredataType">
+            <xsd:annotation>
+              <xsd:documentation>Hauptdaten</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="anyPerson" type="p2:anyPersonType">
+            <xsd:annotation>
+              <xsd:documentation>zusätzliche Daten zur Person</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="absence" type="p2:absenceType">
+            <xsd:annotation>
+              <xsd:documentation>Abwesenheit</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="codes" type="p2:codeType">
+            <xsd:annotation>
+              <xsd:documentation>Kodierungen</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="liabilities" type="p2:liabilityType">
+            <xsd:annotation>
+              <xsd:documentation>Pflichten</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="additionalAddresses" type="p2:additionalAddressesType">
+            <xsd:annotation>
+              <xsd:documentation>zusätzliche Adressen</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="DMP" type="p2:DMPType">
+            <xsd:annotation>
+              <xsd:documentation>Drittmeldepflicht</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="NEST" type="p2:NESTType">
+            <xsd:annotation>
+              <xsd:documentation>NEST Daten</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="OKV" type="p2:OKVType">
+            <xsd:annotation>
+              <xsd:documentation>OKV Daten</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="addressInformationType">
+        <xsd:annotation>
+          <xsd:documentation>wie eCH-0010 addressInformationType, jedoch alle Felder ausser Land als Kannfelder</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" form="qualified" name="addressLine1" type="eCH-0010:addressLineType" />
+          <xsd:element minOccurs="0" form="qualified" name="addressLine2" type="eCH-0010:addressLineType" />
+          <xsd:element minOccurs="0" form="qualified" name="street" type="eCH-0010:streetType" />
+          <xsd:element minOccurs="0" form="qualified" name="houseNumber" type="eCH-0010:houseNumberType" />
+          <xsd:element minOccurs="0" form="qualified" name="dwellingNumber" type="eCH-0010:dwellingNumberType" />
+          <xsd:element minOccurs="0" form="qualified" name="postOfficeBoxNumber" type="eCH-0010:postOfficeBoxNumberType" />
+          <xsd:element minOccurs="0" form="qualified" name="postOfficeBoxText" type="eCH-0010:postOfficeBoxTextType" />
+          <xsd:element minOccurs="0" form="qualified" name="locality" type="eCH-0010:localityType" />
+          <xsd:element minOccurs="0" form="qualified" name="town" type="eCH-0010:townType" />
+          <xsd:element minOccurs="0" form="qualified" name="swissZipCode" type="eCH-0010:swissZipCodeType" />
+          <xsd:element minOccurs="0" form="qualified" name="swissZipCodeAddOn" type="eCH-0010:swissZipCodeAddOnType" />
+          <xsd:element minOccurs="0" form="qualified" name="swissZipCodeId" type="eCH-0010:swissZipCodeIdType" />
+          <xsd:element minOccurs="0" form="qualified" name="foreignZipCode" type="eCH-0010:foreignZipCodeType" />
+          <xsd:element form="qualified" name="country" type="eCH-0010:countryType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="stayType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" form="qualified" name="stayType">
+            <xsd:annotation>
+              <xsd:documentation>Aufenthaltsart</xsd:documentation>
+            </xsd:annotation>
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:token">
+                <xsd:maxLength value="10" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="stayTypeFromDate" type="xsd:date">
+            <xsd:annotation>
+              <xsd:documentation>Aufenthaltsart gültig von</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" form="qualified" name="stayTypeTillDate" type="xsd:date">
+            <xsd:annotation>
+              <xsd:documentation>Aufenthaltsart gültig bis</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.ech.ch/xmlns/eCH-0020/2" xmlns:eCH-0021="http://www.ech.ch/xmlns/eCH-0021/3" xmlns:eCH-0011="http://www.ech.ch/xmlns/eCH-0011/4" targetNamespace="http://www.ech.ch/xmlns/eCH-0020/2" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://www.ech.ch/xmlns/eCH-0011/4" />
+      <xsd:import namespace="http://www.ech.ch/xmlns/eCH-0021/3" />
+      <xsd:simpleType name="numberOfMessagesType">
+        <xsd:restriction base="xsd:nonNegativeInteger" />
+      </xsd:simpleType>
+      <xsd:complexType name="baseDeliveryPersonType">
+        <xsd:sequence>
+          <xsd:element form="qualified" name="person" type="eCH-0011:personType" />
+          <xsd:element form="qualified" name="anyPerson" type="eCH-0011:anyPersonType" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="placeOfOriginAddon" type="eCH-0021:placeOfOriginAddonType" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.ech.ch/xmlns/eCH-0008/2" targetNamespace="http://www.ech.ch/xmlns/eCH-0008/2" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:simpleType name="countryNameShortType">
+        <xsd:restriction base="xsd:token">
+          <xsd:maxLength value="50" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="countryIdISO2Type">
+        <xsd:restriction base="xsd:token">
+          <xsd:maxLength value="2" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="countryIdType">
+        <xsd:restriction base="xsd:integer">
+          <xsd:minInclusive value="1000" />
+          <xsd:maxInclusive value="9999" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="countryType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" form="qualified" name="countryId" type="countryIdType" />
+          <xsd:element minOccurs="0" form="qualified" name="countryIdISO2" type="countryIdISO2Type" />
+          <xsd:element form="qualified" name="countryNameShort" type="countryNameShortType" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.ech.ch/xmlns/eCH-0044/1" targetNamespace="http://www.ech.ch/xmlns/eCH-0044/1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:simpleType name="personIdCategoryType">
+        <xsd:restriction base="xsd:token">
+          <xsd:maxLength value="20" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="sexType">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="1" />
+          <xsd:enumeration value="2" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="baseNameType">
+        <xsd:restriction base="xsd:token">
+          <xsd:maxLength value="100" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="officialFirstNameType">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="50" />
+          <xsd:whiteSpace value="collapse" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="vnType">
+        <xsd:restriction base="xsd:unsignedLong">
+          <xsd:minInclusive value="7560000000001" />
+          <xsd:maxInclusive value="7569999999999" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="personIdentificationType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" form="qualified" name="vn" type="vnType" />
+          <xsd:element form="qualified" name="localPersonId" type="namedPersonIdType" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="OtherPersonId" type="namedPersonIdType" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="EuPersonId" type="namedPersonIdType" />
+          <xsd:element form="qualified" name="officialName" type="baseNameType" />
+          <xsd:element form="qualified" name="firstName" type="baseNameType" />
+          <xsd:element form="qualified" name="sex" type="sexType" />
+          <xsd:element form="qualified" name="dateOfBirth" type="datePartiallyKnownType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="namedPersonIdType">
+        <xsd:sequence>
+          <xsd:element form="qualified" name="personIdCategory" type="personIdCategoryType" />
+          <xsd:element form="qualified" name="personId">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:token">
+                <xsd:maxLength value="20" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="datePartiallyKnownType">
+        <xsd:choice>
+          <xsd:element form="qualified" name="yearMonthDay" type="xsd:date" />
+          <xsd:element form="qualified" name="yearMonth" type="xsd:gYearMonth" />
+          <xsd:element form="qualified" name="year" type="xsd:gYear" />
+        </xsd:choice>
+      </xsd:complexType>
+      <xsd:complexType name="personIdentificationPartnerType">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" form="qualified" name="vn" type="vnType" />
+          <xsd:element form="qualified" name="localPersonId" type="namedPersonIdType" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="OtherPersonId" type="namedPersonIdType" />
+          <xsd:element form="qualified" name="officialName" type="baseNameType" />
+          <xsd:element form="qualified" name="firstName" type="baseNameType" />
+          <xsd:element minOccurs="0" form="qualified" name="sex" type="sexType" />
+          <xsd:element minOccurs="0" form="qualified" name="dateOfBirth" type="datePartiallyKnownType" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns:eCH-0007="http://www.ech.ch/xmlns/eCH-0007/4" xmlns:eCH-0044="http://www.ech.ch/xmlns/eCH-0044/1" xmlns:eCH-0010="http://www.ech.ch/xmlns/eCH-0010/3" xmlns:eCH-0008="http://www.ech.ch/xmlns/eCH-0008/2" xmlns:eCH-0006="http://www.ech.ch/xmlns/eCH-0006/2" xmlns="http://www.ech.ch/xmlns/eCH-0011/4" targetNamespace="http://www.ech.ch/xmlns/eCH-0011/4" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://www.ech.ch/xmlns/eCH-0044/1" />
+      <xsd:import namespace="http://www.ech.ch/xmlns/eCH-0010/3" />
+      <xsd:import namespace="http://www.ech.ch/xmlns/eCH-0007/4" />
+      <xsd:import namespace="http://www.ech.ch/xmlns/eCH-0008/2" />
+      <xsd:import namespace="http://www.ech.ch/xmlns/eCH-0006/2" />
+      <xsd:simpleType name="nationalityStatusType">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="0" />
+          <xsd:enumeration value="1" />
+          <xsd:enumeration value="2" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="separationType">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="1" />
+          <xsd:enumeration value="2" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="EWIDType">
+        <xsd:restriction base="xsd:unsignedInt">
+          <xsd:minInclusive value="1" />
+          <xsd:maxInclusive value="999" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="typeOfHouseholdType">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="1" />
+          <xsd:enumeration value="2" />
+          <xsd:enumeration value="3" />
+          <xsd:enumeration value="0" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="EGIDType">
+        <xsd:restriction base="xsd:unsignedInt">
+          <xsd:minInclusive value="1" />
+          <xsd:maxInclusive value="999999999" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="languageType">
+        <xsd:restriction base="xsd:token">
+          <xsd:maxLength value="2" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="unknownType">
+        <xsd:restriction base="xsd:token">
+          <xsd:enumeration value="0" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="maritalStatusType">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="1" />
+          <xsd:enumeration value="2" />
+          <xsd:enumeration value="3" />
+          <xsd:enumeration value="4" />
+          <xsd:enumeration value="5" />
+          <xsd:enumeration value="6" />
+          <xsd:enumeration value="7" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="religionType">
+        <xsd:restriction base="xsd:string">
+          <xsd:pattern value="\d{3,6}" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="yesNoType">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="0" />
+          <xsd:enumeration value="1" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="partnerShipAbolitionType">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="1" />
+          <xsd:enumeration value="2" />
+          <xsd:enumeration value="3" />
+          <xsd:enumeration value="4" />
+          <xsd:enumeration value="9" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="partnerIdOrganisationType">
+        <xsd:sequence>
+          <xsd:element form="qualified" name="localPersonId" type="eCH-0044:namedPersonIdType" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="OtherPersonId" type="eCH-0044:namedPersonIdType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="destinationType">
+        <xsd:sequence>
+          <xsd:choice>
+            <xsd:element form="qualified" name="unknown" type="unknownType" />
+            <xsd:element form="qualified" name="swissTown" type="eCH-0007:swissMunicipalityType" />
+            <xsd:element form="qualified" name="foreignCountry">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element form="qualified" name="country" type="eCH-0008:countryType" />
+                  <xsd:element minOccurs="0" form="qualified" name="town">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:whiteSpace value="collapse" />
+                        <xsd:maxLength value="100" />
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:choice>
+          <xsd:element minOccurs="0" form="qualified" name="mailAddress" type="eCH-0010:addressInformationType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="secondaryResidenceType">
+        <xsd:sequence>
+          <xsd:element form="qualified" name="mainResidence" type="eCH-0007:swissMunicipalityType" />
+          <xsd:element form="qualified" name="secondaryResidence">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element form="qualified" name="reportingMunicipality" type="eCH-0007:swissMunicipalityType" />
+                <xsd:element form="qualified" name="arrivalDate" type="xsd:date" />
+                <xsd:element form="qualified" name="comesFrom" type="destinationType" />
+                <xsd:element form="qualified" name="dwellingAddress" type="dwellingAddressType" />
+                <xsd:element minOccurs="0" form="qualified" name="departureDate" type="xsd:date" />
+                <xsd:element minOccurs="0" form="qualified" name="goesTo" type="destinationType" />
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="otherResidenceType">
+        <xsd:sequence>
+          <xsd:element form="qualified" name="secondaryResidenceInformation">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element form="qualified" name="reportingMunicipality" type="eCH-0007:swissMunicipalityType" />
+                <xsd:element form="qualified" name="arrivalDate" type="xsd:date" />
+                <xsd:element form="qualified" name="comesFrom" type="destinationType" />
+                <xsd:element form="qualified" name="dwellingAddress" type="dwellingAddressType" />
+                <xsd:element minOccurs="0" form="qualified" name="departureDate" type="xsd:date" />
+                <xsd:element minOccurs="0" form="qualified" name="goesTo" type="destinationType" />
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="anyPersonType">
+        <xsd:choice>
+          <xsd:element form="qualified" name="swiss">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element maxOccurs="unbounded" form="qualified" name="placeOfOrigin" type="placeOfOriginType" />
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element form="qualified" name="foreigner">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element form="qualified" name="residencePermit" type="eCH-0006:residencePermitType" />
+                <xsd:element minOccurs="0" form="qualified" name="residencePermitTill" type="xsd:date" />
+                <xsd:element minOccurs="0" form="qualified" name="nameOnPassport" type="eCH-0044:baseNameType" />
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+      <xsd:complexType name="personType">
+        <xsd:sequence>
+          <xsd:element form="qualified" name="personIdentification" type="eCH-0044:personIdentificationType" />
+          <xsd:element form="qualified" name="coredata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" form="qualified" name="originalName" type="eCH-0044:baseNameType" />
+                <xsd:element minOccurs="0" form="qualified" name="alliancePartnershipName" type="eCH-0044:baseNameType" />
+                <xsd:element minOccurs="0" form="qualified" name="aliasName" type="eCH-0044:baseNameType" />
+                <xsd:element minOccurs="0" form="qualified" name="otherName" type="eCH-0044:baseNameType" />
+                <xsd:element minOccurs="0" form="qualified" name="callName" type="eCH-0044:baseNameType" />
+                <xsd:element form="qualified" name="placeOfBirth" type="birthplaceType" />
+                <xsd:element minOccurs="0" form="qualified" name="dateOfDeath" type="xsd:date" />
+                <xsd:element form="qualified" name="maritalData" type="maritalDataType" />
+                <xsd:element form="qualified" name="nationality" type="nationalityType" />
+                <xsd:element minOccurs="0" form="qualified" name="contact">
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:choice minOccurs="0">
+                        <xsd:element form="qualified" name="personIdentification" type="eCH-0044:personIdentificationType" />
+                        <xsd:element form="qualified" name="personIdentificationPartner" type="eCH-0044:personIdentificationPartnerType" />
+                        <xsd:element form="qualified" name="partnerIdOrgnisation" type="partnerIdOrganisationType" />
+                      </xsd:choice>
+                      <xsd:element form="qualified" name="contactAddress" type="eCH-0010:mailAddressType" />
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+                <xsd:element minOccurs="0" form="qualified" name="languageOfCorrespondance" type="languageType" />
+                <xsd:element form="qualified" name="religion" type="religionType" />
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="mainResidenceType">
+        <xsd:sequence>
+          <xsd:element form="qualified" name="mainResidence">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element form="qualified" name="reportingMunicipality" type="eCH-0007:swissMunicipalityType" />
+                <xsd:element form="qualified" name="arrivalDate" type="xsd:date" />
+                <xsd:element minOccurs="0" form="qualified" name="comesFrom" type="destinationType" />
+                <xsd:element form="qualified" name="dwellingAddress" type="dwellingAddressType" />
+                <xsd:element minOccurs="0" form="qualified" name="departureDate" type="xsd:date" />
+                <xsd:element minOccurs="0" form="qualified" name="goesTo" type="destinationType" />
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" form="qualified" name="secondaryResidence" type="eCH-0007:swissMunicipalityType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="nationalityType">
+        <xsd:sequence>
+          <xsd:element form="qualified" name="nationalityStatus" type="nationalityStatusType" />
+          <xsd:element minOccurs="0" form="qualified" name="country" type="eCH-0008:countryType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="maritalDataType">
+        <xsd:sequence>
+          <xsd:element form="qualified" name="maritalStatus" type="maritalStatusType" />
+          <xsd:element minOccurs="0" form="qualified" name="dateOfMaritalStatus" type="xsd:date" />
+          <xsd:element minOccurs="0" form="qualified" name="separation" type="separationType" />
+          <xsd:element minOccurs="0" form="qualified" name="dateOfSeparation" type="xsd:date" />
+          <xsd:element minOccurs="0" form="qualified" name="cancelationReason" type="partnerShipAbolitionType" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="dwellingAddressType">
+        <xsd:sequence>
+          <xsd:choice minOccurs="0">
+            <xsd:sequence>
+              <xsd:element form="qualified" name="EGID" type="EGIDType" />
+              <xsd:choice minOccurs="0">
+                <xsd:element form="qualified" name="EWID" type="EWIDType" />
+                <xsd:element minOccurs="0" form="qualified" name="householdID" type="xsd:token" />
+              </xsd:choice>
+            </xsd:sequence>
+            <xsd:element form="qualified" name="withoutEGID">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element form="qualified" name="householdID" type="xsd:token" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:choice>
+          <xsd:element form="qualified" name="address" type="eCH-0010:swissAddressInformationType" />
+          <xsd:element form="qualified" name="typeOfHousehold" type="typeOfHouseholdType" />
+          <xsd:element minOccurs="0" form="qualified" name="movingDate" type="xsd:date" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="birthplaceType">
+        <xsd:choice>
+          <xsd:element form="qualified" name="unknown" type="unknownType" />
+          <xsd:element form="qualified" name="swissTown">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element form="qualified" name="country">
+                  <xsd:simpleType>
+                    <xsd:restriction base="eCH-0010:countryType">
+                      <xsd:enumeration value="CH" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+                <xsd:element form="qualified" name="municipality" type="eCH-0007:swissMunicipalityType" />
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element form="qualified" name="foreignCountry">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element form="qualified" name="country" type="eCH-0008:countryType" />
+                <xsd:element minOccurs="0" form="qualified" name="foreignBirthTown">
+                  <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                      <xsd:whiteSpace value="collapse" />
+                      <xsd:maxLength value="100" />
+                    </xsd:restriction>
+                  </xsd:simpleType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+      <xsd:complexType name="placeOfOriginType">
+        <xsd:sequence>
+          <xsd:element form="qualified" name="originName">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="50" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element form="qualified" name="canton" type="eCH-0007:cantonAbbreviationType" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="p2.dataRequestRequestLight">
+    <wsdl:documentation />
+    <wsdl:part name="dataRequestRequestLight" element="p2:dataRequestRequestLight" />
+  </wsdl:message>
+  <wsdl:message name="p2.dataRequestResponse">
+    <wsdl:documentation />
+    <wsdl:part name="dataRequestResponse" element="p2:dataRequestResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SI_O101_L_Anfrage_sync_ob">
+    <wsdl:documentation />
+    <wsdl:operation name="SI_O101_L_Anfrage_sync_ob">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_O101_L_Anfrage_sync_ob" />
+      </wsp:Policy>
+      <wsdl:input message="p1:p2.dataRequestRequestLight" />
+      <wsdl:output message="p1:p2.dataRequestResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_O101_L_Anfrage_sync_obBinding" type="p1:SI_O101_L_Anfrage_sync_ob">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="SI_O101_L_Anfrage_sync_ob">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_O101_L_Anfrage_sync_obService">
+    <wsdl:port name="SI_O101_L_Anfrage_sync_obPort" binding="p1:SI_O101_L_Anfrage_sync_obBinding">
+      <address location="https://szhm2403.stzh.ch:443/XISOAPAdapter/MessageServlet?channel=KISS:BC_O101_S01e_PAnfrage:CC_O101_S01e_WS_OUT&amp;version=3.0&amp;Sender.Party=http%3A%2F%2Fsap.com%2Fxi%2FXI%3AXIParty%3AKISS&amp;Sender.Service=BC_O101_S01e_PAnfrage&amp;Interface=http%3A%2F%2Fstzh.ch%2FO101%2FeCH-0020%2F2.3%5ESI_O101_L_Anfrage_sync_ob" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

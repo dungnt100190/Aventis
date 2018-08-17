@@ -1,0 +1,9 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:dxprg="http://schemas.devexpress.com/winfx/2008/xaml/propertygrid" xmlns:dxprgt="http://schemas.devexpress.com/winfx/2008/xaml/propertygrid/themekeys" xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys">        
+
+    <Style x:Key="{dxprgt:CategoryThemeKey ResourceKey=ExpanderStyle}" TargetType="{x:Type ToggleButton}">
+        <Setter Property="Template" Value="{DynamicResource {dxprgt:CategoryThemeKey ResourceKey=ExpanderTemplate}}" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+    </Style>
+    <DataTemplate x:Key="{dxprgt:CategoryThemeKey ResourceKey=RowDataTemplate}" />        
+
+</ResourceDictionary>

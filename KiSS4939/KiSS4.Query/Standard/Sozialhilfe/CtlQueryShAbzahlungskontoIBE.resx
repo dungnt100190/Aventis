@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>17, 17</value>
+  </data>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>DECLARE @IsAlleKonti INT;
+DECLARE @IsNurAktiveKonti INT;
+DECLARE @DatumVon DATETIME;
+DECLARE @DatumBis DATETIME;
+
+DECLARE @Person TABLE 
+(
+  BaPersonId INT,
+  UserID INT
+);
+
+SET @IsAlleKonti = 0;
+--- SET @IsAlleKonti = {edtAlleKonti};
+SET @IsNurAktiveKonti = 0;
+--- SET @IsNurAktiveKonti = {edtNurAktiveKonti};
+SET @DatumVon = convert(datetime, '01.01.1900', 104);
+--- SET @DatumVon = {edtDatumVon};
+SET @DatumBis = convert(datetime, '01.01.9999', 104);
+--- SET @DatumBis = {edtDatumBis};
+
+INSERT INTO @Person
+  SELECT PRS.BaPersonID, 
+         FAL.UserID
+  FROM dbo.BaPerson          PRS WITH (READUNCOMMITTED)    
+    LEFT JOIN dbo.FaLeistung FAL WITH (READUNCOMMITTED) ON FAL.BaPersonID = PRS.BaPersonID 
+                                                       AND FAL.ModulID = 2
+                                                       AND FAL.DatumVon = (SELECT MAX(DatumVon) 
+                                                                           FROM dbo.FaLeistung WITH (READUNCOMMITTED)
+                                                                           WHERE BaPersonID = PRS.BaPersonID 
+                                                                             AND ModulID = 2)
+  WHERE 1 = 1
+--- AND PRS.BaPersonID = {edtBaPersonID.LookupID}
+--- AND PRS.NNummer like '%' + {edtNNr} + '%'
+--- AND PRS.ZEMISNummer like '%' + {edtZemisNr} + '%'
+
+DECLARE @baPersID INT;
+DECLARE @userID INT;
+
+DECLARE CursorPersons CURSOR FAST_FORWARD FOR
+    SELECT FFP.BaPersonID, 
+           FAL.UserID
+    FROM dbo.FaFallPerson       FFP WITH (READUNCOMMITTED)
+      INNER JOIN dbo.FaFall     LEI WITH (READUNCOMMITTED) ON LEI.FaFallID = FFP.FaFallID
+      INNER JOIN dbo.FaLeistung FAL WITH (READUNCOMMITTED) ON FAL.BaPersonID = LEI.BaPersonID 
+                                                          AND FAL.ModulID = 2
+                                                          AND FAL.DatumVon = (SELECT MAX(DatumVon) 
+                                                                              FROM dbo.FaLeistung WITH (READUNCOMMITTED)
+                                                                              WHERE BaPersonID = LEI.BaPersonID 
+                                                                                AND ModulID = 2)        
+    WHERE 1 = 1
+--- AND FFP.BaPersonID = {edtBaPersonID.LookupID}
+
+OPEN CursorPersons
+WHILE (1 = 1)
+BEGIN
+  FETCH NEXT 
+  FROM CursorPersons 
+  INTO @baPersID, @userID
+  
+  IF (@@FETCH_STATUS &lt;&gt; 0)
+  BEGIN
+    BREAK;
+  END;
+  
+  UPDATE @Person 
+  SET UserID = @userID 
+  WHERE BaPersonId = @baPersID
+  
+END;
+
+CLOSE CursorPersons;
+DEALLOCATE CursorPersons;
+
+SELECT [BaPersonID$]      = PRS.BaPersonID,
+       [N-Nr]             = PRS.NNummer,
+       [Personen-Nr]      = PRS.BaPersonID,
+       [ZEMIS-Nr]         = PRS.ZEMISNummer,
+       [Klient]           = PRS.Name + ISNULL(', ' + PRS.Vorname, ''),
+       [Ende Zuständigk.] = PRS.CAusweisDatum,
+       [Beginn]           = BSK.DatumVon,
+       [Bezeichnung]      = BSK.NameSpezkonto,
+       [Start Saldo]      = BSK.StartSaldo,
+       [aktueller Saldo]  = dbo.fnBgSpezkonto(BSK.BgSpezkontoID, 3, BBG.BgBudgetID, DEFAULT),
+       [Ende]             = BSK.DatumBis
+FROM @Person                  P
+  INNER JOIN dbo.BaPerson     PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = P.BaPersonID     
+  LEFT  JOIN dbo.XUser        USR WITH (READUNCOMMITTED) ON USR.UserID = P.UserID
+  INNER JOIN dbo.BgSpezkonto  BSK WITH (READUNCOMMITTED) ON BSK.BaPersonID = P.BaPersonID 
+                                                        AND BSK.BgSpezkontoTypCode = 3
+  INNER JOIN dbo.BgFinanzplan BFP WITH (READUNCOMMITTED) ON BFP.FaLeistungID = BSK.FaLeistungID
+  INNER JOIN dbo.BgBudget     BBG WITH (READUNCOMMITTED) ON BBG.BgFinanzplanID = BFP.BgFinanzplanID 
+                                                        AND BBG.MasterBudget = 0 
+WHERE BBG.BgBewilligungStatusCode = 5
+  AND BBG.BgBudgetID = (SELECT TOP 1 B.BgBudgetID
+                        FROM dbo.BgBudget B WITH (READUNCOMMITTED)
+                        WHERE B.BgFinanzplanID = BBG.BgFinanzplanID
+                          AND B.BgBewilligungStatusCode = 5 -- Bewilligung erteilt
+                          AND B.MasterBudget = 0
+                          AND dbo.fnDateSerial(B.Jahr, B.Monat, 1) BETWEEN @DatumVon AND @DatumBis
+                        ORDER BY Jahr DESC, Monat DESC)
+   AND BFP.BgFinanzplanID = (SELECT TOP 1 F.BgFinanzplanID 
+                             FROM dbo.BgFinanzplan F WITH (READUNCOMMITTED)
+                             WHERE F.FaLeistungID = BSK.FaLeistungID
+                               AND F.DatumVon &lt; @DatumBis
+                               AND (F.DatumBis IS NULL OR F.DatumBis &gt; @DatumVon)
+                             ORDER BY F.DatumVon DESC)
+  AND dbo.fnDateSerial(Jahr, Monat, 1) BETWEEN @DatumVon AND @DatumBis
+--- AND P.UserID = {edtUserID.LookupID}
+AND (@IsNurAktiveKonti = 0 OR BSK.DatumBis IS NULL OR BSK.DatumBis &gt; @DatumVon)
+AND (@IsNurAktiveKonti = 0 OR BSK.DatumVon &lt; @DatumBis)
+AND (@IsAlleKonti = 1 OR BSK.DatumBis IS NULL OR BSK.DatumBis &gt; @DatumVon)
+AND (@IsAlleKonti = 1 OR BSK.DatumVon &lt; @DatumBis)
+AND EXISTS(SELECT TOP 1 1 
+           FROM dbo.vwBgPosition   BP WITH (READUNCOMMITTED)
+               INNER JOIN BgBudget BB ON BB.BgBudgetID = BP.BgBudgetID 
+                                     AND BB.MasterBudget = 0
+           WHERE BP.BgSpezkontoID = BSK.BgSpezkontoID
+             AND dbo.fnDateSerial(BB.Jahr, BB.Monat, 1) BETWEEN @DatumVon AND @DatumBis)
+ORDER BY PRS.Name, PRS.Vorname;</value>
+  </data>
+  <data name="xDocument.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAF1JREFUOE9jZAAC
+        Y2Pj/yAaGzh79iwjhjhIw///MzGwmJjYfxDGqSEtjeE/MgYpBhmEoYmQDSANKM7GpQHZmVg1oDsJxgdp
+        pI4N2EIKJjbqJLIiDqSJEMaVovGKAwBnM3PWBP8PfwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="edtDatumBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFVJREFUOE9jZAAC
+        Y2Pj/yCaEDh79iwjWA1MAzaNWOVAgsRguAuIcRKKGmROQwMD3D/IbKwaQApgitBp6mgAeYokG4abBmT/
+        YKQ3smKapLREKFkjywMAd9eDN3Z9MMsAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="edtDatumVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFVJREFUOE9jZAAC
+        Y2Pj/yCaEDh79iwjWA1MAzaNWOVAgsRguAuIcRKKGmROQwMD3D/IbKwaQApgitBp6mgAeYokG4abBmT/
+        YKQ3smKapLREKFkjywMAd9eDN3Z9MMsAAAAASUVORK5CYII=
+</value>
+  </data>
+</root>

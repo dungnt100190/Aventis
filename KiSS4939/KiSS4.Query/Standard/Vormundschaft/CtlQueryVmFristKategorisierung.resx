@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>DECLARE @DatumVon DATETIME,
+        @DatumBis DATETIME,
+        @FieldID1 INT;        
+
+SELECT @DatumVon = '17530101',
+       @DatumBis = '99991231';
+---SET @DatumVon = {edtDatumVon};
+---SET @DatumBis = {edtDatumBis};
+
+DECLARE @ModulID      varchar(500);
+SET @ModulID  = NULL;
+---  set @ModulID  = {edtModulID};
+
+DECLARE @Module TABLE (
+  ModulID INT
+);
+
+INSERT INTO @Module(ModulID)
+  SELECT CONVERT(INT, SplitValue)
+  FROM dbo.fnSplitStringToValues(@ModulID, ',', 0);  
+  
+DECLARE @ProzessCode  INT;
+SET @ProzessCode = NULL;
+--- SET @ProzessCode = {edtProzess};
+  
+
+
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatPInstitution', @FieldID1 OUT
+
+DECLARE @IsLOVVmMassnahmeAbschlussgrund BIT;
+DECLARE @IsLOVVmVaterschaftAbschlussgrund BIT;
+DECLARE @IsLOVVmErbschaftAbschlussgrund BIT;
+DECLARE @IsLOVVmPflegekindAbschlussgrund BIT;
+DECLARE @IsLOVVmAuftragAbschlussgrund BIT;
+
+SET @IsLOVVmMassnahmeAbschlussgrund = CASE WHEN (SELECT COUNT(*) FROM dbo.XLOV WHERE LOVName = 'VmMassnahmeAbschlussgrund') &gt; 0 THEN 1 ELSE 0 END;
+SET @IsLOVVmVaterschaftAbschlussgrund = CASE WHEN (SELECT COUNT(*) FROM dbo.XLOV WHERE LOVName = 'VmVaterschaftAbschlussgrund') &gt; 0 THEN 1 ELSE 0 END;
+SET @IsLOVVmErbschaftAbschlussgrund = CASE WHEN (SELECT COUNT(*) FROM dbo.XLOV WHERE LOVName = 'VmErbschaftAbschlussgrund') &gt; 0 THEN 1 ELSE 0 END;
+SET @IsLOVVmPflegekindAbschlussgrund = CASE WHEN (SELECT COUNT(*) FROM dbo.XLOV WHERE LOVName = 'VmPflegekindAbschlussgrund') &gt; 0 THEN 1 ELSE 0 END;
+SET @IsLOVVmAuftragAbschlussgrund = CASE WHEN (SELECT COUNT(*) FROM dbo.XLOV WHERE LOVName = 'VmAuftragAbschlussgrund') &gt; 0 THEN 1 ELSE 0 END;
+
+SELECT 
+  BaPersonID$          = LEI.BaPersonID,
+  Sektion              = XOU.ItemName,
+  SAR                  = USR.NameVorname,
+  [Name Klient]        = PRS.NameVorname,
+  [Alter]              = PRS.[Alter],
+  Geschlecht           = dbo.fnLOVText('Geschlecht', PRS.GeschlechtCode),
+  Nation               = PRS.Nationalitaet,
+  Kategorie            = dbo.fnLOVText('FaKategorie', KAT.FaKategorieCode),
+  Beginn               = KAT.Datum,
+  Frist                = CASE FKP.FaKategorisierungEksProduktFristTypCode
+                           WHEN 1 THEN DATEADD(DAY, FKP.Frist, KAT.Datum)
+                           WHEN 2 THEN DATEADD(MONTH, FKP.Frist, KAT.Datum)
+                           WHEN 3 THEN DATEADD(YEAR, FKP.Frist, KAT.Datum)
+                         END,
+  Auftrag              = dbo.fnLOVText('VmAuftrag', LEI.VmAuftragCode),
+  [Eröffnung]          = LEI.DatumVon,
+  Abschluss            = LEI.DatumBis,
+  Abschlussgrund       = CASE -- Siehe CtlVmProzesse.Init( )
+                            WHEN LEI.FaProzessCode = 501 AND @IsLOVVmMassnahmeAbschlussgrund = 1 THEN dbo.fnLOVText('VmMassnahmeAbschlussgrund', LEI.AbschlussGrundCode)
+                            WHEN LEI.FaProzessCode = 502 AND @IsLOVVmVaterschaftAbschlussgrund = 1 THEN dbo.fnLOVText('VmVaterschaftAbschlussgrund', LEI.AbschlussGrundCode)
+                            WHEN LEI.FaProzessCode = 503 AND @IsLOVVmErbschaftAbschlussgrund = 1 THEN dbo.fnLOVText('VmErbschaftAbschlussgrund', LEI.AbschlussGrundCode)
+                            WHEN LEI.FaProzessCode = 504 AND @IsLOVVmPflegekindAbschlussgrund = 1 THEN dbo.fnLOVText('VmPflegekindAbschlussgrund', LEI.AbschlussGrundCode)
+                            WHEN LEI.FaProzessCode = 505 AND @IsLOVVmAuftragAbschlussgrund = 1 THEN dbo.fnLOVText('VmAuftragAbschlussgrund', LEI.AbschlussGrundCode)
+                         ELSE
+                             dbo.fnLOVText('Abschlussgrund', LEI.AbschlussGrundCode)                        
+                         END,                      
+  [Gefährdungsmeldung] = VGM.DatumEingang,
+  Platzierung          = dbo.fnLOVText('VmPlatzierungInstitution', CONVERT(INT, DV1.Value))
+FROM dbo.FaLeistung                          LEI WITH (READUNCOMMITTED)
+  INNER JOIN dbo.vwUser                      USR WITH (READUNCOMMITTED) ON USR.UserID = LEI.UserID
+  INNER JOIN dbo.vwPerson                    PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = LEI.BaPersonID 
+                                                                       AND PRS.Testperson = 0
+  LEFT  JOIN dbo.XOrgUnit_User               OUU WITH (READUNCOMMITTED) ON OUU.UserID = LEI.UserID 
+                                                                       AND OUU.OrgUnitMemberCode = 2
+  LEFT  JOIN dbo.XOrgUnit                    XOU WITH (READUNCOMMITTED) ON XOU.OrgUnitID = OUU.OrgUnitID
+  LEFT  JOIN dbo.FaKategorisierung           KAT WITH (READUNCOMMITTED) ON KAT.BaPersonID = LEI.BaPersonID
+                                                                       AND KAT.FaKategorisierungID = (SELECT TOP 1 KAT2.FaKategorisierungID
+                                                                                                      FROM dbo.FaKategorisierung KAT2 WITH (READUNCOMMITTED)
+                                                                                                      WHERE KAT2.BaPersonID = LEI.BaPersonID
+                                                                                                      ORDER BY KAT2.Datum DESC)
+  LEFT JOIN dbo.DynaValue                    DV1 WITH (READUNCOMMITTED) ON DV1.DynaFieldID  = @FieldID1 -- VmAuftragStatPInstitution
+                                                                       AND DV1.FaLeistungID = LEI.FaLeistungID
+  LEFT  JOIN dbo.FaKategorisierungEksProdukt FKP WITH (READUNCOMMITTED) ON FKP.FaKategorisierungEksProduktID = KAT.FaKategorisierungEksProduktID
+  LEFT  JOIN dbo.VmGefaehrdungsMeldung       VGM WITH (READUNCOMMITTED) ON VGM.FaLeistungID = LEI.FaLeistungID
+                                                                       AND VGM.VmGefaehrdungsMeldungID = (SELECT TOP 1 VGM2.VmGefaehrdungsMeldungID
+                                                                                                          FROM dbo.VmGefaehrdungsMeldung VGM2 WITH (READUNCOMMITTED)
+                                                                                                          WHERE VGM2.FaLeistungID = LEI.FaLeistungID
+                                                                                                          ORDER BY VGM2.DatumEingang DESC)
+  LEFT  JOIN dbo.BgFinanzplan                FPL WITH (READUNCOMMITTED) ON FPL.FaLeistungID = LEI.FaLeistungID 
+                                                                       AND FPL.BgFinanzplanID = (SELECT TOP 1 BgFinanzplanID
+                                                                                                 FROM dbo.BgFinanzplan WITH (READUNCOMMITTED)
+                                                                                                 WHERE FaLeistungID = LEI.FaLeistungID 
+                                                                                                   AND BgBewilligungStatusCode in (5, 9) 
+                                                                                                   AND dbo.fnDateOf(DatumVon) &lt;= @DatumBis 
+                                                                                                   AND dbo.fnDateOf(DatumBis) &gt;= @DatumVon 
+                                                                                                 ORDER BY DatumVon DESC)
+WHERE 1 = 1
+  AND dbo.fnDateOf(LEI.DatumVon) &lt;= @DatumBis
+  AND ISNULL(dbo.fnDateOf(LEI.DatumBis), @DatumBis) &gt;= @DatumVon
+  AND (@ModulID IS NULL OR LEI.ModulID IN (SELECT ModulID FROM @Module))
+  AND (@ProzessCode IS NULL OR LEI.FaProzessCode = @ProzessCode)
+---  AND (XOU.OrgUnitID = {edtOrgUnitID} OR XOU.ParentID = {edtOrgUnitID})
+---  AND OUU.UserID = {edtUserID.LookupID}
+
+  -- Gleiche Bedingungen wie in Abfrage "Fallentwicklung nach Modulen":
+  --------------------------------------------------------------------
+  -- bei S-Leistungen, nur solche Fälle mit einem bewilligten Finanzplan in diesem Zeitraum
+  AND (LEI.ModulID &lt;&gt; 3 OR FPL.BgFinanzplanID IS NOT NULL) 
+  -- bei I-,V- oder A-Leistungen: nur solche Fälle ohne Prozesscode oder nicht Abklärungsprozess
+  AND (LEI.ModulID NOT IN (4,5,6) OR LEI.FaProzessCode IS NULL OR LEI.FaProzessCode &lt;&gt; 400)
+ORDER BY PRS.NameVorname</value>
+  </data>
+  <data name="edtUserID.LookupSQL" xml:space="preserve">
+    <value>SELECT
+  ID = UserID,
+  SAR = LastName + ISNULL(', ' + FirstName, ''),
+  [Kuerzel] = LogonName
+FROM dbo.XUser WITH (READUNCOMMITTED)
+WHERE LastName + ISNULL(', ' + FirstName, '') LIKE ISNULL({0}, '') + '%'
+ORDER BY SAR;</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="edtDatumBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtDatumVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+</root>

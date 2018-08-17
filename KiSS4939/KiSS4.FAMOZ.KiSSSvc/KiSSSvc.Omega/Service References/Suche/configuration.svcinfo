@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configurationSnapshot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas-microsoft-com:xml-wcfconfigurationsnapshot">
+  <behaviors />
+  <bindings>
+    <binding digest="System.ServiceModel.Configuration.BasicHttpBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089:&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data name=&quot;SI_O102_Suche_sync_obBinding&quot;&gt;&lt;security mode=&quot;Transport&quot; /&gt;&lt;/Data&gt;" bindingType="basicHttpBinding" name="SI_O102_Suche_sync_obBinding" />
+    <binding digest="System.ServiceModel.Configuration.BasicHttpBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089:&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data name=&quot;SI_O102_Suche_sync_obBinding1&quot; /&gt;" bindingType="basicHttpBinding" name="SI_O102_Suche_sync_obBinding1" />
+  </bindings>
+  <endpoints>
+    <endpoint normalizedDigest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;https://szhm2403.stzh.ch:443/XISOAPAdapter/MessageServlet?channel=:BC_O102_S07_PSuche:CC_O102_S07_WS_OUT&amp;amp;version=3.0&amp;amp;Sender.Service=BC_O102_S07_PSuche&amp;amp;Interface=http%3A%2F%2Fstzh.ch%2FO102%2FeCH-0020%2F2.3%5ESI_O102_Suche_sync_ob&quot; binding=&quot;basicHttpBinding&quot; bindingConfiguration=&quot;SI_O102_Suche_sync_obBinding&quot; contract=&quot;Suche.SI_O102_Suche_sync_ob&quot; name=&quot;SI_O102_Suche_sync_obPort&quot; /&gt;" digest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;https://szhm2403.stzh.ch:443/XISOAPAdapter/MessageServlet?channel=:BC_O102_S07_PSuche:CC_O102_S07_WS_OUT&amp;amp;version=3.0&amp;amp;Sender.Service=BC_O102_S07_PSuche&amp;amp;Interface=http%3A%2F%2Fstzh.ch%2FO102%2FeCH-0020%2F2.3%5ESI_O102_Suche_sync_ob&quot; binding=&quot;basicHttpBinding&quot; bindingConfiguration=&quot;SI_O102_Suche_sync_obBinding&quot; contract=&quot;Suche.SI_O102_Suche_sync_ob&quot; name=&quot;SI_O102_Suche_sync_obPort&quot; /&gt;" contractName="Suche.SI_O102_Suche_sync_ob" name="SI_O102_Suche_sync_obPort" />
+  </endpoints>
+</configurationSnapshot>

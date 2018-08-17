@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>DECLARE @LanguageCode INT;
+SET @LanguageCode = {1};
+
+DECLARE @AnmeldungsDatumFldID INT;
+DECLARE @EingangsbestätigungFldID INT;
+SET @AnmeldungsDatumFldID     = (SELECT DynaFieldID FROM dbo.DynaField WITH (READUNCOMMITTED) WHERE FieldName = 'FaIntAnmeldungDatum');
+SET @EingangsbestätigungFldID = (SELECT DynaFieldID FROM dbo.DynaField WITH (READUNCOMMITTED) WHERE FieldName = 'FaIntEingangsbestätigung');
+
+SELECT SAR                          = BEN.LastName + ISNULL(', ' + BEN.FirstName, ''),
+       Person                       = PRS.Name + ISNULL(', ' + PRS.Vorname, ''),
+       [Intake Anmeldedatum]        = CASE
+                                        WHEN SQL_VARIANT_PROPERTY(IAD.Value, 'BaseType') = 'DATETIME' THEN CONVERT(DATETIME, IAD.Value)
+                                        WHEN SQL_VARIANT_PROPERTY(IAD.Value, 'BaseType') = 'NVARCHAR' THEN CONVERT(DATETIME, IAD.Value, 104)
+                                        WHEN IAD.Value IS NOT NULL THEN CONVERT(DATETIME, '99990101')
+                                      END,
+       [Intake Eingangsbestätigung] = CASE
+                                        WHEN SQL_VARIANT_PROPERTY(IEB.Value, 'BaseType') = 'DATETIME' THEN CONVERT(DATETIME, IEB.Value)
+                                        WHEN SQL_VARIANT_PROPERTY(IEB.Value, 'BaseType') = 'NVARCHAR' THEN CONVERT(DATETIME, IEB.Value, 104)
+                                        WHEN IEB.Value IS NOT NULL THEN CONVERT(DATETIME, '99990101')
+                                      END,
+       [Fall-Nr.]                   = FAL.FaLeistungID,
+       [Eröffnet]                   = FAL.DatumVon,
+       Geburtsdatum                 = PRS.Geburtsdatum,
+       [AHV-Nr.]                    = PRS.AHVNummer,
+       [Vers.-Nr.]                  = PRS.Versichertennummer,
+       Modul                        = MOD.Name,
+       Abgeschlossen                = FAL.DatumBis,
+       NNummer                      = PRS.NNummer,
+       Geschlecht                   = CASE WHEN PRS.GeschlechtCode IS NOT NULL 
+                                        THEN dbo.fnGetGenderMLTitleMF(PRS.GeschlechtCode, @LanguageCode)
+                                        ELSE '?'
+                                      END,
+       Strasse                      = PRS.WohnsitzStrasse,
+       StrasseNr                    = PRS.WohnsitzHausNr,
+       PLZ                          = PRS.WohnsitzPLZ,
+       Ort                          = PRS.WohnsitzOrt,
+       Kanton                       = PRS.WohnsitzKanton,
+       Zivilstand                   = dbo.fnLOVMLText('Zivilstand', PRS.ZivilstandCode, @LanguageCode),
+       Nationalität                 = CASE @LanguageCode
+                                        WHEN 1 THEN PRS.Nationalitaet
+                                        WHEN 2 THEN PRS.NationalitaetFR
+                                        WHEN 3 THEN PRS.NationalitaetIT
+                                        ELSE PRS.Nationalitaet
+                                      END,
+       Heimatort                    = HEI.Name,
+       [Heimatort Kanton]           = HEI.Kanton,
+       Sektion                      = XOU.Itemname,
+       UserID$                      = BEN.UserID,
+       BaPersonID$                  = PRS.BaPersonID
+FROM   dbo.XUser                    BEN WITH (READUNCOMMITTED)
+       INNER JOIN dbo.FaLeistung    FAL WITH (READUNCOMMITTED) ON FAL.UserID = BEN.UserID
+       INNER JOIN dbo.vwPerson      PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = FAL.BaPersonID
+       INNER JOIN dbo.XModul        MOD WITH (READUNCOMMITTED) ON MOD.ModulID = FAL.ModulID
+       LEFT  JOIN dbo.BaGemeinde    HEI WITH (READUNCOMMITTED) ON HEI.BaGemeindeID = PRS.HeimatgemeindeBaGemeindeID
+       LEFT  JOIN dbo.XOrgUnit_User OUU WITH (READUNCOMMITTED) ON OUU.UserID = FAL.UserID
+                                                              AND OUU.OrgUnitMemberCode = 2
+       LEFT  JOIN dbo.XOrgUnit      XOU WITH (READUNCOMMITTED) ON XOU.OrgUnitID = OUU.OrgUnitID
+       LEFT  JOIN dbo.FaPhase       PHS WITH (READUNCOMMITTED) ON PHS.FaLeistungID = FAL.FaLeistungID
+                                                              AND PHS.FaPhaseCode = 1 -- Intakephase
+                                                              AND PHS.FaPhaseID = (SELECT TOP 1 FaPhaseID
+                                                                                   FROM dbo.FaPhase WITH (READUNCOMMITTED)
+                                                                                   WHERE FaLeistungID = FAL.FaLeistungID
+                                                                                     AND FaPhaseCode = 1
+                                                                                   ORDER BY DatumVon DESC)
+       LEFT  JOIN dbo.DynaValue     IAD WITH (READUNCOMMITTED) ON IAD.FaPhaseID = PHS.FaPhaseID
+                                                              AND IAD.DynaFieldID = @AnmeldungsDatumFldID
+                                                              AND IAD.GridRowID = 1
+       LEFT  JOIN dbo.DynaValue     IEB WITH (READUNCOMMITTED) ON IEB.FaPhaseID = PHS.FaPhaseID
+                                                              AND IEB.DynaFieldID = @EingangsbestätigungFldID
+                                                              AND IEB.GridRowID = 1
+WHERE 1 = 1
+  AND (PRS.PersonSichtbarSDFlag = dbo.fnGetPersonSichtbarFlag(0) or PRS.PersonSichtbarSDFlag = 1) 
+--- AND OUU.OrgUnitID = {edtOrgUnitID}
+--- AND BEN.UserID = {edtUserID.LookupID}
+--- AND ((FAL.DatumVon BETWEEN {edtDatumVon} AND {edtDatumBis}) OR
+---         (IAD.Value BETWEEN {edtDatumVon} AND {edtDatumBis}) OR
+---         (IEB.Value BETWEEN {edtDatumVon} AND {edtDatumBis}))
+--- AND PRS.Name + ISNULL(', ' + PRS.Vorname,'') like + {edtKlient} + '%'
+--- AND FAL.ModulID = {edtModulID}
+--- AND ({edtNurAktive} = 0 or FAL.DatumBis IS NULL)
+</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="edtDatumBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="edtDatumVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+</root>

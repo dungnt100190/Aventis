@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>/*
+  Description
+  9507 - Gibt eine Tabelle der Fälle die während 4 Monaten keine Geld bekommen haben. Zeitbereich bis 12 Monaten.
+*/
+
+DECLARE @TeamID INT;
+--- SET @TeamID = {edtSucheTeam};
+
+DECLARE @UserID INT;
+--- SET @UserID = {edtSucheUserID.LookupID};
+
+DECLARE @Abfragedatum DATETIME;
+SET @Abfragedatum = dbo.fnDateOf(GETDATE());
+
+-- 
+--     PeriodMitBuch.   PeriodeOhneBuch.                       
+--           &gt;0           =0
+--    |----------------|------|
+--   -12M            -4M     heute
+--
+DECLARE @DatumVonPeriodeOhneBuchung DATETIME;
+DECLARE @DatumBisPeriodeOhneBuchung DATETIME;
+DECLARE @DatumVonPeriodeMitBuchung DATETIME;
+DECLARE @DatumBisPeriodeMitBuchung DATETIME;
+
+SET @DatumVonPeriodeOhneBuchung = DATEADD(MONTH, -4, dbo.fnDateSerial(YEAR(@Abfragedatum),MONTH(@Abfragedatum),1))
+SET @DatumBisPeriodeOhneBuchung = @Abfragedatum
+SET @DatumVonPeriodeMitBuchung = DATEADD(MONTH, -12, dbo.fnDateSerial(YEAR(@Abfragedatum),MONTH(@Abfragedatum),1))
+SET @DatumBisPeriodeMitBuchung = @DatumVonPeriodeOhneBuchung
+
+
+DECLARE @RelevanteBuchungen TABLE 
+(
+  BaPersonID INT,
+  FaLeistungID INT,        
+  AusgleichsDatum DATETIME
+
+ )
+
+-- Get Max AusgleichtDatum von RelevanteBuchungen
+-- Hier müssen wir für jede BaPerson die FaLeistung der neuste Ausgleichdatum anzeigen.
+
+;WITH RelevanteBuchungenCte(BaPersonID, FaLeistungID, AusgleichsDatum) AS -- Liste der RelevanteBuchungen
+(
+  SELECT   BaPersonID,
+           FaLeistungID,       
+           Ausgleichsdatum
+  FROM fnGetRelevanteBuchungen(@DatumVonPeriodeMitBuchung, @DatumBisPeriodeOhneBuchung, @UserID, NULL,NULL,@TeamID) 
+), RelevanteBaPersonCte(BaPersonID,  Ausgleichdatum) AS -- Max(AusgleichDatum) Group By BaPersonID
+(
+  SELECT BaPersonID, AusgleichsDatum = MAX(AusgleichsDatum)
+  FROM   RelevanteBuchungenCte
+  GROUP BY BaPersonID
+), RelevanteBuchungenCteNurMaxAusgleichDatum (BaPersonID, FaLeistungID, Ausgleichsdatum) AS -- Max(FaLeistungID) für diese AusgleichDatum, Group by BaPersonID
+(
+  SELECT  BaPersonID = RelevanteBuchungenCte.BaPersonID, 
+          FaLeistungID= MAX(RelevanteBuchungenCte.FaLeistungID), 
+          AusgleichsDatum = MAX(RelevanteBaPersonCte.Ausgleichdatum) -- AusgleichtDatum schon auf Max, hier aber wegen der Struktur des Queries auch nötig
+  FROM RelevanteBuchungenCte
+  JOIN RelevanteBaPersonCte ON RelevanteBuchungenCte.BaPersonID = RelevanteBaPersonCte.BaPersonID AND RelevanteBuchungenCte.AusgleichsDatum = RelevanteBaPersonCte.Ausgleichdatum
+  GROUP BY RelevanteBuchungenCte.BaPersonID
+)
+
+/*
+Muster mit einfachen Werten
+
+;WITH A (BaPersonID, FaLeistungID,  Ausgleichdatum ) AS
+(
+  SELECT BaPersonID = 1, FaLeistungID = 5, Ausgleichdatum = '2014.08.30'
+  UNION ALL
+  SELECT BaPersonID = 1, FaLeistungID = 6, Ausgleichdatum = '2014.08.15'
+  UNION ALL
+  SELECT BaPersonID = 1, FaLeistungID = 7, Ausgleichdatum = '2014.08.01'
+  UNION ALL
+  SELECT BaPersonID = 2, FaLeistungID = 5, Ausgleichdatum = '2014.08.20'
+  UNION ALL
+  SELECT BaPersonID = 2, FaLeistungID = 6, Ausgleichdatum = '2014.08.20'
+  UNION ALL
+  SELECT BaPersonID = 2, FaLeistungID = 7, Ausgleichdatum = '2014.08.10'
+), At (BaPersonID,  Ausgleichdatum) As
+(
+SELECT BaPersonID, Ausgleichdatum = MAX(Ausgleichdatum)
+FROM   A 
+GROUP BY BaPersonID
+), Att (BaPersonID, FaLeistungID, AusgleichDatum) As
+(
+  SELECT  BaPersonID = A.BaPersonID, 
+          FaLeistungID= MAX(A.FaLeistungID), 
+          AusgleichDatum = MAX(At.AusgleichDatum)
+  FROM A
+  JOIN At ON A.BaPersonID = At.BaPersonID AND A.AusgleichDatum = At.AusgleichDatum
+  GROUP BY A.BaPersonID
+)
+
+SELECT * FROM Att
+*/
+
+  
+SELECT  FallBaPersonID$ = FAL.BaPersonID,
+        Abfragedatum = @Abfragedatum,        
+        [Monat mit letzter SH-Zahlung] = dbo.fnDateAsVarchar(AusgleichsDatum, 'yyyy.mm'),
+        Quartierteam = USR.OrgUnit,
+        [Fallführung W] = USR.LogonName,
+        [Fall-Nr.] = FAL.FaFallID,           
+        [LE-NR.] = LEI.FaLeistungID,
+        [Pers-Nr. Leistungsträger] = PRS.BaPersonID,
+        [Nachname Leistungsträger] = PRS.Name,
+        [Vorname Leistungsträger] = PRS.Vorname,
+        Abschlussgrund = dbo.fnLOVText('AbschlussGrund', LEI.AbschlussGrundCode),
+        [Datum bis] = LEI.DatumBis
+FROM RelevanteBuchungenCteNurMaxAusgleichDatum rlb
+JOIN FaLeistung LEI ON rlb.FaLeistungID = LEI.FaLeistungID  
+INNER JOIN FaFall FAL WITH(READUNCOMMITTED) ON LEI.FaFallID = FAL.FaFallID 
+INNER JOIN vwPerson PRS ON PRS.BaPersonID = LEI.BaPersonID
+LEFT JOIN vwUser USR ON USR.UserID = FAL.UserID 
+WHERE 1=1
+AND rlb.AusgleichsDatum &lt;  @DatumVonPeriodeOhneBuchung -- Neuste Buchung muss vor dem Zeitbereich 'OhneBuchung' stehen
+AND USR.UserID = ISNULL(@UserID, USR.UserID)
+AND USR.OrgUnitID = ISNULL(@TeamID, USR.OrgUnitID)
+ORDER BY AusgleichsDatum DESC, Quartierteam, USR.LogonName
+</value>
+  </data>
+</root>

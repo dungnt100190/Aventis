@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:p1="http://sap.ch/XI/cra" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="MI_MarkPersonOut" targetNamespace="http://sap.ch/XI/cra">
+   <wsdl:documentation>
+   Interface für Aufruf - MarkPerson (Code)
+   </wsdl:documentation>
+   <wsp:UsingPolicy wsdl:required="true" />
+   <wsp:Policy wsu:Id="OP_MI_MarkPersonOut" />
+   <wsdl:types>
+      <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://sap.ch/XI/zemis" targetNamespace="http://sap.ch/XI/zemis">
+         <xsd:complexType name="DT_CODE">
+            <xsd:sequence>
+               <xsd:element name="PARTNER" minOccurs="0">
+                  <xsd:annotation>
+                     <xsd:documentation>
+                     Business Partner Number
+                     </xsd:documentation>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                     <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="10" />
+                     </xsd:restriction>
+                  </xsd:simpleType>
+               </xsd:element>
+               <xsd:element name="CRA_CODE_TYPE" minOccurs="0">
+                  <xsd:annotation>
+                     <xsd:documentation>
+                     CRA : Code type
+                     </xsd:documentation>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                     <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="4" />
+                     </xsd:restriction>
+                  </xsd:simpleType>
+               </xsd:element>
+               <xsd:element name="CRA_CODE" minOccurs="0">
+                  <xsd:annotation>
+                     <xsd:documentation>
+                     CRA : Code
+                     </xsd:documentation>
+                  </xsd:annotation>
+                  <xsd:simpleType>
+                     <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="8" />
+                     </xsd:restriction>
+                  </xsd:simpleType>
+               </xsd:element>
+            </xsd:sequence>
+         </xsd:complexType>
+      </xsd:schema>
+      <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:p1="http://sap.ch/XI/zemis" xmlns="http://sap.ch/XI/cra" targetNamespace="http://sap.ch/XI/cra">
+         <xsd:import namespace="http://sap.ch/XI/zemis" />
+         <xsd:element name="MT_MarkPersonResponse" type="DT_RETURNCODES" />
+         <xsd:element name="MT_MarkPersonRequest" type="DT_CUSTOMCODES" />
+         <xsd:complexType name="DT_RETURNCODES">
+            <xsd:annotation>
+               <xsd:documentation xml:lang="EN">
+               Komplex Type - Verwendung in MarkPerson Response
+               </xsd:documentation>
+            </xsd:annotation>
+            <xsd:sequence>
+               <xsd:element name="RETURNCODES" type="DT_RETURNCODE" minOccurs="0" maxOccurs="unbounded" />
+            </xsd:sequence>
+         </xsd:complexType>
+         <xsd:complexType name="DT_RETURNCODE">
+            <xsd:annotation>
+               <xsd:documentation xml:lang="EN">
+               Single Type - Verwendung in MarkPerson Response
+               </xsd:documentation>
+            </xsd:annotation>
+            <xsd:sequence>
+               <xsd:element name="BPartner" type="xsd:string" />
+               <xsd:element name="ReturnCode" type="xsd:string" />
+               <xsd:element name="ReturnMessage" type="xsd:string" />
+            </xsd:sequence>
+         </xsd:complexType>
+         <xsd:complexType name="DT_CUSTOMCODES">
+            <xsd:annotation>
+               <xsd:documentation xml:lang="EN">
+               Für MarkPerson (Code) Request und CheckPerson (Code) Response
+               </xsd:documentation>
+            </xsd:annotation>
+            <xsd:sequence>
+               <xsd:element name="CUSTOMCODES" type="p1:DT_CODE" minOccurs="0" maxOccurs="unbounded" />
+            </xsd:sequence>
+         </xsd:complexType>
+      </xsd:schema>
+   </wsdl:types>
+   <wsdl:message name="MT_MarkPersonRequest">
+      <wsdl:documentation>
+      Mark Person (Code) Request Message
+      </wsdl:documentation>
+      <wsdl:part name="MT_MarkPersonRequest" element="p1:MT_MarkPersonRequest" />
+   </wsdl:message>
+   <wsdl:message name="MT_MarkPersonResponse">
+      <wsdl:documentation>
+      MarkPerson (Code) Response Message
+      </wsdl:documentation>
+      <wsdl:part name="MT_MarkPersonResponse" element="p1:MT_MarkPersonResponse" />
+   </wsdl:message>
+   <wsdl:portType name="MI_MarkPersonOut">
+      <wsdl:documentation>
+      Interface für Aufruf - MarkPerson (Code)
+      </wsdl:documentation>
+      <wsdl:operation name="MI_MarkPersonOut">
+         <wsdl:documentation>
+         Interface für Aufruf - MarkPerson (Code)
+         </wsdl:documentation>
+         <wsp:Policy>
+            <wsp:PolicyReference URI="#OP_MI_MarkPersonOut" />
+         </wsp:Policy>
+         <wsdl:input message="p1:MT_MarkPersonRequest" />
+         <wsdl:output message="p1:MT_MarkPersonResponse" />
+      </wsdl:operation>
+   </wsdl:portType>
+   <wsdl:binding name="MI_MarkPersonOutBinding" type="p1:MI_MarkPersonOut">
+      <soap:binding xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+      <wsdl:operation name="MI_MarkPersonOut">
+         <soap:operation xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="http://sap.com/xi/WebService/soap1.1" />
+         <wsdl:input>
+            <soap:body xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <soap:body xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+   </wsdl:binding>
+  <wsdl:service name="MI_MarkPersonOutService">
+    <wsdl:port name="MI_MarkPersonOutPort" binding="p1:MI_MarkPersonOutBinding" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+      <soap:address location="http://dbs2006.bgov.ch:8000/XISOAPAdapter/MessageServlet?channel=:KISS:CC_SOAP_KISS_MP_SENDER&amp;version=3.0&amp;Sender.Service=KISS&amp;Interface=http%3A%2F%2Fsap.ch%2FXI%2Fcra%5EMI_MarkPersonOut" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>DECLARE @searchZusatz int
+SET @searchZusatz = null
+--- SET @searchZusatz = {edtZusatzCode}
+
+DECLARE @searchAPV int
+SET @searchAPV = null
+--- SET @searchAPV = {edtEinsatzPlatzID}
+
+DECLARE @datVon datetime
+SET @datVon = convert(datetime, '01.01.' + Convert(varchar, year(GetDate())) , 104)
+--- SET @datVon = {edtDatumVon}
+
+DECLARE @datBis datetime
+SET @datBis = GetDate()
+--- SET @datBis = {edtDatumBis}
+
+EXEC spKaGetTeilnehmerstruktur @datVon,@datBis,@searchAPV,@searchZusatz</value>
+  </data>
+  <metadata name="qrySTES.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>119, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>60</value>
+  </metadata>
+  <data name="qrySTES.SelectStatement" xml:space="preserve">
+    <value>DECLARE @searchZusatz int
+SET @searchZusatz = null
+--- SET @searchZusatz = {edtZusatzCode}
+
+DECLARE @searchAPV int
+SET @searchAPV = null
+--- SET @searchAPV = {edtEinsatzPlatzID}
+
+DECLARE @datVon datetime
+SET @datVon = convert(datetime, '01.01.' + Convert(varchar, year(GetDate())) , 104)
+--- SET @datVon = {edtDatumVon}
+
+DECLARE @datBis datetime
+SET @datBis = GetDate()
+--- SET @datBis = {edtDatumBis}
+
+/**************************/
+/* Main select            */
+/**************************/
+DECLARE @tmpSTESMain TABLE (
+  ID           int identity,
+  BaPersonID   int,
+  FaLeistungID int,
+  FaProzessCode int,
+  KaEinsatzID  int,
+  APVZusatzCode int,
+  KaEinsatzplatzID int,
+  AnweisungCode int,
+  GenderCode   int,
+  NatCode      int,
+  [Alter]      int,
+  BildungCode  int,
+  DatumVon	   datetime,
+  DatumBis     datetime,
+  Austritt     datetime,
+  [Code Austritt] varchar(200),
+  ZuweiserID   int,
+  Austrittgrund varchar(100)
+  primary key (ID))
+
+DECLARE @tmpSTESCursor TABLE (
+  ID           int identity,
+  BaPersonID   int,
+  FaLeistungID int,
+  FaProzessCode int,
+  KaEinsatzID  int,
+  APVZusatzCode int,
+  KaEinsatzplatzID int,
+  AnweisungCode int,
+  GenderCode   int,
+  NatCode      int,
+  [Alter]      int,
+  BildungCode  int,
+  DatumVon	   datetime,
+  DatumBis     datetime,
+  Austritt     datetime,
+  [Code Austritt] varchar(200),
+  ZuweiserID int,
+  Austrittgrund varchar(100)
+  primary key (ID))
+
+INSERT INTO @tmpSTESCursor (  BaPersonID, 
+                              FaLeistungID, 
+                              FaProzessCode, 
+                              KaEinsatzID, 
+                              APVZusatzCode, 
+                              KaEinsatzplatzID, 
+                              AnweisungCode, 
+                              DatumVon, 
+                              DatumBis, 
+                              Austritt, 
+                              GenderCode, 
+                              NatCode, 
+                              [Alter], 
+                              BildungCode, 
+                              [Code Austritt],
+                              ZuweiserID, 
+                              Austrittgrund)
+SELECT LEI.BaPersonID, 
+       LEI.FaLeistungID, 
+       LEI.FaProzessCode, 
+       EIN.KaEinsatzID, 
+       EIN.APVZusatzCode, 
+       EIN.KaEinsatzplatzID, 
+       EIN.AnweisungCode, 
+       EIN.DatumVon, 
+       EIN.DatumBis, 
+       AUS.AustrittDatum,
+       PRS.GeschlechtCode,	
+       PRS.NationalitaetCode, 
+       dbo.fnGetAge(PRS.Geburtsdatum, @datVon), 
+       KA.KaBecoErlernterBerufCode, -- BildungCode
+       AUS.AustrittCodeTextKurz,
+       EIN.ZuweiserID,
+       AUS.AustrittCodeText
+FROM dbo.FaLeistung LEI WITH (READUNCOMMITTED) 
+	INNER JOIN dbo.KaEinsatz EIN WITH (READUNCOMMITTED) ON EIN.FaLeistungID = LEI.FaLeistungID
+  OUTER APPLY dbo.fnKaGetAustrittDatumCode(LEI.FaLeistungID, EIN.KaEinsatzID) AUS
+	LEFT JOIN dbo.BaPerson   PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = LEI.BaPersonID
+  LEFT JOIN (SELECT LEI.BaPersonID, 
+                   KA.KaBecoErlernterBerufCode
+            FROM dbo.FaLeistung LEI
+            INNER JOIN dbo.KaAusbildung KA ON KA.FaLeistungID = LEI.FaLeistungID
+            WHERE LEI.ModulID = 7
+              AND LEI.FaProzessCode = 700
+              ) KA ON KA.BaPersonID = EIN.BaPersonID	
+	
+WHERE LEI.ModulID = 7
+AND (LEI.FaProzessCode in (703, 704, 707, 701, 708, 709, 710))
+AND ISNULL(AUS.AustrittDatum, EIN.DatumBis) &gt;= @datVon 
+AND EIN.DatumVon &lt;= @datBis
+AND EIN.AnweisungCode IN (2,3,4)
+ORDER BY LEI.BaPersonID, LEI.FaLeistungID, EIN.DatumVon ASC
+
+DELETE FROM @tmpSTESCursor
+WHERE FaLeistungID NOT IN ( 
+	SELECT DISTINCT FaLeistungID 
+	FROM @tmpSTESCursor
+	WHERE (@searchZusatz IS NULL OR APVZusatzCode = @searchZusatz)
+	AND (@searchAPV IS NULL OR KaEinsatzplatzID = @searchAPV))
+
+/************************************************/
+/* Corrections: Only 1 FaLeistung, update date! */
+/************************************************/
+DECLARE @BaPersonID   int
+DECLARE @FaLeistungID int
+DECLARE @FaProzessCode int
+DECLARE @KaEinsatzID  int
+DECLARE @APVZusatzCode int
+DECLARE @KaEinsatzplatzID int
+DECLARE @AnweisungCode int
+DECLARE @GenderCode   int
+DECLARE @NatCode      int
+DECLARE @Alter      int
+DECLARE @BildungCode  int
+DECLARE @DatumVon	  datetime
+DECLARE @DatumBis     datetime
+DECLARE @Austritt     datetime
+DECLARE @CodeAustritt varchar(20)
+DECLARE @ZuweiserID int
+DECLARE @Austrittgrund varchar(100)
+
+DECLARE @prev_faLeistungID int
+SET @prev_faLeistungID = -1
+
+DECLARE cur CURSOR FOR
+   SELECT BaPersonID, FaLeistungID, FaProzessCode, KaEinsatzID, APVZusatzCode, KaEinsatzplatzID, AnweisungCode,
+	GenderCode, NatCode, [Alter], BildungCode, DatumVon, DatumBis, Austritt, [Code Austritt], ZuweiserID, Austrittgrund
+   FROM @tmpSTESCursor
+OPEN cur
+
+FETCH NEXT FROM cur INTO @BaPersonID, @FaLeistungID, @FaProzessCode, @KaEinsatzID, @APVZusatzCode, @KaEinsatzplatzID,
+	@AnweisungCode, @GenderCode, @NatCode, @Alter, @BildungCode, @DatumVon, @DatumBis, @Austritt, @CodeAustritt, 
+	@ZuweiserID, @Austrittgrund
+  WHILE (@@FETCH_STATUS=0) BEGIN
+
+    IF (@FaLeistungID = @prev_faLeistungID) BEGIN
+       -- Update row with new date to!
+       IF (@datBis &gt;= CONVERT(DATETIME, COALESCE(@Austritt, @DatumBis, '01.01.1900'))) BEGIN
+           UPDATE @tmpSTESMain
+           SET DatumBis = @DatumBis, Austritt = @Austritt, [Code Austritt] = @CodeAustritt, Austrittgrund = @Austrittgrund
+           WHERE FaLeistungID = @FaLeistungID
+       END ELSE BEGIN
+           UPDATE @tmpSTESMain
+           SET DatumBis = null, Austritt = null, [Code Austritt] = null
+           WHERE FaLeistungID = @FaLeistungID
+       END
+    END ELSE BEGIN
+       -- Insert the data which not match with the data already exists!!
+       INSERT INTO @tmpSTESMain (BaPersonID, FaLeistungID, FaProzessCode, KaEinsatzID, APVZusatzCode, KaEinsatzplatzID,
+				AnweisungCode, GenderCode, NatCode, [Alter], BildungCode, DatumVon, DatumBis, Austritt, [Code Austritt], 
+				ZuweiserID, Austrittgrund)
+       VALUES (@BaPersonID, @FaLeistungID, @FaProzessCode, @KaEinsatzID, @APVZusatzCode, @KaEinsatzplatzID,
+				@AnweisungCode, @GenderCode, @NatCode, @Alter, @BildungCode, @DatumVon, @DatumBis, @Austritt, @CodeAustritt, 
+				@ZuweiserID, @Austrittgrund)
+    END
+
+  SET @prev_faLeistungID = @FaLeistungID
+ 
+FETCH NEXT FROM cur INTO @BaPersonID, @FaLeistungID, @FaProzessCode, @KaEinsatzID, @APVZusatzCode, @KaEinsatzplatzID,
+	@AnweisungCode, @GenderCode, @NatCode, @Alter, @BildungCode, @DatumVon, @DatumBis, @Austritt, @CodeAustritt, 
+	@ZuweiserID, @Austrittgrund
+END
+CLOSE cur
+DEALLOCATE cur
+
+/**************************************************/
+/* An-/Zuweisungen ausserhalb Suchbereich löschen */
+/**************************************************/
+DELETE FROM @tmpSTESMain 
+WHERE COALESCE(Austritt, DatumBis, CONVERT(DATETIME, '01.01.9999', 104)) &lt; @datVon
+
+DELETE FROM @tmpSTESMain 
+WHERE DatumVon &gt; @datBis
+
+UPDATE @tmpSTESMain
+SET DatumBis = NULL, Austritt = NULL, [Code Austritt] = NULL, Austrittgrund = NULL
+WHERE COALESCE(Austritt, DatumBis, CONVERT(DATETIME, '01.01.9999', 104)) &gt; @datBis
+
+/*****************/
+/* Get the list  */
+/*****************/
+SELECT	BaPersonID$ = T.BaPersonID,
+        [Name] = PRS.Name,
+		Vorname = PRS.Vorname,
+		Geburtsdatum = PRS.Geburtsdatum,
+		[Alter] = T.[Alter],
+		Altersgruppe =	CASE 
+							WHEN T.[Alter] BETWEEN 0 AND 19 THEN '0 bis 19'
+							WHEN T.[Alter] BETWEEN 20 AND 29 THEN '20 bis 29'
+							WHEN T.[Alter] BETWEEN 30 AND 39 THEN '30 bis 39'
+							WHEN T.[Alter] BETWEEN 40 AND 49 THEN '40 bis 49'
+							WHEN T.[Alter] BETWEEN 50 AND 59 THEN '50 bis 59'
+							WHEN T.[Alter] &gt; 59 THEN 'über 60'
+						END,
+		[m/w] = CASE T.GenderCode WHEN 1 THEN 'm' WHEN 2 THEN 'w' ELSE '' END,
+		[Nationalität] = PRS.Nationalitaet,
+		Ausbildung = dbo.fnLOVText('KaBecoErlernterBeruf', T.BildungCode),
+		Zuweiser = CASE WHEN T.ZuweiserID &lt; 0 THEN isNull(XOU.ItemName, '')
+												ELSE isNull(ORG1.Name, '') 
+												END,
+		[APV-Nr.] = dbo.fnLOVText('KaAPV', EIP.APVCode),
+		Zusatz = dbo.fnLOVText('KaApvZusatz', T.APVZusatzCode),
+		Typ = dbo.fnLOVText('KaAnweisung', T.AnweisungCode),
+		von = T.DatumVon,
+		bis = T.DatumBis,
+		Austritt = T.Austritt,
+		Austrittscode = T.[Code Austritt],
+		Austrittsgrund = T.Austrittgrund,
+		Periode = CONVERT(varchar, @datVon, 104) + ' - ' + CONVERT(varchar, @datBis, 104)
+FROM @tmpSTESMain T
+	LEFT JOIN dbo.vwPerson PRS ON PRS.BaPersonID = T.BaPersonID
+	LEFT JOIN dbo.KaEinsatzplatz2 EIP WITH (READUNCOMMITTED) ON EIP.KaEinsatzplatzID = T.KaEinsatzplatzID
+	LEFT JOIN dbo.KaAKZuweiser ZUW WITH (READUNCOMMITTED) ON ZUW.FaLeistungID = T.FaLeistungID
+	LEFT JOIN dbo.BaInstitutionKontakt OKO WITH (READUNCOMMITTED) ON OKO.BaInstitutionKontaktID = T.ZuweiserID
+	LEFT JOIN dbo.BaInstitution ORG1 WITH (READUNCOMMITTED) ON ORG1.BaInstitutionID = OKO.BaInstitutionID	
+	LEFT JOIN dbo.XOrgUnit_User OUU WITH (READUNCOMMITTED) ON OUU.UserID = -T.ZuweiserID
+									AND (OUU.OrgUnitMemberCode = 1 OR OUU.OrgUnitMemberCode = 2)
+	LEFT JOIN dbo.XOrgUnit XOU WITH (READUNCOMMITTED) ON XOU.OrgUnitID = OUU.OrgUnitID	
+ORDER BY PRS.NameVorname ASC</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="edtDatumVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtDatumBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+</root>

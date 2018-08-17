@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4ca0d362-593d-417a-b379-97264e902f37" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:55101/KissIbanService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="KissIbanService.disco" MetadataType="Disco" ID="d2d3b86e-8b0f-4d37-9940-c3f997cbb3fc" SourceId="1" SourceUrl="http://localhost:55101/KissIbanService.svc?disco" />
+    <MetadataFile FileName="KissIbanService.xsd" MetadataType="Schema" ID="9735c803-93af-4f31-af2a-94723c47b508" SourceId="1" SourceUrl="http://localhost:55101/KissIbanService.svc?xsd=xsd1" />
+    <MetadataFile FileName="KissIbanService1.xsd" MetadataType="Schema" ID="a85373be-875a-44fa-b89b-9bb24c9e5a5a" SourceId="1" SourceUrl="http://localhost:55101/KissIbanService.svc?xsd=xsd0" />
+    <MetadataFile FileName="KissIbanService.wsdl" MetadataType="Wsdl" ID="3ad0cc57-51c4-44f7-982c-a2e57367f162" SourceId="1" SourceUrl="http://localhost:55101/KissIbanService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

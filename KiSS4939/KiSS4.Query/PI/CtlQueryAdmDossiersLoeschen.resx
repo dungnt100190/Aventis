@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>DECLARE @Wartefrist INT,
+        @Stichtag DATETIME,
+        @CurrentUserID INT,
+        @SpecialRightKostenstelleHS BIT,
+        @SpecialRightKostenstelleKGS BIT,
+        @IsChiefOrRepresentative BIT,
+        @LanguageCode INT;
+
+SELECT @CurrentUserID = {0},
+       @SpecialRightKostenstelleHS = {1},
+       @SpecialRightKostenstelleKGS = {2},
+       @IsChiefOrRepresentative = {3},
+       @LanguageCode = {4};
+
+DECLARE @Kostenstellen TABLE (
+  Code INT,
+  Text VARCHAR(255),
+  Kostenstelle$ INT
+);
+
+DECLARE @Mitarbeiter TABLE (
+  UserID INT
+);
+        
+SET @Wartefrist = IsNull(CONVERT(INT, dbo.fnXConfig('System\Administration\WartefristDatenvernichtung', GETDATE())), 5);
+---SET @Stichtag = dbo.fnDateSerial({edtSucheJahr} - @Wartefrist, 12, 31);
+
+INSERT INTO @Kostenstellen
+SELECT Code, Text, Kostenstelle$
+FROM dbo.fnQryGetKostenstelleDropDown(@CurrentUserID,  @SpecialRightKostenstelleHS, @SpecialRightKostenstelleKGS)
+WHERE 1=1
+  AND Code IS NOT NULL
+---AND Code = {edtSucheKostenstelle}
+
+INSERT INTO @Mitarbeiter
+SELECT Code
+FROM dbo.fnQryGetMitarbeiterDropDown(@CurrentUserID,  @SpecialRightKostenstelleHS, @SpecialRightKostenstelleKGS, @IsChiefOrRepresentative)
+WHERE 1=1
+  AND Code IS NOT NULL
+---AND Code = {edtSucheMitarbeiter}
+
+--Validate Search-Criteria
+IF(@Stichtag IS NULL OR @Stichtag &gt; GETDATE())
+BEGIN
+  SET @Stichtag = dbo.fnDateSerial(YEAR(GETDATE()) - @Wartefrist, 1, 1);
+END;
+
+SELECT  Selektiert                    = CONVERT(bit, 0),
+        BaPersonID$                   = PRS.BaPersonID,
+        Nr                            = PRS.BaPersonID,
+        [Name]                        = PRS.Name,
+        Vorname                       = PRS.Vorname,
+        LetzteZeiterfassung           = BDE.Datum, 
+        LetztesAbschlussdatumGesuch   = GGE.LetztesAbschlussdatum,
+        FallverlaufNichtAbgeschlossen = CONVERT(bit, CASE WHEN FAL.DatumBis IS NULL THEN 1 ELSE 0 END),
+        Kostenstelle                  = dbo.fnCombineKSTOrgUnitItemName(ORG.Kostenstelle, ORG.ItemName),
+        KGS                           = dbo.fnGetHistKGSOfUserOrOrgUnit(NULL, GETDATE(), ORG.OrgUnitID, 0, 1),
+        FallVerantwortlich            = dbo.fnGetLastFirstName(FAL.UserID, NULL, NULL),
+        PLZ                           = ADRW.PLZ,
+        Ort                           = ADRW.Ort,
+        Bezirk                        = ADRW.Bezirk,
+        Kanton                        = ADRW.Kanton,
+        Nationalitaet                 = dbo.fnLandMLText(PRS.NationalitaetCode, @LanguageCode),
+        Geschlecht                    = dbo.fnGetGenderMLTitleMF(PRS.GeschlechtCode, @LanguageCode),
+        Geburtsdatum                  = PRS.Geburtsdatum,
+        [Alter]                       = dbo.fnGetAge(PRS.Geburtsdatum, ISNULL(PRS.Sterbedatum, GETDATE())),
+        Versichertennummer            = PRS.VersichertenNummer,
+        Hauptbehinderungsart          = dbo.fnGetLOVMLText('BaBehinderungsart', PRS.HauptBehinderungsartCode, @LanguageCode),
+        BSVBehinderungsart            = dbo.fnGetLOVMLText('BaBSVBehinderungsart', PRS.BSVBehinderungsartCode, @LanguageCode),
+        IVBerechtigung                = dbo.fnGetLOVMLText('BaIVBerechtigung', dbo.fnBaGetIVBerechtigungStatus(PRS.BaPersonID, GETDATE(), 0), @LanguageCode)
+FROM BaPerson PRS
+  OUTER APPLY ( SELECT TOP 1 *
+                FROM BDELeistung
+                WHERE BaPersonID = PRS.BaPersonID
+                ORDER BY Datum DESC) BDE
+  OUTER APPLY ( SELECT OffeneGesuche = SUM(CASE WHEN GvStatusCode &lt;&gt; 7 THEN 1 ELSE 0 END),
+                       LetztesAbschlussdatum = MAX(AbschlussDatum)
+                FROM GvGesuch
+                WHERE BaPersonID = PRS.BaPersonID) GGE
+  CROSS APPLY ( SELECT TOP 1 *
+                FROM FaLeistung
+                WHERE BaPersonID = PRS.BaPersonID
+                  AND ModulID = 2 --2: Fallführung
+                ORDER BY DatumVon DESC
+              ) FAL
+  INNER JOIN vwUser USR ON USR.UserID = FAL.UserID
+  INNER JOIN XOrgUnit_User OUU ON OUU.UserID = USR.UserID
+                              AND OUU.OrgUnitMemberCode = 2
+  INNER JOIN XOrgUnit ORG ON ORG.OrgUnitID = OUU.OrgUnitID
+  -- wohnsitz
+  LEFT JOIN dbo.BaAdresse ADRW WITH (READUNCOMMITTED) ON ADRW.BaAdresseID = dbo.fnBaGetBaAdresseID('BaPersonID', PRS.BaPersonID, 1, NULL)
+  
+
+WHERE (BDE.Datum IS NULL OR BDE.Datum &lt; @Stichtag) --Letzte erfasste BDE Leistung ist älter als konfigurierbarer Schwellwert
+  AND ((GGE.OffeneGesuche IS NULL OR GGE.OffeneGesuche = 0) AND (GGE.LetztesAbschlussdatum IS NULL OR GGE.LetztesAbschlussdatum &lt; @Stichtag)) --Keine offenen Gesuche, alle Gesuche früher abgeschlossen als konfigurierbarer Schwellwert
+  --Filter nach Kostenstelle und Mitarbeiter
+  AND EXISTS (SELECT TOP 1 1 
+              FROM FaLeistung LEI2 
+                INNER JOIN XOrgUnit_User OUU ON OUU.UserID = LEI2.UserID
+                                            AND OUU.OrgUnitMemberCode = 2
+                INNER JOIN @Kostenstellen KST ON KST.Code = OUU.OrgUnitID
+                INNER JOIN @Mitarbeiter USR ON USR.UserID = LEI2.UserID
+              WHERE LEI2.BaPersonID = PRS.BaPersonID)
+---AND PRS.Geburtsdatum &gt;= {edtSucheGeburtsdatumVon}
+---AND PRS.Geburtsdatum &lt;= {edtSucheGeburtsdatumBis}
+
+ORDER BY PRS.Name, PRS.Vorname</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnSelectNone.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAQtJREFUOE+lk00K
+        wjAQhXsMj+AVPIJHcC20CwNx5U+0WhpIFoVK20WP6DGemWBCNLEKFgZKM/PlzZtplv37YDnDOI7o+x5t
+        20JpDVlLXMoS5fmM6+WKqqqgzfemaTAMg8339xLgPs/QdZ0FUKKUEkKcsNvvwLccbMNQFAXyPPfxAoBa
+        W8gv3VAegXzu7daCVGC1mIQ4pU6FB2itTN9qEuKKqSgCyLo2ptVWUkpJWJwECCFwMuEkOcintiIFx+PB
+        uh0aaIuf8W5sBCAFnPNIAbntIoREgNIsDGPsowfvkAiglJmAGeHUKAlC50kTfb9f9sBBIgXhzeGqpt5D
+        SPQvfCt252E7v6x+MieEPADQ5ERkYr+bEwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnSelectAll.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAARBJREFUOE+lk9Fq
+        wyAUhvMye7XkYoKFQbfapg0R9CJZShIw5N32Lv88FletsqzsiDfi/51zfo9F8d9Y1xXLsmCaJgzDAKU1
+        ZCtxrmvUpxMu5wuapoG2513XYZ5nFLS+7KYgsTELxnF0ALoopYQQR+zf9+A7DvbKUFUVyrK8i99ebgDK
+        TOI/deIzG5vdA67XAZ828yYgJyaR1sr2rX4HPIhdKz5k21rT2tsBGUMrjIw4AgghcLTbaai3EJIpm8QR
+        4HD4cG47ABkTQggWGmavJACqgHN+LzuEPIgpRwKo7cAwxuK+PcQ/VeBJAlBKuSFJnjEjzlbQ931sysZA
+        JBUYYxzg2f2Thz7Ts+LoGTdHeOPCN61RIOrrMXMDAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="qryQueryOrphans.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>119, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>42</value>
+  </metadata>
+  <data name="qryQueryOrphans.SelectStatement" xml:space="preserve">
+    <value>-------------------------------------------------------------------------------
+-- parameters and initial values
+-------------------------------------------------------------------------------
+
+DECLARE @Wartefrist INT,
+        @Stichtag DATETIME,
+        @CurrentUserID INT,
+        @SpecialRightKostenstelleHS BIT,
+        @SpecialRightKostenstelleKGS BIT,
+        @IsChiefOrRepresentative BIT,
+        @LanguageCode INT;
+
+SELECT @CurrentUserID = {0},
+       @SpecialRightKostenstelleHS = {1},
+       @SpecialRightKostenstelleKGS = {2},
+       @IsChiefOrRepresentative = {3},
+       @LanguageCode = {4};
+
+-------------------------------------------------------------------------------
+-- init vars and table
+-------------------------------------------------------------------------------
+DECLARE @EntriesCount INT;
+DECLARE @EntriesIterator INT;
+DECLARE @BaPersonID INT;
+
+CREATE TABLE #TempTable
+(
+  ID INT NOT NULL IDENTITY(1, 1) PRIMARY KEY CLUSTERED,
+  BaPersonID INT
+);
+
+CREATE UNIQUE INDEX IDX_BaPersonID
+ON #TempTable(BaPersonID);
+
+-------------------------------------------------------------------------------
+-- insert entries into temp table
+-------------------------------------------------------------------------------
+INSERT INTO #TempTable (BaPersonID)
+  SELECT DISTINCT BaPersonID
+  FROM FaLeistung WITH (READUNCOMMITTED)
+
+-- prepare vars for loop
+SET @EntriesCount = @@ROWCOUNT;  -- needs to be done just after filling!
+SET @EntriesIterator = 1;        -- needs to start just at the same value as IDENTITY column on table
+
+-------------------------------------------------------------------------------
+-- loop all entries
+-------------------------------------------------------------------------------
+WHILE (@EntriesIterator &lt;= @EntriesCount)
+BEGIN
+  -- get current entry
+  SELECT @BaPersonID = TMP.BaPersonID
+  FROM #TempTable TMP
+  WHERE TMP.ID = @EntriesIterator;
+    
+  -- Insert Children
+  INSERT INTO #TempTable
+  (BaPersonID)
+  (SELECT BaPersonID_2
+  FROM BaPerson_Relation
+  WHERE BaPersonID_1 = @BaPersonID
+  AND BaPersonID_2 NOT IN (SELECT BaPersonID FROM #TempTable));
+  
+  SET @EntriesCount = @EntriesCount + @@RowCount;
+  
+  -- Insert Parents
+  INSERT INTO #TempTable
+  (BaPersonID)
+  (SELECT BaPersonID_1
+  FROM BaPerson_Relation
+  WHERE BaPersonID_2 = @BaPersonID
+  AND BaPersonID_1 NOT IN (SELECT BaPersonID FROM #TempTable));
+  
+  SET @EntriesCount = @EntriesCount + @@RowCount;
+  
+  -- prepare for next entry
+  SET @EntriesIterator = @EntriesIterator + 1;
+END;
+
+SELECT  Selektiert                    = CONVERT(bit, 0),
+        BaPersonID$                   = PRS.BaPersonID,
+        Nr                            = PRS.BaPersonID,
+        [Name]                        = PRS.Name,
+        Vorname                       = PRS.Vorname,
+        LetzteZeiterfassung           = NULL, 
+        FallverlaufNichtAbgeschlossen = NULL,
+        Kostenstelle                  = '',
+        KGS                           = '',
+        FallVerantwortlich            = '',
+        PLZ                           = ADRW.PLZ,
+        Ort                           = ADRW.Ort,
+        Bezirk                        = ADRW.Bezirk,
+        Kanton                        = ADRW.Kanton,
+        Nationalitaet                 = dbo.fnLandMLText(PRS.NationalitaetCode, @LanguageCode),
+        Geschlecht                    = dbo.fnGetGenderMLTitleMF(PRS.GeschlechtCode, @LanguageCode),
+        Geburtsdatum                  = PRS.Geburtsdatum,
+        [Alter]                       = dbo.fnGetAge(PRS.Geburtsdatum, ISNULL(PRS.Sterbedatum, GETDATE())),
+        Versichertennummer            = PRS.VersichertenNummer,
+        Hauptbehinderungsart          = dbo.fnGetLOVMLText('BaBehinderungsart', PRS.HauptBehinderungsartCode, @LanguageCode),
+        BSVBehinderungsart            = dbo.fnGetLOVMLText('BaBSVBehinderungsart', PRS.BSVBehinderungsartCode, @LanguageCode),
+        IVBerechtigung                = dbo.fnGetLOVMLText('BaIVBerechtigung', dbo.fnBaGetIVBerechtigungStatus(PRS.BaPersonID, GETDATE(), 0), @LanguageCode)
+FROM BaPerson PRS
+LEFT JOIN dbo.BaAdresse ADRW WITH (READUNCOMMITTED) ON ADRW.BaAdresseID = dbo.fnBaGetBaAdresseID('BaPersonID', PRS.BaPersonID, 1, NULL)
+
+WHERE PRS.BaPersonID NOT IN (SELECT BaPersonID FROM #TempTable)
+ORDER BY PRS.Name, PRS.Vorname;
+
+DROP TABLE #TempTable</value>
+  </data>
+</root>

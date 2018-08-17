@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryBgPosition.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>134, 17</value>
+  </metadata>
+  <metadata name="qryLetzte10Buchungen.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>261, 17</value>
+  </metadata>
+  <data name="qryLetzte10Buchungen.SelectStatement" xml:space="preserve">
+    <value>SELECT TOP 10 
+  Buchungsdatum = VAL.Datum,
+  Buchungstext  = BPO.Buchungstext,
+  Betrag        = BPO.Betrag,
+  Kreditor      = KRE.Kreditor
+FROM dbo.vwBgPosition                          BPO WITH (READUNCOMMITTED)
+  INNER JOIN dbo.BgBudget                      BDG WITH (READUNCOMMITTED) ON BDG.BgBudgetID = BPO.BgBudgetID
+  INNER JOIN dbo.BgFinanzplan                  FPL WITH (READUNCOMMITTED) ON FPL.BgFinanzplanID = BDG.BgFinanzplanID
+  INNER JOIN dbo.FaLeistung                    LEI WITH (READUNCOMMITTED) ON LEI.FaLeistungID = FPL.FaLeistungID
+  LEFT OUTER JOIN dbo.BgSpezkonto              BSK WITH (READUNCOMMITTED) ON BSK.BgSpezkontoID = BPO.BgSpezkontoID
+  LEFT OUTER JOIN dbo.BgPositionsart           BPA WITH (READUNCOMMITTED) ON BPA.BgPositionsartID = COALESCE(BPO.BgPositionsartID,BSK.BgPositionsartID)
+  LEFT OUTER JOIN dbo.BgPositionsart           GBL WITH (READUNCOMMITTED) ON GBL.BgPositionsartID = FPL.WhGrundbedarfTypCode
+  LEFT OUTER JOIN dbo.vwPerson                 PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = LEI.BaPersonID
+  LEFT OUTER JOIN dbo.BgKostenart              BKA WITH (READUNCOMMITTED) ON BKA.BgKostenartID = COALESCE(BPA.BgKostenartID, BSK.BgKostenartID, GBL.BgKostenartID)
+  LEFT OUTER JOIN dbo.BgAuszahlungPerson       BAP WITH (READUNCOMMITTED) ON BAP.BgPositionID = BPO.BgPositionID 
+                                                                         AND BAP.BgAuszahlungPersonID = (SELECT TOP 1 BgAuszahlungPersonID
+                                                                                                         FROM dbo.BgAuszahlungPerson  WITH (READUNCOMMITTED)
+                                                                                                         WHERE BgPositionID = BPO.BgPositionID
+                                                                                                         ORDER BY 
+                                                                                                           CASE WHEN BaPersonID IS NULL THEN 1
+                                                                                                                WHEN BaPersonID = BPO.BaPersonID THEN 2
+                                                                                                                ELSE 3
+                                                                                                           END)
+  LEFT OUTER JOIN dbo.vwKreditor               KRE WITH (READUNCOMMITTED) ON KRE.BaZahlungswegID = BAP.BaZahlungswegID
+  LEFT OUTER JOIN dbo.BgAuszahlungPersonTermin VAL WITH (READUNCOMMITTED) ON VAL.BgAuszahlungPersonID = BAP.BgAuszahlungPersonID 
+                                                                         AND VAL.Datum = (SELECT TOP 1 Datum
+                                                                                          FROM dbo.BgAuszahlungPersonTermin  WITH (READUNCOMMITTED)
+                                                                                          WHERE BgAuszahlungPersonID = BAP.BgAuszahlungPersonID
+                                                                                          ORDER BY Datum)
+WHERE BKA.KontoNr = {0}
+  AND PRS.BaPersonID = {1}
+ORDER BY VAL.Datum DESC</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="edtVerwPeriodeBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtVerwPeriodeVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="qryBgPosition.SelectStatement" xml:space="preserve">
+    <value>declare @BgPositionID int
+set @BgPositionID = {0}
+
+select BPO.*,
+       ValutaDatum           = VAL.Datum,
+       KOA                   = BKA.KontoNr,
+       Kostenart             = BKA.KontoNr + ' ' + isnull(BPA.Name,BKA.Name),
+       Jahr                  = BDG.Jahr,
+       Monat                 = BDG.Monat,
+       ProPerson             = ISNULL(BPA.ProPerson,CONVERT(BIT,0)),
+       ProUE                 = ISNULL(BPA.ProUE,CONVERT(BIT,0)),
+       BgSplittingartCode    = BKA.BgSplittingartCode,
+       Status                = ISNULL(STA.Status,
+                                    CASE BPO.BgBewilligungStatusCode
+                                    WHEN 1 THEN 1   -- grau
+                                    WHEN 2 THEN 15  -- abgelehnt
+                                    WHEN 3 THEN 12  -- angefragt
+                                    WHEN 5 THEN 14  -- bewilligt
+                                    WHEN 9 THEN 7   -- gesperrt
+                                    END),
+       Typ                   = case when BPO.BgPositionID = @BgPositionID then '*' else '+' end,
+       SpezKonto             = BSK.NameSpezkonto,
+       BetragOld             = BPO.Betrag,
+       FPL.WhGrundbedarfTypCode,
+       LEI.FaLeistungID,
+       Quoting               = BKA.Quoting,
+       KlientID              = LEI.BaPersonID
+from   BgPosition BPO
+       INNER JOIN BgBudget                 BDG  ON BDG.BgBudgetID = BPO.BgBudgetID
+       INNER JOIN BgFinanzplan             FPL  ON FPL.BgFinanzplanID = BDG.BgFinanzplanID
+       INNER JOIN FaLeistung               LEI  ON LEI.FaLeistungID = FPL.FaLeistungID
+       INNER JOIN FaFall                   FAL  ON FAL.FaFallID = LEI.FaFallID
+       LEFT  JOIN BgPositionsart           BPA  ON BPA.BgPositionsartID = BPO.BgPositionsartID
+       LEFT  JOIN vwPerson                 PRS  ON PRS.BaPersonID = BPO.BaPersonID
+       LEFT  JOIN BgSpezkonto              BSK  ON BSK.BgSpezkontoID = BPO.BgSpezkontoID
+       LEFT  JOIN BgKostenart              BKA  ON BKA.BgKostenartID = COALESCE(BPA.BgKostenartID, BSK.BgKostenartID)
+       LEFT  JOIN   (SELECT BUC.BgBudgetID, BUK.BgPositionID, 
+                            Status       = MAX(BUC.KbBuchungStatusCode), 
+                            StatusMin    = MIN(BUC.KbBuchungStatusCode), 
+                            AnzahlBelege = COUNT(DISTINCT BUC.KbBuchungID),
+                            BelegDatum   = MIN(BUC.BelegDatum),
+                            BelegNr      = MIN(BUC.BelegNr)
+                     FROM   KbBuchungKostenart BUK 
+                            LEFT JOIN KbBuchung BUC ON BUC.KbBuchungID = BUK.KbBuchungID
+                     GROUP  BY BUC.BgBudgetID, BUK.BgPositionID) STA ON STA.BgBudgetID = BPO.BgBudgetID AND STA.BgPositionID = BPO.BgPositionID
+       LEFT  JOIN BgAuszahlungPerson       BAP  ON BAP.BgPositionID = BPO.BgPositionID AND
+                                                   BAP.BgAuszahlungPersonID = (SELECT TOP 1 BgAuszahlungPersonID
+                                                                               FROM   BgAuszahlungPerson
+                                                                               WHERE  BgPositionID = BPO.BgPositionID
+                                                                               ORDER BY 
+                                                                                 CASE WHEN BaPersonID IS NULL THEN 1
+                                                                                      WHEN BaPersonID = BPO.BaPersonID THEN 2
+                                                                                      ELSE 3
+                                                                                 END)
+       LEFT  JOIN BgAuszahlungPersonTermin VAL  ON VAL.BgAuszahlungPersonID = BAP.BgAuszahlungPersonID AND
+                                                   VAL.DATUM = (SELECT TOP 1 Datum
+                                                                FROM   BgAuszahlungPersonTermin
+                                                                WHERE  BgAuszahlungPersonID = BAP.BgAuszahlungPersonID
+                                                                ORDER BY Datum)
+where  BPO.BgPositionID = @BgPositionID 
+  OR (BPO.BgPositionID_Parent = @BgPositionID
+    AND BPO.BgKategorieCode &lt;&gt; 3)
+order by case when BPO.BgPositionID = @BgPositionID then 0 else 1 end, BKA.KontoNr</value>
+  </data>
+  <metadata name="qryBgBudget.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryBgBudget.SelectStatement" xml:space="preserve">
+    <value>SELECT 
+  BDG.BgBudgetID,
+  BDG.BgBewilligungStatusCode,
+  BDG.Jahr,
+  BDG.Monat,
+  FPL.WhGrundbedarfTypCode,
+  LEI.FaLeistungID
+FROM dbo.BgPosition           BPO
+  INNER JOIN dbo.BgBudget     BDG ON BDG.BgBudgetID = BPO.BgBudgetID
+  INNER JOIN dbo.BgFinanzplan FPL ON FPL.BgFinanzplanID = BDG.BgFinanzplanID
+  INNER JOIN dbo.FaLeistung   LEI ON LEI.FaLeistungID = FPL.FaLeistungID
+WHERE BPO.BgPositionID = {0}</value>
+  </data>
+</root>

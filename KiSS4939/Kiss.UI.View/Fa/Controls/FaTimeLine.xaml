@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="Kiss.UI.View.Fa.Controls.FaTimeline"
+             x:Name="FaTimelineControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:controls="clr-namespace:Kiss.UI.View.Fa.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300"
+             d:DesignWidth="300">
+
+    <Grid x:Name="GridControl">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70" />
+            <RowDefinition Height="*" />
+
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.Margin>
+                <Thickness Right="{x:Static SystemParameters.VerticalScrollBarWidth}"/>
+            </Grid.Margin>
+
+            <ScrollViewer x:Name="ScrollViewerScale"
+                      VerticalScrollBarVisibility="Hidden"
+                      HorizontalScrollBarVisibility="Hidden"
+                      HorizontalAlignment="Stretch"
+                      ScrollChanged="ScrollViewerScale_ScrollChanged">
+                <Canvas x:Name="CanvasScale" Grid.Row="0"/>
+            </ScrollViewer>
+        </Grid>
+
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Visible">
+            <ItemsControl x:Name="Swimlanes" ItemsSource="{Binding Path=Model.Swimmlanes, ElementName=FaTimelineControl}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Image Name="imgLeft"
+                                   Source="..\..\Images\Left.png"
+                                   Width="10"
+                                   Visibility="{Binding Path=HasInvisibleItemsOnTheLeft, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                   HorizontalAlignment="Left"
+                                   Panel.ZIndex="400"/>
+                            <Image Name="imgRight"
+                                   Source="..\..\Images\Right.png"
+                                   Width="10"
+                                   Visibility="{Binding Path=HasInvisibleItemsOnTheRight, Converter={StaticResource BooleanToVisibilityConverter}}"
+                                   HorizontalAlignment="Right"
+                                   Panel.ZIndex="400"/>
+                            <ScrollViewer x:Name="ScrollViewerSwimlane"
+                                          Grid.Column="1"
+                                          VerticalScrollBarVisibility="Hidden"
+                                          HorizontalScrollBarVisibility="Hidden"
+                                          HorizontalAlignment="Stretch">
+                                <controls:FaTimelineSwimmlane x:Name="Swimlane" Swimmlane="{Binding}"/>
+                            </ScrollViewer>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

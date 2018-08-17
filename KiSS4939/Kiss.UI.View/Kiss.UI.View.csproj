@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9347E873-4E80-4EA1-AFBD-3EAFAE93FC53}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kiss.UI.View</RootNamespace>
+    <AssemblyName>Kiss.UI.View</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Mvvm.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    </Reference>
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Core.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Printing.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Build\Debug\Microsoft.Expression.Interactions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Build\Debug\System.Windows.Interactivity.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WPFLocalizeExtension">
+      <HintPath>..\packages\WpfLocalizeExtension.2.3\lib\net35\WPFLocalizeExtension.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="XAMLMarkupExtensions, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\XAMLMarkupExtensions.1.2\lib\net40\XAMLMarkupExtensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ad\AdPasswortAendernView.xaml.cs">
+      <DependentUpon>AdPasswortAendernView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LocalResources\Ad\AdPasswortAendernViewRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdPasswortAendernViewRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="CommandBindingToCommand.cs" />
+    <Compile Include="Fa\Controls\FaTimeLinePeriod.xaml.cs">
+      <DependentUpon>FaTimeLinePeriod.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fa\Controls\FaTimeLine.xaml.cs">
+      <DependentUpon>FaTimeLine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fa\Controls\FaTimeLineEvent.xaml.cs">
+      <DependentUpon>FaTimeLineEvent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fa\Controls\FaTimelineSwimmlane.xaml.cs">
+      <DependentUpon>FaTimelineSwimmlane.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fa\FaKategorisierungView.xaml.cs">
+      <DependentUpon>FaKategorisierungView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fa\FaZeitachseContainerView.xaml.cs">
+      <DependentUpon>FaZeitachseContainerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fa\FaZeitachseListeView.xaml.cs">
+      <DependentUpon>FaZeitachseListeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fa\FaZeitachseView.xaml.cs">
+      <DependentUpon>FaZeitachseView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fs\FsAbfrageAuslastungGesamtView.xaml.cs">
+      <DependentUpon>FsAbfrageAuslastungGesamtView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fs\FsAbfrageAuslastungMaView.xaml.cs">
+      <DependentUpon>FsAbfrageAuslastungMaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fs\FsDienstleistungspaketView.xaml.cs">
+      <DependentUpon>FsDienstleistungspaketView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fs\FsDienstleistungView.xaml.cs">
+      <DependentUpon>FsDienstleistungView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fs\FsReduktionView.xaml.cs">
+      <DependentUpon>FsReduktionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fs\FsVerfuegbareArbeitszeitView.xaml.cs">
+      <DependentUpon>FsVerfuegbareArbeitszeitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KissAbfrageBaseView.cs" />
+    <Compile Include="KissView.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewHelper.cs" />
+    <Compile Include="Vm\VmKlientenbudgetKategorieView.xaml.cs">
+      <DependentUpon>VmKlientenbudgetKategorieView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vm\VmKlientenbudgetView.xaml.cs">
+      <DependentUpon>VmKlientenbudgetView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vm\VmPositionDTOToFontWeightConverter.cs" />
+    <Compile Include="Vm\VmPositionSaldoCellTemplateSelector.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KiSS.AssemblyInfo\BIAG.AssemblyInfo.csproj">
+      <Project>{c3a41f2e-fbf1-4628-8f6a-764a22252624}</Project>
+      <Name>BIAG.AssemblyInfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.BL\Kiss.BL.csproj">
+      <Project>{317D103A-9D9E-4A5B-B08F-1E9B6BEEEC0E}</Project>
+      <Name>Kiss.BL</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.DbContext\Kiss.DbContext.csproj">
+      <Project>{A9733EC8-89E0-44A6-941D-A71868778675}</Project>
+      <Name>Kiss.DbContext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Interfaces\Kiss.Interfaces.csproj">
+      <Project>{936877A8-EC00-4267-8C62-344062912497}</Project>
+      <Name>Kiss.Interfaces</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Infrastructure\Kiss.Infrastructure.csproj">
+      <Project>{94D23DEF-0BEC-4EAC-B6A8-A2AB6B3A0CF1}</Project>
+      <Name>Kiss.Infrastructure</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Model\Kiss.Model.csproj">
+      <Project>{9EDABB4F-E42D-4791-9798-4581D35B19CC}</Project>
+      <Name>Kiss.Model</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.UI.Controls\Kiss.UI.Controls.csproj">
+      <Project>{41CABAC4-C031-4A83-AC36-0138FDA1BB6B}</Project>
+      <Name>Kiss.UI.Controls</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.UI.Theme\DevExpress.Xpf.Themes.Kiss.csproj">
+      <Project>{20ACD936-50C4-4693-8D09-8FF5A7B687AF}</Project>
+      <Name>DevExpress.Xpf.Themes.Kiss</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.UI.ViewModel\Kiss.UI.ViewModel.csproj">
+      <Project>{1A3E5B94-900F-4F22-AAB9-0268CECB911E}</Project>
+      <Name>Kiss.UI.ViewModel</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Utilities\Kiss.Utilities.csproj">
+      <Project>{B523447C-56F2-4283-9531-81E31F82F454}</Project>
+      <Name>Kiss.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LocalResources\Ad\AdPasswortAendernViewRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AdPasswortAendernViewRes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Ad\AdPasswortAendernViewRes.fr.resx">
+      <DependentUpon>AdPasswortAendernViewRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Ad\AdPasswortAendernViewRes.it.resx">
+      <DependentUpon>AdPasswortAendernViewRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.fr.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Kiss.UI.ViewModel.Ba.BaAdresseVM.datasource" />
+    <None Include="Properties\DataSources\Kiss.UI.ViewModel.Ba.BaPersonVM.datasource" />
+    <None Include="Properties\DataSources\Kiss.UI.ViewModel.Ba.SearchBaPersonVM.datasource" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Page Include="Ad\AdPasswortAendernView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fa\Controls\FaTimeLinePeriod.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Fa\Controls\FaTimeLine.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Fa\Controls\FaTimeLineEvent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Fa\Controls\FaTimelineSwimmlane.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Fa\FaKategorisierungView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fa\FaZeitachseContainerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fa\FaZeitachseListeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fa\FaZeitachseView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fs\FsAbfrageAuslastungGesamtView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fs\FsAbfrageAuslastungMaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fs\FsDienstleistungspaketView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fs\FsDienstleistungView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Fs\FsVerfuegbareArbeitszeitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fs\FsReduktionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Properties\DesignTimeResources.xaml" Condition="'$(DesignTime)'=='true' OR ('$(SolutionPath)'!='' AND Exists('$(SolutionPath)') AND '$(BuildingInsideVisualStudio)'!='true' AND '$(BuildingInsideExpressionBlend)'!='true')">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
+    </Page>
+    <Page Include="Vm\VmKlientenbudgetKategorieView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vm\VmKlientenbudgetView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AcrobatDoc.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ExcelDoc.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\OpenDoc.bmp" />
+    <Resource Include="Images\Stapel.bmp" />
+    <Resource Include="Images\WordDoc.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Left.png" />
+    <Resource Include="Images\Right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\DateLabel.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Falluebergabe.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

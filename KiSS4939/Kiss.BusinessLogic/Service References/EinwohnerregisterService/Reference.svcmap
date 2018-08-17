@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="da8b70f4-b06c-449a-af08-dfc90f23044c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:52671/KissEinwohnerregisterService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="KissEinwohnerregisterService51.xsd" MetadataType="Schema" ID="2149d5e7-a5d8-41ab-8c19-d7a3c905ec24" SourceId="1" SourceUrl="http://localhost:52671/KissEinwohnerregisterService.svc?xsd=xsd5" />
+    <MetadataFile FileName="KissEinwohnerregisterService513.xsd" MetadataType="Schema" ID="b849bf2a-adf9-478c-bebf-41d785a10173" SourceId="1" SourceUrl="http://localhost:52671/KissEinwohnerregisterService.svc?xsd=xsd4" />
+    <MetadataFile FileName="KissEinwohnerregisterService12.wsdl" MetadataType="Wsdl" ID="512c2286-0e0f-4eee-8db0-9dd1ff4bfe1a" SourceId="1" SourceUrl="http://localhost:52671/KissEinwohnerregisterService.svc?wsdl" />
+    <MetadataFile FileName="KissEinwohnerregisterService514.xsd" MetadataType="Schema" ID="e757a4de-3009-4320-8d35-38fdc5452157" SourceId="1" SourceUrl="http://localhost:52671/KissEinwohnerregisterService.svc?xsd=xsd6" />
+    <MetadataFile FileName="KissEinwohnerregisterService515.xsd" MetadataType="Schema" ID="15ae2a65-b038-4cad-8524-a04c4bea6f24" SourceId="1" SourceUrl="http://localhost:52671/KissEinwohnerregisterService.svc?xsd=xsd0" />
+    <MetadataFile FileName="KissEinwohnerregisterService516.xsd" MetadataType="Schema" ID="a683338f-8377-4d96-b773-137406664165" SourceId="1" SourceUrl="http://localhost:52671/KissEinwohnerregisterService.svc?xsd=xsd2" />
+    <MetadataFile FileName="KissEinwohnerregisterService12.disco" MetadataType="Disco" ID="f7c744dd-1b49-48fc-9807-4e4269379cc2" SourceId="1" SourceUrl="http://localhost:52671/KissEinwohnerregisterService.svc?disco" />
+    <MetadataFile FileName="KissEinwohnerregisterService517.xsd" MetadataType="Schema" ID="602db036-cf6f-4bfb-8e03-c070d8a28a18" SourceId="1" SourceUrl="http://localhost:52671/KissEinwohnerregisterService.svc?xsd=xsd1" />
+    <MetadataFile FileName="KissEinwohnerregisterService518.xsd" MetadataType="Schema" ID="4e5e690c-5033-4b0b-aa26-bcec3a365783" SourceId="1" SourceUrl="http://localhost:52671/KissEinwohnerregisterService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

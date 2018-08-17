@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{61AF1142-4575-4912-A0C0-4E6D2FF6E308}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KiSSSvc.BLL</RootNamespace>
+    <AssemblyName>KiSSSvc.BLL</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/KiSSSvc.BLL/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaAdresseBLL.cs" />
+    <Compile Include="BaInstitutionBLL.cs" />
+    <Compile Include="BaPersonBLL.cs" />
+    <Compile Include="BaZahlungswegBLL.cs" />
+    <Compile Include="BgBudgetBLL.cs" />
+    <Compile Include="BgFinanzPlanBLL.cs" />
+    <Compile Include="KbBuchungBruttoPersonBLL.cs" />
+    <Compile Include="KbBuchungKostenartBLL.cs" />
+    <Compile Include="KbBuchungStornoBLL.cs" />
+    <Compile Include="PscdMahnungLogBLL.cs" />
+    <Compile Include="KgKontoBLL.cs" />
+    <Compile Include="PscdKlientengelderSaldoLogBLL.cs" />
+    <Compile Include="PscdWvStatusLogBLL.cs" />
+    <Compile Include="MigWVEinzelpostenBLL.cs" />
+    <Compile Include="KbWVEinzelpostenBLL.cs" />
+    <Compile Include="SstMT940SaldoBLL.cs" />
+    <Compile Include="vwUserBLL.cs" />
+    <Compile Include="KbOpAusgleichBLL.cs" />
+    <Compile Include="PscdKlientenEinzahlungLeicheBLL.cs" />
+    <Compile Include="PscdAusgleichLeicheBLL.cs" />
+    <Compile Include="KgOpAusgleichBLL.cs" />
+    <Compile Include="KbZahlungseingangBLL.cs" />
+    <Compile Include="KgZahlungseingangBLL.cs" />
+    <Compile Include="PersonInfoBLL.cs" />
+    <Compile Include="KgBuchungBLL.cs" />
+    <Compile Include="KbBuchungBLL.cs" />
+    <Compile Include="FaInvolvierteInstitutionBLL.cs" />
+    <Compile Include="FaLeistungBLL.cs" />
+    <Compile Include="KbBuchungBruttoBLL.cs" />
+    <Compile Include="KeysBLL.cs" />
+    <Compile Include="LOV.cs" />
+    <Compile Include="PscdCallLogBLL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PscdSentBLL.cs" />
+    <Compile Include="XConfigBLL.cs" />
+    <Compile Include="XTaskBLL.cs" />
+    <Compile Include="XTransactionBLL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KiSSSvc.DAL\KiSSSvc.DAL.csproj">
+      <Project>{48165860-4F1B-4B21-A024-F244BDB191E4}</Project>
+      <Name>KiSSSvc.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSSSvc.Logging\KiSSSvc.Logging.csproj">
+      <Project>{93447642-7948-4B09-9FB3-6F416C136B3A}</Project>
+      <Name>KiSSSvc.Logging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

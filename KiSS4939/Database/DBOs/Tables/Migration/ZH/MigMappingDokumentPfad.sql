@@ -1,0 +1,12 @@
+﻿CREATE TABLE [dbo].[MigMappingDokumentPfad](
+	[Pfad] [varchar](300) NOT NULL,
+	[DocumentID] [int] NULL,
+	[lMigMappingDokumentPfad] [int] IDENTITY(1,1) NOT NULL,
+ CONSTRAINT [PK_MigMappingDokumentPfad] PRIMARY KEY CLUSTERED 
+(
+	[lMigMappingDokumentPfad] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING ON

@@ -1,0 +1,14 @@
+﻿CREATE TABLE [dbo].[PscdKeySource](
+	[KeyName] [varchar](50) NOT NULL,
+	[NextID] [bigint] NOT NULL,
+	[FirstID] [bigint] NOT NULL,
+	[LastID] [bigint] NOT NULL,
+	[NumberCategory] [varchar](10) NOT NULL,
+ CONSTRAINT [PK_PscdKeySource] PRIMARY KEY CLUSTERED 
+(
+	[KeyName] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING ON

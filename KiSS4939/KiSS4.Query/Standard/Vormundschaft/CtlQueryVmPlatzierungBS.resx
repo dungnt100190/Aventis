@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>DECLARE @Beistand1 INT;
+DECLARE @Beistand2 INT;
+DECLARE @Beistand3 INT;
+DECLARE @BeistandsartCode1 INT;
+DECLARE @BeistandsartCode2 INT;
+DECLARE @BeistandsartCode3 INT;
+DECLARE @DatumVon DATETIME;
+DECLARE @DatumBis DATETIME;
+DECLARE @Platzierung_BainstitutionID INT;
+DECLARE @GrundlageCode INT;
+DECLARE @FuersorgerischeUnterbringung INT;
+DECLARE @InklAbgeschlossene INT; -- bezieht sich auf GültigVon / -Bis einer KesMassnahme
+
+---SET @Beistand1 = {edtNameBeistand1.LookupID};
+---SET @Beistand2 = {edtNameBeistand2.LookupID};
+---SET @Beistand3 = {edtNameBeistand3.LookupID};
+
+---SET @BeistandsartCode1 = {edtNameBeistand1.Tag};
+---SET @BeistandsartCode2 = {edtNameBeistand2.Tag};
+---SET @BeistandsartCode3 = {edtNameBeistand3.Tag};
+
+---SET @DatumVon = {edtDatumVon};
+---SET @DatumBis = {edtDatumBis};
+---SET @Platzierung_BainstitutionID = {edtPlatzierung.LookupID};
+---SET @GrundlageCode = {edtGrundlage};
+---SET @FuersorgerischeUnterbringung = {edtFuersorgerischeUnterbringung};
+
+
+---SET @InklAbgeschlossene = {edtInklAbgeschlosseneArchivierteFaelle};
+
+SET @DatumVon = ISNULL(@DatumVon, '17530101');
+SET @DatumBis = ISNULL(@DatumBis, '99991231');
+
+DECLARE @Massnahmen TABLE (
+  FaLeistungID INT,
+  KesMassnahmeID INT,
+  KesMandatsfuehrendePersonID INT,
+  BaPersonID INT,
+  DatumVon DATETIME,
+  GueltigAb DATETIME,
+  GueltigBis DATETIME,
+  Platzierung_BaInstitutionID INT,
+  KesGrundlageCode INT,
+  FuersorgerischeUnterbringung BIT,
+  IsKS BIT,
+  Anzeigen BIT
+);
+
+;WITH MassnahmeCte 
+AS
+(
+  -- KesMasnahme die angezeigt werden
+  SELECT
+    KMA.FaLeistungID,
+    KMA.KesMassnahmeID,
+    KesMandatsfuehrendePersonID = MFP.KesMandatsfuehrendePersonID,
+    LEI.BaPersonID,
+    KMA.DatumVon,
+    GueltigAb  = COALESCE(KMA.AenderungVom_Datum, KMA.UebernahmeVon_Datum, KMA.DatumVon),
+    GueltigBis = COALESCE(/*KMA.Beistandswechsel, */KMA.UebertragungAn_Datum, KMA.DatumBis/*, KMA.BerichtsgenehmigungVom*/),
+    KMA.Platzierung_BaInstitutionID,    
+    KMA.KesGrundlageCode,
+    KMA.FuersorgerischeUnterbringung,
+    KMA.IsKs,
+    Anzeigen = 1
+  FROM dbo.KesMassnahme       KMA WITH(READUNCOMMITTED)
+    INNER JOIN dbo.FaLeistung LEI WITH(READUNCOMMITTED) ON KMA.FaLeistungID = LEI.FaLeistungID
+    OUTER APPLY (SELECT MFP.*
+                 FROM dbo.KesMandatsfuehrendePerson MFP WITH(READUNCOMMITTED) 
+                 WHERE MFP.KesMassnahmeID = KMA.KesMassnahmeID
+                   AND MFP.IsDeleted = 0
+                   AND ISNULL(MFP.DatumMandatVon, '17530101') &lt;= @DatumBis
+                   AND ISNULL(MFP.DatumMandatBis, '99991231') &gt;= @DatumVon) MFP
+  WHERE KMA.IsDeleted = 0
+    AND ((@Beistand1 IS NULL AND @Beistand2 IS NULL AND @Beistand3 IS NULL)
+      OR (@Beistand1 IS NOT NULL 
+        AND CASE @BeistandsartCode1
+              WHEN 1 THEN MFP.BaInstitutionID -- Privatperson
+              WHEN 2 THEN MFP.UserID          -- Berufsbeistand
+              WHEN 3 THEN MFP.BaInstitutionID -- Fachbeistand
+              ELSE 0
+            END = @Beistand1)
+      OR (@Beistand2 IS NOT NULL 
+        AND CASE @BeistandsartCode2
+              WHEN 1 THEN MFP.BaInstitutionID -- Privatperson
+              WHEN 2 THEN MFP.UserID          -- Berufsbeistand
+              WHEN 3 THEN MFP.BaInstitutionID -- Fachbeistand
+              ELSE 0
+            END = @Beistand2)
+      OR (@Beistand3 IS NOT NULL 
+        AND CASE @BeistandsartCode3
+              WHEN 1 THEN MFP.BaInstitutionID -- Privatperson
+              WHEN 2 THEN MFP.UserID          -- Berufsbeistand
+              WHEN 3 THEN MFP.BaInstitutionID -- Fachbeistand
+              ELSE 0
+            END = @Beistand3)
+        )
+        
+  UNION ALL
+  
+  -- KesMasnahme die nicht angezeigt werden aber für Kombinierte Beistandschaft relevant sind
+  SELECT
+    KMA.FaLeistungID,
+    KMA.KesMassnahmeID,
+    KesMandatsfuehrendePersonID = NULL,
+    LEI.BaPersonID,
+    KMA.DatumVon,
+    GueltigAb  = COALESCE(KMA.AenderungVom_Datum, KMA.UebernahmeVon_Datum, KMA.DatumVon),
+    GueltigBis = COALESCE(/*KMA.Beistandswechsel, */KMA.UebertragungAn_Datum, KMA.DatumBis/*, KMA.BerichtsgenehmigungVom*/),
+    KMA.Platzierung_BaInstitutionID,
+    KMA.KesGrundlageCode,
+    KMA.FuersorgerischeUnterbringung,
+    KMA.IsKS,
+    Anzeigen = 0
+  FROM dbo.KesMassnahme       KMA WITH(READUNCOMMITTED)
+    INNER JOIN dbo.FaLeistung LEI WITH(READUNCOMMITTED) ON KMA.FaLeistungID = LEI.FaLeistungID
+    INNER JOIN MassnahmeCte   CTE                       ON CTE.FaLeistungID = KMA.FaLeistungID 
+                                                       AND CTE.Anzeigen = 1
+  WHERE KMA.IsDeleted = 0
+    AND (@Beistand1 IS NOT NULL OR @Beistand2 IS NOT NULL OR @Beistand3 IS NOT NULL)
+)
+
+INSERT INTO @Massnahmen (KesMassnahmeID, 
+                         BaPersonID, 
+						 KesMandatsfuehrendePersonID,
+                         DatumVon, 
+                         GueltigAb, 
+                         GueltigBis, 
+                         Platzierung_BaInstitutionID, 
+                         KesGrundlageCode,
+                         FuersorgerischeUnterbringung,
+                         IsKS,
+                         Anzeigen)
+  SELECT  
+    KesMassnahmeID,
+    BaPersonID,
+	KesMandatsfuehrendePersonID,
+    DatumVon,
+    GueltigAb,
+    GueltigBis,
+    Platzierung_BaInstitutionID,
+    KesGrundlageCode,
+    FuersorgerischeUnterbringung,
+    IsKS,
+    Anzeigen
+  FROM MassnahmeCte 
+  WHERE ISNULL(GueltigAb, '17530101') &lt;= @DatumBis
+    AND ISNULL(GueltigBis, '99991231') &gt;= @DatumVon
+    AND (GueltigBis IS NULL OR @InklAbgeschlossene = 1)
+    AND (@Platzierung_BainstitutionID IS NULL OR Platzierung_BaInstitutionID = @Platzierung_BainstitutionID)
+    AND (@GrundlageCode IS NULL OR KesGrundlageCode = @GrundlageCode)
+    AND (ISNULL(@FuersorgerischeUnterbringung, 0) = 0 OR @FuersorgerischeUnterbringung = FuersorgerischeUnterbringung);
+    
+
+--OUTPUT
+--1. Resultset: Fixe Spalten (Personen-Daten + Zusammenfassung Geschäfte)
+SELECT     
+  BaPersonID$ = TMP.BaPersonID,
+  PRS.Name,
+  PRS.Vorname,
+  Geschlecht = dbo.fnGetLOVMLText('Geschlecht', PRS.GeschlechtCode, 1),
+  [Alter] = dbo.fnGetAge(PRS.Geburtsdatum, GETDATE())
+FROM @Massnahmen           TMP
+  INNER JOIN dbo.BaPerson  PRS WITH(READUNCOMMITTED) ON PRS.BaPersonID = TMP.BaPersonID
+GROUP BY
+  TMP.BaPersonID,
+  PRS.Name,
+	PRS.Vorname,
+	dbo.fnGetLOVMLText('Geschlecht', PRS.GeschlechtCode, 1),	
+  dbo.fnGetAge(PRS.Geburtsdatum,GETDATE())
+
+
+--2. Resultset: Massnahmen eines Klienten
+SELECT
+  BaPersonID = TMP.BaPersonID,
+  [Massnahmeführender] = COALESCE(USR.NameVorname, INS.Name + ISNULL(', ' + INS.Vorname, '')/*, VPM.Name + ', ' + VPM.Vorname*/),
+  Platzierung = INP.Name,
+  Grundlage = CASE TMP.IsKS
+                WHEN 0 THEN CASE TMP.FuersorgerischeUnterbringung WHEN 1 THEN 'FU' ELSE NULL END
+                ELSE dbo.fnGetLOVMLText('KesGrundlageKS', KMA.KesGrundlageCode, 1)
+              END
+FROM @Massnahmen                 TMP
+  INNER JOIN dbo.KesMassnahme    KMA			WITH(READUNCOMMITTED) ON KMA.KesMassnahmeID = TMP.KesMassnahmeID
+  LEFT  JOIN dbo.KesMandatsfuehrendePerson MFP	WITH(READUNCOMMITTED) ON MFP.KesMandatsfuehrendePersonID = TMP.KesMandatsfuehrendePersonID
+  LEFT  JOIN dbo.vwUser          USR            WITH(READUNCOMMITTED) ON USR.UserID = MFP.UserID
+  --LEFT  JOIN dbo.VmPriMa         VPM               WITH(READUNCOMMITTED) ON VPM.VmPriMaID = KMA.VmPriMaID
+  LEFT  JOIN dbo.BaInstitution   INS		    WITH(READUNCOMMITTED) ON INS.BaInstitutionID = MFP.BaInstitutionID
+  LEFT  JOIN dbo.vwInstitution   INP 		    WITH(READUNCOMMITTED) ON INP.BaInstitutionID = KMA.Platzierung_BaInstitutionID                                                                           
+WHERE TMP.Anzeigen = 1
+ORDER BY TMP.GueltigAb</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="edtDatumBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtDatumVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>59</value>
+  </metadata>
+</root>

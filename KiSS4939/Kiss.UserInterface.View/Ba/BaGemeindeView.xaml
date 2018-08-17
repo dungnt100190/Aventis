@@ -1,0 +1,182 @@
+﻿<View:KissView
+    x:Class="Kiss.UserInterface.View.Ba.BaGemeindeView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+    xmlns:View="clr-namespace:Kiss.UserInterface.View"
+    xmlns:Ba="clr-namespace:Kiss.UserInterface.ViewModel.Ba;assembly=Kiss.UserInterface.ViewModel"
+    xmlns:Constant="clr-namespace:Kiss.UI.Controls.Constant;assembly=Kiss.UI.Controls"
+    xmlns:Controls="clr-namespace:Kiss.UI.Controls;assembly=Kiss.UI.Controls"
+    mc:Ignorable="d"
+    MinHeight="400"
+    MinWidth="650"
+    d:DesignWidth="650"
+    d:DesignHeight="400"
+    xmlns:lex="http://wpflocalizeextension.codeplex.com"
+    lex:LocalizeDictionary.DesignCulture="de"
+    lex:ResxLocalizationProvider.DefaultAssembly="Kiss.UserInterface.View"
+    lex:ResxLocalizationProvider.DefaultDictionary="BaGemeindeViewRes">
+
+    <d:KissView.DataContext>
+        <Ba:BaGemeindeVM />
+    </d:KissView.DataContext>
+
+    <Controls:BusyPanel IsBusy="{Binding IsCompletelyBusy}">
+        <!-- Äusserstes Grid -->
+        <Grid Name="panRoot" Margin="{x:Static Constant:LayoutConstant.MarginOuterControl}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControlSmall}" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Titel -->
+            <Label Grid.Row="0" FontFamily="Arial" FontSize="13" FontWeight="Bold" Content="{lex:Loc Gemeinden}" Margin="{x:Static Constant:LayoutConstant.MarginDetailControlBottom}" />
+
+            <!-- Daten-Grid -->
+            <Controls:KissGrid HorizontalAlignment="Stretch"
+                               Name="grdBaGemeinde"
+                               VerticalAlignment="Stretch"
+                               ItemsSource="{Binding EntityListView}"
+                               Grid.Row="1">
+                <Controls:KissGrid.Columns>
+                    <dxg:GridColumn Header="{lex:Loc PLZ}"
+                                FieldName="PLZ"
+                                VisibleIndex="1"
+                                MinWidth="50" />
+
+                    <dxg:GridColumn Header="{lex:Loc Name}"
+                                FieldName="Name"
+                                VisibleIndex="2"
+                                MinWidth="100" />
+
+                    <dxg:GridColumn Header="{lex:Loc Kanton}"
+                                FieldName="Kanton"
+                                VisibleIndex="3"
+                                MinWidth="85" />
+
+                    <dxg:GridColumn Header="{lex:Loc BFSCode}"
+                                FieldName="BFSCode"
+                                VisibleIndex="4"
+                                MinWidth="85" />
+
+                    <dxg:GridColumn Header="{lex:Loc Aufnahmedatum}"
+                                FieldName="GemeindeAufnahmeDatum"
+                                VisibleIndex="5"
+                                MinWidth="100" />
+
+                    <dxg:GridColumn Header="{lex:Loc Aufhebungsdatum}"
+                                FieldName="GemeindeAufhebungDatum"
+                                VisibleIndex="6"
+                                MinWidth="100" />
+
+                    <dxg:GridColumn Header="{lex:Loc Aenderungsdatum}"
+                                FieldName="GemeindeAenderungDatum"
+                                VisibleIndex="7"
+                                MinWidth="100" />
+
+                    <dxg:GridColumn Header="{lex:Loc Importiert}"
+                                FieldName="BFSDelivered"
+                                VisibleIndex="8"
+                                MinWidth="100" />
+                </Controls:KissGrid.Columns>
+
+                <Controls:KissGrid.View>
+
+                    <dxg:TableView ShowGroupPanel="False"
+                               RowMinHeight="20"
+                               AllowBestFit="True"
+                               AllowEditing="False"
+                               AutoWidth="False"
+                               NavigationStyle="Row"
+                               ShowAutoFilterRow="False"
+                               AllowFilterEditor="False">
+                        <dxg:TableView.RowStyle>
+                            <Style TargetType="{x:Type dxg:RowControl}">
+                                <Style.Triggers>
+                                    <!-- Bitte die Library NICHT IMPORTIEREN (!!) weil sonst das Highlighting nicht funktioniert -->
+                                    <DataTrigger Binding="{Binding Path=DataContext.BFSDelivered}" Value="True">
+                                        <Setter Property="Background" Value="LightCoral" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </dxg:TableView.RowStyle>
+                    </dxg:TableView>
+                </Controls:KissGrid.View>
+            </Controls:KissGrid>
+
+            <!-- Grid für die Details von BaPLZ -->
+            <Grid Grid.Row="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControlSmall}" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControlSmall}" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControlSmall}" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControlSmall}" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControlSmall}" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControlSmall}" />
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControlSmall}" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition MinWidth="100" Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="{x:Static Constant:LayoutConstant.ColumnWidthDetailControl}" />
+                    <ColumnDefinition MinWidth="125" Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Controls:KissLabel Grid.Row="0" Grid.Column="0" Content="{lex:Loc PLZ}" />
+                <Controls:KissTextEdit Grid.Row="0" Grid.Column="1" IsReadOnly="True" Text="{Binding Path=SelectedEntity.PLZ}" />
+
+                <Controls:KissLabel Grid.Row="2" Grid.Column="0" Content="{lex:Loc Name}" />
+                <Controls:KissTextEdit Grid.Row="2" Grid.Column="1" IsReadOnly="True" Text="{Binding Path=SelectedEntity.Name}" />
+
+                <Controls:KissLabel Grid.Row="4" Grid.Column="0" Content="{lex:Loc NameLang}" />
+                <Controls:KissTextEdit Grid.Row="4" Grid.Column="1" IsReadOnly="True" Text="{Binding Path=SelectedEntity.NameLang}" />
+
+                <Controls:KissLabel Grid.Row="6" Grid.Column="0" Content="{lex:Loc Kanton}" />
+                <Controls:KissTextEdit Grid.Row="6" Grid.Column="1" IsReadOnly="True" Text="{Binding Path=SelectedEntity.KantonNameLang}" />
+
+                <Controls:KissLabel Grid.Row="8" Grid.Column="0" Content="{lex:Loc Bezirk}" />
+                <Controls:KissTextEdit Grid.Row="8" Grid.Column="1" IsReadOnly="True" Text="{Binding Path=SelectedEntity.BezirkNameLang}" />
+
+                <Controls:KissLabel Grid.Row="10" Grid.Column="0" Content="{lex:Loc BFSCode}" />
+                <Controls:KissTextEdit Grid.Row="10" Grid.Column="1" IsReadOnly="True" Text="{Binding Path=SelectedEntity.BFSCode}" />
+
+                <Controls:KissLabel Grid.Row="0" Grid.Column="3" Content="{lex:Loc GemAufnahmedatum}" />
+                <Controls:KissDateEdit Grid.Row="0" Grid.Column="4" IsReadOnly="True" EditValue="{Binding Path=SelectedEntity.GemeindeAufnahmeDatum}" />
+
+                <Controls:KissLabel Grid.Row="2" Grid.Column="3" Content="{lex:Loc GemAufhebungsdatum}" />
+                <Controls:KissDateEdit Grid.Row="2" Grid.Column="4" IsReadOnly="True" EditValue="{Binding Path=SelectedEntity.GemeindeAufhebungDatum}" />
+
+                <Controls:KissLabel Grid.Row="4" Grid.Column="3" Content="{lex:Loc GemAenderungsdatum}" />
+                <Controls:KissDateEdit Grid.Row="4" Grid.Column="4" IsReadOnly="True" EditValue="{Binding Path=SelectedEntity.GemeindeAenderungDatum}" />
+
+                <Controls:KissLabel Grid.Row="6" Grid.Column="3" Content="{lex:Loc BezAufnahmedatum}" />
+                <Controls:KissDateEdit Grid.Row="6" Grid.Column="4" IsReadOnly="True" EditValue="{Binding Path=SelectedEntity.BezirkAufnahmeDatum}" />
+
+                <Controls:KissLabel Grid.Row="8" Grid.Column="3" Content="{lex:Loc BezAufhebungsdatum}" />
+                <Controls:KissDateEdit Grid.Row="8" Grid.Column="4" IsReadOnly="True" EditValue="{Binding Path=SelectedEntity.BezirkAufhebungDatum}" />
+
+                <Controls:KissLabel Grid.Row="10" Grid.Column="3" Content="{lex:Loc BezAenderungsdatum}" />
+                <Controls:KissDateEdit Grid.Row="10" Grid.Column="4" IsReadOnly="True" EditValue="{Binding Path=SelectedEntity.BezirkAenderungDatum}" />
+
+                <!-- Validation -->
+                <Controls:ValidationSummary Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="3" ServiceResult="{Binding Path=ValidationResult, Mode=TwoWay}" />
+
+                <Controls:KissButton Grid.Row="14" Grid.Column="3" Grid.ColumnSpan="2" x:Name="btnUpdateBaGemeinde" Content="{lex:Loc DatenAktualisieren}" HorizontalAlignment="Left" Command="{Binding ImportGemeindenCommand}" />
+            </Grid>
+        </Grid>
+    </Controls:BusyPanel>
+</View:KissView>

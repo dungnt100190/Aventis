@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>declare @KategorienSummen table 
+(BgBudgetID int, 
+ BgKategorieCode int, 
+ Summe money,
+ PRIMARY KEY (BgBudgetID,BgKategorieCode)
+)
+
+declare @BgBudget table 
+(BgBudgetID    money, 
+ Ausgaben      money, 
+ Einnahmen     money,
+ Verrechnungen money,
+ ZL            money, 
+ SaldoOhneZL   money, 
+ SaldoMitZL    money, 
+ Auszahlungen  money, 
+ PRIMARY KEY (BgBudgetID)
+)
+
+-- Ausgaben bar oder Ausgabekonto
+insert @KategorienSummen
+select BPO.BgBudgetID, 0, sum(BPO.BetragBudget)
+from   vwBgPosition BPO
+       inner join BgBudget              BDG on BDG.BgBudgetID = BPO.BgBudgetID
+       inner join BgFinanzplan          FPL on FPL.BgFinanzplanID = BDG.BgFinanzplanID
+       inner join FaLeistung            LEI on LEI.FaLeistungID = FPL.FaLeistungID
+       left  join BgAuszahlungPerson    BAP on BAP.BgPositionID = BPO.BgPositionID and
+                                               BgAuszahlungPersonID = (select top 1 BgAuszahlungPersonID
+                                                                       from   BgAuszahlungPerson
+                                                                       where  BgPositionID = BPO.BgPositionID)
+where  BDG.Masterbudget = 0 and -- Monatsbudget
+       BDG.BgBewilligungStatusCode in (5,9) and  -- grün/rotes Budget
+       BPO.BgKategorieCode  = 2 and -- Ausgaben
+       (BAP.KbAuszahlungsartCode = 103 or BPO.BgSpezKontoID is not null) -- Auszahlung bar oder auf Ausgabekonto
+group by BPO.BgBudgetID, BPO.BgKategorieCode
+having sum(BPO.BetragBudget) &lt;&gt; 0.00
+
+-- Ausgaben mit Auszahlung an Klient aus OE
+insert @KategorienSummen
+select BPO.BgBudgetID, 2, sum(BPO.BetragBudget)
+from   vwBgPosition BPO
+       inner join BgBudget              BDG on BDG.BgBudgetID = BPO.BgBudgetID
+       inner join BgFinanzplan          FPL on FPL.BgFinanzplanID = BDG.BgFinanzplanID
+       inner join BgFinanzplan_BaPerson FPP on FPP.BgFinanzplanID = BDG.BgFinanzplanID
+       inner join FaLeistung            LEI on LEI.FaLeistungID = FPL.FaLeistungID
+       inner join BgAuszahlungPerson    BAP on BAP.BgPositionID = BPO.BgPositionID and
+                                               BgAuszahlungPersonID = (select top 1 BgAuszahlungPersonID
+                                                                       from   BgAuszahlungPerson
+                                                                       where  BgPositionID = BPO.BgPositionID)
+       inner join BaZahlungsweg         ZAH on ZAH.BaZahlungswegID = BAP.BaZahlungswegID
+where  BDG.Masterbudget = 0 and -- Monatsbudget
+       BDG.BgBewilligungStatusCode in (5,9) and  -- grün/rotes Budget
+       BPO.BgKategorieCode  = 2 and -- Ausgaben
+       BAP.KbAuszahlungsartCode = 101 and -- Auszahlung elektronisch
+       ZAH.BaPersonID = FPP.BaPersonID -- Auszahlung bar oder an Klient aus UE
+group by BPO.BgBudgetID, BPO.BgKategorieCode
+having sum(BPO.BetragBudget) &lt;&gt; 0.00
+
+-- nicht abgetretene Einnahmen
+insert @KategorienSummen
+select BPO.BgBudgetID, 1, sum(BPO.BetragBudget)
+from   vwBgPosition BPO
+       inner join BgBudget              BDG on BDG.BgBudgetID = BPO.BgBudgetID
+       inner join BgFinanzplan          FPL on FPL.BgFinanzplanID = BDG.BgFinanzplanID
+       inner join FaLeistung            LEI on LEI.FaLeistungID = FPL.FaLeistungID
+where  BDG.Masterbudget = 0 and -- Monatsbudget
+       BDG.BgBewilligungStatusCode in (5,9) and  -- grün/rotes Budget
+       BPO.BgKategorieCode = 1 and  -- Einnahmen
+       BPO.VerwaltungSD = 0
+group by BPO.BgBudgetID, BPO.BgKategorieCode
+having sum(BPO.BetragBudget) &lt;&gt; 0.00
+
+-- Verrechnungen
+insert @KategorienSummen
+select BPO.BgBudgetID, 3, sum(BPO.BetragBudget)
+from   vwBgPosition BPO
+       inner join BgBudget              BDG on BDG.BgBudgetID = BPO.BgBudgetID
+       inner join BgFinanzplan          FPL on FPL.BgFinanzplanID = BDG.BgFinanzplanID
+       inner join FaLeistung            LEI on LEI.FaLeistungID = FPL.FaLeistungID
+where  BDG.Masterbudget = 0 and -- Monatsbudget
+       BDG.BgBewilligungStatusCode in (5,9) and  -- grün/rotes Budget
+       BPO.BgKategorieCode = 3 -- Verrechnungen
+group by BPO.BgBudgetID, BPO.BgKategorieCode
+having sum(BPO.BetragBudget) &lt;&gt; 0.00
+
+-- bewillligte Zusätzliche Leistungen an Klient
+insert @KategorienSummen
+select BPO.BgBudgetID, 100, sum(BPO.BetragBudget)
+from   vwBgPosition BPO
+       inner join BgBudget              BDG on BDG.BgBudgetID = BPO.BgBudgetID
+       inner join BgFinanzplan          FPL on FPL.BgFinanzplanID = BDG.BgFinanzplanID
+       inner join BgFinanzplan_BaPerson FPP on FPP.BgFinanzplanID = BDG.BgFinanzplanID
+       inner join FaLeistung            LEI on LEI.FaLeistungID = FPL.FaLeistungID
+       inner join BgAuszahlungPerson    BAP on BAP.BgPositionID = BPO.BgPositionID and
+                                               BgAuszahlungPersonID = (select top 1 BgAuszahlungPersonID
+                                                                       from   BgAuszahlungPerson
+                                                                       where  BgPositionID = BPO.BgPositionID)
+       inner join BaZahlungsweg         ZAH on ZAH.BaZahlungswegID = BAP.BaZahlungswegID
+where  BDG.Masterbudget = 0 and -- Monatsbudget
+       BDG.BgBewilligungStatusCode in (5,9) and  -- grün/rotes Budget
+       BPO.BgKategorieCode  = 100 and -- ZL
+       BPO.BgBewilligungStatusCode  = 5 and -- bewilligt
+       BAP.KbAuszahlungsartCode = 101 and -- Auszahlung elektronisch
+       ZAH.BaPersonID = FPP.BaPersonID -- Auszahlung an Klient aus UE
+group by BPO.BgBudgetID, BPO.BgKategorieCode
+having sum(BPO.BetragBudget) &lt;&gt; 0.00
+
+-- bewillligte Zusätzliche Leistungen bar
+insert @KategorienSummen
+select BPO.BgBudgetID, 200, sum(BPO.BetragBudget)
+from   vwBgPosition BPO
+       inner join BgBudget              BDG on BDG.BgBudgetID = BPO.BgBudgetID
+       inner join BgFinanzplan          FPL on FPL.BgFinanzplanID = BDG.BgFinanzplanID
+       inner join FaLeistung            LEI on LEI.FaLeistungID = FPL.FaLeistungID
+       inner join BgAuszahlungPerson    BAP on BAP.BgPositionID = BPO.BgPositionID and
+                                               BgAuszahlungPersonID = (select top 1 BgAuszahlungPersonID
+                                                                       from   BgAuszahlungPerson
+                                                                       where  BgPositionID = BPO.BgPositionID)
+where  BDG.Masterbudget = 0 and -- Monatsbudget
+       BDG.BgBewilligungStatusCode in (5,9) and  -- grün/rotes Budget
+       BPO.BgKategorieCode  = 100 and -- ZL
+       BPO.BgBewilligungStatusCode  = 5 and -- bewilligt
+       BAP.KbAuszahlungsartCode = 103 -- bar
+group by BPO.BgBudgetID, BPO.BgKategorieCode
+having sum(BPO.BetragBudget) &lt;&gt; 0.00
+
+-- @BgBudget
+insert @BgBudget
+select BDG.BgBudgetID, 
+       Ausgaben        = isnull(KA0.Summe,0) + isnull(KA2.Summe,0),
+       Einnahmen       = isnull(KA1.Summe,0),
+       Verrechnungen   = isnull(KA3.Summe,0),
+       ZL              = isnull(KA100.Summe,0) + isnull(KA200.Summe,0),
+       SaldoOhneZL     = isnull(KA0.Summe,0) + isnull(KA2.Summe,0) - isnull(KA1.Summe,0) - isnull(KA3.Summe,0),
+       SaldoMitZL      = isnull(KA0.Summe,0) + isnull(KA2.Summe,0) - isnull(KA1.Summe,0) - isnull(KA3.Summe,0) + isnull(KA100.Summe,0) + isnull(KA200.Summe,0),
+       Auszahlungen    = (select isnull(sum(K.Betrag),0)
+                          from   BgPosition P
+                                 inner join KbBuchungKostenart K on K.BgPositionID = P.BgPositionID
+                                 inner join KbBuchung          B on B.KbBuchungID = K.KbBuchungID
+                                 inner join BaZahlungsweg      Z on Z.BaZahlungswegID = B.BaZahlungswegID
+                          where  P.BgBudgetID = BDG.BgBudgetID and
+                                 P.BgKategorieCode in (2,100) and -- Ausgaben + ZL, keine Einzelzahlungen
+                                 B.KbBuchungStatusCode in (6,9) and -- ausgeglichen, Rückläufer
+                                 (B.KbAuszahlungsartCode = 103 or Z.BaPersonID is not null)) -- bar oder Auszahlung an Person
+
+from   BgBudget BDG
+       left  join @KategorienSummen     KA0   on KA0.BgBudgetID = BDG.BgBudgetID and
+                                                 KA0.BgKategorieCode = 0
+       left  join @KategorienSummen     KA1   on KA1.BgBudgetID = BDG.BgBudgetID and
+                                                 KA1.BgKategorieCode = 1
+       left  join @KategorienSummen     KA2   on KA2.BgBudgetID = BDG.BgBudgetID and
+                                                 KA2.BgKategorieCode = 2
+       left  join @KategorienSummen     KA3   on KA3.BgBudgetID = BDG.BgBudgetID and
+                                                 KA3.BgKategorieCode = 3
+       left  join @KategorienSummen     KA100 on KA100.BgBudgetID = BDG.BgBudgetID and
+                                                 KA100.BgKategorieCode = 100
+       left  join @KategorienSummen     KA200 on KA200.BgBudgetID = BDG.BgBudgetID and
+                                                 KA200.BgKategorieCode = 200
+where  BDG.Masterbudget = 0 and -- Monatsbudget
+       BDG.BgBewilligungStatusCode in (5,9) -- grün/rotes Budget
+
+-- Output
+select SZ               = USR.Sozialzentrum,
+       OE               = USR.OrgUnit,
+       MA               = USR.NameVorname,
+       FallNr           = FAL.FaFallID,
+       Klient           = PRS.NameVorname,
+       Budget           = dbo.fnXKurzMonat(BDG.Monat) + ' ' + convert(varchar,BDG.Jahr),
+       Ausgaben         = T.Ausgaben,
+       Einnahmen        = T.Einnahmen,
+       Verrechnungen    = T.Verrechnungen,
+       [Saldo ohne ZL]  = T.SaldoOhneZL,
+       [ZL]             = T.ZL,
+       [Saldo mit ZL]   = T.SaldoMitZL,
+       [Auszahlungen]   = T.Auszahlungen,
+       Typ              = case when T.Auszahlungen &gt; T.SaldoMitZL
+                          then 'Überzahlung'
+                          else 'Unterzahlung'
+                          end,
+       Differenz        = T.Auszahlungen - T.SaldoMitZL,
+       BgFinanzplanID$  = FPL.BgFinanzplanID,
+       BgBudgetID$      = BDG.BgBudgetID,
+       FallBaPersonID$  = FAL.BaPersonID
+from   @BgBudget T
+       inner join BgBudget              BDG  on BDG.BgBudgetID = T.BgBudgetID
+       inner join BgFinanzplan          FPL  on FPL.BgFinanzplanID = BDG.BgFinanzplanID
+       inner join FaLeistung            LEI  on LEI.FaLeistungID = FPL.FaLeistungID
+       left  join FaFall                FAL  on FAL.FaFallID = LEI.FaFallID
+       left  join vwUser                USR  on USR.UserID = LEI.UserID
+       left  join vwPerson              PRS  on PRS.BaPersonID = LEI.BaPersonID
+
+where  ((T.Ausgaben - T.Einnahmen - T.Verrechnungen &lt; 0.00) or  
+        (T.Ausgaben &gt; 0 and T.Ausgaben - T.Einnahmen - T.Verrechnungen = 0.00)) and
+       T.Auszahlungen &gt; 0 and
+       (T.Auszahlungen - T.SaldoMitZL) &lt;&gt; 0
+order by Differenz</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>17, 17</value>
+  </data>
+  <data name="xDocument.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAF1JREFUOE9jZAAC
+        Y2Pj/yAaGzh79iwjhjhIw///MzGwmJjYfxDGqSEtjeE/MgYpBhmEoYmQDSANKM7GpQHZmVg1oDsJxgdp
+        pI4N2EIKJjbqJLIiDqSJEMaVovGKAwBnM3PWBP8PfwAAAABJRU5ErkJggg==
+</value>
+  </data>
+</root>

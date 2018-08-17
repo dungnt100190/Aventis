@@ -1,0 +1,699 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>DECLARE @NNr VARCHAR(50);
+DECLARE @ZemisNr VARCHAR(50);
+DECLARE @BaPersonID INT;
+DECLARE @UserID INT;
+DECLARE @OrgUnitID INT;
+DECLARE @DatumWohnstatusVon DATETIME;
+DECLARE @DatumWohnstatusBis DATETIME;
+DECLARE @Stichdatum DATETIME;
+DECLARE @SollFaktor FLOAT;
+DECLARE @NeuaufnahmenUserID INT;
+DECLARE @FT BIT;
+
+--- SET @NNr = {edtNNr};
+--- SET @ZemisNr = {edtZemisNr};
+--- SET @BaPersonID = {edtBaPersonID.LookupID};
+--- SET @UserID = {edtUserID.LookupID};
+--- SET @OrgUnitID = {edtOrgUnitID};
+--- SET @DatumWohnstatusVon = {edtDatumWohnstatusVon};
+--- SET @DatumWohnstatusBis = {edtDatumWohnstatusBis};
+--- SET @Stichdatum = {edtStichdatum};
+--- SET @FT = {edtFT};
+
+SET @SollFaktor = ISNULL(CONVERT(FLOAT, dbo.fnXConfig('System\Abfrage\BaKlientenliste\Faktor', GETDATE())), 1.2);
+SET @NeuaufnahmenUserID = CONVERT(INT, dbo.fnXConfig('System\Abfrage\BaKlientenliste\NeuaufnahmenUserID', GETDATE()));
+
+DECLARE @Person TABLE
+(
+  BaPersonID INT,
+  BaPersonID_FT INT,
+  UserID INT,
+  OrgUnitID INT,
+  SAR VARCHAR(50),
+  Name VARCHAR(100),
+  Vorname VARCHAR(100),
+  NameFT VARCHAR(200),
+  ZemisNr VARCHAR(20),
+  NNr VARCHAR(20),
+  BFFNummer VARCHAR(20),
+  AktiveKopfquote INT,
+  PassiveKopfquote INT,
+  AufenthaltsstatusCode INT,
+  GeschlechtCode INT,
+  Geburtsdatum DATETIME,
+  Einreisedatum DATETIME,
+  Entscheiddatum DATETIME,
+  CAusweisDatum DATETIME,
+  DossierZahl INT,
+  BFluechtling INT,
+  FFluechtling INT,
+  NAusweis INT,
+  FAZ INT,
+  EinbezungFazGeburt DATETIME,
+  Asylgesuch DATETIME,
+  FinanziellSelbstaendig INT,
+  Kantonswechsel INT,
+  ZuzugKtDatum DATETIME,
+  WegzugKtDatum DATETIME,
+  Neuaufnahme INT,
+  DatumVonLeistung DATETIME,
+  InCHSeitGeburt BIT,
+  Bemerkungen VARCHAR(MAX),
+  ZustaendigAb DATETIME,
+  IstFamiliennachzug BIT,
+  InCHSeit DATETIME NULL
+);
+
+-------------------------------------------------------------------------------
+-- Fill temp table with most data
+-------------------------------------------------------------------------------
+INSERT INTO @Person (BaPersonID, BaPersonID_FT, UserID, OrgUnitID, Name, Vorname, ZemisNr, NNr, BFFNummer, AktiveKopfquote, PassiveKopfquote, AufenthaltsstatusCode, GeschlechtCode,
+                     Geburtsdatum, Einreisedatum, Entscheiddatum, CAusweisDatum, BFluechtling, FFluechtling, NAusweis, FAZ, EinbezungFazGeburt, Asylgesuch, FinanziellSelbstaendig, ZuzugKtDatum, WegzugKtDatum,
+                     Kantonswechsel, DatumVonLeistung, InCHSeitGeburt, Bemerkungen, ZustaendigAb, IstFamiliennachzug, InCHSeit)
+  SELECT BaPersonID             = PRS.BaPersonID,
+         BaPersonID_FT          = PRS.BaPersonID_Dossiertraeger,
+         UserID                 = ISNULL((SELECT TOP 1 FAL.UserID 
+                                          FROM dbo.FaLeistung    FAL WITH (READUNCOMMITTED)
+                                          WHERE BaPersonID = PRS.BaPersonID 
+                                            AND FAL.ModulID = 2
+                                          ORDER BY DatumBis, DatumVon DESC),
+                                          (SELECT TOP 1 LEI.UserID
+                                           FROM dbo.FaLeistung    LEI WITH (READUNCOMMITTED)
+                                              LEFT JOIN dbo.BaPerson_Relation REL1 WITH (READUNCOMMITTED) ON REL1.BaPersonID_1 = LEI.BaPersonID AND REL1.BaPersonID_2 = PRS.BaPersonID
+                                              LEFT JOIN dbo.BaPerson_Relation REL2 WITH (READUNCOMMITTED) ON REL2.BaPersonID_2 = LEI.BaPersonID AND REL2.BaPersonID_1 = PRS.BaPersonID
+                                           WHERE LEI.ModulID = 2
+                                             AND ISNULL(REL1.BaPersonID_2, REL2.BaPersonID_1) IS NOT NULL
+                                           ORDER BY LEI.DatumBis, LEI.DatumVon DESC)),
+         OrgUnitID              = OUU.OrgUnitID,
+         Name                   = PRS.Name,
+         Vorname                = PRS.Vorname,
+         ZemisNr                = PRS.ZemisNummer,
+         NNr                    = PRS.NNummer,
+         BFFNummer              = PRS.BFFNummer,
+         AktiveKopfquote        = AKQ.AktiveKopfquote,
+         PassiveKopfquote       = PKQ.PassiveKopfquote, 
+         AufenthaltsstatusCode  = PRS.AuslaenderStatusCode,
+         GeschlechtCode         = PRS.GeschlechtCode,
+         Geburtsdatum           = PRS.Geburtsdatum,
+         Einreisedatum          = PRS.InCHSeit,
+         Entscheiddatum         = PRS.ErteilungVA,
+         CAusweisDatum          = PRS.CAusweisDatum,
+         BFluechtling           = CASE 
+                                    WHEN PRS.AuslaenderStatusCode = 5 -- 'anerk. Flüchtling (B)'
+                                         AND ISNULL(AKQ.AktiveKopfquote, 0) = 0
+                                      THEN 1
+                                    ELSE NULL
+                                  END,
+         FFluechtling           = CASE 
+                                    WHEN PRS.AuslaenderStatusCode IN (15, 16) -- 15:'Vorl. aufg. Flücht. 7- (F)', 16: 'Vorl. aufg. Flücht. 7+ (F)'
+                                         AND ISNULL(AKQ.AktiveKopfquote, 0) = 0
+                                      THEN 1
+                                    ELSE NULL
+                                  END,
+         NAusweis               = CASE 
+                                    WHEN PRS.InCHSeit IS NOT NULL
+                                         AND PRS.AuslaenderStatusCode = 8 -- 'Asyl Suchende/-r (N)'
+                                         AND DATEADD(d, 30, PRS.InCHSeit) &lt; @Stichdatum
+                                      THEN 1
+                                    ELSE NULL
+                                  END,
+         FAZ                    = CASE
+                                    WHEN PRS.IstFamiliennachzug = 1 AND ISNULL(PRS.ErteilungVA, '99991231') &gt; ISNULL(@Stichdatum, '17530101')
+                                      THEN 1
+                                    ELSE NULL
+                                  END,
+         EinbezungFazGeburt     = PRS.DatumEinbezugFaz,
+         Asylgesuch             = PRS.DatumAsylgesuch,
+         FinanziellSelbstaendig = CASE 
+                                    -- Wenn der Klient in keiner Unterstützungseinheit ist
+                                    WHEN  (SELECT top 1 fpp.IstUnterstuetzt FROM BgFinanzplan_baperson fpp
+                                                                         INNER JOIN BgFinanzplan fpl on fpl.BgFinanzplanID = fpp.BgFinanzplanID
+                                                                         WHERE fpp.bapersonid = PRS.BaPersonID
+                                                                         AND ISNULL(@Stichdatum, '17530101') BETWEEN fpl.DatumVon AND ISNULL(fpl.datumbis, fpl.geplantbis)
+																		 AND fpp.IstUnterstuetzt = 1) =1
+                                         THEN 0                                                    
+                                    -- Wenn der Stichtag nicht in den Gültigkeitsbereich einer passiven Kopfquote fällt
+                                    WHEN ISNULL(PKQ.PassiveKopfquote, 0) = 1 THEN 0
+                                    -- Wenn zum Stichtag ein Budget offen ist
+                                    WHEN EXISTS (SELECT TOP 1 FPL.BgFinanzplanID 
+                                                 FROM dbo.BgFinanzplan FPL WITH(READUNCOMMITTED)
+                                                   INNER JOIN dbo.FaLeistung LEI1 ON LEI1.FaLeistungId = FPL.FaLeistungID 
+                                                   INNER JOIN dbo.BgBudget BDG WITH(READUNCOMMITTED) ON BDG.BgFinanzplanID = FPL.BgFinanzplanID
+                                                                                                    AND BDG.Masterbudget = 0
+                                                                                                    AND dbo.fnDateSerial(BDG.Jahr, BDG.Monat, 1)  = dbo.fnFirstDayOf(ISNULL(@Stichdatum, '99991231'))
+                                                 WHERE LEI1.BaPersonID = PRS.BaPersonId) THEN 0
+
+                                    -- Wenn eine offene Intakephase besteht
+                                    WHEN EXISTS(SELECT TOP 1 PHA.FaPhaseCode 
+                                                FROM dbo.FaPhase PHA WITH(READUNCOMMITTED)
+                                                  INNER JOIN dbo.FaLeistung LEI1 ON LEI1.FaLeistungID = PHA.FaLeistungID
+                                                WHERE LEI1.BaPersonID = PRS.BaPersonId
+                                                 AND PHA.FaPhaseCode = 1 --Intake
+                                                 AND ( (dbo.fnDateOf(PHA.DatumVon) &lt;= ISNULL(@Stichdatum, '99991231') OR PHA.DatumVon IS NULL) 
+                                                 AND (dbo.fnDateOf(PHA.DatumBis) &gt;= ISNULL(@Stichdatum, '17530101') OR PHA.DatumBis IS NULL))
+                                                   
+                                      ) 
+                                      THEN 0
+                                    ELSE 1 --Dann ist er finanziell selbständig
+                                  END,
+         ZuzugKtDatum           = PRS.ZuzugKtDatum,
+         WegzugKtDatum          = PRS.WegzugDatum,
+         Kantonswechsel         = CASE
+                                    WHEN @Stichdatum IS NULL THEN NULL      
+                                    WHEN ZuzugKtKanton &lt;&gt; 'BE'
+                                         AND ISNULL(PRS.ZuzugKtDatum, '99991231') BETWEEN DATEADD(MONTH, -3, @Stichdatum) AND @Stichdatum
+                                         AND WegzugKanton &lt;&gt; 'BE'
+                                         AND ISNULL(PRS.WegzugDatum, '99991231') BETWEEN DATEADD(MONTH, -3, @Stichdatum)  AND @Stichdatum
+                                      THEN (CASE 
+                                              WHEN PRS.WegzugDatum &lt;= PRS.ZuzugKtDatum THEN 1
+                                              WHEN PRS.ZuzugKtDatum &lt;= PRS.WegzugDatum THEN 2
+                                            END)                   
+                                    WHEN ZuzugKtKanton &lt;&gt; 'BE'
+                                         AND ISNULL(PRS.ZuzugKtDatum, '99991231') BETWEEN DATEADD(MONTH, -3, @Stichdatum) AND @Stichdatum
+                                      THEN 1
+                                    WHEN WegzugKanton &lt;&gt; 'BE'
+                                         AND ISNULL(PRS.WegzugDatum, '99991231') BETWEEN DATEADD(MONTH, -3, @Stichdatum)  AND @Stichdatum
+                                      THEN 2
+                                    ELSE NULL
+                                  END,
+        DatumVonLeistung        = LEI.DatumVon,
+        InCHSeitGeburt          = PRS.InCHSeitGeburt,
+        Bemerkungen             = PRS.BemerkungenSV,
+        ZustaendigAb            = ZAB.ZustaendigAb,
+        PRS.IstFamiliennachzug,
+        PRS.InCHSeit
+  FROM  dbo.BaPerson              PRS WITH(READUNCOMMITTED)
+    LEFT  JOIN dbo.FaLeistung    LEI WITH(READUNCOMMITTED) ON LEI.BaPersonID = PRS.BaPersonID 
+                                                          AND LEI.ModulID = 2
+                                                          AND LEI.DatumVon = (SELECT MAX(DatumVon) 
+                                                                              FROM dbo.FaLeistung WITH (READUNCOMMITTED)
+                                                                              WHERE BaPersonID = PRS.BaPersonID 
+                                                                                AND ModulID = 2)
+    LEFT  JOIN dbo.XOrgUnit_User OUU WITH(READUNCOMMITTED) ON OUU.UserID = LEI.UserID
+                                                          AND OUU.OrgUnitMemberCode = 2
+                                                          
+    OUTER APPLY (SELECT AktiveKopfquote = CASE
+                                            WHEN PRS.AktiveKopfquote = 1 
+                                              AND ISNULL(@Stichdatum, '17530101') BETWEEN ISNULL(PRS.KopfquoteAbDatum, '17530101') AND ISNULL(PRS.KopfquoteBisDatum, '99991231')
+                                            THEN 1
+                                            ELSE NULL
+                                          END) AKQ
+    OUTER APPLY (SELECT PassiveKopfquote = CASE
+                                            WHEN PRS.PassiveKopfquote = 1 
+                                              AND ISNULL(@Stichdatum, '17530101') BETWEEN ISNULL(PRS.KopfquoteAbDatum, '17530101') AND ISNULL(PRS.KopfquoteBisDatum, '99991231')
+                                            THEN 1
+                                            ELSE NULL
+                                          END) PKQ
+    -- Neueste Adresse bei Stichdatum
+    OUTER APPLY (SELECT TOP 1
+                   Kanton
+                 FROM dbo.BaAdresse WITH(READUNCOMMITTED)
+                 WHERE AdresseCode = 1 -- Wohnadresse
+                   AND BaPersonID = PRS.BaPersonID
+                   AND (@Stichdatum IS NULL 
+                     OR (ISNULL(DatumVon, '17530101') &lt;= @Stichdatum
+                       AND ISNULL(DatumBis, '99991231') &gt;= @Stichdatum))
+                 ORDER BY DatumVon DESC) ADR
+    -- Datum 'Zuständig ab'
+  OUTER APPLY (SELECT TOP 1 ZustaendigAb = Datum
+               FROM (
+                 -- Das Datum 'Entscheid'
+                 SELECT Datum = PRS.ErteilungVA
+                 UNION ALL
+                 -- Das 'Geburtsdatum', wenn Checkbox 'seit Geburt' aktiviert ist oder das 'Geburtsdatum' gleich dem Datum 'in Schweiz seit' gleich ist
+                 SELECT Datum = CASE 
+                                  WHEN PRS.InCHSeitGeburt = 1
+                                    THEN ISNULL(PRS.Geburtsdatum, PRS.InCHSeit)
+                                  WHEN PRS.Geburtsdatum = PRS.InCHSeit 
+                                    THEN PRS.Geburtsdatum
+                                  ELSE NULL
+                                END
+                 UNION ALL
+                 -- Bei aktiver Checkbox FAZ das Datum 'in Schweiz seit' + 30 Tage
+                 SELECT Datum = CASE WHEN PRS.IstFamiliennachzug = 1
+                                  THEN DATEADD(d, 30, PRS.InCHSeit)
+                                  ELSE NULL
+                                END
+                 UNION ALL
+                 -- Das Datum 'Zuzug in Kanton' (aus Modul B-Wohnsituation), wenn es innerhalb von drei Monaten vor dem Stichdatum liegt
+                 SELECT Datum = CASE WHEN PRS.ZuzugKtDatum BETWEEN DATEADD(m, -3, @Stichdatum) AND @Stichdatum
+                                  THEN PRS.ZuzugKtDatum 
+                                  ELSE NULL
+                                END
+                 ) T
+               WHERE Datum IS NOT NULL
+               ORDER BY Datum) ZAB
+  
+  WHERE 1 = 1 
+    -- aktive Person: ('Zuständig ab' =&lt; Stichdatum AND Stichdatum =&lt; 'Ende Zuständigkeit') 
+    --             OR (Aktive Kopfquote "aktiv" AND Stichdatum =&gt; 'Zuständig ab' AND Stichdatum =&lt; Datum 'Kopf-quote bis')
+    AND ((ZAB.ZustaendigAb &lt;= @Stichdatum AND @Stichdatum &lt;= ISNULL(PRS.CAusweisDatum, '99991231'))
+      OR (ISNULL(PRS.AktiveKopfQuote, 0) = 1 AND @Stichdatum &gt;= ZAB.ZustaendigAb AND @Stichdatum &lt;= ISNULL(PRS.KopfquoteBisDatum, '99991231')))
+    
+    -- einige Felder dürfen nicht gleichzeitig leer sein
+    AND (PRS.InCHSeit IS NOT NULL                                        -- 'In Schweiz seit'
+      OR PRS.InCHSeitGeburt IS NOT NULL AND PRS.Geburtsdatum IS NOT NULL -- Checkbox 'seit Geburt' UND 'Geburtsdatum'
+      OR PRS.AuslaenderStatusGueltigBis IS NOT NULL                      -- 'Status gültig bis'
+      OR PRS.ErteilungVA IS NOT NULL                                     -- 'Entscheid'
+      OR PRS.CAusweisDatum IS NOT NULL)                                  -- 'Ende Zuständigkeit'
+    
+    -- Wenn der Fall archiviert oder geschlossen ist, dann erscheint er nicht auf der Liste
+    AND ISNULL(LEI.DatumBis, '99991231') &gt;= @Stichdatum
+    AND (NOT EXISTS(SELECT TOP 1 1
+                    FROM dbo.FaLeistungArchiv WITH (READUNCOMMITTED)
+                    WHERE FaLeistungID = LEI.FaLeistungID
+                      AND CheckOut IS NULL))
+
+    AND (ISNULL(@FT,0) = 0 OR LEI.FaLeistungID IS NOT NULL)
+    
+
+-------------------------------------------------------------------------------
+-- Add missing data (XUser)
+-------------------------------------------------------------------------------
+UPDATE PRS
+SET UserID        = ISNULL(PRS.UserID, LEI.UserID),
+    OrgUnitID     = ISNULL(PRS.OrgUnitID, OUU.OrgUnitID),
+    FinanziellSelbstaendig = CASE 
+                               WHEN FinanziellSelbstaendig &lt;&gt; 1 THEN FinanziellSelbstaendig 
+                               -- Wenn der Klient in keiner Unterstützungseinheit ist
+                               WHEN dbo.fnUnterstuetzt(LEI.BaPersonID, PRS.BaPersonID, ISNULL(@Stichdatum, '17530101')) = 1 THEN 0
+                               -- Wenn der Fallträger finanziell selbständig ist, dann sind es alle Mitglieder der Unterstützungseinheit.
+                               WHEN ISNULL((SELECT FinanziellSelbstaendig FROM @Person WHERE BaPersonID = LEI.BaPersonID),0) = 0 THEN FinanziellSelbstaendig
+                               ELSE 1
+                             END,
+    DatumVonLeistung        = LEI.DatumVon
+FROM @Person PRS
+  INNER JOIN dbo.FaLeistung    LEI WITH(READUNCOMMITTED) ON LEI.BaPersonID = PRS.BaPersonID_FT 
+                                                        AND LEI.ModulID = 2
+                                                        AND LEI.DatumVon = (SELECT MAX(DatumVon) 
+                                                                            FROM dbo.FaLeistung WITH (READUNCOMMITTED)
+                                                                            WHERE BaPersonID = PRS.BaPersonID_FT 
+                                                                              AND ModulID = 2)
+  LEFT  JOIN dbo.XOrgUnit_User OUU WITH(READUNCOMMITTED) ON OUU.UserID = LEI.UserID
+                                                        AND OUU.OrgUnitMemberCode = 2
+
+
+
+-- Recursive data
+UPDATE PRS
+SET SAR                    = ISNULL((SELECT TOP 1 USR.ShortName
+                                          FROM dbo.FaLeistung    FAL WITH (READUNCOMMITTED)
+                                            INNER JOIN dbo.XUser USR WITH (READUNCOMMITTED) ON USR.UserID = FAL.UserID
+                                          WHERE BaPersonID = PRS.BaPersonID 
+                                            AND FAL.ModulID = 2
+                                          ORDER BY DatumBis, DatumVon DESC),
+                                          (SELECT TOP 1 USR.ShortName
+                                           FROM dbo.FaLeistung    LEI WITH (READUNCOMMITTED)
+                                             INNER JOIN dbo.XUser USR WITH (READUNCOMMITTED) ON USR.UserID = LEI.UserID
+                                             LEFT JOIN dbo.BaPerson_Relation REL1 WITH (READUNCOMMITTED) ON REL1.BaPersonID_1 = LEI.BaPersonID AND REL1.BaPersonID_2 = PRS.BaPersonID
+                                             LEFT JOIN dbo.BaPerson_Relation REL2 WITH (READUNCOMMITTED) ON REL2.BaPersonID_2 = LEI.BaPersonID AND REL2.BaPersonID_1 = PRS.BaPersonID
+                                           WHERE LEI.ModulID = 2
+                                             AND ISNULL(REL1.BaPersonID_2, REL2.BaPersonID_1) IS NOT NULL
+                                           ORDER BY LEI.DatumBis, LEI.DatumVon DESC)),
+    NameFT                 = PFT.NameVorname,
+    DossierZahl            = CASE 
+                               WHEN PRS.BaPersonID = PRS.BaPersonID_FT AND ISNULL(PRS.AktiveKopfQuote, 0) = 0 AND ISNULL(@Stichdatum, '17530101') &lt; ISNULL(PRS.CAusweisDatum, '99991231')  THEN 1
+                               WHEN PRS.PassiveKopfQuote = 1 THEN 1
+                               WHEN ISNULL(PRS.AktiveKopfQuote,0) = 1 THEN NULL                               
+                               ELSE NULL
+                             END,
+/*    FinanziellSelbstaendig = ISNULL(NULLIF(PFTT.FinanziellSelbstaendig, 0), PRS.FinanziellSelbstaendig),*/ 
+    Neuaufnahme            = CASE PRS.UserID
+                               WHEN @NeuaufnahmenUserID THEN 1
+                               ELSE 0
+                             END
+FROM @Person                   PRS
+  LEFT JOIN dbo.XUser          USR WITH(READUNCOMMITTED) ON USR.UserID = PRS.UserID
+  LEFT JOIN dbo.vwPersonSimple PFT WITH(READUNCOMMITTED) ON PFT.BaPersonID = PRS.BaPersonID_FT
+  LEFT JOIN @Person            PFTT ON PFTT.BaPersonID = PRS.BaPersonID_FT;
+
+-------------------------------------------------------------------------------
+-- Result 1 (Bestandesliste) 
+/*ACHTUNG: Spalten-Captions sind für Result 1 im Grid definiert, für 2 und 3 nicht!*/
+-------------------------------------------------------------------------------
+SELECT
+  [BaPersonID$]            = PRS.BaPersonID,
+  [SAR]                    = PRS.SAR,
+  [Name]                   = PRS.[Name],
+  [Vorname]                = PRS.Vorname,
+  [NameFT]                 = PRS.NameFT,
+  [ZemisNr]                = PRS.ZemisNr,
+  [NNr]                    = PRS.NNr,
+  [BFFNummer]              = PRS.BFFNummer,
+  [Geschlecht]             = dbo.fnLOVShortText('Geschlecht', PRS.GeschlechtCode),
+  [Geburtsdatum]           = PRS.Geburtsdatum,
+  [Einreisedatum]          = CASE 
+                               WHEN PRS.InCHSeitGeburt = 1 THEN PRS.Geburtsdatum 
+                               ELSE PRS.Einreisedatum 
+                             END,
+  [Entscheiddatum]         = PRS.Entscheiddatum,
+  [DossierZahl]            = PRS.DossierZahl,
+  [BFluechtling]           = PRS.BFluechtling,         
+  [FFluechtling]           = PRS.FFluechtling,
+  [NAusweis]               = PRS.NAusweis,
+  [FAZ]                    = PRS.FAZ,
+  [EinbezungFazGeburt]     = PRS.EinbezungFazGeburt,
+  [Asylgesuch]             = PRS.Asylgesuch,
+  [CAusweis]               = PRS.CAusweisDatum,
+  [FinanziellSelbstaendig] = NULLIF(PRS.FinanziellSelbstaendig, 0),
+  [Erwerbstaetig]          = CASE
+                               WHEN EXISTS(SELECT TOP 1 1
+                                           FROM dbo.BaArbeitAusbildung WITH (READUNCOMMITTED)
+                                           WHERE BaPersonID = PRS.BaPersonID
+                                             AND (ErwerbssituationStatus1Code IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 20)
+                                               OR ErwerbssituationStatus2Code IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 20)
+                                               OR ErwerbssituationStatus3Code IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 20)
+                                               OR ErwerbssituationStatus4Code IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 20)))
+                                 THEN 1
+                               ELSE NULL
+                             END,
+  [AktiveKopfquote]        = PRS.AktiveKopfquote,
+  [OhneJeglichenKontakt]   = CASE /*wenn finanz. selbständig AND keine Korrespondenz AND keine Aktennotizen in den letzten drei Monaten (90 Tage) bezogen auf den Stichtag */
+                               WHEN PRS.FinanziellSelbstaendig = 1
+                                    AND NOT EXISTS(SELECT 1 FROM FaDokumente    FAD 
+                                                           WHERE FAD.BaPersonID_Adressat = PRS.BaPersonID 
+                                                              OR PRS.BaPersonID IN (SELECT SplitValue FROM dbo.fnSplitStringToValues(FAD.BaPersonIDs, ',', 0) )
+                                                  )
+                                    AND NOT EXISTS(SELECT 1 FROM FaAktennotizen FAK 
+                                                           WHERE PRS.BaPersonID IN (SELECT SplitValue FROM dbo.fnSplitStringToValues(FAK.BaPersonIDs, ',', 0) )
+                                                             AND ABS(DATEDIFF(d,ISNULL(@Stichdatum, '17530101'), FAK.Datum)) &lt; 90  
+                                                   )
+                                    THEN 1
+                               ELSE NULL
+                             END,
+  [PassiveKopfquote]        = PRS.PassiveKopfquote,
+  [Kantonswechsel]          = PRS.Kantonswechsel,
+  [KantonswechselEffektiv] = CASE PRS.Kantonswechsel
+                               WHEN 1 THEN PRS.ZuzugKtDatum
+                               WHEN 2 THEN PRS.WegzugKtDatum
+                               ELSE NULL
+                             END,
+  [Bemerkungen]              = dbo.fnXConvertRTF2Text(PRS.Bemerkungen)
+FROM @Person                 PRS
+WHERE (@UserID IS NULL OR PRS.UserID = @UserID)
+  AND (@BaPersonID IS NULL OR PRS.BaPersonID = @BaPersonID)
+  AND (@OrgUnitID IS NULL OR PRS.OrgUnitID = @OrgUnitID)
+  AND (@NNr IS NULL OR PRS.NNr LIKE '%' + @NNr + '%')
+  AND (@ZemisNr IS NULL OR PRS.ZemisNr LIKE '%' + @ZemisNr + '%')
+  ORDER BY PRS.NameFT, PRS.[Name], PRS.Vorname;
+
+-------------------------------------------------------------------------------
+-- Result 2 (Wohnstatus)
+-------------------------------------------------------------------------------
+SELECT
+  [BaPersonID$]                                  = PRS.BaPersonID,
+  [Name]                                         = PRS.[Name],
+  [Vorname]                                      = PRS.Vorname,
+  [Name Dossierträger]                           = PRS.NameFT,
+  [N-Nr]                                         = PRS.NNr,
+  [m/w]                                          = dbo.fnLOVShortText('Geschlecht', PRS.GeschlechtCode),
+  [Geburtsdatum]                                 = PRS.Geburtsdatum,
+  [Einreisedatum]                                = CASE 
+                                                     WHEN PRS.InCHSeitGeburt = 1 THEN PRS.Geburtsdatum 
+                                                     ELSE PRS.Einreisedatum 
+                                                   END,  
+  [Entscheiddatum]                               = PRS.Entscheiddatum,
+  [Zuteilung an HW]                              =  CASE WHEN PRS.DatumVonLeistung IS NOT NULL THEN PRS.DatumVonLeistung
+                                                         /*falls PRS.DatumVonLeistung gleich NULL, nimm neuestes DatumVon einer F-Leistung, 
+                                                           in der die Person enthalten ist*/
+                                                         ELSE (SELECT MAX(lei.DatumVon)
+                                                                 FROM dbo.FaLeistung    LEI WITH (READUNCOMMITTED)
+                                                                    LEFT JOIN dbo.BaPerson_Relation REL1 WITH (READUNCOMMITTED) ON REL1.BaPersonID_1 = LEI.BaPersonID AND REL1.BaPersonID_2 = PRS.BaPersonID
+                                                                    LEFT JOIN dbo.BaPerson_Relation REL2 WITH (READUNCOMMITTED) ON REL2.BaPersonID_2 = LEI.BaPersonID AND REL2.BaPersonID_1 = PRS.BaPersonID
+                                                                 WHERE LEI.ModulID = 2
+                                                                   AND ISNULL(REL1.BaPersonID_2, REL2.BaPersonID_1) IS NOT NULL)
+                                                        END,
+  [Anzahl Tage bis Zuteilung an HW]              = CASE WHEN PRS.DatumVonLeistung &gt; PRS.Entscheiddatum THEN DATEDIFF(d, PRS.Entscheiddatum, PRS.DatumVonLeistung) ELSE 0 END,
+  [Datum Einzug in DZ]                           = ADRDZ.DatumVon,
+  [Datum Einzug in PA-Wohnung]                   = ADRPA.DatumVon,
+  [Datum Einzug in prov. Unterkunft]             = ADRPROV.DatumVon,
+  [Beginn Mietvertrag definitive Unterkunft]     = ADRDEF.DatumVon,
+  [Anzahl Tage in Asylstrukturen]                = CASE WHEN (ADRDZ.DatumVon IS NULL AND ADRPA.DatumVon IS NULL) THEN 0 ELSE ABS(DATEDIFF(d, COALESCE(CONVERT(DATETIME, dbo.fnMax(dbo.fnMax(ADRDZ.DatumBis, ADRPA.DatumBis), ADRPROV.DatumBis)), @DatumWohnstatusBis, GETDATE()),PRS.Entscheiddatum)) END,
+  [Anzahl Tage bis def. oder prov. Mietvertrag]  = CASE WHEN ISNULL(ADRDEF.DatumVon, ADRPROV.DatumVon) &gt; PRS.Entscheiddatum THEN  DATEDIFF(d,PRS.Entscheiddatum, ISNULL(ADRDEF.DatumVon, ADRPROV.DatumVon)) ELSE 0 END
+
+FROM @Person PRS
+-- Datum erste Adresse + Datum letzte Adresse mit Status DZ 
+  OUTER APPLY (SELECT DatumVon=MIN(DatumVon), DatumBis=MAX(DatumBis)
+               FROM dbo.BaAdresse WITH(READUNCOMMITTED)
+               WHERE AdresseCode = 1 -- Wohnadresse
+                 AND BaPersonID = PRS.BaPersonID
+                 AND WohnStatusCode = 11 -- Kollektivunterkunft/DZ/Asylstruktur
+                 AND (@DatumWohnstatusVon IS NULL OR ISNULL(DatumBis, '99991231') &gt;= @DatumWohnstatusVon)
+                 AND (@DatumWohnstatusBis IS NULL OR ISNULL(DatumVon, '17530101') &lt;= @DatumWohnstatusBis)
+               ) ADRDZ
+               
+-- Datum erste Adresse + Datum letzte Adresse mit Status PA 
+  OUTER APPLY (SELECT DatumVon=MIN(DatumVon), DatumBis=MAX(DatumBis)
+               FROM dbo.BaAdresse WITH(READUNCOMMITTED)
+               WHERE AdresseCode = 1 -- Wohnadresse
+                 AND BaPersonID = PRS.BaPersonID
+                 AND WohnStatusCode = 20 -- PA-Wohnung/Asylstruktur
+                 AND (@DatumWohnstatusVon IS NULL OR ISNULL(DatumBis, '99991231') &gt;= @DatumWohnstatusVon)
+                 AND (@DatumWohnstatusBis IS NULL OR ISNULL(DatumVon, '17530101') &lt;= @DatumWohnstatusBis)
+               ) ADRPA
+               
+-- Datum erste Adresse + Datum letzte Adresse mit Status Prov. Unterkunft 
+  OUTER APPLY (SELECT DatumVon=MIN(DatumVon), DatumBis=MAX(DatumBis)
+               FROM dbo.BaAdresse WITH(READUNCOMMITTED)
+               WHERE AdresseCode = 1 -- Wohnadresse
+                 AND BaPersonID = PRS.BaPersonID
+                 AND WohnStatusCode IN (4, 5, 6, 9, 14, 15) /*Als 'prov. Unterkunft' gelten die Wohnstatus  
+                                                             4 - Pension/Hotel
+                                                             5 - Stationär Einrichtung (Heim, Klinik)
+                                                             6 - begleitetes Wohnen
+                                                             9 - Ohne feste Unterkunft
+                                                            14 - Spitaleintritt
+                                                            15 - Verwandtenunterbringung*/
+                 AND (@DatumWohnstatusVon IS NULL OR ISNULL(DatumBis, '99991231') &gt;= @DatumWohnstatusVon)
+                 AND (@DatumWohnstatusBis IS NULL OR ISNULL(DatumVon, '17530101') &lt;= @DatumWohnstatusBis)
+               ) ADRPROV
+               
+-- Datum erste Adresse + Datum letzte Adresse mit Status definitive Unterkunft
+  OUTER APPLY (SELECT DatumVon=MIN(DatumVon), DatumBis=MAX(DatumBis)
+               FROM dbo.BaAdresse WITH(READUNCOMMITTED)
+               WHERE AdresseCode = 1 -- Wohnadresse
+                 AND BaPersonID = PRS.BaPersonID
+                 AND WohnStatusCode IN (1, 2, 3) /*Als 'definitive Unterkunft' gelten die Wohnstatus
+                 	                                   1 - Eigentum/Wohnung
+                                                     2 - Mieter
+                                                     3 - Untermieter*/
+                 AND (@DatumWohnstatusVon IS NULL OR ISNULL(DatumBis, '99991231') &gt;= @DatumWohnstatusVon)
+                 AND (@DatumWohnstatusBis IS NULL OR ISNULL(DatumVon, '17530101') &lt;= @DatumWohnstatusBis)
+               ) ADRDEF
+WHERE (@UserID IS NULL OR PRS.UserID = @UserID)
+  AND (@BaPersonID IS NULL OR PRS.BaPersonID = @BaPersonID)
+  AND (@OrgUnitID IS NULL OR PRS.OrgUnitID = @OrgUnitID)
+  AND (@NNr IS NULL OR PRS.NNr LIKE '%' + @NNr + '%')
+  AND (@ZemisNr IS NULL OR PRS.ZemisNr LIKE '%' + @ZemisNr + '%')
+  --Datum inCHseit bei aktiver Checkbox FAZ (IstFamiliennachzug) im Abfragezeitraum
+  AND (PRS.IstFamiliennachzug = 1 AND CASE WHEN PRS.InCHSeitGeburt = 1 THEN PRS.Geburtsdatum ELSE PRS.inCHseit END BETWEEN ISNULL(@DatumWohnstatusVon, '17530101') AND ISNULL(@DatumWohnstatusBis, '99991231')
+    OR dbo.fnDatumUeberschneidung(ISNULL(@DatumWohnstatusVon, '17530101'),
+                                  ISNULL(@DatumWohnstatusBis, '99991231'),
+                                  PRS.EntscheidDatum,
+                                  PRS.EntscheidDatum) = 1)
+      
+ORDER BY PRS.[Name], PRS.Vorname;
+
+-------------------------------------------------------------------------------
+-- Result 3 (Klientenzahlen)
+-------------------------------------------------------------------------------
+SELECT
+  [$Neuaufnahme]            = PRS.Neuaufnahme,
+  [SAR]                     = CASE PRS.Neuaufnahme
+                                WHEN 0 THEN USR.VornameName
+                                ELSE 'nicht zugewiesen' + ISNULL(' (' + USR.VornameName + ')', '')
+                              END,
+  [Prozent]                 = USR.JobPercentage,
+  [Soll]                    = CONVERT(INT, USR.JobPercentage * @SollFaktor),
+  [AnzahlKlienten]          = COUNT(1)
+                              - SUM(ISNULL(PRS.FinanziellSelbstaendig, 0)) 
+                              - SUM(ISNULL(PRS.PassiveKopfquote, 0)),
+  [AbwSoll]                 = COUNT(1) - CONVERT(INT, USR.JobPercentage * @SollFaktor),
+  [PersProDossier]          = CONVERT(DECIMAL(10,2), 
+                                            /*Anzahl Klienten*/
+                                           ( COUNT(1)
+                                            - SUM(ISNULL(PRS.FinanziellSelbstaendig, 0)) 
+                                            - SUM(ISNULL(PRS.PassiveKopfquote, 0)))
+                                         / 
+                                           /*geteilt durch Anzahldossiers*/
+                                          (  CONVERT(DECIMAL(10,2),dbo.fnMax(SUM(PRS.DOssierZahl)
+                                                                    - SUM(CASE WHEN ISNULL(PRS.FinanziellSelbstaendig, 0) = 1 
+                                                                                 OR ISNULL(PRS.PassiveKopfquote, 0) = 1 
+                                                                               THEN DossierZahl 
+                                                                               ELSE 0 
+                                                                          END), 1.0)))
+                                      ),  
+  [AnzahlDossiers]          = SUM(PRS.DOssierZahl)
+                              - SUM(CASE WHEN ISNULL(PRS.FinanziellSelbstaendig, 0) = 1 
+                                           OR (ISNULL(PRS.PassiveKopfquote, 0) = 1 
+                                               AND PRS.BapersonID = PRS.BaPersonID_FT) /*für eine 1 muss zusätzlich noch der 'Dossierträger' gleich dem Namen der Person sein*/
+                                         THEN DossierZahl 
+                                         ELSE 0 
+                                    END),
+  [BAusweis]                = CONVERT(INT, dbo.fnMax(SUM(ISNULL(PRS.BFluechtling, 0)) - SUM(ISNULL(PRS.FinanziellSelbstaendig, 0)) - SUM(ISNULL(PRS.PassiveKopfquote, 0)), 0)),
+  [FAusweis]                = CONVERT(INT, dbo.fnMax(SUM(ISNULL(PRS.FFluechtling, 0)) - SUM(ISNULL(PRS.FinanziellSelbstaendig, 0)) - SUM(ISNULL(PRS.PassiveKopfquote, 0)), 0)),
+  [FAZ]                     = SUM(ISNULL(PRS.FAZ, 0)),
+  [AKQ]                     = SUM(ISNULL(PRS.AktiveKopfquote, 0)),
+  [FinanziellSelbstaendige] = SUM(ISNULL(PRS.FinanziellSelbstaendig, 0)),
+  [PKQ]                     = SUM(ISNULL(PRS.PassiveKopfquote, 0)),
+  [Abgaben]                 = SUM(CASE
+                                    WHEN @Stichdatum IS NULL OR PRS.CAusweisDatum IS NULL THEN 0
+                                    WHEN dbo.fnFirstDayOf(ISNULL(@Stichdatum, '17530101')) &lt;= PRS.CAusweisDatum AND dbo.fnLastDayOf(ISNULL(@Stichdatum, '17530101')) &gt;= PRS.CAusweisDatum THEN 1
+                                    ELSE 0
+                                  END)
+FROM vwUser USR
+  INNER JOIN @Person PRS ON PRS.UserID = USR.UserID
+WHERE (@UserID IS NULL OR PRS.UserID = @UserID)
+  AND (@OrgUnitID IS NULL OR PRS.OrgUnitID = @OrgUnitID)
+GROUP BY PRS.Neuaufnahme, USR.VornameName, USR.JobPercentage
+ORDER BY 1, 2;</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="edtStichdatum.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtDatumWohnstatusVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtDatumWohnstatusBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+</root>

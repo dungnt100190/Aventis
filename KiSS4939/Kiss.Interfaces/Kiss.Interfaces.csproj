@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{936877A8-EC00-4267-8C62-344062912497}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kiss.Interfaces</RootNamespace>
+    <AssemblyName>Kiss.Interfaces</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentValidation">
+      <HintPath>..\packages\FluentValidation.5.0.0.1\lib\Net40\FluentValidation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\IAuthenticatedUser.cs" />
+    <Compile Include="BL\IServiceResult.cs" />
+    <Compile Include="BL\IServiceResultEntry.cs" />
+    <Compile Include="BL\IService.cs" />
+    <Compile Include="BL\IServiceCRUD.cs" />
+    <Compile Include="BL\IUnitOfWorkFactory.cs" />
+    <Compile Include="BL\ISessionService.cs" />
+    <Compile Include="BL\IUnitOfWork.cs" />
+    <Compile Include="BL\IValidating.cs" />
+    <Compile Include="BL\KissServiceResult.cs" />
+    <Compile Include="BL\KissServiceResultEntry.cs" />
+    <Compile Include="BL\KissServiceResultMessageID.cs" />
+    <Compile Include="BL\KissSystem\IXConfigService.cs" />
+    <Compile Include="BL\ServiceResultType.cs" />
+    <Compile Include="BL\Wsh\IWshPositionService.cs" />
+    <Compile Include="Database\IDataSource.cs" />
+    <Compile Include="Database\IRepository.cs" />
+    <Compile Include="DocumentHandling\DokFormat.cs" />
+    <Compile Include="DocumentHandling\DokTyp.cs" />
+    <Compile Include="DocumentHandling\IExcelControl.cs" />
+    <Compile Include="DocumentHandling\IExcelDocument.cs" />
+    <Compile Include="DocumentHandling\IWordControl.cs" />
+    <Compile Include="EventArgs.cs" />
+    <Compile Include="UI\EditModeType.cs" />
+    <Compile Include="UI\IAuthorizable.cs" />
+    <Compile Include="UI\IContainerForm.cs" />
+    <Compile Include="UI\IDragDropDataObject.cs" />
+    <Compile Include="UI\IKiss4MessageHandler.cs" />
+    <Compile Include="UI\IKissContext.cs" />
+    <Compile Include="UI\IKissEdit.cs" />
+    <Compile Include="UI\IKissEditable.cs" />
+    <Compile Include="UI\IKissFormController.cs" />
+    <Compile Include="UI\IKissTranslatable.cs" />
+    <Compile Include="UI\IKissUserModified.cs" />
+    <Compile Include="UI\IMessagePresenter.cs" />
+    <Compile Include="UI\IViewMessaging.cs" />
+    <Compile Include="UI\IKissDataNavigator.cs" />
+    <Compile Include="UI\IKissView.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\IViewRight.cs" />
+    <Compile Include="UI\IViewRightInterceptor.cs" />
+    <Compile Include="UI\IXDocumentLogic.cs" />
+    <Compile Include="ViewModel\IDataCrudOperatorAsync.cs" />
+    <Compile Include="ViewModel\InitParameters.cs" />
+    <Compile Include="ViewModel\IOpenFileService.cs" />
+    <Compile Include="ViewModel\ISearchableAsync.cs" />
+    <Compile Include="ViewModel\INavigateableListAsync.cs" />
+    <Compile Include="ViewModel\IAsyncCommand.cs" />
+    <Compile Include="ViewModel\IMessageRaiser.cs" />
+    <Compile Include="ViewModel\ISelectableItem.cs" />
+    <Compile Include="ViewModel\IViewModel.cs" />
+    <Compile Include="ViewModel\IViewModelCRUD.cs" />
+    <Compile Include="ViewModel\IViewModelList.cs" />
+    <Compile Include="ViewModel\IViewModelSearch.cs" />
+    <Compile Include="ViewModel\MessageRaisedEventArgs.cs" />
+    <Compile Include="QuestionAnswerOption.cs" />
+    <Compile Include="QuestionRaisedEventArgs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KiSS.AssemblyInfo\BIAG.AssemblyInfo.csproj">
+      <Project>{C3A41F2E-FBF1-4628-8F6A-764A22252624}</Project>
+      <Name>BIAG.AssemblyInfo</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

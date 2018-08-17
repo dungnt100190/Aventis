@@ -1,0 +1,53 @@
+﻿CREATE TABLE [dbo].[BaHaus](
+	[BaHausID] [int] IDENTITY(1,1) NOT NULL,
+	[BaStrasseID] [int] NOT NULL,
+	[Hausnummer] [smallint] NULL,
+	[Suffix] [varchar](10) NULL,
+	[PLZ] [smallint] NULL,
+	[OrgUnitID] [int] NULL,
+	[Kreis] [int] NULL,
+	[Quartier] [int] NULL,
+	[Zone] [int] NULL,
+	[StatistischeZone] [int] NULL,
+	[BaHausTS] [timestamp] NOT NULL,
+ CONSTRAINT [PK_BaHaus] PRIMARY KEY CLUSTERED 
+(
+	[BaHausID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING ON
+GO
+
+/****** Object:  Index [IX_BaHaus_BaStrasseID]    Script Date: 11/23/2011 10:39:51 ******/
+CREATE NONCLUSTERED INDEX [IX_BaHaus_BaStrasseID] ON [dbo].[BaHaus] 
+(
+	[BaStrasseID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO
+
+/****** Object:  Index [IX_BaHaus_OrgUnitID]    Script Date: 11/23/2011 10:39:51 ******/
+CREATE NONCLUSTERED INDEX [IX_BaHaus_OrgUnitID] ON [dbo].[BaHaus] 
+(
+	[OrgUnitID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO
+
+/****** Object:  Index [IX_Sicherung]    Script Date: 11/23/2011 10:39:51 ******/
+CREATE UNIQUE NONCLUSTERED INDEX [IX_Sicherung] ON [dbo].[BaHaus] 
+(
+	[BaStrasseID] ASC,
+	[Hausnummer] ASC,
+	[Suffix] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[BaHaus]  WITH CHECK ADD  CONSTRAINT [FK_BaHaus_BaStrasse] FOREIGN KEY([BaStrasseID])
+REFERENCES [dbo].[BaStrasse] ([BaStrasseID])
+GO
+ALTER TABLE [dbo].[BaHaus] CHECK CONSTRAINT [FK_BaHaus_BaStrasse]
+GO
+ALTER TABLE [dbo].[BaHaus]  WITH CHECK ADD  CONSTRAINT [FK_BaHaus_XOrgUnit] FOREIGN KEY([OrgUnitID])
+REFERENCES [dbo].[XOrgUnit] ([OrgUnitID])
+GO
+ALTER TABLE [dbo].[BaHaus] CHECK CONSTRAINT [FK_BaHaus_XOrgUnit]

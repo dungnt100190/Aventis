@@ -1,0 +1,654 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>DECLARE @KST VARCHAR(150);
+DECLARE @KGS VARCHAR(100);
+DECLARE @Mitarbeiter INT;
+DECLARE @EntscheidVon DATETIME;
+DECLARE @EntscheidBis DATETIME;
+DECLARE @ErfassungVon DATETIME;
+DECLARE @ErfassungBis DATETIME;
+DECLARE @AbschlussVon DATETIME;
+DECLARE @AbschlussBis DATETIME;
+DECLARE @HauptBehinderungsart INT;
+DECLARE @BSVBehinderungsart INT;
+DECLARE @NurFLB BIT;
+DECLARE @FondsID INT;
+DECLARE @ExterneFonds BIT;
+DECLARE @LanguageCode INT;
+DECLARE @Nurzupruefende BIT;
+
+SET @ExterneFonds = {0};
+SET @LanguageCode = {1};
+
+
+---SET @KST = {ctlKGSKostenstelleSAR.EdtSucheKostenstelle};
+---SET @KGS = {ctlKGSKostenstelleSAR.EdtSucheKGS};
+---SET @Mitarbeiter = {ctlKGSKostenstelleSAR.EdtSucheMitarbeiter};
+---SET @EntscheidVon = {edtSucheZeitraumEntscheidVon};
+---SET @EntscheidBis = {edtSucheZeitraumEntscheidBis};
+---SET @ErfassungVon = {edtSucheZeitraumErfassungVon};
+---SET @ErfassungBis = {edtSucheZeitraumErfassungBis};
+---SET @AbschlussVon = {edtSucheZeitraumAbschlussVon};
+---SET @AbschlussBis = {edtSucheZeitraumAbschlussBis};
+---SET @HauptBehinderungsart = {edtSucheHauptbehinderungsart};
+---SET @BSVBehinderungsart = {edtSucheBsvBehinderungsart};
+SET @NurFLB = 0;
+---SET @NurFLB = {chkSucheNurFlb};
+---SET @FondsID = {edtSucheFonds};
+---SET @Nurzupruefende = {chkNurzupruefende};
+
+
+IF (object_id('tempdb..#LocalTempTable') IS NOT NULL)
+BEGIN
+   DROP TABLE #LocalTempTable;
+END;
+
+CREATE TABLE #LocalTempTable(
+	[Gesuchs-ID] INT,
+	[Gesuchsbezeichnung] VARCHAR(200),
+	[Beantragter Betrag] MONEY,
+	[Datum Gesuch] DATETIME,
+	GvFondsID INT,
+	[Fonds] VARCHAR(500),
+	[GvStatusCode] INT,
+	[Bewilligter Betrag] MONEY,
+	[Entscheiddatum] DATETIME,
+	[Kostenart] VARCHAR(MAX),
+	[Ausbezahlter Betrag] MONEY,
+	[Abschlussdatum] DATETIME,
+	[Abschlussgrund] VARCHAR(MAX),
+	[Bemerkungen] VARCHAR(MAX),
+	[SAR] VARCHAR(200),
+     [BaPersonID] INT,
+	[Pers.-Nr.] INT,
+	[Name] VARCHAR(200),
+	[Vorname] VARCHAR(200),
+	[PLZ] VARCHAR(200),
+	[Ort] VARCHAR(200),
+	[Bezirk] VARCHAR(200),
+	[Kanton] VARCHAR(200),
+	[Nationalität] VARCHAR(200),
+	[Geschlecht] VARCHAR(2000),
+	[Geb.Dat.]DATETIME,
+	[Alter] INT,
+	[Vers.-Nr.] VARCHAR(200),
+	[Hauptbehinderungsart] VARCHAR(2000),
+	[BSV-Behinderungsart] VARCHAR(2000),
+	[IV Berechtigung] VARCHAR(2000),
+	[IV Status] VARCHAR(2000),
+	[Rentenstufe]  VARCHAR(2000),
+	[IV-Grad] INT,
+	[Hilflosenentschädigung] VARCHAR(2000),
+	[HELB-Entscheid] VARCHAR(2000),
+	[Intensevpflegezuschlag] VARCHAR(2000),
+	[Ergänzungsleistungen] BIT,
+	[Haushaltsgrösse] INT,
+	[Abklärende Stelle] VARCHAR(2000),
+	[Autor] VARCHAR(2000),
+	OrgUnitID INT,
+	[Kostenstelle] VARCHAR(2000),
+	[OrgUnitID_KGS] INT,
+	[KGS] VARCHAR(100),
+	[Anschrift] VARCHAR(3000),
+	[Anrede] VARCHAR(255),
+	[Email] VARCHAR(100),
+	[Mitarbeiter] VARCHAR(500),
+	UserID INT,
+	[Extern] BIT,
+	[IstKompetenzKanton] BIT,
+	FallverantwortlicherSA VARCHAR(200),
+  AuslStatus VARCHAR(200),
+  Zivilstand VARCHAR(200),
+  InCHSeit DATETIME,
+  InCHSeitGeburt BIT,
+  Ausbildung VARCHAR(200),
+  Erwerbssituation VARCHAR(200),
+  KESBMassnahmen VARCHAR(200),
+  VormundPI BIT,
+  IVTaggeld BIT,
+  BeruflicheMassnahmeIV BIT,
+  MedizinischeMassnahmeIV BIT,
+  IVHilfsmittel BIT,
+  Assistenzbeitrag BIT,
+  IVVerfuegteAssistenzberatung BIT,
+  BVGRente BIT,
+  UVGRente BIT,
+  UVGTaggeld BIT,
+  Sozialhilfe BIT,
+  ALK BIT,
+  KTG BIT,
+  WittwenWittwerWaisenrente BIT,
+  KantonaleZuschuesse VARCHAR(2000),
+  ErfasstesGesuchgeprüftdurchIKS_UserID INT,
+  ErfasstesGesuchgeprüftdurchIKS_User VARCHAR(MAX),
+  [ErfasstesGesuchgeprüftam] DATETIME,
+  ErfasstesGesuchBesprechen BIT,
+  ErfasstesGesuchBemerkung VARCHAR(MAX),
+  AbgeschlossenesGesuchdurchIKS_UserID INT,
+  AbgeschlossenesGesuchdurchIKS_User VARCHAR(MAX),
+  [AbgeschlossenesGesuchgeprüftam] DATETIME,
+  AbgeschlossenesGesuchBesprechen BIT,
+  AbgeschlossenesGesuchBemerkung VARCHAR(MAX)
+  
+);
+
+INSERT INTO #LocalTempTable
+  SELECT 
+    [Gesuchs-ID]                 = GGE.GvGesuchID,
+    [Gesuchsbezeichnung]         = GGE.Gesuchsgrund,
+    [Beantragter Betrag]         = ISNULL((SELECT SUM(Betrag) 
+                                           FROM dbo.GvAntragPosition GAN WITH (READUNCOMMITTED)
+                                           WHERE GAN.GvGesuchID = GGE.GvGesuchID
+                                             AND GAN.GvAntragPositionTypCode = 2), 0.0), -- beantragter Betrag
+    [Datum Gesuch]               = GGE.GesuchsDatum,
+    GvFondsID                    = GFD.GvFondsID,
+    [Fonds]                      = GFD.NameLang,
+    [GvStatusCode]               = GGE.GvStatusCode,
+    [Bewilligter Betrag]         = ISNULL(GGE.BetragBewilligt, 0),
+    [Entscheiddatum]             = GGE.BewilligtAm,
+    [Kostenart]                  = STUFF((SELECT CONVERT(VARCHAR(MAX), SUB.[Text])
+                                          FROM (SELECT DISTINCT [Text] = ', ' + KontoNr
+                                                FROM dbo.GvAuszahlungPosition GAP WITH (READUNCOMMITTED)
+                                                  INNER JOIN dbo.GvPositionsart GPA WITH (READUNCOMMITTED) ON GPA.GvPositionsartID = GAP.GvPositionsartID
+                                                  INNER JOIN dbo.BgKostenart KOA WITH (READUNCOMMITTED) ON KOA.BgKostenartID = GPA.BgKostenartID
+                                                WHERE GAP.GvGesuchID = GGE.GvGesuchID
+                                                  AND GAP.GvAuszahlungPositionStatusCode IN (5, 7) -- Bewilligung erteilt, Beleg importiert
+                                                ) SUB
+                                          ORDER BY SUB.[Text]
+                                          FOR XML PATH('')),
+                                         1,
+                                         2, 
+                                         ''), 
+    [Ausbezahlter Betrag]        = ISNULL((SELECT SUM(Betrag) 
+                                           FROM dbo.GvAuszahlungPosition GAP WITH (READUNCOMMITTED)
+                                           WHERE GAP.GvGesuchID = GGE.GvGesuchID
+                                             AND GAP.GvAuszahlungPositionStatusCode = 7), 0), -- Beleg importiert
+    [Abschlussdatum]             = CASE GFD.GvFondsTypCode WHEN 2 THEN GGE.AbschlussDatum ELSE NULL END,
+    [Abschlussgrund]             = CASE GFD.GvFondsTypCode WHEN 2 THEN dbo.fnLOVMLText('GvAbschlussgrund', GGE.GvAbschlussgrundCode, @LanguageCode) ELSE NULL END,
+    [Bemerkungen]                = CASE GFD.GvFondsTypCode WHEN 2 THEN GGE.Bemerkung ELSE NULL END,
+    [SAR]                        = USR.NameVorname,
+    [BaPersonID]                 = PRS.BaPersonID,
+    [Pers.-Nr.]                  = PRS.BaPersonID,
+    [Name]                       = PRS.Name,
+    [Vorname]                    = PRS.Vorname,
+    [PLZ]                        = PRS.WohnsitzPLZ,
+    [Ort]                        = PRS.WohnsitzOrt,
+    [Bezirk]                     = PRS.WohnsitzBezirk,
+    [Kanton]                     = PRS.WohnsitzKanton,
+    [Nationalität]               = PRS.Nationalitaet,
+    [Geschlecht]                 = dbo.fnLOVMLText('Geschlecht', PRS.GeschlechtCode, @LanguageCode),
+    [Geb.Dat.]                   = PRS.Geburtsdatum,
+    [Alter]                      = PRS.[Alter],
+    [Vers.-Nr.]                  = PRS.VersichertenNummer,
+    [Hauptbehinderungsart]       = dbo.fnLOVMLText('BaBehinderungsart', PRS.HauptBehinderungsartCode, @LanguageCode),
+    [BSV-Behinderungsart]        = dbo.fnLOVMLText('BaBSVBehinderungsart', PRS.BSVBehinderungsartCode, @LanguageCode),
+    [IV Berechtigung]            = dbo.fnGetLOVMLText('BaIVBerechtigung', dbo.fnBaGetIVBerechtigungStatus(PRS.BaPersonID, GGE.GesuchsDatum, 0), @LanguageCode),
+    [IV Status]                  = dbo.fnGetLOVMLText('BaIVBerechtigung', dbo.fnBaGetIVBerechtigungStatus(PRS.BaPersonID, GGE.GesuchsDatum, 1), @LanguageCode),--dbo.fnLOVMLText('BaIVBerechtigung', PRS.IVBerechtigungAnfangsStatusCode, @LanguageCode),
+    [Rentenstufe]                = dbo.fnLOVMLText('BaRentenstufe', PRS.RentenstufeCode, @LanguageCode),
+    [IV-Grad]                    = PRS.IVGrad,
+    [Hilflosenentschädigung]     = dbo.fnLOVMLText('BaHilfslosenEntschaedigung', PRS.HilfslosenEntschaedigungCode, @LanguageCode),
+    [HELB-Entscheid]             = dbo.fnGetLOVMLText('BaHELBEntscheid', PRS.HELBEntscheidCode, @LanguageCode),
+    [Intensevpflegezuschlag]     = dbo.fnLOVMLText('BaIntensivpflegeZuschlag', PRS.IntensivPflegeZuschlagCode, @LanguageCode),
+    [Ergänzungsleistungen]       = PRS.ErgaenzungsLeistungen,
+    [Haushaltsgrösse]            = (SELECT COUNT(1) + 1
+                                    FROM dbo.BaPerson_Relation  BRE  WITH (READUNCOMMITTED)
+                                      INNER JOIN dbo.BaPerson   PRS1 WITH (READUNCOMMITTED) ON PRS1.BaPersonID = BRE.BaPersonID_1 
+                                                                                            OR PRS1.BaPersonID = BRE.BaPersonID_2
+                                    WHERE (BRE.BaPersonID_1 = PRS.BaPersonID OR BRE.BaPersonID_2 = PRS.BaPersonID)
+                                      AND PRS1.BaPersonID != PRS.BaPersonID
+                                      AND dbo.fnBaGleicheAdresse(PRS.BaPersonID, PRS1.BaPersonID, 1, NULL) = 1),
+    [Abklärende Stelle]          = CASE 
+                                     WHEN AKS.Ort IS NULL THEN ISNULL(CONVERT(VARCHAR, ORG.Kostenstelle) + ' ', '') + ORG.ItemName + ', ' + USR.NameVorname
+                                     ELSE AKS.BeantragendeStelle + ', ' + AKS.Kontaktperson + ', ' + AKS.Ort
+                                   END,
+    [Autor]                      = CASE
+                                     WHEN AKS.Kontaktperson IS NOT NULL THEN AKS.Kontaktperson
+                                     ELSE USR.NameVorname
+                                   END,
+    OrgUnitID                    = ORG.OrgUnitID,
+    [Kostenstelle]               = dbo.fnCombineKSTOrgUnitItemName(ORG.Kostenstelle, ORG.ItemName),
+    [OrgUnitID_KGS]              = ORG_KGS.OrgUnitID,
+    [KGS]                        = ISNULL(ORG_KGS.ItemName, ''),
+    [Anschrift]                  = dbo.fnGetFlexibleAdress(PRS.BaPersonID, NULL, 1, 1, 'anschrift', 0, 1, 'vornach', dbo.fnBaGetAnredeAnschriftBaPerson(NULL, NULL, PRS.Geburtsdatum, PRS.Sterbedatum, PRS.GeschlechtCode, 1, 'famherrfrau', NULL, PRS.ManuelleAnrede, PRS.Anrede, PRS.Briefanrede), 1, 1, 1, 1, 1, 0, 0, 1, 1),
+    [Anrede]                     = dbo.fnBaGetAnredeAnschriftBaPerson(NULL, NULL, PRS.Geburtsdatum, PRS.Sterbedatum, PRS.GeschlechtCode, 1, 'geehrte', NULL, PRS.ManuelleAnrede, PRS.Anrede, PRS.Briefanrede),
+    [Email]                      = PRS.Email,
+    [Mitarbeiter]                = USR.NameVorname,
+    UserID                       = USR.UserID,
+    [Extern]                     = GGE.Extern,
+    [IstKompetenzKanton]         = GGE.IstKompetenzKanton,
+    FallverantwortlicherSA       = (SELECT TOP 1 LEU.NameVorname
+                                    FROM dbo.FaLeistung LEI WITH (READUNCOMMITTED)
+                                      INNER JOIN dbo.vwUser LEU ON LEU.UserID = LEI.UserID
+                                    WHERE LEI.BaPersonID = GGE.BaPersonID
+                                      AND LEI.ModulID = 2
+                                    ORDER BY LEI.DatumVon DESC),
+    AuslStatus                   = dbo.fnGetLOVMLText('BaAuslaenderAufenthaltStatus', PRS.AuslaenderStatusCode, @LanguageCode),
+    Zivilstand                   = dbo.fnGetLOVMLText('Zivilstand', PRS.ZivilstandCode, @LanguageCode),
+    InCHSeit                     = PRS.InCHSeit,
+    InCHSeitGeburt               = PRS.InCHSeitGeburt,
+    Ausbildung                   = dbo.fnGetLOVMLText('BaAusbildungCode', PRS.AusbildungCode, @LanguageCode),
+    Erwerbssituation             = dbo.fnGetLOVMLText('BaErwerbssituation', PRS.ErwerbssituationCode, @LanguageCode),
+    KESBMassnahmen               = dbo.fnGetLOVMLText('BaVormundMassnahmen', PRS.VormundMassnahmenCode, @LanguageCode),
+    VormundPI                    = PRS.VormundPI,
+    IVTaggeld                    = PRS.IVTaggeld,
+    BeruflicheMassnahmeIV        = PRS.BeruflicheMassnahmeIV,
+    MedizinischeMassnahmeIV      = PRS.MedizinischeMassnahmeIV,
+    IVHilfsmittel                = PRS.IVHilfsmittel,
+    Assistenzbeitrag             = PRS.Assistenzbeitrag,
+    IVVerfuegteAssistenzberatung = PRS.IvVerfuegteAssistenzberatung,
+    BVGRente                     = PRS.BVGRente,
+    UVGRente                     = PRS.UVGRente,
+    UVGTaggeld                   = PRS.UVGTaggeld,
+    Sozialhilfe                  = PRS.Sozialhilfe,
+    ALK                          = PRS.ALK,
+    KTG                          = PRS.KTG,
+    WittwenWittwerWaisenrente    = PRS.WittwenWittwerWaisenrente,
+    KantonaleZuschuesse          = dbo.fnQryGetKantZuschuesseForBaPerson(GGE.BaPersonID, @LanguageCode),
+    ErfasstesGesuchgeprüftdurchIKS_UserID = GGE.ErfasstesGesuchgeprueftdurchIKS_UserID,
+    ErfasstesGesuchgeprüftdurchIKS_User = USR_IKSE.DisplayText,
+    [ErfasstesGesuchgeprüftam]   = GGE.ErfasstesGesuchgeprueftam,
+    ErfasstesGesuchBesprechen    = GGE.ErfasstesGesuchBesprechen,
+    ErfasstesGesuchBemerkung     = GGE.ErfasstesGesuchBemerkung,
+    AbgeschlossenesGesuchdurchIKS_UserID = GGE.AbgeschlossenesGesuchdurchIKS_UserID,
+    AbgeschlossenesGesuchdurchIKS_User = USR_IKSA.DisplayText,
+    [AbgeschlossenesGesuchgeprüftam] = GGE.AbgeschlossenesGesuchgeprueftam,
+    AbgeschlossenesGesuchBesprechen = GGE.AbgeschlossenesGesuchBesprechen,
+    AbgeschlossenesGesuchBemerkung = GGE.AbgeschlossenesGesuchBemerkung
+  FROM dbo.GvGesuch                   GGE WITH (READUNCOMMITTED)
+    LEFT JOIN dbo.GvFonds             GFD WITH (READUNCOMMITTED) ON GFD.GvFondsID = GGE.GvFondsID
+    LEFT JOIN dbo.vwPerson            PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = GGE.BaPersonID
+    LEFT JOIN dbo.vwUser              USR WITH (READUNCOMMITTED) ON USR.UserID = GGE.XUserID_Autor
+    LEFT JOIN dbo.vwUser              USR_IKSE WITH (READUNCOMMITTED) ON USR_IKSE.UserID = GGE.ErfasstesGesuchgeprueftdurchIKS_UserID
+    LEFT JOIN dbo.vwUser              USR_IKSA WITH (READUNCOMMITTED) ON USR_IKSA.UserID = GGE.AbgeschlossenesGesuchdurchIKS_UserID    
+    LEFT JOIN dbo.XOrgUnit            ORG WITH (READUNCOMMITTED) ON ORG.OrgUnitID = CONVERT(INT, dbo.fnOrgUnitOfUser(GGE.XUserID_Autor, 1))
+    LEFT JOIN dbo.GvAbklaerendeStelle AKS WITH (READUNCOMMITTED) ON AKS.GvGesuchID = GGE.GvGesuchID
+    LEFT JOIN dbo.XOrgUnit            ORG_KGS WITH (READUNCOMMITTED) ON ORG_KGS.OrgUnitID = dbo.fnGetHistKGSOfUserOrOrgUnit(NULL, GGE.GesuchsDatum, ORG.OrgUnitID, 1, 1)
+  WHERE (ORG.Kostenstelle = @KST OR @KST IS NULL)
+    AND (dbo.fnOrgUnitHistoryHierarchyValue(ORG.OrgUnitID, GGE.GesuchsDatum, 'mndnr') = @KGS OR @KGS IS NULL)
+    AND (GGE.GesuchsDatum BETWEEN ISNULL(@ErfassungVon, '17530101') AND ISNULL(@ErfassungBis, '99991231'))
+    AND (GGE.XUserID_Autor = @Mitarbeiter OR @Mitarbeiter IS NULL)
+    AND (PRS.HauptBehinderungsartCode = @HauptBehinderungsart OR @Hauptbehinderungsart IS NULL)
+    AND (PRS.BSVBehinderungsartCode = @BSVBehinderungsart OR @BSVBehinderungsart IS NULL)
+    AND ((GFD.GvFondsTypCode = 1 AND @ExterneFonds = 0) OR (GFD.GvFondsTypCode = 2 AND @ExterneFonds = 1))
+    AND ((GGE.BewilligtAm BETWEEN ISNULL(@EntscheidVon, '17530101') AND ISNULL(@EntscheidBis, '99991231')
+          AND GGE.BetragBewilligt IS NOT NULL) OR ISNULL(@EntscheidVon, @EntscheidBis) IS NULL)
+    AND (GGE.GesuchsDatum BETWEEN ISNULL(@ErfassungVon, '17530101') AND ISNULL(@ErfassungBis, '99991231') OR ISNULL(@ErfassungVon, @ErfassungBis) IS NULL)
+    AND (GGE.AbschlussDatum BETWEEN ISNULL(@AbschlussVon, '17530101') AND ISNULL(@AbschlussBis, '99991231') OR ISNULL(@AbschlussVon, @AbschlussBis) IS NULL)
+    AND ((@NurFLB = 1 AND GFD.KbZahlungsKontoID IS NOT NULL) OR @NurFLB = 0)
+    AND ((GFD.GvFondsID = @FondsID) OR @FondsID IS NULL)
+	  AND ((@Nurzupruefende = 0) OR (GGE.AbgeschlossenesGesuchgeprueftam IS NULL AND GGE.ErfasstesGesuchgeprueftam IS NULL))
+
+-- Gesuche
+SELECT 
+  OrgUnitID$ = OrgUnitID,
+  GvFondsID$ = GvFondsID,
+  BaPersonID$ = BaPersonID,
+  [Gesuchs-ID],
+  [Gesuchsbezeichnung],
+  [Beantragter Betrag],
+  [Datum Gesuch],
+  [Fonds],
+  [GvStatusCode],
+  [Bewilligter Betrag],
+  [Entscheiddatum],
+  [Kostenart],
+  [Ausbezahlter Betrag],
+  [Abschlussdatum],
+  [Abschlussgrund],
+  [Bemerkungen],
+  [SAR],
+  [Pers.-Nr.],
+  [Name],
+  [Vorname],
+  [PLZ],
+  [Ort],
+  [Bezirk],
+  [Kanton],
+  [Nationalität],
+  [Geschlecht],
+  [Geb.Dat.],
+  [Alter],
+  [Vers.-Nr.],
+  [Hauptbehinderungsart],
+  [BSV-Behinderungsart],
+  [IV Berechtigung],
+  [IV Status],
+  [Rentenstufe] ,
+  [IV-Grad],
+  [Hilflosenentschädigung],
+  [HELB-Entscheid],
+  [Intensevpflegezuschlag],
+  [Ergänzungsleistungen],
+  [Haushaltsgrösse],
+  [Kostenstelle],
+  [KGS],
+  [Anschrift],
+  [Anrede],
+  [Email],
+  [InternExtern] = dbo.fnLOVMLText('GvFondsTyp', (CONVERT(INT, [Extern]) + 1), @LanguageCode),
+  [Tage] = DATEDIFF(DAY, [Datum Gesuch], GETDATE()),
+  [IstKompetenzKanton],
+  FallverantwortlicherSA,
+  AuslStatus,
+  Zivilstand,
+  InCHSeit,
+  InCHSeitGeburt,
+  Ausbildung,
+  Erwerbssituation,
+  KESBMassnahmen,
+  VormundPI,
+  IVTaggeld,
+  BeruflicheMassnahmeIV,
+  MedizinischeMassnahmeIV,
+  IVHilfsmittel,
+  Assistenzbeitrag,
+  IVVerfuegteAssistenzberatung,
+  BVGRente,
+  UVGRente,
+  UVGTaggeld,
+  Sozialhilfe,
+  ALK,
+  KTG,
+  WittwenWittwerWaisenrente,
+  KantonaleZuschuesse,
+  ErfasstesGesuchgeprüftdurchIKS_UserID$ = ErfasstesGesuchgeprüftdurchIKS_UserID,
+  ErfasstesGesuchgeprüftdurchIKS_User,
+  [ErfasstesGesuchgeprüftam],
+  ErfasstesGesuchBesprechen,
+  ErfasstesGesuchBemerkung,
+  AbgeschlossenesGesuchdurchIKS_UserID$ = AbgeschlossenesGesuchdurchIKS_UserID,
+  AbgeschlossenesGesuchdurchIKS_User,
+  [AbgeschlossenesGesuchgeprüftam],
+  AbgeschlossenesGesuchBesprechen,
+  AbgeschlossenesGesuchBemerkung  
+FROM #LocalTempTable
+ORDER BY [Datum Gesuch];
+
+-- Klient
+SELECT
+  [BaPersonID$] = BaPersonID,
+  [Pers.-Nr.],
+  [Name],
+  [Vorname],
+  [PLZ],
+  [Ort],
+  [Bezirk],
+  [Kanton],
+  [Nationalität],
+  [Geschlecht],
+  [Geb.Dat.],
+  [Alter],
+  [Vers.-Nr.],
+  [Hauptbehinderungsart],
+  [BSV-Behinderungsart],
+  [IV Berechtigung],
+  [IV Status],
+  [Rentenstufe] ,
+  [IV-Grad],
+  [Hilflosenentschädigung],
+  [HELB-Entscheid],
+  [Intensevpflegezuschlag],
+  [Ergänzungsleistungen],
+  [Haushaltsgrösse],
+  [Abklärende Stelle]          = dbo.ConcDistinct([Abklärende Stelle]),
+  [Autor]                      = dbo.ConcDistinct(Autor),
+  [SAR]                        = dbo.ConcDistinct(SAR),
+  [KGS]                        = dbo.ConcDistinct(KGS),
+  [Beantragter Betrag]         = SUM([Beantragter Betrag]),
+  [Anzahl Gesuche]             = COUNT(DISTINCT [Gesuchs-ID]),
+  [Anzahl bewilligte Gesuche]  = SUM(CASE WHEN [Bewilligter Betrag] &gt; 0 THEN 1 ELSE 0 END),
+  [Bewilligter Betrag]         = SUM([Bewilligter Betrag]),
+  [Ausbezahlter Betrag]        = SUM([Ausbezahlter Betrag]),
+  [Anzahl abgelehnter Gesuche] = SUM(CASE WHEN [Bewilligter Betrag] = 0 THEN 1 ELSE 0 END)
+FROM #LocalTempTable
+GROUP BY [BaPersonID], [Pers.-Nr.], [Name], [Vorname], [PLZ], [Ort], [Bezirk], [Kanton], [Nationalität],
+         [Geschlecht], [Geb.Dat.], [Alter], [Vers.-Nr.], [Hauptbehinderungsart], [BSV-Behinderungsart],
+         [IV Berechtigung], [IV Status], [Rentenstufe] , [IV-Grad], [Hilflosenentschädigung], 
+         [HELB-Entscheid], [Intensevpflegezuschlag], [Ergänzungsleistungen], [Haushaltsgrösse],
+         [Anschrift], [Anrede], [Email]
+ORDER BY [Name], [Vorname], [Pers.-Nr.];
+
+--Mitarbeiter	
+SELECT
+  UserID$                          = UserID,
+  OrgUnitID$                       = OrgUnitID,
+  [Mitarbeiter],
+  [Abklärende Stelle],
+  [Autor],
+  [Kostenstelle],
+  [KGS],
+  [Beantragter Betrag]             = SUM([Beantragter Betrag]),
+  [Bewilligter Betrag]             = SUM([Bewilligter Betrag]),
+  [Ausbezahlter Betrag]            = SUM([Ausbezahlter Betrag]),
+  [Anzahl Gesuche]                 = COUNT(DISTINCT [Gesuchs-ID]),
+  [Anzahl bewilligte Gesuche]      = SUM(CASE WHEN [Bewilligter Betrag] &gt; 0 THEN 1 ELSE 0 END),
+  [Anzahl abgelehnter Gesuche]     = SUM(CASE WHEN [Bewilligter Betrag] = 0 THEN 1 ELSE 0 END),
+  [Anzahl teilbewilligter Gesuche] = SUM(CASE WHEN [Bewilligter Betrag] &gt; 0 AND [Bewilligter Betrag] &lt; [Beantragter Betrag] THEN 1 ELSE 0 END),
+  [Unterstuetzte Gesuchssteller]   = COUNT(DISTINCT [Pers.-Nr.])
+FROM #LocalTempTable
+GROUP BY UserID, OrgUnitID, [Mitarbeiter], [Abklärende Stelle], [Autor], [Kostenstelle], [KGS]
+ORDER BY [Mitarbeiter];	
+
+--KST	
+SELECT
+  OrgUnitID$ = OrgUnitID,
+  [Kostenstelle],
+  [KGS],
+  [Beantragter Betrag]             = SUM([Beantragter Betrag]),
+  [Bewilligter Betrag]             = SUM([Bewilligter Betrag]),
+  [Anzahl Gesuche]                 = COUNT(DISTINCT [Gesuchs-ID]),
+  [Anzahl bewilligte Gesuche]      = SUM(CASE WHEN [Bewilligter Betrag] &gt; 0 THEN 1 ELSE 0 END),
+  [Anzahl abgelehnter Gesuche]     = SUM(CASE WHEN [Bewilligter Betrag] = 0 THEN 1 ELSE 0 END),
+  [Anzahl teilbewilligter Gesuche] = SUM(CASE WHEN [Bewilligter Betrag] &gt; 0 AND [Bewilligter Betrag] &lt; [Beantragter Betrag] THEN 1 ELSE 0 END),
+  [Unterstuetzte Gesuchssteller]   = COUNT(DISTINCT [Pers.-Nr.])
+FROM #LocalTempTable
+GROUP BY OrgUnitID, [Kostenstelle], [KGS]
+ORDER BY [Kostenstelle];
+		
+
+--KGS	
+SELECT
+  OrgUnitID_KGS$ = OrgUnitID_KGS,
+  [KGS],
+  [Beantragter Betrag]             = SUM([Beantragter Betrag]),
+  [Bewilligter Betrag]             = SUM([Bewilligter Betrag]),
+  [Anzahl Gesuche]                 = COUNT(DISTINCT [Gesuchs-ID]),
+  [Anzahl bewilligte Gesuche]      = SUM(CASE WHEN [Bewilligter Betrag] &gt; 0 THEN 1 ELSE 0 END),
+  [Anzahl abgelehnter Gesuche]     = SUM(CASE WHEN [Bewilligter Betrag] = 0 THEN 1 ELSE 0 END),
+  [Anzahl teilbewilligter Gesuche] = SUM(CASE WHEN [Bewilligter Betrag] &gt; 0 AND [Bewilligter Betrag] &lt; [Beantragter Betrag] THEN 1 ELSE 0 END),
+  [Unterstuetzte Gesuchssteller]   = COUNT(DISTINCT [Pers.-Nr.])
+FROM #LocalTempTable
+GROUP BY OrgUnitID_KGS, [KGS]
+ORDER BY [KGS];
+
+--Fonds	
+SELECT
+  GvFondsID$ = GvFondsID,
+  [Fonds],
+  [Beantragter Betrag]             = SUM([Beantragter Betrag]),
+  [Bewilligter Betrag]             = SUM([Bewilligter Betrag]),
+  [Anzahl Gesuche]                 = COUNT(1),
+  [Anzahl bewilligte Gesuche]      = SUM(CASE WHEN [Bewilligter Betrag] &gt; 0 THEN 1 ELSE 0 END),
+  [Anzahl abgelehnter Gesuche]     = SUM(CASE WHEN [Bewilligter Betrag] = 0 THEN 1 ELSE 0 END),
+  [Anzahl teilbewilligter Gesuche] = SUM(CASE WHEN [Bewilligter Betrag] &gt; 0 AND [Bewilligter Betrag] &lt; [Beantragter Betrag] THEN 1 ELSE 0 END),
+  [Unterstuetzte Gesuchssteller]   = COUNT(DISTINCT [Pers.-Nr.])
+FROM #LocalTempTable
+GROUP BY GvFondsID, [Fonds]
+ORDER BY [Fonds];
+
+DROP TABLE #LocalTempTable;</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="edtSucheZeitraumAbschlussBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtSucheZeitraumErfassungBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtSucheZeitraumEntscheidBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtSucheZeitraumAbschlussVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtSucheZeitraumErfassungVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtSucheZeitraumEntscheidVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>55</value>
+  </metadata>
+</root>

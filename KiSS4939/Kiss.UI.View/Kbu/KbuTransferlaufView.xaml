@@ -1,0 +1,130 @@
+﻿<View:KissView
+    x:Class="Kiss.UI.View.Kbu.KbuTransferlaufView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:View="clr-namespace:Kiss.UI.View"
+    xmlns:Controls="clr-namespace:Kiss.UI.Controls;assembly=Kiss.UI.Controls"
+    xmlns:ViewModel="clr-namespace:Kiss.UI.ViewModel.Kbu;assembly=Kiss.UI.ViewModel"
+    xmlns:Constant="clr-namespace:Kiss.UI.Controls.Constant;assembly=Kiss.UI.Controls" xmlns:dxg="clr-namespace:DevExpress.Xpf.Grid;assembly=DevExpress.Xpf.Grid.v10.2" xmlns:dxe="clr-namespace:DevExpress.Xpf.Editors.Settings;assembly=DevExpress.Xpf.Core.v10.2" xmlns:Grid="clr-namespace:DevExpress.Xpf.Grid;assembly=DevExpress.Xpf.Grid.v10.2.Core" mc:Ignorable="d"
+    d:DesignHeight="500"
+    d:DesignWidth="800">
+    
+    <View:KissView.Resources>
+        <ViewModel:KbuTransferlaufVM x:Key="viewModel" />
+    </View:KissView.Resources>
+
+    <Grid Name="panRoot" 
+          DataContext="{StaticResource ResourceKey=viewModel}" 
+          Margin="{x:Static Constant:LayoutConstant.MarginOuterControl}">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1"  Content="Noch nicht transferierte Belege:"/>
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Right" Margin="0,0,6,0" Content="{Binding Path=NumSelektierteBelegeText}"/>
+        <!--Visibility="{Binding Path=IsTransferInProgress, Converter={StaticResource ResourceKey=BoolToVisibilityInverseConverter}}"-->
+        
+        <!--Liste-->
+        <Controls:KissGridDevX Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"
+                               Name="grdBelege"
+                               DataSource="{Binding Path=Belege}"
+                               HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                      
+
+            <Controls:KissGridDevX.Columns>
+                
+                <!-- Selektiert -->
+                <dxg:GridColumn FieldName="Selected" 
+                                Header="Sel" Width="38" FixedWidth="True" 
+                                AllowEditing="{Binding Path=IsTransferInProgress, Converter={StaticResource ResourceKey=Bool2DefaultBooleanConverter}, ConverterParameter=inverse}">
+                    
+                    <dxg:GridColumn.EditTemplate>
+                        <ControlTemplate>
+                            <CheckBox HorizontalAlignment="Center" IsChecked="{Binding Path=RowData.Row.Selected, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                        </ControlTemplate>
+                    </dxg:GridColumn.EditTemplate>
+                                                                                
+                </dxg:GridColumn>
+
+                <!-- Belegnummer -->
+                <dxg:GridColumn FieldName="Belegnummer" Header="Belegnummer" AllowEditing="False" Width="76" FixedWidth="True"/>
+                
+                <!-- Valuta Plan -->
+                <dxg:GridColumn FieldName="ValutaDatum" Header="Valuta Plan" AllowEditing="False" Width="78" FixedWidth="True" />
+                
+                <!--Kient -->
+                <dxg:GridColumn FieldName="Klient" Header="Klient" AllowEditing="False" Width="150"/>
+                
+                <!-- Fall -->
+                <dxg:GridColumn FieldName="FaFallID" Header="Fall" AllowEditing="False" Width="50"/>
+                
+                <!-- Betrag  -->
+                <dxg:GridColumn FieldName="Betrag" Header="Betrag" Width="75" FixedWidth="True" AllowEditing="False">
+                    <dxg:GridColumn.EditSettings>
+                        <dxe:CalcEditSettings DisplayFormat="0.00" HorizontalContentAlignment="Right"/>
+                    </dxg:GridColumn.EditSettings>
+                </dxg:GridColumn>
+
+                <!-- Text -->
+                <dxg:GridColumn FieldName="Text" Header="Text" AllowEditing="False" Width="150"/>
+
+                <!-- Fehler -->
+                <dxg:GridColumn FieldName="ErrorMessage" Header="Fehler" AllowEditing="False" Width="150"/>
+
+            </Controls:KissGridDevX.Columns>
+            
+            <Controls:KissGridDevX.View>
+                <dxg:TableView Name="grdWshGrundbudgetView"                           
+                               AutoWidth="False"
+                               ShowGroupPanel="False">                    
+                </dxg:TableView>
+            </Controls:KissGridDevX.View>
+        </Controls:KissGridDevX>
+
+        <!-- Buttons unten rechts  -->
+        <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Orientation="Horizontal" Margin="0,6,0,6" Height="{x:Static Member=Constant:LayoutConstant.DefaultHeightDetailControl}">
+            <Controls:KissButton Content="Alle" Width="60" Command="{Binding Path=SelectAllCommand}" ToolTip="Alle Belege selektieren" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+            <Controls:KissButton Content="Keine" Width="60" Command="{Binding Path=DeselectAllCommand}" Margin="6,0,0,0" VerticalAlignment="Center" VerticalContentAlignment="Center" ToolTip="Alle Belege deselektieren"/>                                    
+        </StackPanel>
+        
+        <!-- Progressinfo, unten mitte -->
+        <StackPanel Height="{x:Static Member=Constant:LayoutConstant.DefaultHeightDetailControl}"
+                    Grid.Row="2" 
+                    Grid.Column="1" 
+                    Orientation="Horizontal" 
+                    Visibility="{Binding Path=IsTransferlaufDisplayable, Converter={StaticResource ResourceKey=BooleanToVisibilityConverter}}"                
+                    Margin="0,6,0,6">
+            <ProgressBar Value="{Binding Path=TransferlaufState.PercentProgress}" Width="200" VerticalAlignment="Center"
+                         HorizontalAlignment="Right" Height="{x:Static Member=Constant:LayoutConstant.DefaultHeightDetailControl}"
+                         Visibility="{Binding Path=IsTransferInProgress, Converter={StaticResource ResourceKey=BooleanToVisibilityConverter}}"/>
+            <TextBlock Text="{Binding Path=TransferProgressText}" VerticalAlignment="Center" Margin="10,0,0,0"/>
+        </StackPanel>
+        
+        <!-- Button "Transferieren" / "Transfer abbrechen" -->
+        <Controls:KissButton Grid.Row="2" 
+                             Grid.Column="2" 
+                             Width="120"
+                             Height="{x:Static Member=Constant:LayoutConstant.DefaultHeightDetailControl}"
+                             Content="{Binding Path=ButtonText}"
+                             Command="{Binding TransferierenAbbrechenCommand}"
+                             HorizontalAlignment="Right"/>
+
+        <Controls:ValidationSummary Grid.Row="3"
+                                    Grid.ColumnSpan="3"
+                                    ServiceResult="{Binding Path=ValidationResult}"/>
+
+    </Grid>
+</View:KissView>

@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="qryZahlInfo.SelectStatement" xml:space="preserve">
+    <value>SELECT 
+  ZAH.BaZahlungswegID,
+  Name = case
+    when ZAH.AdresseName IS NOT NULL and ZAH.AdressePLZ IS NOT NULL and ZAH.AdresseOrt IS NOT NULL then ZAH.AdresseName
+    when ZAH.BaInstitutionID is NULL then PRS.NameVorname
+    else INS.Name
+  end,
+  Kreditor = 
+    case 
+      when ZAH.AdresseName IS NOT NULL and ZAH.AdressePLZ IS NOT NULL and ZAH.AdresseOrt IS NOT NULL 
+        then ZAH.AdresseName + char(13) + char(10) + ZAH.AdressePLZ +  ' ' + ZAH.AdresseOrt
+      when ZAH.BaInstitutionID is NULL then
+        PRS.NameVorname + char(13) + char(10) +  
+        PRS.WohnsitzMehrzeilig
+      else 
+        INS.Name + char(13) + char(10) +  
+        INS.AdresseMehrzeilig
+    end +
+    char(13) + char(10) + char(13) + char(10) +
+    IsNull('Typ: ' + dbo.fnLOVText('BgEinzahlungsschein', ZAH.EinzahlungsscheinCode) + char(13) + char(10),'') +
+    IsNull('Bank: ' + BNK.Name + char(13) + char(10),'') +
+    IsNull('Bank PC: ' + dbo.fnTnToPc(BNK.PCKontoNr) + char(13) + char(10),'') + 
+    IsNull('Clearing-Nr.: ' + BNK.ClearingNr + char(13) + char(10),'') +
+    IsNull('Bankkonto: ' + ZAH.Bankkontonummer + char(13) + char(10),'') + 
+    IsNull('Postkonto: ' + dbo.fnTnToPc(ZAH.PostKontoNummer) + char(13) + char(10),'') +
+    IsNull('Referenz-Nr: ' + ZAH.ESRTeilnehmer + char(13) + char(10),'')
+FROM dbo.BaZahlungsweg ZAH WITH(READUNCOMMITTED)
+  LEFT Join dbo.BaBank BNK WITH(READUNCOMMITTED) on BNK.BaBankID = ZAH.BaBankID
+  LEFT Join dbo.vwPerson PRS on PRS.BaPersonID = ZAH.BaPersonID
+  LEFT Join dbo.vwInstitution INS on INS.BaInstitutionID = ZAH.BaInstitutionID
+WHERE  BaZahlungswegID = {0}</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="qryZahlungsweg.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>355, 17</value>
+  </data>
+  <data name="qryZusatzZahlInfo.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>489, 17</value>
+  </data>
+  <data name="qryIkGlaeubiger.SelectStatement" xml:space="preserve">
+    <value>SELECT 
+  IstGlaeubiger = CONVERT(BIT, 1),
+  IstElternteil = GLB.IstElternteil,
+  InterneVerrechnung = GLB.InterneVerrechnung,
+  HatDaten = CONVERT(BIT, CASE WHEN EXISTS(
+    SELECT TOP 1 1 FROM dbo.IkForderung FD WITH(READUNCOMMITTED)
+    WHERE FD.IkRechtstitelID = GLB.IkRechtstitelID
+      AND FD.BaPersonID = GLB.BaPersonID
+    UNION ALL
+    SELECT TOP 1 1 FROM dbo.IkPosition FD WITH(READUNCOMMITTED)
+    WHERE FD.IkRechtstitelID = GLB.IkRechtstitelID
+      AND FD.BaPersonID = GLB.BaPersonID
+    UNION ALL
+    SELECT TOP 1 1 FROM dbo.IkVerrechnungskonto FD WITH(READUNCOMMITTED)
+    WHERE FD.IkRechtstitelID = GLB.IkRechtstitelID
+      AND FD.BaPersonID = GLB.BaPersonID
+  ) THEN 1 ELSE 0 END),
+  HatDatenEltern = CONVERT(BIT, CASE WHEN EXISTS(
+    SELECT TOP 1 1 FROM dbo.IkForderung FD WITH(READUNCOMMITTED)
+    WHERE FD.IkRechtstitelID = GLB.IkRechtstitelID
+      AND FD.BaPersonID = GLB.BaPersonID
+  ) THEN 1 ELSE 0 END),
+  GLB.IkGlaeubigerID,  
+  GLB.IkRechtstitelID,  
+  GLB.BaPersonID,  
+  GLB.BaZahlungswegID,  
+  GLB.ZusatzBaZahlungswegID,
+  GLB.Betrag,  
+  GLB.ZusatzBetrag,
+  GLB.VorSaldo,
+  GLB.BetragALBV,
+  GLB.ALBVDatumVon,
+  GLB.ALBVDatumBis,
+  GLB.IkGlaeubigerStatusCode,
+  Status = dbo.fnLOVText('IkGlaeubigerStatus', GLB.IkGlaeubigerStatusCode),
+  GLB.IkGlaeubigerTS,
+  PersonName = PRS.NameVorname + 
+    ISNULL(', '+CONVERT(VARCHAR, PRS.Geburtsdatum, 104)+'', ''),
+  AnzahlRT = (
+    SELECT COUNT(*) FROM dbo.IkGlaeubiger G WITH(READUNCOMMITTED)
+    LEFT JOIN dbo.IkRechtstitel R WITH(READUNCOMMITTED) ON R.IkRechtstitelID = G.IkRechtstitelID
+    LEFT JOIN dbo.FaLeistung L WITH(READUNCOMMITTED) ON L.FaLeistungID = R.FaLeistungID
+    WHERE L.FaFallID = {1}
+      AND (
+        -- Bei KKBB sollen nur Rechtstitel KKBB angezeigt werden
+        ({3} = 407 AND L.FaProzessCode = 407) OR
+        -- Bei ALBV und UeBH sollen nur Rechtstitel ALBV und UeBH angezeigt werden
+        ({3} IN (405, 406) AND L.FaProzessCode IN (405, 406) AND NOT R.IkRechtstitelGueltigBis IS NULL)
+      ) 
+      AND G.BaPersonID = GLB.BaPersonID
+      AND NOT R.IkRechtstitelID = {0}
+  ),
+  ZWPersonName = CASE WHEN ZP1.BaPersonID IS NULL THEN ZI1.Name ELSE ZP1.NameVorname END,
+  ZWZusatzPersonName = CASE WHEN ZP2.BaPersonID IS NULL THEN ZI2.Name ELSE ZP2.NameVorname END,
+  IstFallPerson = CONVERT(BIT, CASE WHEN GLB.BaPersonID = FAL.BaPersonID THEN 1 ELSE 0 END),
+  PersGeburtsDatum = dbo.fnGetAge(PRS.Geburtsdatum, GETDATE())
+FROM dbo.IkGlaeubiger GLB 
+  LEFT JOIN dbo.vwPerson      PRS WITH(READUNCOMMITTED) ON PRS.BaPersonID = GLB.BaPersonID 
+
+  LEFT JOIN dbo.BaZahlungsweg ZW1 WITH(READUNCOMMITTED) ON ZW1.BaZahlungswegID = GLB.BaZahlungswegID
+  LEFT JOIN dbo.vwPerson      ZP1 WITH(READUNCOMMITTED) ON ZP1.BaPersonID = ZW1.BaPersonID
+  LEFT JOIN dbo.BaInstitution ZI1 WITH(READUNCOMMITTED) ON ZI1.BaInstitutionID = ZW1.BaInstitutionID
+
+  LEFT JOIN dbo.BaZahlungsweg ZW2 WITH(READUNCOMMITTED) ON ZW2.BaZahlungswegID = GLB.ZusatzBaZahlungswegID
+  LEFT JOIN dbo.vwPerson      ZP2 WITH(READUNCOMMITTED) ON ZP2.BaPersonID = ZW2.BaPersonID
+  LEFT JOIN dbo.BaInstitution ZI2 WITH(READUNCOMMITTED) ON ZI2.BaInstitutionID = ZW2.BaInstitutionID
+
+  LEFT JOIN dbo.IkRechtstitel RTT WITH(READUNCOMMITTED) ON RTT.IkRechtstitelID = GLB.IkRechtstitelID
+  LEFT JOIN dbo.FaLeistung    LST WITH(READUNCOMMITTED) ON LST.FaLeistungID = RTT.FaLeistungID
+  LEFT JOIN dbo.FaFall        FAL WITH(READUNCOMMITTED) ON FAL.FaFallID = LST.FaFallID
+WHERE GLB.IkRechtstitelID = {0}
+
+UNION ALL
+
+SELECT 
+  IstGlaeubiger = CONVERT(BIT, 0),
+  IstElternteil = CONVERT(BIT, 0),
+  InterneVerrechnung = CONVERT(BIT, 0),
+  HatDaten = CONVERT(BIT, 0),
+  HatDatenEltern = CONVERT(BIT, 0),
+  NULL,  
+  NULL,  
+  FFP.BaPersonID,  
+  NULL,  
+  NULL,
+  NULL,  
+  NULL,
+  NULL,
+  NULL,
+  NULL,
+  NULL,
+  NULL,
+  NULL,
+  NULL,
+  PersonName = PRS.NameVorname + 
+    ISNull(', '+CONVERT(VARCHAR, PRS.Geburtsdatum, 104)+'', ''),
+  AnzahlRT = (
+    SELECT COUNT(*) FROM dbo.IkGlaeubiger G WITH(READUNCOMMITTED) 
+    LEFT JOIN dbo.IkRechtstitel R WITH(READUNCOMMITTED) ON R.IkRechtstitelID = G.IkRechtstitelID
+    LEFT JOIN dbo.FaLeistung L WITH(READUNCOMMITTED) ON L.FaLeistungID = R.FaLeistungID
+    WHERE L.FaFallID = {1}
+      AND (
+        -- Bei KKBB sollen nur Rechtstitel KKBB angezeigt werden
+        ({3} = 407 and L.FaProzessCode = 407) OR
+        -- Bei ALBV und UeBH sollen nur Rechtstitel ALBV und UeBH angezeigt werden
+        ({3} IN (405, 406) AND L.FaProzessCode IN (405, 406) AND NOT R.IkRechtstitelGueltigBis IS NULL)
+      ) 
+      AND G.BaPersonID = FFP.BaPersonID
+      AND NOT R.IkRechtstitelID = {0}
+  ),
+  ZWPersonName = NULL,
+  ZWZusatzPersonName = NULL,
+  IstFallPerson = CONVERT(BIT, CASE WHEN FFP.BaPersonID = FAL.BaPersonID THEN 1 ELSE 0 END),
+  PersGeburtsDatum = dbo.fnGetAge(PRS.Geburtsdatum, GETDATE())
+FROM dbo.FaFallPerson    FFP WITH(READUNCOMMITTED)
+  LEFT JOIN dbo.FaFall   FAL WITH(READUNCOMMITTED) ON FAL.FaFallID = FFP.FaFallID
+  LEFT JOIN dbo.vwPerson PRS WITH(READUNCOMMITTED) ON PRS.BaPersonID = FFP.BaPersonID 
+WHERE FFP.FaFallID = {1}
+  AND ({2}=1) 
+  AND NOT PRS.BaPersonID IN ( 
+    SELECT L.SchuldnerBaPersonID FROM dbo.IkRechtstitel R WITH(READUNCOMMITTED)
+    LEFT JOIN dbo.FaLeistung L WITH(READUNCOMMITTED) ON L.FaLeistungID = R.FaLeistungID
+    WHERE L.FaFallID = {1} 
+      AND L.FaProzessCode = {3}
+      AND NOT L.SchuldnerBaPersonID IS NULL
+    UNION ALL
+    SELECT DISTINCT Q.BaPersonID FROM dbo.IkGlaeubiger Q WITH(READUNCOMMITTED)
+    WHERE Q.IkRechtstitelID = {0}
+  )
+ORDER BY
+  IstGlaeubiger DESC,
+  IstFallPerson DESC,
+  PersGeburtsDatum DESC,
+  PersonName ASC</value>
+  </data>
+  <data name="qryZahlInfo.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>247, 17</value>
+  </data>
+  <data name="qryStatus.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>148, 17</value>
+  </data>
+  <data name="qryZahlungsweg.SelectStatement" xml:space="preserve">
+    <value>SELECT 
+  Code = NULL,
+  NameVorname = NULL,
+  DatumVon = NULL,
+  DatumBis = NULL,
+  Typ = NULL,
+  DisplayText = NULL,
+  DatumVonKontrolle = NULL,
+  DatumBisKontrolle = NULL
+UNION ALL
+SELECT 
+  Code = ZLW.BaZahlungswegID, 
+  NameVorname = case 
+    when ZLW.AdresseName IS NULL AND ZLW.AdressePLZ IS NULL and ZLW.AdresseOrt IS NULL then PRS.NameVorname
+    else ZLW.AdresseName
+  end,
+  DatumVon = Convert(VARCHAR, ZLW.DatumVon, 104),
+  DatumBis = Convert(VARCHAR, ZLW.DatumBis, 104),
+  Typ = dbo.fnLOVText('BgEinzahlungsschein', ZLW.EinzahlungsscheinCode),
+  DisplayText = PRS.NameVorname + 
+    IsNull(', ' + dbo.fnLOVText('BgEinzahlungsschein', ZLW.EinzahlungsscheinCode), '') + 
+    IsNull(' (' + Convert(varchar, ZLW.DatumVon, 104) + ')', ''),
+  DatumVonKontrolle = ZLW.DatumVon,
+  DatumBisKontrolle = ZLW.DatumBis
+FROM dbo.FaFallPerson FFP
+  LEFT JOIN dbo.BaZahlungsweg ZLW WITH(READUNCOMMITTED) ON ZLW.BaPersonID = FFP.BaPersonID
+  LEFT JOIN dbo.vwPerson      PRS ON PRS.BaPersonID = FFP.BaPersonID
+WHERE FFP.FaFallID = {0}
+  --AND GETDATE() BETWEEN ZLW.DatumVon AND ISNULL(ZLW.DatumBis, GETDATE()) 
+  AND ZLW.EinzahlungsscheinCode != 1
+  AND FFP.BaPersonID NOT IN (
+    SELECT F.SchuldnerBaPersonID FROM dbo.FaLeistung F WITH(READUNCOMMITTED)
+    WHERE F.FaProzessCode in (405)
+      AND F.SchuldnerBaPersonID IS NOT NULL
+      AND F.FaLeistungID = {1} ) -- Person nicht Schuldner
+  AND ZLW.BaZahlungswegID IS NOT NULL
+
+UNION ALL  -- Alle Institutionen
+SELECT DISTINCT
+  Code = ZWI.BaZahlungswegID, 
+  NameVorname = case 
+    when ZWI.AdresseName IS NULL AND ZWI.AdressePLZ IS NULL and ZWI.AdresseOrt IS NULL then INS.Name
+    else ZWI.AdresseName
+  end,
+  DatumVon = Convert(VARCHAR, ZWI.DatumVon, 104),
+  DatumBis = Convert(VARCHAR, ZWI.DatumBis, 104),
+  Typ = dbo.fnLOVText('BgEinzahlungsschein', ZWI.EinzahlungsscheinCode),
+  DisplayText = INS.Name + 
+    IsNull(', ' + dbo.fnLOVText('BgEinzahlungsschein', ZWI.EinzahlungsscheinCode), '') + 
+    IsNull(' (' + Convert(varchar, ZWI.DatumVon, 104) + ')', ''),
+  DatumVonKontrolle = ZWI.DatumVon,
+  DatumBisKontrolle = ZWI.DatumBis
+FROM dbo.FaInvolvierteInstitution INI WITH(READUNCOMMITTED)
+  LEFT JOIN dbo.BaInstitution INS WITH(READUNCOMMITTED) ON INS.BaInstitutionID = INI.BaInstitutionID
+  LEFT JOIN dbo.BaZahlungsweg ZWI WITH(READUNCOMMITTED) ON ZWI.BaInstitutionID = INS.BaInstitutionID
+WHERE INI.FaFallID = {0}
+  --AND GETDATE() BETWEEN ZWI.DatumVon AND ISNULL(ZWI.DatumBis, GETDATE()) 
+  AND ZWI.EinzahlungsscheinCode != 1
+ORDER BY 1 ASC, 2 desc</value>
+  </data>
+  <data name="qryIkGlaeubiger.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>17, 17</value>
+  </data>
+  <data name="qryZusatzZahlInfo.SelectStatement" xml:space="preserve">
+    <value>SELECT 
+  ZAH.BaZahlungswegID,
+  Name = case
+    when ZAH.AdresseName IS NOT NULL and ZAH.AdressePLZ IS NOT NULL and ZAH.AdresseOrt IS NOT NULL then ZAH.AdresseName
+    when ZAH.BaInstitutionID is NULL then PRS.NameVorname
+    else INS.Name
+  end,
+  Kreditor = 
+    case 
+      when ZAH.AdresseName IS NOT NULL and ZAH.AdressePLZ IS NOT NULL and ZAH.AdresseOrt IS NOT NULL 
+        then ZAH.AdresseName + char(13) + char(10) + ZAH.AdressePLZ +  ' ' + ZAH.AdresseOrt
+      when ZAH.BaInstitutionID is NULL then
+        PRS.NameVorname + char(13) + char(10) +  
+        PRS.WohnsitzMehrzeilig
+      else 
+        INS.Name + char(13) + char(10) +  
+        INS.AdresseMehrzeilig
+    end +
+    char(13) + char(10) + char(13) + char(10) +
+    IsNull('Typ: ' + dbo.fnLOVText('BgEinzahlungsschein', ZAH.EinzahlungsscheinCode) + char(13) + char(10),'') +
+    IsNull('Bank: ' + BNK.Name + char(13) + char(10),'') +
+    IsNull('Bank PC: ' + dbo.fnTnToPc(BNK.PCKontoNr) + char(13) + char(10),'') + 
+    IsNull('Clearing-Nr.: ' + BNK.ClearingNr + char(13) + char(10),'') +
+    IsNull('Bankkonto: ' + ZAH.Bankkontonummer + char(13) + char(10),'') + 
+    IsNull('Postkonto: ' + dbo.fnTnToPc(ZAH.PostKontoNummer) + char(13) + char(10),'') +
+    IsNull('Referenz-Nr: ' + ZAH.ESRTeilnehmer + char(13) + char(10),'')
+FROM dbo.BaZahlungsweg ZAH WITH(READUNCOMMITTED)
+  LEFT Join dbo.BaBank BNK WITH(READUNCOMMITTED) on BNK.BaBankID = ZAH.BaBankID
+  LEFT Join dbo.vwPerson PRS on PRS.BaPersonID = ZAH.BaPersonID
+  LEFT Join dbo.vwInstitution INS on INS.BaInstitutionID = ZAH.BaInstitutionID
+WHERE  BaZahlungswegID = {0}</value>
+  </data>
+</root>

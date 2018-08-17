@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>SELECT  Anrede = PRS.Titel,
+        Name = PRS.Name,
+        Vorname = PRS.Vorname,
+        Fachbereich = dbo.fnLOVText('KAFachbereich', FachbereichID),        
+        [Datum von] = KAE.DatumVon,
+        [Datum bis] = KAE1.DatumBis,
+        [BG %] = KAE.BeschGrad,
+		Zielvereinbarung = DOC2.DateLastSave, 
+		Zwischenbericht = DOC.DateLastSave,
+		[Verlängerungen] = Convert(bit, case when KAE2.AnweisungCode is null then 0 else 1 end),
+		Schlussbericht = DOC1.DateLastSave,
+		[RAV Stelle] = CASE WHEN KAE.ZuweiserID &lt; 0 THEN '' 
+                            ELSE ORG.Name 
+                       END,
+        [RAV-BeraterIn] = CASE WHEN KAE.ZuweiserID &lt; 0 THEN '' 
+                               ELSE OKO.Name + isNull(', ' + OKO.Vorname,'') 
+                          END,
+        BaPersonID$ = ZFE.BaPersonID
+FROM dbo.KaZuteilFachbereich     ZFE WITH (READUNCOMMITTED)
+   LEFT JOIN dbo.BaPerson PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = ZFE.BaPersonID
+   INNER JOIN dbo.FaLeistung FAL WITH (READUNCOMMITTED) ON FAL.FaLeistungID = (SELECT TOP 1 FaLeistungID
+                                            FROM dbo.FaLeistung WITH (READUNCOMMITTED)
+                                            WHERE FAL.ModulID = 7  -- KA
+                                            AND FaProzessCode = 704  -- Qualifizierung Erwachsene
+                                            AND BaPersonID = ZFE.BaPersonID
+                                            ORDER BY DatumVon DESC)
+   LEFT  JOIN dbo.KaQEEPQ EPQ WITH (READUNCOMMITTED) ON EPQ.FaLeistungID = FAL.FaLeistungID   
+   LEFT  JOIN dbo.KaEinsatz KAE WITH (READUNCOMMITTED) ON KAE.BaPersonID = ZFE.BaPersonID
+                             AND KAE.KaEinsatzID = (SELECT TOP 1 KaEinsatzID
+                                                    FROM dbo.KaEinsatz WITH (READUNCOMMITTED)
+                                                    WHERE BaPersonID = ZFE.BaPersonID
+			                            AND (ZFE.ZuteilungVon BETWEEN DatumVon AND DatumBis
+						    OR (ZFE.ZuteilungBis is null OR ZFE.ZuteilungBis BETWEEN DatumVon AND DatumBis))
+						    AND AnweisungCode in (2,3)
+						    ORDER BY DatumVon ASC)
+   LEFT  JOIN dbo.KaEinsatz KAE1 WITH (READUNCOMMITTED) ON KAE1.BaPersonID = ZFE.BaPersonID
+                             AND KAE1.KaEinsatzID = (SELECT TOP 1 KaEinsatzID
+                                                    FROM dbo.KaEinsatz WITH (READUNCOMMITTED)
+                                                    WHERE BaPersonID = ZFE.BaPersonID
+			                            AND (ZFE.ZuteilungVon BETWEEN DatumVon AND DatumBis
+						    OR (ZFE.ZuteilungBis is null OR ZFE.ZuteilungBis BETWEEN DatumVon AND DatumBis))
+						    AND AnweisungCode in (2,3)
+						    ORDER BY DatumVon DESC)
+   LEFT  JOIN dbo.KaEinsatz KAE2 WITH (READUNCOMMITTED) ON KAE2.BaPersonID = ZFE.BaPersonID
+                             AND KAE2.KaEinsatzID = (SELECT TOP 1 KaEinsatzID
+                                                    FROM dbo.KaEinsatz WITH (READUNCOMMITTED)
+                                                    WHERE BaPersonID = ZFE.BaPersonID
+			                            AND DatumVon &gt; ZFE.ZuteilungVon
+                                                    AND AnweisungCode = 3)
+   LEFT  JOIN dbo.BaInstitutionKontakt OKO WITH (READUNCOMMITTED) ON OKO.BaInstitutionKontaktID = KAE.ZuweiserID
+   LEFT  JOIN dbo.BaInstitution ORG WITH (READUNCOMMITTED) ON ORG.BaInstitutionID = OKO.BaInstitutionID
+   LEFT  JOIN dbo.XDocument DOC ON DOC.DocumentID = EPQ.ZwBericht1DokID
+   LEFT  JOIN dbo.XDocument DOC1 ON DOC1.DocumentID = EPQ.Schlussbericht1DokID
+   LEFT  JOIN dbo.XDocument DOC2 ON DOC2.DocumentID = EPQ.IndivZieleRAVDokID
+WHERE 1 = 1
+--- AND ZFE.BaPersonID = {edtBaPersonID.LookupID}
+--- AND {edtFachbereichID.LookupID} = ZFE.FachbereichID
+--- AND ZFE.ZustaendigKaID = {edtZustKaID.LookupID}
+--- AND ({edtStatusCode} = 0 OR ({edtStatusCode} = 1 AND FAL.DatumBis is null) OR ({edtStatusCode} = 2 AND FAL.DatumBis is not null AND FAL.DatumBis &lt; GetDate()))
+AND ZFE.KaZuteilFachbereichID = (SELECT TOP 1 KaZuteilFachbereichID 
+				 FROM dbo.KaZuteilFachbereich WITH (READUNCOMMITTED) 
+				 WHERE BaPersonID = ZFE.BaPersonID 
+				 ORDER BY ZuteilungVon DESC)
+--AND KAE.AnweisungCode &gt; 1
+--AND KAE1.AnweisungCode &gt; 1
+--AND KAE2.AnweisungCode &gt; 1
+ORDER BY Name, Vorname, ZFE.ZuteilungVon DESC</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>17, 17</value>
+  </data>
+  <data name="edtFachbereichID.LookupSQL" xml:space="preserve">
+    <value>select ID = Code, Fachbereich = Text, Abteilung = Value1
+from   XLOVCode XLC
+where  XLC.Text like '%' + {0} + '%'
+  and XLC.Code in (select code from xlovcode where lovname = 'KAFachbereich' and text like 'Semo Ext%')
+  and XLC.LOVName = 'KAFachbereich'
+order by XLC.Text</value>
+  </data>
+  <data name="xDocument.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAF1JREFUOE9jZAAC
+        Y2Pj/yAaGzh79iwjhjhIw///MzGwmJjYfxDGqSEtjeE/MgYpBhmEoYmQDSANKM7GpQHZmVg1oDsJxgdp
+        pI4N2EIKJjbqJLIiDqSJEMaVovGKAwBnM3PWBP8PfwAAAABJRU5ErkJggg==
+</value>
+  </data>
+</root>

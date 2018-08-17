@@ -1,0 +1,13 @@
+﻿CREATE TABLE [dbo].[IkZVVTarife](
+	[IkZVVTarifeID] [int] IDENTITY(1,1) NOT NULL,
+	[GueltigAb] [datetime] NOT NULL,
+	[IkZVVTarifeCode] [int] NOT NULL,
+	[Betrag1] [money] NOT NULL,
+	[Betrag2] [money] NOT NULL,
+	[Betrag3] [money] NOT NULL,
+	[IkZVVTarifeTS] [timestamp] NOT NULL,
+ CONSTRAINT [PK_IkZVVTarife] PRIMARY KEY CLUSTERED 
+(
+	[IkZVVTarifeID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+) ON [PRIMARY]

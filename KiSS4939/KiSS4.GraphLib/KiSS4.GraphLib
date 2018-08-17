@@ -1,0 +1,731 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KiSS4.GraphLib</name>
+    </assembly>
+    <members>
+        <member name="T:KiSS4.GraphLib.Vertex">
+            <summary>
+            A vertex in a <see cref="T:KiSS4.GraphLib.Graph"/>.
+            </summary>
+        </member>
+        <member name="T:KiSS4.GraphLib.GraphItem">
+            <summary>
+            Base class for a <see cref="T:KiSS4.GraphLib.Vertex"/> or <see cref="T:KiSS4.GraphLib.Edge"/>.
+            </summary>
+        </member>
+        <member name="F:KiSS4.GraphLib.GraphItem.Graph">
+            <summary>
+            Gets the <see cref="F:KiSS4.GraphLib.GraphItem.Graph"/> this item is on.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphItem.#ctor(KiSS4.GraphLib.Graph)">
+            <summary>
+            Initialize.
+            </summary>
+        </member>
+        <member name="F:KiSS4.GraphLib.Vertex.Predecessors">
+            <summary>
+            Gets the edges before this instance.
+            </summary>
+        </member>
+        <member name="F:KiSS4.GraphLib.Vertex.Successors">
+            <summary>
+            Gets the edges after this instance.
+            </summary>
+        </member>
+        <member name="F:KiSS4.GraphLib.Vertex.Ordinal">
+            <summary>
+            The ordinal number of the Vertex in the graph.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.Vertex.#ctor(KiSS4.GraphLib.Graph)">
+            <summary>
+            Initialize.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.Vertex.CreateDisplay(KiSS4.GraphLib.GraphDrawing,System.Drawing.Graphics)">
+            <summary>
+            When implememted by a class, creates a <see cref="T:KiSS4.GraphLib.VertexDisplay"/> instance to draw this instance.
+            </summary>
+        </member>
+        <member name="T:KiSS4.GraphLib.DisplayItem">
+            <summary>
+            Base class for a <see cref="T:KiSS4.GraphLib.VertexDisplay"/> or a <see cref="T:KiSS4.GraphLib.EdgeDisplay"/>.
+            </summary>
+        </member>
+        <member name="F:KiSS4.GraphLib.DisplayItem.GD">
+            <summary>
+            Gets the <see cref="T:KiSS4.GraphLib.GraphDisplay"/>.
+            </summary>
+        </member>
+        <member name="F:KiSS4.GraphLib.DisplayItem.GI">
+            <summary>
+            Gets the <see cref="T:KiSS4.GraphLib.GraphItem"/> this objects displays.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.DisplayItem.#ctor(KiSS4.GraphLib.GraphDrawing,KiSS4.GraphLib.GraphItem)">
+            <summary>
+            Initialize.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.DisplayItem.HitTest(System.Drawing.Point)">
+            <summary>
+            Gets a value indicating whether p is within this item.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.DisplayItem.ToolTipText(System.Drawing.Point)">
+            <summary>
+            Gets a string for the tool tip at the specified location (or null).
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.DisplayItem.Paint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Paints the item.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.DisplayItem.Invalidate">
+            <summary>
+            Invalidates the item, causing it to be repainted.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.DisplayItem.OnKeyDown(System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Called on an unhandeled KeyDown event; currently doesn't do a thing.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:KiSS4.GraphLib.DisplayItem.OnDoubleClick(System.EventArgs)">
+            <summary>
+            Called on an unhandeled Double Click event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="P:KiSS4.GraphLib.DisplayItem.IsSelected">
+            <summary>
+            Gets a value indicating whether this item is selected.
+            </summary>
+        </member>
+        <member name="T:KiSS4.GraphLib.GraphDrawing">
+            <summary>
+            A drawing for a <see cref="F:KiSS4.GraphLib.GraphDrawing.Graph"/>.
+            </summary>
+        </member>
+        <member name="F:KiSS4.GraphLib.GraphDrawing.VertexDistance">
+            <summary>
+            Gets the distance between vertices.
+            </summary>
+        </member>
+        <member name="F:KiSS4.GraphLib.GraphDrawing.Parent">
+            <summary>
+            Gets the control the drawing is on.
+            </summary>
+        </member>
+        <member name="F:KiSS4.GraphLib.GraphDrawing.Graph">
+            <summary>
+            Gets the graph for the drawing.
+            </summary>
+        </member>
+        <member name="F:KiSS4.GraphLib.GraphDrawing.ForPrinting">
+            <summary>
+            Gets a value whether this drawing is for printing.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphDrawing.#ctor(System.Windows.Forms.Control,KiSS4.GraphLib.Graph,System.Drawing.Graphics,System.Boolean)">
+            <summary>
+            Initialize.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphDrawing.Zoom(System.Single)">
+            <summary>
+            Zooms the drawing to the specified factor (absolute).
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphDrawing.GetDisplayOf(KiSS4.GraphLib.GraphItem)">
+            <summary>
+            Gets the <see cref="T:KiSS4.GraphLib.DisplayItem"/> that was created for the given <see cref="T:KiSS4.GraphLib.GraphItem"/>.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphDrawing.HitTest(System.Drawing.Point)">
+            <summary>
+            Returns the <see cref="T:KiSS4.GraphLib.DisplayItem"/> at the specified location.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphDrawing.Paint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Paint all items.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphDrawing.HasContent(System.Drawing.Rectangle)">
+            <summary>
+            Gets a value indicating whether the drawing has items within the specified rectangle.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphDrawing.Invalidate(System.Drawing.Rectangle)">
+            <summary>
+            Invalidate <see cref="F:KiSS4.GraphLib.GraphDrawing.Parent"/>.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.GraphDrawing.MinSize">
+            <summary>
+            Gets the minimum size of the drawing.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.GraphDrawing.MaxSize">
+            <summary>
+            Gets the maximum size of the drawing.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.GraphDrawing.OrgSize">
+            <summary>
+            Gets the original size of the drawing.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.GraphDrawing.Location">
+            <summary>
+            Gets or sets the location.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.GraphDrawing.Size">
+            <summary>
+            Gets or sets the size.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.GraphDrawing.SelectedItem">
+            <summary>
+            Gets or sets the selected <see cref="T:KiSS4.GraphLib.DisplayItem"/>.
+            </summary>
+        </member>
+        <member name="E:KiSS4.GraphLib.GraphDrawing.DrawingSizeChanged">
+            <summary>
+            Occurs when the size of the drawing has changed.
+            </summary>
+        </member>
+        <member name="T:KiSS4.GraphLib.GraphDrawing.Line">
+            <summary>
+            A line that is part of an edge.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphDrawing.LineTemp.#ctor(KiSS4.GraphLib.GraphDrawing.Channel,System.Int32,System.Int32,KiSS4.GraphLib.Hierarchy,KiSS4.GraphLib.Hierarchy,System.Boolean)">
+            <summary>
+            Src port.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphDrawing.LineTemp.#ctor(KiSS4.GraphLib.GraphDrawing.Channel,System.Int32,KiSS4.GraphLib.GraphDrawing.LineTemp,System.Int32,KiSS4.GraphLib.Hierarchy,KiSS4.GraphLib.Hierarchy,System.Boolean)">
+            <summary>
+            Dst port.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphDrawing.LineTemp.#ctor(KiSS4.GraphLib.GraphDrawing.Channel,KiSS4.GraphLib.GraphDrawing.LineTemp,System.Int32)">
+            <summary>
+            Non-port.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphDrawing.LineTemp.#ctor(KiSS4.GraphLib.GraphDrawing.Channel,System.Int32,System.Int32,System.Int32,KiSS4.GraphLib.Hierarchy,KiSS4.GraphLib.Hierarchy,System.Boolean,KiSS4.GraphLib.Hierarchy,KiSS4.GraphLib.Hierarchy)">
+            <summary>
+            Direct.
+            </summary>
+        </member>
+        <member name="T:KiSS4.GraphLib.GraphDisplay">
+            <summary>
+            Container for displaying a <see cref="P:KiSS4.GraphLib.GraphDisplay.Graph"/>.
+            </summary>
+        </member>
+        <member name="F:KiSS4.GraphLib.GraphDisplay.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphDisplay.#ctor">
+            <summary>
+            Initialize.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphDisplay.Zoom(System.Single)">
+            <summary>
+            Zooms the drawing to the specified factor (absolute).
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphDisplay.ZoomBy(System.Single)">
+            <summary>
+            Zooms the drawing to the specified factor (relative).
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">zoomFactor is non-positive.</exception>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphDisplay.GetDisplayOf(KiSS4.GraphLib.GraphItem)">
+            <summary>
+            Gets the <see cref="T:KiSS4.GraphLib.DisplayItem"/> that was created for the specified <see cref="T:KiSS4.GraphLib.GraphItem"/>.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphDisplay.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphDisplay.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphDisplay.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Paint the drawing.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphDisplay.OnSizeChanged(System.EventArgs)">
+            <summary>
+            Relocate the drawing based on the current scroll bar positions.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphDisplay.IsInputKey(System.Windows.Forms.Keys)">
+            <summary>
+            Make left, right, up and down make input keys in order to scroll with these keys.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphDisplay.OnKeyDown(System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Handles the following keys: left, right, up, down, ctrl+z, shift+ctrl+z. Otherwise forwards the key to the selected item.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphDisplay.OnMouseEnter(System.EventArgs)">
+            <summary>
+            Used internally.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphDisplay.OnMouseLeave(System.EventArgs)">
+            <summary>
+            Used internally.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphDisplay.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Used internally.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphDisplay.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Select the item under cursor (left button), or show popup (right button).
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphDisplay.GraphDisplay_DoubleClick(System.Object,System.EventArgs)">
+            <summary>
+            Select the item under cursor (left button), or show popup (right button).
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphDisplay.OnMouseWheel(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Zooms the drawing in and out.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.GraphDisplay.OnPrint(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:KiSS4.GraphLib.GraphDisplay.Print"/> event.
+            </summary>
+            <remarks>Inheritors should call the base method in order to raise the event.</remarks>
+        </member>
+        <member name="P:KiSS4.GraphLib.GraphDisplay.Graph">
+            <summary>
+            Gets or sets the <see cref="P:KiSS4.GraphLib.GraphDisplay.Graph"/> to display.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.GraphDisplay.SelectedItem">
+            <summary>
+            Gets or sets the selected item.
+            </summary>
+        </member>
+        <member name="E:KiSS4.GraphLib.GraphDisplay.Print">
+            <summary>
+            Occurs when the print command is selected via popup menu.
+            </summary>
+        </member>
+        <member name="T:KiSS4.GraphLib.EdgeDisplay">
+            <summary>
+            Base class for an edge display.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.EdgeDisplay.#ctor(KiSS4.GraphLib.GraphDrawing,KiSS4.GraphLib.Edge)">
+            <summary>
+            Initialize.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.EdgeDisplay.IntersectsWith(System.Drawing.Rectangle)">
+            <summary>
+            Gets a value indicating whether any portion of the lines intersects with the specified rectangle.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.EdgeDisplay.HitTest(System.Drawing.Point)">
+            <summary>
+            Gets a value indicating whether the point is on the edge.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.EdgeDisplay.Invalidate">
+            <summary>
+            Invalidates the rectangle containing the edge.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.EdgeDisplay.DrawLines(System.Drawing.Graphics,System.Drawing.Pen)">
+            <summary>
+            Draws the line with the given pen.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.EdgeDisplay.Edge">
+            <summary>
+            Gets the <see cref="P:KiSS4.GraphLib.EdgeDisplay.Edge"/> displayed by this item.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.EdgeDisplay.SrcHorizontal">
+            <summary>
+            Gets the spacing after the source port. (horizontal)
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.EdgeDisplay.SrcVertical">
+            <summary>
+            Gets the orig size of the source port. (vertical)
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.EdgeDisplay.DstHorizontal">
+            <summary>
+            Gets the spacing after the destination  port. (horizontal)
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.EdgeDisplay.DstVertical">
+            <summary>
+            Gets the orig size of the destination port. (vertical)
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.EdgeDisplay.LineWidth">
+            <summary>
+            Gets the line width.
+            </summary>
+        </member>
+        <member name="T:KiSS4.GraphLib.Hierarchy">
+            <summary>
+            A hierarchy of dependent items.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.Hierarchy.GetItems">
+            <summary>
+            Gets all the items of this hierarchy.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.Hierarchy.op_BitwiseOr(KiSS4.GraphLib.Hierarchy,KiSS4.GraphLib.Hierarchy)">
+            <summary>
+            Make all items in the specified hierarchies be on the same root.
+            </summary>
+            <returns>A <see cref="T:KiSS4.GraphLib.Hierarchy"/> containing all items of h1 and h2.</returns>
+        </member>
+        <member name="M:KiSS4.GraphLib.Hierarchy.DefineDependent(KiSS4.GraphLib.Hierarchy)">
+            <summary>
+            Make all items of h depend on all items of this instance.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.Hierarchy.ToString">
+            <summary>
+            DEBUG only: returns the text set by <see cref="M:KiSS4.GraphLib.Hierarchy.SetTag(System.String)"/>; otherwise the base implementation.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.Hierarchy.SetTag(System.String)">
+            <summary>
+            DEBUG only: Sets a string identifying this instance.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.Hierarchy.IsRoot">
+            <summary>
+            Gets a value indicating whether this instance is a root hierarchy.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.Hierarchy.Root">
+            <summary>
+            Gets the root hierarchy of this instance.
+            </summary>
+            <value>this instance, if it's a root hierarchy, or the hierarchy containing the items of this instance.</value>
+        </member>
+        <member name="P:KiSS4.GraphLib.Hierarchy.OrgSize">
+            <summary>
+            Gets the original size.
+            </summary>
+            <remarks>
+            <p>
+            For an item: gets the item's original size set in the constructor.
+            Items are scaled proportionally to this value, but always between <see cref="P:KiSS4.GraphLib.Hierarchy.MinSize"/> and
+            <see cref="P:KiSS4.GraphLib.Hierarchy.MaxSize"/>.
+            </p>
+            <p>
+            For a root hierarchy: Gets the <see cref="P:KiSS4.GraphLib.Hierarchy.Size"/> corresponding to all items having the <see cref="P:KiSS4.GraphLib.Hierarchy.OrgSize"/> of 1.
+            </p>
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">Non-root hierarchy has no OrgSize.</exception>
+        </member>
+        <member name="P:KiSS4.GraphLib.Hierarchy.MinSize">
+            <summary>
+            Gets the minimum size.
+            </summary>
+            <remarks>
+            <p>
+            For an item: gets the item's minimum size set in the constructor. The item will never have a size
+            less than this value.
+            </p>
+            <p>For a root hierarchy: Gets the minimum size calculated from the items.</p>
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">Non-root hierarchy has no MinSize.</exception>
+        </member>
+        <member name="P:KiSS4.GraphLib.Hierarchy.MaxSize">
+            <summary>
+            Gets the maximum size.
+            </summary>
+            <remarks>
+            <p>
+            For an item: gets the item's maximum size set in the constructor. If it's less than the
+            <see cref="P:KiSS4.GraphLib.Hierarchy.MinSize"/>, <see cref="P:KiSS4.GraphLib.Hierarchy.MinSize"/> takes precedence.
+            </p>
+            <p>For a root hierarchy: Gets the maximum size calculated from the items.</p>
+            </remarks>
+            <exception cref="T:System.InvalidOperationException">Non-root hierarchy has no MaxSize.</exception>
+        </member>
+        <member name="P:KiSS4.GraphLib.Hierarchy.Location">
+            <summary>
+            Gets or sets the location of the hierarchy.
+            </summary>
+            <remarks>If not a root: gets the minimum location of all items.</remarks>
+            <exception cref="T:System.InvalidOperationException">Can't set Location on a non-root hierarchy.</exception>
+        </member>
+        <member name="P:KiSS4.GraphLib.Hierarchy.Size">
+            <summary>
+            Gets or sets the actual size of the hierarchy.
+            </summary>
+            <remarks>If not a root, returns the span between all items in this instance.</remarks>
+            <exception cref="T:System.InvalidOperationException">Can't set Size on a non-root hierarchy.</exception>
+        </member>
+        <member name="P:KiSS4.GraphLib.Hierarchy.StartItems">
+            <summary>
+            Gets the items which do not have predecessors within this instance.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.Hierarchy.EndItems">
+            <summary>
+            Gets the items which do not have successors within this instance.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.Hierarchy.Successors">
+            <summary>
+            Gets the items which are successors of the <see cref="P:KiSS4.GraphLib.Hierarchy.EndItems"/>.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.Hierarchy.Predecessors">
+            <summary>
+            Gets the items which are predecessors of the <see cref="P:KiSS4.GraphLib.Hierarchy.StartItems"/>.
+            </summary>
+        </member>
+        <member name="T:KiSS4.GraphLib.Hierarchy.Item">
+            <summary>
+            An item in a hierarchy.
+            </summary>
+        </member>
+        <member name="F:KiSS4.GraphLib.Hierarchy.Item.MaxOrgSize">
+            <summary>
+            Gets the maximum scaled original the item can get.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.Hierarchy.Item.#ctor(System.Int32)">
+            <summary>
+            Equivalent to Item(orgSize, 0, int.MaxValue, 0)
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.Hierarchy.Item.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Equivalent to Item(orgSize, minSize, int.MaxValue, 0)
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.Hierarchy.Item.#ctor(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Equivalent to Item(orgSize, minSize, maxSize, 0)
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.Hierarchy.Item.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initialize.
+            </summary>
+            <param name="orgSize">Initial value for the <see cref="P:KiSS4.GraphLib.Hierarchy.OrgSize"/> property.</param>
+            <param name="minSize">Initial value for the <see cref="P:KiSS4.GraphLib.Hierarchy.MinSize"/> property.</param>
+            <param name="maxSize">Initial value for the <see cref="P:KiSS4.GraphLib.Hierarchy.MaxSize"/> property.</param>
+            <param name="maxOrgSize">Initial value for the <see cref="F:KiSS4.GraphLib.Hierarchy.Item.MaxOrgSize"/> property.</param>
+        </member>
+        <member name="M:KiSS4.GraphLib.Hierarchy.Item.DependsOn(KiSS4.GraphLib.Hierarchy.Item)">
+            <summary>
+            Gets a value indicating whether this instance depends on the specified item.
+            </summary>
+        </member>
+        <member name="T:KiSS4.GraphLib.VertexDisplay">
+            <summary>
+            Base class for an object capable of displaying a <see cref="P:KiSS4.GraphLib.VertexDisplay.Vertex"/>.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.VertexDisplay.#ctor(KiSS4.GraphLib.GraphDrawing,KiSS4.GraphLib.Vertex)">
+            <summary>
+            Initialize.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.VertexDisplay.HitTest(System.Drawing.Point)">
+            <summary>
+            true, if the point in within the <see cref="P:KiSS4.GraphLib.VertexDisplay.Bounds"/>.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.VertexDisplay.Invalidate">
+            <summary>
+            Invalidates the item, causing it to be repainted.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.VertexDisplay.Vertex">
+            <summary>
+            Gets the <see cref="P:KiSS4.GraphLib.VertexDisplay.Vertex"/> displayed by this item.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.VertexDisplay.Horizontal">
+            <summary>
+            Gets a <see cref="T:KiSS4.GraphLib.Hierarchy"/> representing all horizontal items.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.VertexDisplay.Vertical">
+            <summary>
+            Gets a <see cref="T:KiSS4.GraphLib.Hierarchy"/> representing all horizontal items.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.VertexDisplay.SpaceTL">
+            <summary>
+            Gets a <see cref="T:KiSS4.GraphLib.Hierarchy"/> representing the space that should come before the top ports.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.VertexDisplay.SpaceTR">
+            <summary>
+            Gets a <see cref="T:KiSS4.GraphLib.Hierarchy"/> representing the space that should come after the top ports.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.VertexDisplay.SpaceBL">
+            <summary>
+            Gets a <see cref="T:KiSS4.GraphLib.Hierarchy"/> representing the space that should come before the bottom ports.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.VertexDisplay.SpaceBR">
+            <summary>
+            Gets a <see cref="T:KiSS4.GraphLib.Hierarchy"/> representing the space that should come after the bottom ports.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.VertexDisplay.Bounds">
+            <summary>
+            Gets a <see cref="T:System.Drawing.Rectangle"/> surrounding all items.
+            </summary>
+        </member>
+        <member name="T:KiSS4.GraphLib.Graph">
+            <summary>
+            A graph consisting of <see cref="T:KiSS4.GraphLib.Vertex"/> and <see cref="T:KiSS4.GraphLib.Edge"/> objects.
+            </summary>
+            <remarks>A graph basically is a collection of <see cref="T:KiSS4.GraphLib.Vertex"/> objects.</remarks>
+        </member>
+        <member name="M:KiSS4.GraphLib.Graph.CopyTo(System.Array,System.Int32)">
+            <summary>
+            ICollection implementation.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.Graph.GetEnumerator">
+            <summary>
+            IEnumerable implementation.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.Graph.Item(System.Int32)">
+            <summary>
+            Gets the <see cref="T:KiSS4.GraphLib.Vertex"/> at the specified index.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.Graph.IsSynchronized">
+            <summary>
+            ICollection implementation.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.Graph.Count">
+            <summary>
+            ICollection implementation.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.Graph.SyncRoot">
+            <summary>
+            ICollection implementation.
+            </summary>
+        </member>
+        <member name="T:KiSS4.GraphLib.EdgeCollection">
+            <summary>
+            Collection of <see cref="T:KiSS4.GraphLib.Edge"/> objects.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.EdgeCollection.CopyTo(System.Array,System.Int32)">
+            <summary>
+            ICollection implementation.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.EdgeCollection.GetEnumerator">
+            <summary>
+            IEnumerable implementation.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.EdgeCollection.Item(System.Int32)">
+            <summary>
+            Gets an <see cref="T:KiSS4.GraphLib.Edge"/> by index.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.EdgeCollection.IsSynchronized">
+            <summary>
+            ICollection implementation.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.EdgeCollection.Count">
+            <summary>
+            ICollection implementation.
+            </summary>
+        </member>
+        <member name="P:KiSS4.GraphLib.EdgeCollection.SyncRoot">
+            <summary>
+            ICollection implementation.
+            </summary>
+        </member>
+        <member name="T:KiSS4.GraphLib.Edge">
+            <summary>
+            An edge connecting two vertex objects.
+            </summary>
+        </member>
+        <member name="F:KiSS4.GraphLib.Edge.Src">
+            <summary>
+            Gets the <see cref="T:KiSS4.GraphLib.Vertex"/> where this edge starts.
+            </summary>
+        </member>
+        <member name="F:KiSS4.GraphLib.Edge.Dst">
+            <summary>
+            Gets the <see cref="T:KiSS4.GraphLib.Vertex"/> where this edge ends.
+            </summary>
+        </member>
+        <member name="F:KiSS4.GraphLib.Edge.IsSymmetric">
+            <summary>
+            Gets a value indicating whether the edge is symmetric.
+            </summary>
+        </member>
+        <member name="F:KiSS4.GraphLib.Edge.Priority">
+            <summary>
+            Gets a value indicating the prioirty (the lower, the closer the vert).
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.Edge.#ctor(KiSS4.GraphLib.Vertex,KiSS4.GraphLib.Vertex,System.Boolean,System.Int32)">
+            <summary>
+            Initialize by connecting two vertices.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.Edge.CreateDisplay(KiSS4.GraphLib.GraphDrawing,System.Drawing.Graphics,System.Boolean,System.Boolean)">
+            <summary>
+            When implemented by a class, creates a <see cref="T:KiSS4.GraphLib.EdgeDisplay"/> item.
+            </summary>
+        </member>
+        <member name="M:KiSS4.GraphLib.Edge.CompareTo(System.Object)">
+            <summary>
+            Supports sorting by min(src.ordinal, dst.ordinal), max(src.ordinal, dst.ordinal)
+            </summary>
+        </member>
+    </members>
+</doc>

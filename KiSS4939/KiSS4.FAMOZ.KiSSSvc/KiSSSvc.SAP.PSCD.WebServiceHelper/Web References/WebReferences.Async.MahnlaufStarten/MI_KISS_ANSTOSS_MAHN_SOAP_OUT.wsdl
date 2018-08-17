@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p2="urn:sap-com:document:sap:rfc:functions" xmlns:p1="http://STZH" name="MI_KISS_ANSTOSS_MAHN_SOAP_OUT" targetNamespace="http://STZH" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="urn:sap-com:document:sap:rfc:functions" targetNamespace="urn:sap-com:document:sap:rfc:functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="_-STZH_-KISS_ANSTOSS_MAHN_IN">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="I_MAHNLAUF" type="p2:_-STZH_-S_KISS_ANSTOSS_MAHNLAUF" />
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:simpleType name="genericDate">
+        <xsd:restriction base="xsd:string">
+          <xsd:pattern value="....-..-.." />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="date">
+        <xsd:union xmlns="urn:sap-com:document:sap:rfc:functions" memberTypes="xsd:date p2:genericDate" />
+      </xsd:simpleType>
+      <xsd:complexType name="_-STZH_-S_KISS_ANSTOSS_MAHNLAUF">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="LAUFD" type="p2:date" />
+          <xsd:element minOccurs="0" name="LAUFI">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="6" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="BELEGE" type="p2:_-STZH_-T_BELEGE" />
+          <xsd:element minOccurs="0" name="AUSDAT" type="p2:date" />
+          <xsd:element minOccurs="0" name="ZAHLBERBIS" type="p2:date" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="_-STZH_-S_BELEGE">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="OPBEL">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="12" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="OPUPW">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="3" />
+                <xsd:pattern value="\d+" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="OPUPK">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="4" />
+                <xsd:pattern value="\d+" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="OPUPZ">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="3" />
+                <xsd:pattern value="\d+" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="MAHNS">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="2" />
+                <xsd:pattern value="\d+" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="MAHNS_OLD">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="2" />
+                <xsd:pattern value="\d+" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="_-STZH_-T_BELEGE">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="p2:_-STZH_-S_BELEGE" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="p2._-STZH_-KISS_ANSTOSS_MAHN_IN.Input">
+    <wsdl:part name="parameters" element="p2:_-STZH_-KISS_ANSTOSS_MAHN_IN" />
+  </wsdl:message>
+  <wsdl:portType name="MI_KISS_ANSTOSS_MAHN_SOAP_OUT">
+    <wsdl:operation name="MI_KISS_ANSTOSS_MAHN_SOAP_OUT">
+      <wsdl:input message="p1:p2._-STZH_-KISS_ANSTOSS_MAHN_IN.Input" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MI_KISS_ANSTOSS_MAHN_SOAP_OUTBinding" type="p1:MI_KISS_ANSTOSS_MAHN_SOAP_OUT">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="MI_KISS_ANSTOSS_MAHN_SOAP_OUT">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MI_KISS_ANSTOSS_MAHN_SOAP_OUTService">
+    <wsdl:port name="MI_KISS_ANSTOSS_MAHN_SOAP_OUTPort" binding="p1:MI_KISS_ANSTOSS_MAHN_SOAP_OUTBinding">
+      <address location="http://szhm2179.stzh.ch:8001/XISOAPAdapter/MessageServlet?channel=:BS_KISS_ANSTOSS_MAHN_450:CC_SOAP_KISS_ANSTOSS_MAHN_IN&amp;version=3.0&amp;Sender.Service=BS_KISS_ANSTOSS_MAHN_450&amp;Interface=http%3A%2F%2FSTZH+%5EMI_KISS_ANSTOSS_MAHN_SOAP_OUT" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

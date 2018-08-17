@@ -1,0 +1,767 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>KiSS4.Klientenbuchhaltung</AssemblyName>
+    <OutputType>Library</OutputType>
+    <RootNamespace>KiSS4.Klientenbuchhaltung</RootNamespace>
+    <ProjectGuid>{9AAFDD00-D37D-46E9-97E9-1E9A9E42E67D}</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/KiSS4.Klientenbuchhaltung/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\Build\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <SignAssembly>false</SignAssembly>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\Build\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <SignAssembly>false</SignAssembly>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=1.4.3.536, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SharpLibrary, Version=1.4.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\Internal\KliBuMandant.cs" />
+    <Compile Include="BL\Internal\KliBuPeriode.cs" />
+    <Compile Include="BL\KlibuEnvironmentFactory.cs" />
+    <Compile Include="BL\Internal\KlibuEnvironmentInternal.cs" />
+    <Compile Include="BL\KliBuMandant.cs" />
+    <Compile Include="BL\KliBuPeriode.cs" />
+    <Compile Include="BL\None\KlibuEnvironmentNone.cs" />
+    <Compile Include="CtlKbBelegImportGv.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKbBelegImportGv.Designer.cs">
+      <DependentUpon>CtlKbBelegImportGv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKbTransfer.Designer.cs">
+      <DependentUpon>CtlKbTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKbZahlungslauf.Designer.cs">
+      <DependentUpon>CtlKbZahlungslauf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlQueryKbAbrechnungASVSFluechtling.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKbAuszahlungVerbuchen.Designer.cs">
+      <DependentUpon>CtlKbAuszahlungVerbuchen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKbBelegImportIK.Designer.cs">
+      <DependentUpon>CtlKbBelegImportIK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKbBelegImportSH.Designer.cs">
+      <DependentUpon>CtlKbBelegImportSH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKbBilanzErfolg.Designer.cs">
+      <DependentUpon>CtlKbBilanzErfolg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKbIbanGenerieren.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKbAuswahlMandant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrmKbKlientenbuchhaltung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKbKlientenbuchhaltung.Designer.cs">
+      <DependentUpon>FrmKbKlientenbuchhaltung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\KbBuchungStatusHelper.cs" />
+    <Compile Include="ZH\FrmKbPSCDSchnittstelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZH\FrmKbPSCDSchnittstelle.Designer.cs">
+      <DependentUpon>FrmKbPSCDSchnittstelle.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CtlKbBelegImportGv.resx">
+      <DependentUpon>CtlKbBelegImportGv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlQueryKbAbrechnungASVSFluechtling.resx">
+      <DependentUpon>CtlQueryKbAbrechnungASVSFluechtling.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKbIbanGenerieren.resx">
+      <DependentUpon>CtlKbIbanGenerieren.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKbAuswahlMandant.resx">
+      <DependentUpon>CtlKbAuswahlMandant.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CtlKbBankPost.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlKbBankPost.resx">
+      <DependentUpon>CtlKbBankPost.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CtlKbBelegkreise.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlKbBelegkreise.resx">
+      <DependentUpon>CtlKbBelegkreise.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CtlKbBilanzErfolg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlKbBilanzErfolg.resx">
+      <DependentUpon>CtlKbBilanzErfolg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CtlKbBuchung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlKbBuchung.resx">
+      <DependentUpon>CtlKbBuchung.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CtlKbIbanGenerieren.Designer.cs">
+      <DependentUpon>CtlKbIbanGenerieren.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKbJournal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlKbJournal.resx">
+      <DependentUpon>CtlKbJournal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CtlKbKonto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlKbKonto.resx">
+      <DependentUpon>CtlKbKonto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CtlKbKontoblatt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlKbKontoblatt.resx">
+      <DependentUpon>CtlKbKontoblatt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CtlKbKostenstelle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKbKostenstelle.Designer.cs">
+      <DependentUpon>CtlKbKostenstelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKbKostenstelleErfassung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKbKostenstelleErfassung.Designer.cs">
+      <DependentUpon>CtlKbKostenstelleErfassung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKbKostenstellen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlKbKostenstelle.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CtlKbKostenstelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKbKostenstelleErfassung.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CtlKbKostenstelleErfassung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKbKostenstellen.resx">
+      <DependentUpon>CtlKbKostenstellen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CtlKbKostenstelleZuweisung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKbKostenstelleZuweisung.Designer.cs">
+      <DependentUpon>CtlKbKostenstelleZuweisung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKbKreditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlKbKostenstelleZuweisung.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CtlKbKostenstelleZuweisung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKbKreditor.resx">
+      <DependentUpon>CtlKbKreditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CtlKbMandant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlKbMandant.resx">
+      <DependentUpon>CtlKbMandant.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CtlKbPeriode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlKbPeriode.resx">
+      <DependentUpon>CtlKbPeriode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CtlKbWVEinzelposten.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlKbWVEinzelposten.resx">
+      <DependentUpon>CtlKbWVEinzelposten.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CtlKbZahlungseingang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlKbZahlungseingang.resx">
+      <DependentUpon>CtlKbZahlungseingang.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CtlKbZahlungseingang.Designer.cs">
+      <DependentUpon>CtlKbZahlungseingang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlQueryKbAbrechnungASVSFluechtling.Designer.cs">
+      <DependentUpon>CtlQueryKbAbrechnungASVSFluechtling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlQueryKbBilanzErfolg.Designer.cs">
+      <DependentUpon>CtlQueryKbBilanzErfolg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlQueryKbSozialhilferechnungDifferenziert.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlQueryKbSozialhilferechnungDifferenziert.Designer.cs">
+      <DependentUpon>CtlQueryKbSozialhilferechnungDifferenziert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlQueryKontiOhneBgKostenart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlQueryKontiOhneBgKostenart.Designer.cs">
+      <DependentUpon>CtlQueryKontiOhneBgKostenart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKbKlientenbuchhaltung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKbTransfer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlKbTransfer.resx">
+      <DependentUpon>CtlKbTransfer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CtlKbZahlungskonto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlKbZahlungskonto.resx">
+      <DependentUpon>CtlKbZahlungskonto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CtlKbZahlungslauf.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlKbZahlungslauf.resx">
+      <DependentUpon>CtlKbZahlungslauf.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="DlgAuswahlKbKostenstelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlQueryKbSozialhilferechnungDifferenziert.resx">
+      <DependentUpon>CtlQueryKbSozialhilferechnungDifferenziert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlQueryKontiOhneBgKostenart.resx">
+      <DependentUpon>CtlQueryKontiOhneBgKostenart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgAuswahlKbKostenstelle.resx">
+      <DependentUpon>DlgAuswahlKbKostenstelle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKbAuswKlientenkonto.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmKbAuswKlientenkonto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKbKlientenbuchhaltung.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CtlKbKlientenbuchhaltung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKbKlientenbuchhaltung.resx">
+      <DependentUpon>FrmKbKlientenbuchhaltung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helper\CtlSelManPer.resx">
+      <DependentUpon>CtlSelManPer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helper\KlibuSSTControl.resx">
+      <DependentUpon>KlibuSSTControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <Compile Include="CtlKbBelegImportIK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlKbBelegImportIK.resx">
+      <DependentUpon>CtlKbBelegImportIK.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CtlKbBelegImportSH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlKbBelegImportSH.resx">
+      <DependentUpon>CtlKbBelegImportSH.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="FrmKbAuswKlientenkonto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CtlQueryKbBilanzErfolg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlQueryKbBilanzErfolg.resx">
+      <DependentUpon>CtlQueryKbBilanzErfolg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CtlQueryKbBuchungsjournal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlQueryKbBuchungsjournal.resx">
+      <DependentUpon>CtlQueryKbBuchungsjournal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CtlQueryKbKlientenkonto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlQueryKbKlientenkonto.resx">
+      <DependentUpon>CtlQueryKbKlientenkonto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CtlQueryKbKostenarten.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlQueryKbKostenarten.resx">
+      <DependentUpon>CtlQueryKbKostenarten.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CtlQueryKbKostenstellenjournal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlQueryKbKostenstellenjournal.resx">
+      <DependentUpon>CtlQueryKbKostenstellenjournal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CtlQueryKbSaldolisteKreditoren.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlQueryKbSaldolisteKreditoren.resx">
+      <DependentUpon>CtlQueryKbSaldolisteKreditoren.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CtlKbBelegeKorrigieren.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlKbBelegeKorrigieren.resx">
+      <DependentUpon>CtlKbBelegeKorrigieren.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CtlKbAuszahlungVerbuchen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlKbAuszahlungVerbuchen.resx">
+      <DependentUpon>CtlKbAuszahlungVerbuchen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Helper\BaBank.cs" />
+    <Compile Include="Helper\Balance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CtlQueryKbSozialhilferechnung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlQueryKbSozialhilferechnung.resx">
+      <DependentUpon>CtlQueryKbSozialhilferechnung.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CtlQueryKbBilanzkonti.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlQueryKbBilanzkonti.resx">
+      <DependentUpon>CtlQueryKbBilanzkonti.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CtlQueryKbAbrechnungASVS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlQueryKbAbrechnungASVS.resx">
+      <DependentUpon>CtlQueryKbAbrechnungASVS.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CtlKbDummy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DlgKbWVJournal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helper\Buchung.cs" />
+    <Compile Include="Helper\CtlSelManPer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Helper\IBeleg.cs" />
+    <Compile Include="Helper\IBelegKostenart.cs" />
+    <Compile Include="Helper\IBelegKostenstelle.cs" />
+    <Compile Include="Helper\KbZahlungskonto.cs" />
+    <Compile Include="BL\KlibuEnvironment.cs" />
+    <Compile Include="Helper\KlibuPaymentManager.cs" />
+    <Compile Include="Helper\KlibuSSTControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Helper\Kostenstelle.cs" />
+    <Compile Include="Helper\Kreditor.cs" />
+    <Compile Include="Helper\MandantPeriode.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ZH\BelegeKorrigierenTemporaryTableHelper.cs" />
+    <Compile Include="ZH\BelegeKorrigierenHelper.cs" />
+    <Compile Include="ZH\CtlIkSollstellung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlIkZahllauf.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlKbBelegeKorrigieren.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlKbBelegeKorrigieren.Designer.cs">
+      <DependentUpon>CtlKbBelegeKorrigieren.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZH\CtlKbBelegeKorrigierenMasse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlKbBelegeKorrigierenMasse.Designer.cs">
+      <DependentUpon>CtlKbBelegeKorrigierenMasse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZH\CtlKbBelegImport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlKbBelegKorrekturAltdaten.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlKbDummy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlKbKonto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlKbNettoBelegErgaenzen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlKbStorno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlKbWVEinzelposten.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlKbWVMigrierteEinzelposten.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlKbWVTestlauf.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlKbZahlungseingang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlKgKonto2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\DlgIkStorno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZH\DlgKbBelegeKorrigierenNeueWerte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZH\DlgKbBelegeKorrigierenNeueWerte.Designer.cs">
+      <DependentUpon>DlgKbBelegeKorrigierenNeueWerte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZH\CtlKbPSCDSchnittstelle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="DlgKbWVJournal.resx">
+      <DependentUpon>DlgKbWVJournal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlIkSollstellung.resx">
+      <DependentUpon>CtlIkSollstellung.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlIkZahllauf.resx">
+      <DependentUpon>CtlIkZahllauf.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlKbBelegeKorrigieren.resx">
+      <DependentUpon>CtlKbBelegeKorrigieren.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlKbBelegeKorrigierenMasse.resx">
+      <DependentUpon>CtlKbBelegeKorrigierenMasse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlKbBelegKorrekturAltdaten.resx">
+      <DependentUpon>CtlKbBelegKorrekturAltdaten.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlKbKonto.resx">
+      <DependentUpon>CtlKbKonto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlKbNettoBelegErgaenzen.resx">
+      <DependentUpon>CtlKbNettoBelegErgaenzen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlKbStorno.resx">
+      <DependentUpon>CtlKbStorno.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlKbWVEinzelposten.resx">
+      <DependentUpon>CtlKbWVEinzelposten.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlKbWVMigrierteEinzelposten.resx">
+      <DependentUpon>CtlKbWVMigrierteEinzelposten.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlKbWVTestlauf.resx">
+      <DependentUpon>CtlKbWVTestlauf.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlKbZahlungseingang.resx">
+      <DependentUpon>CtlKbZahlungseingang.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlKgKonto2.resx">
+      <DependentUpon>CtlKgKonto2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\DlgKbBelegeKorrigierenNeueWerte.resx">
+      <DependentUpon>DlgKbBelegeKorrigierenNeueWerte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\FrmKbPSCDSchnittstelle.resx">
+      <DependentUpon>FrmKbPSCDSchnittstelle.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KiSS.Common\KiSS.Common.csproj">
+      <Project>{FBFE7E87-7525-4260-98DD-F713ABCAC5C8}</Project>
+      <Name>KiSS.Common</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS.AssemblyInfo\BIAG.AssemblyInfo.csproj">
+      <Project>{C3A41F2E-FBF1-4628-8F6A-764A22252624}</Project>
+      <Name>BIAG.AssemblyInfo</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS.Context\KiSS.Context.csproj">
+      <Project>{D61829DC-4863-4740-B27F-B253A5F4FFC6}</Project>
+      <Name>KiSS.Context</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS.DBScheme\KiSS.DBScheme.csproj">
+      <Project>{48E78A43-B4AD-4426-9422-8ABB846CC345}</Project>
+      <Name>KiSS.DBScheme</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Infrastructure\Kiss.Infrastructure.csproj">
+      <Project>{94D23DEF-0BEC-4EAC-B6A8-A2AB6B3A0CF1}</Project>
+      <Name>Kiss.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Interfaces\Kiss.Interfaces.csproj">
+      <Project>{936877A8-EC00-4267-8C62-344062912497}</Project>
+      <Name>Kiss.Interfaces</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS.KliBu.BL\KiSS.KliBu.BL.csproj">
+      <Project>{D253F262-A979-4055-8092-D26FC27B82F7}</Project>
+      <Name>KiSS.KliBu.BL</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS.KliBu.UI\KiSS.KliBu.UI.csproj">
+      <Project>{245D1871-6952-4C9C-8443-5832F4B10FD3}</Project>
+      <Name>KiSS.KliBu.UI</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Basis\KiSS4.Basis.csproj">
+      <Project>{97C96FDC-3E62-4A9D-A46E-A81024C1A62C}</Project>
+      <Name>KiSS4.Basis</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Common\KiSS4.Common.csproj">
+      <Project>{B9295AD3-0104-4E8D-88E6-14B4D2EDD647}</Project>
+      <Name>KiSS4.Common</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.DB\KiSS4.DB.csproj">
+      <Project>{94EF0808-6193-443F-ACE3-A54ABC4BDE8D}</Project>
+      <Name>KiSS4.DB</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Dokument\KiSS4.Dokument.csproj">
+      <Project>{25932622-2762-49B9-9FF6-60B623E28111}</Project>
+      <Name>KiSS4.Dokument</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.FAMOZ\KiSS4.FAMOZ.csproj">
+      <Project>{0799AC59-F06B-4AC0-A16A-E040B3534357}</Project>
+      <Name>KiSS4.FAMOZ</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Gui\KiSS4.Gui.csproj">
+      <Project>{9AB1DBC3-F48B-4CE0-A557-4D3B46149A98}</Project>
+      <Name>KiSS4.Gui</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Schnittstellen\KiSS4.Schnittstellen.csproj">
+      <Project>{2C441842-BFFD-4C69-A215-6246BAB83462}</Project>
+      <Name>KiSS4.Schnittstellen</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info_small.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

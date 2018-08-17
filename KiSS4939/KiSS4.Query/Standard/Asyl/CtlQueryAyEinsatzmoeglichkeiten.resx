@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>------------------------------------------------------------
+---------------- Beschäftigung/Kurse
+------------------------------------------------------------
+DECLARE @AyKursePersonFldID      INT,
+        @AyKurseDatumVonFldID    INT,
+        @AyKurseProgrammFldID    INT,
+        @AyKurseKursFldID        INT,
+        @AyKurseDatumBisFldID    INT,
+        @AyKurseWartelisteFldID INT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyKursePerson', @AyKursePersonFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyKurseDatumVon', @AyKurseDatumVonFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyKurseProgramm', @AyKurseProgrammFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyKurseKurs', @AyKurseKursFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyKurseDatumBis', @AyKurseDatumBisFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyKurseWarteliste', @AyKurseWartelisteFldID OUT 
+
+DECLARE @kurse Table(
+  FTBaPersonID INT,
+  FaLeistungID      INT,
+  UserID        INT,
+  KBBaPersonID INT,
+  KursCode      INT,
+  Eintritt      DATETIME,
+  Austritt      DATETIME,
+  ProgrammCode  INT,
+  WarteListe    BIT
+)
+
+INSERT INTO @kurse
+SELECT PRS.BaPersonID,
+       FAL.FaLeistungID,     
+       USR.UserID,
+       PRS2.BaPersonID,
+       CONVERT(INT, KKU.Value),
+       CONVERT(DATETIME, KDV.Value),
+       CONVERT(DATETIME, KDB.Value),
+       CONVERT(INT, KPG.Value),
+       CONVERT(BIT, KWL.Value)
+FROM dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+  INNER JOIN dbo.BaPerson        PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = FAL.BaPersonID
+  INNER JOIN dbo.XUser            USR WITH (READUNCOMMITTED) ON USR.UserID = FAL.UserID
+  INNER JOIN dbo.DynaValue        KPR WITH (READUNCOMMITTED) ON KPR.FaLeistungID = FAL.FaLeistungID               --kursteilnehmer
+                                 AND KPR.DynaFieldID = @AyKursePersonFldID
+  LEFT  JOIN dbo.DynaValue        KDV WITH (READUNCOMMITTED) ON KDV.FaLeistungID = FAL.FaLeistungID               -- Datumvon
+                                 AND KDV.GridRowID = KPR.GridRowID
+                                 AND KDV.DynaFieldID = @AyKurseDatumVonFldID
+  LEFT  JOIN dbo.DynaValue        KPG WITH (READUNCOMMITTED) ON KPG.FaLeistungID = FAL.FaLeistungID               -- programm (gep/iva)
+                                 AND KPG.GridRowID = KPR.GridRowID
+                                 AND KPG.DynaFieldID = @AyKurseProgrammFldID
+  LEFT  JOIN dbo.DynaValue        KKU WITH (READUNCOMMITTED) ON KKU.FaLeistungID = FAL.FaLeistungID               -- kurs/extern
+                                 AND KKU.GridRowID = KPR.GridRowID
+                                 AND KKU.DynaFieldID = @AyKurseKursFldID
+  LEFT  JOIN dbo.DynaValue        KDB WITH (READUNCOMMITTED) ON KDB.FaLeistungID = FAL.FaLeistungID               -- datumbis
+                                 AND KDB.GridRowID = KPR.GridRowID
+                                 AND KDB.DynaFieldID = @AyKurseDatumBisFldID
+  LEFT  JOIN dbo.DynaValue        KWL WITH (READUNCOMMITTED) ON KWL.FaLeistungID = FAL.FaLeistungID               -- Warteliste
+                                 AND KWL.GridRowID = KPR.GridRowID
+                                 AND KWL.DynaFieldID = @AyKurseWartelisteFldID
+  LEFT  JOIN dbo.BaPerson        PRS2 WITH (READUNCOMMITTED) ON PRS2.BaPersonID = CONVERT(INT, KPR.Value)
+WHERE FAL.ModulID = 6
+  AND dbo.fnGetAge(PRS2.Geburtsdatum, GETDATE()) &gt;= 15
+--- AND FAL.UserID =  {edtUserID.LookupID}
+--- AND FAL.DatumVon &lt;= {edtDatumBis}                       -- Fall aktiv vor angegebenem Enddatum
+--- AND isNull(FAL.DatumBis, {edtDatumVon}) &gt;= {edtDatumVon}   -- Fall aktiv ab angegebenem Startdatum
+
+
+------------------------------------------------------------
+---------------- Ressourcen
+------------------------------------------------------------
+DECLARE @AyRessourcenPersonFldID             INT,
+        @AyRessourcenDeutschFldID            INT,
+        @AyRessourcenAndereSprachenFldID     INT,
+        @AyRessourcenFaehigkeitenFldID       INT,
+        @AyRessourcenBranchenFldID           INT,
+        @AyRessourcenEinsatzmöglichkeitFldID INT,
+        @AyRessourcenKontaktpersonFldID      INT
+
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyRessourcenPerson',             @AyRessourcenPersonFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyRessourcenDeutsch',            @AyRessourcenDeutschFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyRessourcenAndereSprachen',     @AyRessourcenAndereSprachenFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyRessourcenFaehigkeiten',       @AyRessourcenFaehigkeitenFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyRessourcenBranchen',           @AyRessourcenBranchenFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyRessourcenEinsatzmöglichkeit', @AyRessourcenEinsatzmöglichkeitFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyRessourcenKontaktperson',      @AyRessourcenKontaktpersonFldID OUT
+
+DECLARE @ressourcen Table(
+  FTBaPersonID INT,
+  FaLeistungID      INT,
+  UserID        INT,
+  KBBaPersonID INT,
+  DeutschCode   INT,
+  AndereSprache VARCHAR(200),
+  Faehigkeiten  VARCHAR(200),
+  Schule        VARCHAR(200),
+  EinsatzCode   INT,
+  Kontaktperson VARCHAR(200)  
+)
+
+INSERT INTO @ressourcen
+SELECT PRS.BaPersonID,
+       FAL.FaLeistungID,     
+       USR.UserID,
+       PRS2.BaPersonID,
+       CONVERT(INT, RDK.Value),
+       CONVERT(VARCHAR, RAS.Value),
+       CONVERT(VARCHAR, RFK.Value),
+       CONVERT(VARCHAR, RBR.Value),
+       CONVERT(INT, REM.Value),
+       CONVERT(VARCHAR, RKT.Value)
+FROM dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+  INNER JOIN dbo.BaPerson        PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = FAL.BaPersonID
+  INNER JOIN dbo.XUser            USR WITH (READUNCOMMITTED) ON USR.UserID      = FAL.UserID
+  INNER JOIN dbo.DynaValue        RPR WITH (READUNCOMMITTED) ON RPR.FaLeistungID    = FAL.FaLeistungID               -- Person
+                                 AND RPR.DynaFieldID = @AyRessourcenPersonFldID
+  LEFT  JOIN dbo.DynaValue        RDK WITH (READUNCOMMITTED) ON RDK.FaLeistungID    = FAL.FaLeistungID               -- Deutschkentnisse
+                                 AND RDK.GridRowID   = RPR.GridRowID
+                                 AND RDK.DynaFieldID = @AyRessourcenDeutschFldID
+  LEFT  JOIN dbo.DynaValue        RAS WITH (READUNCOMMITTED) ON RAS.FaLeistungID    = FAL.FaLeistungID               -- Andere Sprachen
+                                 AND RAS.GridRowID   = RPR.GridRowID
+                                 AND RAS.DynaFieldID = @AyRessourcenAndereSprachenFldID
+  LEFT  JOIN dbo.DynaValue        RFK WITH (READUNCOMMITTED) ON RFK.FaLeistungID    = FAL.FaLeistungID               -- Fähigkeiten
+                                 AND RFK.GridRowID   = RPR.GridRowID
+                                 AND RFK.DynaFieldID = @AyRessourcenFaehigkeitenFldID
+  LEFT  JOIN dbo.DynaValue        RBR WITH (READUNCOMMITTED) ON RBR.FaLeistungID    = FAL.FaLeistungID               -- Branche/Schule
+                                 AND RBR.GridRowID   = RPR.GridRowID
+                                 AND RBR.DynaFieldID = @AyRessourcenBranchenFldID
+  LEFT  JOIN dbo.DynaValue        REM WITH (READUNCOMMITTED) ON REM.FaLeistungID    = FAL.FaLeistungID               -- Einsatzmöglichkeiten
+                                 AND REM.GridRowID   = RPR.GridRowID
+                                 AND REM.DynaFieldID = @AyRessourcenEinsatzmöglichkeitFldID
+  LEFT  JOIN dbo.DynaValue        RKT WITH (READUNCOMMITTED) ON RKT.FaLeistungID    = FAL.FaLeistungID               -- Kontaktperson
+                                 AND RKT.GridRowID   = RPR.GridRowID
+                                 AND RKT.DynaFieldID = @AyRessourcenKontaktpersonFldID
+  LEFT  JOIN dbo.BaPerson       PRS2 WITH (READUNCOMMITTED) ON PRS2.BaPersonID = CONVERT(INT, RPR.Value)
+WHERE FAL.ModulID = 6
+  AND dbo.fnGetAge(PRS2.Geburtsdatum, GETDATE()) &gt;= 15
+--- AND FAL.UserID =  {edtUserID.LookupID}
+--- AND FAL.DatumVon &lt;= {edtDatumBis}                       -- Fall aktiv vor angegebenem Enddatum
+--- AND isNull(FAL.DatumBis, {edtDatumVon}) &gt;= {edtDatumVon}   -- Fall aktiv ab angegebenem Startdatum
+
+---------------------------------------------------------------------------------
+----------------- Liste 1: Detail
+---------------------------------------------------------------------------------
+SELECT BaPersonID$          = PRS.BaPersonID,
+       Person               = PRS2.Name + ' ' + isnull(PRS2.Vorname,''),
+       [N.Nr]               = PRS2.NNummer,
+       Status               = dbo.fnlovColumnListe('Aufenthaltsstatus', PRS2.AuslaenderStatusCode, 'ShortText'),
+       Geschlecht           = dbo.fnLovText('Geschlecht', PRS2.GeschlechtCode),
+       [Alter]              = dbo.fngetage(PRS2.Geburtsdatum, GETDATE()),
+       Arbeit               = dbo.fnLOVText('Erwerbssituation', ARB.ErwerbssituationStatus1Code) + ' ' + dbo.fnLOVText('Erwerbssituation', ARB.ErwerbssituationStatus2Code),
+       Kurs                 = CONVERT(BIT, CASE WHEN  KRS.KursCode IS NULL THEN 0 ELSE 1 END),
+       GEP                  = CONVERT(BIT, CASE WHEN  KRS.ProgrammCode IS NULL THEN 0 ELSE 1 END),
+       WL                   = isNull(KRS.Warteliste, 0),
+       Nichts               = CONVERT(BIT, CASE WHEN ARB.ErwerbssituationStatus1Code IS NULL AND ARB.ErwerbssituationStatus2Code IS NULL 
+                                                 AND KRS.KursCode IS NULL AND KRS.ProgrammCode IS NULL
+                                                 AND isNull(KRS.Warteliste, 0) = 0 THEN 1
+                                                ELSE 0 END),
+       [Einsatzmöglichkeit] = dbo.fnLovText('AyEinsatzmöglichkeit', RES.EinsatzCode),
+       Deutsch              = dbo.fnLovText('AyDeutschkenntnisse',RES.DeutschCode),
+       [and.Sprachen]       = RES.AndereSprache,
+       [Fähigkeiten]        = dbo.fnLovTextListe('AyBeschFaehigkeiten', RES.Faehigkeiten),
+       Schule               = dbo.fnLovTextListe('AyBeschSchulen', RES.Schule),
+       Strasse              = PRS.WohnsitzStrasse +' ' + isNull(PRS.WohnsitzHausNr,''),
+       PLZ                  = PRS.WohnsitzPLZ,
+       Ort                  = PRS.WohnsitzOrt,
+       Telefon              = PRS2.Telefon_P,
+       Kontaktperson        = RES.Kontaktperson,
+       SAR                  = USR.LastName + ISNULL(', ' + USR.FirstName,'')
+       
+FROM @ressourcen                 RES
+  INNER JOIN dbo.vwPerson           PRS  ON PRS.BaPersonID = RES.FTBaPersonID
+  INNER JOIN dbo.XUser               USR WITH (READUNCOMMITTED)  ON USR.UserID = RES.UserID
+  LEFT  JOIN dbo.BaPerson           PRS2 WITH (READUNCOMMITTED) ON PRS2.BaPersonID = KBBaPersonID
+  LEFT  JOIN dbo.BaArbeitAusbildung ARB WITH (READUNCOMMITTED)  ON ARB.BaPersonID = PRS2.BaPersonID
+  LEFT  JOIN @kurse              KRS  ON KRS.KBBaPersonID = RES.KBBaPersonID
+
+ORDER BY USR.LastName + ISNULL(', ' + USR.FirstName,''), PRS.Name + ' ' + isnull(PRS.Vorname,'')
+
+---------------------------------------------------------------------------------
+----------------- Liste 2: Übersicht
+---------------------------------------------------------------------------------
+SELECT [Männer]      = SUM(CASE WHEN GeschlechtCode = 1 THEN 1 ELSE 0 END), 
+       [Frauen]      = SUM(CASE WHEN GeschlechtCode = 2 THEN 1 ELSE 0 END), 
+       [15-25]       = SUM(CASE WHEN dbo.fngetage(PRS.Geburtsdatum, GETDATE()) BETWEEN 15 AND 25 THEN 1 ELSE 0 END),
+       [26-35]       = SUM(CASE WHEN dbo.fngetage(PRS.Geburtsdatum, GETDATE()) BETWEEN 26 AND 35 THEN 1 ELSE 0 END),
+       [36-65]       = SUM(CASE WHEN dbo.fngetage(PRS.Geburtsdatum, GETDATE()) BETWEEN 36 AND 65 THEN 1 ELSE 0 END),
+       [ab 65]       = SUM(CASE WHEN dbo.fngetage(PRS.Geburtsdatum, GETDATE()) &gt; 65 THEN 1 ELSE 0 END),
+       [N]           = SUM(CASE WHEN PRS.AuslaenderStatusCode = 8 THEN 1 ELSE 0 END),
+        [RW]          = SUM(CASE WHEN PRS.AuslaenderStatusCode = 11 THEN 1 ELSE 0 END),
+        [VA]          = SUM(CASE WHEN PRS.AuslaenderStatusCode = 17 THEN 1 ELSE 0 END),
+       Arbeit        = SUM(CASE WHEN ARB.ErwerbssituationStatus1Code IS NULL THEN 0 ELSE 1 END),
+       Kurs          = SUM(CASE WHEN KRS.KursCode IS NULL THEN 0 ELSE 1 END),
+       GEP           = SUM(CASE WHEN KRS.ProgrammCode IS NULL THEN 0 ELSE 1 END),
+       WL            = SUM(CASE WHEN KRS.Warteliste IS NULL THEN 0 ELSE 1 END),
+       Nichts        = SUM(CASE WHEN ARB.ErwerbssituationStatus1Code IS NULL AND ARB.ErwerbssituationStatus2Code IS NULL 
+                                 AND KRS.KursCode IS NULL AND KRS.ProgrammCode IS NULL AND KRS.Warteliste IS NULL THEN 1 ELSE 0 END)
+FROM @ressourcen                 RES
+  INNER JOIN dbo.BaPerson           PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = RES.KBBaPersonID
+  LEFT  JOIN dbo.BaArbeitAusbildung ARB WITH (READUNCOMMITTED) ON ARB.BaPersonID = RES.KBBaPersonID
+  LEFT  JOIN @kurse              KRS ON KRS.KBBaPersonID = RES.KBBaPersonID
+</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="xDocument.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAF1JREFUOE9jZAAC
+        Y2Pj/yAaGzh79iwjhjhIw///MzGwmJjYfxDGqSEtjeE/MgYpBhmEoYmQDSANKM7GpQHZmVg1oDsJxgdp
+        pI4N2EIKJjbqJLIiDqSJEMaVovGKAwBnM3PWBP8PfwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="edtDatumBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFVJREFUOE9jZAAC
+        Y2Pj/yCaEDh79iwjWA1MAzaNWOVAgsRguAuIcRKKGmROQwMD3D/IbKwaQApgitBp6mgAeYokG4abBmT/
+        YKQ3smKapLREKFkjywMAd9eDN3Z9MMsAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="edtDatumVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFVJREFUOE9jZAAC
+        Y2Pj/yCaEDh79iwjWA1MAzaNWOVAgsRguAuIcRKKGmROQwMD3D/IbKwaQApgitBp6mgAeYokG4abBmT/
+        YKQ3smKapLREKFkjywMAd9eDN3Z9MMsAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="edtUserID.LookupSQL" xml:space="preserve">
+    <value>select ID = UserID, SAR = LastName + isNull(', ' + FirstName,''), [Kuerzel] = LogonName
+             from   XUser 
+             where LastName + isNull(', ' + FirstName,'') like {0} + '%' 
+             order by SAR</value>
+  </data>
+</root>

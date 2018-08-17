@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryKbBuchungBruttoSuche.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>33, 22</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="edtValutaDatum.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtVerwPeriodeVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtVerwPeriodeBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="qryKbBuchungBruttoSuche.SelectStatement" xml:space="preserve">
+    <value>DECLARE @KopfBuchung TABLE
+(
+	KbBuchungBruttoID int
+)
+
+INSERT INTO @KopfBuchung
+SELECT DISTINCT
+	KBB.KbBuchungBruttoID
+FROM KbBuchungBrutto               KBB WITH(READUNCOMMITTED)
+  INNER JOIN KbBuchungBruttoPerson KBP WITH(READUNCOMMITTED) ON KBP.KbBuchungBruttoID = KBB.KbBuchungBruttoID 
+  LEFT  JOIN vwPerson              PRS WITH(READUNCOMMITTED) ON PRS.BaPersonID        = KBP.BaPersonID
+  LEFT  JOIN BgKostenart           BKA WITH(READUNCOMMITTED) ON BKA.BgKostenartID     = KBB.BgKostenartID --OR KBB.BgKostenartID IS NULL AND KBP.SpezBgKostenartID = BKA.BgKostenartID
+  LEFT  JOIN BgPosition            POS WITH(READUNCOMMITTED) ON POS.BgPositionID      = KBP.BgPositionID
+  LEFT  JOIN (SELECT KbBuchungBruttoID = KBP2.KbBuchungBruttoID, KbBuchungStatusCode = MIN(BUC2.KbBuchungStatusCode) FROM KbBuchungBruttoPerson KBP2
+					INNER JOIN KbBuchungKostenart KOA  WITH(READUNCOMMITTED) ON KOA.BgPositionID = KBP2.BgPositionID 					
+					INNER JOIN KbBuchung BUC2 WITH(READUNCOMMITTED) ON BUC2.KbBuchungID = KOA.KbBuchungID
+					GROUP BY KBP2.KbBuchungBruttoID) BUC ON BUC.KbBuchungBruttoID = KBB.KbBuchungBruttoID 
+  LEFT  JOIN BgBudget              BUD WITH(READUNCOMMITTED) ON BUD.BgBudgetID        = KBB.BgBudgetID
+  LEFT  JOIN FaLeistung            LEI WITH(READUNCOMMITTED) ON LEI.FaLeistungID      = KBB.FaLeistungID
+  LEFT  JOIN XLOVCode              MON WITH(READUNCOMMITTED) ON MON.LOVName = 'Monat' AND MON.Code = BUD.Monat
+WHERE (KBB.KbBuchungStatusCode IN (3,8,6) AND KBB.Betrag &lt; 0 OR KBB.Betrag &gt; 0 AND (KBB.KbBuchungStatusCode IN (6,8,10) OR KBB.KbBuchungStatusCode = 3 AND KBB.Abgetreten = 0 )) 
+  AND (BUC.KbBuchungStatusCode IN (6) OR KBP.BgPositionID IS NULL AND KBB.PscdKennzeichen IN ('S', 'U'))	-- Nur Belege mit Geldfluss, d.h. kleinster Nettobeleg-Status ist ausgeglichen / oder Umbuchungs- und SiLei-Belege, die haben keine Nettobelege
+  AND KBB.StorniertKbBuchungBruttoID IS NULL -- Stornobelege können nicht storniert werden
+-- aus Performance-Gründen wird bei einer 11-Stelligen Buchungszahl der Eingabewert auf bigint konvertiert
+---   AND (LEN({edtSucheBelegNr}) = 11 AND CONVERT(bigint, {edtSucheBelegNr}) = KBB.BelegNr OR LEN({edtSucheBelegNr}) &lt;&gt; 11 AND KBB.BelegNr LIKE  Convert(varchar(20), {edtSucheBelegNr})  + '%')
+---  AND dbo.fnDateOf(KBB.ValutaDatum) &gt;= {edtSucheValutaDatumVon}
+---  AND dbo.fnDateOf(KBB.ValutaDatum) &lt;= {edtSucheValutaDatumBis}
+---  AND EXISTS (SELECT * FROM KbBuchungBruttoPerson WHERE KbBuchungBruttoID = KBB.KbBuchungBruttoID AND BaPersonID = {edtSucheBetrifftPerson.LookupID})
+---  AND KBB.BgKostenartID = {edtSucheBgKostenartID.LookupID}
+---  AND LEI.FaFallID = {edtSucheFallNr}
+---  AND KBB.Betrag = {edtSucheBetrag}
+---  AND LEI.BaPersonID = {edtSucheLT.LookupID}
+	
+
+SELECT DISTINCT
+  StatusNetto = Min(BUC.KbBuchungStatusCode), 
+  KBB.KbBuchungBruttoID,
+  BgKostenartID = IsNull(BKA.BgKostenartID, MIN(KBP.SpezBgKostenartID)),  -- SiLei haben die Kostenart auf den Detailpositionen
+  KBB.KbBuchungStatusCode,
+  KBB.Quoting,
+  KBB.Kostenstelle,
+  KBB.Abgetreten,
+  Hauptvorgang = IsNull(KBB.Hauptvorgang, MIN(KBP.SpezHauptvorgang)),  -- SiLei haben den Hauptvorgang auf den Detailpositionen
+  Teilvorgang = IsNull(KBB.Teilvorgang, MIN(KBP.SpezTeilvorgang)),  -- SiLei haben den Teilvorgang auf den Detailpositionen
+  BgKostenartHauptvorgang = BKA.Hauptvorgang,
+  BgKostenartTeilvorgang = BKA.Teilvorgang,
+  BgKostenartHauptvorgangAbtretung = BKA.HauptvorgangAbtretung,
+  BgKostenartTeilvorgangAbtretung = BKA.TeilvorgangAbtretung,
+  KBB.Belegart,
+  KBB.Weiterverrechenbar,
+  KBB.FaLeistungID,
+  KBB.BelegNr,
+  KBB.Text,
+  KBB.Betrag,
+  KBB.BgSplittingArtCode,
+  KBB.ValutaDatum,
+  KBB.BgBudgetID,
+  KBB.BelegDatum,
+  LEI.FaFallID,
+  Monat = MON.ShortText,
+  BUD.Jahr,
+  BUD.BgFinanzplanID,
+  BgKostenart = BKA.KontoNr + ' ' + BKA.Name,
+  VerwPeriodeVon = MIN(KBP.VerwPeriodeVon), VerwPeriodeBis = MAX(KBP.VerwPeriodeBis),
+  BaPersonID = LEI.BaPersonID, -- Bei SiLei-Belegen gibts keinen LT
+  BKA.KontoNr,
+  KBB.PscdKennzeichen,
+  BetrifftBaPersonIDs = dbo.ConcDistinct(KBP.BaPersonID),
+  BetrifftPersonen    = dbo.ConcDistinct(PRS.NameVorname + ' (' + convert(varchar,PRS.BaPersonID) + ')'),
+  BetragKopf = KBB.Betrag
+FROM @KopfBuchung TEMP
+  INNER JOIN KbBuchungBrutto       KBB WITH(READUNCOMMITTED) ON KBB.KbBuchungBruttoID = TEMP.KbBuchungBruttoID
+  INNER JOIN KbBuchungBruttoPerson KBP WITH(READUNCOMMITTED) ON KBP.KbBuchungBruttoID = KBB.KbBuchungBruttoID 
+  LEFT  JOIN vwPerson              PRS WITH(READUNCOMMITTED) ON PRS.BaPersonID        = KBP.BaPersonID
+  LEFT  JOIN BgKostenart           BKA WITH(READUNCOMMITTED) ON BKA.BgKostenartID     = KBB.BgKostenartID --OR KBB.BgKostenartID IS NULL AND KBP.SpezBgKostenartID = BKA.BgKostenartID
+  LEFT  JOIN BgPosition            POS WITH(READUNCOMMITTED) ON POS.BgPositionID      = KBP.BgPositionID
+  LEFT  JOIN KbBuchungKostenart    KOA WITH(READUNCOMMITTED) ON KOA.BgPositionID      = POS.BgPositionID
+  LEFT  JOIN KbBuchung             BUC WITH(READUNCOMMITTED) ON BUC.KbBuchungID       = KOA.KbBuchungID			
+  LEFT  JOIN BgBudget              BUD WITH(READUNCOMMITTED) ON BUD.BgBudgetID        = KBB.BgBudgetID
+  LEFT  JOIN FaLeistung            LEI WITH(READUNCOMMITTED) ON LEI.FaLeistungID      = KBB.FaLeistungID
+  LEFT  JOIN XLOVCode              MON WITH(READUNCOMMITTED) ON MON.LOVName = 'Monat' AND MON.Code = BUD.Monat
+GROUP BY 
+  KBB.KbBuchungBruttoID,
+  BKA.BgKostenartID,
+  KBB.KbBuchungstatusCode,
+  KBB.Quoting,
+  KBB.Kostenstelle,
+  KBB.Abgetreten,
+  KBB.Hauptvorgang,
+  KBB.Teilvorgang,
+  BKA.Hauptvorgang,
+  BKA.Teilvorgang,
+  BKA.HauptvorgangAbtretung,
+  BKA.TeilvorgangAbtretung,  
+  KBB.Belegart,
+  KBB.Weiterverrechenbar,
+  KBB.FaLeistungID,
+  KBB.BelegNr,
+  KBB.Text,
+  KBB.Betrag,
+  KBB.BgSplittingArtCode,
+  KBB.ValutaDatum,
+  KBB.BgBudgetID,
+  KBB.BelegDatum,
+  LEI.FaFallID,
+  LEI.FaFallID,
+  MON.ShortText,
+  BUD.Jahr,
+  BUD.BgFinanzplanID,
+  BKA.KontoNr + ' ' + BKA.Name,
+  LEI.BaPersonID,
+  BKA.KontoNr,
+  KBB.PscdKennzeichen,
+  KBB.Betrag  
+
+
+
+SELECT DISTINCT 
+KBP.KbBuchungBruttoID, 
+PRS.BaPersonID,
+Person = PRS.NameVorname + ' (' + convert(varchar,PRS.BaPersonID) + ')',
+KBP.Schuldner_BaInstitutionID,
+KBP.Schuldner_BaPersonID,
+KBP.Buchungstext, 
+KBP.Betrag,
+KBP.VerwPeriodeVon, 
+KBP.VerwPeriodeBis, 
+KBP.PositionImBeleg,
+KBP.SpezBgKostenartID,
+KBP.SpezHauptvorgang,
+KBP.SpezTeilvorgang,
+KBP.GesperrtFuerWV,
+KBP.Zinsperiode 
+FROM @KopfBuchung TEMP
+  INNER JOIN KbBuchungBrutto    KBB WITH(READUNCOMMITTED) ON KBB.KbBuchungBruttoID = TEMP.KbBuchungBruttoID
+  INNER JOIN KbBuchungBruttoPerson KBP WITH(READUNCOMMITTED) ON KBP.KbBuchungBruttoID = KBB.KbBuchungBruttoID
+  INNER JOIN vwPerson           PRS WITH(READUNCOMMITTED) ON PRS.BaPersonID        = KBP.BaPersonID
+  LEFT  JOIN FaLeistung         LEI WITH(READUNCOMMITTED) ON LEI.FaLeistungID      = KBB.FaLeistungID
+  LEFT  JOIN BgPosition         POS WITH(READUNCOMMITTED) ON POS.BgPositionID      = KBP.BgPositionID
+  LEFT  JOIN KbBuchungKostenart KOA WITH(READUNCOMMITTED) ON KOA.BgPositionID      = POS.BgPositionID
+  LEFT  JOIN KbBuchung          BUC WITH(READUNCOMMITTED) ON BUC.KbBuchungID       = KOA.KbBuchungID</value>
+  </data>
+  <data name="edtSucheValutaDatumBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtSucheValutaDatumVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <metadata name="qryQuoting.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>240, 23</value>
+  </metadata>
+</root>

@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0799AC59-F06B-4AC0-A16A-E040B3534357}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KiSS4.FAMOZ</RootNamespace>
+    <AssemblyName>KiSS4.FAMOZ</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/KiSS4.FAMOZ/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <SignAssembly>false</SignAssembly>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Build\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <SignAssembly>false</SignAssembly>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SharpLibrary, Version=1.4.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlphaService\AlphaService.cs" />
+    <Compile Include="CtlOmegaImportIPV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlAlphaLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlIbanGenerieren.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlPscdKorrekturPerson.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlPscdLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrmOmegaSchnittstelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PSCDServices\PSCDInterface.cs" />
+    <Compile Include="VIS\CtlVISMandat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIS\CtlVISMandat.Designer.cs">
+      <DependentUpon>CtlVISMandat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIS\CtlVisMassnahme.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VIS\CtlVisMassnahme.Designer.cs">
+      <DependentUpon>CtlVisMassnahme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIS\DlgVISNeueMassnahme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIS\DlgVISNeueMassnahme.Designer.cs">
+      <DependentUpon>DlgVISNeueMassnahme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIS\UtilsVIS.cs" />
+    <Compile Include="Web References\AlphaWebReference\AlphaSvc.cs" />
+    <Compile Include="Web References\NotificationSvc.cs" />
+    <Compile Include="Web References\PSCDSvcWebReference\PSCDSvc.cs">
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Web References\WorkerProcess\WorkerProcessSvc.cs" />
+    <Compile Include="WorkerProcess\WorkerProcessHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="C:\wsdl\KiSSSvc\AlphaSvc.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\AlphaWebReference\</RelPath>
+      <UpdateFromURL>C:\wsdl\KiSSSvc\AlphaSvc.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>FAMOZ_AlphaService_AlphaWebReference_AlphaSvc</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="C:\wsdl\KiSSSvc\PscdSvc.wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PSCDSvcWebReference\</RelPath>
+      <UpdateFromURL>C:\wsdl\KiSSSvc\PscdSvc.wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>KiSS4_FAMOZ_PSCDSvcWebReference_PSCDSvc</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:2331/WorkerProcess.asmx%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WorkerProcess\</RelPath>
+      <UpdateFromURL>http://localhost:2331/WorkerProcess.asmx%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>KiSS4_FAMOZ_WorkerProcess_WorkerProcessSvc</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="GenerateWebserviceProxies.bat" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\AlphaWebReference\AlphaSvc.wsdl" />
+    <None Include="Web References\PscdNotification.wsdl" />
+    <None Include="Web References\PSCDSvcWebReference\PSCDSvc.wsdl" />
+    <None Include="Web References\WorkerProcess\WorkerProcess.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KiSS.AssemblyInfo\BIAG.AssemblyInfo.csproj">
+      <Project>{C3A41F2E-FBF1-4628-8F6A-764A22252624}</Project>
+      <Name>BIAG.AssemblyInfo</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.BusinessLogic\Kiss.BusinessLogic.csproj">
+      <Project>{E70D5BFA-19A7-49CD-9C71-3DB46C8B111C}</Project>
+      <Name>Kiss.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.DbContext\Kiss.DbContext.csproj">
+      <Project>{A9733EC8-89E0-44A6-941D-A71868778675}</Project>
+      <Name>Kiss.DbContext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Infrastructure\Kiss.Infrastructure.csproj">
+      <Project>{94D23DEF-0BEC-4EAC-B6A8-A2AB6B3A0CF1}</Project>
+      <Name>Kiss.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Interfaces\Kiss.Interfaces.csproj">
+      <Project>{936877A8-EC00-4267-8C62-344062912497}</Project>
+      <Name>Kiss.Interfaces</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Common\KiSS4.Common.csproj">
+      <Project>{B9295AD3-0104-4E8D-88E6-14B4D2EDD647}</Project>
+      <Name>KiSS4.Common</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.DB\KiSS4.DB.csproj">
+      <Project>{94EF0808-6193-443F-ACE3-A54ABC4BDE8D}</Project>
+      <Name>KiSS4.DB</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Dokument\KiSS4.Dokument.csproj">
+      <Project>{25932622-2762-49B9-9FF6-60B623E28111}</Project>
+      <Name>KiSS4.Dokument</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Gui\KiSS4.Gui.csproj">
+      <Project>{9AB1DBC3-F48B-4CE0-A557-4D3B46149A98}</Project>
+      <Name>KiSS4.Gui</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CtlOmegaImportIPV.resx">
+      <DependentUpon>CtlOmegaImportIPV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlAlphaLog.resx">
+      <DependentUpon>CtlAlphaLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlIbanGenerieren.resx">
+      <DependentUpon>CtlIbanGenerieren.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlPscdKorrekturPerson.resx">
+      <DependentUpon>CtlPscdKorrekturPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlPscdLog.resx">
+      <DependentUpon>CtlPscdLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="VIS\CtlVISMandat.resx">
+      <DependentUpon>CtlVISMandat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIS\CtlVisMassnahme.resx">
+      <DependentUpon>CtlVisMassnahme.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIS\DlgVISNeueMassnahme.resx">
+      <DependentUpon>DlgVISNeueMassnahme.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

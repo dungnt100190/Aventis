@@ -1,0 +1,785 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{464BCE14-6362-46E4-B63D-D8EACCBA5AAA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KiSS4.Arbeit</RootNamespace>
+    <AssemblyName>KiSS4.Arbeit</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/KiSS4.Arbeit/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <SignAssembly>false</SignAssembly>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Build\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <SignAssembly>false</SignAssembly>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SharpLibrary, Version=1.4.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CtlKaAusbildung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaAusbildung.Designer.cs">
+      <DependentUpon>CtlKaAusbildung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaEafAustritt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaEafAustritt.Designer.cs">
+      <DependentUpon>CtlKaEafAustritt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaEafSpezifischeErmittlung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaEafSpezifischeErmittlung.Designer.cs">
+      <DependentUpon>CtlKaEafSpezifischeErmittlung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaModulTree.Designer.cs">
+      <DependentUpon>CtlKaModulTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaProzessAK.Designer.cs">
+      <DependentUpon>CtlKaProzessAK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaProzessEaf.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaAbklaerungVertieft.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaAbklaerungVertieft.Designer.cs">
+      <DependentUpon>CtlKaAbklaerungVertieft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaAbklaerungIntake.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaAbklaerungIntake.Designer.cs">
+      <DependentUpon>CtlKaAbklaerungIntake.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaEafSozioberuflicheBilanz.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaEafSozioberuflicheBilanz.Designer.cs">
+      <DependentUpon>CtlKaEafSozioberuflicheBilanz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaProzessEaf.Designer.cs">
+      <DependentUpon>CtlKaProzessEaf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaProzessJobtimal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaProzessJobtimal.Designer.cs">
+      <DependentUpon>CtlKaProzessJobtimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaQEJobtimum.Designer.cs">
+      <DependentUpon>CtlKaQEJobtimum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaQJIntake.Designer.cs">
+      <DependentUpon>CtlKaQJIntake.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaQJProzess.Designer.cs">
+      <DependentUpon>CtlKaQJProzess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaQJPZBerichte.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaQJPZBerichte.designer.cs">
+      <DependentUpon>CtlKaQJPZBerichte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaQJPZZielvereinbarung.designer.cs">
+      <DependentUpon>CtlKaQJPZZielvereinbarung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaTransfer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaTransfer.designer.cs">
+      <DependentUpon>CtlKaTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaTransferProzess.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaTransferProzess.designer.cs">
+      <DependentUpon>CtlKaTransferProzess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaAssistenz.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaAssistenz.Designer.cs">
+      <DependentUpon>CtlKaAssistenz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaAKPhasen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaAKPhasen.Designer.cs">
+      <DependentUpon>CtlKaAKPhasen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaAKZuweiser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaAKZuweiser.Designer.cs">
+      <DependentUpon>CtlKaAKZuweiser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaAnweisung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaAnweisung.Designer.cs">
+      <DependentUpon>CtlKaAnweisung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaBetriebe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaBetriebe.Designer.cs">
+      <DependentUpon>CtlKaBetriebe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaEinsatzplaetze.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaEinsatzplaetzeDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaExterneBildung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaExterneBildung.Designer.cs">
+      <DependentUpon>CtlKaExterneBildung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaInizioEinsaetze.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaInizioUebersicht.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaInizioVermittlungsprofil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaIntegBildung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaIntegBildung.Designer.cs">
+      <DependentUpon>CtlKaIntegBildung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaLehrberufe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CtlKaModulTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaPraesenzAllgemein.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaProzess.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaProzessAK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaProzessAS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaProzessBIBIP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaProzessInizio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaProzessQE.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaProzessQJ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaProzessSI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaQEEPQ.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaQEEPQ.designer.cs">
+      <DependentUpon>CtlKaQEEPQ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaQEJobtimum.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaQJBildung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaQJBildung.Designer.cs">
+      <DependentUpon>CtlKaQJBildung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaQJExtern.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaQJExterneEinsaetze.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaQJExternVermittlungsprofil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaQJIntake.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaQJProzess.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaQJPZAssessment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaQJPZAssessment.Designer.cs">
+      <DependentUpon>CtlKaQJPZAssessment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaQJPZSchlussbericht.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaQJPZZielvereinbarung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaQJUebersicht.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaQJVereinbarung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaVerlauf.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaVerlauf.Designer.cs">
+      <DependentUpon>CtlKaVerlauf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaVermittlungBIBIPEinsaetzeBIP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaKontaktartProzess.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaKontaktartProzess.Designer.cs">
+      <DependentUpon>CtlKaKontaktartProzess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaVermittlungBIBIPStellenBI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaVermittlungBIBIPUebersicht.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaVermittlungBIBIPUebersicht.Designer.cs">
+      <DependentUpon>CtlKaVermittlungBIBIPUebersicht.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaVermittlungBIBIPVermittlungsprofil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaVermittlungEinsatzplatzSuchen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaVermittlungKandidatenSuchen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaVermittlungResultatVorschlag.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaVermittlungJobtimalEinsaetze.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaVermittlungJobtimalEinsaetze.Designer.cs">
+      <DependentUpon>CtlKaVermittlungJobtimalEinsaetze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaVermittlungSIEinsaetze.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaVermittlungSIEinsaetze.Designer.cs">
+      <DependentUpon>CtlKaVermittlungSIEinsaetze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaJobtimalUebersicht.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaJobtimalUebersicht.Designer.cs">
+      <DependentUpon>CtlKaJobtimalUebersicht.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaVermittlungSIUebersicht.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaVermittlungSIUebersicht.Designer.cs">
+      <DependentUpon>CtlKaVermittlungSIUebersicht.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaVermittlungSIVermittlungsprofil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlKaVermittlungSIVermittlungsprofil.Designer.cs">
+      <DependentUpon>CtlKaVermittlungSIVermittlungsprofil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlKaZuteilFachbereich.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrmKaAMMBescheinigung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKaEinsatzorte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKaEinsatzplatz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKaKurs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKaPraesenzzeit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKaPraesenzzeit.Designer.cs">
+      <DependentUpon>FrmKaPraesenzzeit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKaSequenzen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKaKurserfassung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKurserfassung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRavBerater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KaUtil.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KiSS.AssemblyInfo\BIAG.AssemblyInfo.csproj">
+      <Project>{C3A41F2E-FBF1-4628-8F6A-764A22252624}</Project>
+      <Name>BIAG.AssemblyInfo</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS.DBScheme\KiSS.DBScheme.csproj">
+      <Project>{48E78A43-B4AD-4426-9422-8ABB846CC345}</Project>
+      <Name>KiSS.DBScheme</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Infrastructure\Kiss.Infrastructure.csproj">
+      <Project>{94D23DEF-0BEC-4EAC-B6A8-A2AB6B3A0CF1}</Project>
+      <Name>Kiss.Infrastructure</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Interfaces\Kiss.Interfaces.csproj">
+      <Project>{936877A8-EC00-4267-8C62-344062912497}</Project>
+      <Name>Kiss.Interfaces</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.UserInterface.ViewModel\Kiss.UserInterface.ViewModel.csproj">
+      <Project>{9DA4AA23-AD46-4FF7-9909-8D4EB864D2B8}</Project>
+      <Name>Kiss.UserInterface.ViewModel</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Common\KiSS4.Common.csproj">
+      <Project>{B9295AD3-0104-4E8D-88E6-14B4D2EDD647}</Project>
+      <Name>KiSS4.Common</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.DB\KiSS4.DB.csproj">
+      <Project>{94EF0808-6193-443F-ACE3-A54ABC4BDE8D}</Project>
+      <Name>KiSS4.DB</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Dokument\KiSS4.Dokument.csproj">
+      <Project>{25932622-2762-49B9-9FF6-60B623E28111}</Project>
+      <Name>KiSS4.Dokument</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Gui\KiSS4.Gui.csproj">
+      <Project>{9AB1DBC3-F48B-4CE0-A557-4D3B46149A98}</Project>
+      <Name>KiSS4.Gui</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Query\KiSS4.Query.csproj">
+      <Project>{2F1CC8CB-5482-4FE4-AC8F-F766266B95E7}</Project>
+      <Name>KiSS4.Query</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CtlKaAusbildung.resx">
+      <DependentUpon>CtlKaAusbildung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaEafAustritt.resx">
+      <DependentUpon>CtlKaEafAustritt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaEafSpezifischeErmittlung.resx">
+      <DependentUpon>CtlKaEafSpezifischeErmittlung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaProzessEaf.resx">
+      <DependentUpon>CtlKaProzessEaf.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaAbklaerungVertieft.resx">
+      <DependentUpon>CtlKaAbklaerungVertieft.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaAbklaerungIntake.resx">
+      <DependentUpon>CtlKaAbklaerungIntake.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaEafSozioberuflicheBilanz.resx">
+      <DependentUpon>CtlKaEafSozioberuflicheBilanz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaProzessJobtimal.resx">
+      <DependentUpon>CtlKaProzessJobtimal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaQJPZBerichte.resx">
+      <DependentUpon>CtlKaQJPZBerichte.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaTransfer.resx">
+      <DependentUpon>CtlKaTransfer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaTransferProzess.resx">
+      <DependentUpon>CtlKaTransferProzess.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaAssistenz.resx">
+      <DependentUpon>CtlKaAssistenz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaAKPhasen.resx">
+      <DependentUpon>CtlKaAKPhasen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaAKZuweiser.resx">
+      <DependentUpon>CtlKaAKZuweiser.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaAnweisung.resx">
+      <DependentUpon>CtlKaAnweisung.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaBetriebe.resx">
+      <DependentUpon>CtlKaBetriebe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaEinsatzplaetze.resx">
+      <DependentUpon>CtlKaEinsatzplaetze.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaEinsatzplaetzeDetail.resx">
+      <DependentUpon>CtlKaEinsatzplaetzeDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaExterneBildung.resx">
+      <DependentUpon>CtlKaExterneBildung.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaInizioEinsaetze.resx">
+      <DependentUpon>CtlKaInizioEinsaetze.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaInizioUebersicht.resx">
+      <DependentUpon>CtlKaInizioUebersicht.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaInizioVermittlungsprofil.resx">
+      <DependentUpon>CtlKaInizioVermittlungsprofil.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaIntegBildung.resx">
+      <DependentUpon>CtlKaIntegBildung.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaLehrberufe.resx">
+      <DependentUpon>CtlKaLehrberufe.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaModulTree.resx">
+      <DependentUpon>CtlKaModulTree.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaPraesenzAllgemein.resx">
+      <DependentUpon>CtlKaPraesenzAllgemein.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaProzess.resx">
+      <DependentUpon>CtlKaProzess.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaProzessAK.resx">
+      <DependentUpon>CtlKaProzessAK.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaProzessAS.resx">
+      <DependentUpon>CtlKaProzessAS.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaProzessBIBIP.resx">
+      <DependentUpon>CtlKaProzessBIBIP.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaProzessInizio.resx">
+      <DependentUpon>CtlKaProzessInizio.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaProzessQE.resx">
+      <DependentUpon>CtlKaProzessQE.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaProzessQJ.resx">
+      <DependentUpon>CtlKaProzessQJ.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaProzessSI.resx">
+      <DependentUpon>CtlKaProzessSI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaQEEPQ.resx">
+      <DependentUpon>CtlKaQEEPQ.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaQEJobtimum.resx">
+      <DependentUpon>CtlKaQEJobtimum.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaQJBildung.resx">
+      <DependentUpon>CtlKaQJBildung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaQJExtern.resx">
+      <DependentUpon>CtlKaQJExtern.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaQJExterneEinsaetze.resx">
+      <DependentUpon>CtlKaQJExterneEinsaetze.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaQJExternVermittlungsprofil.resx">
+      <DependentUpon>CtlKaQJExternVermittlungsprofil.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaQJIntake.resx">
+      <DependentUpon>CtlKaQJIntake.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaQJProzess.resx">
+      <DependentUpon>CtlKaQJProzess.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaQJPZAssessment.resx">
+      <DependentUpon>CtlKaQJPZAssessment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaQJPZSchlussbericht.resx">
+      <DependentUpon>CtlKaQJPZSchlussbericht.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaQJPZZielvereinbarung.resx">
+      <DependentUpon>CtlKaQJPZZielvereinbarung.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaQJUebersicht.resx">
+      <DependentUpon>CtlKaQJUebersicht.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaQJVereinbarung.resx">
+      <DependentUpon>CtlKaQJVereinbarung.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaVerlauf.resx">
+      <DependentUpon>CtlKaVerlauf.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaVermittlungBIBIPEinsaetzeBIP.resx">
+      <DependentUpon>CtlKaVermittlungBIBIPEinsaetzeBIP.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaKontaktartProzess.resx">
+      <DependentUpon>CtlKaKontaktartProzess.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaVermittlungBIBIPStellenBI.resx">
+      <DependentUpon>CtlKaVermittlungBIBIPStellenBI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaVermittlungBIBIPUebersicht.resx">
+      <DependentUpon>CtlKaVermittlungBIBIPUebersicht.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaVermittlungBIBIPVermittlungsprofil.resx">
+      <DependentUpon>CtlKaVermittlungBIBIPVermittlungsprofil.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaVermittlungEinsatzplatzSuchen.resx">
+      <DependentUpon>CtlKaVermittlungEinsatzplatzSuchen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaVermittlungKandidatenSuchen.resx">
+      <DependentUpon>CtlKaVermittlungKandidatenSuchen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaVermittlungResultatVorschlag.resx">
+      <DependentUpon>CtlKaVermittlungResultatVorschlag.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaVermittlungJobtimalEinsaetze.resx">
+      <DependentUpon>CtlKaVermittlungJobtimalEinsaetze.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaVermittlungSIEinsaetze.resx">
+      <DependentUpon>CtlKaVermittlungSIEinsaetze.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaJobtimalUebersicht.resx">
+      <DependentUpon>CtlKaJobtimalUebersicht.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaVermittlungSIUebersicht.resx">
+      <DependentUpon>CtlKaVermittlungSIUebersicht.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaVermittlungSIVermittlungsprofil.resx">
+      <DependentUpon>CtlKaVermittlungSIVermittlungsprofil.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlKaZuteilFachbereich.resx">
+      <DependentUpon>CtlKaZuteilFachbereich.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKaAMMBescheinigung.resx">
+      <DependentUpon>FrmKaAMMBescheinigung.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKaEinsatzplatz.resx">
+      <DependentUpon>FrmKaEinsatzplatz.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKaKurs.resx">
+      <DependentUpon>FrmKaKurs.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKaPraesenzzeit.resx">
+      <DependentUpon>FrmKaPraesenzzeit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKaSequenzen.resx">
+      <DependentUpon>FrmKaSequenzen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKaKurserfassung.resx">
+      <DependentUpon>FrmKaKurserfassung.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKurserfassung.resx">
+      <DependentUpon>FrmKurserfassung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRavBerater.resx">
+      <DependentUpon>FrmRavBerater.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

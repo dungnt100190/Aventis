@@ -1,0 +1,677 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build;BeforeBuild" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BBE176A4-B003-4643-B333-DAF32310BDF8}</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>KiSS4</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KiSS4.Main</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>KiSS4.Main.Program</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/KiSS4/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\Build\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+    <SignAssembly>false</SignAssembly>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\Build\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <SignAssembly>false</SignAssembly>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SharpLibrary, Version=1.4.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Windows.Presentation" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.XML" />
+    <ProjectReference Include="..\KiSS.AssemblyInfo\BIAG.AssemblyInfo.csproj">
+      <Project>{C3A41F2E-FBF1-4628-8F6A-764A22252624}</Project>
+      <Name>BIAG.AssemblyInfo</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.BL\Kiss.BL.csproj">
+      <Project>{317D103A-9D9E-4A5B-B08F-1E9B6BEEEC0E}</Project>
+      <Name>Kiss.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.BusinessLogic\Kiss.BusinessLogic.csproj">
+      <Project>{E70D5BFA-19A7-49CD-9C71-3DB46C8B111C}</Project>
+      <Name>Kiss.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS.Context\KiSS.Context.csproj">
+      <Project>{D61829DC-4863-4740-B27F-B253A5F4FFC6}</Project>
+      <Name>KiSS.Context</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.DbContext\Kiss.DbContext.csproj">
+      <Project>{A9733EC8-89E0-44A6-941D-A71868778675}</Project>
+      <Name>Kiss.DbContext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS.DBScheme\KiSS.DBScheme.csproj">
+      <Project>{48E78A43-B4AD-4426-9422-8ABB846CC345}</Project>
+      <Name>KiSS.DBScheme</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Edmx\Kiss.Edmx.csproj">
+      <Project>{DF19F1BA-0582-4EAB-8613-C010F5D802DC}</Project>
+      <Name>Kiss.Edmx</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Infrastructure\Kiss.Infrastructure.csproj">
+      <Project>{94D23DEF-0BEC-4EAC-B6A8-A2AB6B3A0CF1}</Project>
+      <Name>Kiss.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Interfaces\Kiss.Interfaces.csproj">
+      <Project>{936877A8-EC00-4267-8C62-344062912497}</Project>
+      <Name>Kiss.Interfaces</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Model\Kiss.Model.csproj">
+      <Project>{9EDABB4F-E42D-4791-9798-4581D35B19CC}</Project>
+      <Name>Kiss.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.UI.Controls\Kiss.UI.Controls.csproj">
+      <Project>{359FD7B4-D75A-45D4-AB77-8EBDDE41F339}</Project>
+      <Name>Kiss.UI.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.UI.View\Kiss.UI.View.csproj">
+      <Project>{9347E873-4E80-4EA1-AFBD-3EAFAE93FC53}</Project>
+      <Name>Kiss.UI.View</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Update\Kiss.Update.csproj">
+      <Project>{584F086A-42B6-4FD8-A19A-179D1AE5F204}</Project>
+      <Name>Kiss.Update</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.UserInterface.ViewModel\Kiss.UserInterface.ViewModel.csproj">
+      <Project>{9DA4AA23-AD46-4FF7-9909-8D4EB864D2B8}</Project>
+      <Name>Kiss.UserInterface.ViewModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.UserInterface.View\Kiss.UserInterface.View.csproj">
+      <Project>{B33FEDB0-6887-4B90-9093-8A23853CCDA4}</Project>
+      <Name>Kiss.UserInterface.View</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Administration\KiSS4.Administration.csproj">
+      <Name>KiSS4.Administration</Name>
+      <Project>{D2F0BB83-CA58-45C7-8786-7D9EB2437B6F}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Common\KiSS4.Common.csproj">
+      <Name>KiSS4.Common</Name>
+      <Project>{B9295AD3-0104-4E8D-88E6-14B4D2EDD647}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.DB\KiSS4.DB.csproj">
+      <Name>KiSS4.DB</Name>
+      <Project>{94EF0808-6193-443F-ACE3-A54ABC4BDE8D}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.DesignerHost\KiSS4.DesignerHost.csproj">
+      <Project>{DBA71C88-487E-4423-93A2-FC38657E7EDC}</Project>
+      <Name>KiSS4.DesignerHost</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Dokument\KiSS4.Dokument.csproj">
+      <Project>{25932622-2762-49B9-9FF6-60B623E28111}</Project>
+      <Name>KiSS4.Dokument</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.FAMOZ\KiSS4.FAMOZ.csproj">
+      <Project>{0799AC59-F06B-4AC0-A16A-E040B3534357}</Project>
+      <Name>KiSS4.FAMOZ</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Favoriten\KiSS4.Favoriten.csproj">
+      <Project>{586B9806-3F4A-4357-A49F-F3E0E65DA980}</Project>
+      <Name>KiSS4.Favoriten</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Gui\KiSS4.Gui.csproj">
+      <Name>KiSS4.Gui</Name>
+      <Project>{9AB1DBC3-F48B-4CE0-A557-4D3B46149A98}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Query\KiSS4.Query.csproj">
+      <Name>KiSS4.Query</Name>
+      <Project>{2F1CC8CB-5482-4FE4-AC8F-F766266B95E7}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Schnittstellen\KiSS4.Schnittstellen.csproj">
+      <Project>{2C441842-BFFD-4C69-A215-6246BAB83462}</Project>
+      <Name>KiSS4.Schnittstellen</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmFallNavigator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFallNavigator.Designer.cs">
+      <DependentUpon>FrmFallNavigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manuals\FrmManualKes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manuals\FrmManualKes.Designer.cs">
+      <DependentUpon>FrmManualKes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PI\CtlFallNavigator.Designer.cs">
+      <DependentUpon>CtlFallNavigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PI\FrmFallNavigator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PI\FrmFallNavigator.Designer.cs">
+      <DependentUpon>FrmFallNavigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZH\CtlSuchePerson.Designer.cs">
+      <DependentUpon>CtlSuchePerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZH\DlgErfassungPerson.Designer.cs">
+      <DependentUpon>DlgErfassungPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZH\CtlFallNavigator.Designer.cs">
+      <DependentUpon>CtlFallNavigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZH\FrmFallNavigator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZH\FrmFallNavigator.Designer.cs">
+      <DependentUpon>FrmFallNavigator.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ZH\FrmFallNavigator.resx">
+      <DependentUpon>FrmFallNavigator.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App.ico" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Arguments.cs" />
+    <Compile Include="BSS\CtlSuchePerson.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BSS\CtlSuchePerson.Designer.cs">
+      <DependentUpon>CtlSuchePerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlFall.Designer.cs">
+      <DependentUpon>CtlFall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgNeuerFall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgNeuerFall.Designer.cs">
+      <DependentUpon>DlgNeuerFall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlSuchePerson.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlSuchePerson.Designer.cs">
+      <DependentUpon>CtlSuchePerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgAbout.Designer.cs">
+      <DependentUpon>DlgAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgErfassungPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgErfassungPerson.Designer.cs">
+      <DependentUpon>DlgErfassungPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FallTabTag.cs" />
+    <Compile Include="FrmFall.Designer.cs">
+      <DependentUpon>FrmFall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlFallNavigator.Designer.cs">
+      <DependentUpon>CtlFallNavigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\AvailableAssembly.cs" />
+    <Compile Include="Helper\LinkHelper.cs" />
+    <Compile Include="Helper\LoadedModule.cs" />
+    <Compile Include="Helper\OfficeVersion.cs" />
+    <Compile Include="Helper\FileEntry.cs" />
+    <Compile Include="Helper\SortableBindingList.cs" />
+    <Compile Include="Helper\SortComparer.cs" />
+    <Compile Include="ISuchePerson.cs" />
+    <Compile Include="KissSearchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KissSearchDialog.Designer.cs">
+      <DependentUpon>KissSearchDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogConfigurator.cs" />
+    <Compile Include="Manuals\FrmManualPendenzenverwaltung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manuals\FrmManualPendenzenverwaltung.Designer.cs">
+      <DependentUpon>FrmManualPendenzenverwaltung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manuals\FrmManualFallsteuerung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manuals\FrmManualFallsteuerung.Designer.cs">
+      <DependentUpon>FrmManualFallsteuerung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manuals\FrmManualBenutzerrechte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manuals\FrmManualBenutzerrechte.Designer.cs">
+      <DependentUpon>FrmManualBenutzerrechte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manuals\FrmManualAllgemein.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manuals\FrmManualAllgemein.Designer.cs">
+      <DependentUpon>FrmManualAllgemein.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manuals\FrmManualSostat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manuals\FrmManualSostat.Designer.cs">
+      <DependentUpon>FrmManualSostat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manuals\FrmManualKlibu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manuals\FrmManualKlibu.Designer.cs">
+      <DependentUpon>FrmManualKlibu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manuals\FrmManualInkasso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manuals\FrmManualInkasso.Designer.cs">
+      <DependentUpon>FrmManualInkasso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manuals\FrmManualFibu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manuals\FrmManualFibu.Designer.cs">
+      <DependentUpon>FrmManualFibu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manuals\FrmManualSozialhilfe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manuals\FrmManualSozialhilfe.Designer.cs">
+      <DependentUpon>FrmManualSozialhilfe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manuals\FrmManualSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manuals\FrmManualSystem.Designer.cs">
+      <DependentUpon>FrmManualSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manuals\ManualBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manuals\ManualBaseForm.Designer.cs">
+      <DependentUpon>ManualBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PI\CtlFall.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PI\CtlFall.Designer.cs">
+      <DependentUpon>CtlFall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PI\DlgGeheZu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PI\DlgNeuerFall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PI\FrmFall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PI\FrmFall.Designer.cs">
+      <DependentUpon>FrmFall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PI\CtlFallNavigator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PI\FrmHelpFileOpenerBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PI\FrmHelpFileOpenerKiss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CtlFall.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DlgGeheZu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CtlFallNavigator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SingleInstanceApplication.cs" />
+    <Compile Include="ZH\CtlFall.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlSuchePerson.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\DlgErfassungPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZH\DlgGeheZu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZH\DlgHyperlinkAufruf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZH\DlgNeuerFall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZH\FrmFall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlFallNavigator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="BSS\CtlSuchePerson.resx">
+      <DependentUpon>CtlSuchePerson.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgNeuerFall.resx">
+      <DependentUpon>DlgNeuerFall.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlFall.resx">
+      <DependentUpon>CtlFall.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlSuchePerson.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CtlSuchePerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgAbout.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgErfassungPerson.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgErfassungPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgGeheZu.resx">
+      <DependentUpon>DlgGeheZu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFall.resx">
+      <DependentUpon>FrmFall.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlFallNavigator.resx">
+      <DependentUpon>CtlFallNavigator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFallNavigator.resx">
+      <DependentUpon>FrmFallNavigator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.de.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KissSearchDialog.resx">
+      <DependentUpon>KissSearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manuals\ManualBaseForm.resx">
+      <DependentUpon>ManualBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PI\CtlFall.resx">
+      <DependentUpon>CtlFall.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PI\DlgGeheZu.resx">
+      <DependentUpon>DlgGeheZu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PI\DlgNeuerFall.resx">
+      <DependentUpon>DlgNeuerFall.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PI\CtlFallNavigator.resx">
+      <DependentUpon>CtlFallNavigator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PI\FrmFallNavigator.resx">
+      <DependentUpon>FrmFallNavigator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlFall.resx">
+      <DependentUpon>CtlFall.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlSuchePerson.resx">
+      <DependentUpon>CtlSuchePerson.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\DlgErfassungPerson.resx">
+      <DependentUpon>DlgErfassungPerson.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\DlgNeuerFall.resx">
+      <DependentUpon>DlgNeuerFall.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\FrmFall.resx">
+      <DependentUpon>FrmFall.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlFallNavigator.resx">
+      <DependentUpon>CtlFallNavigator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\FilterDelete.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+  </PropertyGroup>
+</Project>

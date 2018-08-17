@@ -1,0 +1,1737 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:act="http://www.abacus.ch/abaconnect/2007.10/core/AbaConnectTypes" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:fibuclassificationtypes="http://www.abacus.ch/abaconnect/2011.00/fibu/FibuClassificationTypes" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.abacus.ch/abaconnect/2011.00/fibu/FibuClassificationTypes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="AbaConnectTypes.xsd" namespace="http://www.abacus.ch/abaconnect/2007.10/core/AbaConnectTypes" />
+  <xs:import schemaLocation="xmlmime.xsd" namespace="http://www.w3.org/2005/05/xmlmime" />
+  <xs:element name="FibuClassificationAbaDefaultWS" type="fibuclassificationtypes:FibuClassificationAbaDefaultWSType">
+    <xs:annotation>
+      <xs:documentation>FibuClassification-Classification: </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="FibuClassificationAbaDefaultWSType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Element" type="fibuclassificationtypes:ElementComType" />
+      <xs:element minOccurs="0" name="AdditionalData" type="act:ObjectDataType" />
+      <xs:element minOccurs="0" name="Attachment" type="fibuclassificationtypes:AttachmentType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ElementComType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Header" type="fibuclassificationtypes:HeaderComType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Classification" type="fibuclassificationtypes:ClassificationComType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClassificationElement" type="fibuclassificationtypes:ClassificationElementComType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AccountElement" type="fibuclassificationtypes:AccountElementComType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CostCentreElement" type="fibuclassificationtypes:CostCentreElementComType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PrintAttributes" type="fibuclassificationtypes:PrintAttributesComType" />
+    </xs:sequence>
+    <xs:attribute name="mode" type="fibuclassificationtypes:ModeSimType" use="optional" />
+  </xs:complexType>
+  <xs:simpleType name="ModeSimType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="SAVE" />
+      <xs:pattern value="INSERT" />
+      <xs:pattern value="UPDATE" />
+      <xs:pattern value="READ" />
+      <xs:pattern value="DELETE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="HeaderComType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Plan" type="fibuclassificationtypes:PlanSimType">
+        <xs:annotation>
+          <xs:documentation>Plan</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Variant" type="fibuclassificationtypes:VariantSimType">
+        <xs:annotation>
+          <xs:documentation>Variant</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Level" type="fibuclassificationtypes:LevelSimType">
+        <xs:annotation>
+          <xs:documentation>Level</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Identification" type="fibuclassificationtypes:IdentificationSimType">
+        <xs:annotation>
+          <xs:documentation>Identification</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Type" type="fibuclassificationtypes:TypeSimType">
+        <xs:annotation>
+          <xs:documentation>Type</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Name" type="fibuclassificationtypes:NameSimType">
+        <xs:annotation>
+          <xs:documentation>Name</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Levels" type="fibuclassificationtypes:LevelsSimType">
+        <xs:annotation>
+          <xs:documentation>Levels</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ReportForm" type="fibuclassificationtypes:ReportFormSimType">
+        <xs:annotation>
+          <xs:documentation>Report form</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Totalisators" type="fibuclassificationtypes:TotalisatorsSimType">
+        <xs:annotation>
+          <xs:documentation>Totalisators</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Name2" type="fibuclassificationtypes:Name2SimType">
+        <xs:annotation>
+          <xs:documentation>Name 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Number2" type="fibuclassificationtypes:Number2SimType">
+        <xs:annotation>
+          <xs:documentation>Number 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Language" type="fibuclassificationtypes:LanguageSimType">
+        <xs:annotation>
+          <xs:documentation>Language</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Enterprise" type="fibuclassificationtypes:EnterpriseSimType">
+        <xs:annotation>
+          <xs:documentation>Enterprise</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="mode" type="fibuclassificationtypes:ModeSimType" use="optional" />
+  </xs:complexType>
+  <xs:simpleType name="PlanSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="VariantSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LevelSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="IdentificationSimType">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="13" />
+      <xs:fractionDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TypeSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NameSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LevelsSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ReportFormSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TotalisatorsSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="80" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Name2SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Number2SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="40" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LanguageSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EnterpriseSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="6" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ClassificationComType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Plan" type="fibuclassificationtypes:PlanSimType1">
+        <xs:annotation>
+          <xs:documentation>Plan</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Variant" type="fibuclassificationtypes:VariantSimType1">
+        <xs:annotation>
+          <xs:documentation>Variant</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Level" type="fibuclassificationtypes:LevelSimType1">
+        <xs:annotation>
+          <xs:documentation>Level</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Identification" type="fibuclassificationtypes:IdentificationSimType1">
+        <xs:annotation>
+          <xs:documentation>Identification</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Type" type="fibuclassificationtypes:TypeSimType1">
+        <xs:annotation>
+          <xs:documentation>Type</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Name" type="fibuclassificationtypes:NameSimType1">
+        <xs:annotation>
+          <xs:documentation>Name</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Name2" type="fibuclassificationtypes:Name2SimType1">
+        <xs:annotation>
+          <xs:documentation>Name 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Number2" type="fibuclassificationtypes:Number2SimType1">
+        <xs:annotation>
+          <xs:documentation>Number 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Language" type="fibuclassificationtypes:LanguageSimType1">
+        <xs:annotation>
+          <xs:documentation>Language</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Enterprise" type="fibuclassificationtypes:EnterpriseSimType1">
+        <xs:annotation>
+          <xs:documentation>Enterprise</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="mode" type="fibuclassificationtypes:ModeSimType" use="optional" />
+  </xs:complexType>
+  <xs:simpleType name="PlanSimType1">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="VariantSimType1">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LevelSimType1">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="IdentificationSimType1">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="13" />
+      <xs:fractionDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TypeSimType1">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NameSimType1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Name2SimType1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Number2SimType1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="40" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LanguageSimType1">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EnterpriseSimType1">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="6" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ClassificationElementComType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Plan" type="fibuclassificationtypes:PlanSimType2">
+        <xs:annotation>
+          <xs:documentation>Plan</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Variant" type="fibuclassificationtypes:VariantSimType2">
+        <xs:annotation>
+          <xs:documentation>Variant</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Level" type="fibuclassificationtypes:LevelSimType2">
+        <xs:annotation>
+          <xs:documentation>Level</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Identification" type="fibuclassificationtypes:IdentificationSimType2">
+        <xs:annotation>
+          <xs:documentation>Identification</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Type" type="fibuclassificationtypes:TypeSimType2">
+        <xs:annotation>
+          <xs:documentation>Type</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Name" type="fibuclassificationtypes:NameSimType2">
+        <xs:annotation>
+          <xs:documentation>Name</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ReferenceLevel" type="fibuclassificationtypes:ReferenceLevelSimType">
+        <xs:annotation>
+          <xs:documentation>Reference level</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Reference" type="fibuclassificationtypes:ReferenceSimType">
+        <xs:annotation>
+          <xs:documentation>Reference</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Number2" type="fibuclassificationtypes:Number2SimType2">
+        <xs:annotation>
+          <xs:documentation>Number 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Name2" type="fibuclassificationtypes:Name2SimType2">
+        <xs:annotation>
+          <xs:documentation>Name 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CollectiveAccount" type="fibuclassificationtypes:CollectiveAccountSimType">
+        <xs:annotation>
+          <xs:documentation>Collective account</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="SubtotalBasis" type="fibuclassificationtypes:SubtotalBasisSimType">
+        <xs:annotation>
+          <xs:documentation>Subtotal percent base</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TotalisatorNumber" type="fibuclassificationtypes:TotalisatorNumberSimType">
+        <xs:annotation>
+          <xs:documentation>Totalisator no.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TotalisationList" type="fibuclassificationtypes:TotalisationListSimType">
+        <xs:annotation>
+          <xs:documentation>Totalisation list</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Language" type="fibuclassificationtypes:LanguageSimType2">
+        <xs:annotation>
+          <xs:documentation>Language</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Enterprise" type="fibuclassificationtypes:EnterpriseSimType2">
+        <xs:annotation>
+          <xs:documentation>Enterprise</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="mode" type="fibuclassificationtypes:ModeSimType" use="optional" />
+  </xs:complexType>
+  <xs:simpleType name="PlanSimType2">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="VariantSimType2">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LevelSimType2">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="IdentificationSimType2">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="13" />
+      <xs:fractionDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TypeSimType2">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NameSimType2">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ReferenceLevelSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ReferenceSimType">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="13" />
+      <xs:fractionDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Number2SimType2">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="40" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Name2SimType2">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CollectiveAccountSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SubtotalBasisSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TotalisatorNumberSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TotalisationListSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="80" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LanguageSimType2">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EnterpriseSimType2">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="6" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="AccountElementComType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Plan" type="fibuclassificationtypes:PlanSimType3">
+        <xs:annotation>
+          <xs:documentation>Plan</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Variant" type="fibuclassificationtypes:VariantSimType3">
+        <xs:annotation>
+          <xs:documentation>Variant</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Level" type="fibuclassificationtypes:LevelSimType3">
+        <xs:annotation>
+          <xs:documentation>Level</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Identification" type="fibuclassificationtypes:IdentificationSimType3">
+        <xs:annotation>
+          <xs:documentation>Identification</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Type" type="fibuclassificationtypes:TypeSimType3">
+        <xs:annotation>
+          <xs:documentation>Type</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Name" type="fibuclassificationtypes:NameSimType3">
+        <xs:annotation>
+          <xs:documentation>Name</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ReferenceLevel" type="fibuclassificationtypes:ReferenceLevelSimType1">
+        <xs:annotation>
+          <xs:documentation>Reference level</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Reference" type="fibuclassificationtypes:ReferenceSimType1">
+        <xs:annotation>
+          <xs:documentation>Reference</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ClassificationArea" type="fibuclassificationtypes:ClassificationAreaSimType">
+        <xs:annotation>
+          <xs:documentation>Classification area</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ISO" type="fibuclassificationtypes:ISOSimType">
+        <xs:annotation>
+          <xs:documentation>ISO</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Unit" type="fibuclassificationtypes:UnitSimType">
+        <xs:annotation>
+          <xs:documentation>Unit</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="GeneralLedgerReference" type="fibuclassificationtypes:GeneralLedgerReferenceSimType">
+        <xs:annotation>
+          <xs:documentation>G/L ref.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AccountType" type="fibuclassificationtypes:AccountTypeSimType">
+        <xs:annotation>
+          <xs:documentation>Account type</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Number2" type="fibuclassificationtypes:Number2SimType3">
+        <xs:annotation>
+          <xs:documentation>Number 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Name2" type="fibuclassificationtypes:Name2SimType3">
+        <xs:annotation>
+          <xs:documentation>Name 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Text1" type="fibuclassificationtypes:Text1SimType">
+        <xs:annotation>
+          <xs:documentation>Remark 1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Text2" type="fibuclassificationtypes:Text2SimType">
+        <xs:annotation>
+          <xs:documentation>Remark 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ConsolidationAccount" type="fibuclassificationtypes:ConsolidationAccountSimType">
+        <xs:annotation>
+          <xs:documentation>Consolidation</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CashFlowStatementGroup" type="fibuclassificationtypes:CashFlowStatementGroupSimType">
+        <xs:annotation>
+          <xs:documentation>Cash flow statement group</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="NumericalSupplement1" type="fibuclassificationtypes:NumericalSupplement1SimType">
+        <xs:annotation>
+          <xs:documentation>Numerical suppl. 1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="NumericalSupplement2" type="fibuclassificationtypes:NumericalSupplement2SimType">
+        <xs:annotation>
+          <xs:documentation>Numerical suppl. 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Inactive" type="fibuclassificationtypes:InactiveSimType">
+        <xs:annotation>
+          <xs:documentation>Inactive</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Tax" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>VAT</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TaxCode" type="fibuclassificationtypes:TaxCodeSimType">
+        <xs:annotation>
+          <xs:documentation>VAT code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TaxFixed" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>VAT fixed</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TaxCoefficient" type="fibuclassificationtypes:TaxCoefficientSimType">
+        <xs:annotation>
+          <xs:documentation>VAT coeff.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Category" type="fibuclassificationtypes:CategorySimType">
+        <xs:annotation>
+          <xs:documentation>Category</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Consolidation" type="fibuclassificationtypes:ConsolidationSimType">
+        <xs:annotation>
+          <xs:documentation>Intercompany</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="RatePrioritisation" type="fibuclassificationtypes:RatePrioritisationSimType">
+        <xs:annotation>
+          <xs:documentation>Rate prioritisation</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CostCentreAccess" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>CC access</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CostCentreFrom" type="fibuclassificationtypes:CostCentreFromSimType">
+        <xs:annotation>
+          <xs:documentation>CC from</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CostCentreTo" type="fibuclassificationtypes:CostCentreToSimType">
+        <xs:annotation>
+          <xs:documentation>CC to</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CostCentreProposal" type="fibuclassificationtypes:CostCentreProposalSimType">
+        <xs:annotation>
+          <xs:documentation>CC proposal</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ProjectActive" type="fibuclassificationtypes:ProjectActiveSimType">
+        <xs:annotation>
+          <xs:documentation>Project active</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ProjectFrom" type="fibuclassificationtypes:ProjectFromSimType">
+        <xs:annotation>
+          <xs:documentation>Project from</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ProjectTo" type="fibuclassificationtypes:ProjectToSimType">
+        <xs:annotation>
+          <xs:documentation>Project to</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ProjectProposal" type="fibuclassificationtypes:ProjectProposalSimType">
+        <xs:annotation>
+          <xs:documentation>Project proposal</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="InterestDefinition" type="fibuclassificationtypes:InterestDefinitionSimType">
+        <xs:annotation>
+          <xs:documentation>Interest account</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Abbreviation" type="fibuclassificationtypes:AbbreviationSimType">
+        <xs:annotation>
+          <xs:documentation>Abbreviation</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ShowBalance" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Show balance</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="BookingGuidelines" type="fibuclassificationtypes:BookingGuidelinesSimType">
+        <xs:annotation>
+          <xs:documentation>Booking guidelines</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ShowValueDate" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Show value date</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Currency" type="fibuclassificationtypes:CurrencySimType">
+        <xs:annotation>
+          <xs:documentation>Currency</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Rate" type="fibuclassificationtypes:RateSimType">
+        <xs:annotation>
+          <xs:documentation>Rate</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Creation" nillable="true" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Creation</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Modification" nillable="true" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Modification</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="InventoryMovementProposal" type="fibuclassificationtypes:InventoryMovementProposalSimType">
+        <xs:annotation>
+          <xs:documentation>Inventory movement proposal</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="InventoryMovementFixed" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Inventory movement fixed</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="InventoryBoth" type="fibuclassificationtypes:InventoryBothSimType">
+        <xs:annotation>
+          <xs:documentation>Inventory both</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="InventoryFrom" type="fibuclassificationtypes:InventoryFromSimType">
+        <xs:annotation>
+          <xs:documentation>Inventory from</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="InventoryTo" type="fibuclassificationtypes:InventoryToSimType">
+        <xs:annotation>
+          <xs:documentation>Inventory to</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="DivisionSwitch" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Division switch</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="DivisionFrom" type="fibuclassificationtypes:DivisionFromSimType">
+        <xs:annotation>
+          <xs:documentation>Division from</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="DivisionTo" type="fibuclassificationtypes:DivisionToSimType">
+        <xs:annotation>
+          <xs:documentation>Division to</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="SwapAccount" type="fibuclassificationtypes:SwapAccountSimType">
+        <xs:annotation>
+          <xs:documentation>Swap account</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ExchangeProfitAccount" type="fibuclassificationtypes:ExchangeProfitAccountSimType">
+        <xs:annotation>
+          <xs:documentation>Exchange Profit Account</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ExchangeLossAccount" type="fibuclassificationtypes:ExchangeLossAccountSimType">
+        <xs:annotation>
+          <xs:documentation>Exchange Loss Account</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="RateAdjustmentActive" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Rate Adjustment Active</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ClearingActive" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Clearing Active</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ClearingAlwaysActive" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Clearing Always Active</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Corso" type="fibuclassificationtypes:CorsoSimType">
+        <xs:annotation>
+          <xs:documentation>Corso</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="DebtorsDetailed" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Detailed debtors entries posting</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Azins2" type="fibuclassificationtypes:Azins2SimType">
+        <xs:annotation>
+          <xs:documentation>Azins2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Switch" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Negative balance not allowed</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AddressLink1" type="fibuclassificationtypes:AddressLink1SimType">
+        <xs:annotation>
+          <xs:documentation>Address link 1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AddressLink2" type="fibuclassificationtypes:AddressLink2SimType">
+        <xs:annotation>
+          <xs:documentation>Address link 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AddressLink3" type="fibuclassificationtypes:AddressLink3SimType">
+        <xs:annotation>
+          <xs:documentation>Address link 3</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AddressNumber1" type="fibuclassificationtypes:AddressNumber1SimType">
+        <xs:annotation>
+          <xs:documentation>Address 1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AddressNumber2" type="fibuclassificationtypes:AddressNumber2SimType">
+        <xs:annotation>
+          <xs:documentation>Address 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AddressNumber3" type="fibuclassificationtypes:AddressNumber3SimType">
+        <xs:annotation>
+          <xs:documentation>Address 3</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Kakst" type="fibuclassificationtypes:KakstSimType">
+        <xs:annotation>
+          <xs:documentation>Exchange gain cost center level 1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Kakst2" type="fibuclassificationtypes:Kakst2SimType">
+        <xs:annotation>
+          <xs:documentation>Exchange loss cost center level 1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Kapro" type="fibuclassificationtypes:KaproSimType">
+        <xs:annotation>
+          <xs:documentation>Exchange gain cost center level 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Kapro2" type="fibuclassificationtypes:Kapro2SimType">
+        <xs:annotation>
+          <xs:documentation>Exchange loss cost center level 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Wertberkto" type="fibuclassificationtypes:WertberktoSimType">
+        <xs:annotation>
+          <xs:documentation>Value adjustment account</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Wertberkst" type="fibuclassificationtypes:WertberkstSimType">
+        <xs:annotation>
+          <xs:documentation>Value adjustment cost center level 1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Wertberpro" type="fibuclassificationtypes:WertberproSimType">
+        <xs:annotation>
+          <xs:documentation>Value adjustment cost center level 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Enterprise" type="fibuclassificationtypes:EnterpriseSimType3">
+        <xs:annotation>
+          <xs:documentation>Enterprise</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Hknk" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Heiz- und Nebenkosten</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Unterhalt" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Unterhalt</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Abgrenz" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Délimitations</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Abgrenzvorschlag" type="fibuclassificationtypes:AbgrenzvorschlagSimType">
+        <xs:annotation>
+          <xs:documentation>Proposition délimitations</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="mode" type="fibuclassificationtypes:ModeSimType" use="optional" />
+  </xs:complexType>
+  <xs:simpleType name="PlanSimType3">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="VariantSimType3">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LevelSimType3">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="IdentificationSimType3">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="11" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TypeSimType3">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NameSimType3">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ReferenceLevelSimType1">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ReferenceSimType1">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="13" />
+      <xs:fractionDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ClassificationAreaSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ISOSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UnitSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="GeneralLedgerReferenceSimType">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="19" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AccountTypeSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Number2SimType3">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="40" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Name2SimType3">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text1SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="40" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text2SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="40" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ConsolidationAccountSimType">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="12" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CashFlowStatementGroupSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NumericalSupplement1SimType">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="16" />
+      <xs:fractionDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NumericalSupplement2SimType">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="16" />
+      <xs:fractionDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="InactiveSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TaxCodeSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TaxCoefficientSimType">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="6" />
+      <xs:fractionDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CategorySimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ConsolidationSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="RatePrioritisationSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CostCentreFromSimType">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="11" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CostCentreToSimType">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="11" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CostCentreProposalSimType">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="11" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ProjectActiveSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ProjectFromSimType">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="11" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ProjectToSimType">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="11" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ProjectProposalSimType">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="11" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="InterestDefinitionSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AbbreviationSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="BookingGuidelinesSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="4032" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CurrencySimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="RateSimType">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="18" />
+      <xs:fractionDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="InventoryMovementProposalSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="6" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="InventoryBothSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="InventoryFromSimType">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="12" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="InventoryToSimType">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="12" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DivisionFromSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="8" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DivisionToSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="8" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SwapAccountSimType">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="13" />
+      <xs:fractionDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ExchangeProfitAccountSimType">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="11" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ExchangeLossAccountSimType">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="11" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CorsoSimType">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="16" />
+      <xs:fractionDigits value="8" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Azins2SimType">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="8" />
+      <xs:fractionDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AddressLink1SimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AddressLink2SimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AddressLink3SimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AddressNumber1SimType">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AddressNumber2SimType">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AddressNumber3SimType">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="KakstSimType">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="11" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Kakst2SimType">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="11" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="KaproSimType">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="11" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Kapro2SimType">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="11" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="WertberktoSimType">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="11" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="WertberkstSimType">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="11" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="WertberproSimType">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="11" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EnterpriseSimType3">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="6" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AbgrenzvorschlagSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="6" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="CostCentreElementComType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Plan" type="fibuclassificationtypes:PlanSimType4">
+        <xs:annotation>
+          <xs:documentation>Plan</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Variant" type="fibuclassificationtypes:VariantSimType4">
+        <xs:annotation>
+          <xs:documentation>Variant</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Level" type="fibuclassificationtypes:LevelSimType4">
+        <xs:annotation>
+          <xs:documentation>Level</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Identification" type="fibuclassificationtypes:IdentificationSimType4">
+        <xs:annotation>
+          <xs:documentation>Identification</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Type" type="fibuclassificationtypes:TypeSimType4">
+        <xs:annotation>
+          <xs:documentation>Type</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Name" type="fibuclassificationtypes:NameSimType4">
+        <xs:annotation>
+          <xs:documentation>Name</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ReferenceLevel" type="fibuclassificationtypes:ReferenceLevelSimType2">
+        <xs:annotation>
+          <xs:documentation>Reference level</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Reference" type="fibuclassificationtypes:ReferenceSimType2">
+        <xs:annotation>
+          <xs:documentation>Reference</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CostCentreType" type="fibuclassificationtypes:CostCentreTypeSimType">
+        <xs:annotation>
+          <xs:documentation>CC type</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Number2" type="fibuclassificationtypes:Number2SimType4">
+        <xs:annotation>
+          <xs:documentation>Number 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Name2" type="fibuclassificationtypes:Name2SimType4">
+        <xs:annotation>
+          <xs:documentation>Name 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Text1" type="fibuclassificationtypes:Text1SimType1">
+        <xs:annotation>
+          <xs:documentation>Remark 1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Text2" type="fibuclassificationtypes:Text2SimType1">
+        <xs:annotation>
+          <xs:documentation>Remark 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="NumericalSupplement1" type="fibuclassificationtypes:NumericalSupplement1SimType1">
+        <xs:annotation>
+          <xs:documentation>Numerical suppl. 1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="NumericalSupplement2" type="fibuclassificationtypes:NumericalSupplement2SimType1">
+        <xs:annotation>
+          <xs:documentation>Numerical suppl. 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Sector" type="fibuclassificationtypes:SectorSimType">
+        <xs:annotation>
+          <xs:documentation>Sector</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Responsible" type="fibuclassificationtypes:ResponsibleSimType">
+        <xs:annotation>
+          <xs:documentation>Responsible</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Client" type="fibuclassificationtypes:ClientSimType">
+        <xs:annotation>
+          <xs:documentation>Client</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Sum" type="fibuclassificationtypes:SumSimType">
+        <xs:annotation>
+          <xs:documentation>Sum</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Additions" type="fibuclassificationtypes:AdditionsSimType">
+        <xs:annotation>
+          <xs:documentation>Additions</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Start" nillable="true" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Start</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="End" nillable="true" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>End</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Warranty" nillable="true" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Warranty</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Inactive" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Inactive</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="OverheadCharges" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Overhead surcharges</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Abbreviation" type="fibuclassificationtypes:AbbreviationSimType1">
+        <xs:annotation>
+          <xs:documentation>Abbreviation</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Creation" nillable="true" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Creation</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Modification" nillable="true" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Modification</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="DivisionFrom" type="fibuclassificationtypes:DivisionFromSimType1">
+        <xs:annotation>
+          <xs:documentation>From division</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="DivisionTo" type="fibuclassificationtypes:DivisionToSimType1">
+        <xs:annotation>
+          <xs:documentation>To division</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="DivisionSwitch" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Division switch</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Budget" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Budget</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AddressLink1" type="fibuclassificationtypes:AddressLink1SimType1">
+        <xs:annotation>
+          <xs:documentation>Address link 1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AddressLink2" type="fibuclassificationtypes:AddressLink2SimType1">
+        <xs:annotation>
+          <xs:documentation>Address link 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AddressLink3" type="fibuclassificationtypes:AddressLink3SimType1">
+        <xs:annotation>
+          <xs:documentation>Address link 3</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AddressNumber1" type="fibuclassificationtypes:AddressNumber1SimType1">
+        <xs:annotation>
+          <xs:documentation>Address 1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AddressNumber2" type="fibuclassificationtypes:AddressNumber2SimType1">
+        <xs:annotation>
+          <xs:documentation>Address 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AddressNumber3" type="fibuclassificationtypes:AddressNumber3SimType1">
+        <xs:annotation>
+          <xs:documentation>Address 3</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Enterprise" type="fibuclassificationtypes:EnterpriseSimType4">
+        <xs:annotation>
+          <xs:documentation>Enterprise</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="mode" type="fibuclassificationtypes:ModeSimType" use="optional" />
+  </xs:complexType>
+  <xs:simpleType name="PlanSimType4">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="VariantSimType4">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LevelSimType4">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="IdentificationSimType4">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="11" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TypeSimType4">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NameSimType4">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ReferenceLevelSimType2">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ReferenceSimType2">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="13" />
+      <xs:fractionDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CostCentreTypeSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Number2SimType4">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="40" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Name2SimType4">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="100" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text1SimType1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="40" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Text2SimType1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="40" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NumericalSupplement1SimType1">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="16" />
+      <xs:fractionDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NumericalSupplement2SimType1">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="16" />
+      <xs:fractionDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SectorSimType">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="8" />
+      <xs:fractionDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ResponsibleSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="60" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ClientSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="60" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SumSimType">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="16" />
+      <xs:fractionDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AdditionsSimType">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="16" />
+      <xs:fractionDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AbbreviationSimType1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DivisionFromSimType1">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="8" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DivisionToSimType1">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="8" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AddressLink1SimType1">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AddressLink2SimType1">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AddressLink3SimType1">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AddressNumber1SimType1">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AddressNumber2SimType1">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AddressNumber3SimType1">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EnterpriseSimType4">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="6" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PrintAttributesComType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Plan" type="fibuclassificationtypes:PlanSimType5">
+        <xs:annotation>
+          <xs:documentation>Plan</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Variant" type="fibuclassificationtypes:VariantSimType5">
+        <xs:annotation>
+          <xs:documentation>Variant</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Level" type="fibuclassificationtypes:LevelSimType5">
+        <xs:annotation>
+          <xs:documentation>Level</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Identification" type="fibuclassificationtypes:IdentificationSimType5">
+        <xs:annotation>
+          <xs:documentation>Identification</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Type" type="fibuclassificationtypes:TypeSimType5">
+        <xs:annotation>
+          <xs:documentation>Type</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Bold" type="fibuclassificationtypes:BoldSimType">
+        <xs:annotation>
+          <xs:documentation>Bold</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Underline" type="fibuclassificationtypes:UnderlineSimType">
+        <xs:annotation>
+          <xs:documentation>Underline</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Italic" type="fibuclassificationtypes:ItalicSimType">
+        <xs:annotation>
+          <xs:documentation>Italic</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Hide" type="fibuclassificationtypes:HideSimType">
+        <xs:annotation>
+          <xs:documentation>Hide</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="WithoutNumber" type="fibuclassificationtypes:WithoutNumberSimType">
+        <xs:annotation>
+          <xs:documentation>Without number</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="PageBreak" type="fibuclassificationtypes:PageBreakSimType">
+        <xs:annotation>
+          <xs:documentation>Page break</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="SpaceBefore" type="fibuclassificationtypes:SpaceBeforeSimType">
+        <xs:annotation>
+          <xs:documentation>Space before</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="SpaceAfter" type="fibuclassificationtypes:SpaceAfterSimType">
+        <xs:annotation>
+          <xs:documentation>Space after</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="DecimalPlace" type="fibuclassificationtypes:DecimalPlaceSimType">
+        <xs:annotation>
+          <xs:documentation>Decimal place</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Indent" type="fibuclassificationtypes:IndentSimType">
+        <xs:annotation>
+          <xs:documentation>Indent</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Font" type="fibuclassificationtypes:FontSimType">
+        <xs:annotation>
+          <xs:documentation>Font</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Enterprise" type="fibuclassificationtypes:EnterpriseSimType5">
+        <xs:annotation>
+          <xs:documentation>Enterprise</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="mode" type="fibuclassificationtypes:ModeSimType" use="optional" />
+  </xs:complexType>
+  <xs:simpleType name="PlanSimType5">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="VariantSimType5">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LevelSimType5">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="IdentificationSimType5">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="13" />
+      <xs:fractionDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TypeSimType5">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="BoldSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UnderlineSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ItalicSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="HideSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="WithoutNumberSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PageBreakSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SpaceBeforeSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SpaceAfterSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DecimalPlaceSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="IndentSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FontSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EnterpriseSimType5">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="6" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="AttachmentType">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="BinaryData" type="fibuclassificationtypes:BinaryDataType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BinaryDataType">
+    <xs:sequence>
+      <xs:element name="Name" type="xs:string" />
+      <xs:element name="BinData" type="xmime:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="edtFbPeriodeID.LookupSQL" xml:space="preserve">
+    <value>declare @Pattern varchar(200)
+
+set @Pattern = {0} + '%'
+set @Pattern = replace(@Pattern,',','%')
+set @Pattern = replace(@Pattern,' ','%')
+
+select distinct 
+       ID = PER.FbPeriodeID,
+       [Mandant / Periode] = PRS.NameVorname + 
+                 ' (' + convert(varchar,PER.PeriodeVon,104) + ' - ' + convert(varchar,PER.PeriodeBis,104),
+       Strasse   = PRS.WohnsitzStrasseHausNr,
+       [PLZ/Ort] = PRS.WohnsitzPLZOrt, 
+       FB        = IsNull(BEN.FirstName + ' ','') + isNull(BEN.LastName,'') + ' (' + BEN.LogonName + ')'
+from   FbPeriode PER 
+       inner join vwPerson         PRS on PRS.BaPersonID = PER.BaPersonID 
+       left  join FaLeistung       FAL on FAL.BaPersonID = PER.BaPersonID and 
+                                          FAL.ModulID = 5 and 
+                                          FAL.DatumVon  = (select max(DatumVon) 
+                                                           from   FaLeistung 
+                                                           where  BaPersonID = PER.BaPersonID and 
+                                                                  FAL.ModulID = 5) 
+       left  join XUser            BEN on BEN.UserID = FAL.UserID
+where PRS.Name + isNull(', ' + PRS.Vorname,'') like @Pattern
+order by [Mandant / Periode]</value>
+  </data>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>declare @FbPeriodeID     int
+declare @PerDatum        datetime
+declare @NurMitBuchungen bit
+
+set @FbPeriodeID     = {edtFbPeriodeID}
+set @PerDatum        = {edtPerDatum}
+set @NurMitBuchungen = {edtNurMitBuchungen}
+
+  declare @VorSaldoAktiven  money
+  declare @VorSaldoPassiven money
+  declare @VorSaldoAufwand  money
+  declare @VorSaldoErtrag   money
+
+  declare @SaldoAktiven  money
+  declare @SaldoPassiven money
+  declare @SaldoAufwand  money
+  declare @SaldoErtrag   money
+
+  declare @Team          varchar(50)
+  declare @DatumBereich  varchar(50)
+  declare @Geburtsdatum  varchar(20)
+  declare @Mandant       varchar(200)
+
+  declare @tmp table(
+    ID               int identity,
+    KlasseCode       int,
+    Klasse           varchar(20),
+    KontoNr          int,
+    KontoName        varchar(150),
+    VorSaldo         money,
+    Saldo            money,
+    SaldoGruppeName  varchar(20))
+
+  if @PerDatum is null
+    set @PerDatum = (select PeriodeBis from dbo.FbPeriode WITH (READUNCOMMITTED) where FbPeriodeID = @FbPeriodeID)
+
+  insert @tmp
+    select
+      KTO.KontoKlasseCode,
+      KLA.Text,
+      KTO.KontoNr,
+      KTO.KontoName,
+      case when KTO.KontoKlasseCode in (1,2)
+      then KTO.EroeffnungsSaldo
+      else null
+      end,
+      isNull(KTO.EroeffnungsSaldo,0) +
+      (select isNull(sum(Betrag),0)
+       from   dbo.FbBuchung WITH (READUNCOMMITTED)
+       where  FbPeriodeID = @FbPeriodeID and
+              SollKtoNr = KTO.KontoNr and
+              Buchungsdatum &lt;= @PerDatum) -
+      (select isNull(sum(Betrag),0)
+       from   dbo.FbBuchung WITH (READUNCOMMITTED)
+       where  FbPeriodeID = @FbPeriodeID and
+              HabenKtoNr = KTO.KontoNr and
+              Buchungsdatum &lt;= @PerDatum),
+      KTO.SaldoGruppeName
+    from dbo.FbKonto KTO WITH (READUNCOMMITTED)
+         inner join dbo.XLOVCode KLA WITH (READUNCOMMITTED) on KLA.LOVName = 'FbKontoKlasse' and
+                                    KLA.Code = KTO.KontoKlasseCode
+    where FbPeriodeID = @FbPeriodeID and
+          KTO.KontoKlasseCode &lt;= 4 and
+          (isNull(@NurMitBuchungen,1) = 0 or exists
+            (select 1 from   dbo.FbBuchung WITH (READUNCOMMITTED)
+             where  FbPeriodeID = @FbPeriodeID and
+                    (SollKtoNr = KTO.KontoNr or HabenKtoNr = KTO.KontoNr) and
+                    Buchungsdatum &lt;= isNull(@PerDatum,Buchungsdatum)) or
+            isNull(KTO.EroeffnungsSaldo,0) &lt;&gt; 0	
+          )
+    order by KTO.KontoKlasseCode, KTO.KontoNr
+
+  select @SaldoAktiven  = sum(Saldo), @VorSaldoAktiven  = sum(VorSaldo) from @tmp where KlasseCode = 1
+  select @SaldoPassiven = sum(Saldo), @VorSaldoPassiven = sum(VorSaldo) from @tmp where KlasseCode = 2
+  select @SaldoAufwand  = sum(Saldo), @VorSaldoAufwand  = sum(VorSaldo) from @tmp where KlasseCode = 3
+  select @SaldoErtrag   = sum(Saldo), @VorSaldoErtrag   = sum(VorSaldo) from @tmp where KlasseCode = 4
+
+  if @SaldoAktiven + @SaldoPassiven &gt; 0 begin
+    insert @tmp values (1,'Aktiven' ,null,'Total Aktiven',@VorSaldoAktiven,@SaldoAktiven,null)
+    insert @tmp values (2,'Passiven',null,'Total Passiven',@VorSaldoPassiven,@SaldoPassiven,null)
+    insert @tmp values (2,'Passiven',null,'Vermögenszunahme',null,- @SaldoAktiven - @SaldoPassiven,null)
+    insert @tmp values (2,'Passiven',null,'Total',null,- @SaldoAktiven,null)
+  end else if @SaldoAktiven + @SaldoPassiven &lt; 0 begin
+    insert @tmp values (1,'Aktiven' ,null,'Total Aktiven',@VorSaldoAktiven,@SaldoAktiven,null)
+    insert @tmp values (1,'Aktiven' ,null,'Vermögensabnahme',null,- @SaldoAktiven - @SaldoPassiven,null)
+    insert @tmp values (1,'Aktiven' ,null,'Total',null,- @SaldoPassiven,null)
+    insert @tmp values (2,'Passiven',null,'Total Passiven',@VorSaldoPassiven,@SaldoPassiven,null)
+  end else begin
+    insert @tmp values (1,'Aktiven' ,null,'Total Aktiven',@VorSaldoAktiven,@SaldoAktiven,null)
+    insert @tmp values (2,'Passiven',null,'Total Passiven',@VorSaldoPassiven,@SaldoPassiven,null)
+  end
+
+  if @SaldoAufwand + @SaldoErtrag &gt; 0 begin
+    insert @tmp values (3,'Aufwand',null,'Total Aufwand',@VorSaldoAufwand,@SaldoAufwand,null)
+    insert @tmp values (4,'Ertrag' ,null,'Total Ertrag',@VorSaldoAufwand,@SaldoErtrag,null)
+    insert @tmp values (4,'Ertrag' ,null,'Vermögensabnahme',null,- @SaldoAufwand - @SaldoErtrag,null)
+    insert @tmp values (4,'Ertrag' ,null,'Total',null,- @SaldoAufwand,null)
+  end else if @SaldoAufwand + @SaldoErtrag &lt; 0 begin
+    insert @tmp values (3,'Aufwand',null,'Total Aufwand',@VorSaldoAufwand,@SaldoAufwand,null)
+    insert @tmp values (3,'Aufwand',null,'Vermögenszunahme',null,- @SaldoAufwand - @SaldoErtrag,null)
+    insert @tmp values (3,'Aufwand',null,'Total',null,- @SaldoErtrag,null)
+    insert @tmp values (4,'Ertrag' ,null,'Total Ertrag',@VorSaldoErtrag,@SaldoErtrag,null)
+  end else begin
+    insert @tmp values (3,'Aufwand',null,'Total Aufwand',@VorSaldoAufwand,@SaldoAufwand,null)
+    insert @tmp values (4,'Ertrag' ,null,'Total Ertrag',@VorSaldoErtrag,@SaldoErtrag,null)
+  end
+
+  -- Saldogruppen
+  insert @tmp
+  select
+    99,
+    'Saldogruppen',
+    null,
+    SaldoGruppeName,
+    sum(Vorsaldo),
+    sum(Saldo),
+    null
+  from @tmp
+  where SaldoGruppeName is not null
+  group by SaldoGruppeName
+  order by SaldoGruppeName
+
+  -- Total der Saldogruppen
+  insert @tmp
+  select
+    99,
+    'Saldogruppen',
+    null,
+    'Total SaldoGruppen',
+    sum(Vorsaldo),
+    sum(Saldo),
+    null
+  from @tmp
+  where KlasseCode = 99
+
+  select @Mandant = PRS.Name + isNull(', ' + PRS.Vorname,''),
+         @Geburtsdatum = convert(varchar,PRS.Geburtsdatum,104),
+         @DatumBereich = convert(varchar,PER.PeriodeVon,104) + ' - ' +
+                         convert(varchar,PER.PeriodeBis,104),
+         @Team = TEA.Name
+  from   dbo.FbPeriode PER WITH (READUNCOMMITTED)
+         inner join dbo.BaPerson PRS WITH (READUNCOMMITTED) on PRS.BaPersonID = PER.BaPersonID
+         left  join dbo.FbTeam    TEA WITH (READUNCOMMITTED) on TEA.FbTeamID = PER.FbTeamID
+  where  PER.FbPeriodeID = @FbPeriodeID
+
+
+  select Mandant = @Mandant,
+         Geburtsdatum = @Geburtsdatum,
+         DatumBereich = @DatumBereich,
+         Team = @Team,
+         Klasse = convert(varchar,KlasseCode) + '. ' + Klasse,
+         KontoNr,
+         KontoName,
+         EroeffnungsSaldo = VorSaldo ,
+         Umsatz = case when KlasseCode in (1,2,99)
+                  then Saldo - VorSaldo
+                  else null
+                  end,
+         Saldo,
+         PerDatum = @PerDatum
+  from   @tmp
+  order by KlasseCode,ID</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>17, 17</value>
+  </data>
+  <data name="xDocument.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAF1JREFUOE9jZAAC
+        Y2Pj/yAaGzh79iwjhjhIw///MzGwmJjYfxDGqSEtjeE/MgYpBhmEoYmQDSANKM7GpQHZmVg1oDsJxgdp
+        pI4N2EIKJjbqJLIiDqSJEMaVovGKAwBnM3PWBP8PfwAAAABJRU5ErkJggg==
+</value>
+  </data>
+</root>

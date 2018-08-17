@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>DECLARE @DatumVon DATETIME;
+DECLARE @DatumBis DATETIME;
+
+SET @DatumVon = '17530101';
+SET @DatumBis = '99991231';
+
+--- SET @DatumVon = {edtDatumVon};
+--- SET @DatumBis = {edtDatumBis};
+
+DECLARE @tbl TABLE (
+  Person                 VARCHAR(100),
+  Fallträger             BIT,
+  [N-Nummer]             VARCHAR(20),
+  [BFM-Nummer]           VARCHAR(20),
+  [ZEMIS-Nummer]         VARCHAR(20),
+  [N]                    VARCHAR(10),
+  [RW]                   VARCHAR(10),
+  [VA]                   VARCHAR(10),
+  [and. Auf.]            VARCHAR(50),
+  Einreisedatum          DATETIME,
+  ErteilungVA            DATETIME,
+  [Aufenth CH]           INT,
+  m                      VARCHAR(10),
+  w                      VARCHAR(10),
+  Geburtsdatum           DATETIME,
+  [Alter]                INT,
+  [Letzte Periode von]   DATETIME,
+  [Letzte Periode bis]   DATETIME,
+  [Aktuelle Periode von] DATETIME,
+  [Aktuelle Periode bis] DATETIME,
+  [Eintritt AK]          DATETIME,
+  [Austritt AK]          DATETIME,
+  Austrittsgrund         VARCHAR(100),
+  Nationalität           VARCHAR(50),
+  [Grösse UE]            INT,
+  [Grösse Haushalt]      INT,
+  Miete                  MONEY,
+  Nebenkosten            MONEY,
+  [Kostenanteil UE]      MONEY,
+  Strasse                VARCHAR(150),
+  Ort                    VARCHAR(100),
+  [SAR Name]             VARCHAR(100),
+  BaPersonID$            INT
+);
+
+INSERT @tbl
+SELECT Person                 = PRS.Name + ISNULL(', ' + PRS.Vorname,''),
+       Fallträger             = CONVERT(BIT, CASE WHEN FTR.BaPersonID = PRS.BaPersonID THEN 1 ELSE 0 END),
+       [N-Nummer]             = PRS.NNummer,
+       [BFM-Nummer]           = PRS.BFFNummer,
+       [ZEMIS-Nummer]         = PRS.ZEMISNummer,
+       [N]                    = CASE WHEN PRS.AuslaenderStatusCode = 8 THEN 'N' END,
+       [RW]                   = CASE WHEN PRS.AuslaenderStatusCode = 11 THEN 'RW' END,
+       [VA]                   = CASE WHEN PRS.AuslaenderStatusCode = 17 THEN 'VA' END,
+       [and. Auf.]            = CASE WHEN not PRS.AuslaenderStatusCode in (8,11,17) THEN AUF.Text END,
+       Einreisedatum          = PRS.InCHSeit,
+       ErteilungVA            = PRS.ErteilungVA,
+       [Aufenth CH]           = CONVERT(INT, ((DATEDIFF(dd,PRS.InCHSeit,GETDATE())+.5)/365.25)),
+       m                      = CASE WHEN PRS.GeschlechtCode = 1 THEN 'm' END,
+       w                      = CASE WHEN PRS.GeschlechtCode = 2 THEN 'w' END,
+       Geburtsdatum           = PRS.Geburtsdatum,
+       [Alter]                = CONVERT(INT, ((DATEDIFF(dd, PRS.Geburtsdatum, GETDATE()) + 0.5) / 365.25)),
+       [Letzte Periode von]   = ISNULL(FPLL.DatumVon, FPLL.GeplantVon),
+       [Letzte Periode bis]   = ISNULL(FPLL.DatumBis, FPLL.GeplantBis),
+       [Aktuelle Periode von] = ISNULL(FPLA.DatumVon, FPLA.GeplantVon),
+       [Aktuelle Periode bis] = ISNULL(FPLA.DatumBis, FPLA.GeplantBis),
+       [Eintritt AK]          = PEA.Eintritt,
+       [Austritt AK]          = PEA.Austritt,
+       Austrittsgrund         = dbo.fnLOVText('AyEinAustrittGrund',PEA.AusGrundCode),
+       Nationalität           = NAT.Text,
+       [Grösse UE]            = (SELECT COUNT(*)
+                                 FROM dbo.BgFinanzplan_BaPerson WITH (READUNCOMMITTED)
+                                 WHERE BgFinanzplanID = FPL.BgFinanzplanID 
+                                   AND IstUnterstuetzt = 1),
+       [Grösse Haushalt]      = (SELECT COUNT(*)
+                                 FROM dbo.BgFinanzplan_BaPerson WITH (READUNCOMMITTED)
+                                 WHERE BgFinanzplanID = FPL.BgFinanzplanID),
+       Miete                  = CASE WHEN FTR.BaPersonID = PRS.BaPersonID THEN MIE.Mietkosten END,
+       Nebenkosten            = CASE WHEN FTR.BaPersonID = PRS.BaPersonID THEN MIE.Nebenkosten END,
+       [Kostenanteil UE]      = CASE WHEN FTR.BaPersonID = PRS.BaPersonID THEN MIE.KostenanteilUE END,
+       Strasse                = PRS.WohnsitzStrasseHausNr,
+       Ort                    = PRS.WohnsitzPLZOrt,
+       [SAR Name]             = USR.LastName + ISNULL(', ' + USR.Firstname,''),
+       BaPersonID$            = FAL.BaPersonID
+FROM dbo.FaLeistung                      FAL WITH (READUNCOMMITTED)
+  INNER JOIN dbo.BaPerson                FTR WITH (READUNCOMMITTED) ON FTR.BaPersonID = FAL.BaPersonID
+  INNER JOIN dbo.XUser                   USR WITH (READUNCOMMITTED) ON USR.UserID = FAL.UserID
+  INNER JOIN dbo.BgFinanzplan            FPL WITH (READUNCOMMITTED) ON FPL.FaLeistungID = FAL.FaLeistungID 
+                                                                   AND FPL.BgFinanzplanID = (SELECT TOP 1 BgFinanzplanID
+                                                                                             FROM dbo.BgFinanzplan WITH (READUNCOMMITTED)
+                                                                                             WHERE FaLeistungID = FAL.FaLeistungID
+                                                                                             ORDER BY DatumVon DESC)
+  INNER JOIN dbo.BgFinanzplan_BaPerson   FPP WITH (READUNCOMMITTED) ON FPP.BgFinanzplanID = FPL.BgFinanzplanID
+                                                                   AND FPP.IstUnterstuetzt = 1
+  INNER JOIN dbo.fnAyPersonEinAustritt() PEA ON PEA.FaLeistungID = FAL.FaLeistungID
+                                            AND PEA.BaPersonID = FPP.BaPersonID
+  LEFT JOIN dbo.BgFinanzplan             FPLA WITH (READUNCOMMITTED) ON FPLA.FaLeistungID = FAL.FaLeistungID
+                                                                    AND FPLA.BgFinanzplanID = (SELECT TOP 1 BgFinanzplanID
+                                                                                               FROM dbo.BgFinanzplan WITH (READUNCOMMITTED)
+                                                                                               WHERE FaLeistungID = FAL.FaLeistungID
+                                                                                                 AND GETDATE() BETWEEN ISNULL(DatumVon, GeplantVon) AND COALESCE(DatumBis, GeplantBis, '99991231')
+                                                                                               ORDER BY ISNULL(DatumVon, GeplantVon) DESC)
+  LEFT JOIN dbo.BgFinanzplan             FPLL WITH (READUNCOMMITTED) ON FPLL.FaLeistungID = FAL.FaLeistungID
+                                                                    AND FPLL.BgFinanzplanID = (SELECT TOP 1 BgFinanzplanID
+                                                                                               FROM dbo.BgFinanzplan WITH (READUNCOMMITTED)
+                                                                                               WHERE FaLeistungID = FAL.FaLeistungID
+                                                                                                 AND BgFinanzplanID &lt;&gt; ISNULL(FPLA.BgFinanzplanID, 0)
+                                                                                                 AND ISNULL(DatumBis, GeplantBis) &lt; COALESCE(FPLA.DatumVon, FPLA.GeplantVon, GETDATE())
+                                                                                               ORDER BY ISNULL(DatumVon, GeplantVon) DESC)
+  LEFT JOIN dbo.vwPerson                 PRS ON PRS.BaPersonID = FPP.BaPersonID
+  LEFT JOIN dbo.BaMietvertrag            MIE WITH (READUNCOMMITTED) ON MIE.BaPersonID = PRS.BaPersonID
+  LEFT JOIN dbo.FaLeistungArchiv         ARC WITH (READUNCOMMITTED) ON ARC.FaLeistungID = FAL.FaLeistungID
+                                                                   AND ARC.CheckOut IS NULL
+  LEFT JOIN dbo.BaLand                   NAT WITH (READUNCOMMITTED) ON NAT.BaLandID = PRS.NationalitaetCode
+  LEFT JOIN dbo.XLOVCode                 AUF WITH (READUNCOMMITTED) ON AUF.Code = PRS.AuslaenderStatusCode
+                                                                   AND AUF.LovName = 'Aufenthaltsstatus'
+WHERE FAL.ModulID = 6 -- Asyl
+  AND PRS.Testperson = 0
+  AND PEA.Eintritt &lt;= @DatumBis
+  AND ISNULL(PEA.Austritt, @DatumVon) &gt;= @DatumVon
+--- AND FAL.UserID = {edtUserID.LookupID}
+--- AND ({edtFT} = 0 OR FTR.BaPersonID = PRS.BaPersonID)
+--- AND ({edtStatus} &lt;&gt; 1 OR FAL.DatumBis IS NULL)
+--- AND ({edtStatus} &lt;&gt; 2 OR FAL.DatumBis IS NOT NULL AND ARC.FaLeistungID IS NULL )
+
+SELECT *
+FROM @tbl
+ORDER BY [N-Nummer], Fallträger DESC, Person;
+</value>
+  </data>
+  <metadata name="qryListe2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>119, 17</value>
+  </metadata>
+  <data name="qryListe2.SelectStatement" xml:space="preserve">
+    <value>declare @DatumVon datetime
+declare @DatumBis datetime
+
+set @DatumVon = '19000101'
+set @DatumBis = '29990101'
+
+--- set @DatumVon = {edtDatumVon}
+--- set @DatumBis = {edtDatumBis}
+
+declare @tbl table (
+  Person            varchar(100),
+  Fallträger        bit,
+  [N-Nummer]        varchar(20),
+  [ZEMIS-Nummer]    varchar(20),
+  [BFF-Nummer]      varchar(20),
+  [N]               varchar(10),
+  [RW]              varchar(10),
+  [VA]              varchar(10),
+  [and. Auf.]       varchar(50),
+  Einreisedatum     datetime,
+  [Aufenth CH]      int,
+  m                 varchar(10),
+  w                 varchar(10),
+  Geburtsdatum      datetime,
+  [Alter]           int,
+  [Eintritt AK]     datetime,
+  [Austritt AK]     datetime,
+  Austrittsgrund    varchar(100),
+  Nationalität      varchar(50),
+  [Grösse UE]       int,
+  [Grösse Haushalt] int,
+  Miete             money,
+  Nebenkosten       money,
+  [Kostenanteil UE] money,
+  Strasse           varchar(150),
+  Ort               varchar(100),
+  [SAR Name]        varchar(100),
+  BaPersonID$      int
+)
+
+insert @tbl
+select Person            = PRS.Name + isNull(', ' + PRS.Vorname,''),
+       Fallträger        = convert(bit, case when FT.BaPersonID = PRS.BaPersonID then 1 else 0 end),
+       [N-Nummer]        = PRS.NNummer,
+       [ZEMIS-Nummer]    = PRS.ZEMISNummer,
+       [BFF-Nummer]      = PRS.BFFNummer,
+       [N]               = case when PRS.AuslaenderStatusCode = 8 then 'N' end,
+       [RW]              = case when PRS.AuslaenderStatusCode = 11 then 'RW' end,
+       [VA]              = case when PRS.AuslaenderStatusCode = 17 then 'VA' end,      
+       [and. Auf.]       = case when not PRS.AuslaenderStatusCode in (8,11,17) then AUF.Text end,
+       Einreisedatum     = PRS.InCHSeit,
+       [Aufenth CH]      = convert(int, ((datediff(dd,PRS.InCHSeit,getDate())+.5)/365.25)),
+       m                 = case when PRS.GeschlechtCode = 1 then 'm' end,
+       w                 = case when PRS.GeschlechtCode = 2 then 'w' end,
+       Geburtsdatum      = PRS.Geburtsdatum,
+       [Alter]           = convert(int, ((datediff(dd,PRS.Geburtsdatum,getDate())+.5)/365.25)),
+       [Eintritt AK]     = PEA.Eintritt,
+       [Austritt AK]     = PEA.Austritt,
+       Austrittsgrund    = dbo.fnLOVText('AyEinAustrittGrund',PEA.AusGrundCode),
+       Nationalität      = NAT.Text,
+       [Grösse UE]       = (select count(*)
+                            from   dbo.BgFinanzplan_BaPerson WITH (READUNCOMMITTED)
+                            where  BgFinanzplanID = FP.BgFinanzplanID and
+                                   IstUnterstuetzt = 1),
+       [Grösse Haushalt] = (select count(*)
+                            from   dbo.BgFinanzplan_BaPerson WITH (READUNCOMMITTED)
+                            where  BgFinanzplanID = FP.BgFinanzplanID),
+       Miete             = case when FT.BaPersonID = PRS.BaPersonID then MIE.Mietkosten end,
+       Nebenkosten       = case when FT.BaPersonID = PRS.BaPersonID then MIE.Nebenkosten end,
+       [Kostenanteil UE] = case when FT.BaPersonID = PRS.BaPersonID then MIE.KostenanteilUE end,
+       Strasse           = PRS.WohnsitzStrasseHausNr,
+       Ort               = PRS.WohnsitzPLZOrt,
+       [SAR Name]        = USR.LastName + isNull(', ' + USR.Firstname,''),
+       BaPersonID$ = FAL.BaPersonID
+from   dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+       inner join dbo.BaPerson               FT WITH (READUNCOMMITTED)  on FT.BaPersonID = FAL.BaPersonID
+       inner join dbo.XUser                  USR WITH (READUNCOMMITTED) on USR.UserID = FAL.UserID
+       inner join dbo.BgFinanzplan           FP WITH (READUNCOMMITTED)  on FP.FaLeistungID = FAL.FaLeistungID and
+                                                FP.BgFinanzplanID = (select top 1 BgFinanzplanID
+                                                                     from   dbo.BgFinanzplan WITH (READUNCOMMITTED)
+                                                                     where  FaLeistungID = FAL.FaLeistungID
+                                                                     order by DatumVon desc)
+       inner join dbo.BgFinanzplan_BaPerson FPP WITH (READUNCOMMITTED) on FPP.BgFinanzplanID = FP.BgFinanzplanID and
+                                                FPP.IstUnterstuetzt = 1
+       inner join dbo.fnAyPersonEinAustritt() PEA on PEA.FaLeistungID = FAL.FaLeistungID and
+                                                     PEA.BaPersonID = FPP.BaPersonID 
+       left  join dbo.vwPerson              PRS on PRS.BaPersonID = FPP.BaPersonID
+       left  join dbo.BaMietvertrag         MIE WITH (READUNCOMMITTED) on MIE.BaPersonID = PRS.BaPersonID
+       left  join dbo.FaLeistungArchiv           ARC WITH (READUNCOMMITTED) on ARC.FaLeistungID = FAL.FaLeistungID and
+                                                ARC.CheckOut is null
+       left  join dbo.BaLand	             NAT WITH (READUNCOMMITTED) on NAT.BaLandID = PRS.NationalitaetCode
+       left  join dbo.XLOVCode               AUF WITH (READUNCOMMITTED) on AUF.Code = PRS.AuslaenderStatusCode and
+                                                AUF.LovName = 'Aufenthaltsstatus'
+
+
+where  FAL.ModulID = 6 and -- Asyl
+       PRS.Testperson = 0 and
+       PEA.Eintritt &lt;= @DatumBis and isNull(PEA.Austritt,@DatumVon) &gt;= @DatumVon
+--- and FAL.UserID = {edtUserID.LookupID}
+--- and ({edtFT} = 0 or FT.BaPersonID = PRS.BaPersonID)
+--- and ({edtStatus} &lt;&gt; 1 or FAL.DatumBis is null)
+--- and ({edtStatus} &lt;&gt; 2 or FAL.DatumBis is not null and ARC.FaLeistungID is null )
+
+select Total             = 'Anzahl/Summen',
+       [Personen]        = convert(varchar,(select count(*) from @tbl where Person is not null)),
+       [Fallträger]      = convert(varchar,(select count(*) from @tbl where Fallträger = 1)),
+       [N]               = (select count(*) from @tbl where [N] is not null),
+       [RW]              = (select count(*) from @tbl where [RW] is not null),
+       [VA]              = (select count(*) from @tbl where [VA] is not null),       
+       [and. Auf.]       = (select count(*) from @tbl where [and. Auf.] is not null),
+       männlich          = (select count(*) from @tbl where m is not null),
+       weiblich          = (select count(*) from @tbl where w is not null),
+       Miete             = convert(numeric(11,2),(select sum(isnull(Miete,0)) from @tbl)),
+       Nebenkosten       = convert(numeric(11,2),(select sum(isnull(Nebenkosten,0)) from @tbl)),
+       [Kostenanteil UE] = convert(numeric(11,2),(select sum(isnull([Kostenanteil UE],0)) from @tbl))
+</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="edtDatumBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtDatumVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtUserID.LookupSQL" xml:space="preserve">
+    <value>select ID = UserID, 
+SAR = LastName + isNull(', ' + FirstName,''), 
+[Kuerzel] = LogonName
+             
+from   XUser 
+             where LastName + isNull(', ' + FirstName,'') 
+like isNull({0},'') + '%' 
+             order by SAR</value>
+  </data>
+</root>

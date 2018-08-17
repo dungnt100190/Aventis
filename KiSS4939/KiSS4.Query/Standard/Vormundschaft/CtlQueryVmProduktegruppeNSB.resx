@@ -1,0 +1,707 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>DECLARE @Data TABLE
+(
+  FaLeistungID    INT,
+  Kindesschutz    BIT,
+  PraevSozial     BIT,
+  Familienpflege  BIT,
+  Gutachten       BIT,
+  KSIntervention  INT,
+  KSAnzahlMA      INT,
+  KSBeschwerde    BIT,
+  PSIntervention  INT,
+  PSAnzahlMA      INT,
+  PSBeschwerde    BIT,
+  PSBefragung     INT,
+  FPAbklaerung    INT,
+  FPBesuch        INT,  
+  FPBewilligung   INT,
+  FPUmplatzierung BIT,
+  FPBefragungElt  INT,
+  FPBefragungPfE  INT,
+  GBearbeitung    INT
+);
+
+-------------------------------
+------- Eigene Masken Feld Id's
+-------------------------------
+DECLARE @VmAuftragStatKindesschutzFldID            INT,
+        @VmAuftragStatPraevSozialarbeitFldID       INT,
+        @VmAuftragStatFamPflegeFldID               INT,
+        @VmAuftragStatGutachtenFldID               INT,
+        @VmAuftragStatKSInterventionszeitFldID     INT,
+        @VmAuftragStatKSAnzahlMAFldID              INT,
+        @VmAuftragStatKSBeschwerdeFldID            INT,
+        @VmAuftragStatPSInterventionszeitFldID     INT,
+        @VmAuftragStatPSAnzahlMAFldID              INT,
+        @VmAuftragStatPSBeschwerdeFldID            INT,  
+        @VmAuftragStatPSBefragungFldID             INT,
+        @VmAuftragStatFPAbklaerungFldID            INT,
+        @VmAuftragStatFPBesuchFldID                INT,
+        @VmAuftragStatFPBewilligungFldID           INT,
+        @VmAuftragStatFPUmplatzierungFldID         INT,  
+        @VmAuftragStatFPBefragungElternFldID       INT,
+        @VmAuftragStatFPBefragungPflegeElternFldID INT,
+        @VmAuftragStatGBearbeitungszeitFldID       INT;
+
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatKindesschutz', @VmAuftragStatKindesschutzFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatPraevSozialarbeit', @VmAuftragStatPraevSozialarbeitFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatFamPflege', @VmAuftragStatFamPflegeFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatGutachten', @VmAuftragStatGutachtenFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatKSInterventionszeit', @VmAuftragStatKSInterventionszeitFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatKSAnzahlMA', @VmAuftragStatKSAnzahlMAFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatKSBeschwerde', @VmAuftragStatKSBeschwerdeFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatPSInterventionszeit', @VmAuftragStatPSInterventionszeitFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatPSAnzahlMA', @VmAuftragStatPSAnzahlMAFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatPSBeschwerde', @VmAuftragStatPSBeschwerdeFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatPSBefragung', @VmAuftragStatPSBefragungFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatFPAbklaerung', @VmAuftragStatFPAbklaerungFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatFPBesuch', @VmAuftragStatFPBesuchFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatFPBewilligung', @VmAuftragStatFPBewilligungFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatFPUmplatzierung', @VmAuftragStatFPUmplatzierungFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatFPBefragungEltern', @VmAuftragStatFPBefragungElternFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatFPBefragungPflegeEltern', @VmAuftragStatFPBefragungPflegeElternFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatGBearbeitungszeit', @VmAuftragStatGBearbeitungszeitFldID OUT;
+
+----------------------------------
+---------- Collect Data NSB
+----------------------------------
+INSERT INTO @Data
+  SELECT DISTINCT 
+         FaLeistungID    = FAL.FaLeistungID,
+         Kindesschutz    = CONVERT(BIT, isNull(DKS.[Value], 0)),
+         PraevSozial     = CONVERT(BIT, isNull(DPS.[Value], 0)),
+         Familienpflege  = CONVERT(BIT, isNull(DFP.[Value], 0)),
+         Gutachten       = CONVERT(BIT, isNull(DGU.[Value], 0)),
+         KSIntervention  = CONVERT(INT, isNull((SELECT TOP 1 DV.[Value] FROM dbo.DynaValue DV WITH (READUNCOMMITTED) WHERE DV.FaLeistungID = FAL.FaLeistungID AND DV.DynaFieldID = @VmAuftragStatKSInterventionszeitFldID), -1)),
+         KSAnzahlMA      = CONVERT(INT, isNull((SELECT TOP 1 DV.[Value] FROM dbo.DynaValue DV WITH (READUNCOMMITTED) WHERE DV.FaLeistungID = FAL.FaLeistungID AND DV.DynaFieldID = @VmAuftragStatKSAnzahlMAFldID), -1)),
+         KSBeschwerde    = CONVERT(BIT, isNull((SELECT TOP 1 DV.[Value] FROM dbo.DynaValue DV WITH (READUNCOMMITTED) WHERE DV.FaLeistungID = FAL.FaLeistungID AND DV.DynaFieldID = @VmAuftragStatKSBeschwerdeFldID), 0)),
+         PSIntervention  = CONVERT(INT, isNull((SELECT TOP 1 DV.[Value] FROM dbo.DynaValue DV WITH (READUNCOMMITTED) WHERE DV.FaLeistungID = FAL.FaLeistungID AND DV.DynaFieldID = @VmAuftragStatPSInterventionszeitFldID), -1)),
+         PSAnzahlMA      = CONVERT(INT, isNull((SELECT TOP 1 DV.[Value] FROM dbo.DynaValue DV WITH (READUNCOMMITTED) WHERE DV.FaLeistungID = FAL.FaLeistungID AND DV.DynaFieldID = @VmAuftragStatPSAnzahlMAFldID), -1)),
+         PSBeschwerde    = CONVERT(BIT, isNull((SELECT TOP 1 DV.[Value] FROM dbo.DynaValue DV WITH (READUNCOMMITTED) WHERE DV.FaLeistungID = FAL.FaLeistungID AND DV.DynaFieldID = @VmAuftragStatPSBeschwerdeFldID), 0)),
+         PSBefragung     = CONVERT(INT, isNull((SELECT TOP 1 DV.[Value] FROM dbo.DynaValue DV WITH (READUNCOMMITTED) WHERE DV.FaLeistungID = FAL.FaLeistungID AND DV.DynaFieldID = @VmAuftragStatPSBefragungFldID), -1)),
+         FPAbklaerung    = CONVERT(INT, isNull((SELECT TOP 1 DV.[Value] FROM dbo.DynaValue DV WITH (READUNCOMMITTED) WHERE DV.FaLeistungID = FAL.FaLeistungID AND DV.DynaFieldID = @VmAuftragStatFPAbklaerungFldID), -1)),
+         FPBesuch        = CONVERT(INT, isNull((SELECT TOP 1 DV.[Value] FROM dbo.DynaValue DV WITH (READUNCOMMITTED) WHERE DV.FaLeistungID = FAL.FaLeistungID AND DV.DynaFieldID = @VmAuftragStatFPBesuchFldID), -1)),
+         FPBewilligung   = CONVERT(INT, isNull((SELECT TOP 1 DV.[Value] FROM dbo.DynaValue DV WITH (READUNCOMMITTED) WHERE DV.FaLeistungID = FAL.FaLeistungID AND DV.DynaFieldID = @VmAuftragStatFPBewilligungFldID), -1)),
+         FPUmplatzierung = CONVERT(BIT, isNull((SELECT TOP 1 DV.[Value] FROM dbo.DynaValue DV WITH (READUNCOMMITTED) WHERE DV.FaLeistungID = FAL.FaLeistungID AND DV.DynaFieldID = @VmAuftragStatFPUmplatzierungFldID), 0)),
+         FPBefragungElt  = CONVERT(INT, isNull((SELECT TOP 1 DV.[Value] FROM dbo.DynaValue DV WITH (READUNCOMMITTED) WHERE DV.FaLeistungID = FAL.FaLeistungID AND DV.DynaFieldID = @VmAuftragStatFPBefragungElternFldID), -1)),
+         FPBefragungPfE  = CONVERT(INT, isNull((SELECT TOP 1 DV.[Value] FROM dbo.DynaValue DV WITH (READUNCOMMITTED) WHERE DV.FaLeistungID = FAL.FaLeistungID AND DV.DynaFieldID = @VmAuftragStatFPBefragungPflegeElternFldID), -1)),
+         GBearbeitung    = CONVERT(INT, isNull((SELECT TOP 1 DV.[Value] FROM dbo.DynaValue DV WITH (READUNCOMMITTED) WHERE DV.FaLeistungID = FAL.FaLeistungID AND DV.DynaFieldID = @VmAuftragStatGBearbeitungszeitFldID), -1))
+  FROM dbo.FaLeistung            FAL WITH (READUNCOMMITTED)
+    LEFT  JOIN dbo.XUser         USR WITH (READUNCOMMITTED) ON USR.UserID = FAL.UserID
+    LEFT  JOIN dbo.XOrgUnit_User OUU WITH (READUNCOMMITTED) ON OUU.UserID = USR.UserID
+                                                           AND OUU.OrgUnitMemberCode = 2
+    LEFT  JOIN dbo.XOrgUnit      ORG WITH (READUNCOMMITTED) ON ORG.OrgUnitID = OUU.OrgUnitID
+    LEFT  JOIN dbo.DynaValue     DKS WITH (READUNCOMMITTED) ON DKS.FaLeistungID = FAL.FaLeistungID
+                                                           AND DKS.DynaFieldID = @VmAuftragStatKindesschutzFldID
+    LEFT  JOIN dbo.DynaValue     DPS WITH (READUNCOMMITTED) ON DPS.FaLeistungID = FAL.FaLeistungID
+                                                           AND DPS.DynaFieldID = @VmAuftragStatPraevSozialarbeitFldID
+    LEFT  JOIN dbo.DynaValue     DFP WITH (READUNCOMMITTED) ON DFP.FaLeistungID = FAL.FaLeistungID
+                                                           AND DFP.DynaFieldID = @VmAuftragStatFamPflegeFldID
+    LEFT  JOIN dbo.DynaValue     DGU WITH (READUNCOMMITTED) ON DGU.FaLeistungID = FAL.FaLeistungID
+                                                           AND DGU.DynaFieldID = @VmAuftragStatGutachtenFldID
+  WHERE FAL.ModulID = 5  
+    AND FAL.FaProzessCode = 505 --Vormundschaftlicher Auftrag
+    AND ISNULL(FAL.DatumBis, {edtDatumVon}) &gt;= {edtDatumVon} AND FAL.DatumVon &lt;= {edtDatumBis}  -- Fall aktiv in Periode
+    AND OUU.OrgUnitID IN (SELECT OrgUnitID
+                          FROM dbo.XOrgUnit WITH (READUNCOMMITTED) 
+                          WHERE ModulID = 3 
+                            AND ParentID = 28) -- es sollen nur Einträge der Sektion Jugendamt angezeigt werden
+--- AND FAL.UserID = {edtUserID.LookupID}
+--- AND OUU.OrgUnitID = {edtOrgUnitID}
+--- AND 1 = CASE {edtProduktegruppe} WHEN 1 THEN DKS.Value WHEN 2 THEN DPS.Value WHEN 3 THEN DFP.Value WHEN 4 THEN DGU.Value END
+
+------------------------------------------
+------------ Liste 1: Übersicht alle Fälle
+------------------------------------------
+SELECT DISTINCT 
+       BaPersonID$  = PRS.BaPersonID,
+       Sektion      = ORG.ItemName,
+       SAR          = USR.LastName + ISNULL(', ' + USR.FirstName,''),
+       Person       = PRS.Name + ISNULL(', ' + PRS.Vorname,''),
+       [Alter]      = dbo.fngetage(PRS.Geburtsdatum, GETDATE()),
+       Geschlecht   = CASE PRS.GeschlechtCode
+                        WHEN 1 THEN 'm'
+                        WHEN 2 THEN 'f'
+                        ELSE '?'
+                      END,
+       Nationalität = LAN.Text
+FROM @Data                     DAT
+  INNER JOIN dbo.FaLeistung    FAL WITH (READUNCOMMITTED) ON FAL.FaLeistungID = DAT.FaLeistungID
+  INNER JOIN dbo.BaPerson      PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = FAL.BaPersonID
+  INNER JOIN dbo.XUser         USR WITH (READUNCOMMITTED) ON USR.UserID = FAL.UserID
+  LEFT  JOIN dbo.XOrgUnit_User OUU WITH (READUNCOMMITTED) ON OUU.UserID = USR.UserID
+                                                         AND OUU.OrgUnitMemberCode = 2
+  LEFT  JOIN dbo.XOrgUnit      ORG WITH (READUNCOMMITTED) ON ORG.OrgUnitID = OUU.OrgUnitID
+  LEFT  JOIN dbo.BaLand        LAN WITH (READUNCOMMITTED) ON PRS.NationalitaetCode = LAN.BaLandID
+WHERE DAT.Kindesschutz &gt; 0 
+   OR DAT.PraevSozial &gt; 0 
+   OR DAT.Familienpflege &gt; 0 
+   OR DAT.Gutachten &gt; 0
+ORDER BY Sektion, SAR, Person;</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="xDocument.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABbSURBVDhPY2AAAmNj4/+4MEgeA4AU//8/EwOLiYn9B2Gc
+        GtLSGP4jY5BikEEYmgjZANIAUgO3CZcGZGdi1YDuJBgfpJE6NmALKZjYqJPIijh8KRYmhzXlEhIEANZ8
+        ev1ASni6AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="ctlGotoFallListe2.BaPersonID" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAB9TeXN0ZW0uVW5pdHlTZXJpYWxpemF0aW9uSG9sZGVyAwAAAARE
+        YXRhCVVuaXR5VHlwZQxBc3NlbWJseU5hbWUBAAEICgIAAAAGAgAAAAAL
+</value>
+  </data>
+  <metadata name="qryListe2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>124, 17</value>
+  </metadata>
+  <data name="qryListe2.SelectStatement" xml:space="preserve">
+    <value>DECLARE @Data TABLE
+(
+  FaLeistungID    INT,
+  Kindesschutz    BIT,
+  PraevSozial     BIT,
+  Familienpflege  BIT,
+  Gutachten       BIT,
+  KSIntervention  INT,
+  KSAnzahlMA      INT,
+  KSBeschwerde    BIT,
+  PSIntervention  INT,
+  PSAnzahlMA      INT,
+  PSBeschwerde    BIT,
+  PSBefragung     INT,
+  FPAbklaerung    INT,
+  FPBesuch        INT,  
+  FPBewilligung   INT,
+  FPUmplatzierung BIT,
+  FPBefragungElt  INT,
+  FPBefragungPfE  INT,
+  GBearbeitung    INT
+);
+
+DECLARE @GefMeldungen TABLE
+(
+  FaLeistungID INT,
+  OrgUnitID    INT,
+  UserID       INT,
+  NSB          VARCHAR(100)
+);
+
+-------------------------------
+------- Eigene Masken Feld Id's
+-------------------------------
+DECLARE @VmAuftragStatKindesschutzFldID            INT,
+        @VmAuftragStatPraevSozialarbeitFldID       INT,
+        @VmAuftragStatFamPflegeFldID               INT,
+        @VmAuftragStatGutachtenFldID               INT,
+        @VmAuftragStatKSInterventionszeitFldID     INT,
+        @VmAuftragStatKSAnzahlMAFldID              INT,
+        @VmAuftragStatKSBeschwerdeFldID            INT,
+        @VmAuftragStatPSInterventionszeitFldID     INT,
+        @VmAuftragStatPSAnzahlMAFldID              INT,
+        @VmAuftragStatPSBeschwerdeFldID            INT,  
+        @VmAuftragStatPSBefragungFldID             INT,
+        @VmAuftragStatFPAbklaerungFldID            INT,
+        @VmAuftragStatFPBesuchFldID                INT,
+        @VmAuftragStatFPBewilligungFldID           INT,
+        @VmAuftragStatFPUmplatzierungFldID         INT,  
+        @VmAuftragStatFPBefragungElternFldID       INT,
+        @VmAuftragStatFPBefragungPflegeElternFldID INT,
+        @VmAuftragStatGBearbeitungszeitFldID       INT;
+
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatKindesschutz', @VmAuftragStatKindesschutzFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatPraevSozialarbeit', @VmAuftragStatPraevSozialarbeitFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatFamPflege', @VmAuftragStatFamPflegeFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatGutachten', @VmAuftragStatGutachtenFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatKSInterventionszeit', @VmAuftragStatKSInterventionszeitFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatKSAnzahlMA', @VmAuftragStatKSAnzahlMAFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatKSBeschwerde', @VmAuftragStatKSBeschwerdeFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatPSInterventionszeit', @VmAuftragStatPSInterventionszeitFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatPSAnzahlMA', @VmAuftragStatPSAnzahlMAFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatPSBeschwerde', @VmAuftragStatPSBeschwerdeFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatPSBefragung', @VmAuftragStatPSBefragungFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatFPAbklaerung', @VmAuftragStatFPAbklaerungFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatFPBesuch', @VmAuftragStatFPBesuchFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatFPBewilligung', @VmAuftragStatFPBewilligungFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatFPUmplatzierung', @VmAuftragStatFPUmplatzierungFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatFPBefragungEltern', @VmAuftragStatFPBefragungElternFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatFPBefragungPflegeEltern', @VmAuftragStatFPBefragungPflegeElternFldID OUT;
+EXEC dbo.spGetDynaFldIDfromTextmarke 'VmAuftragStatGBearbeitungszeit', @VmAuftragStatGBearbeitungszeitFldID OUT;
+
+----------------------------------
+---------- Collect Data NSB
+----------------------------------
+INSERT INTO @Data
+  SELECT DISTINCT 
+         FaLeistungID    = FAL.FaLeistungID,
+         Kindesschutz    = CONVERT(BIT, isNull(DKS.[Value], 0)),
+         PraevSozial     = CONVERT(BIT, isNull(DPS.[Value], 0)),
+         Familienpflege  = CONVERT(BIT, isNull(DFP.[Value], 0)),
+         Gutachten       = CONVERT(BIT, isNull(DGU.[Value], 0)),
+         KSIntervention  = CONVERT(INT, isNull((SELECT TOP 1 DV.[Value] FROM dbo.DynaValue DV WITH (READUNCOMMITTED) WHERE DV.FaLeistungID = FAL.FaLeistungID AND DV.DynaFieldID = @VmAuftragStatKSInterventionszeitFldID), -1)),
+         KSAnzahlMA      = CONVERT(INT, isNull((SELECT TOP 1 DV.[Value] FROM dbo.DynaValue DV WITH (READUNCOMMITTED) WHERE DV.FaLeistungID = FAL.FaLeistungID AND DV.DynaFieldID = @VmAuftragStatKSAnzahlMAFldID), -1)),
+         KSBeschwerde    = CONVERT(BIT, isNull((SELECT TOP 1 DV.[Value] FROM dbo.DynaValue DV WITH (READUNCOMMITTED) WHERE DV.FaLeistungID = FAL.FaLeistungID AND DV.DynaFieldID = @VmAuftragStatKSBeschwerdeFldID), 0)),
+         PSIntervention  = CONVERT(INT, isNull((SELECT TOP 1 DV.[Value] FROM dbo.DynaValue DV WITH (READUNCOMMITTED) WHERE DV.FaLeistungID = FAL.FaLeistungID AND DV.DynaFieldID = @VmAuftragStatPSInterventionszeitFldID), -1)),
+         PSAnzahlMA      = CONVERT(INT, isNull((SELECT TOP 1 DV.[Value] FROM dbo.DynaValue DV WITH (READUNCOMMITTED) WHERE DV.FaLeistungID = FAL.FaLeistungID AND DV.DynaFieldID = @VmAuftragStatPSAnzahlMAFldID), -1)),
+         PSBeschwerde    = CONVERT(BIT, isNull((SELECT TOP 1 DV.[Value] FROM dbo.DynaValue DV WITH (READUNCOMMITTED) WHERE DV.FaLeistungID = FAL.FaLeistungID AND DV.DynaFieldID = @VmAuftragStatPSBeschwerdeFldID), 0)),
+         PSBefragung     = CONVERT(INT, isNull((SELECT TOP 1 DV.[Value] FROM dbo.DynaValue DV WITH (READUNCOMMITTED) WHERE DV.FaLeistungID = FAL.FaLeistungID AND DV.DynaFieldID = @VmAuftragStatPSBefragungFldID), -1)),
+         FPAbklaerung    = CONVERT(INT, isNull((SELECT TOP 1 DV.[Value] FROM dbo.DynaValue DV WITH (READUNCOMMITTED) WHERE DV.FaLeistungID = FAL.FaLeistungID AND DV.DynaFieldID = @VmAuftragStatFPAbklaerungFldID), -1)),
+         FPBesuch        = CONVERT(INT, isNull((SELECT TOP 1 DV.[Value] FROM dbo.DynaValue DV WITH (READUNCOMMITTED) WHERE DV.FaLeistungID = FAL.FaLeistungID AND DV.DynaFieldID = @VmAuftragStatFPBesuchFldID), -1)),
+         FPBewilligung   = CONVERT(INT, isNull((SELECT TOP 1 DV.[Value] FROM dbo.DynaValue DV WITH (READUNCOMMITTED) WHERE DV.FaLeistungID = FAL.FaLeistungID AND DV.DynaFieldID = @VmAuftragStatFPBewilligungFldID), -1)),
+         FPUmplatzierung = CONVERT(BIT, isNull((SELECT TOP 1 DV.[Value] FROM dbo.DynaValue DV WITH (READUNCOMMITTED) WHERE DV.FaLeistungID = FAL.FaLeistungID AND DV.DynaFieldID = @VmAuftragStatFPUmplatzierungFldID), 0)),
+         FPBefragungElt  = CONVERT(INT, isNull((SELECT TOP 1 DV.[Value] FROM dbo.DynaValue DV WITH (READUNCOMMITTED) WHERE DV.FaLeistungID = FAL.FaLeistungID AND DV.DynaFieldID = @VmAuftragStatFPBefragungElternFldID), -1)),
+         FPBefragungPfE  = CONVERT(INT, isNull((SELECT TOP 1 DV.[Value] FROM dbo.DynaValue DV WITH (READUNCOMMITTED) WHERE DV.FaLeistungID = FAL.FaLeistungID AND DV.DynaFieldID = @VmAuftragStatFPBefragungPflegeElternFldID), -1)),
+         GBearbeitung    = CONVERT(INT, isNull((SELECT TOP 1 DV.[Value] FROM dbo.DynaValue DV WITH (READUNCOMMITTED) WHERE DV.FaLeistungID = FAL.FaLeistungID AND DV.DynaFieldID = @VmAuftragStatGBearbeitungszeitFldID), -1))
+  FROM dbo.FaLeistung            FAL WITH (READUNCOMMITTED)
+    LEFT  JOIN dbo.XUser         USR WITH (READUNCOMMITTED) ON USR.UserID = FAL.UserID
+    LEFT  JOIN dbo.XOrgUnit_User OUU WITH (READUNCOMMITTED) ON OUU.UserID = USR.UserID
+                                                           AND OUU.OrgUnitMemberCode = 2
+    LEFT  JOIN dbo.XOrgUnit      ORG WITH (READUNCOMMITTED) on ORG.OrgUnitID = OUU.OrgUnitID
+    LEFT  JOIN dbo.DynaValue     DKS WITH (READUNCOMMITTED) ON DKS.FaLeistungID = FAL.FaLeistungID
+                                                           AND DKS.DynaFieldID = @VmAuftragStatKindesschutzFldID
+    LEFT  JOIN dbo.DynaValue     DPS WITH (READUNCOMMITTED) ON DPS.FaLeistungID = FAL.FaLeistungID
+                                                           AND DPS.DynaFieldID = @VmAuftragStatPraevSozialarbeitFldID
+    LEFT  JOIN dbo.DynaValue     DFP WITH (READUNCOMMITTED) ON DFP.FaLeistungID = FAL.FaLeistungID
+                                                           AND DFP.DynaFieldID = @VmAuftragStatFamPflegeFldID
+    LEFT  JOIN dbo.DynaValue     DGU WITH (READUNCOMMITTED) ON DGU.FaLeistungID = FAL.FaLeistungID
+                                                           AND DGU.DynaFieldID = @VmAuftragStatGutachtenFldID
+  WHERE FAL.ModulID = 5 
+    AND FAL.FaProzessCode = 505 --Vormundschaftlicher Auftrag
+    AND ISNULL(FAL.DatumBis, {edtDatumVon}) &gt;= {edtDatumVon} AND FAL.DatumVon &lt;= {edtDatumBis}  -- Fall aktiv in Periode
+    AND OUU.OrgUnitID IN (SELECT OrgUnitID 
+                          FROM dbo.XOrgUnit WITH (READUNCOMMITTED) 
+                          WHERE ModulID = 3 
+                           AND ParentID = 28) -- es sollen nur Einträge der Sektion Jugendamt angezeigt werden
+--- AND FAL.UserID = {edtUserID.LookupID}
+--- AND OUU.OrgUnitID = {edtOrgUnitID}
+--- AND 1 = CASE {edtProduktegruppe} WHEN 1 THEN DKS.Value WHEN 2 THEN DPS.Value WHEN 3 THEN DFP.Value WHEN 4 THEN DGU.Value END
+
+----------------------------------
+---------- Collect Data Gefährdungsmeldungen
+----------------------------------
+INSERT INTO @GefMeldungen
+  SELECT FaLeistungID = GME.FaLeistungID,
+         OrgUnitID    = OUU.OrgUnitID,
+         UserID       = LEI.UserID,
+         NSB          = GME.VmGefaehrdungNSBCodes
+  FROM dbo.VmGefaehrdungsMeldung GME WITH (READUNCOMMITTED)
+    INNER JOIN dbo.FaLeistung    LEI WITH (READUNCOMMITTED) ON LEI.FaLeistungID = GME.FaLeistungID
+    INNER JOIN dbo.XUser         USR WITH (READUNCOMMITTED) ON USR.UserID = LEI.UserID  
+    LEFT  JOIN dbo.XOrgUnit_User OUU WITH (READUNCOMMITTED) ON OUU.UserID = USR.UserID
+                                                           AND OUU.OrgUnitMemberCode = 2
+    LEFT  JOIN dbo.XOrgUnit      ORG WITH (READUNCOMMITTED) ON ORG.OrgUnitID = OUU.OrgUnitID
+--- AND ORG.OrgUnitID = {edtOrgUnitID}
+  WHERE GME.DatumEingang BETWEEN {edtDatumVon} AND {edtDatumBis}
+    AND GME.IsDeleted = 0                   -- only non-deleted entries
+--- AND ORG.OrgUnitID = {edtOrgUnitID}
+--- AND USR.UserID = {edtUserID.LookupID}
+
+------------------------------------------
+------------ Result Table
+------------------------------------------
+DECLARE @Result TABLE
+(
+  Abteilung    VARCHAR(100),
+  SAR          VARCHAR(100),
+  KS           INT,
+  pSA          INT,
+  FP           INT,
+  G            INT,
+  Total        INT,
+  [KS-AFr-e]   INT,
+  [KS-AFr-ne]  INT,
+  [KS-Fr-e]    INT,
+  [KS-Fr-ne]   INT,
+  [KS-uGM]     INT,
+  [KS-Besch]   INT,
+  [KS-MA-1]    INT,
+  [KS-MA-2]    INT,
+  [KS-MA-3]    INT,
+  [pSA-Fr-e]   INT,
+  [pSA-Fr-ne]  INT,
+  [pSA-Besch]  INT,
+  [pSA-MA-1]   INT,
+  [pSA-MA-2]   INT,
+  [pSA-MA-3]   INT,
+  [FP-FrPp-e]  INT,
+  [FP-FrPp-ne] INT,
+  [FP-BPp-nie] INT,
+  [FP-BPp-1]   INT,
+  [FP-BPp-2]   INT,
+  [FP-BPp-3]   INT,
+  [FP-FrBw-e]  INT,
+  [FP-FrBw-ne] INT,
+  [FP-Ump]     INT,
+  [FP-GMPp]    INT,
+  [FP-GMHf]    INT,
+  [G-FrBz-e]   INT,
+  [G-FrBz-ne]  INT,
+  Sortkey1$    INT,
+  Sortkey2$    INT
+);
+
+------- Abteilung
+INSERT INTO @Result
+  SELECT MAX(ORG.ItemName), NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
+         NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, ORG.OrgUnitID, NULL
+  FROM @Data                     DAT
+    INNER JOIN dbo.FaLeistung    FAL WITH (READUNCOMMITTED) ON FAL.FaLeistungID = DAT.FaLeistungID
+    INNER JOIN dbo.BaPerson      PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = FAL.BaPersonID
+    INNER JOIN dbo.XUser         USR WITH (READUNCOMMITTED) ON USR.UserID = FAL.UserID
+    LEFT  JOIN dbo.XOrgUnit_User OUU WITH (READUNCOMMITTED) ON OUU.UserID = USR.UserID
+                                                           AND OUU.OrgUnitMemberCode = 2
+    LEFT  JOIN dbo.XOrgUnit      ORG WITH (READUNCOMMITTED) ON ORG.OrgUnitID = OUU.OrgUnitID
+  GROUP BY ORG.OrgUnitID;
+
+------- Total Abteilung
+INSERT INTO @Result
+  SELECT NULL, 
+         'Total', 
+         SUM(CASE WHEN DAT.Kindesschutz = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.PraevSozial = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Gutachten = 1 THEN 1 ELSE 0 END),
+         SUM(CONVERT(INT, DAT.Kindesschutz) + CONVERT(INT, DAT.PraevSozial) + CONVERT(INT, DAT.Familienpflege) + CONVERT(INT, DAT.Gutachten)),
+         SUM(CASE WHEN DAT.Kindesschutz = 1 AND DAT.KSIntervention = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Kindesschutz = 1 AND DAT.KSIntervention = 2 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Kindesschutz = 1 AND DAT.KSIntervention = 3 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Kindesschutz = 1 AND DAT.KSIntervention = 4 THEN 1 ELSE 0 END),
+         (SELECT SUM(CASE WHEN '%,'+NSB+',%' LIKE '%,1,%' THEN 1 ELSE 0 END)
+          FROM @GefMeldungen
+          WHERE OrgUnitID = ORG.OrgUnitID),
+         SUM(CASE WHEN DAT.Kindesschutz = 1 AND DAT.KSBeschwerde = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Kindesschutz = 1 AND DAT.KSAnzahlMA = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Kindesschutz = 1 AND DAT.KSAnzahlMA = 2 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Kindesschutz = 1 AND DAT.KSAnzahlMA = 3 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.PraevSozial = 1 AND DAT.PSIntervention = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.PraevSozial = 1 AND DAT.PSIntervention = 2 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.PraevSozial = 1 AND DAT.PSBeschwerde = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.PraevSozial = 1 AND DAT.PSAnzahlMA = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.PraevSozial = 1 AND DAT.PSAnzahlMA = 2 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.PraevSozial = 1 AND DAT.PSAnzahlMA = 3 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 AND DAT.FPAbklaerung = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 AND DAT.FPAbklaerung = 2 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 AND DAT.FPBesuch = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 AND DAT.FPBesuch = 2 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 AND DAT.FPBesuch = 3 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 AND DAT.FPBesuch = 4 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 AND DAT.FPBewilligung = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 AND DAT.FPBewilligung = 2 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 AND DAT.FPUmplatzierung = 1 THEN 1 ELSE 0 END),
+         (SELECT SUM(CASE WHEN '%,'+NSB+',%' LIKE '%,2,%' THEN 1 ELSE 0 END)
+          FROM @GefMeldungen
+          WHERE OrgUnitID = ORG.OrgUnitID),
+         (SELECT SUM(CASE WHEN '%,'+NSB+',%' LIKE '%,3,%' THEN 1 ELSE 0 END)
+          FROM @GefMeldungen
+          WHERE OrgUnitID = ORG.OrgUnitID),
+         SUM(CASE WHEN DAT.Gutachten = 1 AND DAT.GBearbeitung = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Gutachten = 1 AND DAT.GBearbeitung = 2 THEN 1 ELSE 0 END),
+         ORG.OrgUnitID, 
+         2
+  FROM @Data                     DAT
+    INNER JOIN dbo.FaLeistung    FAL WITH (READUNCOMMITTED) ON FAL.FaLeistungID = DAT.FaLeistungID
+    INNER JOIN dbo.BaPerson      PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = FAL.BaPersonID
+    INNER JOIN dbo.XUser         USR WITH (READUNCOMMITTED) ON USR.UserID = FAL.UserID
+    LEFT  JOIN dbo.XOrgUnit_User OUU WITH (READUNCOMMITTED) ON OUU.UserID = USR.UserID
+                                                           AND OUU.OrgUnitMemberCode = 2
+    LEFT  JOIN dbo.XOrgUnit      ORG WITH (READUNCOMMITTED) ON ORG.OrgUnitID = OUU.OrgUnitID
+  GROUP BY ORG.OrgUnitID;
+
+------- Leerzeile pro Abteilung
+INSERT INTO @Result
+  SELECT NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
+         NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,NULL, NULL, NULL, NULL, NULL, ORG.OrgUnitID, 3
+  FROM @Data                     DAT
+    INNER JOIN dbo.FaLeistung    FAL WITH (READUNCOMMITTED) ON FAL.FaLeistungID = DAT.FaLeistungID
+    INNER JOIN dbo.BaPerson      PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = FAL.BaPersonID
+    INNER JOIN dbo.XUser         USR WITH (READUNCOMMITTED) ON USR.UserID = FAL.UserID
+    LEFT  JOIN dbo.XOrgUnit_User OUU WITH (READUNCOMMITTED) ON OUU.UserID = USR.UserID
+                                                           AND OUU.OrgUnitMemberCode = 2
+    LEFT  JOIN dbo.XOrgUnit      ORG WITH (READUNCOMMITTED) ON ORG.OrgUnitID = OUU.OrgUnitID
+  GROUP BY ORG.OrgUnitID;
+
+------- pro SAR
+INSERT INTO @Result
+  SELECT NULL, 
+         MAX(USR.LastName + ISNULL(', ' + USR.FirstName,'')), 
+         SUM(CASE WHEN DAT.Kindesschutz = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.PraevSozial = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Gutachten = 1 THEN 1 ELSE 0 END),
+         SUM(CONVERT(INT, DAT.Kindesschutz) + CONVERT(INT, DAT.PraevSozial) + CONVERT(INT, DAT.Familienpflege) + CONVERT(INT, DAT.Gutachten)),
+         SUM(CASE WHEN DAT.Kindesschutz = 1 AND DAT.KSIntervention = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Kindesschutz = 1 AND DAT.KSIntervention = 2 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Kindesschutz = 1 AND DAT.KSIntervention = 3 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Kindesschutz = 1 AND DAT.KSIntervention = 4 THEN 1 ELSE 0 END),
+         (SELECT SUM(CASE WHEN '%,'+NSB+',%' LIKE '%,1,%' THEN 1 ELSE 0 END)
+          FROM @GefMeldungen
+          WHERE UserID = USR.UserID),
+         SUM(CASE WHEN DAT.Kindesschutz = 1 AND DAT.KSBeschwerde = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Kindesschutz = 1 AND DAT.KSAnzahlMA = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Kindesschutz = 1 AND DAT.KSAnzahlMA = 2 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Kindesschutz = 1 AND DAT.KSAnzahlMA = 3 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.PraevSozial = 1 AND DAT.PSIntervention = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.PraevSozial = 1 AND DAT.PSIntervention = 2 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.PraevSozial = 1 AND DAT.PSBeschwerde = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.PraevSozial = 1 AND DAT.PSAnzahlMA = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.PraevSozial = 1 AND DAT.PSAnzahlMA = 2 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.PraevSozial = 1 AND DAT.PSAnzahlMA = 3 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 AND DAT.FPAbklaerung = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 AND DAT.FPAbklaerung = 2 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 AND DAT.FPBesuch = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 AND DAT.FPBesuch = 2 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 AND DAT.FPBesuch = 3 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 AND DAT.FPBesuch = 4 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 AND DAT.FPBewilligung = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 AND DAT.FPBewilligung = 2 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 AND DAT.FPUmplatzierung = 1 THEN 1 ELSE 0 END),
+         (SELECT SUM(CASE WHEN '%,'+NSB+',%' LIKE '%,2,%' THEN 1 ELSE 0 END)
+          FROM @GefMeldungen
+          WHERE UserID = USR.UserID),
+         (SELECT SUM(CASE WHEN '%,'+NSB+',%' LIKE '%,3,%' THEN 1 ELSE 0 END)
+          FROM @GefMeldungen
+          WHERE UserID = USR.UserID),
+         SUM(CASE WHEN DAT.Gutachten = 1 AND DAT.GBearbeitung = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Gutachten = 1 AND DAT.GBearbeitung = 2 THEN 1 ELSE 0 END),
+         MAX(ORG.OrgUnitID),
+         1
+  FROM @Data                     DAT
+    INNER JOIN dbo.FaLeistung    FAL WITH (READUNCOMMITTED) ON FAL.FaLeistungID = DAT.FaLeistungID
+    INNER JOIN dbo.BaPerson      PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = FAL.BaPersonID
+    INNER JOIN dbo.XUser         USR WITH (READUNCOMMITTED) ON USR.UserID = FAL.UserID
+    LEFT  JOIN dbo.XOrgUnit_User OUU WITH (READUNCOMMITTED) ON OUU.UserID = USR.UserID
+                                                           AND OUU.OrgUnitMemberCode = 2
+    LEFT  JOIN dbo.XOrgUnit      ORG WITH (READUNCOMMITTED) ON ORG.OrgUnitID = OUU.OrgUnitID
+  GROUP BY USR.UserID;
+
+------- Total
+INSERT INTO @Result
+  SELECT 'Total', 
+         NULL, 
+         SUM(CASE WHEN DAT.Kindesschutz = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.PraevSozial = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Gutachten = 1 THEN 1 ELSE 0 END),
+         SUM(CONVERT(INT, DAT.Kindesschutz) + CONVERT(INT, DAT.PraevSozial) + CONVERT(INT, DAT.Familienpflege) + CONVERT(INT, DAT.Gutachten)),
+         SUM(CASE WHEN DAT.Kindesschutz = 1 AND DAT.KSIntervention = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Kindesschutz = 1 AND DAT.KSIntervention = 2 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Kindesschutz = 1 AND DAT.KSIntervention = 3 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Kindesschutz = 1 AND DAT.KSIntervention = 4 THEN 1 ELSE 0 END),
+         (SELECT SUM(CASE WHEN '%,'+NSB+',%' LIKE '%,1,%' THEN 1 ELSE 0 END)
+          FROM @GefMeldungen),
+         SUM(CASE WHEN DAT.Kindesschutz = 1 AND DAT.KSBeschwerde = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Kindesschutz = 1 AND DAT.KSAnzahlMA = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Kindesschutz = 1 AND DAT.KSAnzahlMA = 2 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Kindesschutz = 1 AND DAT.KSAnzahlMA = 3 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.PraevSozial = 1 AND DAT.PSIntervention = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.PraevSozial = 1 AND DAT.PSIntervention = 2 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.PraevSozial = 1 AND DAT.PSBeschwerde = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.PraevSozial = 1 AND DAT.PSAnzahlMA = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.PraevSozial = 1 AND DAT.PSAnzahlMA = 2 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.PraevSozial = 1 AND DAT.PSAnzahlMA = 3 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 AND DAT.FPAbklaerung = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 AND DAT.FPAbklaerung = 2 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 AND DAT.FPBesuch = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 AND DAT.FPBesuch = 2 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 AND DAT.FPBesuch = 3 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 AND DAT.FPBesuch = 4 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 AND DAT.FPBewilligung = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 AND DAT.FPBewilligung = 2 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Familienpflege = 1 AND DAT.FPUmplatzierung = 1 THEN 1 ELSE 0 END),
+         (SELECT SUM(CASE WHEN '%,'+NSB+',%' LIKE '%,2,%' THEN 1 ELSE 0 END)
+          FROM @GefMeldungen),
+         (SELECT SUM(CASE WHEN '%,'+NSB+',%' LIKE '%,3,%' THEN 1 ELSE 0 END)
+          FROM @GefMeldungen),
+         SUM(CASE WHEN DAT.Gutachten = 1 AND DAT.GBearbeitung = 1 THEN 1 ELSE 0 END),
+         SUM(CASE WHEN DAT.Gutachten = 1 AND DAT.GBearbeitung = 2 THEN 1 ELSE 0 END),
+         9999999,
+         NULL
+  FROM @Data                     DAT
+    INNER JOIN dbo.FaLeistung    FAL WITH (READUNCOMMITTED) ON FAL.FaLeistungID = DAT.FaLeistungID
+    INNER JOIN dbo.BaPerson      PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = FAL.BaPersonID
+    INNER JOIN dbo.XUser         USR WITH (READUNCOMMITTED) ON USR.UserID = FAL.UserID
+    LEFT  JOIN dbo.XOrgUnit_User OUU WITH (READUNCOMMITTED) ON OUU.UserID = USR.UserID
+                                                           AND OUU.OrgUnitMemberCode = 2
+    LEFT  JOIN dbo.XOrgUnit      ORG WITH (READUNCOMMITTED) ON ORG.OrgUnitID = OUU.OrgUnitID;
+
+UPDATE @Result
+SET KS           = CASE WHEN KS = 0 THEN NULL ELSE KS END,
+    pSA          = CASE WHEN pSA = 0 THEN NULL ELSE pSA END,
+    FP           = CASE WHEN FP = 0 THEN NULL ELSE FP END,
+    G            = CASE WHEN G = 0 THEN NULL ELSE G END,
+    [KS-AFr-e]   = CASE WHEN [KS-AFr-e] = 0 THEN NULL ELSE [KS-AFr-e] END,
+    [KS-AFr-ne]  = CASE WHEN [KS-AFr-ne] = 0 THEN NULL ELSE [KS-AFr-ne] END,
+    [KS-Fr-e]    = CASE WHEN [KS-Fr-e] = 0 THEN NULL ELSE [KS-Fr-e] END,
+    [KS-Fr-ne]   = CASE WHEN [KS-Fr-ne] = 0 THEN NULL ELSE [KS-Fr-ne] END,
+    [KS-uGM]     = CASE WHEN [KS-uGM] = 0 THEN NULL ELSE [KS-uGM] END,
+    [KS-Besch]   = CASE WHEN [KS-Besch] = 0 THEN NULL ELSE [KS-Besch] END,
+    [KS-MA-1]    = CASE WHEN [KS-MA-1] = 0 THEN NULL ELSE [KS-MA-1] END,
+    [KS-MA-2]    = CASE WHEN [KS-MA-2] = 0 THEN NULL ELSE [KS-MA-2] END,
+    [KS-MA-3]    = CASE WHEN [KS-MA-3] = 0 THEN NULL ELSE [KS-MA-3] END,
+    [pSA-Fr-e]   = CASE WHEN [pSA-Fr-e] = 0 THEN NULL ELSE [pSA-Fr-e] END,
+    [pSA-Fr-ne]  = CASE WHEN [pSA-Fr-ne] = 0 THEN NULL ELSE [pSA-Fr-ne] END,
+    [pSA-Besch]  = CASE WHEN [pSA-Besch] = 0 THEN NULL ELSE [pSA-Besch] END,
+    [pSA-MA-1]   = CASE WHEN [pSA-MA-1] = 0 THEN NULL ELSE [pSA-MA-1] END,
+    [pSA-MA-2]   = CASE WHEN [pSA-MA-2] = 0 THEN NULL ELSE [pSA-MA-2] END,
+    [pSA-MA-3]   = CASE WHEN [pSA-MA-3] = 0 THEN NULL ELSE [pSA-MA-3] END,
+    [FP-FrPp-e]  = CASE WHEN [FP-FrPp-e] = 0 THEN NULL ELSE [FP-FrPp-e] END,
+    [FP-FrPp-ne] = CASE WHEN [FP-FrPp-ne] = 0 THEN NULL ELSE [FP-FrPp-ne] END,
+    [FP-BPp-nie] = CASE WHEN [FP-BPp-nie] = 0 THEN NULL ELSE [FP-BPp-nie] END,
+    [FP-BPp-1]   = CASE WHEN [FP-BPp-1] = 0 THEN NULL ELSE [FP-BPp-1] END,
+    [FP-BPp-2]   = CASE WHEN [FP-BPp-2] = 0 THEN NULL ELSE [FP-BPp-2] END,
+    [FP-BPp-3]   = CASE WHEN [FP-BPp-3] = 0 THEN NULL ELSE [FP-BPp-3] END,
+    [FP-FrBw-e]  = CASE WHEN [FP-FrBw-e] = 0 THEN NULL ELSE [FP-FrBw-e] END,
+    [FP-FrBw-ne] = CASE WHEN [FP-FrBw-ne] = 0 THEN NULL ELSE [FP-FrBw-ne] END,
+    [FP-Ump]     = CASE WHEN [FP-Ump] = 0 THEN NULL ELSE [FP-Ump] END,
+    [FP-GMPp]    = CASE WHEN [FP-GMPp] = 0 THEN NULL ELSE [FP-GMPp] END,
+    [FP-GMHf]    = CASE WHEN [FP-GMHf] = 0 THEN NULL ELSE [FP-GMHf] END,
+    [G-FrBz-e]   = CASE WHEN [G-FrBz-e] = 0 THEN NULL ELSE [G-FrBz-e] END,
+    [G-FrBz-ne]  = CASE WHEN [G-FrBz-ne] = 0 THEN NULL ELSE [G-FrBz-ne] END
+WHERE SAR &lt;&gt; 'Total' AND ISNULL(Abteilung, '') &lt;&gt; 'Total';
+
+SELECT *
+FROM @Result
+ORDER BY Sortkey1$, Abteilung DESC, Sortkey2$, SAR;</value>
+  </data>
+  <data name="edtDatumBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="edtDatumVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+</root>

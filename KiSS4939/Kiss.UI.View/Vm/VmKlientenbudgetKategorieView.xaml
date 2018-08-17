@@ -1,0 +1,280 @@
+﻿<View:KissView
+    x:Class="Kiss.UI.View.Vm.VmKlientenbudgetKategorieView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:View="clr-namespace:Kiss.UI.View"
+    xmlns:ViewModel="clr-namespace:Kiss.UI.ViewModel.Vm;assembly=Kiss.UI.ViewModel"
+    xmlns:Constant="clr-namespace:Kiss.UI.Controls.Constant;assembly=Kiss.UI.Controls"
+    xmlns:Controls="clr-namespace:Kiss.UI.Controls;assembly=Kiss.UI.Controls"
+    xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+    xmlns:dxgt="http://schemas.devexpress.com/winfx/2008/xaml/grid/themekeys"
+    xmlns:Converter="clr-namespace:Kiss.UI.Controls.Converter;assembly=Kiss.UI.Controls"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    xmlns:Vm="clr-namespace:Kiss.UI.View.Vm"
+    Loaded="KissView_Loaded"
+    mc:Ignorable="d"
+    MinHeight="150"
+    MinWidth="450"
+    d:DesignHeight="250"
+    d:DesignWidth="650">
+
+    <View:KissView.Resources>
+        <ViewModel:VmKlientenbudgetKategorieVM x:Key="viewModel" />
+        <Converter:StringFormatConverter x:Key="ToUpperConverter" ToUpper="True" />
+        <Converter:BoolInvertConverter x:Key="BoolInvertConverter" />
+        <Converter:Boolean2VisibilityConverter x:Key="VisibilityConverter" DefaultValue="False" FalseValue="Collapsed" TrueValue="Visible" />
+        <Converter:Boolean2DefaultBooleanConverter x:Key="AllowEditingConverter" DefaultValue="False" TrueValue="False" FalseValue="True" />
+        <Converter:DefaultBooleanToBooleanConverter x:Key="InverseDefaultBoolToBoolConverter" Invert="True" />
+        <Converter:DefaultBooleanToBooleanConverter x:Key="DefaultBoolToBoolConverter" Invert="False" />
+        <Converter:Boolean2NavigationStyleConverter x:Key="BoolNavigationStyleConverter" DefaultValue="False" FalseValue="Cell" TrueValue="Row" />
+    </View:KissView.Resources>
+
+    <Grid Name="panRoot" DataContext="{StaticResource ResourceKey=viewModel}" Margin="{x:Static Constant:LayoutConstant.MarginDetailControl}">
+        <Grid.RowDefinitions>
+            <RowDefinition MinHeight="100" />
+            <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControlSmall}" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="{x:Static Constant:LayoutConstant.ColumnWidthDetailControl}" />
+            <ColumnDefinition />
+            <ColumnDefinition Width="{x:Static Constant:LayoutConstant.ColumnWidthDetailControl}" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <!-- New-Button -->
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Controls:KissButton x:Name="btnAdd"
+                                 Grid.Row="1"
+                                 Content="+"
+                                 FontWeight="Bold"
+                                 Width="25"
+                                 Height="25"
+                                 Command="{Binding Path=AddCommand}"
+                                 ToolTip="neue Position erstellen"
+                                 Click="btnAdd_Click" />
+        </Grid>
+
+        <!-- Grid -->
+        <Controls:KissGrid x:Name="grdPositionen"
+                               Grid.Row="0"
+                               Grid.Column="2"
+                               DataSource="{Binding Path=EntityList}"
+                               SelectedItem="{Binding SelectedEntity, Mode=TwoWay}"
+                               CustomSummary="grdPositionen_CustomSummary">
+            <Controls:KissGrid.Columns>
+                <!--Hidden sorting column-->
+                <dxg:GridColumn x:Name="colSortKey"
+                                FieldName="VmPosition.SortKey"
+                                SortOrder="Ascending"
+                                SortMode="Value"
+                                Visible="False"
+                                AllowColumnFiltering="False"
+                                AllowGrouping="False"
+                                AllowSorting="True"
+                                AllowMoving="False" />
+
+                <dxg:GridColumn x:Name="colName"
+                                Header="{Binding Path=Title, Converter={StaticResource ToUpperConverter}}"
+                                FixedWidth="True"
+                                FieldName="VmPosition.Name"
+                                Width="250"
+                                AllowEditing="{Binding Path=IsReadOnly, Converter={StaticResource AllowEditingConverter}}"
+                                VisibleIndex="0"
+                                AllowColumnFiltering="False"
+                                AllowSorting="True" />
+
+                <Controls:GridColumnBetrag Header="jährlich"
+                                           FieldName="VmPosition.BetragJaehrlich"
+                                           FixedWidth="True"
+                                           AllowEditing="{Binding Path=IsReadOnly, Converter={StaticResource AllowEditingConverter}}"
+                                           Visible="{Binding Path=IsVermoegen, Converter={StaticResource ResourceKey=BoolInvertConverter}}"
+                                           VisibleIndex="1"
+                                           AllowColumnFiltering="False"
+                                           AllowSorting="False">
+                    <Controls:GridColumnBetrag.EditSettings>
+                        <dxe:CalcEditSettings IsTextEditable="True" MaskType="Numeric" Mask="N2" Precision="2" AllowDefaultButton="False" MaskUseAsDisplayFormat="True" />
+                    </Controls:GridColumnBetrag.EditSettings>
+                </Controls:GridColumnBetrag>
+                <Controls:GridColumnBetrag Header="monatlich"
+                                           FieldName="VmPosition.BetragMonatlich"
+                                           FixedWidth="True"
+                                           AllowEditing="{Binding Path=IsReadOnly, Converter={StaticResource AllowEditingConverter}}"
+                                           Visible="{Binding Path=IsVermoegen, Converter={StaticResource ResourceKey=BoolInvertConverter}}"
+                                           VisibleIndex="2"
+                                           AllowColumnFiltering="False"
+                                           AllowSorting="False">
+                    <Controls:GridColumnBetrag.EditSettings>
+                        <dxe:CalcEditSettings IsTextEditable="True" MaskType="Numeric" Mask="N2" Precision="2" AllowDefaultButton="False" MaskUseAsDisplayFormat="True" />
+                    </Controls:GridColumnBetrag.EditSettings>
+                </Controls:GridColumnBetrag>
+
+                <Controls:GridColumnDate Header="per"
+                                         FieldName="VmPosition.DatumSaldoPer"
+                                         FixedWidth="True"
+                                         AllowEditing="{Binding Path=IsReadOnly, Converter={StaticResource AllowEditingConverter}}"
+                                         Visible="{Binding Path=IsVermoegen}"
+                                         VisibleIndex="3"
+                                         AllowColumnFiltering="False"
+                                         AllowSorting="False" />
+
+                <Controls:GridColumnBetrag Header="Saldo"
+                                           FieldName="VmPosition.Saldo"
+                                           FixedWidth="True"
+                                           AllowEditing="{Binding Path=IsReadOnly, Converter={StaticResource AllowEditingConverter}}"
+                                           Visible="{Binding Path=IsVermoegen}"
+                                           VisibleIndex="4"
+                                           AllowColumnFiltering="False"
+                                           AllowSorting="False">
+                    <Controls:GridColumnBetrag.EditSettings>
+                        <dxe:CalcEditSettings IsTextEditable="True" MaskType="Numeric" Mask="N2" Precision="2" AllowDefaultButton="False" MaskUseAsDisplayFormat="True" />
+                    </Controls:GridColumnBetrag.EditSettings>
+                </Controls:GridColumnBetrag>
+
+                <dxg:GridColumn x:Name="colBemerkungen"
+                                Header="Bemerkungen"
+                                FieldName="VmPosition.Bemerkung"
+                                AllowEditing="{Binding Path=IsReadOnly, Converter={StaticResource AllowEditingConverter}}"
+                                VisibleIndex="5"
+                                AllowColumnFiltering="False"
+                                AllowSorting="False">
+                    <!-- Drop-Down Template für EL-Freibetrag -->
+                    <dxg:GridColumn.CellTemplateSelector>
+                        <Vm:VmPositionSaldoCellTemplateSelector>
+                            <Vm:VmPositionSaldoCellTemplateSelector.DropDownTemplate>
+                                <DataTemplate>
+                                    <!-- Der DataContext is vom Typ EditGridCellData -->
+                                    <Controls:KissComboBox
+                                        ItemsSource="{Binding Source={StaticResource viewModel}, Path=ElFreibetragListe}"
+                                        EditValue="{Binding Path=Data.VmPosition.Saldo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                        DisplayMember="Text"
+                                        ValueMember="Betrag"
+                                        IsReadOnly="{Binding Path=Column.AllowEditing, Converter={StaticResource InverseDefaultBoolToBoolConverter}}"
+                                        IsEnabled="{Binding Path=Column.AllowEditing, Converter={StaticResource DefaultBoolToBoolConverter}}" />
+                                </DataTemplate>
+                            </Vm:VmPositionSaldoCellTemplateSelector.DropDownTemplate>
+                        </Vm:VmPositionSaldoCellTemplateSelector>
+                    </dxg:GridColumn.CellTemplateSelector>
+                </dxg:GridColumn>
+
+                <dxg:GridColumn Header=""
+                                ToolTip="Import"
+                                Width="27"
+                                AllowBestFit="False"
+                                AllowEditing="False"
+                                AllowResizing="False"
+                                FixedWidth="True"
+                                Fixed="Right"
+                                VisibleIndex="6"
+                                FieldName="CanImport"
+                                UnboundType="Object"
+                                Visible="{Binding Path=IsReadOnly, Converter={StaticResource ResourceKey=BoolInvertConverter}}"
+                                AllowColumnFiltering="False"
+                                AllowSorting="False">
+                    <dxg:GridColumn.CellTemplate>
+                        <DataTemplate>
+                            <Controls:KissButton Click="ColImport_ButtonClick"
+                                                 Width="20"
+                                                 Height="20"
+                                                 IsEnabled="True"
+                                                 Visibility="{Binding Path=Data.CanImport, Converter={StaticResource ResourceKey=VisibilityConverter}}"
+                                                 ToolTip="importieren">
+                                <Image Source="/Kiss.Infrastructure;component/Images/Kiss_VmKlientenbudget_Import.png" Width="16" Height="16" Margin="-3,-3,0,0" />
+                            </Controls:KissButton>
+                        </DataTemplate>
+                    </dxg:GridColumn.CellTemplate>
+                </dxg:GridColumn>
+
+                <dxg:GridColumn Header=""
+                                ToolTip="Löschen"
+                                Width="27"
+                                AllowBestFit="False"
+                                AllowEditing="False"
+                                AllowResizing="False"
+                                FixedWidth="True"
+                                Fixed="Right"
+                                VisibleIndex="7"
+                                FieldName="CanDelete"
+                                UnboundType="Object"
+                                Visible="{Binding Path=IsReadOnly, Converter={StaticResource ResourceKey=BoolInvertConverter}}"
+                                AllowColumnFiltering="False"
+                                AllowSorting="False">
+                    <dxg:GridColumn.CellTemplate>
+                        <DataTemplate>
+                            <Controls:KissButton Click="ColLoeschen_ButtonClick"
+                                                 Width="20"
+                                                 Height="20"
+                                                 IsEnabled="{Binding Path=Data.CanDelete}"
+                                                 ToolTip="löschen">
+                                <Controls:KissLabel Content="X" Margin="1,-7,0,0" FontWeight="Bold" />
+                            </Controls:KissButton>
+                        </DataTemplate>
+                    </dxg:GridColumn.CellTemplate>
+                </dxg:GridColumn>
+            </Controls:KissGrid.Columns>
+
+            <Controls:KissGrid.TotalSummary>
+                <dxg:GridSummaryItem SummaryType="Custom" FieldName="VmPosition.Name" ShowInColumn="VmPosition.Name" />
+                <dxg:GridSummaryItem SummaryType="Sum" FieldName="VmPosition.BetragJaehrlich" ShowInColumn="VmPosition.BetragJaehrlich" DisplayFormat="0.00" />
+                <dxg:GridSummaryItem SummaryType="Sum" FieldName="VmPosition.BetragMonatlich" ShowInColumn="VmPosition.BetragMonatlich" DisplayFormat="0.00" />
+            </Controls:KissGrid.TotalSummary>
+
+            <Controls:KissGrid.View>
+                <dxg:TableView ShowGroupPanel="False"
+                               RowMinHeight="20"
+                               AllowEditing="False"
+                               AllowSorting="True"
+                               AllowMoving="False"
+                               AutoWidth="True"
+                               NavigationStyle="{Binding Path=IsReadOnly, Converter={StaticResource BoolNavigationStyleConverter}}"
+                               ShowAutoFilterRow="False"
+                               ShowTotalSummary="{Binding Path=IsVermoegen, Converter={StaticResource BoolInvertConverter}}"
+                               ShowingEditor="TableView_ShowingEditor"
+                               VerticalScrollbarVisibility="Auto" Name="positionenView">
+
+                    <!-- Styling for bold rows -->
+                    <dxg:TableView.RowStyle>
+                        <Style TargetType="{x:Type dxg:RowControl}">
+                            <Setter Property="FontWeight" Value="{Binding Path=Row, Converter={Vm:VmPositionDTOToFontWeightConverter}}" />
+                        </Style>
+                    </dxg:TableView.RowStyle>
+                    <dxg:TableView.CellStyle>
+                        <Style BasedOn="{StaticResource {dxgt:GridRowThemeKey ResourceKey=LightweightCellStyle, ThemeName=Kiss}}" TargetType="{x:Type dxg:LightweightCellEditor}">
+                            <Setter Property="Foreground" Value="Black" />
+                        </Style>
+                    </dxg:TableView.CellStyle>
+                </dxg:TableView>
+            </Controls:KissGrid.View>
+        </Controls:KissGrid>
+
+        <Controls:ValidationSummary Grid.Row="2" Grid.ColumnSpan="3" ServiceResult="{Binding Path=ValidationResult}" />
+
+        <!-- Sortierung -->
+        <Grid Grid.Column="4">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControlSmall}" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Controls:KissButton Grid.Row="1" ToolTip="nach oben" Width="25" Height="25" Command="{Binding Path=MoveUpCommand}">
+                <Path Fill="Black" Data="M 0 6 L 12 6 L 6 0 Z" />
+            </Controls:KissButton>
+            <Controls:KissButton Grid.Row="3" ToolTip="nach unten" Width="25" Height="25" Command="{Binding Path=MoveDownCommand}">
+                <Path Fill="Black" Data="M 0 0 L 6 6 L 12 0 Z" />
+            </Controls:KissButton>
+        </Grid>
+    </Grid>
+</View:KissView>

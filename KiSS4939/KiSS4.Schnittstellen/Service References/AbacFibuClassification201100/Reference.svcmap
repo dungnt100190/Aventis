@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bd139055-26c8-41a0-9e55-e1d8681ad4ed" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="C:\temp\AbacFibuClassification2008\FibuClassification.wsdl" Protocol="file" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FibuClassification.wsdl" MetadataType="Wsdl" ID="b1fff0c0-9edd-4377-948d-b9c366c315b9" SourceId="1" SourceUrl="file:///C:/temp/AbacFibuClassification2008/FibuClassification.wsdl" />
+    <MetadataFile FileName="FibuClassification.xsd" MetadataType="Schema" ID="f9d3533c-f80c-446f-ae71-71ef15d49f42" SourceId="1" SourceUrl="file:///C:/temp/AbacFibuClassification2008/FibuClassification.xsd" />
+    <MetadataFile FileName="xmlmime.xsd" MetadataType="Schema" ID="778ef5db-f0b9-4a3e-9498-a7feb7985ddc" SourceId="1" SourceUrl="file:///C:/temp/AbacFibuClassification2008/xmlmime.xsd" />
+    <MetadataFile FileName="AbaConnectTypes.xsd" MetadataType="Schema" ID="2b1b5a15-0ab2-4063-9a4c-92a89ecb6a20" SourceId="1" SourceUrl="file:///C:/temp/AbacFibuClassification2008/AbaConnectTypes.xsd" />
+    <MetadataFile FileName="FibuClassificationTypes.xsd" MetadataType="Schema" ID="2827832c-f360-49cd-bedf-7df172a21413" SourceId="1" SourceUrl="file:///C:/temp/AbacFibuClassification2008/FibuClassificationTypes.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

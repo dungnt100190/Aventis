@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>DECLARE @LanguageCode INT;
+DECLARE @nurAktivePerson BIT
+DECLARE @Stichdatum DATETIME;
+DECLARE @AktivVon DATETIME;
+DECLARE @AktivBis DATETIME;
+
+SET @LanguageCode = {0};
+SET @nurAktivePerson = 0;
+--- SET @nurAktivePerson = {edtNurAktivePerson.Checked};
+--- SET @AktivVon = {edtAktivVon};
+--- SET @AktivBis = {edtAktivBis};
+--SET @AktivVon = '20140101';
+--SET @AktivBis = '20151231';
+
+
+SELECT @Stichdatum = dbo.fnDateOf(GETDATE());
+
+SELECT * 
+FROM (
+  SELECT 
+    BaPersonID$                 = PRS.BaPersonID,
+    FT                          = CONVERT(BIT, CASE WHEN EXISTS(SELECT TOP 1 1 
+                                                                FROM dbo.FaLeistung WITH (READUNCOMMITTED) 
+                                                                WHERE BaPersonID = PRS.BaPersonID)
+                                                 THEN 1 
+                                                 ELSE 0 
+                                               END),
+    [SAR Fallführung]               = COALESCE((SELECT TOP 1 USR.LastName + ISNULL(', ' + USR.FirstName, '')
+                                              FROM dbo.FaLeistung    FAL WITH (READUNCOMMITTED)
+                                                INNER JOIN dbo.XUser USR WITH (READUNCOMMITTED) ON USR.UserID = FAL.UserID
+                                              WHERE BaPersonID = PRS.BaPersonID 
+                                                AND FAL.ModulID = 2
+                                              ORDER BY DatumBis, DatumVon DESC),
+                                             (SELECT TOP 1 USR.LastName + ISNULL(', ' + USR.FirstName, '')
+                                              FROM dbo.FaLeistung    LEI WITH (READUNCOMMITTED)
+                                                INNER JOIN dbo.XUser USR WITH (READUNCOMMITTED) ON USR.UserID = LEI.UserID
+                                                LEFT JOIN dbo.BaPerson_Relation REL1 WITH (READUNCOMMITTED) ON REL1.BaPersonID_1 = LEI.BaPersonID AND REL1.BaPersonID_2 = PRS.BaPersonID
+                                                LEFT JOIN dbo.BaPerson_Relation REL2 WITH (READUNCOMMITTED) ON REL2.BaPersonID_2 = LEI.BaPersonID AND REL2.BaPersonID_1 = PRS.BaPersonID
+                                              WHERE LEI.ModulID = 2
+                                                AND ISNULL(REL1.BaPersonID_2, REL2.BaPersonID_1) IS NOT NULL
+                                              ORDER BY LEI.DatumBis, LEI.DatumVon DESC)),
+    [Name]                      = PRS.Name,
+    Vorname                     = PRS.Vorname,
+    [Name Dossierträger]        = PRSFT.Name + ' ' + PRSFT.Vorname,
+    Strasse                     = PRSe.WohnsitzStrassehausNr,
+    PLZ                         = PRSe.WohnsitzPLZ,
+    Ort                         = PRSe.WohnsitzOrt,
+    Gemeinde                    = dbo.fnLOVMLText('GemeindeSozialdienst', ISNULL(LEIF.GemeindeCode, LEINF.GemeindeCode) , @LanguageCode),
+    [Telefon privat]            = PRS.Telefon_P,
+    [Telefon gesch.]            = PRS.Telefon_G,
+    [Telefon mobil]             = PRS.MobilTel,
+    [AHV-Nr.]                   = PRS.AHVNummer,
+    [Vers.-Nr.]                 = PRS.Versichertennummer,
+    [Haushaltvers.-Nr]          = PRS.HaushaltVersicherungsNummer,
+    [N-Nummer]                  = PRS.NNummer,
+    [BFM-Nummer]                = PRS.BFFNummer,
+    [ZEMIS Nummer]              = PRS.ZEMISNummer,
+    Geburtsdatum                = PRS.Geburtsdatum,
+    [Alter]                     = CONVERT(INT, ((DATEDIFF(dd, PRS.Geburtsdatum, @Stichdatum) + .5) / 365.25)),
+    Nation                      = dbo.fnLandMLText( PRS.NationalitaetCode, @LanguageCode),
+    EinreiseDatum               = PRS.inCHseit,
+    Asylgesuch                  = PRS.DatumAsylgesuch,
+    [Einbezug FAZ / Geburt]     = PRS.DatumEinbezugFaz,
+    [Ausl.-Status]              = dbo.fnLOVText('Aufenthaltsstatus', PRS.AuslaenderStatusCode),
+    [Status gültig bis]         = PRS.AuslaenderStatusGueltigBis,
+    Entscheid                   = PRS.ErteilungVA,
+    [Ende Zustaendigkeit]       = PRS.CAusweisDatum,
+    FAZ                         = PRS.IstFamiliennachzug,
+    Geschlecht                  = CASE PRS.GeschlechtCode
+                                    WHEN 1 THEN 'm'
+                                    WHEN 2 THEN 'w'
+                                    ELSE '' 
+                                  END,
+    Zivilstand                  = dbo.fnLOVText('Zivilstand', PRS.ZivilstandCode),
+    Religion                    = dbo.fnLOVText('Konfession', PRS.KonfessionCode),
+    Muttersprache               = dbo.fnLOVText('BaMuttersprache', PRS.SprachCode),
+    [Verständigungssprache]     = dbo.fnLOVText('BaVerstaendigungsSprache', PRS.VerstaendigungSprachCode),
+    [KQ Zuständige Gemeinde]    = INQ.Name,
+    [Aktive Kopfquote]          = PRS.AktiveKopfQuote,
+    [Passive Kopfquote]         = PRS.PassiveKopfQuote,
+    [Name Krankenkasse, KVG]    = KVG.Name,
+    [Abtretung KK]              = DGS.AbtretungKK,
+    [Mitglied-Nr KK]            = DGS.KVGMitgliedNr,
+    [Abtretung Lohn]            = CASE WHEN POSSD.BaPersonID IS NULL THEN 1 ELSE 0 END, -- diese Person muss Einkommen haben von der SD verwalt
+    [SAR Inkasso]               = (SELECT TOP 1 USR.LastName + ISNULL(', ' + USR.FirstName, '')
+                                   FROM dbo.FaLeistung    FAL WITH (READUNCOMMITTED)
+                                     INNER JOIN dbo.XUser USR WITH (READUNCOMMITTED) ON USR.UserID = FAL.UserID
+                                   WHERE BaPersonID = PRS.BaPersonID
+                                     AND FAL.ModulID = 4
+                                   ORDER BY DatumBis, DatumVon DESC),
+     Beziehung                  = BZI.BeziehungZurUebergeordnetenPerson
+  FROM dbo.BaPerson              PRS   WITH (READUNCOMMITTED)
+    INNER JOIN dbo.vwPerson      PRSe  WITH (READUNCOMMITTED) ON PRSe.BaPersonID = PRS.BaPersonID
+    LEFT  JOIN dbo.vwPerson      PRSFT WITH (READUNCOMMITTED) ON PRSFT.BaPersonID = PRS.BaPersonID_Dossiertraeger
+    LEFT  JOIN dbo.FaLeistung    LEIF  WITH (READUNCOMMITTED) ON LEIF.BaPersonID = PRS.BaPersonID AND LEIF.ModulID = 2 -- 2=FallFührung
+    OUTER APPLY (SELECT TOP 1 LEI.FaLeistungID, LEI.GemeindeCode, LEI.BaPersonID, LEI.DatumVon, LEI.DatumBis
+                 FROM dbo.FaLeistung    LEI   WITH (READUNCOMMITTED)
+                   INNER JOIN dbo.XUser USR WITH (READUNCOMMITTED) ON USR.UserID = LEI.UserID
+                   LEFT JOIN dbo.BaPerson_Relation REL1 WITH (READUNCOMMITTED) ON REL1.BaPersonID_1 = LEI.BaPersonID AND REL1.BaPersonID_2 = PRS.BaPersonID
+                   LEFT JOIN dbo.BaPerson_Relation REL2 WITH (READUNCOMMITTED) ON REL2.BaPersonID_2 = LEI.BaPersonID AND REL2.BaPersonID_1 = PRS.BaPersonID
+                 WHERE LEI.ModulID = 2
+                   AND ISNULL(REL1.BaPersonID_2, REL2.BaPersonID_1) IS NOT NULL
+                 ORDER BY LEI.DatumBis, LEI.DatumVon DESC) LEINF 
+    LEFT  JOIN dbo.BaGesundheit  DGS   WITH (READUNCOMMITTED) ON DGS.BaPersonID = PRS.BaPersonID
+    LEFT  JOIN dbo.BaInstitution KVG   WITH (READUNCOMMITTED) ON KVG.BaInstitutionID = DGS.KVGOrganisationID  
+    LEFT  JOIN dbo.BaInstitution INQ   WITH (READUNCOMMITTED) ON INQ.BaInstitutionID = PRS.Kopfquote_BaInstitutionID -- Zuständige Gemeinde Kopfquote  
+    LEFT  JOIN (SELECT DISTINCT PRS.BaPersonID
+                FROM BaPerson                     PRS WITH (READUNCOMMITTED)
+                  LEFT JOIN BgFinanzplan_BaPerson FPP WITH (READUNCOMMITTED) ON FPP.BaPersonID = PRS.BaPersonID
+                  LEFT JOIN BgFinanzplan          FPL WITH (READUNCOMMITTED) ON FPL.BgFinanzplanID = FPP.BgFinanzplanID 
+                                                                            AND dbo.fnDateOf(ISNULL(FPL.GeplantVon, FPL.DatumVon)) &lt;= @Stichdatum  
+                                                                            AND dbo.fnDateOf(ISNULL(FPL.GeplantBis, FPL.DatumBis)) &gt;= @Stichdatum  
+                  LEFT JOIN dbo.BgBudget          BDG WITH (READUNCOMMITTED) ON BDG.BgFinanzplanID = FPL.BgFinanzplanID 
+                  LEFT JOIN dbo.BgPosition        POS WITH (READUNCOMMITTED) ON  POS.BgBudgetID=  BDG.BgBudgetID AND POS.BaPersonID = PRS.BaPersonID
+                WHERE POS.VerwaltungSD =1) POSSD ON POSSD.BaPersonID = PRS.BaPersonID            
+    OUTER APPLY (SELECT TOP 1 ZustaendigAb = Datum
+                 FROM (
+                   -- Das Datum 'Entscheid'
+                   SELECT Datum = PRS.ErteilungVA
+                   UNION ALL
+                   -- Das 'Geburtsdatum', wenn Checkbox 'seit Geburt' aktiviert ist oder das 'Geburtsdatum' gleich dem Datum 'in Schweiz seit' gleich ist
+                   SELECT Datum = CASE 
+                                    WHEN PRS.InCHSeitGeburt = 1
+                                      THEN ISNULL(PRS.Geburtsdatum, PRS.InCHSeit)
+                                    WHEN PRS.Geburtsdatum = PRS.InCHSeit 
+                                      THEN PRS.Geburtsdatum
+                                    ELSE NULL
+                                  END
+                   UNION ALL
+                   -- Bei aktiver Checkbox FAZ das Datum 'in Schweiz seit'
+                   SELECT CASE WHEN PRS.IstFamiliennachzug = 1
+                                    THEN PRS.InCHSeit
+                                    ELSE NULL
+                                  END
+                   
+                   ) T
+                 WHERE Datum IS NOT NULL
+                 ORDER BY Datum) ZAB -- ZustaendigAb 9120
+   OUTER APPLY (SELECT BeziehungZurUebergeordnetenPerson = dbo.ConcDistinct(REL.NameGenerisch2)
+                  FROM dbo.BaPerson_Relation PRE WITH(READUNCOMMITTED)
+                  INNER JOIN dbo.BaRelation REL  WITH(READUNCOMMITTED) ON REL.BaRelationID = PRE.BaRelationID
+                  WHERE PRE.BaPersonID_2 = PRS.BaPersonID
+                   AND PRE.BaRelationID IN (1, 5) -- 1=Kind 5=Adoptivkind
+                  GROUP BY PRE.BaPersonID_2) BZI
+  WHERE 1=1
+    AND (LEIF.FaLeistungID IS NULL
+         OR LEIF.FaLeistungID = (
+              SELECT TOP 1 LEIFW.FaLeistungID 
+              FROM dbo.FaLeistung LEIFW WITH (READUNCOMMITTED) 
+              WHERE LEIFW.BaPersonID = PRS.BaPersonID 
+                AND LEIFW.ModulID = 2
+              ORDER BY COALESCE(LEIFW.DatumBis,'99991231') DESC)) -- Nur die aktuellste Fallführung interessiert
+    AND (DGS.BaGesundheitID IS NULL
+         OR DGS.BaGesundheitID = (
+            SELECT TOP 1 DGSW.BaGesundheitID
+            FROM dbo.BaGesundheit DGSW WITH (READUNCOMMITTED) 
+            WHERE DGSW.BaPersonID = PRS.BaPersonID
+            ORDER BY DGSW.BaGesundheitID DESC)) -- Älteste Gesundheitseintrag       
+    AND (@nurAktivePerson = 0
+         OR(  
+            -- aktive Person: ('Zuständig ab' =&lt; Stichdatum AND Stichdatum =&lt; 'Ende Zuständigkeit') 
+            --             OR (Aktive Kopfquote "aktiv" AND Stichdatum =&gt; 'Zuständig ab' AND Stichdatum =&lt; Datum 'Kopf-quote bis')
+            ((ZAB.ZustaendigAb &lt;= @Stichdatum AND @Stichdatum &lt;= ISNULL(PRS.CAusweisDatum, '99991231'))
+              OR (ISNULL(PRS.AktiveKopfQuote, 0) = 1 AND @Stichdatum &gt;= ZAB.ZustaendigAb AND @Stichdatum &lt;= ISNULL(PRS.KopfquoteBisDatum, '99991231')))
+            -- einige Felder dürfen nicht gleichzeitig leer sein
+            AND (PRS.InCHSeit IS NOT NULL                                        -- 'In Schweiz seit'
+                 OR PRS.InCHSeitGeburt IS NOT NULL AND PRS.Geburtsdatum IS NOT NULL -- Checkbox 'seit Geburt' UND 'Geburtsdatum'
+                 OR PRS.AuslaenderStatusGueltigBis IS NOT NULL                      -- 'Status gültig bis'
+                 OR PRS.ErteilungVA IS NOT NULL                                     -- 'Entscheid'
+                 OR PRS.CAusweisDatum IS NOT NULL)                                  -- 'Ende Zuständigkeit'
+            -- Wenn der Fall archiviert oder geschlossen ist, dann erscheint er nicht auf der Liste
+            AND ISNULL(LEIF.DatumBis, '99991231') &gt;= @Stichdatum
+            AND (NOT EXISTS(SELECT TOP 1 1
+                            FROM dbo.FaLeistungArchiv WITH (READUNCOMMITTED)
+                            WHERE FaLeistungID = LEIF.FaLeistungID
+                              AND CheckOut IS NULL))
+            )
+         )
+    AND (@AktivVon IS NULL OR (LEIF.FaLeistungID IS NOT NULL AND ISNULL(LEIF.DatumBis, '99991231') &gt;= @AktivVon)
+                           OR (LEINF.FaLeistungID IS NOT NULL AND ISNULL(LEINF.DatumBis, '99991231') &gt;= @AktivVon))
+    AND (@AktivBis IS NULL OR ISNULL(LEIF.DatumVon, LEINF.DatumVon) &lt;= @AktivBis)    
+  ) V
+WHERE 1=1
+--- AND (({Soundex} = 0 AND V.Name LIKE {edtName} + '%') OR ({Soundex} = 1 AND SOUNDEX(V.Name) = SOUNDEX({edtName})))
+--- AND (({Soundex} = 0 AND V.Vorname LIKE {edtVorname} + '%') OR ({Soundex} = 1 AND SOUNDEX(V.Vorname) = SOUNDEX({edtVorname})))
+--- AND V.Name LIKE {edtName} + '%'
+--- AND V.Vorname LIKE {edtVorname} + '%'
+--- AND [AHV-Nr.] LIKE {edtAHV} + '%'
+--- AND [Vers.-Nr.] LIKE {edtVersNr} + '%'
+--- AND [Haushaltvers.-Nr] LIKE {edtHaushaltVersNr} + '%'
+--- AND V.NNr LIKE {edtNNr} + '%'
+--- AND V.Strasse LIKE {edtStrasse} + '%'
+--- AND V.PLZ LIKE {edtPLZ} + '%'
+--- AND V.Ort LIKE {edtOrt} + '%'
+--- AND V.FT = CASE WHEN {edtFT} = 1 THEN 1 ELSE V.FT END
+--- AND V.Geburtsdatum &gt;= {edtGeburtVon}
+--- AND V.Geburtsdatum &lt;= {edtGeburtBis}
+</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="edtAktivBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtGeburtBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtAktivVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtGeburtVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>55</value>
+  </metadata>
+</root>

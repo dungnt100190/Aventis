@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p2="urn:sap-com:document:sap:rfc:functions" xmlns:p1="http://STZH" name="MI_BUCHSTOFF_STO_SOAP_OUT" targetNamespace="http://STZH" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="urn:sap-com:document:sap:rfc:functions" targetNamespace="urn:sap-com:document:sap:rfc:functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="_-STZH_-KISS_BUCHSTOFF_STO_IN">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element minOccurs="0" name="ALL_REPETITIONS">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="1" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="CALLER_ID">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="30" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="CHECKARCHIVE">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="1" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="CLEAR_REAS">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="2" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="DOCUMENTNUMBER">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="12" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="DOC_SOURCE_KEY">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="2" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="DOC_TYPE">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="2" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="FIKEY">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="12" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="POST_DATE" type="p2:date" />
+            <xsd:element minOccurs="0" name="RECKEYINFO" type="p2:BAPIRECKEYINFO" />
+            <xsd:element minOccurs="0" name="RETURN_REASON">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="3" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="REVERSEMETHODE">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:maxLength value="1" />
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="REVERSE_DATE" type="p2:date" />
+            <xsd:element name="TRANSACTIONID" type="xsd:integer" />
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:simpleType name="genericDate">
+        <xsd:restriction base="xsd:string">
+          <xsd:pattern value="....-..-.." />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="date">
+        <xsd:union xmlns="urn:sap-com:document:sap:rfc:functions" memberTypes="xsd:date p2:genericDate" />
+      </xsd:simpleType>
+      <xsd:complexType name="BAPIRECKEYINFO">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="CALLER_ID">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="3" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="OBJECT_CATEGORY">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="3" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="OBJECT_KEY">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="30" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="p2._-STZH_-KISS_BUCHSTOFF_STO_IN.Input">
+    <wsdl:part name="parameters" element="p2:_-STZH_-KISS_BUCHSTOFF_STO_IN" />
+  </wsdl:message>
+  <wsdl:portType name="MI_BUCHSTOFF_STO_SOAP_OUT">
+    <wsdl:operation name="MI_BUCHSTOFF_STO_SOAP_OUT">
+      <wsdl:input message="p1:p2._-STZH_-KISS_BUCHSTOFF_STO_IN.Input" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MI_BUCHSTOFF_STO_SOAP_OUTBinding" type="p1:MI_BUCHSTOFF_STO_SOAP_OUT">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="MI_BUCHSTOFF_STO_SOAP_OUT">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MI_BUCHSTOFF_STO_SOAP_OUTService">
+    <wsdl:port name="MI_BUCHSTOFF_STO_SOAP_OUTPort" binding="p1:MI_BUCHSTOFF_STO_SOAP_OUTBinding">
+      <address location="http://szhm2179:8001/XISOAPAdapter/MessageServlet?channel=:BS_KISS_BUCHSTOFF_DEL_450:CC_SOAP_BUCHSTOFF_DELETE&amp;version=3.0&amp;Sender.Service=BS_KISS_BUCHSTOFF_DEL_450&amp;Interface=http%3A%2F%2FSTZH%5EMI_BUCHSTOFF_STO_SOAP_OUT" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,108 @@
+﻿<View:KissView x:Class="Kiss.UI.View.Wsh.WshKontoAttributView"
+               xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+               xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+               xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+               xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+               xmlns:View="clr-namespace:Kiss.UI.View"
+               xmlns:Controls="clr-namespace:Kiss.UI.Controls;assembly=Kiss.UI.Controls"
+               xmlns:ViewModel="clr-namespace:Kiss.UI.ViewModel;assembly=Kiss.UI.ViewModel"
+               xmlns:Constant="clr-namespace:Kiss.UI.Controls.Constant;assembly=Kiss.UI.Controls"
+               xmlns:Converter="clr-namespace:Kiss.UI.Controls.Converter;assembly=Kiss.UI.Controls"
+               xmlns:dxg="clr-namespace:DevExpress.Xpf.Grid;assembly=DevExpress.Xpf.Grid.v10.2" 
+               xmlns:Wsh="clr-namespace:Kiss.UI.ViewModel.Wsh;assembly=Kiss.UI.ViewModel" 
+               mc:Ignorable="d"
+               d:DesignHeight="500"
+               d:DesignWidth="800">
+
+    <View:KissView.Resources>
+        <Wsh:WshKontoAttributVM x:Key="viewModel" />
+        <Converter:BoolInvertConverter x:Key="boolInvertConverter" />
+        <Converter:True2XConverter x:Key="true2XConverter" />
+    </View:KissView.Resources>
+
+    <Grid Name="panRoot" DataContext="{StaticResource ResourceKey=viewModel}" Margin="{x:Static Constant:LayoutConstant.MarginOuterControl}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        
+        
+        <!-- DataGrid -->
+        <Controls:KissGridDevX Grid.Row="1"
+                               Grid.Column="0"
+                               Name="grdTEntity"
+                               DataSource="{Binding Path=EntityList}"
+                               SelectedItem="{Binding Path=SelectedEntity, Mode=TwoWay}">
+            <Controls:KissGridDevX.Columns>
+                <dxg:GridColumn FieldName="KbuKonto.KontoNr" Header="Nr" Width="45" FixedWidth="True" />
+                <dxg:GridColumn FieldName="KbuKonto.Name" Header="Kostenart" Width="Auto" />
+                <Controls:GridColumnLookUp ItemsSource="{Binding Path=BetrifftPersonEditModeCodes}"
+                                           DisplayMember="Value"
+                                           ValueMember="Key"
+                                           FieldName="SysEditModeCode_BetrifftPerson"
+                                           Header="Betrifft"
+                                           Width="85"
+                                           FixedWidth="True"/>
+                <dxg:GridColumn DisplayMemberBinding="{Binding Path=RowData.Row.IstGrundbudgetAktiv, RelativeSource={RelativeSource self}, Converter={StaticResource true2XConverter}}" Header="Grundbudget" Width="95" />
+                <Controls:GridColumnCheckbox FieldName="IstMonatsbudgetAktiv" Header="Monatsbudget" Width="100" />
+                <Controls:GridColumnCheckbox FieldName="IstLeistungWsh" Header="W Exist." Width="65" />
+                <Controls:GridColumnCheckbox FieldName="IstLeistungWshStationaer" Header="W stat." Width="60" />
+            </Controls:KissGridDevX.Columns>
+            <Controls:KissGridDevX.View>
+                <dxg:TableView Name="grdTEntityView"
+                               NavigationStyle="Row"
+                               AutoWidth="True"
+                               ShowGroupPanel="False"
+                               FocusedRow="{Binding Path=SelectedEntity, Mode=TwoWay}" />
+            </Controls:KissGridDevX.View>
+        </Controls:KissGridDevX>
+
+        <!-- Details -->
+        <Grid Grid.Row="2" Name="panDetail" Margin="{x:Static Constant:LayoutConstant.MarginMainControlTop}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControl}" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControlSmall}" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControl}" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControlSmall}" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Error -->
+            <Controls:ValidationSummary Grid.Row="0"
+                                        ServiceResult="{Binding Path=ValidationResult}"/>
+
+            
+            
+            
+            <Controls:KissLabel Grid.Row="1" Grid.Column="0" Content="Betrifft Person Typ" />
+            <Controls:KissComboBox Grid.Row="1" 
+                                   Grid.Column="1" 
+                                   ItemsSource="{Binding Path=BetrifftPersonEditModeCodes}"
+                                   DisplayMember="Value"
+                                   ValueMember="Key"
+                                   EditValue="{Binding Path=SelectedEntity.SysEditModeCode_BetrifftPerson}" 
+                                   IsEnabled="{Binding Path=IsFieldReadonly[SysEditModeCode_BetrifftPerson], Converter={StaticResource boolInvertConverter}}"/>
+            
+            <Controls:KissLabel Grid.Row="3" Grid.Column="0" Content="Budget-Typ" />
+            <Controls:KissCheckBox Grid.Row="3" Grid.Column="1" Content="Grundbudget" IsChecked="{Binding Path=SelectedEntity.IstGrundbudgetAktiv}" />
+            <Controls:KissCheckBox Grid.Row="5" Grid.Column="1" Content="Monatsbudget" IsChecked="{Binding Path=SelectedEntity.IstMonatsbudgetAktiv}" />
+            
+            <Controls:KissLabel Grid.Row="7" Grid.Column="0" Content="Leistungs-Typ" />
+            <Controls:KissCheckBox Grid.Row="7" Grid.Column="1" Content="Wsh Leistung" IsChecked="{Binding Path=SelectedEntity.IstLeistungWsh}" />
+            <Controls:KissCheckBox Grid.Row="9" Grid.Column="1" Content="Wsh Leistung Stationär" IsChecked="{Binding Path=SelectedEntity.IstLeistungWshStationaer}" />
+
+
+        </Grid>
+    </Grid>
+</View:KissView>

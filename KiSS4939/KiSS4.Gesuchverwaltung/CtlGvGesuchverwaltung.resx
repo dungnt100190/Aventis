@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="edtSucheGesuchsDatumBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtSucheGesuchsDatumVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <metadata name="qryGvGesuch.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>22, 20</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>59</value>
+  </metadata>
+  <data name="qryGvGesuch.SelectStatement" xml:space="preserve">
+    <value>SELECT 
+  Klient               = PRS.NameVorname,
+  BetragBeantragt      = ISNULL((SELECT SUM(APO.Betrag)
+                                 FROM dbo.GvAntragPosition APO WITH (READUNCOMMITTED)
+                                 WHERE APO.GvGesuchID = GGE.GvGesuchID
+                                   AND APO.GvAntragPositionTypCode = 2), 0.0),
+  Autor                = USR.NameVorname,
+  FondsHinweis         = dbo.fnGetMLTextByDefault(GFD.BemerkungTID, {0}, GFD.Bemerkung),
+  TotalFondsBewilligt  = CONVERT(MONEY, NULL), --wird von Maske berechnet und in Query abgelegt (caching)
+  TotalFondsAusbezahlt = CONVERT(MONEY, NULL), --wird von Maske berechnet und in Query abgelegt (caching)
+  GGE.GvGesuchID,
+  GGE.BaPersonID,
+  GGE.XUserID_Autor,
+  Entscheider = BEW.NameVorname,
+  GGE.DocumentID,
+  GGE.UserIDBewilligt,
+  BetragBewilligt = ISNULL(GGE.BetragBewilligt, $0),
+  GGE.BewilligtAm,
+  GGE.Bemerkung,
+  Tage = DATEDIFF(DAY, ISNULL(GGE.ErfassungAbgeschlossen, GETDATE()), COALESCE(GGE.DatumBewilligtKompetenzstufe1, GGE.DatumBewilligtKompetenzstufe2, GETDATE())),
+  IstFondsExtern = CASE GFD.GvFondsTypCode WHEN 2 THEN CONVERT(BIT, 1) ELSE CONVERT(BIT, 0) END,
+  IstFondsFLB = CASE WHEN GFD.GvFondsTypCode = 1 AND GFD.KbZahlungskontoID IS NOT NULL AND GFD.IstCH = 1 THEN CONVERT(BIT, 1) ELSE CONVERT(BIT, 0) END,
+
+  --Virtuelle Spalten für interne Fonds (GvFondsTypCode = 1)
+  [DocumentID_FondsIntern]      = CASE GFD.GvFondsTypCode WHEN 1 THEN GGE.DocumentID ELSE NULL END,
+  [BetragBewilligt_FondsIntern] = CASE GFD.GvFondsTypCode WHEN 1 THEN GGE.BetragBewilligt ELSE NULL END,
+  [BewilligtAm_FondsIntern]     = CASE GFD.GvFondsTypCode WHEN 1 THEN GGE.BewilligtAm ELSE NULL END,
+  [Bemerkung_FondsIntern]       = CASE GFD.GvFondsTypCode WHEN 1 THEN GGE.Bemerkung ELSE NULL END,
+
+  --Virtuelle Spalten für externe Fonds (GvFondsTypCode = 2)
+  [DocumentID_FondsExtern]      = CASE GFD.GvFondsTypCode WHEN 2 THEN GGE.DocumentID ELSE NULL END,
+  [BetragBewilligt_FondsExtern] = CASE GFD.GvFondsTypCode WHEN 2 THEN GGE.BetragBewilligt ELSE NULL END,
+  [BewilligtAm_FondsExtern]     = CASE GFD.GvFondsTypCode WHEN 2 THEN GGE.BewilligtAm ELSE NULL END,
+  [Bemerkung_FondsExtern]       = CASE GFD.GvFondsTypCode WHEN 2 THEN GGE.Bemerkung ELSE NULL END,
+
+  GGE.GvFondsID,
+  GFD.GvFondsTypCode,
+  GFD.KbZahlungskontoID,
+  GGE.GvStatusCode,
+  GGE.GesuchsDatum,
+  GGE.ErfassungAbgeschlossen,
+  GGE.Begruendung,
+  GGE.BetragBewilligtKompetenzStufe1,
+  GGE.DatumBewilligtKompetenzStufe1,
+  GGE.BemerkungBewilligungKompetenzStufe1,
+  GGE.BetragBewilligtKompetenzStufe2,
+  GGE.DatumBewilligtKompetenzStufe2,
+  GGE.BemerkungBewilligungKompetenzStufe2,
+  GGE.AbschlussDatum,
+  GGE.GvAbschlussgrundCode,
+  GGE.Gesuchsgrund,
+  GGE.IstEigenkompetenz,
+  GGE.IstKompetenzBsl,
+  GGE.IstKompetenzKanton,
+  GGE.Extern,
+  GGE.ErfasstesGesuchgeprueftdurchIKS_UserID,  
+  ErfasstesGesuchgeprueftdurchIKS_User = USR_IKSE.NameVorname,
+  GGE.ErfasstesGesuchgeprueftam,
+  GGE.ErfasstesGesuchBesprechen,
+  GGE.ErfasstesGesuchBemerkung,
+  GGE.AbgeschlossenesGesuchdurchIKS_UserID,
+  AbgeschlossenesGesuchdurchIKS_User = USR_IKSA.NameVorname,
+  GGE.AbgeschlossenesGesuchgeprueftam,
+  GGE.AbgeschlossenesGesuchBesprechen,
+  GGE.AbgeschlossenesGesuchBemerkung,
+  GGE.Creator,
+  GGE.Created,
+  GGE.Modifier,
+  GGE.Modified,
+  GGE.GvGesuchTS
+FROM dbo.GvGesuch               GGE WITH (READUNCOMMITTED)
+  INNER JOIN dbo.vwPersonSimple PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = GGE.BaPersonID
+  INNER JOIN dbo.GvFonds        GFD WITH (READUNCOMMITTED) ON GFD.GvFondsID = GGE.GvFondsID
+  INNER JOIN dbo.vwUser         USR WITH (READUNCOMMITTED) ON USR.UserID = GGE.XUserID_Autor
+  LEFT JOIN dbo.vwUser         USR_IKSE WITH (READUNCOMMITTED) ON USR_IKSE.UserID = GGE.ErfasstesGesuchgeprueftdurchIKS_UserID
+  LEFT JOIN dbo.vwUser         USR_IKSA WITH (READUNCOMMITTED) ON USR_IKSA.UserID = GGE.AbgeschlossenesGesuchdurchIKS_UserID  
+  LEFT JOIN dbo.vwUser          BEW WITH (READUNCOMMITTED) ON BEW.UserID = GGE.UserIDBewilligt
+WHERE 1 = 1
+---  AND GGE.BaPersonID = {edtSucheKlient.LookupID}
+---  AND GGE.GvGesuchID = {edtSucheGesuchID}
+---  AND GFD.GvFondsID = {edtSucheFonds}
+---  AND GGE.GvStatusCode = {edtSucheStatus}
+---  AND GGE.GesuchsDatum &gt;= {edtSucheGesuchsDatumVon}
+---  AND GGE.GesuchsDatum &lt;= {edtSucheGesuchsDatumBis}
+---  AND EXISTS (SELECT TOP 1 1 FROM GvAuszahlungPosition GAP WHERE GAP.GvGesuchID = GGE.GvGesuchID AND GAP.GvPositionsartID = {edtSucheKostenart})
+---  AND ({chkSucheAbgeschlosseneAusschliessen.Checked} = 0 OR GGE.GvStatusCode &lt;&gt; 7) --7: abgeschlossen
+---  AND ({chkSucheNurExterneGesuche.Checked} = 0 OR GGE.Extern = 1 AND GGE.GesuchsDatum &lt; DATEADD(DAY, -30, GETDATE())) -- externe Gesuche älter als 30 Tage
+---  AND ({chkSucheKompetenzKanton.Checked} = 0 OR GGE.IstKompetenzKanton = 1)
+---  AND ({chkSucheKompetenzBsl.Checked} = 0 OR GGE.IstKompetenzBsl = 1)
+---  AND ({chkSucheGesuchAnExterneFonds.Checked} = 0 OR GFD.GvFondsTypCode = 2)
+  AND EXISTS (SELECT TOP 1 LEI.FaLeistungID, LEI.UserID
+              FROM FaLeistung LEI WITH (READUNCOMMITTED)
+                INNER JOIN dbo.XOrgUnit_User  OUU WITH (READUNCOMMITTED) ON LEI.UserID = OUU.UserID
+                                                                        AND OUU.OrgUnitMemberCode = 2 --2: Mitglied
+                INNER JOIN dbo.XOrgUnit       ORG WITH (READUNCOMMITTED) ON OUU.OrgUnitID = ORG.OrgUnitID            
+              WHERE LEI.BaPersonID = GGE.BaPersonID
+                AND LEI.ModulID = 2
+---             AND LEI.UserID = {ctlSucheKGSKostenstelleSAR.EdtSucheMitarbeiter}
+---             AND OUU.OrgUnitID IN (SELECT OrgUnitID FROM dbo.fnGetMandantOrgUnits({ctlSucheKGSKostenstelleSAR.EdtSucheKGS}))
+---             AND ORG.Kostenstelle = {ctlSucheKGSKostenstelleSAR.EdtSucheKostenstelle}
+              ORDER BY LEI.DatumVon DESC)  --die letzte Fallführung ist massgebend
+ORDER BY GGE.GesuchsDatum;
+</value>
+  </data>
+</root>

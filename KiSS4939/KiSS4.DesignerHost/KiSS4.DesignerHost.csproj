@@ -1,0 +1,479 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DBA71C88-487E-4423-93A2-FC38657E7EDC}</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>KiSS4.DesignerHost</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>KiSS4.DesignerHost</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/KiSS4.DesignerHost/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\Build\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <SignAssembly>false</SignAssembly>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\Build\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <SignAssembly>false</SignAssembly>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.TextEditor, Version=1.1.0.2124, Culture=neutral">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="SharpLibrary, Version=1.4.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.XML" />
+    <ProjectReference Include="..\KiSS.AssemblyInfo\BIAG.AssemblyInfo.csproj">
+      <Project>{C3A41F2E-FBF1-4628-8F6A-764A22252624}</Project>
+      <Name>BIAG.AssemblyInfo</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS.DBScheme\KiSS.DBScheme.csproj">
+      <Project>{48E78A43-B4AD-4426-9422-8ABB846CC345}</Project>
+      <Name>KiSS.DBScheme</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Interfaces\Kiss.Interfaces.csproj">
+      <Project>{936877A8-EC00-4267-8C62-344062912497}</Project>
+      <Name>Kiss.Interfaces</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Common\KiSS4.Common.csproj">
+      <Name>KiSS4.Common</Name>
+      <Project>{B9295AD3-0104-4E8D-88E6-14B4D2EDD647}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.DB\KiSS4.DB.csproj">
+      <Name>KiSS4.DB</Name>
+      <Project>{94EF0808-6193-443F-ACE3-A54ABC4BDE8D}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Dokument\KiSS4.Dokument.csproj">
+      <Name>KiSS4.Dokument</Name>
+      <Project>{25932622-2762-49B9-9FF6-60B623E28111}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Gui\KiSS4.Gui.csproj">
+      <Name>KiSS4.Gui</Name>
+      <Project>{9AB1DBC3-F48B-4CE0-A557-4D3B46149A98}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClipboardBusinessRule.cs" />
+    <Compile Include="DlgTextEditorControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgTextEditorControl.Designer.cs">
+      <DependentUpon>DlgTextEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDesigner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDesigner.Designer.cs">
+      <DependentUpon>FrmDesigner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CtlClass.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlDesigner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlDesignerLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlDesignerRule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlIcon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlLOV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlLOVCode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlMenuEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlModul.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlTableColumnEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlTableEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlTableForeignKeysEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlTableIndicesEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlTableStructureEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlTreeEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlXRight.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlXRight.Designer.cs">
+      <DependentUpon>CtlXRight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DesignerHostUtils.cs" />
+    <Compile Include="CtlFrmDesigner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KeystrokeMessageFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyCodeDomDesignerLoader.cs" />
+    <Compile Include="MyDesignSurface.cs" />
+    <Compile Include="MyEventBindingService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyMenuCommandService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyNameCreationService.cs" />
+    <Compile Include="MyResourceService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MySelectionItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MySelectionService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyToolboxItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyToolboxService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyTypeDescriptorFilterService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MyTypeResolutionService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyGridSite.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SyntaxModeFileProvider.cs" />
+    <Compile Include="TextEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolboxPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XTableColumnDBHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlClass.resx">
+      <DependentUpon>CtlClass.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlDesigner.resx">
+      <DependentUpon>CtlDesigner.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlDesignerLayout.resx">
+      <DependentUpon>CtlDesignerLayout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlDesignerRule.resx">
+      <DependentUpon>CtlDesignerRule.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlIcon.resx">
+      <DependentUpon>CtlIcon.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlLOV.resx">
+      <DependentUpon>CtlLOV.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlLOVCode.resx">
+      <DependentUpon>CtlLOVCode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlMenuEditor.resx">
+      <DependentUpon>CtlMenuEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlModul.resx">
+      <DependentUpon>CtlModul.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlTableColumnEditor.resx">
+      <DependentUpon>CtlTableColumnEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlTableEditor.resx">
+      <DependentUpon>CtlTableEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlTableForeignKeysEditor.resx">
+      <DependentUpon>CtlTableForeignKeysEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlTableIndicesEditor.resx">
+      <DependentUpon>CtlTableIndicesEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlTableStructureEditor.resx">
+      <DependentUpon>CtlTableStructureEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlTreeEditor.resx">
+      <DependentUpon>CtlTreeEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlXRight.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CtlXRight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlFrmDesigner.resx">
+      <DependentUpon>CtlFrmDesigner.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolboxPane.resx">
+      <DependentUpon>ToolboxPane.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Icons\AlignBottoms.ico" />
+    <None Include="Icons\AlignCenters.ico" />
+    <None Include="Icons\AlignLefts.ico" />
+    <None Include="Icons\AlignMiddles.ico" />
+    <None Include="Icons\AlignRights.ico" />
+    <None Include="Icons\AlignToGrid.ico" />
+    <None Include="Icons\AlignTops.ico" />
+    <None Include="Icons\BringToFront.ico" />
+    <None Include="Icons\Build.ico" />
+    <None Include="Icons\CenterHorizontally.ico" />
+    <None Include="Icons\CenterVertically.ico" />
+    <None Include="Icons\Compile.ico" />
+    <None Include="Icons\DecreaseHorizontalSpacing.ico" />
+    <None Include="Icons\DecreaseVerticalSpacing.ico" />
+    <None Include="Icons\IncreaseHorizontalSpacing.ico" />
+    <None Include="Icons\IncreaseVerticalSpacing.ico" />
+    <None Include="Icons\MakeHorizontalSpacingEquals.ico" />
+    <None Include="Icons\MakeSameHeight.ico" />
+    <None Include="Icons\MakeSameSize.ico" />
+    <None Include="Icons\MakeSameWidth.ico" />
+    <None Include="Icons\MakeVerticalSpacingEquals.ico" />
+    <None Include="Icons\RemoveHorizontalSpacing.ico" />
+    <None Include="Icons\RemoveVerticalSpacing.ico" />
+    <None Include="Icons\SendToBack.ico" />
+    <None Include="Icons\TabOrder.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DlgTextEditorControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgTextEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmbeddedResources\CSharp-Mode-VSEnh.xshd" />
+    <EmbeddedResource Include="EmbeddedResources\TSQL-Mode.xshd" />
+    <EmbeddedResource Include="TextEditorControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TextEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0055_Copy2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0057_Paste2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OpenFile.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0051_Save.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0114_Refresh.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,99 @@
+﻿<View:KissView
+    x:Class="Kiss.UI.View.Wsh.WshHaushaltView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+    xmlns:View="clr-namespace:Kiss.UI.View"
+    xmlns:Controls="clr-namespace:Kiss.UI.Controls;assembly=Kiss.UI.Controls"
+    xmlns:ViewModel="clr-namespace:Kiss.UI.ViewModel.Wsh;assembly=Kiss.UI.ViewModel" xmlns:Converter="clr-namespace:Kiss.UI.Controls.Converter;assembly=Kiss.UI.Controls" xmlns:Constant="clr-namespace:Kiss.UI.Controls.Constant;assembly=Kiss.UI.Controls" mc:Ignorable="d"
+    d:DesignHeight="500"
+    d:DesignWidth="800">
+
+    <View:KissView.Resources>
+        <ViewModel:WshHaushaltVM x:Key="viewModel" />
+        <Converter:Null2BoolConverter x:Key="Null2BoolConverter" NullValue="False" NotNullValue="True"/>       
+    </View:KissView.Resources>
+
+    <Grid Name="panRoot" Margin="10" DataContext="{StaticResource ResourceKey=viewModel}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <CheckBox Name="cbxNurAktuelle" Grid.Row="0" Grid.Column="1" Content="Nur aktuelle" IsChecked="{Binding NurAktuelleHaushaltPersonen, Mode=TwoWay}" HorizontalAlignment="Right" />
+
+        <Controls:KissGridDevX HorizontalAlignment="Stretch" 
+                               Name="grdHaushalt" 
+                               VerticalAlignment="Stretch" 
+                               DataSource="{Binding EntityList}" 
+                               Grid.Row="1"
+                               SelectedItem="{Binding SelectedEntity, Mode=TwoWay}" >
+            <Controls:KissGridDevX.View>
+                <dxg:TableView ShowGroupPanel="False" RowMinHeight="20" AllowEditing="False" NavigationStyle="Row" ShowAutoFilterRow="False" />
+            </Controls:KissGridDevX.View>
+            <Controls:KissGridDevX.Columns>
+                <dxg:GridColumn Header="Unterstützt" FieldName="Unterstuetzt" VisibleIndex="0" Width="85" />
+                <dxg:GridColumn Header="Name" FieldName="BaPerson.Name" VisibleIndex="1" Width="120"/>
+                <dxg:GridColumn Header="Vorname" FieldName="BaPerson.Vorname" VisibleIndex="2" Width="120"/>
+                <Controls:GridColumnLookUp Header="Geschlecht" FieldName="BaPerson.GeschlechtCode" ItemsSource="{Binding Path=BaGeschlechtLOV}" 
+                                           VisibleIndex="3" Width="85" />
+                <dxg:GridColumn Header="Alter" FieldName="BaPerson.Alter" VisibleIndex="4" Width="55" />
+                <dxg:GridColumn FieldName="DatumVon" VisibleIndex="5" Width="90"/>
+                <dxg:GridColumn FieldName="DatumBis" VisibleIndex="6" Width="90"/>
+            </Controls:KissGridDevX.Columns>
+        </Controls:KissGridDevX>
+
+        <Controls:ValidationSummary Grid.Row="2" ServiceResult="{Binding Path=ValidationResult}" />
+        <Grid Grid.Row="3" 
+              Name="panDetail" 
+              Margin="{x:Static Constant:LayoutConstant.MarginMainControlTop}"              
+              IsEnabled="{Binding SelectedEntity, Converter={StaticResource Null2BoolConverter}}"
+              KeyboardNavigation.TabNavigation="Cycle"
+              >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="75"/>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="85" />
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControl}" />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControl}" />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControl}" />
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Label Content="Person" Name="lblPerson" />
+            <Controls:KissComboBox Grid.Column="1" 
+                      Name="cboPerson"
+                      ItemsSource="{Binding Path=KlientensystemPersonen}" 
+                      DisplayMember="NameVorname" 
+                      SelectedItem="{Binding Path=SelectedEntity.BaPerson, Mode=TwoWay}" IsTabStop="True" TabIndex="0" Grid.ColumnSpan="2" 
+                      HorizontalAlignment="Stretch"
+                      IsEnabled="{Binding Path=SelectedEntity.ChangeTracker.State, Converter={StaticResource ObjectStateAdded2TrueConverter}}"
+                      />
+
+            <!-- ZH: Diese Checkbox wird aus den BasisDaten: BaPerson.PersonOhneLeistung initialisiert. -->
+            <Label Content="Unterstützt" Name="lblUnterstuetzt" Grid.Row="2" />
+            <CheckBox Content="Wird diese Person unterstützt" Grid.Column="1" Grid.Row="2" 
+                          Name="cbxUnterstuetzt" IsChecked="{Binding Path=SelectedEntity.Unterstuetzt, UpdateSourceTrigger=PropertyChanged}" 
+                          IsTabStop="True" TabIndex="1" Grid.ColumnSpan="2" 
+                          IsEnabled="False"
+                          />
+
+            <Label Content="Datum Von" Name="lblDatumVon" Grid.Row="4" />
+            <Controls:KissDateEdit Grid.Column="1" Grid.Row="4" x:Name="edtDatumVon" EditValue="{Binding Path=SelectedEntity.DatumVon}" AllowNullInput="True" IsTabStop="True" TabIndex="2" />
+
+            <Label Content="Datum Bis" Name="lblDatumBis" Grid.Row="6" />
+            <Controls:KissDateEdit Grid.Column="1" Grid.Row="6" x:Name="edtDatumBis" EditValue="{Binding Path=SelectedEntity.DatumBis}" AllowNullInput="True" IsTabStop="True" TabIndex="3" />
+        </Grid>
+    </Grid>
+</View:KissView>

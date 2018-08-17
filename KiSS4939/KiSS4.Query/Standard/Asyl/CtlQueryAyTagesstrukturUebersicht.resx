@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>DECLARE @AyKursePersonFldID      INT,
+        @AyKurseDatumVonFldID    INT,
+        @AyKurseProgrammFldID    INT,
+        @AyKurseKursFldID        INT,
+        @AyKurseInstitutionFldID INT,
+        @AyKurseDatumBisFldID    INT,
+        @AyKursGrundFldID        INT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyKursePerson', @AyKursePersonFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyKurseDatumVon', @AyKurseDatumVonFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyKurseProgramm', @AyKurseProgrammFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyKurseKurs', @AyKurseKursFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyKurseInstitution', @AyKurseInstitutionFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyKurseDatumBis', @AyKurseDatumBisFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyKursGrund', @AyKursGrundFldID OUT --TODO change that!
+
+DECLARE @tmp Table(
+  FTBaPersonID INT,
+  FaLeistungID      INT,
+  UserID        INT,
+  KBBaPersonID INT,
+  KursCode      INT,
+  Eintritt      DATETIME,
+  Austritt      DATETIME,
+  GrundCode     INT,
+  ProgrammCode  INT
+)
+
+INSERT INTO @tmp
+SELECT PRS.BaPersonID,
+       FAL.FaLeistungID,     
+       USR.UserID,
+       PRS2.BaPersonID,
+       CONVERT(INT, KKU.Value),
+       CONVERT(DATETIME, KDV.Value),
+       CONVERT(DATETIME, KDB.Value),
+       CONVERT(INT, KGR.Value),
+       CONVERT(INT, KPG.Value)
+FROM dbo.fnAyPersonEinAustritt()    PEA
+  INNER JOIN dbo.FaLeistung                 FAL WITH (READUNCOMMITTED) ON FAL.FaLeistungID = PEA.FaLeistungID
+  INNER JOIN dbo.BaPerson        PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = FAL.BaPersonID
+  INNER JOIN dbo.XUser            USR WITH (READUNCOMMITTED) ON USR.UserID = FAL.UserID
+  LEFT  JOIN dbo.DynaValue        KPR WITH (READUNCOMMITTED) ON KPR.FaLeistungID = FAL.FaLeistungID               --kursteilnehmer (identisch mit eintritt)
+                                 AND KPR.DynaFieldID = @AyKursePersonFldID
+                                 AND CONVERT(INT, KPR.Value) = PEA.BaPersonID
+  LEFT  JOIN dbo.DynaValue        KDV WITH (READUNCOMMITTED) ON KDV.FaLeistungID = FAL.FaLeistungID               -- Datumvon
+                                 AND KDV.GridRowID = KPR.GridRowID
+                                 AND KDV.DynaFieldID = @AyKurseDatumVonFldID
+  LEFT  JOIN dbo.DynaValue        KPG WITH (READUNCOMMITTED) ON KPG.FaLeistungID = FAL.FaLeistungID               -- programm (gep/iva)
+                                 AND KPG.GridRowID = KPR.GridRowID
+                                 AND KPG.DynaFieldID = @AyKurseProgrammFldID
+  LEFT  JOIN dbo.DynaValue        KKU WITH (READUNCOMMITTED) ON KKU.FaLeistungID = FAL.FaLeistungID               -- kurs/extern
+                                 AND KKU.GridRowID = KPR.GridRowID
+                                 AND KKU.DynaFieldID = @AyKurseKursFldID
+  LEFT  JOIN dbo.DynaValue        KDB WITH (READUNCOMMITTED) ON KDB.FaLeistungID = FAL.FaLeistungID               -- datumbis
+                                 AND KDB.GridRowID = KPR.GridRowID
+                                 AND KDB.DynaFieldID = @AyKurseDatumBisFldID
+  LEFT  JOIN dbo.DynaValue        KGR WITH (READUNCOMMITTED) ON KGR.FaLeistungID = FAL.FaLeistungID               -- grund
+                                 AND KGR.GridRowID = KPR.GridRowID
+                                 AND KGR.DynaFieldID = @AyKursGrundFldID
+  LEFT  JOIN dbo.BaPerson        PRS2 WITH (READUNCOMMITTED) ON PRS2.BaPersonID = PEA.BaPersonID
+WHERE FAL.ModulID = 6
+  AND dbo.fnGetAge(PRS2.Geburtsdatum, GETDATE()) &gt;= 15
+--- AND FAL.UserID =  {edtUserID.LookupID}
+--- AND FAL.DatumVon &lt;= {edtDatumBis}                       -- Fall aktiv vor angegebenem Enddatum
+--- AND isNull(FAL.DatumBis, {edtDatumVon}) &gt;= {edtDatumVon}   -- Fall aktiv ab angegebenem Startdatum
+--- AND CONVERT(DATETIME, KDV.Value) &lt;= {edtDatumBis}                       -- Eintritt aktiv vor angegebenem Enddatum
+--- AND CONVERT(DATETIME, isNull(KDB.Value, {edtDatumVon})) &gt;= {edtDatumVon}   -- Eintritt aktiv ab angegebenem Startdatum
+--- AND PEA.Eintritt &lt;= {edtDatumBis} and isNull(PEA.Austritt, {edtDatumVon}) &gt;= {edtDatumVon}
+
+SELECT BaPersonID$       = PRS.BaPersonID,     
+       Person             = PRS2.Name + ' ' + isnull(PRS2.Vorname,''),
+       [N.Nr]             = PRS2.NNummer,
+       Status             = dbo.fnlovColumnListe('Aufenthaltsstatus', PRS2.AuslaenderStatusCode, 'ShortText'),
+       Geschlecht         = dbo.fnLovText('Geschlecht', PRS2.GeschlechtCode),
+       [Alter]            = dbo.fngetage(PRS2.Geburtsdatum, GETDATE()),
+       Kurs               = dbo.fnLovText('AyBeschKurs', KursCode),
+       [GEP/IVA]          = dbo.fnLovText('AyBeschProgramm', ProgrammCode),
+       Eintritt           = Eintritt,
+       Austritt           = Austritt,
+       Austrittsgrund     = dbo.fnLovText('AyBeschAbschlussgrund', GrundCode),
+       Arbeit             = dbo.fnLovText('Erwerbssituation', ARB.ErwerbssituationStatus1Code),
+       Nichts             = CONVERT(BIT, CASE WHEN KursCode IS NULL AND ProgrammCode IS NULL AND ARB.ErwerbssituationStatus1Code IS NULL THEN 1 ELSE 0 END),
+       Strasse            = PRS.WohnsitzStrasse +' ' + isNull(PRS.WohnsitzHausNr,''),
+       PLZ                = PRS.WohnsitzPLZ,
+       Ort                = PRS.WohnsitzOrt,
+       Telefon            = PRS.Telefon_P,
+       SAR                = USR.LastName + ISNULL(', ' + USR.FirstName,'')
+FROM @TMP                     FAL
+  INNER JOIN dbo.vwPerson        PRS ON PRS.BaPersonID = FAL.FTBaPersonID
+  INNER JOIN dbo.XUser            USR WITH (READUNCOMMITTED) ON USR.UserID = FAL.UserID
+  LEFT  JOIN dbo.BaPerson        PRS2 WITH (READUNCOMMITTED) ON PRS2.BaPersonID = KBBaPersonID
+  LEFT  JOIN dbo.BaArbeitAusbildung ARB WITH (READUNCOMMITTED) ON ARB.BaPersonID = PRS2.BaPersonID
+ORDER BY PRS.NNummer
+</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="xDocument.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAF1JREFUOE9jZAAC
+        Y2Pj/yAaGzh79iwjhjhIw///MzGwmJjYfxDGqSEtjeE/MgYpBhmEoYmQDSANKM7GpQHZmVg1oDsJxgdp
+        pI4N2EIKJjbqJLIiDqSJEMaVovGKAwBnM3PWBP8PfwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="ctlGotoFallListe3.BaPersonID" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAB9TeXN0ZW0uVW5pdHlTZXJpYWxpemF0aW9uSG9sZGVyAwAAAARE
+        YXRhCVVuaXR5VHlwZQxBc3NlbWJseU5hbWUBAAEICgIAAAAGAgAAAAAL
+</value>
+  </data>
+  <metadata name="qryListe3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>210, 17</value>
+  </metadata>
+  <data name="qryListe3.SelectStatement" xml:space="preserve">
+    <value>DECLARE @AyKursePersonFldID      INT,
+        @AyKurseDatumVonFldID    INT,
+        @AyKurseProgrammFldID    INT,
+        @AyKurseKursFldID        INT,
+        @AyKurseInstitutionFldID INT,
+        @AyKurseDatumBisFldID    INT,
+        @AyKursGrundFldID        INT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyKursePerson', @AyKursePersonFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyKurseDatumVon', @AyKurseDatumVonFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyKurseProgramm', @AyKurseProgrammFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyKurseKurs', @AyKurseKursFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyKurseInstitution', @AyKurseInstitutionFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyKurseDatumBis', @AyKurseDatumBisFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyKursGrund', @AyKursGrundFldID OUT --TODO change that!
+
+DECLARE @tmp Table(
+  FTBaPersonID INT,
+  FaLeistungID      INT,
+  UserID        INT,
+  KBBaPersonID INT,
+  KursCode      INT,
+  Eintritt      DATETIME,
+  Austritt      DATETIME,
+  GrundCode     INT,
+  ProgrammCode  INT
+)
+
+INSERT INTO @tmp
+SELECT PRS.BaPersonID,
+       FAL.FaLeistungID,     
+       USR.UserID,
+       PRS2.BaPersonID,
+       CONVERT(INT, KKU.Value),
+       CONVERT(DATETIME, KDV.Value),
+       CONVERT(DATETIME, KDB.Value),
+       CONVERT(INT, KGR.Value),
+       CONVERT(INT, KPG.Value)
+FROM dbo.fnAyPersonEinAustritt()    PEA
+  INNER JOIN dbo.FaLeistung                 FAL WITH (READUNCOMMITTED) ON FAL.FaLeistungID = PEA.FaLeistungID
+  INNER JOIN dbo.BaPerson        PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = FAL.BaPersonID
+  INNER JOIN dbo.XUser            USR WITH (READUNCOMMITTED) ON USR.UserID = FAL.UserID
+  LEFT  JOIN dbo.DynaValue        KPR WITH (READUNCOMMITTED) ON KPR.FaLeistungID = FAL.FaLeistungID               --kursteilnehmer (identisch mit eintritt)
+                                 AND KPR.DynaFieldID = @AyKursePersonFldID
+                                 AND CONVERT(INT, KPR.Value) = PEA.BaPersonID
+  LEFT  JOIN dbo.DynaValue        KDV WITH (READUNCOMMITTED) ON KDV.FaLeistungID = FAL.FaLeistungID               -- Datumvon
+                                 AND KDV.GridRowID = KPR.GridRowID
+                                 AND KDV.DynaFieldID = @AyKurseDatumVonFldID
+  LEFT  JOIN dbo.DynaValue        KPG WITH (READUNCOMMITTED) ON KPG.FaLeistungID = FAL.FaLeistungID               -- programm (gep/iva)
+                                 AND KPG.GridRowID = KPR.GridRowID
+                                 AND KPG.DynaFieldID = @AyKurseProgrammFldID
+  LEFT  JOIN dbo.DynaValue        KKU WITH (READUNCOMMITTED) ON KKU.FaLeistungID = FAL.FaLeistungID               -- kurs/extern
+                                 AND KKU.GridRowID = KPR.GridRowID
+                                 AND KKU.DynaFieldID = @AyKurseKursFldID
+  LEFT  JOIN dbo.DynaValue        KDB WITH (READUNCOMMITTED) ON KDB.FaLeistungID = FAL.FaLeistungID               -- datumbis
+                                 AND KDB.GridRowID = KPR.GridRowID
+                                 AND KDB.DynaFieldID = @AyKurseDatumBisFldID
+  LEFT  JOIN dbo.DynaValue        KGR WITH (READUNCOMMITTED) ON KGR.FaLeistungID = FAL.FaLeistungID               -- grund
+                                 AND KGR.GridRowID = KPR.GridRowID
+                                 AND KGR.DynaFieldID = @AyKursGrundFldID
+  LEFT  JOIN dbo.BaPerson        PRS2 WITH (READUNCOMMITTED) ON PRS2.BaPersonID = PEA.BaPersonID
+WHERE FAL.ModulID = 6
+  AND dbo.fnGetAge(PRS2.Geburtsdatum, GETDATE()) &gt;= 15
+--- AND FAL.UserID =  {edtUserID.LookupID}
+--- AND FAL.DatumVon &lt;= {edtDatumBis}                       -- Fall aktiv vor angegebenem Enddatum
+--- AND isNull(FAL.DatumBis, {edtDatumVon}) &gt;= {edtDatumVon}   -- Fall aktiv ab angegebenem Startdatum
+--- AND CONVERT(DATETIME, KDV.Value) &lt;= {edtDatumBis}                       -- Eintritt aktiv vor angegebenem Enddatum
+--- AND CONVERT(DATETIME, isNull(KDB.Value, {edtDatumVon})) &gt;= {edtDatumVon}   -- Eintritt aktiv ab angegebenem Startdatum
+--- AND PEA.Eintritt &lt;= {edtDatumBis} and isNull(PEA.Austritt, {edtDatumVon}) &gt;= {edtDatumVon}
+
+------------------------------------------------------------------
+---------- Ein-Austritte/Gründe
+------------------------------------------------------------------
+DECLARE @Result Table(
+   Beschreibung VARCHAR(100),
+   Anzahl       INT,
+   GEP          INT,
+   Kurs         INT
+)
+
+INSERT INTO @Result
+SELECT 'Eintritte', 
+        SUM(CASE WHEN Eintritt IS NULL THEN 0 ELSE 1 END),
+        SUM(CASE WHEN Eintritt IS NOT NULL AND ProgrammCode IS NOT NULL THEN 1 ELSE 0 END),
+        SUM(CASE WHEN Eintritt IS NOT NULL AND KursCode IS NOT NULL THEN 1 ELSE 0 END)
+FROM @Tmp
+
+INSERT INTO @Result
+SELECT 'Austritte',  
+       SUM(CASE WHEN Austritt IS NULL THEN 0 ELSE 1 END), 
+       SUM(CASE WHEN Austritt IS NOT NULL AND ProgrammCode IS NOT NULL THEN 1 ELSE 0 END),
+       SUM(CASE WHEN Austritt IS NOT NULL AND KursCode IS NOT NULL THEN 1 ELSE 0 END)
+       FROM @Tmp
+
+INSERT INTO @Result SELECT NULL, NULL, NULL, NULL
+INSERT INTO @Result SELECT 'Austrittsgründe:', NULL, NULL, NULL
+
+INSERT INTO @Result
+SELECT dbo.fnLovText('AyBeschAbschlussgrund', GrundCode), 
+       COUNT(*), 
+       SUM(CASE WHEN ProgrammCode IS NOT NULL THEN 1 ELSE 0 END), 
+       SUM(CASE WHEN KursCode IS NOT NULL THEN 1 ELSE 0 END)
+FROM @Tmp
+WHERE Austritt IS NOT NULL
+GROUP BY GrundCode
+
+SELECT * FROM @Result
+</value>
+  </data>
+  <data name="ctlGotoFallListe2.BaPersonID" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAB9TeXN0ZW0uVW5pdHlTZXJpYWxpemF0aW9uSG9sZGVyAwAAAARE
+        YXRhCVVuaXR5VHlwZQxBc3NlbWJseU5hbWUBAAEICgIAAAAGAgAAAAAL
+</value>
+  </data>
+  <metadata name="qryListe2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>114, 17</value>
+  </metadata>
+  <data name="qryListe2.SelectStatement" xml:space="preserve">
+    <value>DECLARE @AyKursePersonFldID      INT,
+        @AyKurseDatumVonFldID    INT,
+        @AyKurseProgrammFldID    INT,
+        @AyKurseKursFldID        INT,
+        @AyKurseInstitutionFldID INT,
+        @AyKurseDatumBisFldID    INT,
+        @AyKursGrundFldID        INT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyKursePerson', @AyKursePersonFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyKurseDatumVon', @AyKurseDatumVonFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyKurseProgramm', @AyKurseProgrammFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyKurseKurs', @AyKurseKursFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyKurseInstitution', @AyKurseInstitutionFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyKurseDatumBis', @AyKurseDatumBisFldID OUT
+EXEC dbo.spGetDynaFldIDfromTextmarke 'AyKursGrund', @AyKursGrundFldID OUT --TODO change that!
+
+DECLARE @tmp Table(
+  FTBaPersonID INT,
+  FaLeistungID      INT,
+  UserID        INT,
+  KBBaPersonID INT,
+  KursCode      INT,
+  Eintritt      DATETIME,
+  Austritt      DATETIME,
+  GrundCode     INT,
+  ProgrammCode  INT
+)
+
+INSERT INTO @tmp
+SELECT PRS.BaPersonID,
+       FAL.FaLeistungID,     
+       USR.UserID,
+       PRS2.BaPersonID,
+       CONVERT(INT, KKU.Value),
+       CONVERT(DATETIME, KDV.Value),
+       CONVERT(DATETIME, KDB.Value),
+       CONVERT(INT, KGR.Value),
+       CONVERT(INT, KPG.Value)
+FROM dbo.fnAyPersonEinAustritt()    PEA
+  INNER JOIN dbo.FaLeistung                 FAL WITH (READUNCOMMITTED) ON FAL.FaLeistungID = PEA.FaLeistungID
+  INNER JOIN dbo.BaPerson        PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = FAL.BaPersonID
+  INNER JOIN dbo.XUser            USR WITH (READUNCOMMITTED) ON USR.UserID = FAL.UserID
+  LEFT  JOIN dbo.DynaValue        KPR WITH (READUNCOMMITTED) ON KPR.FaLeistungID = FAL.FaLeistungID               --kursteilnehmer (identisch mit eintritt)
+                                 AND KPR.DynaFieldID = @AyKursePersonFldID
+                                 AND CONVERT(INT, KPR.Value) = PEA.BaPersonID
+  LEFT  JOIN dbo.DynaValue        KDV WITH (READUNCOMMITTED) ON KDV.FaLeistungID = FAL.FaLeistungID               -- Datumvon
+                                 AND KDV.GridRowID = KPR.GridRowID
+                                 AND KDV.DynaFieldID = @AyKurseDatumVonFldID
+  LEFT  JOIN dbo.DynaValue        KPG WITH (READUNCOMMITTED) ON KPG.FaLeistungID = FAL.FaLeistungID               -- programm (gep/iva)
+                                 AND KPG.GridRowID = KPR.GridRowID
+                                 AND KPG.DynaFieldID = @AyKurseProgrammFldID
+  LEFT  JOIN dbo.DynaValue        KKU WITH (READUNCOMMITTED) ON KKU.FaLeistungID = FAL.FaLeistungID               -- kurs/extern
+                                 AND KKU.GridRowID = KPR.GridRowID
+                                 AND KKU.DynaFieldID = @AyKurseKursFldID
+  LEFT  JOIN dbo.DynaValue        KDB WITH (READUNCOMMITTED) ON KDB.FaLeistungID = FAL.FaLeistungID               -- datumbis
+                                 AND KDB.GridRowID = KPR.GridRowID
+                                 AND KDB.DynaFieldID = @AyKurseDatumBisFldID
+  LEFT  JOIN dbo.DynaValue        KGR WITH (READUNCOMMITTED) ON KGR.FaLeistungID = FAL.FaLeistungID               -- grund
+                                 AND KGR.GridRowID = KPR.GridRowID
+                                 AND KGR.DynaFieldID = @AyKursGrundFldID
+  LEFT  JOIN dbo.BaPerson        PRS2 WITH (READUNCOMMITTED) ON PRS2.BaPersonID = PEA.BaPersonID
+WHERE FAL.ModulID = 6
+  AND dbo.fnGetAge(PRS2.Geburtsdatum, GETDATE()) &gt;= 15
+--- AND FAL.UserID =  {edtUserID.LookupID}
+--- AND FAL.DatumVon &lt;= {edtDatumBis}                       -- Fall aktiv vor angegebenem Enddatum
+--- AND isNull(FAL.DatumBis, {edtDatumVon}) &gt;= {edtDatumVon}   -- Fall aktiv ab angegebenem Startdatum
+--- AND CONVERT(DATETIME, KDV.Value) &lt;= {edtDatumBis}                       -- Eintritt aktiv vor angegebenem Enddatum
+--- AND CONVERT(DATETIME, isNull(KDB.Value, {edtDatumVon})) &gt;= {edtDatumVon}   -- Eintritt aktiv ab angegebenem Startdatum
+--- AND PEA.Eintritt &lt;= {edtDatumBis} and isNull(PEA.Austritt, {edtDatumVon}) &gt;= {edtDatumVon}
+
+SELECT Typ           = CASE WHEN Max(PRS.WohnsitzOrt) = 'Bern' THEN 'AK intern' ELSE 'And. Gem.' END,
+       [GEP/IVA]     = SUM(CASE WHEN ProgrammCode IS NULL THEN 0 ELSE 1 END),
+       [Kurs/Progr.] = SUM(CASE WHEN KursCode IS NULL THEN 0 ELSE 1 END),
+       Arbeit        = SUM(CASE WHEN ARB.ErwerbssituationStatus1Code IS NULL THEN 0 ELSE 1 END),
+       Nichts        = SUM(CASE WHEN ProgrammCode IS NULL AND KursCode IS NULL AND ARB.ErwerbssituationStatus1Code IS NULL THEN 1 ELSE 0 END),
+       [Männer]      = SUM(CASE WHEN GeschlechtCode = 1 THEN 1 ELSE 0 END),
+       [Frauen]      = SUM(CASE WHEN GeschlechtCode = 2 THEN 1 ELSE 0 END),
+       [15-25]       = SUM(CASE WHEN dbo.fngetage(PRS.Geburtsdatum, GETDATE()) BETWEEN 15 AND 25 THEN 1 ELSE 0 END),
+       [26-35]       = SUM(CASE WHEN dbo.fngetage(PRS.Geburtsdatum, GETDATE()) BETWEEN 26 AND 35 THEN 1 ELSE 0 END),
+       [36-65]       = SUM(CASE WHEN dbo.fngetage(PRS.Geburtsdatum, GETDATE()) BETWEEN 36 AND 65 THEN 1 ELSE 0 END),
+       [ab 65]       = SUM(CASE WHEN dbo.fngetage(PRS.Geburtsdatum, GETDATE()) &gt; 65 THEN 1 ELSE 0 END),
+       [N]           = SUM(CASE WHEN PRS.AuslaenderStatusCode = 8 THEN 1 ELSE 0 END),
+        [RW]          = SUM(CASE WHEN PRS.AuslaenderStatusCode = 11 THEN 1 ELSE 0 END),
+        [VA]          = SUM(CASE WHEN PRS.AuslaenderStatusCode = 17 THEN 1 ELSE 0 END)
+
+FROM @tmp              TMP
+  INNER JOIN dbo.vwPerson PRS ON PRS.BaPersonID = TMP.FTBaPersonID
+  LEFT JOIN  dbo.BaArbeitAusbildung ARB WITH (READUNCOMMITTED) ON ARB.BaPersonID = TMP.KBBaPersonID
+GROUP BY CASE WHEN PRS.WohnsitzOrt = 'Bern' THEN 1 ELSE 2 END
+</value>
+  </data>
+  <data name="edtDatumBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFVJREFUOE9jZAAC
+        Y2Pj/yCaEDh79iwjWA1MAzaNWOVAgsRguAuIcRKKGmROQwMD3D/IbKwaQApgitBp6mgAeYokG4abBmT/
+        YKQ3smKapLREKFkjywMAd9eDN3Z9MMsAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="edtDatumVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFVJREFUOE9jZAAC
+        Y2Pj/yCaEDh79iwjWA1MAzaNWOVAgsRguAuIcRKKGmROQwMD3D/IbKwaQApgitBp6mgAeYokG4abBmT/
+        YKQ3smKapLREKFkjywMAd9eDN3Z9MMsAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="edtUserID.LookupSQL" xml:space="preserve">
+    <value>select ID = UserID, 
+SAR = LastName + isNull(', ' + FirstName,''), 
+[Kuerzel] = LogonName
+             
+from   XUser 
+            
+ where LastName + isNull(', ' + FirstName,'') like {0} + '%' 
+             
+order by SAR</value>
+  </data>
+</root>

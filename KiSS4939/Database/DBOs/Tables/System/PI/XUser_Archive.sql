@@ -1,0 +1,27 @@
+CREATE TABLE [dbo].[XUser_Archive](
+	[UserID] [int] NOT NULL,
+	[ArchiveID] [int] NOT NULL,
+	[XUser_ArchiveTS] [timestamp] NOT NULL,
+ CONSTRAINT [PK_XUser_Archive] PRIMARY KEY CLUSTERED 
+(
+	[UserID] ASC,
+	[ArchiveID] ASC
+) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+ALTER TABLE [dbo].[XUser_Archive]  WITH CHECK ADD  CONSTRAINT [FK_XUser_Archive_XArchive] FOREIGN KEY([ArchiveID])
+REFERENCES [XArchive] ([ArchiveID])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+GO
+
+ALTER TABLE [dbo].[XUser_Archive]  WITH CHECK ADD  CONSTRAINT [FK_XUser_Archive_XUser] FOREIGN KEY([UserID])
+REFERENCES [XUser] ([UserID])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+GO
+
+ALTER TABLE [dbo].[XUser_Archive] CHECK CONSTRAINT [FK_XUser_Archive_XUser]
+GO

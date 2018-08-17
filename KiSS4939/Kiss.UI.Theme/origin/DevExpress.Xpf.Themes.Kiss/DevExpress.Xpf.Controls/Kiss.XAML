@@ -1,0 +1,15 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys">
+    <ResourceDictionary.MergedDictionaries>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Kiss.v14.1;component/DevExpress.Xpf.Controls/WindowsUI/Kiss/FadingButton.xaml" />
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Kiss.v14.1;component/DevExpress.Xpf.Controls/WindowsUI/Kiss/FlipView.xaml" />
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Kiss.v14.1;component/DevExpress.Xpf.Controls/WindowsUI/Kiss/ForwardButton.xaml" />
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Kiss.v14.1;component/DevExpress.Xpf.Controls/WindowsUI/Kiss/PageView.xaml" />
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Kiss.v14.1;component/DevExpress.Xpf.Controls/WindowsUI/Kiss/SlideView.xaml" />
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Kiss.v14.1;component/DevExpress.Xpf.Controls/WindowsUI/Kiss/CommandButton.xaml" />
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Kiss.v14.1;component/DevExpress.Xpf.Controls/WindowsUI/Kiss/AppBar.xaml" />
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Kiss.v14.1;component/DevExpress.Xpf.Controls/WindowsUI/Kiss/MessageBox.xaml" />
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Kiss.v14.1;component/DevExpress.Xpf.Controls/WindowsUI/Kiss/Flyout.xaml" />
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Kiss.v14.1;component/DevExpress.Xpf.Controls/WindowsUI/Kiss/TouchNavigator.xaml" />
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Kiss.v14.1;component/DevExpress.Xpf.Controls/WindowsUI/Kiss/TileNavPane.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

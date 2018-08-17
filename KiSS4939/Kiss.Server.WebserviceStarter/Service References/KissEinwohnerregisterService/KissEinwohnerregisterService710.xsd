@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:52671/KissEinwohnerregisterService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Kiss.Infrastructure" />
+  <xs:import schemaLocation="http://localhost:52671/KissEinwohnerregisterService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/Kiss.DbContext.DTO.Ba" />
+  <xs:element name="GetPersonDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dbName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="xUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="machineName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersonDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Kiss.Infrastructure" minOccurs="0" name="GetPersonDetailsResult" nillable="true" type="q1:ServiceResultOfBaEinwohnerregisterPersonAnfrageDTOOoDEtP87" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServerVersion">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServerVersionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetServerVersionResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PersonenAnAbmelden">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dbName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PersonenAnAbmeldenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PersonenAnAbmeldenResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PersonSuchen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dbName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Kiss.DbContext.DTO.Ba" minOccurs="0" name="dto" nillable="true" type="q2:BaEinwohnerregisterPersonSucheDTO" />
+        <xs:element minOccurs="0" name="xUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="machineName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PersonSuchenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Kiss.Infrastructure" minOccurs="0" name="PersonSuchenResult" nillable="true" type="q3:ServiceResultOfArrayOfBaEinwohnerregisterPersonResultDTOOoDEtP87" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessEvents">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dbName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="packetSize" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="includeFailedEvent" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessEventsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessEventsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

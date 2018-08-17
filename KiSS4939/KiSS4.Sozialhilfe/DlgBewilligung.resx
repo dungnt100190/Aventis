@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="edtDatum.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <metadata name="qryBgBewilligung.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="qryUser.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>170, 17</value>
+  </metadata>
+  <data name="qryUser.SelectStatement" xml:space="preserve">
+    <value>SELECT
+  USR.UserID,
+  USR.NameVorname,
+  USR.EMail,
+  USR.GrantPermGroupID, 
+  Anfrage  = CASE
+               WHEN NOT EXISTS (SELECT * FROM XPermissionValue
+                                WHERE PermissionCode = {0} AND CONVERT(bit, Value) = 1)                    THEN 1
+               WHEN EXISTS     (SELECT * FROM XPermissionValue
+                                WHERE PermissionCode = {0} AND CONVERT(bit, Value) = 1
+                                  AND PermissionGroupID IN (USR.PermissionGroupID, USR.GrantPermGroupID))  THEN 1
+               ELSE 0
+             END,
+  UserID_Zustaendig    = USR.UserID,
+  OrgUnitID_Zustaendig = GRP.OrgUnitID
+FROM vwUser               USR
+  LEFT JOIN XOrgUnit_User GRP ON GRP.UserID = USR.UserID 
+                             AND GRP.OrgUnitMemberCode = 2 -- Mitglied (nicht Gast)
+WHERE USR.IsLocked = 0 -- gesperrte Benutzer sollen nicht angefragt werden können
+
+UNION ALL 
+SELECT NULL, NULL, NULL, 0, 0, 0, 0
+ORDER BY NameVorname
+</value>
+  </data>
+  <metadata name="qryUserFinanzplanDown.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>264, 17</value>
+  </metadata>
+  <data name="qryUserFinanzplanDown.SelectStatement" xml:space="preserve">
+    <value>-- Finanzplan
+DECLARE @BgFinanzplanID INT,
+        @UserID INT;
+
+SELECT @BgFinanzplanID = {0}, @UserID = {1};
+
+DECLARE @UserID_Zustaendig INT,
+        @BgBewilligungID INT,
+        @UserID_Vorgaenger INT,
+        @OrgUnitID_Zustaendig INT,
+         @OrgUnitID_Vorgaenger INT,
+        @Kompetenzstufe_Zustaendig INT,
+        @Kompetenzstufe_Vorgaenger INT;
+
+--determine @UserID_Vorgaenger 
+SELECT TOP 1 @BgBewilligungID=BgBewilligungID, @UserID_Vorgaenger = BEW.UserID, @Kompetenzstufe_Vorgaenger=GRP.Kompetenzstufe, @OrgUnitID_Vorgaenger=OUU.OrgUnitID
+FROM BgBewilligung BEW
+  INNER JOIN XUser  USR ON USR.UserID = BEW.UserID
+  INNER JOIN XPermissionGroup GRP ON GRP.PermissionGroupID = USR.GrantPermGroupID
+  LEFT JOIN  XOrgUnit_User OUU ON OUU.UserID = USR.UserID AND OUU.OrgUnitMemberCode = 2 --2: Mitglied
+WHERE BgFinanzplanID = @BgFinanzplanID
+  AND UserID_Zustaendig IS NOT NULL
+  AND Zurueckgewiesen = 0
+ORDER BY Datum DESC;
+
+--SELECT '@UserID_Vorgaenger', @UserID_Vorgaenger, @Kompetenzstufe_Vorgaenger
+
+SELECT @UserID_Zustaendig=UserID_Zustaendig, @Kompetenzstufe_Zustaendig=ISNULL(GRP.Kompetenzstufe, @Kompetenzstufe_Vorgaenger), @OrgUnitID_Zustaendig=OUU.OrgUnitID
+FROM BgBewilligung BEW
+  INNER JOIN XUser  USR ON USR.UserID = BEW.UserID_Zustaendig
+  INNER JOIN XPermissionGroup GRP ON GRP.PermissionGroupID = USR.GrantPermGroupID
+  LEFT JOIN  XOrgUnit_User OUU ON OUU.UserID = USR.UserID AND OUU.OrgUnitMemberCode = 2 --2: Mitglied
+WHERE BgFinanzplanID = @BgFinanzplanID
+  AND Zurueckgewiesen = 0
+  AND UserID_Zustaendig IS NOT NULL
+  AND BgBewilligungID &lt;&gt; @BgBewilligungID
+ORDER BY Datum DESC;
+
+--SELECT '@UserID_Zustaendig', @UserID_Zustaendig, '@Kompetenzstufe_Zustaendig', @Kompetenzstufe_Zustaendig
+
+--sicherstellen, dass wir für _Zustaendig auch Werte haben
+SELECT @Kompetenzstufe_Zustaendig=ISNULL(@Kompetenzstufe_Zustaendig, @Kompetenzstufe_Vorgaenger), @OrgUnitID_Zustaendig=ISNULL(@OrgUnitID_Zustaendig, @OrgUnitID_Vorgaenger)
+
+SELECT 
+  USR.UserID,
+  USR.NameVorname,
+  USR.EMail,
+  GRP.Kompetenzstufe,
+  OrgUnitID_Zustaendig=@OrgUnitID_Zustaendig
+FROM vwUser USR
+  INNER JOIN XPermissionGroup GRP ON GRP.PermissionGroupID = USR.GrantPermGroupID
+WHERE GRP.Kompetenzstufe &gt;= @Kompetenzstufe_Zustaendig
+  AND GRP.Kompetenzstufe &lt;= @Kompetenzstufe_Vorgaenger 
+  AND USR.UserID &lt;&gt; @UserID
+  AND USR.IsLocked = 0
+UNION ALL
+  SELECT NULL, NULL, NULL, NULL, @OrgUnitID_Zustaendig
+UNION ALL
+  SELECT NULL, NULL, NULL, NULL, @OrgUnitID_Zustaendig
+ORDER BY NameVorname  
+</value>
+  </data>
+  <metadata name="qryUserPositionDown.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>464, 17</value>
+  </metadata>
+  <data name="qryUserPositionDown.SelectStatement" xml:space="preserve">
+    <value>-- finde die XPermissionGroupID die genügend Kompetenz haben zum Bewilligen
+
+-- Zusätzliche Leistung
+DECLARE @BgPositionID INT,
+        @UserID INT;
+
+SELECT @BgPositionID = {0}, @UserID = {1};
+
+DECLARE @UserID_Zustaendig INT,
+        @BgBewilligungID INT,
+        @UserID_Vorgaenger INT,
+        @OrgUnitID_Zustaendig INT,
+        @OrgUnitID_Vorgaenger INT,
+        @Kompetenzstufe_Zustaendig INT,
+        @Kompetenzstufe_Vorgaenger INT;
+
+--determine @UserID_Vorgaenger 
+SELECT TOP 1 @BgBewilligungID=BgBewilligungID, @UserID_Vorgaenger = BEW.UserID, @Kompetenzstufe_Vorgaenger=GRP.Kompetenzstufe, @OrgUnitID_Vorgaenger=OUU.OrgUnitID
+FROM BgBewilligung BEW
+  INNER JOIN XUser  USR ON USR.UserID = BEW.UserID
+  INNER JOIN XPermissionGroup GRP ON GRP.PermissionGroupID = USR.GrantPermGroupID
+  LEFT JOIN  XOrgUnit_User OUU ON OUU.UserID = USR.UserID AND OUU.OrgUnitMemberCode = 2 --2: Mitglied
+WHERE BgPositionID = @BgPositionID
+  AND UserID_Zustaendig IS NOT NULL
+  AND Zurueckgewiesen = 0
+ORDER BY Datum DESC;
+
+--SELECT '@UserID_Vorgaenger', @UserID_Vorgaenger, @Kompetenzstufe_Vorgaenger
+
+SELECT @UserID_Zustaendig=UserID_Zustaendig, @Kompetenzstufe_Zustaendig=ISNULL(GRP.Kompetenzstufe, @Kompetenzstufe_Vorgaenger), @OrgUnitID_Zustaendig=OUU.OrgUnitID
+FROM BgBewilligung BEW
+  INNER JOIN XUser  USR ON USR.UserID = BEW.UserID_Zustaendig
+  INNER JOIN XPermissionGroup GRP ON GRP.PermissionGroupID = USR.GrantPermGroupID
+  LEFT JOIN  XOrgUnit_User OUU ON OUU.UserID = USR.UserID AND OUU.OrgUnitMemberCode = 2 --2: Mitglied
+WHERE BgPositionID = @BgPositionID
+  AND Zurueckgewiesen = 0
+  AND UserID_Zustaendig IS NOT NULL
+  AND BgBewilligungID &lt;&gt; @BgBewilligungID
+ORDER BY Datum DESC;
+
+--SELECT '@UserID_Zustaendig', @UserID_Zustaendig, '@Kompetenzstufe_Zustaendig', @Kompetenzstufe_Zustaendig
+
+--sicherstellen, dass wir für _Zustaendig auch Werte haben
+SELECT @Kompetenzstufe_Zustaendig=ISNULL(@Kompetenzstufe_Zustaendig, @Kompetenzstufe_Vorgaenger), @OrgUnitID_Zustaendig=ISNULL(@OrgUnitID_Zustaendig, @OrgUnitID_Vorgaenger)
+
+SELECT 
+  USR.UserID,
+  USR.NameVorname,
+  USR.EMail,
+  GRP.Kompetenzstufe,
+  OrgUnitID_Zustaendig=@OrgUnitID_Zustaendig
+FROM vwUser USR
+  INNER JOIN XPermissionGroup GRP ON GRP.PermissionGroupID = USR.GrantPermGroupID
+WHERE GRP.Kompetenzstufe &gt;= @Kompetenzstufe_Zustaendig
+  AND GRP.Kompetenzstufe &lt;= @Kompetenzstufe_Vorgaenger 
+  AND USR.UserID &lt;&gt; @UserID
+  AND USR.IsLocked = 0
+UNION ALL
+  SELECT NULL, NULL, NULL, NULL, @OrgUnitID_Zustaendig
+UNION ALL
+  SELECT NULL, NULL, NULL, NULL, @OrgUnitID_Zustaendig
+ORDER BY NameVorname  
+
+</value>
+  </data>
+  <metadata name="qryUserOld.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>731, 17</value>
+  </metadata>
+  <metadata name="qryUserOldAnfragen.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>844, 17</value>
+  </metadata>
+  <metadata name="qryUserFinanzplanUp.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1005, 17</value>
+  </metadata>
+  <data name="qryUserFinanzplanUp.SelectStatement" xml:space="preserve">
+    <value>-- Finanzplan
+DECLARE @BgFinanzplanID INT,
+        @UserID INT;
+
+SELECT @BgFinanzplanID = {0}, @UserID = {1};
+
+DECLARE @UserID_Zustaendig INT,
+        @OrgUnitID_Zustaendig INT,
+        @UserID_Chef INT,
+        @Kompetenzstufe_Chef INT,
+        @Kompetenzstufe_User INT,
+        @LastBewilligungCode INT;
+
+--determine @UserID_Zustaendig
+SELECT TOP 1 @UserID_Zustaendig = UserID_Zustaendig, @OrgUnitID_Zustaendig = OrgUnitID_ChefZustaendig, @LastBewilligungCode = BgBewilligungCode
+FROM BgBewilligung
+WHERE BgFinanzplanID = @BgFinanzplanID
+  AND UserID_Zustaendig IS NOT NULL
+  AND (Zurueckgewiesen = 0
+       OR BgBewilligungCode = 4)
+ORDER BY Datum DESC;
+
+--SELECT '@UserID_Zustaendig 1. Versuch', @UserID_Zustaendig, @OrgUnitID_Zustaendig
+
+IF @UserID_Zustaendig IS NULL OR @LastBewilligungCode = 4 --4: Bewilligung aufgehoben
+BEGIN
+  --assume SAR as 'UserID_Zustaendig'
+  SELECT @UserID_Zustaendig = LEI.UserID, @OrgUnitID_Zustaendig = OUU.OrgUnitID
+  FROM BgFinanzplan FPL
+    INNER JOIN FaLeistung LEI ON LEI.FaLeistungID = FPL.FaLeistungID
+    LEFT JOIN XOrgUnit_User OUU ON OUU.UserID = LEI.UserID AND OUU.OrgUnitMemberCode = 2 --2: Mitglied
+  WHERE FPL.BgFinanzplanID = @BgFinanzplanID
+END;
+
+--SELECT '@UserID_Zustaendig 2. Versuch', @UserID_Zustaendig, @OrgUnitID_Zustaendig
+
+--determine chief of @UserID_Zustaendig and his Kompetenzstufe 
+SELECT @UserID_Chef = ORU.ChiefID, @Kompetenzstufe_Chef = GRP.Kompetenzstufe, @OrgUnitID_Zustaendig=ORU.ParentID
+FROM XOrgUnit ORU
+  INNER JOIN XUser USR_Chef ON USR_Chef.UserID = ORU.ChiefID
+  INNER JOIN XPermissionGroup GRP ON GRP.PermissionGroupID = USR_Chef.GrantPermGroupID
+WHERE ORU.OrgUnitID = @OrgUnitID_Zustaendig
+
+--SELECT '@UserID_Chef', @UserID_Chef, '@Kompetenzstufe_Chef', @Kompetenzstufe_Chef
+
+DECLARE @Watchdog INT
+SET @Watchdog = 0
+WHILE @UserID_Zustaendig = @UserID_Chef AND @Watchdog &lt; 100 BEGIN
+  SET @Watchdog = @Watchdog + 1
+  --user is his own chief -&gt; go one step further
+  SELECT @UserID_Chef = ORU.ChiefID, @Kompetenzstufe_Chef = GRP.Kompetenzstufe, @OrgUnitID_Zustaendig = ISNULL(ORU.ParentID,@OrgUnitID_Zustaendig)
+  FROM XOrgUnit                 ORU
+    INNER JOIN XUser            USR_Chef ON USR_Chef.UserID = ORU.ChiefID
+    INNER JOIN XPermissionGroup GRP      ON GRP.PermissionGroupID = USR_Chef.GrantPermGroupID
+  WHERE ORU.OrgUnitID = @OrgUnitID_Zustaendig
+END
+
+--SELECT '@UserID_Chef', @UserID_Chef, '@Kompetenzstufe_Chef', @Kompetenzstufe_Chef
+
+--determine Kompetenzstufe of @UserID_Zustaendig
+SELECT @Kompetenzstufe_User = GRP.Kompetenzstufe
+FROM XUser USR
+  INNER JOIN XPermissionGroup GRP ON GRP.PermissionGroupID = USR.GrantPermGroupID
+WHERE USR.UserID = @UserID_Zustaendig
+
+--SELECT '@Kompetenzstufe_User', @Kompetenzstufe_User
+
+SELECT 
+  USR.UserID,
+  USR.NameVorname,
+  USR.EMail,
+  GRP.Kompetenzstufe,
+  OrgUnitID_Zustaendig=@OrgUnitID_Zustaendig,
+  UserID_Zustaendig=@UserID_Chef
+FROM vwUser USR
+  INNER JOIN XPermissionGroup GRP ON GRP.PermissionGroupID = USR.GrantPermGroupID
+WHERE GRP.Kompetenzstufe &gt;= @Kompetenzstufe_User
+  AND GRP.Kompetenzstufe &lt;= @Kompetenzstufe_Chef 
+  AND USR.UserID &lt;&gt; @UserID
+  AND USR.IsLocked = 0
+UNION ALL
+  SELECT NULL, NULL, NULL, NULL, @OrgUnitID_Zustaendig, @UserID_Chef
+UNION ALL
+  SELECT NULL, NULL, NULL, NULL, @OrgUnitID_Zustaendig, @UserID_Chef
+ORDER BY NameVorname </value>
+  </data>
+  <metadata name="qryUserPositionUp.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <data name="qryUserPositionUp.SelectStatement" xml:space="preserve">
+    <value>-- finde die XPermissionGroupID die genügend Kompetenz haben zum Bewilligen
+
+-- Zusätzliche Leistung
+DECLARE @BgPositionID INT,
+        @UserID INT;
+
+SELECT @BgPositionID = {0}, @UserID = {1};
+
+DECLARE @UserID_Zustaendig INT,
+        @OrgUnitID_Zustaendig INT,
+        @UserID_Chef INT,
+        @Kompetenzstufe_Chef INT,
+        @Kompetenzstufe_User INT,
+        @LastBewilligungCode INT;
+
+--determine @UserID_Zustaendig
+SELECT TOP 1 @UserID_Zustaendig = UserID_Zustaendig, @OrgUnitID_Zustaendig = OrgUnitID_ChefZustaendig, @LastBewilligungCode = BgBewilligungCode
+FROM BgBewilligung
+WHERE BgPositionID = @BgPositionID
+  AND UserID_Zustaendig IS NOT NULL
+  AND (Zurueckgewiesen = 0
+       OR BgBewilligungCode = 4)
+ORDER BY Datum DESC;
+
+--SELECT '@UserID_Zustaendig 1. Versuch', @UserID_Zustaendig, @OrgUnitID_Zustaendig
+
+IF @UserID_Zustaendig IS NULL OR @LastBewilligungCode = 4 --4: Bewilligung aufgehoben
+BEGIN
+  --assume SAR as 'UserID_Zustaendig'
+  SELECT @UserID_Zustaendig = LEI.UserID, @OrgUnitID_Zustaendig = OUU.OrgUnitID
+  FROM BgPosition POS
+    INNER JOIN BgBudget   BDG ON BDG.BgBudgetID = POS.BgBudgetID
+    INNER JOIN BgFinanzplan FPL ON FPL.BgFinanzplanID = BDG.BgFinanzplanID
+    INNER JOIN FaLeistung LEI ON LEI.FaLeistungID = FPL.FaLeistungID
+    LEFT JOIN XOrgUnit_User OUU ON OUU.UserID = LEI.UserID AND OUU.OrgUnitMemberCode = 2 --2: Mitglied
+  WHERE POS.BgPositionID = @BgPositionID
+END;
+
+--SELECT '@UserID_Zustaendig 2. Versuch', @UserID_Zustaendig, @OrgUnitID_Zustaendig
+
+--determine chief of @UserID_Zustaendig and his Kompetenzstufe 
+SELECT @UserID_Chef = ORU.ChiefID, @Kompetenzstufe_Chef = GRP.Kompetenzstufe, @OrgUnitID_Zustaendig=ORU.ParentID
+FROM XOrgUnit ORU
+  INNER JOIN XUser USR_Chef ON USR_Chef.UserID = ORU.ChiefID
+  INNER JOIN XPermissionGroup GRP ON GRP.PermissionGroupID = USR_Chef.GrantPermGroupID
+WHERE ORU.OrgUnitID = @OrgUnitID_Zustaendig
+
+--SELECT '@UserID_Chef', @UserID_Chef, '@Kompetenzstufe_Chef', @Kompetenzstufe_Chef
+
+DECLARE @Watchdog INT
+SET @Watchdog = 0
+WHILE @UserID_Zustaendig = @UserID_Chef AND @Watchdog &lt; 100 BEGIN
+  SET @Watchdog = @Watchdog + 1
+  --user is his own chief -&gt; go one step further
+  SELECT @UserID_Chef = ORU.ChiefID, @Kompetenzstufe_Chef = GRP.Kompetenzstufe, @OrgUnitID_Zustaendig = ISNULL(ORU.ParentID,@OrgUnitID_Zustaendig)
+  FROM XOrgUnit                 ORU
+    INNER JOIN XUser            USR_Chef ON USR_Chef.UserID = ORU.ChiefID
+    INNER JOIN XPermissionGroup GRP      ON GRP.PermissionGroupID = USR_Chef.GrantPermGroupID
+  WHERE ORU.OrgUnitID = @OrgUnitID_Zustaendig
+END
+
+--SELECT '@UserID_Chef', @UserID_Chef, '@Kompetenzstufe_Chef', @Kompetenzstufe_Chef
+
+--determine Kompetenzstufe of @UserID_Zustaendig
+SELECT @Kompetenzstufe_User = GRP.Kompetenzstufe
+FROM XUser USR
+  INNER JOIN XPermissionGroup GRP ON GRP.PermissionGroupID = USR.GrantPermGroupID
+WHERE USR.UserID = @UserID_Zustaendig
+
+--SELECT '@Kompetenzstufe_User', @Kompetenzstufe_User
+
+SELECT 
+  USR.UserID,
+  USR.NameVorname,
+  USR.EMail,
+  GRP.Kompetenzstufe,
+  OrgUnitID_Zustaendig=@OrgUnitID_Zustaendig,
+  UserID_Zustaendig=@UserID_Chef
+FROM vwUser USR
+  INNER JOIN XPermissionGroup GRP ON GRP.PermissionGroupID = USR.GrantPermGroupID
+WHERE GRP.Kompetenzstufe &gt;= @Kompetenzstufe_User
+  AND GRP.Kompetenzstufe &lt;= @Kompetenzstufe_Chef 
+  AND USR.UserID &lt;&gt; @UserID
+  AND USR.IsLocked = 0
+UNION ALL
+  SELECT NULL, NULL, NULL, NULL, @OrgUnitID_Zustaendig, @UserID_Chef
+UNION ALL
+  SELECT NULL, NULL, NULL, NULL, @OrgUnitID_Zustaendig, @UserID_Chef
+ORDER BY NameVorname 
+
+</value>
+  </data>
+</root>

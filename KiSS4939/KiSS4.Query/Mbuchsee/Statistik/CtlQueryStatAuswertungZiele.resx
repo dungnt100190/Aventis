@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>DECLARE @DatumVon DATETIME
+DECLARE @DatumBis DATETIME
+
+SET @DatumVon = {edtDatumVon}
+SET @DatumBis = {edtDatumBis}
+
+DECLARE @Result TABLE(
+   Beschreibung VARCHAR(100),
+   Auswertung   VARCHAR(100),
+   Kennzahl     INT,
+   Masseinheit  VARCHAR(50),
+   Sortkey$     INT
+)
+
+--Base of all queries. 
+--#Abgeschlossene Phasen in selected period
+DECLARE @Phasen TABLE(
+   FaPhaseID   INT,
+   FaPhaseCode INT
+)
+INSERT @Phasen
+SELECT PHS.FaPhaseID, PHS.FaPhaseCode
+FROM FaPhase PHS
+WHERE PHS.DatumBis BETWEEN @DatumVon AND @DatumBis
+
+
+---------------------------------------------------------------------------------
+--Abgeschlossene Beratungs-Phasen = # Ausgewertete Beratungs-Phasen
+INSERT @Result
+SELECT CASE WHEN FaPhaseCode = 2 THEN 'Total Ausgewertete Beratungsphasen'
+            ELSE 'Total ausgewertete Abklärungsphasen'
+       END,
+       '',
+       COUNT(*),
+       'Anzahl',
+       CASE WHEN FaPhaseCode = 1 THEN 100
+            ELSE 1
+       END
+FROM @Phasen PHS
+GROUP BY PHS.FaPhaseCode
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+--Leidet der Klient
+DECLARE @FaKantRepExistenzFldID INT
+EXEC dbo.[spGetDynaFldIDfromTextmarke] 'FaKantRepExistens', @FaKantRepExistenzFldID OUTPUT 
+
+INSERT @Result
+SELECT dbo.fnLOVText('FaKantRepExistenz', 3), 
+       'ja', 
+       COUNT(*), 
+       'Anzahl',
+        CASE WHEN FaPhaseCode = 1 THEN 103
+            ELSE 3
+       END
+FROM DynaValue DYV
+INNER JOIN @Phasen PHS ON PHS.FaPhaseID = DYV.FaPhaseID
+WHERE DYV.DynaFieldID = @FaKantRepExistenzFldID
+  AND CONVERT(VARCHAR, DYV.Value) LIKE '%3%'
+GROUP BY PHS.FaPhaseCode
+---------------------------------------------------------------------------------
+--führt der Klient ein menschenunwürdiges Leben
+INSERT @Result
+SELECT dbo.fnLOVText('FaKantRepExistenz', 2), 'ja', COUNT(*), 'Anzahl', 
+       CASE WHEN FaPhaseCode = 1 THEN 104
+            ELSE 4
+       END
+FROM DynaValue DYV
+INNER JOIN @Phasen PHS ON PHS.FaPhaseID = DYV.FaPhaseID
+WHERE DYV.DynaFieldID = @FaKantRepExistenzFldID
+  AND CONVERT(VARCHAR, DYV.Value) LIKE '%2%'
+GROUP BY PHS.FaPhaseCode
+---------------------------------------------------------------------------------
+
+
+DECLARE @FaKantRepSozGruendeFldID INT
+EXEC dbo.[spGetDynaFldIDfromTextmarke] 'FaKantRepSozGruende', @FaKantRepSozGruendeFldID OUTPUT 
+DECLARE @FaIntKantRepSozGruendeFldID INT
+EXEC dbo.[spGetDynaFldIDfromTextmarke] 'FaIntKantRepSozGruende', @FaIntKantRepSozGruendeFldID OUTPUT 
+
+--used for several queries
+DECLARE @TMP TABLE(
+   Value       SQL_VARIANT,
+   FaPhaseCode INT
+)
+---------------------------------------------------------------------------------
+--Gründe welche Teilnahme am zozialen Leben behindern
+INSERT @TMP
+SELECT DYV.Value, PHS.FaPhaseCode
+FROM DynaValue DYV
+INNER JOIN @Phasen PHS ON PHS.FaPhaseID = DYV.FaPhaseID
+WHERE DYV.DynaFieldID = @FaKantRepSozGruendeFldID OR DYV.DynaFieldID = @FaIntKantRepSozGruendeFldID
+
+DECLARE @i INT
+SET @i = 1
+
+INSERT @Result SELECT 'Gründe welche Teilnahme am sozialen Leben behindern', '',NULL,'',10
+INSERT @Result SELECT 'Gründe welche Teilnahme am sozialen Leben behindern', '',NULL,'',110
+
+WHILE @i&lt;=8 BEGIN
+   INSERT @Result
+   SELECT '', dbo.fnLOVText('FaKantRepSozialLeben', @i), COUNT(*), 'Anzahl', @i+10 +((FaPhaseCode%2)*100)
+   FROM @TMP
+   WHERE CONVERT(VARCHAR, Value) LIKE '%'+CONVERT(VARCHAR, @i)+'%'
+   GROUP BY FaPhaseCode
+   SET @i = @i+1
+END
+
+---------------------------------------------------------------------------------
+
+
+DELETE FROM @TMP
+DECLARE @FaAuswZielGradFldID INT
+EXEC dbo.[spGetDynaFldIDfromTextmarke] 'FaAuswertungZielGrad', @FaAuswZielGradFldID OUTPUT 
+DECLARE @FaIntAuswZielGradFldID INT
+EXEC dbo.[spGetDynaFldIDfromTextmarke] 'FaIntAuswertungZielGrad', @FaIntAuswZielGradFldID OUTPUT 
+---------------------------------------------------------------------------------
+--Zielerreichung
+INSERT @TMP
+SELECT CONVERT(VARCHAR, Value), PHS.FaPhaseCode
+FROM DynaValue DYV
+INNER JOIN @Phasen PHS ON PHS.FaPhaseID = DYV.FaPhaseID
+WHERE DYV.DynaFieldID = @FaAuswZielGradFldID
+   OR DYV.DynaFieldID = @FaIntAuswZielGradFldID
+
+INSERT @Result SELECT 'Beurteilung Erreichung der Zielvereinbarung', '',NULL,'',20
+INSERT @Result SELECT 'Beurteilung Erreichung der Zielvereinbarung', '',NULL,'',120
+
+INSERT @Result
+SELECT '', dbo.fnLOVText('FaZielErreichungsgrad', CONVERT(INT, Value)), COUNT(*), 'Anzahl', 
+       CASE WHEN FaPhaseCode = 1 THEN 121
+            ELSE 21
+       END
+FROM @TMP
+GROUP BY Value, FaPhaseCode
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+--Auswertung schlechter als geplant Gründe Klient
+DECLARE @FaAuswZielGruendeKlientFldID INT
+EXEC dbo.[spGetDynaFldIDfromTextmarke] 'FaAuswertungZielGründKl', @FaAuswZielGruendeKlientFldID OUTPUT 
+DECLARE @FaIntAuswZielGruendeKlientFldID INT
+EXEC dbo.[spGetDynaFldIDfromTextmarke] 'FaIntAuswertungZielGründKl', @FaIntAuswZielGruendeKlientFldID OUTPUT 
+
+DELETE FROM @TMP
+
+INSERT @TMP
+SELECT GRU.Value, PHS.FaPhaseCode
+FROM DynaValue GRU
+INNER JOIN DynaValue GRA ON GRA.FaPhaseID = GRU.FaPhaseID
+                        AND GRA.GridRowID = GRU.GridRowID
+INNER JOIN @Phasen PHS ON PHS.FaPhaseID = GRU.FaPhaseID
+WHERE (  (GRU.DynaFieldID = @FaAuswZielGruendeKlientFldID    AND GRA.DynaFieldID = @FaAuswZielGradFldID)
+      OR (GRU.DynaFieldID = @FaIntAuswZielGruendeKlientFldID AND GRA.DynaFieldID = @FaIntAuswZielGradFldID))
+  AND GRA.Value = 3 --schlechter als geplant
+
+INSERT @Result SELECT 'Wirkungsziel schlechter als geplant', 'Gründe Klient',NULL,'',30
+INSERT @Result SELECT 'Wirkungsziel schlechter als geplant', 'Gründe Klient',NULL,'',130
+
+SET @i = 1
+WHILE @i&lt;=8 BEGIN
+   INSERT @Result
+   SELECT '', dbo.fnLOVText('FaGründeKlient', @i), COUNT(*), 'Anzahl',  @i+30 +((FaPhaseCode%2)*100)
+   FROM @TMP
+   WHERE CONVERT(VARCHAR, Value) LIKE '%'+CONVERT(VARCHAR, @i)+'%'
+   GROUP BY FaPhaseCode
+   SET @i = @i+1
+END
+
+---------------------------------------------------------------------------------
+--Auswertung schlechter als geplant Gründe Umfeld
+DECLARE @FaAuswZielGruendeUmfeldFldID INT
+EXEC dbo.[spGetDynaFldIDfromTextmarke] 'FaAuswertungZielGründUmfe', @FaAuswZielGruendeUmfeldFldID OUTPUT 
+DECLARE @FaIntAuswZielGruendeUmfeldFldID INT
+EXEC dbo.[spGetDynaFldIDfromTextmarke] 'FaIntAuswertungZielGründUmfe', @FaIntAuswZielGruendeUmfeldFldID OUTPUT 
+
+DELETE FROM @TMP
+
+INSERT @TMP
+SELECT GRU.Value, PHS.FaPhaseCode
+FROM DynaValue GRU
+INNER JOIN DynaValue GRA ON GRA.FaPhaseID = GRU.FaPhaseID
+                        AND GRA.GridRowID = GRU.GridRowID
+INNER JOIN @Phasen PHS ON PHS.FaPhaseID = GRU.FaPhaseID
+WHERE ( (GRU.DynaFieldID = @FaAuswZielGruendeUmfeldFldID AND GRA.DynaFieldID = @FaAuswZielGradFldID)
+     OR (GRU.DynaFieldID = @FaIntAuswZielGruendeUmfeldFldID AND GRA.DynaFieldID = @FaIntAuswZielGradFldID))
+  AND GRA.Value = 3 --schlechter als geplant
+
+INSERT @Result SELECT 'Wirkungsziel schlechter als geplant', 'Gründe Umfeld',NULL,'',40
+INSERT @Result SELECT 'Wirkungsziel schlechter als geplant', 'Gründe Umfeld',NULL,'',140
+
+SET @i = 1
+
+WHILE @i&lt;=6 BEGIN
+   INSERT @Result
+   SELECT '', dbo.fnLOVText('FaGründeUmfeld', @i), COUNT(*), 'Anzahl', @i+40 +((FaPhaseCode%2)*100)
+   FROM @TMP
+   WHERE CONVERT(VARCHAR, Value) LIKE '%'+CONVERT(VARCHAR, @i)+'%'
+   GROUP BY FaPhaseCode
+   SET @i = @i+1
+END
+
+---------------------------------------------------------------------------------
+--Auswertung schlechter als geplant Gründe SAR
+DECLARE @FaAuswZielGruendeSARFldID INT
+EXEC dbo.[spGetDynaFldIDfromTextmarke] 'FaAuswertungZielGründSAR', @FaAuswZielGruendeSARFldID OUTPUT 
+DECLARE @FaIntAuswZielGruendeSARFldID INT
+EXEC dbo.[spGetDynaFldIDfromTextmarke] 'FaIntAuswertungZielGründSAR', @FaIntAuswZielGruendeSARFldID OUTPUT 
+
+DELETE FROM @TMP
+
+INSERT @TMP
+SELECT GRU.Value, PHS.FaPhaseCode
+FROM DynaValue GRU
+INNER JOIN DynaValue GRA ON GRA.FaPhaseID = GRU.FaPhaseID
+                        AND GRA.GridRowID = GRU.GridRowID
+INNER JOIN @Phasen PHS ON PHS.FaPhaseID = GRU.FaPhaseID
+WHERE ( (GRU.DynaFieldID = @FaAuswZielGruendeSARFldID AND GRA.DynaFieldID = @FaAuswZielGradFldID)
+     OR (GRU.DynaFieldID = @FaIntAuswZielGruendeSARFldID AND GRA.DynaFieldID = @FaIntAuswZielGradFldID))
+  AND GRA.Value = 3 --schlechter als geplant
+
+INSERT @Result SELECT 'Wirkungsziel schlechter als geplant', 'Gründe SAR',NULL,'',50
+INSERT @Result SELECT 'Wirkungsziel schlechter als geplant', 'Gründe SAR',NULL,'',150
+
+SET @i = 1
+
+WHILE @i&lt;=5 BEGIN
+   INSERT @Result
+   SELECT '', dbo.fnLOVText('FaGründeSozialdienst', @i), COUNT(*), 'Anzahl', @i+50 +((FaPhaseCode%2)*100)
+   FROM @TMP
+   WHERE CONVERT(VARCHAR, Value) LIKE '%'+CONVERT(VARCHAR, @i)+'%'
+   GROUP BY FaPhaseCode
+   SET @i = @i+1
+END
+---------------------------------------------------------------------------------
+--Autonomie
+--Führt der Klient ein eigenverantwortliches ...
+DECLARE @FaKantRepAutonomieFldID INT
+EXEC dbo.[spGetDynaFldIDfromTextmarke] 'FaKantRepAutonomie', @FaKantRepAutonomieFldID OUTPUT 
+DECLARE @FaIntKantRepAutonomieFldID INT
+EXEC dbo.[spGetDynaFldIDfromTextmarke] 'FaIntKantRepAutonomie', @FaIntKantRepAutonomieFldID OUTPUT 
+
+INSERT @Result
+SELECT dbo.fnLOVText('FaKantRepAutonomie', 1), 'ja', COUNT(*), 'Anzahl', 
+       CASE WHEN FaPhaseCode = 1 THEN 160
+            ELSE 60
+       END
+FROM DynaValue DYV
+INNER JOIN @Phasen PHS ON PHS.FaPhaseID = DYV.FaPhaseID
+WHERE (DYV.DynaFieldID = @FaKantRepAutonomieFldID OR DYV.DynaFieldID = @FaIntKantRepAutonomieFldID) 
+  AND CONVERT(VARCHAR, DYV.Value) LIKE '%1%'
+GROUP BY FaPhaseCode
+---------------------------------------------------------------------------------
+--Beteiligt
+INSERT @Result
+SELECT dbo.fnLOVText('FaKantRepAutonomie', 2), 'ja', COUNT(*), 'Anzahl', 
+       CASE WHEN FaPhaseCode = 1 THEN 161
+            ELSE 61
+       END
+FROM DynaValue DYV
+INNER JOIN @Phasen PHS ON PHS.FaPhaseID = DYV.FaPhaseID
+WHERE (DYV.DynaFieldID = @FaKantRepAutonomieFldID OR DYV.DynaFieldID = @FaIntKantRepAutonomieFldID)
+  AND CONVERT(VARCHAR, DYV.Value) LIKE '%2%'
+GROUP BY FaPhaseCode
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+--Integration am Arbeitsmarkt
+DECLARE @FaKantRepIntegrationFldID INT
+EXEC dbo.[spGetDynaFldIDfromTextmarke] 'FaKantRepIntegration', @FaKantRepIntegrationFldID OUTPUT 
+DECLARE @FaIntKantRepIntegrationFldID INT
+EXEC dbo.[spGetDynaFldIDfromTextmarke] 'FaIntKantRepIntegration', @FaIntKantRepIntegrationFldID OUTPUT 
+
+DELETE FROM @TMP
+
+INSERT @TMP
+SELECT Value, PHS.FaPhaseCode
+FROM DynaValue DYV
+INNER JOIN @Phasen PHS ON PHS.FaPhaseID = DYV.FaPhaseID
+WHERE DYV.DynaFieldID = @FaKantRepIntegrationFldID OR DYV.DynaFieldID = @FaIntKantRepIntegrationFldID 
+
+INSERT @Result SELECT 'Wirkungsziel Aktivierung der Ressourcen', '',NULL,'',70
+INSERT @Result SELECT 'Wirkungsziel Aktivierung der Ressourcen', '',NULL,'',170
+
+INSERT @Result
+SELECT 'zur Integration in den Arbeitsmarkt', dbo.fnLOVText('FaRessourcen', CONVERT(INT, Value)), COUNT(*), 'Anzahl', 
+       CASE WHEN FaPhaseCode = 1 THEN 171
+            ELSE 71
+       END
+FROM @TMP
+GROUP BY Value, FaPhaseCode
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+--Stärkung Persönlichkeit
+DECLARE @FaKantRepPersoenlichFldID INT
+EXEC dbo.[spGetDynaFldIDfromTextmarke] 'FaKantRepPersoenlich', @FaKantRepPersoenlichFldID OUTPUT 
+DECLARE @FaIntKantRepPersoenlichFldID INT
+EXEC dbo.[spGetDynaFldIDfromTextmarke] 'FaIntKantRepPersoenlich', @FaIntKantRepPersoenlichFldID OUTPUT 
+
+DELETE FROM @TMP
+
+INSERT @TMP
+SELECT Value, PHS.FaPhaseCode
+FROM DynaValue DYV
+INNER JOIN @Phasen PHS ON PHS.FaPhaseID = DYV.FaPhaseID
+WHERE DYV.DynaFieldID = @FaKantRepPersoenlichFldID OR DYV.DynaFieldID = @FaIntKantRepPersoenlichFldID
+
+INSERT @Result
+SELECT 'zur Stärkung der Persönlichkeit', dbo.fnLOVText('FaRessourcen', CONVERT(INT, Value)), COUNT(*), 'Anzahl', 
+       CASE WHEN FaPhaseCode = 1 THEN 172
+            ELSE 72
+       END
+FROM @TMP
+GROUP BY Value, FaPhaseCode
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+--Soziale Integration
+DECLARE @FaKantRepSozInteFldID INT
+EXEC dbo.[spGetDynaFldIDfromTextmarke] 'FaKantRepSozInte', @FaKantRepSozInteFldID OUTPUT 
+DECLARE @FaIntKantRepSozInteFldID INT
+EXEC dbo.[spGetDynaFldIDfromTextmarke] 'FaIntKantRepSozInte', @FaIntKantRepSozInteFldID OUTPUT 
+
+DELETE FROM @TMP
+
+INSERT @TMP
+SELECT Value, PHS.FaPhaseCode
+FROM DynaValue DYV
+INNER JOIN @Phasen PHS ON PHS.FaPhaseID = DYV.FaPhaseID
+WHERE DYV.DynaFieldID = @FaKantRepSozInteFldID OR DYV.DynaFieldID = @FaIntKantRepSozInteFldID
+
+INSERT @Result
+SELECT 'zur Sozialen Integration', dbo.fnLOVText('FaRessourcen', CONVERT(INT, Value)), COUNT(*), 'Anzahl', 
+       CASE WHEN FaPhaseCode = 1 THEN 173
+            ELSE 73
+       END
+FROM @TMP
+GROUP BY Value, FaPhaseCode
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+--Prävention
+DECLARE @FaKantRepPraeventionFldID INT
+EXEC dbo.[spGetDynaFldIDfromTextmarke] 'FaKantRepPraevention', @FaKantRepPraeventionFldID OUTPUT 
+DECLARE @FaIntKantRepPraeventionFldID INT
+EXEC dbo.[spGetDynaFldIDfromTextmarke] 'FaIntKantRepPraevention', @FaIntKantRepPraeventionFldID OUTPUT 
+
+DELETE FROM @TMP
+
+INSERT @TMP
+SELECT Value, PHS.FaPhaseCode
+FROM DynaValue DYV
+INNER JOIN @Phasen PHS ON PHS.FaPhaseID = DYV.FaPhaseID
+WHERE DYV.DynaFieldID = @FaKantRepPraeventionFldID OR DYV.DynaFieldID = @FaIntKantRepPraeventionFldID
+
+INSERT @Result
+SELECT dbo.fnLOVText('FaKantRepPrävention', CONVERT(INT, Value)), 'ja', COUNT(*), 'Anzahl', 
+       CASE WHEN FaPhaseCode = 1 THEN 180
+            ELSE 80
+       END
+FROM @TMP
+GROUP BY Value, FaPhaseCode
+---------------------------------------------------------------------------------
+
+--SPACERS
+INSERT @Result SELECT NULL, NULL, NULL, NULL, 2
+INSERT @Result SELECT NULL, NULL, NULL, NULL, 5
+INSERT @Result SELECT NULL, NULL, NULL, NULL, 19
+INSERT @Result SELECT NULL, NULL, NULL, NULL, 29
+INSERT @Result SELECT NULL, NULL, NULL, NULL, 39
+INSERT @Result SELECT NULL, NULL, NULL, NULL, 49
+INSERT @Result SELECT NULL, NULL, NULL, NULL, 59
+INSERT @Result SELECT NULL, NULL, NULL, NULL, 69
+INSERT @Result SELECT NULL, NULL, NULL, NULL, 79
+
+INSERT @Result SELECT NULL, NULL, NULL, NULL, 99
+INSERT @Result SELECT NULL, NULL, NULL, NULL, 102
+INSERT @Result SELECT NULL, NULL, NULL, NULL, 105
+INSERT @Result SELECT NULL, NULL, NULL, NULL, 119
+INSERT @Result SELECT NULL, NULL, NULL, NULL, 129
+INSERT @Result SELECT NULL, NULL, NULL, NULL, 139
+INSERT @Result SELECT NULL, NULL, NULL, NULL, 149
+INSERT @Result SELECT NULL, NULL, NULL, NULL, 159
+INSERT @Result SELECT NULL, NULL, NULL, NULL, 169
+INSERT @Result SELECT NULL, NULL, NULL, NULL, 179
+
+SELECT * FROM @Result
+ORDER BY Sortkey$</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="xDocument.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAF1JREFUOE9jZAAC
+        Y2Pj/yAaGzh79iwjhjhIw///MzGwmJjYfxDGqSEtjeE/MgYpBhmEoYmQDSANKM7GpQHZmVg1oDsJxgdp
+        pI4N2EIKJjbqJLIiDqSJEMaVovGKAwBnM3PWBP8PfwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="edtDatumVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFVJREFUOE9jZAAC
+        Y2Pj/yCaEDh79iwjWA1MAzaNWOVAgsRguAuIcRKKGmROQwMD3D/IbKwaQApgitBp6mgAeYokG4abBmT/
+        YKQ3smKapLREKFkjywMAd9eDN3Z9MMsAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="edtDatumBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFVJREFUOE9jZAAC
+        Y2Pj/yCaEDh79iwjWA1MAzaNWOVAgsRguAuIcRKKGmROQwMD3D/IbKwaQApgitBp6mgAeYokG4abBmT/
+        YKQ3smKapLREKFkjywMAd9eDN3Z9MMsAAAAASUVORK5CYII=
+</value>
+  </data>
+</root>

@@ -1,0 +1,40 @@
+﻿<Window x:Class="Kiss.Spielwiese.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="clr-namespace:Kiss.UI.Controls;assembly=Kiss.UI.Controls"
+        xmlns:VirtualCanvas="clr-namespace:Kiss.UI.Controls.VirtualCanvas;assembly=Kiss.UI.Controls" Title="MainWindow" 
+        Height="350" Width="525"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d">
+    <d:Window.DataContext>
+        <d:DesignInstance Type="Spielwiese:MainWindow" />
+    </d:Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button>
+            <Button.Content>
+                <Controls:KissTextEdit x:Name="abc" Text="abc 123"/>
+            </Button.Content>
+        </Button>
+        <Controls:SearchControl Grid.Row="1">
+            <Controls:SearchControl.SearchPanelContent>
+                <Controls:KissTextEdit  Text="abc 123"/>
+            </Controls:SearchControl.SearchPanelContent>
+            <Controls:SearchControl.ResultContent>
+                <StackPanel>
+                    <Controls:KissComboBox/>
+                    <Controls:KissDateEdit/>
+                    <Controls:KissGrid/>
+                </StackPanel>
+            </Controls:SearchControl.ResultContent>
+        </Controls:SearchControl>
+    </Grid>
+    <!--<Controls:KissCheckedLookupEdit Title="Titel" SelectableItems="{Binding Items}">
+        
+        </Controls:KissCheckedLookupEdit>-->
+</Window>

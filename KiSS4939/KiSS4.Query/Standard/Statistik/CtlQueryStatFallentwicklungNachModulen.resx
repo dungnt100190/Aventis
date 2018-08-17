@@ -1,0 +1,1255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>declare @Fall table (
+      ModulID          int,
+      UserID           int,
+      AtBegin          int,
+      Opened           int,
+      Closed           int,
+      ShGrundbedarfTyp int) --um nach Berechnungsgrundlage unterscheiden zu können
+
+  declare @User table (
+      ModulID          int,
+      ModulText        varchar(100),
+      OrgName          varchar(100),
+      UserID           int,
+      UserName         varchar(100),
+      AtBegin          int,
+      Opened           int,
+      Closed           int,
+      Code             int,
+      ShGrundbedarfTyp int) --um nach Berechnungsgrundlage unterscheiden zu können
+
+  /*
+     Code  Bedeutung
+    -1     Titelzeile GrundbedarfTyp
+     1     Modul: Titel
+     2       Abteilung: Titel
+     3         FB
+     4       Abteilung: Leerzeile
+     5       Abteilung: Total
+     6       Abteilung: Leerzeile
+     7     Modul: Total
+     8     Modul: Leerzeile
+     9     Total ShGrundbedarfTyp
+    10     Leerzeile ShGrundbedarfTyp
+  */
+
+  declare @DateFrom     datetime,
+          @DateTo       datetime,
+          @DateFuture   datetime,
+          @ModulID      varchar(500),
+          @ProzessCode  INT,
+          @GemeindeCode int
+
+  set @DateFrom   = 0
+  set @DateTo     = getDate()
+
+
+--- set @DateFrom   = {edtDatumVon}
+--- set @DateTo     = {edtDatumBis}
+
+  set @DateFuture = '99991231'
+
+  set @ModulID  = null
+---  set @ModulID  = {edtModulID}
+
+  DECLARE @Module TABLE (
+    ModulID INT
+  );
+  
+  INSERT INTO @Module(ModulID)
+    SELECT CONVERT(INT, SplitValue)
+    FROM dbo.fnSplitStringToValues(@ModulID, ',', 0);  
+  
+
+  SET @ProzessCode = null
+--- SET @ProzessCode = {edtProzess}
+
+  SET @GemeindeCode = null
+--- SET @GemeindeCode = {edtGemeindeCode}
+
+
+  set @DateTo = dateadd(s,-1,dateadd(d,1,@DateTo)) -- unmittelbar vor Mitternacht
+
+  -- @Fall: reine Fallführungen (=präventive Beratungen) im betrachteten Zeitraum
+  insert @Fall 
+  select FAL.ModulID, 
+         FAL.UserID, 
+         AtBegin = case when DatumVon &lt;  @DateFrom then 1 else 0 end,
+         Opened  = case when DatumVon &gt;= @DateFrom then 1 else 0 end,
+         Closed  = case when isNull(DatumBis,@DateFuture) &lt;= @DateTo   then 1 else 0 end,  
+         NULL
+  from   dbo.FaLeistung           FAL WITH (READUNCOMMITTED)
+  INNER  JOIN dbo.BaPerson        PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = FAL.BaPersonID AND
+                               PRS.Testperson = 0
+  left  join dbo.XOrgUnit_User    OUU WITH (READUNCOMMITTED)  on OUU.UserID = FAL.UserID and
+                                      OUU.OrgUnitMemberCode = 2
+  left  join dbo.XOrgUnit         XOU WITH (READUNCOMMITTED)  on XOU.OrgUnitID = OUU.OrgUnitID
+  where  DatumVon &lt;= @DateTo and
+         isNull(DatumBis,@DateFuture) &gt;= @DateFrom and
+         (@ModulID IS NULL OR FAL.ModulID IN (SELECT ModulID FROM @Module)) AND
+         (@ProzessCode IS NULL OR FAL.FaProzessCode = @ProzessCode) AND
+         (@GemeindeCode IS NULL OR FAL.GemeindeCode = @GemeindeCode) AND
+         FAL.ModulID = 2 and
+         not exists (select 1 
+                     from   dbo.FaLeistung WITH (READUNCOMMITTED) 
+                     where  BaPersonID = FAL.BaPersonID and
+                            DatumVon &lt;= @DateTo and
+                            isNull(DatumBis,@DateFrom) &gt;= @DateFrom and
+                            ModulID &lt;&gt; 2)
+--- AND (XOU.OrgUnitID = {edtOrgUnitID} OR XOU.ParentID = {edtOrgUnitID})
+
+  -- @Fall: alle bewilligten Sozialhilfen im betrachteten Zeitraum
+  insert @Fall 
+  select FAL.ModulID, 
+         FAL.UserID, 
+         AtBegin = case when FAL.DatumVon &lt;  @DateFrom then 1 else 0 end,
+         Opened  = case when FAL.DatumVon &gt;= @DateFrom then 1 else 0 end,
+         Closed  = case when isNull(FAL.DatumBis,@DateFuture) &lt;= @DateTo   then 1 else 0 end,
+         ShGrundbedarfTyp = CASE WHEN POA.BgPositionsartCode IN (32011,32015,32017,32018,32019) THEN POA.BgPositionsartCode ELSE NULL END
+  from   dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+         inner join dbo.BgFinanzplan           FP WITH (READUNCOMMITTED)  on FP.FaLeistungID = FAL.FaLeistungID and
+                                                  FP.BgFinanzplanID = (select top 1 BgFinanzplanID
+                                                                       from   dbo.BgFinanzplan F WITH (READUNCOMMITTED)
+                                                                       where  FaLeistungID = FAL.FaLeistungID and
+                                                                              BgBewilligungStatusCode in (5, 9) and 
+                                                                              F.DatumVon &lt;= @DateTo and
+                                                                              isNull(F.DatumBis,@DateFuture) &gt;= @DateFrom
+                                                                       order by F.DatumVon desc)
+         INNER JOIN dbo.BgBudget BGB WITH (READUNCOMMITTED) ON BGB.BgFinanzplanID = FP.BgFinanzplanID
+                               AND BGB.MasterBudget = 1
+         INNER JOIN dbo.BgPosition BGP WITH (READUNCOMMITTED) ON BGP.BgBudgetID = BGB.BgBudgetID
+         INNER JOIN dbo.BgPositionsart POA WITH (READUNCOMMITTED) ON POA.BgPositionsartID = BGP.BgPositionsartID
+                                  AND POA.BgPositionsartCode IN (32011,32015,32017,32018,32019)
+         left  join dbo.BgFinanzplan_BaPerson FPP WITH (READUNCOMMITTED) on FPP.BgFinanzplanID = FP.BgFinanzplanID and
+                                                  FPP.IstUnterstuetzt = 1
+         left  join dbo.BaPerson              PRS WITH (READUNCOMMITTED) on PRS.BaPersonID = FPP.BaPersonID
+         left  join dbo.XOrgUnit_User    OUU WITH (READUNCOMMITTED)  on OUU.UserID = FAL.UserID and
+                                             OUU.OrgUnitMemberCode = 2
+         left  join dbo.XOrgUnit         XOU WITH (READUNCOMMITTED)  on XOU.OrgUnitID = OUU.OrgUnitID
+  where  FAL.ModulID = 3 and
+         FAL.DatumVon &lt;= @DateTo and
+         isNull(FAL.DatumBis,@DateFuture) &gt;= @DateFrom and
+         (@ModulID IS NULL OR FAL.ModulID IN (SELECT ModulID FROM @Module)) AND
+         (@ProzessCode IS NULL OR FAL.FaProzessCode = @ProzessCode) AND         
+         (@GemeindeCode IS NULL OR FAL.GemeindeCode = @GemeindeCode) AND
+         FAL.BaPersonID = PRS.BaPersonID AND
+         PRS.Testperson = 0
+---  AND (XOU.OrgUnitID = {edtOrgUnitID} OR XOU.ParentID = {edtOrgUnitID})
+
+  -- @Fall: Inkasso, Vormundschaft, Asyl, KES im betrachteten Zeitraum
+  insert @Fall 
+  select FAL.ModulID, 
+         FAL.UserID, 
+         AtBegin = case when FAL.DatumVon &lt;  @DateFrom then 1 else 0 end,
+         Opened  = case when FAL.DatumVon &gt;= @DateFrom then 1 else 0 end,
+         Closed  = case when isNull(FAL.DatumBis,@DateFuture) &lt;= @DateTo   then 1 else 0 end,
+         NULL  
+  from   dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+  INNER  JOIN dbo.BaPerson PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = FAL.BaPersonID AND
+                               PRS.Testperson = 0  
+  left  join dbo.XOrgUnit_User    OUU WITH (READUNCOMMITTED)  on OUU.UserID = FAL.UserID and
+                                      OUU.OrgUnitMemberCode = 2
+  left  join dbo.XOrgUnit         XOU WITH (READUNCOMMITTED)  on XOU.OrgUnitID = OUU.OrgUnitID
+  where  FAL.DatumVon &lt;= @DateTo and
+         isNull(FAL.DatumBis,@DateFuture) &gt;= @DateFrom and
+         (@ModulID IS NULL OR FAL.ModulID IN (SELECT ModulID FROM @Module)) AND
+         (@GemeindeCode IS NULL OR FAL.GemeindeCode = @GemeindeCode) AND
+         FAL.ModulID in (4,5,6,29) AND
+	      (FAL.FaProzessCode is NULL OR FAL.FaProzessCode &lt;&gt; 400) AND
+	      (@ProzessCode IS NULL OR FAL.FaProzessCode = @ProzessCode)
+---  AND (XOU.OrgUnitID = {edtOrgUnitID} OR XOU.ParentID = {edtOrgUnitID})
+  -- Gruppierung nach User
+  insert @User
+  select F.ModulID,
+         ModulText = null,
+         OrgName   = null,
+         F.UserID,
+         UserName = null,
+         AtBegin  = sum(F.AtBegin),
+         Opened   = sum(F.Opened),
+         Closed   = sum(F.Closed),
+         Code = 3,
+         ShGrundbedarfTyp
+  from   @Fall F
+  group by F.ModulID, ShGrundbedarfTyp, F.UserID
+  order by F.ModulID, ShGrundbedarfTyp, F.UserID
+
+  -- ModulTxt, OrgName, UserName nachtragen (separat wegen Performance)
+  update @User
+  set    ModulText = case when U.ModulID = 2 then 'Präventive Beratung' else MOD.Name end,
+         OrgName   = isNull(ORG.ItemName,'-'), 
+         UserName  = USR.LastName + isnull(', ' + USR.FirstName,'')
+  from   @User U
+         inner join dbo.XUser        USR WITH (READUNCOMMITTED) on USR.UserID = U.UserID
+         left join dbo.XOrgUnit_User OUU WITH (READUNCOMMITTED) on OUU.UserID = USR.UserID and
+                                        OUU.OrgUnitMemberCode = 2
+         left join dbo.XOrgUnit      ORG WITH (READUNCOMMITTED) on ORG.OrgUnitID = OUU.OrgUnitID
+         inner join dbo.XModul       MOD WITH (READUNCOMMITTED) on MOD.ModulID = U.ModulID
+
+  -- Abteilungszeilen hinzufügen
+
+  -- 1. Titelzeile
+  insert @User (ModulID,ModulText,OrgName,Code)
+  select ModulID,
+         ModulText,
+         OrgName,
+         Code = 2
+  from   @User
+  where  Code = 3
+  group by ModulID, ModulText, OrgName
+
+  -- 2. Leerzeile
+  insert @User (ModulID,ModulText,OrgName,Code)
+  select ModulID,
+         ModulText,
+         OrgName,
+         Code = 4
+  from   @User
+  where  Code = 3 AND ModulID &lt;&gt; 3
+  group by ModulID, ModulText, OrgName
+
+  -- 3. Totalzeile
+  insert @User (ModulID,ModulText,OrgName,AtBegin,Opened,Closed,ShGrundbedarfTyp,Code)
+  select ModulID,
+         ModulText,
+         OrgName,
+         AtBegin  = sum(AtBegin),
+         Opened   = sum(Opened),
+         Closed   = sum(Closed),
+         1111,
+         Code = 5
+  from   @User
+  where  Code = 3
+  group by ModulID, ModulText, OrgName
+
+  -- 4. Leerzeile
+  insert @User (ModulID,ModulText,OrgName,Code)
+  select ModulID,
+         ModulText,
+         OrgName,
+         Code = 6
+  from   @User
+  where  Code = 3 AND ModulID &lt;&gt; 3
+  group by ModulID, ModulText, OrgName
+
+  -- Modulzeilen hinzufügen
+
+  -- 1. Titelzeile
+  insert @User (ModulID,ModulText,Code)
+  select ModulID,
+         ModulText,
+         Code = 1
+  from   @User
+  where  Code = 3
+  group by ModulID, ModulText
+
+  -- 2 Totalzeile
+  insert @User (ModulID,ModulText,OrgName,AtBegin,Opened,Closed,Code)
+  select ModulID,
+         ModulText,
+         OrgName = 'zzz',
+         AtBegin  = sum(AtBegin),
+         Opened   = sum(Opened),
+         Closed   = sum(Closed),
+         Code = 7
+  from   @User
+  where  Code = 3
+  group by ModulID, ModulText
+
+  -- 3 Leerzeile
+  insert @User (ModulID,ModulText,OrgName,Code)
+  select ModulID,
+         ModulText,
+         OrgName = 'zzz',
+         Code = 8
+  from   @User
+  where  Code = 3
+  group by ModulID, ModulText
+
+-- Titelzeile ShGrundbedarfTyp
+  insert @User (ModulID,ModulText,OrgName,ShGrundbedarfTyp,Code)
+  select ModulID,
+         ModulText,
+         OrgName,
+         ShGrundbedarfTyp,
+         Code = -1
+  from   @User
+  where  Code = 3
+     AND ShGrundbedarfTyp IS NOT NULL
+  group by ShGrundbedarfTyp,ModulID, ModulText, OrgName
+-- Leerzeile ShGrundbedarfTyp
+  insert @User (ModulID,ModulText,OrgName,ShGrundbedarfTyp,Code)
+  select ModulID,
+         ModulText,
+         OrgName,
+         ShGrundbedarfTyp,
+         Code = 10
+  from   @User
+  where  Code = 3
+     AND ShGrundbedarfTyp IS NOT NULL
+  group by ShGrundbedarfTyp,ModulID, ModulText, OrgName
+-- Total ShGrundbedarfTyp
+  insert @User (ModulID,ModulText,OrgName,AtBegin,Opened,Closed,ShGrundbedarfTyp,Code)
+  select ModulID,
+         ModulText,
+         OrgName,
+         AtBegin  = sum(AtBegin),
+         Opened   = sum(Opened),
+         Closed   = sum(Closed),
+         ShGrundbedarfTyp,
+         Code = 9
+  from   @User
+  where  Code = 3
+     AND ShGrundbedarfTyp IS NOT NULL
+  group by ShGrundbedarfTyp,ModulID, ModulText, OrgName
+---------------------------
+--------------------------- DETAIL
+---------------------------
+SELECT * FROM 
+(
+  -- @Fall: reine Fallführungen (=präventive Beratungen) im betrachteten Zeitraum
+  SELECT Modul           = MOD.Name, 
+         Gemeinde        = GDE.Text,
+         SAR             = USR.LastName + isNull(', ' + USR.Firstname,''), 
+         Person          = PRS.Name + isNull(', ' + PRS.Vorname,''), 
+         Eröffnet        = FAL.DatumVon,
+         Geschlossen     = FAL.DatumBis,
+         BaPersonID$    = FAL.BaPersonID,
+         [Eröffnungsgrund] = '',
+         Abschlussgrund =  ''
+  FROM   dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+  INNER  JOIN dbo.BaPerson PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = FAL.BaPersonID AND
+                               PRS.Testperson = 0
+  LEFT JOIN dbo.XUser      USR WITH (READUNCOMMITTED) ON USR.UserId = FAL.UserID
+  LEFT JOIN dbo.XOrgUnit_User    OUU WITH (READUNCOMMITTED)  on OUU.UserID = FAL.UserID and
+                                      OUU.OrgUnitMemberCode = 2
+  LEFT JOIN dbo.XOrgUnit         XOU WITH (READUNCOMMITTED)  on XOU.OrgUnitID = OUU.OrgUnitID
+  LEFT JOIN dbo.XModul           MOD WITH (READUNCOMMITTED)  on MOD.ModulID = FAL.ModulID
+  LEFT JOIN dbo.XLOVCode         GDE WITH (READUNCOMMITTED) ON GDE.LovName = 'GemeindeSozialdienst' AND GDE.Code = FAL.GemeindeCode
+  WHERE  DatumVon &lt;= @DateTo AND
+         isNull(DatumBis,@DateFuture) &gt;= @DateFrom AND
+         (@ModulID IS NULL OR FAL.ModulID IN (SELECT ModulID FROM @Module)) AND
+         (@ProzessCode IS NULL OR FAL.FaProzessCode = @ProzessCode) AND
+         (@GemeindeCode IS NULL OR FAL.GemeindeCode = @GemeindeCode) AND
+         FAL.ModulID = 2 AND
+         NOT EXISTS (SELECT 1 
+                     FROM   dbo.FaLeistung WITH (READUNCOMMITTED) 
+                     WHERE  BaPersonID = FAL.BaPersonID AND
+                            DatumVon &lt;= @DateTo AND
+                            isNull(DatumBis,@DateFrom) &gt;= @DateFrom AND
+                            ModulID &lt;&gt; 2)
+--- AND (XOU.OrgUnitID = {edtOrgUnitID} OR XOU.ParentID = {edtOrgUnitID})
+
+UNION ALL
+
+ -- @Fall: alle bewilligten Sozialhilfen im betrachteten Zeitraum
+ SELECT  Modul           = MOD.Name, 
+         Gemeinde        = GDE.Text,
+         SAR             = USR.LastName + isNull(', ' + USR.Firstname,''), 
+         Person          = PRS.Name + isNull(', ' + PRS.Vorname,''), 
+         Eröffnet        = FAL.DatumVon,
+         Geschlossen     = FAL.DatumBis,
+         BaPersonID$    = FAL.BaPersonID,
+         [Eröffnungsgrund] = '',
+         Abschlussgrund =  ''
+  FROM   dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+         INNER JOIN dbo.BgFinanzplan           FP WITH (READUNCOMMITTED)  on FP.FaLeistungID = FAL.FaLeistungID AND
+                                                  FP.BgFinanzplanID = (SELECT TOP 1 BgFinanzplanID
+                                                                       FROM   dbo.BgFinanzplan F WITH (READUNCOMMITTED)
+                                                                       WHERE  FaLeistungID = FAL.FaLeistungID AND
+                                                                              BgBewilligungStatusCode in (5, 9) AND 
+                                                                              F.DatumVon &lt;= @DateTo AND
+                                                                              isNull(F.DatumBis,@DateFuture) &gt;= @DateFrom
+                                                                       ORDER BY F.DatumVon DESC)
+         INNER JOIN dbo.BgBudget   BGB WITH (READUNCOMMITTED) ON BGB.BgFinanzplanID = FP.BgFinanzplanID
+                                  AND BGB.MasterBudget = 1
+         INNER JOIN dbo.BgPosition BGP WITH (READUNCOMMITTED) ON BGP.BgBudgetID = BGB.BgBudgetID
+         INNER JOIN dbo.BgPositionsart POA WITH (READUNCOMMITTED) ON POA.BgPositionsartID = BGP.BgPositionsartID
+                                  AND POA.BgPositionsartCode IN (32011,32015,32017,32018,32019)
+         LEFT JOIN dbo.XUser       USR WITH (READUNCOMMITTED) ON USR.UserId = FAL.UserID
+         LEFT  JOIN dbo.BgFinanzplan_BaPerson FPP WITH (READUNCOMMITTED) on FPP.BgFinanzplanID = FP.BgFinanzplanID AND
+                                                  FPP.IstUnterstuetzt = 1
+         LEFT  JOIN dbo.BaPerson              PRS WITH (READUNCOMMITTED) on PRS.BaPersonID = FPP.BaPersonID
+         LEFT JOIN dbo.XOrgUnit_User    OUU WITH (READUNCOMMITTED)  on OUU.UserID = FAL.UserID and
+                                            OUU.OrgUnitMemberCode = 2
+         LEFT JOIN dbo.XOrgUnit         XOU WITH (READUNCOMMITTED)  on XOU.OrgUnitID = OUU.OrgUnitID
+         LEFT JOIN dbo.XModul           MOD WITH (READUNCOMMITTED)  on MOD.ModulID = FAL.ModulID
+         LEFT JOIN dbo.XLOVCode         GDE WITH (READUNCOMMITTED) ON GDE.LovName = 'GemeindeSozialdienst' AND GDE.Code = FAL.GemeindeCode
+  WHERE  FAL.ModulID = 3 AND
+         FAL.DatumVon &lt;= @DateTo AND
+         isNull(FAL.DatumBis,@DateFuture) &gt;= @DateFrom AND
+         (@ModulID IS NULL OR FAL.ModulID IN (SELECT ModulID FROM @Module)) AND
+         (@ProzessCode IS NULL OR FAL.FaProzessCode = @ProzessCode) AND         
+         (@GemeindeCode IS NULL OR FAL.GemeindeCode = @GemeindeCode) AND
+         FAL.BaPersonID = PRS.BaPersonID AND
+         PRS.Testperson = 0
+--- AND (XOU.OrgUnitID = {edtOrgUnitID} OR XOU.ParentID = {edtOrgUnitID})
+UNION ALL
+  -- @Fall: Inkasso, Vormundschaft, Asyl im betrachteten Zeitraum
+ SELECT  Modul           = MOD.Name,
+         Gemeinde        = GDE.Text, 
+         SAR             = USR.LastName + isNull(', ' + USR.Firstname,''),
+         Person          = PRS.Name + isNull(', ' + PRS.Vorname,''), 
+         Eröffnet        = FAL.DatumVon,
+         Geschlossen     = FAL.DatumBis,
+         BaPersonID$    = FAL.BaPersonID,
+         [Eröffnungsgrund] = CASE WHEN FAL.ModulID = 29 --KES , V hat keinen EroeffnungsGrund
+                                    THEN dbo.fnLOVText('EroeffnungsGrund', FAL.EroeffnungsGrundCode) 
+                                  ELSE ''
+                              END,
+         Abschlussgrund =    CASE WHEN FAL.ModulID = 29 --KES
+                                    THEN dbo.fnLOVText('KesAbschlussgrund', FAL.AbschlussGrundCode)
+                                  WHEN FAL.ModulID = 5  --V
+                                    THEN 
+                                      CASE WHEN FAL.FaProzessCode = 501 
+                                              THEN CASE WHEN EXISTS ( SELECT 1 FROM dbo.XLOV WHERE LOVName = 'VmMassnahmeAbschlussgrund')
+                                                         THEN dbo.fnLOVText('VmMassnahmeAbschlussgrund', FAL.AbschlussGrundCode) 
+                                                        ELSE dbo.fnLOVText('AbschlussGrund', FAL.AbschlussGrundCode)
+                                                    END
+                                           WHEN FAL.FaProzessCode = 502 
+                                              THEN CASE WHEN EXISTS ( SELECT 1 FROM dbo.XLOV WHERE LOVName = 'VmVaterschaftAbschlussgrund')
+                                                          THEN dbo.fnLOVText('VmVaterschaftAbschlussgrund', FAL.AbschlussGrundCode) 
+                                                        ELSE dbo.fnLOVText('AbschlussGrund', FAL.AbschlussGrundCode)
+                                                    END
+                                           WHEN FAL.FaProzessCode = 503 
+                                              THEN CASE WHEN EXISTS ( SELECT 1 FROM dbo.XLOV WHERE LOVName = 'VmErbschaftAbschlussgrund')
+                                                          THEN dbo.fnLOVText('VmErbschaftAbschlussgrund', FAL.AbschlussGrundCode) 
+                                                        ELSE dbo.fnLOVText('AbschlussGrund', FAL.AbschlussGrundCode)
+                                                    END   
+                                           WHEN FAL.FaProzessCode = 504 
+                                              THEN CASE WHEN EXISTS ( SELECT 1 FROM dbo.XLOV WHERE LOVName = 'VmPflegekindAbschlussgrund')
+                                                          THEN dbo.fnLOVText('VmPflegekindAbschlussgrund', FAL.AbschlussGrundCode) 
+                                                        ELSE dbo.fnLOVText('AbschlussGrund', FAL.AbschlussGrundCode)
+                                                    END          
+                                           WHEN FAL.FaProzessCode = 505 
+                                              THEN CASE WHEN EXISTS ( SELECT 1 FROM dbo.XLOV WHERE LOVName = 'VmAuftragAbschlussgrund')
+                                                          THEN dbo.fnLOVText('VmAuftragAbschlussgrund', FAL.AbschlussGrundCode) 
+                                                        ELSE dbo.fnLOVText('AbschlussGrund', FAL.AbschlussGrundCode)
+                                                    END          
+                                      END                     
+                                  ELSE ''
+                              END         
+  FROM   dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+  INNER  JOIN dbo.BaPerson PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = FAL.BaPersonID AND
+                               PRS.Testperson = 0
+  LEFT JOIN dbo.XUser       USR WITH (READUNCOMMITTED) ON USR.UserId = FAL.UserID
+  LEFT JOIN dbo.XOrgUnit_User    OUU WITH (READUNCOMMITTED)  on OUU.UserID = FAL.UserID and
+                                      OUU.OrgUnitMemberCode = 2
+  LEFT JOIN dbo.XOrgUnit         XOU WITH (READUNCOMMITTED)  on XOU.OrgUnitID = OUU.OrgUnitID
+  LEFT JOIN dbo.XModul           MOD WITH (READUNCOMMITTED)  on MOD.ModulID = FAL.ModulID
+  LEFT JOIN dbo.XLOVCode         GDE WITH (READUNCOMMITTED) ON GDE.LovName = 'GemeindeSozialdienst' AND GDE.Code = FAL.GemeindeCode
+  WHERE  FAL.DatumVon &lt;= @DateTo AND
+         isNull(FAL.DatumBis,@DateFuture) &gt;= @DateFrom AND
+         (@ModulID IS NULL OR FAL.ModulID IN (SELECT ModulID FROM @Module)) AND
+         (@ProzessCode IS NULL OR FAL.FaProzessCode = @ProzessCode) AND         
+         (@GemeindeCode IS NULL OR FAL.GemeindeCode = @GemeindeCode) AND
+         FAL.ModulID in (4,5,6, 29) AND
+         (FAL.FaProzessCode is NULL OR FAL.FaProzessCode &lt;&gt; 400)
+--- AND (XOU.OrgUnitID = {edtOrgUnitID} OR XOU.ParentID = {edtOrgUnitID})
+) Result
+ORDER BY 1,2,3,4,5
+
+
+</value>
+  </data>
+  <metadata name="qryListe2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>119, 17</value>
+  </metadata>
+  <data name="qryListe2.SelectStatement" xml:space="preserve">
+    <value>declare @Fall table (
+      ModulID          int,
+      UserID           int,
+      AtBegin          int,
+      Opened           int,
+      Closed           int,
+      ShGrundbedarfTyp int) --um nach Berechnungsgrundlage unterscheiden zu können
+
+  declare @User table (
+      ModulID          int,
+      ModulText        varchar(100),
+      OrgName          varchar(100),
+      UserID           int,
+      UserName         varchar(100),
+      AtBegin          int,
+      Opened           int,
+      Closed           int,
+      Code             int,
+      ShGrundbedarfTyp int) --um nach Berechnungsgrundlage unterscheiden zu können
+
+  /*
+     Code  Bedeutung
+    -1     Titelzeile GrundbedarfTyp
+     1     Modul: Titel
+     2       Abteilung: Titel
+     3         FB
+     4       Abteilung: Leerzeile
+     5       Abteilung: Total
+     6       Abteilung: Leerzeile
+     7     Modul: Total
+     8     Modul: Leerzeile
+     9     Total ShGrundbedarfTyp
+    10     Leerzeile ShGrundbedarfTyp
+  */
+
+  declare @DateFrom     datetime,
+          @DateTo       datetime,
+          @DateFuture   datetime,
+          @ModulID      varchar(500),
+          @ProzessCode  INT,
+          @GemeindeCode int
+
+  set @DateFrom   = 0
+  set @DateTo     = getDate()
+
+
+--- set @DateFrom   = {edtDatumVon}
+--- set @DateTo     = {edtDatumBis}
+  set @DateFuture = '99991231'
+
+  set @ModulID  = null
+---  set @ModulID  = {edtModulID}
+
+  DECLARE @Module TABLE (
+    ModulID INT
+  );
+    
+  INSERT INTO @Module(ModulID)
+    SELECT CONVERT(INT, SplitValue)
+    FROM dbo.fnSplitStringToValues(@ModulID, ',', 0);  
+    
+  SET @ProzessCode = null
+--- SET @ProzessCode = {edtProzess}    
+
+  SET @GemeindeCode = null
+--- SET @GemeindeCode = {edtGemeindeCode}
+ 
+  set @DateTo = dateadd(s,-1,dateadd(d,1,@DateTo)) -- unmittelbar vor Mitternacht
+
+  -- @Fall: reine Fallführungen (=präventive Beratungen) im betrachteten Zeitraum
+  insert @Fall 
+  select FAL.ModulID, 
+         FAL.UserID, 
+         AtBegin = case when DatumVon &lt;  @DateFrom then 1 else 0 end,
+         Opened  = case when DatumVon &gt;= @DateFrom then 1 else 0 end,
+         Closed  = case when isNull(DatumBis,@DateFuture) &lt;= @DateTo   then 1 else 0 end,  
+         NULL
+  from   dbo.FaLeistung           FAL WITH (READUNCOMMITTED)
+  INNER  JOIN dbo.BaPerson        PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = FAL.BaPersonID AND
+                               PRS.Testperson = 0
+  left  join dbo.XOrgUnit_User    OUU WITH (READUNCOMMITTED)  on OUU.UserID = FAL.UserID and
+                                      OUU.OrgUnitMemberCode = 2
+  left  join dbo.XOrgUnit         XOU WITH (READUNCOMMITTED)  on XOU.OrgUnitID = OUU.OrgUnitID
+  where  DatumVon &lt;= @DateTo and
+         isNull(DatumBis,@DateFuture) &gt;= @DateFrom and
+         (@ModulID IS NULL OR FAL.ModulID IN (SELECT ModulID FROM @Module)) AND
+         (@ProzessCode IS NULL OR FAL.FaProzessCode = @ProzessCode) AND
+         (@GemeindeCode IS NULL OR FAL.GemeindeCode = @GemeindeCode) AND
+         FAL.ModulID = 2 and
+         not exists (select 1 
+                     from   dbo.FaLeistung WITH (READUNCOMMITTED) 
+                     where  BaPersonID = FAL.BaPersonID and
+                            DatumVon &lt;= @DateTo and
+                            isNull(DatumBis,@DateFrom) &gt;= @DateFrom and
+                            ModulID &lt;&gt; 2)
+--- AND (XOU.OrgUnitID = {edtOrgUnitID} OR XOU.ParentID = {edtOrgUnitID})
+
+  -- @Fall: alle bewilligten Sozialhilfen im betrachteten Zeitraum
+  insert @Fall 
+  select FAL.ModulID, 
+         FAL.UserID, 
+         AtBegin = case when FAL.DatumVon &lt;  @DateFrom then 1 else 0 end,
+         Opened  = case when FAL.DatumVon &gt;= @DateFrom then 1 else 0 end,
+         Closed  = case when isNull(FAL.DatumBis,@DateFuture) &lt;= @DateTo   then 1 else 0 end,
+         ShGrundbedarfTyp = CASE WHEN POA.BgPositionsartCode IN (32011,32015,32017,32018,32019) THEN POA.BgPositionsartCode ELSE NULL END
+  from   dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+         inner join dbo.BgFinanzplan           FP WITH (READUNCOMMITTED)  on FP.FaLeistungID = FAL.FaLeistungID and
+                                                  FP.BgFinanzplanID = (select top 1 BgFinanzplanID
+                                                                       from   dbo.BgFinanzplan F WITH (READUNCOMMITTED)
+                                                                       where  FaLeistungID = FAL.FaLeistungID and
+                                                                              BgBewilligungStatusCode in (5, 9) and 
+                                                                              F.DatumVon &lt;= @DateTo and
+                                                                              isNull(F.DatumBis,@DateFuture) &gt;= @DateFrom
+                                                                       order by F.DatumVon desc)
+         INNER JOIN dbo.BgBudget BGB WITH (READUNCOMMITTED) ON BGB.BgFinanzplanID = FP.BgFinanzplanID
+                               AND BGB.MasterBudget = 1
+         INNER JOIN dbo.BgPosition BGP WITH (READUNCOMMITTED) ON BGP.BgBudgetID = BGB.BgBudgetID
+         INNER JOIN dbo.BgPositionsart POA WITH (READUNCOMMITTED) ON POA.BgPositionsartID = BGP.BgPositionsartID
+                                  AND POA.BgPositionsartCode IN (32011,32015,32017,32018,32019)
+         left  join dbo.BgFinanzplan_BaPerson FPP WITH (READUNCOMMITTED) on FPP.BgFinanzplanID = FP.BgFinanzplanID and
+                                                  FPP.IstUnterstuetzt = 1
+         left  join dbo.BaPerson              PRS WITH (READUNCOMMITTED) on PRS.BaPersonID = FPP.BaPersonID
+         left  join dbo.XOrgUnit_User    OUU WITH (READUNCOMMITTED)  on OUU.UserID = FAL.UserID and
+                                             OUU.OrgUnitMemberCode = 2
+         left  join dbo.XOrgUnit         XOU WITH (READUNCOMMITTED)  on XOU.OrgUnitID = OUU.OrgUnitID
+  where  FAL.ModulID = 3 and
+         FAL.DatumVon &lt;= @DateTo and
+         isNull(FAL.DatumBis,@DateFuture) &gt;= @DateFrom and
+         (@ModulID IS NULL OR FAL.ModulID IN (SELECT ModulID FROM @Module)) AND
+         (@ProzessCode IS NULL OR FAL.FaProzessCode = @ProzessCode) AND
+         (@GemeindeCode IS NULL OR FAL.GemeindeCode = @GemeindeCode) AND
+         FAL.BaPersonID = PRS.BaPersonID AND
+         PRS.Testperson = 0
+---  AND (XOU.OrgUnitID = {edtOrgUnitID} OR XOU.ParentID = {edtOrgUnitID})
+
+  -- @Fall: Inkasso, Vormundschaft, Asyl,KES im betrachteten Zeitraum
+  insert @Fall 
+  select FAL.ModulID, 
+         FAL.UserID, 
+         AtBegin = case when FAL.DatumVon &lt;  @DateFrom then 1 else 0 end,
+         Opened  = case when FAL.DatumVon &gt;= @DateFrom then 1 else 0 end,
+         Closed  = case when isNull(FAL.DatumBis,@DateFuture) &lt;= @DateTo   then 1 else 0 end,
+         NULL  
+  from   dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+  INNER  JOIN dbo.BaPerson PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = FAL.BaPersonID AND
+                               PRS.Testperson = 0  
+  left  join dbo.XOrgUnit_User    OUU WITH (READUNCOMMITTED)  on OUU.UserID = FAL.UserID and
+                                      OUU.OrgUnitMemberCode = 2
+  left  join dbo.XOrgUnit         XOU WITH (READUNCOMMITTED)  on XOU.OrgUnitID = OUU.OrgUnitID
+  where  FAL.DatumVon &lt;= @DateTo and
+         isNull(FAL.DatumBis,@DateFuture) &gt;= @DateFrom and
+         (@ModulID IS NULL OR FAL.ModulID IN (SELECT ModulID FROM @Module)) AND
+         (@ProzessCode IS NULL OR FAL.FaProzessCode = @ProzessCode) AND
+         (@GemeindeCode IS NULL OR FAL.GemeindeCode = @GemeindeCode) AND
+         FAL.ModulID in (4,5,6,29) AND
+	    (FAL.FaProzessCode is NULL OR FAL.FaProzessCode &lt;&gt; 400)
+---  AND (XOU.OrgUnitID = {edtOrgUnitID} OR XOU.ParentID = {edtOrgUnitID})
+  -- Gruppierung nach User
+  insert @User
+  select F.ModulID,
+         ModulText = null,
+         OrgName   = null,
+         F.UserID,
+         UserName = null,
+         AtBegin  = sum(F.AtBegin),
+         Opened   = sum(F.Opened),
+         Closed   = sum(F.Closed),
+         Code = 3,
+         ShGrundbedarfTyp
+  from   @Fall F
+  group by F.ModulID, ShGrundbedarfTyp, F.UserID
+  order by F.ModulID, ShGrundbedarfTyp, F.UserID
+  
+  
+
+  -- ModulTxt, OrgName, UserName nachtragen (separat wegen Performance)
+  update @User
+  set    ModulText = case when U.ModulID = 2 then 'Präventive Beratung' else MOD.Name end,
+         OrgName   = isNull(ORG.ItemName,'-'), 
+         UserName  = USR.LastName + isnull(', ' + USR.FirstName,'')
+  from   @User U
+         inner join dbo.XUser        USR WITH (READUNCOMMITTED) on USR.UserID = U.UserID
+         left join dbo.XOrgUnit_User OUU WITH (READUNCOMMITTED) on OUU.UserID = USR.UserID and
+                                        OUU.OrgUnitMemberCode = 2
+         left join dbo.XOrgUnit      ORG WITH (READUNCOMMITTED) on ORG.OrgUnitID = OUU.OrgUnitID
+         inner join dbo.XModul     MOD WITH (READUNCOMMITTED) on MOD.ModulID = U.ModulID
+
+  -- Abteilungszeilen hinzufügen
+
+  -- 1. Titelzeile
+  insert @User (ModulID,ModulText,OrgName,Code)
+  select ModulID,
+         ModulText,
+         OrgName,
+         Code = 2
+  from   @User
+  where  Code = 3
+  group by ModulID, ModulText, OrgName
+
+  -- 2. Leerzeile
+  insert @User (ModulID,ModulText,OrgName,Code)
+  select ModulID,
+         ModulText,
+         OrgName,
+         Code = 4
+  from   @User
+  where  Code = 3 AND ModulID &lt;&gt; 3
+  group by ModulID, ModulText, OrgName
+
+  -- 3. Totalzeile
+  insert @User (ModulID,ModulText,OrgName,AtBegin,Opened,Closed,ShGrundbedarfTyp,Code)
+  select ModulID,
+         ModulText,
+         OrgName,
+         AtBegin  = sum(AtBegin),
+         Opened   = sum(Opened),
+         Closed   = sum(Closed),
+         99999,
+         Code = 5
+  from   @User
+  where  Code = 3
+  group by ModulID, ModulText, OrgName
+
+  -- 4. Leerzeile
+  insert @User (ModulID,ModulText,OrgName,Code)
+  select ModulID,
+         ModulText,
+         OrgName,
+         Code = 6
+  from   @User
+  where  Code = 3 AND ModulID &lt;&gt; 3
+  group by ModulID, ModulText, OrgName
+
+  -- Modulzeilen hinzufügen
+
+  -- 1. Titelzeile
+  insert @User (ModulID,ModulText,Code)
+  select ModulID,
+         ModulText,
+         Code = 1
+  from   @User
+  where  Code = 3
+  group by ModulID, ModulText
+
+  -- 2 Totalzeile
+  insert @User (ModulID,ModulText,OrgName,AtBegin,Opened,Closed,Code)
+  select ModulID,
+         ModulText,
+         OrgName = 'zzz',
+         AtBegin  = sum(AtBegin),
+         Opened   = sum(Opened),
+         Closed   = sum(Closed),
+         Code = 7
+  from   @User
+  where  Code = 3
+  group by ModulID, ModulText
+
+  -- 3 Leerzeile
+  insert @User (ModulID,ModulText,OrgName,Code)
+  select ModulID,
+         ModulText,
+         OrgName = 'zzz',
+         Code = 8
+  from   @User
+  where  Code = 3
+  group by ModulID, ModulText
+
+-- Titelzeile ShGrundbedarfTyp
+  insert @User (ModulID,ModulText,OrgName,ShGrundbedarfTyp,Code)
+  select ModulID,
+         ModulText,
+         OrgName,
+         ShGrundbedarfTyp,
+         Code = -1
+  from   @User
+  where  Code = 3
+     AND ShGrundbedarfTyp IS NOT NULL
+  group by ShGrundbedarfTyp,ModulID, ModulText, OrgName
+-- Leerzeile ShGrundbedarfTyp
+  insert @User (ModulID,ModulText,OrgName,ShGrundbedarfTyp,Code)
+  select ModulID,
+         ModulText,
+         OrgName,
+         ShGrundbedarfTyp,
+         Code = 10
+  from   @User
+  where  Code = 3
+     AND ShGrundbedarfTyp IS NOT NULL
+  group by ShGrundbedarfTyp,ModulID, ModulText, OrgName
+-- Total ShGrundbedarfTyp
+  insert @User (ModulID,ModulText,OrgName,AtBegin,Opened,Closed,ShGrundbedarfTyp,Code)
+  select ModulID,
+         ModulText,
+         OrgName,
+         AtBegin  = sum(AtBegin),
+         Opened   = sum(Opened),
+         Closed   = sum(Closed),
+         ShGrundbedarfTyp,
+         Code = 9
+  from   @User
+  where  Code = 3
+     AND ShGrundbedarfTyp IS NOT NULL
+  group by ShGrundbedarfTyp,ModulID, ModulText, OrgName
+
+---------------------------
+--------------------------- Statistik
+--------------------------- 
+  select Modul     = case when Code = 1 then U.ModulText else '' end,
+         Abteilung = case when Code = 2 then U.OrgName else '' end,
+         FB        = case Code
+                     when 3 then U.UserName 
+                     when 5 then 'Total ' + U.OrgName 
+                     when 7 then 'Total ' + U.ModulText 
+                     WHEN -1 then dbo.fnLovText('WhGrundbedarfTyp', ShGrundbedarfTyp)
+                     WHEN 9 THEN 'Total ' + dbo.fnLovText('WhGrundbedarfTyp', ShGrundbedarfTyp)
+                     else '' 
+                     end,
+         [Aktuelle Fälle Beginn] = U.AtBegin,
+         [Aufgenommene Fälle]    = U.Opened,
+         [Total Bearbeitet]      = U.AtBegin + U.Opened,
+         [Abgeschlossene Fälle]  = U.Closed,
+         [Aktuelle Fälle Ende]   = U.AtBegin + U.Opened - U.Closed
+  from   @User U
+  order by U.ModulID,U.OrgName,ShGrundbedarfTyp,U.Code,U.UserName</value>
+  </data>
+  <metadata name="qryListe3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>219, 17</value>
+  </metadata>
+  <data name="qryListe3.SelectStatement" xml:space="preserve">
+    <value>declare @Fall table (
+      ModulID          int,
+      OrgUnitID        int,
+      AtBegin          int,
+      Opened           int,
+      Closed           int,
+      ShGrundbedarfTyp int, --um nach Berechnungsgrundlage unterscheiden zu können
+      GemeindeCode     int) 
+
+  declare @User table (
+      ModulID          int,
+      ModulText        varchar(100),
+      OrgUnitID        int,
+      OrgName          varchar(100),
+      GemeindeCode     int,
+      GemeindeName     varchar(100),
+      AtBegin          int,
+      Opened           int,
+      Closed           int,
+      Code             int,
+      ShGrundbedarfTyp int) --um nach Berechnungsgrundlage unterscheiden zu können
+
+  /*
+     Code  Bedeutung
+    -1     Titelzeile GrundbedarfTyp
+     1     Modul: Titel
+     2       Abteilung: Titel
+     3         FB
+     4       Abteilung: Leerzeile
+     5       Abteilung: Total
+     6       Abteilung: Leerzeile
+     7     Modul: Total
+     8     Modul: Leerzeile
+     9     Total ShGrundbedarfTyp
+    10     Leerzeile ShGrundbedarfTyp
+  */
+
+  declare @DateFrom     datetime,
+          @DateTo       datetime,
+          @DateFuture   datetime,
+          @ModulID    VARCHAR(500),
+          @ProzessCode  INT,
+          @GemeindeCode int
+
+  set @DateFrom   = 0
+  set @DateTo     = getDate()
+
+
+--- set @DateFrom   = {edtDatumVon}
+--- set @DateTo     = {edtDatumBis}
+  set @DateFuture = '99991231'
+
+  set @ModulID  = null
+---  set @ModulID  = {edtModulID}
+
+  DECLARE @Module TABLE (
+    ModulID INT
+  );
+  
+  INSERT INTO @Module(ModulID)
+    SELECT CONVERT(INT, SplitValue)
+    FROM dbo.fnSplitStringToValues(@ModulID, ',', 0);  
+
+  SET @ProzessCode = null
+--- SET @ProzessCode = {edtProzess}
+
+  SET @GemeindeCode = null
+--- SET @GemeindeCode = {edtGemeindeCode}
+ 
+  set @DateTo = dateadd(s,-1,dateadd(d,1,@DateTo)) -- unmittelbar vor Mitternacht
+
+  -- @Fall: reine Fallführungen (=präventive Beratungen) im betrachteten Zeitraum
+  insert @Fall 
+  select FAL.ModulID, 
+         XOU.OrgUnitID, 
+         AtBegin = case when DatumVon &lt;  @DateFrom then 1 else 0 end,
+         Opened  = case when DatumVon &gt;= @DateFrom then 1 else 0 end,
+         Closed  = case when isNull(DatumBis,@DateFuture) &lt;= @DateTo   then 1 else 0 end,  
+         NULL,
+         FAL.GemeindeCode
+  from   dbo.FaLeistung           FAL WITH (READUNCOMMITTED)
+  INNER  JOIN dbo.BaPerson        PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = FAL.BaPersonID AND
+                               PRS.Testperson = 0
+  left  join dbo.XOrgUnit_User    OUU WITH (READUNCOMMITTED)  on OUU.UserID = FAL.UserID and
+                                      OUU.OrgUnitMemberCode = 2
+  left  join dbo.XOrgUnit         XOU WITH (READUNCOMMITTED)  on XOU.OrgUnitID = OUU.OrgUnitID
+  where  DatumVon &lt;= @DateTo and
+         isNull(DatumBis,@DateFuture) &gt;= @DateFrom and
+         (@ModulID IS NULL OR FAL.ModulID IN (SELECT ModulID FROM @Module)) AND
+         (@ProzessCode IS NULL OR FAL.FaProzessCode = @ProzessCode) AND
+         (@GemeindeCode IS NULL OR FAL.GemeindeCode = @GemeindeCode) AND
+         FAL.ModulID = 2 and
+         not exists (select 1 
+                     from   dbo.FaLeistung WITH (READUNCOMMITTED) 
+                     where  BaPersonID = FAL.BaPersonID and
+                            DatumVon &lt;= @DateTo and
+                            isNull(DatumBis,@DateFrom) &gt;= @DateFrom and
+                            ModulID &lt;&gt; 2)
+--- AND (XOU.OrgUnitID = {edtOrgUnitID} OR XOU.ParentID = {edtOrgUnitID})
+
+  -- @Fall: alle bewilligten Sozialhilfen im betrachteten Zeitraum
+  insert @Fall 
+  select FAL.ModulID, 
+         XOU.OrgUnitID, 
+         AtBegin = case when FAL.DatumVon &lt;  @DateFrom then 1 else 0 end,
+         Opened  = case when FAL.DatumVon &gt;= @DateFrom then 1 else 0 end,
+         Closed  = case when isNull(FAL.DatumBis,@DateFuture) &lt;= @DateTo   then 1 else 0 end,
+         ShGrundbedarfTyp = CASE WHEN POA.BgPositionsartCode IN (32011,32015,32017,32018,32019) THEN POA.BgPositionsartCode ELSE NULL END,
+         FAL.GemeindeCode
+  from   dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+         inner join dbo.BgFinanzplan           FP WITH (READUNCOMMITTED)  on FP.FaLeistungID = FAL.FaLeistungID and
+                                                  FP.BgFinanzplanID = (select top 1 BgFinanzplanID
+                                                                       from   dbo.BgFinanzplan F WITH (READUNCOMMITTED)
+                                                                       where  FaLeistungID = FAL.FaLeistungID and
+                                                                              BgBewilligungStatusCode in (5, 9) and 
+                                                                              F.DatumVon &lt;= @DateTo and
+                                                                              isNull(F.DatumBis,@DateFuture) &gt;= @DateFrom
+                                                                       order by F.DatumVon desc)
+         INNER JOIN dbo.BgBudget BGB WITH (READUNCOMMITTED) ON BGB.BgFinanzplanID = FP.BgFinanzplanID
+                               AND BGB.MasterBudget = 1
+         INNER JOIN dbo.BgPosition BGP WITH (READUNCOMMITTED) ON BGP.BgBudgetID = BGB.BgBudgetID
+         INNER JOIN dbo.BgPositionsart POA WITH (READUNCOMMITTED) ON POA.BgPositionsartID = BGP.BgPositionsartID 
+                                  AND POA.BgPositionsartCode IN (32011,32015,32017,32018,32019)
+         left  join dbo.BgFinanzplan_BaPerson FPP WITH (READUNCOMMITTED) on FPP.BgFinanzplanID = FP.BgFinanzplanID and
+                                                  FPP.IstUnterstuetzt = 1
+         left  join dbo.BaPerson              PRS WITH (READUNCOMMITTED) on PRS.BaPersonID = FPP.BaPersonID
+         left  join dbo.XOrgUnit_User    OUU WITH (READUNCOMMITTED)  on OUU.UserID = FAL.UserID and
+                                             OUU.OrgUnitMemberCode = 2
+         left  join dbo.XOrgUnit         XOU WITH (READUNCOMMITTED)  on XOU.OrgUnitID = OUU.OrgUnitID
+  where  FAL.ModulID = 3 and
+         FAL.DatumVon &lt;= @DateTo and
+         isNull(FAL.DatumBis,@DateFuture) &gt;= @DateFrom and
+         (@ModulID IS NULL OR FAL.ModulID IN (SELECT ModulID FROM @Module)) AND
+         (@ProzessCode IS NULL OR FAL.FaProzessCode = @ProzessCode) AND
+         (@GemeindeCode IS NULL OR FAL.GemeindeCode = @GemeindeCode) AND
+         FAL.BaPersonID = PRS.BaPersonID AND
+         PRS.Testperson = 0
+---  AND (XOU.OrgUnitID = {edtOrgUnitID} OR XOU.ParentID = {edtOrgUnitID})
+
+  -- @Fall: Inkasso, Vormundschaft, Asyl, KES im betrachteten Zeitraum
+  insert @Fall 
+  select FAL.ModulID, 
+         XOU.OrgUnitID, 
+         AtBegin = case when FAL.DatumVon &lt;  @DateFrom then 1 else 0 end,
+         Opened  = case when FAL.DatumVon &gt;= @DateFrom then 1 else 0 end,
+         Closed  = case when isNull(FAL.DatumBis,@DateFuture) &lt;= @DateTo   then 1 else 0 end,
+         NULL,
+         FAL.GemeindeCode  
+  from   dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+  INNER  JOIN dbo.BaPerson PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = FAL.BaPersonID AND
+                               PRS.Testperson = 0  
+  left  join dbo.XOrgUnit_User    OUU WITH (READUNCOMMITTED)  on OUU.UserID = FAL.UserID and
+                                      OUU.OrgUnitMemberCode = 2
+  left  join dbo.XOrgUnit         XOU WITH (READUNCOMMITTED)  on XOU.OrgUnitID = OUU.OrgUnitID
+  where  FAL.DatumVon &lt;= @DateTo and
+         isNull(FAL.DatumBis,@DateFuture) &gt;= @DateFrom and
+         (@ModulID IS NULL OR FAL.ModulID IN (SELECT ModulID FROM @Module)) AND
+         (@ProzessCode IS NULL OR FAL.FaProzessCode = @ProzessCode) AND
+         (@GemeindeCode IS NULL OR FAL.GemeindeCode = @GemeindeCode) AND
+         FAL.ModulID in (4,5,6,29) AND
+	    (FAL.FaProzessCode is NULL OR FAL.FaProzessCode &lt;&gt; 400)
+---  AND (XOU.OrgUnitID = {edtOrgUnitID} OR XOU.ParentID = {edtOrgUnitID})
+  -- Gruppierung nach User
+  insert @User
+  select F.ModulID,
+         ModulText = null,
+         F.OrgUnitID,
+         OrgName   = null,
+         F.GemeindeCode,
+         GemeindeName = NULL,
+         AtBegin  = sum(F.AtBegin),
+         Opened   = sum(F.Opened),
+         Closed   = sum(F.Closed),
+         Code = 3,
+         ShGrundbedarfTyp
+  from   @Fall F
+  group by F.ModulID, ShGrundbedarfTyp, F.GemeindeCode, F.OrgUnitID
+  order by F.ModulID, ShGrundbedarfTyp, F.GemeindeCode, F.OrgUnitID
+
+  -- ModulTxt, OrgName, UserName nachtragen (separat wegen Performance)
+  update @User
+  set    ModulText = case when U.ModulID = 2 then 'Präventive Beratung' else MOD.Name end,
+         OrgName   = isNull(ORG.ItemName,'-'),
+         GemeindeName = ISNULL(GDE.Text,'-')
+  from   @User U
+         left join dbo.XLOVCode GDE ON GDE.LOVName = 'GemeindeSozialdienst' AND GDE.Code = U.GemeindeCode
+         left join dbo.XOrgUnit      ORG WITH (READUNCOMMITTED) on ORG.OrgUnitID = U.OrgUnitID
+         inner join dbo.XModul     MOD WITH (READUNCOMMITTED) on MOD.ModulID = U.ModulID
+
+  -- Abteilungszeilen hinzufügen
+
+  -- 1. Titelzeile
+  insert @User (ModulID,ModulText,OrgName,Code)
+  select ModulID,
+         ModulText,
+         OrgName,
+         Code = 2
+  from   @User
+  where  Code = 3
+  group by ModulID, ModulText, OrgName
+
+  -- 2. Leerzeile
+  insert @User (ModulID,ModulText,OrgName,Code)
+  select ModulID,
+         ModulText,
+         OrgName,
+         Code = 4
+  from   @User
+  where  Code = 3 AND ModulID &lt;&gt; 3
+  group by ModulID, ModulText, OrgName
+
+  -- 3. Totalzeile
+  insert @User (ModulID,ModulText,OrgName,AtBegin,Opened,Closed,ShGrundbedarfTyp,Code)
+  select ModulID,
+         ModulText,
+         OrgName,
+         AtBegin  = sum(AtBegin),
+         Opened   = sum(Opened),
+         Closed   = sum(Closed),
+         99999,
+         Code = 5
+  from   @User
+  where  Code = 3
+  group by ModulID, ModulText, OrgName
+
+  -- 4. Leerzeile
+  insert @User (ModulID,ModulText,OrgName,Code)
+  select ModulID,
+         ModulText,
+         OrgName,
+         Code = 6
+  from   @User
+  where  Code = 3 AND ModulID &lt;&gt; 3
+  group by ModulID, ModulText, OrgName
+
+  -- Modulzeilen hinzufügen
+
+  -- 1. Titelzeile
+  insert @User (ModulID,ModulText,Code)
+  select ModulID,
+         ModulText,
+         Code = 1
+  from   @User
+  where  Code = 3
+  group by ModulID, ModulText
+
+  -- 2 Totalzeile
+  insert @User (ModulID,ModulText,OrgName,AtBegin,Opened,Closed,Code)
+  select ModulID,
+         ModulText,
+         OrgName = 'zzz',
+         AtBegin  = sum(AtBegin),
+         Opened   = sum(Opened),
+         Closed   = sum(Closed),
+         Code = 7
+  from   @User
+  where  Code = 3
+  group by ModulID, ModulText
+
+  -- 3 Leerzeile
+  insert @User (ModulID,ModulText,OrgName,Code)
+  select ModulID,
+         ModulText,
+         OrgName = 'zzz',
+         Code = 8
+  from   @User
+  where  Code = 3
+  group by ModulID, ModulText
+
+-- Titelzeile ShGrundbedarfTyp
+  insert @User (ModulID,ModulText,OrgName,ShGrundbedarfTyp,Code)
+  select ModulID,
+         ModulText,
+         OrgName,
+         ShGrundbedarfTyp,
+         Code = -1
+  from   @User
+  where  Code = 3
+     AND ShGrundbedarfTyp IS NOT NULL
+  group by ShGrundbedarfTyp,ModulID, ModulText, OrgName
+-- Leerzeile ShGrundbedarfTyp
+  insert @User (ModulID,ModulText,OrgName,ShGrundbedarfTyp,Code)
+  select ModulID,
+         ModulText,
+         OrgName,
+         ShGrundbedarfTyp,
+         Code = 10
+  from   @User
+  where  Code = 3
+     AND ShGrundbedarfTyp IS NOT NULL
+  group by ShGrundbedarfTyp,ModulID, ModulText, OrgName
+-- Total ShGrundbedarfTyp
+  insert @User (ModulID,ModulText,OrgName,AtBegin,Opened,Closed,ShGrundbedarfTyp,Code)
+  select ModulID,
+         ModulText,
+         OrgName,
+         AtBegin  = sum(AtBegin),
+         Opened   = sum(Opened),
+         Closed   = sum(Closed),
+         ShGrundbedarfTyp,
+         Code = 9
+  from   @User
+  where  Code = 3
+     AND ShGrundbedarfTyp IS NOT NULL
+  group by ShGrundbedarfTyp,ModulID, ModulText, OrgName
+
+---------------------------
+--------------------------- Statistik
+--------------------------- 
+  select Modul     = case when Code = 1 then U.ModulText else '' end,
+         Abteilung = case when Code = 2 then U.OrgName else '' end,
+         Gemeinde  = case Code
+                     when 3 then U.GemeindeName 
+                     when 5 then 'Total ' + U.OrgName 
+                     when 7 then 'Total ' + U.ModulText 
+                     WHEN -1 then dbo.fnLovText('WhGrundbedarfTyp', ShGrundbedarfTyp)
+                     WHEN 9 THEN 'Total ' + dbo.fnLovText('WhGrundbedarfTyp', ShGrundbedarfTyp)
+                     else '' 
+                     end,
+         [Aktuelle Fälle Beginn] = U.AtBegin,
+         [Aufgenommene Fälle]    = U.Opened,
+         [Total Bearbeitet]      = U.AtBegin + U.Opened,
+         [Abgeschlossene Fälle]  = U.Closed,
+         [Aktuelle Fälle Ende]   = U.AtBegin + U.Opened - U.Closed
+  from   @User U
+  order by U.ModulID,U.OrgName,ShGrundbedarfTyp,U.Code,U.GemeindeName</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="edtDatumBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="edtDatumVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+</root>

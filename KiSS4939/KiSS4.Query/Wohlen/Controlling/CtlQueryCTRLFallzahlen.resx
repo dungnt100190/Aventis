@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>-- Cockpit Fallzahlen Wohlen
+--
+--
+
+DECLARE @DatumVon DATETIME
+DECLARE @DatumBis DATETIME
+DECLARE @Kennzahl FLOAT
+DECLARE @Total    FLOAT
+SET @DatumVon = {edtDatumVon}
+SET @DatumBis = {edtDatumBis}
+
+DECLARE @Kennzahlen table (
+   Beschreibung   VARCHAR (200),
+   Kennzahl       VARCHAR (50),
+   Masseinheit    VARCHAR (50),
+   Prozentual     FLOAT(1),
+   SortKey$       INT
+)
+-- 1. Fallzahlen
+--
+-- 1.1 Laufende Fälle per @DatumVon
+SET @Kennzahl = (SELECT COUNT(*) 
+                 FROM dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+                 WHERE FAL.ModulID = 2 AND
+                       FAL.DatumVon &lt; @DatumVon AND
+                      (FAL.DatumBis &gt;= @DatumVon OR
+                       FAL.DatumBis IS NULL)
+            )
+INSERT INTO @Kennzahlen VALUES ('Laufende Fälle per '+ CONVERT(VARCHAR, @DatumVon, 104) , @Kennzahl, 'Anzahl', NULL,0)
+
+--
+-- 1.2 Aufnahmen im Auswertungszeitraum
+-- Aufnahmen und Abschlüsse pro Gemeinde, tmp Tabelle
+DECLARE @KennzahlenProGemeinde TABLE(
+   Gemeinde   VARCHAR(100),
+   Aufnahmen  INT,
+   Abschlüsse INT
+)
+
+DECLARE @gemeindeCode INT
+DECLARE @gemeinde     VARCHAR(100)
+ 
+DECLARE cursorGemeinden CURSOR STATIC FOR
+    SELECT LOV.Code, LOV.Text
+    FROM dbo.XLOVCode LOV WITH (READUNCOMMITTED)
+    WHERE LOV.LovName = 'GemeindeSozialdienst' 
+
+  OPEN cursorGemeinden
+  FETCH NEXT FROM cursorGemeinden INTO @gemeindeCode, @gemeinde
+  WHILE @@fetch_status = 0 BEGIN
+    INSERT @KennzahlenProGemeinde
+    SELECT @gemeinde, 
+           (SELECT COUNT(*) 
+                 FROM dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+                 WHERE ModulID = 2                                AND
+                       FAL.DatumVon BETWEEN @DatumVon AND @DatumBis AND 
+                       FAL.GemeindeCode = @gemeindeCode
+            ),
+           (SELECT COUNT(*) 
+                   FROM FaLeistung FAL WITH (READUNCOMMITTED)
+                   WHERE FAL.ModulID = 2                            AND
+                         FAL.DatumBis BETWEEN @DatumVon AND @DatumBis AND 
+                         FAL.GemeindeCode = @gemeindeCode
+            )
+    FETCH NEXT FROM cursorGemeinden INTO @gemeindeCode, @gemeinde
+  END
+  CLOSE cursorGemeinden
+  DEALLOCATE cursorGemeinden
+
+INSERT @KennzahlenProGemeinde
+    SELECT 'Keine Angabe', 
+           (SELECT COUNT(*) 
+                 FROM dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+                 WHERE ModulID = 2                            AND
+                       DatumVon BETWEEN @DatumVon AND @DatumBis AND 
+                       FAL.GemeindeCode IS NULL
+            ),
+           (SELECT COUNT(*) 
+                   FROM dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+                   WHERE ModulID = 2                            AND
+                         FAL.DatumBis BETWEEN @DatumVon AND @DatumBis AND 
+                         FAL.GemeindeCode IS NULL
+            )
+-- end Tabelle Aufnahmen und Abschlüsse pro Gemeinde
+
+SET @Kennzahl = (SELECT SUM(ISNULL(Aufnahmen,0)) FROM @KennzahlenProGemeinde)
+INSERT INTO @Kennzahlen VALUES ('Aufnahmen im Auswertungszeitraum', @Kennzahl, 'Anzahl', NULL, 1)
+
+INSERT INTO @Kennzahlen VALUES ('Aufnahmen nach Gemeinde', '', '', NULL, 1)
+-- 1.2.1 Nach Gemeinden
+SET @Total = (SELECT SUM(ISNULL(Aufnahmen,0)) FROM @KennzahlenProGemeinde)
+IF @Total &gt; 0 
+   INSERT @Kennzahlen
+   SELECT Gemeinde, Aufnahmen, 'Anzahl', (Aufnahmen*100)/@Total, '1'
+   FROM @KennzahlenProGemeinde
+ELSE
+   INSERT @Kennzahlen
+   SELECT Gemeinde, Aufnahmen, 'Anzahl', '', '1'
+   FROM @KennzahlenProGemeinde
+
+--
+-- 1.2.2 Nach Aufnahmeart
+-- FaAnmeldeart 1=Erstanmeldung, 2=Wiederanmeldung
+INSERT INTO @Kennzahlen VALUES ('Aufnahmen nach Aufnahmeart', '', '', NULL, 1)
+SET @Kennzahl = (SELECT COUNT(*) 
+                 FROM dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+                 WHERE ModulID = 2                            AND
+                       DatumVon BETWEEN @DatumVon AND @DatumBis AND 
+                       FAL.FaAufnahmeArtCode = 1
+                 )
+IF @Total &gt; 0 
+   INSERT INTO @Kennzahlen VALUES ('Erstaufnahmen im Auswertungszeitraum', @Kennzahl, 'Anzahl', (@Kennzahl*100)/@Total ,1)
+ELSE
+   INSERT INTO @Kennzahlen VALUES ('Erstaufnahmen im Auswertungszeitraum', @Kennzahl, 'Anzahl', '' ,1)
+
+SET @Kennzahl = (SELECT COUNT(*) 
+                 FROM dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+                 WHERE ModulID = 2                            AND
+                       DatumVon BETWEEN @DatumVon AND @DatumBis AND 
+                       FAL.FaAufnahmeArtCode = 2
+                 )
+
+IF @Total &gt; 0
+   INSERT INTO @Kennzahlen VALUES ('Wiederaufnahmen im Auswertungszeitraum', @Kennzahl, 'Anzahl', (@Kennzahl*100)/@Total, 1)
+ELSE
+   INSERT INTO @Kennzahlen VALUES ('Wiederaufnahmen im Auswertungszeitraum', @Kennzahl, 'Anzahl', '', 1)
+
+SET @Kennzahl = (SELECT COUNT(*) 
+                 FROM dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+                 WHERE ModulID = 2                            AND
+                       DatumVon BETWEEN @DatumVon AND @DatumBis AND 
+                       (FAL.FaAufnahmeArtCode IS NULL OR FAL.FaAufnahmeArtCode NOT IN (1,2))
+                 )
+IF @Total &gt; 0
+   INSERT INTO @Kennzahlen VALUES ('andere Aufnahmen', @Kennzahl, 'Anzahl', (@Kennzahl*100)/@Total, 1)
+ELSE
+   INSERT INTO @Kennzahlen VALUES ('andere Aufnahmen', @Kennzahl, 'Anzahl', '', 1)
+
+--
+-- 1.2.3 Nach Kontaktveranlasser
+DECLARE @AufnNachKontakt TABLE(
+   Kontaktveranlasser VARCHAR(100),
+   Kennzahl           INT
+)
+
+DECLARE @veranlasserCode INT
+DECLARE @veranlasser VARCHAR(100)
+ 
+DECLARE cursorVeranlasser CURSOR STATIC FOR
+    SELECT LOV.Code, LOV.Text
+    FROM dbo.XLOVCode LOV WITH (READUNCOMMITTED)
+    WHERE LOV.LovName = 'FaKontaktveranlasser' 
+
+  OPEN cursorVeranlasser
+  FETCH NEXT FROM cursorVeranlasser INTO @veranlasserCode, @veranlasser
+  WHILE @@fetch_status = 0 BEGIN
+    INSERT @AufnNachKontakt
+    SELECT @veranlasser, 
+           (SELECT COUNT(*) 
+                 FROM dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+                 WHERE ModulID = 2                            AND
+                       DatumVon BETWEEN @DatumVon AND @DatumBis AND 
+                       FAL.FaKontaktveranlasserCode = @veranlasserCode
+            )
+    FETCH NEXT FROM cursorVeranlasser INTO @veranlasserCode, @veranlasser
+  END
+  CLOSE cursorVeranlasser
+  DEALLOCATE cursorVeranlasser
+
+-- noch jene mit FaKontaktveranlasserCode==NULL zu Unbekannt addieren
+UPDATE @AufnNachKontakt
+    SET  Kennzahl = Kennzahl + 
+           (SELECT COUNT(*) 
+                 FROM dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+                 WHERE ModulID = 2                            AND
+                       DatumVon BETWEEN @DatumVon AND @DatumBis AND 
+                       FAL.FaKontaktveranlasserCode IS NULL     AND
+                       Kontaktveranlasser like 'Unbekannt'
+            )
+
+INSERT @Kennzahlen VALUES ('Aufnahmen nach Kontaktveranlasser', '','', NULL, 1)
+IF @Total &gt; 0 
+   INSERT @Kennzahlen
+   SELECT Kontaktveranlasser, Kennzahl, 'Anzahl', (Kennzahl*100)/@Total, 1
+   FROM @AufnNachKontakt
+ELSE
+   INSERT @Kennzahlen
+   SELECT Kontaktveranlasser, Kennzahl, 'Anzahl', '', 1
+   FROM @AufnNachKontakt
+
+
+--
+-- 1.2.4 Abschlussdauer bei Wiederaufnahmen
+SET @Kennzahl = (SELECT 
+                sum(DateDiff(d, FAL2.DatumBis, FAL.DatumVon))/(count(*) * 30.416)
+                FROM dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+                     INNER JOIN dbo.FaLeistung FAL2 WITH (READUNCOMMITTED) ON FAL2.BaPersonID = FAL.BaPersonID AND
+                                               FAL2.FaLeistungID &lt;&gt; FAL.FaLeistungID      AND
+                                               FAL2.DatumBis = (SELECT top 1 DatumBis
+                                                                FROM dbo.FaLeistung WITH (READUNCOMMITTED)
+                                                                WHERE BaPersonID = FAL.BaPersonID AND
+                                                                      FaLeistungID &lt;&gt; FAL.FaLeistungID
+                                                                      order by DatumBis desc
+                                                                        
+                                                                )
+                 WHERE FAL.ModulID = 2                            AND
+                       FAL.DatumVon BETWEEN @DatumVon AND @DatumBis AND 
+                       FAL.FaAufnahmeArtCode = 2
+                 )
+INSERT INTO @Kennzahlen VALUES ('Durchschnittliche Abschlussdauer bei Wiederaufnahmen', @Kennzahl, 'Monate', NULL, 666)
+-- 1.3 Total im Auswertungszeitraum bearbeitete Fälle (1.1 + 1.2.1)
+SET @Kennzahl = (SELECT count(*)
+                 FROM dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+                 WHERE ModulID = 2 AND
+                     ( (FAL.DatumVon &lt;= @DatumVon AND (FAL.DatumBis &gt;= @DatumVon OR FAL.DatumBis IS NULL))
+                                    OR
+                      (FAL.DatumVon BETWEEN @DatumVon AND @DatumBis))
+                 )
+INSERT INTO @Kennzahlen VALUES ('Total im Auswertungszeitraum bearbeitete Fälle', @Kennzahl, 'Anzahl', NULL, 666)
+
+-- 1.5 Abschlüsse im Auswertungszeitraum
+SET @Kennzahl = (SELECT SUM(ISNULL(Abschlüsse,0)) FROM @KennzahlenProGemeinde)
+SET @Total = (SELECT SUM(ISNULL(Abschlüsse,0)) FROM @KennzahlenProGemeinde)
+INSERT INTO @Kennzahlen VALUES ('Abschlüsse im Auswertungszeitraum', @Kennzahl, 'Anzahl', NULL, 666)
+
+-- Nach Gemeinde
+INSERT INTO @Kennzahlen VALUES ('Abschlüsse nach Gemeinde', '', '', NULL, 1)
+
+
+if @Total &gt; 0 
+   INSERT @Kennzahlen
+   SELECT Gemeinde, Abschlüsse, 'Anzahl', (Abschlüsse*100)/@Total, 1
+   FROM @KennzahlenProGemeinde
+else
+   INSERT @Kennzahlen
+   SELECT Gemeinde, Abschlüsse, 'Anzahl', '', 1
+   FROM @KennzahlenProGemeinde
+
+
+
+-- 1.5.1 Abschlüsse im Auswertungszeitraum
+-- 1.5.2 Abschlüsse nach Abschlussgrund
+DECLARE @abschlussgründe TABLE(
+   grund      VARCHAR(100),
+   abschlüsse INT
+)
+
+DECLARE @grundCode INT
+DECLARE @grund     VARCHAR(100)
+ 
+DECLARE cursorGrund CURSOR STATIC FOR
+    SELECT LOV.Code, LOV.Text
+    FROM   dbo.XLOVCode LOV WITH (READUNCOMMITTED)
+    WHERE LOV.LovName = 'AbschlussGrund' 
+
+  OPEN cursorGrund
+  FETCH NEXT FROM cursorGrund into @grundCode, @grund
+  WHILE @@fetch_status = 0 begin
+    INSERT @abschlussgründe
+    SELECT @grund, 
+           (SELECT COUNT(*) 
+                 FROM dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+                 WHERE ModulID = 2                            AND
+                       FAL.DatumBis BETWEEN @DatumVon AND @DatumBis AND 
+                       FAL.AbschlussGrundCode = @grundCode
+            )
+    FETCH NEXT FROM cursorGrund INTO @grundCode, @grund
+  END
+  CLOSE cursorGrund
+  DEALLOCATE cursorGrund
+
+INSERT @abschlussgründe
+    SELECT 'Keine Angabe', 
+           (SELECT COUNT(*) 
+                 FROM dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+                 WHERE ModulID = 2                                AND
+                       FAL.DatumBis BETWEEN @DatumVon AND @DatumBis AND 
+                       FAL.AbschlussGrundCode IS NULL
+            )
+IF @Total &gt; 0
+   INSERT @Kennzahlen
+   SELECT Grund, Abschlüsse, 'Anzahl', (100*Abschlüsse)/@Total, 1
+   FROM @abschlussgründe
+ELSE
+   INSERT @Kennzahlen
+   SELECT Grund, Abschlüsse, 'Anzahl', '', 1
+   FROM @abschlussgründe
+
+
+-- 1.5.3 Beratungsdauer bei Abschlüssen
+SET @Kennzahl = (SELECT   
+                 SUM(DATEDIFF(DAY, FAL.DatumVon, FAL.DatumBis))/(COUNT(*) * 30.416)
+                 FROM dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+                 WHERE ModulID = 2 AND
+                 DatumBis BETWEEN @DatumVon AND @DatumBis
+                 )
+INSERT INTO @Kennzahlen VALUES ('Durchschnittliche Beratungsdauer bei Abschlüssen', @Kennzahl, 'Monate', NULL,0)
+
+-- 1.6 Laufende Fälle per @DatumBis
+SET @Kennzahl = (SELECT COUNT(*) 
+                 FROM dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+                 WHERE FAL.ModulID = 2         AND
+                       FAL.DatumVon &lt;= @DatumBis AND
+                      (FAL.DatumBis &gt;= @DatumBis OR
+                       FAL.DatumBis IS NULL)
+            )
+INSERT INTO @Kennzahlen VALUES ('Laufende Fälle per '+ CONVERT(VARCHAR, @DatumBis, 104), @Kennzahl, 'Anzahl', NULL, 0)
+
+
+UPDATE @Kennzahlen
+SET    Prozentual = ROUND(Prozentual, 2)
+
+UPDATE @Kennzahlen SET Beschreibung = 'Keine Angabe' WHERE Beschreibung = 'Unbekannt'
+
+SELECT Beschreibung, Kennzahl, Masseinheit, Prozentual 
+FROM @Kennzahlen</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="xDocument.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAF1JREFUOE9jZAAC
+        Y2Pj/yAaGzh79iwjhjhIw///MzGwmJjYfxDGqSEtjeE/MgYpBhmEoYmQDSANKM7GpQHZmVg1oDsJxgdp
+        pI4N2EIKJjbqJLIiDqSJEMaVovGKAwBnM3PWBP8PfwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="edtDatumBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFVJREFUOE9jZAAC
+        Y2Pj/yCaEDh79iwjWA1MAzaNWOVAgsRguAuIcRKKGmROQwMD3D/IbKwaQApgitBp6mgAeYokG4abBmT/
+        YKQ3smKapLREKFkjywMAd9eDN3Z9MMsAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="edtDatumVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFVJREFUOE9jZAAC
+        Y2Pj/yCaEDh79iwjWA1MAzaNWOVAgsRguAuIcRKKGmROQwMD3D/IbKwaQApgitBp6mgAeYokG4abBmT/
+        YKQ3smKapLREKFkjywMAd9eDN3Z9MMsAAAAASUVORK5CYII=
+</value>
+  </data>
+</root>

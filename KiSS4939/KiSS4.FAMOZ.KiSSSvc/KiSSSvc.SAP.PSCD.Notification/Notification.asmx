@@ -1,0 +1,1 @@
+<%@ WebService Language="C#" CodeBehind="Notification.asmx.cs" Class="KiSSSvc.SAP.PSCD.Notification.NotificationSvc" %>

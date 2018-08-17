@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DatabaseName>KiSS_SRK_Prod</DatabaseName>
+  <DatabaseNameDocument>KiSS_SRK_Prod</DatabaseNameDocument>
+  <NameSpaceExtension>SRK</NameSpaceExtension>
+  <PostAppend>GO
+PRINT ('=== end of file [&lt;FullName&gt;]: ' + CONVERT(VARCHAR, GETDATE(), 113) + ' ===')
+GO
+/* -------- INFO: End of file '&lt;FullName&gt;' -------- */</PostAppend>
+  <PreAppend>/* -------- INFO: Start of file '&lt;FullName&gt;' -------- */
+PRINT ('=== start of file [&lt;FullName&gt;]: ' + CONVERT(VARCHAR, GETDATE(), 113) + ' ===')
+GO</PreAppend>
+  <ReleaseFile>C:\Projects\KiSS40\KiSS4\Database\XXX_Snippets &amp; Helpers\KiSS\NewDBServerScripts\Dispatcher.sql</ReleaseFile>
+  <SearchFolder>C:\Projects\KiSS40\KiSS4\Database\</SearchFolder>
+  <SqlUserName>kiss</SqlUserName>
+  <StandardNamespaceExtension>Standard</StandardNamespaceExtension>
+</Settings>

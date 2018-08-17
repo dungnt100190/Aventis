@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E70D5BFA-19A7-49CD-9C71-3DB46C8B111C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kiss.BusinessLogic</RootNamespace>
+    <AssemblyName>Kiss.BusinessLogic</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Build\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation, Version=5.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.5.0.0.1\lib\Net40\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\Build\Debug\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net40\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ba\BaAdressatService.cs" />
+    <Compile Include="Ba\BaGemeindeService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ba\BaInstitutionService.cs" />
+    <Compile Include="Ba\BaLandService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ba\BaPersonService.cs" />
+    <Compile Include="Ba\BaPlzService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ba\BaAdresseService.cs" />
+    <Compile Include="Ba\BaPraemienverbilligungService.cs" />
+    <Compile Include="Ba\DTO\BaLandDTO.cs" />
+    <Compile Include="Ba\DTO\BaAdressatDTO.cs" />
+    <Compile Include="Common\CommonGastrechtAnfragenService.cs" />
+    <Compile Include="Fa\FaLeistungArchivService.cs" />
+    <Compile Include="Helper\ChangesHelper.cs" />
+    <Compile Include="Kes\KesBehoerdeService.cs" />
+    <Compile Include="Kes\KesDossiernachweisService.cs" />
+    <Compile Include="Kes\KesKokesExportElementsDTO.cs" />
+    <Compile Include="Kes\KesKokesExportService.cs" />
+    <Compile Include="LocalResources\Kes\KesDossiernachweisServiceRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KesDossiernachweisServiceRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LocalResources\Kes\KesKokesExportServiceRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KesKokesExportServiceRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LocalResources\System\IbanConverterServiceRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IbanConverterServiceRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LocalResources\System\XDocumentServiceRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XDocumentServiceRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Sys\SslCertificateValidator.cs" />
+    <Compile Include="Sys\XModulService.cs" />
+    <Compile Include="Sys\XTaskAutoGeneratedService.cs" />
+    <Compile Include="Sys\IbanConverterService.cs" />
+    <Compile Include="Ba\Parser\BaGemeindeParser.cs" />
+    <Compile Include="Ba\Parser\BaLandParser.cs" />
+    <Compile Include="Cache\ConfigCache.cs" />
+    <Compile Include="Cache\ConfigCacheItem.cs" />
+    <Compile Include="Cache\IConfigCacheItem.cs" />
+    <Compile Include="Cache\LOVCache.cs" />
+    <Compile Include="Fa\FaDokumentAblageService.cs" />
+    <Compile Include="Fa\FaAbfrageDokumentAblageService.cs" />
+    <Compile Include="Helper\OfficeVersionHelper.cs" />
+    <Compile Include="Kes\KesMassnahmeArtikelService.cs" />
+    <Compile Include="Kes\KesPflegekinderaufsichtService.cs" />
+    <Compile Include="Kes\KesMassnahmeAuftragService.cs" />
+    <Compile Include="Kes\KesMandatsfuehrendePersonService.cs" />
+    <Compile Include="Kes\KesArtikelService.cs" />
+    <Compile Include="Kes\KesMassnahmeBerichtService.cs" />
+    <Compile Include="Kes\KesMassnahmeService.cs" />
+    <Compile Include="Kes\KesDokumentService.cs" />
+    <Compile Include="Kes\KesAuftragService.cs" />
+    <Compile Include="Kes\KesLeistungService.cs" />
+    <Compile Include="Kes\KesPraeventionService.cs" />
+    <Compile Include="Kes\KesVerlaufService.cs" />
+    <Compile Include="LocalResources\Ba\BaInstitutionRes.Designer.cs">
+      <DependentUpon>BaInstitutionRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="LocalResources\Ba\BaServiceRes.Designer.cs">
+      <DependentUpon>BaServiceRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="LocalResources\Sst\SstEinwohnerregisterServiceRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SstEinwohnerregisterServiceRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LocalResources\System\XUserRes.Designer.cs">
+      <DependentUpon>XUserRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="LocalResources\Ba\BaAdresseRes.Designer.cs">
+      <DependentUpon>BaAdresseRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="LocalResources\Kes\KesServiceRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KesServiceRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Log\ServiceProcessErrorService.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\EinwohnerregisterService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Fa\FaKategorisierungEksProduktService.cs" />
+    <Compile Include="Fa\FaLeistungService.cs" />
+    <Compile Include="Fa\FaZeitachseService.cs" />
+    <Compile Include="Fa\FaKategorisierungService.cs" />
+    <Compile Include="Fs\FsReduktionService.cs" />
+    <Compile Include="Fs\FsDienstleistungAuswertungService.cs" />
+    <Compile Include="Fs\FsVerfuegbareArbeitszeitService.cs" />
+    <Compile Include="Interfaces\IServiceCRUD.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service.cs" />
+    <Compile Include="ServiceCRUD.cs" />
+    <Compile Include="Ba\BaEinwohnerregisterService.cs" />
+    <Compile Include="Log\ServiceCallService.cs" />
+    <Compile Include="Log\UserSessionService.cs" />
+    <Compile Include="Sys\ConfigCacheFactory.cs" />
+    <Compile Include="Sys\XTaskService.cs" />
+    <Compile Include="Sys\XDocumentService.cs" />
+    <Compile Include="Sys\DTO\ModulIconDTO.cs" />
+    <Compile Include="Sys\XIconService.cs" />
+    <Compile Include="Sys\XUserService.cs" />
+    <Compile Include="Sys\XClassService.cs" />
+    <Compile Include="Sys\NodeEnumeration\ConfigNode.cs" />
+    <Compile Include="Sys\NodeEnumeration\ConfigNodes.cs" />
+    <Compile Include="Sys\XConfigService.cs" />
+    <Compile Include="Sys\SysBerechtigungsService.cs" />
+    <Compile Include="Sys\XLovService.cs" />
+    <Compile Include="Vm\VmPositionService.cs" />
+    <Compile Include="Vm\VmKlientenbudgetService.cs" />
+    <Compile Include="Vm\VmPositionsartService.cs" />
+    <Compile Include="XmlParser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KiSS.AssemblyInfo\BIAG.AssemblyInfo.csproj">
+      <Project>{C3A41F2E-FBF1-4628-8F6A-764A22252624}</Project>
+      <Name>BIAG.AssemblyInfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.BL\Kiss.BL.csproj">
+      <Project>{317D103A-9D9E-4A5B-B08F-1E9B6BEEEC0E}</Project>
+      <Name>Kiss.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.DataAccess\Kiss.DataAccess.csproj">
+      <Project>{C8FEADA7-2D5F-4E43-818D-32E648731342}</Project>
+      <Name>Kiss.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.DbContext\Kiss.DbContext.csproj">
+      <Project>{A9733EC8-89E0-44A6-941D-A71868778675}</Project>
+      <Name>Kiss.DbContext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Infrastructure\Kiss.Infrastructure.csproj">
+      <Project>{94D23DEF-0BEC-4EAC-B6A8-A2AB6B3A0CF1}</Project>
+      <Name>Kiss.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Interfaces\Kiss.Interfaces.csproj">
+      <Project>{936877A8-EC00-4267-8C62-344062912497}</Project>
+      <Name>Kiss.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Bde\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="LocalResources\Kes\KOKES_Statistik.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Kiss.DbContext.DTO.Ba.BaEinwohnerregisterPersonAnfrageDTO.datasource" />
+    <None Include="Properties\DataSources\Kiss.DbContext.DTO.Ba.BaEinwohnerregisterPersonResultDTO.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LocalResources\Ba\BaInstitutionRes.fr.resx">
+      <DependentUpon>BaInstitutionRes.resx</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Ba\BaInstitutionRes.it.resx">
+      <DependentUpon>BaInstitutionRes.resx</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Ba\BaInstitutionRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BaInstitutionRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Ba\BaServiceRes.fr.resx">
+      <DependentUpon>BaServiceRes.resx</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Ba\BaServiceRes.it.resx">
+      <DependentUpon>BaServiceRes.resx</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Ba\BaServiceRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BaServiceRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Sst\SstEinwohnerregisterServiceRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SstEinwohnerregisterServiceRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\System\IbanConverterServiceRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>IbanConverterServiceRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesDossiernachweisServiceRes.fr.resx">
+      <DependentUpon>KesDossiernachweisServiceRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesDossiernachweisServiceRes.it.resx">
+      <DependentUpon>KesDossiernachweisServiceRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesDossiernachweisServiceRes.resx">
+      <SubType>Resource</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>KesDossiernachweisServiceRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesKokesExportServiceRes.fr.resx">
+      <DependentUpon>KesKokesExportServiceRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesKokesExportServiceRes.it.resx">
+      <DependentUpon>KesKokesExportServiceRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesKokesExportServiceRes.resx">
+      <SubType>Resource</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>KesKokesExportServiceRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\System\XDocumentServiceRes.fr.resx" >
+      <DependentUpon>XDocumentServiceRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\System\XDocumentServiceRes.it.resx" >
+      <DependentUpon>XDocumentServiceRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\System\XDocumentServiceRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XDocumentServiceRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\System\XUserRes.fr.resx">
+      <DependentUpon>XUserRes.resx</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\System\XUserRes.it.resx">
+      <DependentUpon>XUserRes.resx</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\System\XUserRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XUserRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Ba\BaAdresseRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BaAdresseRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Ba\BaAdresseRes.it.resx">
+      <DependentUpon>BaAdresseRes.resx</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Ba\BaAdresseRes.fr.resx">
+      <DependentUpon>BaAdresseRes.resx</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesServiceRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>KesServiceRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesServiceRes.it.resx">
+      <DependentUpon>KesServiceRes.resx</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesServiceRes.fr.resx">
+      <DependentUpon>KesServiceRes.resx</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\EinwohnerregisterService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EinwohnerregisterService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EinwohnerregisterService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EinwohnerregisterService\KissEinwohnerregisterService12.wsdl" />
+    <None Include="Service References\EinwohnerregisterService\KissEinwohnerregisterService51.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EinwohnerregisterService\KissEinwohnerregisterService513.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EinwohnerregisterService\KissEinwohnerregisterService514.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EinwohnerregisterService\KissEinwohnerregisterService515.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EinwohnerregisterService\KissEinwohnerregisterService516.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EinwohnerregisterService\KissEinwohnerregisterService517.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EinwohnerregisterService\KissEinwohnerregisterService518.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EinwohnerregisterService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EinwohnerregisterService\KissEinwohnerregisterService12.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

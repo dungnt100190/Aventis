@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryBgSpezkonto.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>391, 17</value>
+  </metadata>
+  <metadata name="qryBgPosition.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>263, 17</value>
+  </metadata>
+  <data name="qryBgPosition.SelectStatement" xml:space="preserve">
+    <value>DECLARE @BgSpezkontoID INT,
+        @BgSpezkontoTypCode INT;
+
+SELECT @BgSpezkontoID = {0},
+       @BgSpezkontoTypCode = {1};
+
+-- Position im Budget
+SELECT 
+  SortKey      = CASE
+                   WHEN BPO.BgKategorieCode = 101  THEN 2
+                   WHEN @BgSpezkontoTypCode = 2    THEN 1
+                   ELSE 3
+                 END,
+  Datum        = dbo.fnDateSerial(BBG.Jahr, BBG.Monat, 1),
+  DatumSort    = dbo.fnDateSerial(BBG.Jahr, BBG.Monat, 1),
+  Gutschrift   = CASE WHEN BPO.BgKategorieCode = 101 THEN NULL ELSE BPO.BetragRechnung END,
+  Belastung    = CASE WHEN BPO.BgKategorieCode = 101 THEN BPO.BetragRechnung ELSE NULL END,
+  Freigegeben  = CONVERT(BIT, CASE WHEN BBG.BgBewilligungStatusCode = 5 THEN 1 
+  WHEN EXISTS (SELECT TOP 1 1
+                     FROM dbo.KbBuchung                   BUC WITH (READUNCOMMITTED) 
+                       INNER JOIN dbo.KbBuchungKostenart  BUK WITH (READUNCOMMITTED) ON BUK.KbBuchungID  = BUC.KbBuchungID
+                     WHERE BUC.BgBudgetID = BBG.BgBudgetID
+                       AND BUC.KbBuchungTypCode IN (1, 2, 3, 4) /* Budget, Manuell, Automatisch, Ausgleich */                     
+                       AND BUC.KbBuchungStatusCode NOT IN (1, 7, 8) -- vorbereitet, gesperrt, storniert
+                    ) THEN 1
+ELSE 0 END),
+  Verbucht     = CONVERT(BIT, CASE
+                                WHEN BBG.BgBewilligungStatusCode = 5 AND BPO.BgKategorieCode &lt;&gt; 101 THEN 1
+                                WHEN EXISTS (SELECT TOP 1 1
+                                             FROM dbo.KbBuchung BUC WITH (READUNCOMMITTED)
+                                               INNER JOIN dbo.KbBuchungKostenart BUK WITH (READUNCOMMITTED) ON BUK.KbBuchungID = BUC.KbBuchungID
+                                             WHERE BUC.BgBudgetID = BPO.BgBudgetID AND BUK.BgPositionID = BPO.BgPositionID
+                                               AND BUC.KbBuchungTypCode IN (1, 2) /* Einnahmen, Ausgaben */
+                                               AND BUC.KbBuchungStatusCode NOT IN (1, 7, 8)) THEN 1
+                                ELSE 0
+                              END),
+  Gesperrt     = CONVERT(BIT, CASE WHEN BBG.BgBewilligungStatusCode = 9 THEN 1 ELSE 0 END),
+  Buchungstext = BPO.Buchungstext,
+  Saldo        = CONVERT(MONEY, NULL)
+FROM dbo.vwBgPosition      BPO
+  INNER JOIN dbo.BgBudget  BBG WITH (READUNCOMMITTED) ON BBG.BgBudgetID = BPO.BgBudgetID 
+                                                     AND BBG.MasterBudget = 0
+WHERE BPO.BgSpezkontoID = @BgSpezkontoID
+
+UNION ALL
+
+-- Startsaldo des Spezialkonto
+SELECT 
+  SortKey      = 0, 
+  Datum        = NULL,
+  DatumSort    = NULL,
+  Gutschrift   = CASE WHEN StartSaldo &gt; $0.00 AND BgSpezkontoTypCode &lt;&gt; 3 THEN StartSaldo END,
+  Belastung    = CASE WHEN StartSaldo &gt; $0.00 AND BgSpezkontoTypCode = 3 AND OhneEinzelzahlung = 1 THEN StartSaldo 
+                      WHEN StartSaldo &lt; $0.00 AND BgSpezkontoTypCode = 2 THEN StartSaldo 
+                      END,
+  Freigegeben  = NULL, 
+  Verbucht     = NULL, 
+  Gesperrt     = NULL, 
+  Buchungstext = 'Startsaldo', 
+  Saldo        = NULL
+FROM dbo.BgSpezkonto WITH (READUNCOMMITTED)
+WHERE BgSpezkontoID = @BgSpezkontoID 
+  AND (StartSaldo &gt; $0.00 OR BgSpezkontoTypCode = 2)
+
+UNION ALL
+
+-- Abschluss des Spezialkonto
+SELECT 
+  SortKey      = 4, 
+  Datum        = NULL,
+  DatumSort    = Created,
+  Gutschrift   = Betrag,
+  Belastung    = NULL,
+  Freigegeben  = CONVERT(BIT, 0), 
+  Verbucht     = CONVERT(BIT, 0), 
+  Gesperrt     = CONVERT(BIT, 0), 
+  Buchungstext = [Text], 
+  Saldo        = NULL
+FROM dbo.BgSpezkontoAbschluss WITH (READUNCOMMITTED)
+WHERE BgSpezkontoID = @BgSpezkontoID
+
+ORDER BY DatumSort DESC, SortKey DESC;</value>
+  </data>
+  <data name="qryBgSpezkonto.SelectStatement" xml:space="preserve">
+    <value>SELECT SSK.*,
+       Saldo                 = dbo.fnBgSpezkonto(SSK.BgSpezkontoID,3,default,default),
+       DatumVonJahr          = year(SSK.DatumVon),
+       DatumVonMonat         = month(SSK.DatumVon),
+       DatumBisJahr          = year(SSK.DatumBis),
+       DatumBisMonat         = month(SSK.DatumBis),
+       GueltigVon            = dbo.fnXKurzMonatJahr(SSK.DatumVon),
+       GueltigBis            = dbo.fnXKurzMonatJahr(SSK.DatumBis),
+       InstitutionName       = INS.Name,
+       BewilligungStatusCode = CASE WHEN SSK.Inaktiv = 0 THEN 5
+                                    WHEN SSK.Inaktiv = 1 AND BUC.FreigegebenePositionenVorhanden  = 1 THEN 9
+                                    ELSE 1
+                               END,
+       ProPerson             = BPA.ProPerson,
+       ProUE                 = BPA.ProUE
+FROM BgSpezkonto            SSK
+  LEFT JOIN BgKostenart     FLK ON FLK.BgKostenartID = SSK.BgKostenartID
+  LEFT JOIN BgPositionsart  BPA ON BPA.BgPositionsartID = SSK.BgPositionsartID
+  LEFT JOIN vwInstitution   INS ON INS.BaInstitutionID = SSK.BaInstitutionID
+  LEFT JOIN (SELECT BPO.BgSpezkontoID, FreigegebenePositionenVorhanden = CASE WHEN COUNT(*) &gt; 0 THEN 1 ELSE 0 END
+             FROM vwBgPosition      BPO
+               INNER JOIN BgBudget  BBG ON BBG.BgBudgetID = BPO.BgBudgetID AND BBG.MasterBudget = 0
+             WHERE BBG.BgBewilligungStatusCode &gt;= 5 -- grün oder gesperrt
+             GROUP BY BPO.BgSpezkontoID) BUC ON BUC.BgSpezkontoID = SSK.BgSpezkontoID
+WHERE SSK.FaLeistungID = {0} AND SSK.BgSpezkontoTypCode = {1}
+  AND ({2} = 0 OR (dbo.fnDateOf(isNull(SSK.DatumBis, getdate())) &gt;= dbo.fnDateOf(getdate()) AND SSK.Inaktiv = 0))
+ORDER BY SSK.DatumVon DESC, SSK.NameSpezkonto</value>
+  </data>
+  <metadata name="qryBaPerson.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryBaPerson.SelectStatement" xml:space="preserve">
+    <value>SELECT BaPersonID = NULL, NameVorname = ''
+UNION ALL
+SELECT PRS.BaPersonID, PRS.NameVorname
+FROM vwPerson   PRS
+  INNER JOIN (SELECT BPR.BaPersonID
+              FROM BgFinanzplan                  BFP
+                INNER JOIN BgFinanzplan_BaPerson BPR ON BPR.BgFinanzplanID = BFP.BgFinanzplanID
+              WHERE BFP.FaLeistungID = {0} AND BPR.IstUnterstuetzt = 1
+              GROUP BY BPR.BaPersonID
+             ) TMP ON TMP.BaPersonID = PRS.BaPersonID</value>
+  </data>
+  <metadata name="qryBgKostenart.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>134, 17</value>
+  </metadata>
+  <data name="qryBgKostenart.SelectStatement" xml:space="preserve">
+    <value>SELECT BKA.*,
+       NrName = BKA.KontoNr + ' ' + BKA.Name
+FROM BgKostenart  BKA
+WHERE EXISTS (SELECT * FROM WhPositionsart
+              WHERE BgKostenartID = BKA.BgKostenartID AND BgKategorieCode = 2
+                AND (EXISTS (SELECT * FROM BgFinanzplan WHERE WhGrundbedarfTypCode = BgPositionsartID AND FaLeistungID = {0})
+                       OR BgGruppeCode BETWEEN 39000 AND 39999 OR {1} = 1))</value>
+  </data>
+</root>

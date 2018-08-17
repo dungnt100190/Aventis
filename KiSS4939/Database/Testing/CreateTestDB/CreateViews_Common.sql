@@ -1,0 +1,13 @@
+﻿{DISPATCHER}
+vwPersonSimple
+vwUser
+vwTmUser
+vwUserSimple
+XViewForeignKeys
+XViewIndex
+FaFallPerson:IFNSE=!ZH
+vwBaKlientensystemPerson
+vwTmBDEZLEUebersicht
+vwIxBDELeistung_BDELeistungsart_AuswDLCode
+vwTmGvGesuch
+vwXConfig_public

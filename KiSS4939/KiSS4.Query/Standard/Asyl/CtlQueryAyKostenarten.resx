@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>/*
+*  DatumVon, DatumBis schränken sowohl Eintrittsdatum (nur jene mit finanz. Unterstz.) 
+*  als auch Budget-Monate ein
+*/
+
+DECLARE @tmp Table(
+  FaLeistungID       INT,
+  BgGruppeCode       INT,
+  BgPositionsartID   INT,
+  Betrag             MONEY,
+  Reduktion          MONEY,
+  BgBudgetID         INT,
+  Buchungstext       VARCHAR(100),
+  Typ                VARCHAR(100),
+  Bemerkung          VARCHAR(6000)
+)
+
+DECLARE @Result Table(
+  Kostengruppe       VARCHAR(100),
+  Text               VARCHAR(100),
+  Betrag             MONEY,
+  BgPositionsartID   INT,
+  BgGruppeCode       INT,
+  Sortkey1           INT,
+  Sortkey2           INT
+)
+
+INSERT INTO @tmp
+SELECT SFP.FaLeistungID, 
+       APT.BgGruppeCode,
+       APT.BgPositionsartID,
+       VBP.Betrag,
+       VBP.Reduktion,
+       BBG.BgBudgetID,
+       VBP.Buchungstext,
+       APT.Name,
+       VBP.Bemerkung
+FROM dbo.FaLeistung                    FAL WITH (READUNCOMMITTED)
+  INNER JOIN dbo.BgFinanzplan          SFP WITH (READUNCOMMITTED) ON SFP.FaLeistungID = FAL.FaLeistungID
+  INNER JOIN dbo.BgFinanzplan_BaPerson FPP WITH (READUNCOMMITTED) ON FPP.BgFinanzplanID = SFP.BgFinanzplanID
+                                      AND FPP.IstUnterstuetzt = 1
+  INNER JOIN dbo.BgBudget              BBG WITH (READUNCOMMITTED) ON BBG.BgFinanzplanID = SFP.BgFinanzplanID
+  INNER JOIN dbo.vwBgPosition          VBP ON VBP.BgBudgetID = BBG.BgBudgetID AND IsNull(VBP.BaPersonID, FAL.BaPersonID) = FPP.BaPersonID
+  INNER JOIN dbo.AyPositionsart        APT ON APT.BgPositionsartID = VBP.BgPositionsartID
+  INNER JOIN dbo.BgKostenart           KTA WITH (READUNCOMMITTED) ON KTA.BgKostenartID = APT.BgKostenartID
+  INNER JOIN dbo.fnAyPersonEinAustritt() PEA ON PEA.FaLeistungID = FAL.FaLeistungID
+                                            AND PEA.BaPersonID = FPP.BaPersonID 
+  LEFT JOIN dbo.FaLeistungArchiv  ARC WITH (READUNCOMMITTED) ON ARC.FaLeistungID = FAL.FaLeistungID
+                                 AND ARC.CheckOut IS NULL
+WHERE FAL.ModulID = 6 AND BBG.Masterbudget = 0 AND BBG.BgBewilligungStatusCode = 5 --(Monatsbudget freigegeben)
+  AND PEA.Eintritt &lt;= {edtDatumBis} and isNull(PEA.Austritt, {edtDatumVon}) &gt;= {edtDatumVon}
+  AND (APT.ProPerson=1 AND FPP.BaPersonID = PEA.BaPersonID OR APT.ProPerson=0)
+  AND (BBG.Jahr &gt; year({edtDatumVon}) OR (BBG.Jahr = year({edtDatumVon}) AND BBG.Monat &gt;= month({edtDatumVon})))
+  AND (BBG.Jahr &lt; year({edtDatumBis}) OR (BBG.Jahr = year({edtDatumBis}) AND BBG.Monat &lt;= month({edtDatumBis})))
+--- AND ({edtStatus} &lt;&gt; 1 OR FAL.DatumBis IS NULL)
+--- AND ({edtStatus} &lt;&gt; 2 OR FAL.DatumBis IS NOT NULL AND ARC.FaLeistungID IS NULL)
+
+--------------------------------------------
+-------- Übersicht alle Fälle
+--------------------------------------------
+SELECT Person                   = MIN(PRS.Name + isNull(', ' + PRS.Vorname,'')),
+       [N.Nr]                   = PRS.NNummer,
+       Status                   = dbo.fnlovColumnListe('Aufenthaltsstatus', MAX(PRS.AuslaenderStatusCode), 'ShortText'),
+       [Grundbedarf / (10)]     = SUM(CASE WHEN BgGruppeCode =   6010       THEN Betrag ELSE $0.00 END), --OR 6060? evtl. hinzufügen
+       [Wohnen / (20)]          = SUM(CASE WHEN BgGruppeCode IN (6090,3206) THEN Betrag ELSE $0.00 END),
+--       [Erwerbsunkosten]      = SUM(CASE WHEN BgGruppeCode =   6060       THEN Betrag ELSE $0.00 END),
+       [Zahnarzt / (30)]        = SUM(CASE WHEN BgGruppeCode =   6030       THEN Betrag ELSE $0.00 END),
+       [Ges.Kosten / (40)]      = SUM(CASE WHEN BgGruppeCode =   6040       THEN Betrag ELSE $0.00 END),
+       [SIL/FKS / (50)]         = SUM(CASE WHEN BgGruppeCode =   6050       THEN Betrag ELSE $0.00 END),
+       [Leist. z.G. BFM / (60)] = SUM(CASE WHEN BgGruppeCode =   6060       THEN Betrag ELSE $0.00 END),
+       [Leist. z.G. AK / (70)]  = SUM(CASE WHEN BgGruppeCode =   6070       THEN Betrag ELSE $0.00 END),
+       [Totalzahlungen]         = SUM(CASE WHEN BgGruppeCode IN(6010,6090,3206,6030,6040,6050) THEN Betrag
+                                           WHEN BgGruppeCode IN(6060,6070) THEN -Betrag
+                                           ELSE $0.00 END),
+       Quellensteuer            = SUM(Reduktion),
+       BaPersonID$              = PRS.BaPersonID
+FROM @tmp                TMP
+  INNER JOIN dbo.FaLeistung  FAL WITH (READUNCOMMITTED) ON FAL.FaLeistungID = TMP.FaLeistungID
+  INNER JOIN dbo.BaPerson    PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = FAL.BaPersonID
+GROUP BY FAL.FaLeistungID, PRS.NNummer, PRS.BaPersonID
+ORDER BY MIN(PRS.Name + isNull(', ' + PRS.Vorname,''))</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="xDocument.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABbSURBVDhPY2AAAmNj4/+4MEgeA4AU//8/EwOLiYn9B2Gc
+        GtLSGP4jY5BikEEYmgjZANIAUgO3CZcGZGdi1YDuJBgfpJE6NmALKZjYqJPIijh8KRYmhzXlEhIEANZ8
+        ev1ASni6AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="ctlGotoFallListe3.BaPersonID" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAB9TeXN0ZW0uVW5pdHlTZXJpYWxpemF0aW9uSG9sZGVyAwAAAARE
+        YXRhCVVuaXR5VHlwZQxBc3NlbWJseU5hbWUBAAEICgIAAAAGAgAAAAAL
+</value>
+  </data>
+  <metadata name="qryListe3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>219, 17</value>
+  </metadata>
+  <data name="ctlGotoFallListe2.BaPersonID" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAB9TeXN0ZW0uVW5pdHlTZXJpYWxpemF0aW9uSG9sZGVyAwAAAARE
+        YXRhCVVuaXR5VHlwZQxBc3NlbWJseU5hbWUBAAEICgIAAAAGAgAAAAAL
+</value>
+  </data>
+  <metadata name="qryListe2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>119, 17</value>
+  </metadata>
+  <data name="edtDatumBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="edtDatumVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+</root>

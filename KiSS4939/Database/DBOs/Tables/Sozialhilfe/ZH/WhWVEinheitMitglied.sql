@@ -1,0 +1,65 @@
+﻿CREATE TABLE [dbo].[WhWVEinheitMitglied](
+	[WhWVEinheitMitgliedID] [int] IDENTITY(1,1) NOT NULL,
+	[WhWVEinheitID] [int] NOT NULL,
+	[BaPersonID] [int] NOT NULL,
+	[BaWVCodeID] [int] NOT NULL,
+	[WhWVEinheitMitgliedTS] [timestamp] NOT NULL,
+ CONSTRAINT [PK_WhWVEinheitMitglied] PRIMARY KEY CLUSTERED 
+(
+	[WhWVEinheitMitgliedID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+/****** Object:  Index [IX_WhWVEinheitMitglied_BaPersonID]    Script Date: 11/23/2011 16:42:18 ******/
+CREATE NONCLUSTERED INDEX [IX_WhWVEinheitMitglied_BaPersonID] ON [dbo].[WhWVEinheitMitglied] 
+(
+	[BaPersonID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO
+
+/****** Object:  Index [IX_WhWVEinheitMitglied_BaWVCodeID]    Script Date: 11/23/2011 16:42:18 ******/
+CREATE NONCLUSTERED INDEX [IX_WhWVEinheitMitglied_BaWVCodeID] ON [dbo].[WhWVEinheitMitglied] 
+(
+	[BaWVCodeID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO
+
+/****** Object:  Index [IX_WhWVEinheitMitglied_Sicherung]    Script Date: 11/23/2011 16:42:18 ******/
+CREATE UNIQUE NONCLUSTERED INDEX [IX_WhWVEinheitMitglied_Sicherung] ON [dbo].[WhWVEinheitMitglied] 
+(
+	[WhWVEinheitID] ASC,
+	[BaPersonID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO
+
+/****** Object:  Index [IX_WhWVEinheitMitglied_WhWVEinheitID]    Script Date: 11/23/2011 16:42:18 ******/
+CREATE NONCLUSTERED INDEX [IX_WhWVEinheitMitglied_WhWVEinheitID] ON [dbo].[WhWVEinheitMitglied] 
+(
+	[WhWVEinheitID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO
+
+/****** Object:  Index [IX_WhWVEinheitMitglied_WhWVEinheitID_BaPersonID]    Script Date: 11/23/2011 16:42:18 ******/
+CREATE UNIQUE NONCLUSTERED INDEX [IX_WhWVEinheitMitglied_WhWVEinheitID_BaPersonID] ON [dbo].[WhWVEinheitMitglied] 
+(
+	[WhWVEinheitID] ASC,
+	[BaPersonID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[WhWVEinheitMitglied]  WITH CHECK ADD  CONSTRAINT [FK_WhWVEinheitMitglied_BaPerson] FOREIGN KEY([BaPersonID])
+REFERENCES [dbo].[BaPerson] ([BaPersonID])
+GO
+ALTER TABLE [dbo].[WhWVEinheitMitglied] CHECK CONSTRAINT [FK_WhWVEinheitMitglied_BaPerson]
+GO
+ALTER TABLE [dbo].[WhWVEinheitMitglied]  WITH CHECK ADD  CONSTRAINT [FK_WhWVEinheitMitglied_BaWVCode] FOREIGN KEY([BaWVCodeID])
+REFERENCES [dbo].[BaWVCode] ([BaWVCodeID])
+GO
+ALTER TABLE [dbo].[WhWVEinheitMitglied] CHECK CONSTRAINT [FK_WhWVEinheitMitglied_BaWVCode]
+GO
+ALTER TABLE [dbo].[WhWVEinheitMitglied]  WITH CHECK ADD  CONSTRAINT [FK_WhWVEinheitMitglied_WhWVEinheit] FOREIGN KEY([WhWVEinheitID])
+REFERENCES [dbo].[WhWVEinheit] ([WhWVEinheitID])
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[WhWVEinheitMitglied] CHECK CONSTRAINT [FK_WhWVEinheitMitglied_WhWVEinheit]

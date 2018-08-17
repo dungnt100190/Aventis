@@ -1,0 +1,11 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys">
+
+    <ResourceDictionary.MergedDictionaries>
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Kiss.v14.1;component/DevExpress.Xpf.PropertyGrid/Kiss/BrushEdit.xaml" />
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Kiss.v14.1;component/DevExpress.Xpf.PropertyGrid/Kiss/CategoryRowControl.xaml" />
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Kiss.v14.1;component/DevExpress.Xpf.PropertyGrid/Kiss/DataRowControl.xaml" />
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Kiss.v14.1;component/DevExpress.Xpf.PropertyGrid/Kiss/PropertyGridView.xaml" />
+        <dxdst:ResourceDictionaryEx Source="/DevExpress.Xpf.Themes.Kiss.v14.1;component/DevExpress.Xpf.PropertyGrid/Kiss/PropertyGridControl.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

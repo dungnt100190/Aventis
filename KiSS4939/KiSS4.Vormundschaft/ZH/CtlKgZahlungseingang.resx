@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryZahlungseingang.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>520, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>57</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="picTitel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAGpJREFUOE+1jgEK
+        ACEIBH26P+8S2lhqPazjBgbBdNM67VZ3j2rthj3grQp1AIseWHo6AJUFy/se0IlGVRlwwj8BOK+iDDjh
+        U0DsyACcl8mL1KtdwIuxxIwRTbyHahHMIWX26wQDmWMswewBIyGEbrEoDawAAAAASUVORK5CYII=
+</value>
+  </data>
+  <metadata name="qryDebitor.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>264, 17</value>
+  </metadata>
+  <data name="qryDebitor.SelectStatement" xml:space="preserve">
+    <value>SELECT *,
+       Konto      = CONVERT(VARCHAR(200), NULL),
+       FaelligAm  = CONVERT(DATETIME, NULL),
+       Debitor    = CONVERT(VARCHAR(200), NULL),
+       ZusatzInfo = CONVERT(VARCHAR(500), NULL),
+       Mandant    = CONVERT(VARCHAR(200), NULL),
+       BaPersonID = CONVERT(INT, NULL)
+FROM dbo.KgPosition WITH(READUNCOMMITTED)
+WHERE 1 = 2;</value>
+  </data>
+  <data name="edtFaelligAm2.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <metadata name="qryMonatsbudget.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>373, 17</value>
+  </metadata>
+  <data name="qryMonatsbudget.SelectStatement" xml:space="preserve">
+    <value>select BDG.KgBudgetID,
+       BDG.Jahr, 
+       BDG.Monat, 
+       BDG.KgBewilligungCode,
+       MonatText  = dbo.fnXMonat(BDG.Monat),
+       EZ         = (select count(*) from dbo.KgPosition WITH (READUNCOMMITTED) 
+                     where  KgBudgetID = BDG.KgBudgetID and
+                            KgPositionsKategorieCode = 2), -- Auszahlung Dritte
+       MasterBewilligungCode = MST.KgBewilligungCode,
+       MasterbudgetID        = MST.KgBudgetID,
+       BDG.FaLeistungID,
+       LEI.DatumBis
+from   dbo.KgBudget BDG WITH (READUNCOMMITTED)
+       inner join dbo.FaLeistung LEI WITH (READUNCOMMITTED) on LEI.FaLeistungID = BDG.FaLeistungID
+       inner join dbo.KgBudget   MST WITH (READUNCOMMITTED) on MST.KgBudgetID = BDG.KgMasterBudgetID
+where  LEI.BaPersonID = {0}
+order by BDG.Jahr, BDG.Monat</value>
+  </data>
+  <data name="edtErfassungDatum2.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <metadata name="qryAusgleichRL.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>133, 17</value>
+  </metadata>
+  <metadata name="qryAusgleich.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="edtDatum.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="qryZahlungseingang.SelectStatement" xml:space="preserve">
+    <value>SELECT ZEI.[KgZahlungseingangID]
+      ,ZEI.[Datum]
+      ,ZEI.[BaPersonID]
+      ,ZEI.[BaInstitutionID]
+      ,ZEI.[Debitor]
+      ,ZEI.[KgKontoID]
+      ,ZEI.[Betrag]
+      ,ZEI.[Mitteilung]
+      ,ZEI.[PscdKontoKlient]
+      ,ZEI.[PscdKontoauszug]
+      ,ZEI.[PscdKontoauszugPos]
+      ,ZEI.[KgZahlungseingangArtCode]
+      ,ZEI.[Ausgeglichen]
+      ,ZEI.[ErstelltUserID]
+      ,ZEI.[ErstelltDatum]
+      ,ZEI.[MutiertUserID]
+      ,ZEI.[MutiertDatum]
+      ,ZEI.[KgZahlungseingangTS],
+       Mandant     = PRS.NameVorname,
+       Adresse     = PRS.Wohnsitz,
+       MT              = (SELECT TOP 1 USR.[User]
+                      FROM [dbo].[vwVmGetMTName] USR
+                      WHERE USR.BaPersonID = ZEI.BaPersonID
+                      ORDER BY CASE WHEN ZEI.Datum BETWEEN ISNULL(USR.DatumVon, '17530101') AND ISNULL(USR.DatumBis, '30001231') THEN 2
+                        ELSE 1 END DESC, USR.DatumVon DESC),
+       DebitorText = DEB.Name,
+       ZusatzInfo  = DEB.AdresseMehrzeilig
+FROM   dbo.KgZahlungseingang       ZEI WITH (READUNCOMMITTED)
+       LEFT JOIN dbo.vwPerson2      PRS ON PRS.BaPersonID      = ZEI.BaPersonID
+       LEFT JOIN dbo.vwInstitution2 DEB ON DEB.BaInstitutionID = ZEI.BaInstitutionID
+WHERE (ZEI.KgZahlungseingangArtCode BETWEEN 300 AND 399 OR 
+       ZEI.KgZahlungseingangArtCode = 100 OR 
+       (ZEI.KgZahlungseingangArtCode IN (10,11) AND ZEI.Betrag &gt;= 0) OR 
+       ZEI.KgZahlungseingangArtCode IS NULL )
+--- AND ZEI.Datum &gt;= {edtDatumVonX}
+--- AND ZEI.Datum &lt;= {edtDatumBisX}
+--- AND ZEI.BaPersonID = {edtBaPersonIDX.LookupID} 
+--- AND ZEI.BaInstitutionID = {edtBaInstitutionIDX.LookupID}
+--- AND ZEI.Betrag &gt;= {edtBetragVonX}
+--- AND ZEI.Betrag &lt;= {edtBetragBisX}
+--- AND ({edtNurAusgeglichenX} = 0 OR ZEI.Ausgeglichen = 0)
+--- AND Mitteilung like '%' + {edtMitteilungX} + '%'
+order by ZEI.Datum</value>
+  </data>
+  <data name="edtDatumBisX.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtDatumVonX.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+</root>

@@ -1,0 +1,280 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:Controls="clr-namespace:Kiss.UI.Controls"
+                    xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"
+                    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+                    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+                    xmlns:kiss="clr-namespace:DevExpress.Xpf.Themes.Kiss;assembly=DevExpress.Xpf.Themes.Kiss.v14.1"
+                    xmlns:themes="http://schemas.devexpress.com/winfx/2008/xaml/editors/themekeys"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib"
+                    xmlns:internal="http://schemas.devexpress.com/winfx/2008/xaml/editors/internal">
+
+    <Style x:Key="KissListBoxItemStyle" TargetType="{x:Type ListBoxItem}">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
+        <Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
+        <Setter Property="Padding" Value="2,2,0,2" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                    <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="true">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="true">
+                            <Setter Property="Background" TargetName="Bd" Value="{DynamicResource brushSelectedBgComboBoxDropDown}" />
+                            <Setter Property="Foreground" Value="White" />
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsSelected" Value="true" />
+                                <Condition Property="Selector.IsSelectionActive" Value="false" />
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" TargetName="Bd" Value="{DynamicResource brushSelectedBgComboBoxDropDown}" />
+                            <Setter Property="Foreground" Value="White" />
+                        </MultiTrigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DropDownListBoxStyle" TargetType="{x:Type ListBox}">
+        <Setter Property="Background" Value="{DynamicResource brushBgComboBoxDropDown}" />
+        <Setter Property="BorderBrush" Value="Blue" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto" />
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
+        <Setter Property="ScrollViewer.CanContentScroll" Value="true" />
+        <Setter Property="ScrollViewer.PanningMode" Value="Both" />
+        <Setter Property="Stylus.IsFlicksEnabled" Value="False" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="ItemContainerStyle" Value="{DynamicResource KissListBoxItemStyle}" />
+        <Setter Property="FontFamily" Value="Arial" />
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="FontWeight" Value="Light" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBox}">
+                    <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="1" SnapsToDevicePixels="true">
+                        <ScrollViewer Focusable="false" Padding="{TemplateBinding Padding}">
+                            <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                        </ScrollViewer>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" TargetName="Bd" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" />
+                        </Trigger>
+                        <Trigger Property="IsGrouping" Value="true">
+                            <Setter Property="ScrollViewer.CanContentScroll" Value="false" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type Controls:KissComboBox}">
+        <Setter Property="FontFamily" Value="Arial" />
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Background" Value="Transparent" />
+        <!--<Setter Property="Padding" Value="1,1" />-->
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="IsTextEditable" Value="True" />
+        <Setter Property="AutoComplete" Value="True" />
+        <Setter Property="ImmediatePopup" Value="True" />
+        <Setter Property="dx:ThemeManager.ThemeName" Value="Kiss" />
+        <Setter Property="Height" Value="24" />
+
+        <Setter Property="EditTemplate">
+            <Setter.Value>
+                <ControlTemplate>
+                    <TextBox x:Name="PART_Editor" Margin="0" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="EditNonEditableTemplate">
+            <Setter.Value>
+                <ControlTemplate>
+                    <TextBox x:Name="PART_Editor" Background="Transparent" BorderThickness="0" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="Validation.ErrorTemplate">
+            <Setter.Value>
+                <ControlTemplate>
+                    <DockPanel LastChildFill="True">
+                        <Border BorderBrush="{DynamicResource brushValidationErrorBorder}" BorderThickness="1">
+                            <AdornedElementPlaceholder />
+                        </Border>
+                    </DockPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="BorderTemplate">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ContentControl}">
+                    <Microsoft_Windows_Themes:ListBoxChrome x:Name="Bd" Margin="0" BorderBrush="{DynamicResource {kiss:KissBrushKey ResourceKey=EditControlBorder}}" BorderThickness="1" Background="{DynamicResource {kiss:KissBrushKey ResourceKey=EditControlBackgroundNormal}}" RenderMouseOver="{TemplateBinding IsMouseOver}" RenderFocused="{TemplateBinding IsKeyboardFocusWithin}" SnapsToDevicePixels="true">
+                        <ContentPresenter />
+                    </Microsoft_Windows_Themes:ListBoxChrome>
+
+                    <ControlTemplate.Triggers>
+                        <DataTrigger Binding="{Binding IsRequired, RelativeSource={RelativeSource FindAncestor, AncestorType=Controls:KissComboBox}}" Value="True">
+                            <Setter Property="Background" TargetName="Bd" Value="{DynamicResource {kiss:KissBrushKey ResourceKey=EditControlBackgroundRequired}}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding IsReadOnly, RelativeSource={RelativeSource FindAncestor, AncestorType=Controls:KissComboBox}}" Value="True">
+                            <Setter Property="Background" TargetName="Bd" Value="{DynamicResource {kiss:KissBrushKey ResourceKey=EditControlBackgroundReadOnly}}" />
+                            <Setter Property="RenderMouseOver" TargetName="Bd" Value="False" />
+                            <Setter Property="RenderFocused" TargetName="Bd" Value="False" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding IsAuthorized, RelativeSource={RelativeSource FindAncestor, AncestorType=Controls:KissComboBox}}" Value="False">
+                            <Setter Property="Background" TargetName="Bd" Value="{DynamicResource {kiss:KissBrushKey ResourceKey=EditControlBackgroundReadOnly}}" />
+                            <Setter Property="RenderMouseOver" TargetName="Bd" Value="False" />
+                            <Setter Property="RenderFocused" TargetName="Bd" Value="False" />
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Setter Property="PopupContentTemplate">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ContentControl}">
+                    <Grid Height="Auto" SnapsToDevicePixels="True" Width="Auto">
+                        <Grid.Resources>
+                            <internal:PopupListBoxDisplayMemberPathConverter x:Key="DisplayMemberPathConverter" />
+                        </Grid.Resources>
+                        <dxe:PopupListBox x:Name="PART_Content"
+                                          BorderBrush="{x:Null}"
+                                          BorderThickness="0"
+                                          FocusVisualStyle="{x:Null}"
+                                          Focusable="False"
+                                          dx:FocusHelper2.Focusable="False"
+                                          HorizontalContentAlignment="{Binding Tag.HorizontalContentAlignment, RelativeSource={RelativeSource TemplatedParent}}"
+                                          ItemsPanel="{Binding Tag.ItemsPanel, RelativeSource={RelativeSource TemplatedParent}}"
+                                          ItemTemplate="{Binding Tag.ItemTemplate, RelativeSource={RelativeSource TemplatedParent}}"
+                                          Style="{DynamicResource DropDownListBoxStyle}"
+                                          VerticalContentAlignment="{Binding Tag.VerticalContentAlignment, RelativeSource={RelativeSource TemplatedParent}}">
+                            <dxe:PopupListBox.DisplayMemberPath>
+                                <Binding Path="Tag" RelativeSource="{RelativeSource TemplatedParent}">
+                                    <Binding.Converter>
+                                        <internal:PopupListBoxDisplayMemberPathConverter />
+                                    </Binding.Converter>
+                                </Binding>
+                            </dxe:PopupListBox.DisplayMemberPath>
+                        </dxe:PopupListBox>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Copied from Kiss.UI.Theme\DevExpress.Xpf.Core\DevExpress.Xpf.Core\Editors\Themes\Office2007Generic\ButtonEdit.xaml, because of the border template above (different margins) -->
+    <ControlTemplate TargetType="{x:Type ButtonBase}" x:Key="{themes:ButtonsThemeKey ResourceKey=ButtonTemplate, ThemeName=Kiss}">
+        <Grid Margin="0,0,0,0" Width="Auto" Height="Auto" SnapsToDevicePixels="True" Background="#00FFFFFF">
+            <Grid.Resources>
+                <Style x:Key="PressedElementStyle" TargetType="{x:Type ContentControl}">
+                    <Setter Property="dx:FocusHelper2.Focusable" Value="False" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type ContentControl}">
+                                <!--BEGIN KiSS custom -->
+                                <Border Margin="0" Padding="1" Background="{DynamicResource {kiss:KissBrushKey ResourceKey=EditButtonBorderHover}}">
+                                    <Border Background="{DynamicResource {kiss:KissBrushKey ResourceKey=EditButtonBackgroundPressed}}" />
+                                </Border>
+                                <!--END KiSS custom -->
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Grid.Resources>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="hover" Storyboard.TargetProperty="Opacity" To="1" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="pressed1" Storyboard.TargetProperty="Opacity" To="1" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <Storyboard>
+                            <DoubleAnimation Duration="0" Storyboard.TargetName="PART_Glyph" Storyboard.TargetProperty="Opacity" To="0.25" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="CheckStates">
+                    <VisualState x:Name="Checked">
+                        <Storyboard>
+                            <ObjectAnimationUsingKeyFrames Duration="0" Storyboard.TargetName="pressed2" Storyboard.TargetProperty="Visibility">
+                                <ObjectAnimationUsingKeyFrames.KeyFrames>
+                                    <DiscreteObjectKeyFrame KeyTime="0">
+                                        <DiscreteObjectKeyFrame.Value>
+                                            <Visibility>Visible</Visibility>
+                                        </DiscreteObjectKeyFrame.Value>
+                                    </DiscreteObjectKeyFrame>
+                                </ObjectAnimationUsingKeyFrames.KeyFrames>
+                            </ObjectAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Unchecked" />
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto">
+                    <!--BEGIN WPF-->
+                    <ColumnDefinition.SharedSizeGroup>
+                        <system:String>ComboBoxButton</system:String>
+                    </ColumnDefinition.SharedSizeGroup>
+                    <!--END WPF-->
+                </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <!--BEGIN KiSS custom -->
+            <Border Margin="0" x:Name="normal" Grid.ColumnSpan="1" Background="{DynamicResource {kiss:KissBrushKey ResourceKey=ButtonBackground}}" />
+            <Border Margin="0" x:Name="hover" Opacity="0" Grid.ColumnSpan="1" CornerRadius="0,0,0,0" Padding="1" Background="{DynamicResource {kiss:KissBrushKey ResourceKey=EditButtonBorderHover}}">
+                <Border Padding="1" Background="{DynamicResource {kiss:KissBrushKey ResourceKey=EditButtonBackgroundHover}}" />
+            </Border>
+            <!--END KiSS custom -->
+            <ContentControl x:Name="pressed1" Style="{StaticResource PressedElementStyle}" Opacity="0" />
+            <ContentControl x:Name="pressed2" Style="{StaticResource PressedElementStyle}" Visibility="Collapsed" />
+            <Grid HorizontalAlignment="Center" Margin="0,0,0,0" x:Name="arrow" VerticalAlignment="Center" Width="Auto" Height="Auto" SnapsToDevicePixels="True" Grid.ColumnSpan="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.708*" />
+                    <ColumnDefinition Width="0.292*" />
+                </Grid.ColumnDefinitions>
+                <!--BEGIN WPF-->
+                <ContentPresenter Grid.ColumnSpan="2" x:Name="PART_Glyph" Style="{DynamicResource {themes:ButtonsThemeKey ResourceKey=ButtonInfoContentStyle}}" />
+                <!--END WPF-->
+                <!--ONLY SL
+                <ContentPresenter Grid.ColumnSpan="2" x:Name="PART_Glyph" Style="{Binding Path=DataContext.GlyphKind, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource ButtonEditButtonGlyphEnumToObjectConverter}}"/>
+                ONLY SL-->
+            </Grid>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <DataTrigger Binding="{Binding Path=GlyphKind}" Value="User">
+                <Setter Property="Style" Value="{DynamicResource {themes:ButtonsThemeKey ResourceKey=UserButtonInfoContentStyle}}" TargetName="PART_Glyph" />
+            </DataTrigger>
+            <DataTrigger Binding="{Binding Path=GlyphKind}" Value="None">
+                <Setter Property="Style" Value="{DynamicResource {themes:ButtonsThemeKey ResourceKey=NoneButtonInfoContentStyle}}" TargetName="PART_Glyph" />
+            </DataTrigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <DataTemplate x:Key="{themes:ButtonsThemeKey ResourceKey=DropDownGlyph, ThemeName=Kiss}">
+        <Button Style="{DynamicResource {Controls:ControlResourceKey ResourceKey=InlineButtonStyle}}" Width="16" Height="20">
+            <Path x:Name="Arrow" Data="{DynamicResource DownArrowGeometry}" Fill="Black" HorizontalAlignment="Center" Margin="0,1,0,0" VerticalAlignment="Center" />
+        </Button>
+    </DataTemplate>
+</ResourceDictionary>

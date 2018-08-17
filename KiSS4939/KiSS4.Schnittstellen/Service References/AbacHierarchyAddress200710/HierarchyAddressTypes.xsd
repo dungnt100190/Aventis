@@ -1,0 +1,1793 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:act="http://www.abacus.ch/abaconnect/2007.10/core/AbaConnectTypes" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:hierarchyaddresstypes="http://www.abacus.ch/abaconnect/2007.10/adre/HierarchyAddressTypes" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.abacus.ch/abaconnect/2007.10/adre/HierarchyAddressTypes" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="AbaConnectTypes.xsd" namespace="http://www.abacus.ch/abaconnect/2007.10/core/AbaConnectTypes" />
+  <xs:import schemaLocation="xmlmime.xsd" namespace="http://www.w3.org/2005/05/xmlmime" />
+  <xs:element name="HierarchyAddressAbaDefault" type="hierarchyaddresstypes:HierarchyAddressAbaDefaultType">
+    <xs:annotation>
+      <xs:documentation>HierarchyAddress-: </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="HierarchyAddressAbaDefaultType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddressData" type="hierarchyaddresstypes:AddressDataComType" />
+      <xs:element minOccurs="0" name="AdditionalData" type="act:ObjectDataType" />
+      <xs:element minOccurs="0" name="Attachment" type="hierarchyaddresstypes:AttachmentType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddressDataComType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsWorX" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Worx address</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="City" type="hierarchyaddresstypes:CitySimType">
+        <xs:annotation>
+          <xs:documentation>Location</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="SalutationNumber" type="hierarchyaddresstypes:SalutationNumberSimType">
+        <xs:annotation>
+          <xs:documentation>Title no.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo18" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 18</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="InfoField4" type="hierarchyaddresstypes:InfoField4SimType">
+        <xs:annotation>
+          <xs:documentation>Infofield 4</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Phone1" type="hierarchyaddresstypes:Phone1SimType">
+        <xs:annotation>
+          <xs:documentation>Telephone 1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Mobile" type="hierarchyaddresstypes:MobileSimType">
+        <xs:annotation>
+          <xs:documentation>Mobile</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo21" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 21</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo28" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 28</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IsEPay" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>EPay address</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Note" type="hierarchyaddresstypes:NoteSimType">
+        <xs:annotation>
+          <xs:documentation>Note pad</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IsSCMAddress" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Address used by SCMM</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo11" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 11</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Phone2" type="hierarchyaddresstypes:Phone2SimType">
+        <xs:annotation>
+          <xs:documentation>Telephone 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="State" type="hierarchyaddresstypes:StateSimType">
+        <xs:annotation>
+          <xs:documentation>Country</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo13" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 13</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ModificationDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Mutation date</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FreeDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Free date</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Number1" type="hierarchyaddresstypes:Number1SimType">
+        <xs:annotation>
+          <xs:documentation>Number 1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Code3" type="hierarchyaddresstypes:Code3SimType">
+        <xs:annotation>
+          <xs:documentation>Code 3</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CodeName" type="hierarchyaddresstypes:CodeNameSimType">
+        <xs:annotation>
+          <xs:documentation>Codename</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Date2" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Date 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo22" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 22</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="SalutationName" type="hierarchyaddresstypes:SalutationNameSimType">
+        <xs:annotation>
+          <xs:documentation>Salutation name</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo4" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 4</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IsAbaShop" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>AbaShop address</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Code2" type="hierarchyaddresstypes:Code2SimType">
+        <xs:annotation>
+          <xs:documentation>Code 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Supplement" type="hierarchyaddresstypes:SupplementSimType">
+        <xs:annotation>
+          <xs:documentation>Additional</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo20" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 20</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo29" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 29</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Number3" type="hierarchyaddresstypes:Number3SimType">
+        <xs:annotation>
+          <xs:documentation>Number 3</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo10" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 10</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IsPayrollLight" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>PayrollLight address</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo2" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo26" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 26</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="EntryDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Entry date</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo7" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 7</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IsExternal1" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>External1 address</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="PostRoute" type="hierarchyaddresstypes:PostRouteSimType">
+        <xs:annotation>
+          <xs:documentation>Post route</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Website" type="hierarchyaddresstypes:WebsiteSimType">
+        <xs:annotation>
+          <xs:documentation>WWW</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo1" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Number2" type="hierarchyaddresstypes:Number2SimType">
+        <xs:annotation>
+          <xs:documentation>Number 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo23" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 23</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FreeField1" type="hierarchyaddresstypes:FreeField1SimType">
+        <xs:annotation>
+          <xs:documentation>Free 1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Code4" type="hierarchyaddresstypes:Code4SimType">
+        <xs:annotation>
+          <xs:documentation>Code 4</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Line4" type="hierarchyaddresstypes:Line4SimType">
+        <xs:annotation>
+          <xs:documentation>Line 4</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FreeField2" type="hierarchyaddresstypes:FreeField2SimType">
+        <xs:annotation>
+          <xs:documentation>Free 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo3" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 3</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo25" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 25</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LastName" type="hierarchyaddresstypes:LastNameSimType">
+        <xs:annotation>
+          <xs:documentation>Last name</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Date1" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Date 1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Text" type="hierarchyaddresstypes:TextSimType">
+        <xs:annotation>
+          <xs:documentation>Text</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo27" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 27</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IsDebtor" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Debtor</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Line3" type="hierarchyaddresstypes:Line3SimType">
+        <xs:annotation>
+          <xs:documentation>Line 3</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo5" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 5</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ModifiedBy" type="hierarchyaddresstypes:ModifiedBySimType">
+        <xs:annotation>
+          <xs:documentation>Modified by</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo9" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 9</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IsProject" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Project address</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Fax" type="hierarchyaddresstypes:FaxSimType">
+        <xs:annotation>
+          <xs:documentation>Fax</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FirstName" type="hierarchyaddresstypes:FirstNameSimType">
+        <xs:annotation>
+          <xs:documentation>First name</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TextField2" type="hierarchyaddresstypes:TextField2SimType">
+        <xs:annotation>
+          <xs:documentation>Text field 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Code1" type="hierarchyaddresstypes:Code1SimType">
+        <xs:annotation>
+          <xs:documentation>Code 1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo24" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 24</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TextField1" type="hierarchyaddresstypes:TextField1SimType">
+        <xs:annotation>
+          <xs:documentation>Text field 1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="InfoField5" type="hierarchyaddresstypes:InfoField5SimType">
+        <xs:annotation>
+          <xs:documentation>Infofield 5</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo16" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 16</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo30" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 30</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TextField4" type="hierarchyaddresstypes:TextField4SimType">
+        <xs:annotation>
+          <xs:documentation>Text field 4</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IsAccountPayable" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Vendor</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Number4" type="hierarchyaddresstypes:Number4SimType">
+        <xs:annotation>
+          <xs:documentation>Number 4</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TextField3" type="hierarchyaddresstypes:TextField3SimType">
+        <xs:annotation>
+          <xs:documentation>Text field 3</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo6" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 6</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Country" type="hierarchyaddresstypes:CountrySimType">
+        <xs:annotation>
+          <xs:documentation>Country</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo17" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 17</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Title" type="hierarchyaddresstypes:TitleSimType">
+        <xs:annotation>
+          <xs:documentation>Title</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="EnteredBy" type="hierarchyaddresstypes:EnteredBySimType">
+        <xs:annotation>
+          <xs:documentation>Entered by</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="InfoField2" type="hierarchyaddresstypes:InfoField2SimType">
+        <xs:annotation>
+          <xs:documentation>Info field 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IsHumanResourcesAddress" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>HR address</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo19" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 19</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="InfoField1" type="hierarchyaddresstypes:InfoField1SimType">
+        <xs:annotation>
+          <xs:documentation>Info field 1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo12" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 12</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Language" type="hierarchyaddresstypes:LanguageSimType">
+        <xs:annotation>
+          <xs:documentation>Language</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IsPayrollAddress" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Payroll address</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IsExternal3" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>External3 address</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IndustryCode" type="hierarchyaddresstypes:IndustryCodeSimType">
+        <xs:annotation>
+          <xs:documentation>Industry</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ZIP" type="hierarchyaddresstypes:ZIPSimType">
+        <xs:annotation>
+          <xs:documentation>Postcode</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Line1" type="hierarchyaddresstypes:Line1SimType">
+        <xs:annotation>
+          <xs:documentation>Line 1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo8" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 8</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Line2" type="hierarchyaddresstypes:Line2SimType">
+        <xs:annotation>
+          <xs:documentation>Line 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AddressNumber" type="hierarchyaddresstypes:AddressNumberSimType">
+        <xs:annotation>
+          <xs:documentation>AddressNo.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IsOrderProcessingCustomer" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Order customer</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IsInventory" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Inventory</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="InfoField6" type="hierarchyaddresstypes:InfoField6SimType">
+        <xs:annotation>
+          <xs:documentation>Infofield 6</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IsGeneralLedgerAddress" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>G/L address</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="NumberOfContacts" type="hierarchyaddresstypes:NumberOfContactsSimType">
+        <xs:annotation>
+          <xs:documentation>Number contacts</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Email" type="hierarchyaddresstypes:EmailSimType">
+        <xs:annotation>
+          <xs:documentation>E-mail</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo15" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 15</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="InfoField3" type="hierarchyaddresstypes:InfoField3SimType">
+        <xs:annotation>
+          <xs:documentation>Infofield 3</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IsExternal2" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>External2 address</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="YesNo14" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>YesNo 14</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="NameCodeAvailable" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Name code available</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Inactive" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Address inactive</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Activity" type="hierarchyaddresstypes:ActivityComType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Contact" type="hierarchyaddresstypes:ContactComType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Salutation" type="hierarchyaddresstypes:SalutationComType1" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Industry" type="hierarchyaddresstypes:IndustryComType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Relation" type="hierarchyaddresstypes:RelationComType" />
+      <xs:element minOccurs="0" name="ExtendedFields" type="act:ObjectDataType" />
+    </xs:sequence>
+    <xs:attribute name="mode" type="xs:string" use="optional" />
+  </xs:complexType>
+  <xs:simpleType name="CitySimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SalutationNumberSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="InfoField4SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="12" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Phone1SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MobileSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NoteSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="4064" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Phone2SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StateSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Number1SimType">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="8" />
+      <xs:fractionDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Code3SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CodeNameSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="16" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SalutationNameSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Code2SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SupplementSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Number3SimType">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="8" />
+      <xs:fractionDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PostRouteSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="WebsiteSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="65" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Number2SimType">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="8" />
+      <xs:fractionDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FreeField1SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Code4SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Line4SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FreeField2SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LastNameSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TextSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="80" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Line3SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ModifiedBySimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FaxSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FirstNameSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TextField2SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Code1SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TextField1SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="InfoField5SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="12" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TextField4SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Number4SimType">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="8" />
+      <xs:fractionDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TextField3SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CountrySimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TitleSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EnteredBySimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="InfoField2SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="12" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="InfoField1SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="12" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LanguageSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="IndustryCodeSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ZIPSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="15" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Line1SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Line2SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AddressNumberSimType">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="InfoField6SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="12" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NumberOfContactsSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EmailSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="65" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="InfoField3SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="12" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ActivityComType">
+    <xs:sequence>
+      <xs:element name="EmployeeInitials" type="hierarchyaddresstypes:EmployeeInitialsSimType">
+        <xs:annotation>
+          <xs:documentation>Employee</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Text" type="hierarchyaddresstypes:TextSimType1">
+        <xs:annotation>
+          <xs:documentation>Akt-Bemerkung</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Priority" type="hierarchyaddresstypes:PrioritySimType">
+        <xs:annotation>
+          <xs:documentation>Priority</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CreditAdviceNumber" type="hierarchyaddresstypes:CreditAdviceNumberSimType">
+        <xs:annotation>
+          <xs:documentation>Gutschrift-Nummer</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AdditionalExpenses" type="hierarchyaddresstypes:AdditionalExpensesSimType">
+        <xs:annotation>
+          <xs:documentation>Zusatzkosten</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="DocumentReference" type="hierarchyaddresstypes:DocumentReferenceSimType">
+        <xs:annotation>
+          <xs:documentation>Document</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Note" type="hierarchyaddresstypes:NoteSimType1">
+        <xs:annotation>
+          <xs:documentation>Activity note</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CompletionDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Activity done</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="EntryDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Activity documented</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="EmployeeNumber" type="hierarchyaddresstypes:EmployeeNumberSimType">
+        <xs:annotation>
+          <xs:documentation>Mitarbeiter-Nummer</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Quantity" type="hierarchyaddresstypes:QuantitySimType">
+        <xs:annotation>
+          <xs:documentation>Menge</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ContactNumber" type="hierarchyaddresstypes:ContactNumberSimType">
+        <xs:annotation>
+          <xs:documentation>Act contact no.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AddressNumber" type="hierarchyaddresstypes:AddressNumberSimType1">
+        <xs:annotation>
+          <xs:documentation>Act address no.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ModificationDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Activity modified</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="InvoiceDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Act invoice date</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="StartDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Start date</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FreeDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Freies Datum</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Number1" type="hierarchyaddresstypes:Number1SimType1">
+        <xs:annotation>
+          <xs:documentation>Zahl 1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Number2" type="hierarchyaddresstypes:Number2SimType1">
+        <xs:annotation>
+          <xs:documentation>Zahl 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DossierNumber" type="hierarchyaddresstypes:DossierNumberSimType">
+        <xs:annotation>
+          <xs:documentation>Dossier-GUID</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ModificationUser" type="hierarchyaddresstypes:ModificationUserSimType">
+        <xs:annotation>
+          <xs:documentation>Mutations-Benutzer</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Amount" type="hierarchyaddresstypes:AmountSimType">
+        <xs:annotation>
+          <xs:documentation>Betrag</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="PlanDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Planning date</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ActivityTypeId" type="hierarchyaddresstypes:ActivityTypeIdSimType">
+        <xs:annotation>
+          <xs:documentation>Act type</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Done" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Done</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="ActivityType" type="hierarchyaddresstypes:ActivityTypeComType" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Responsible" type="hierarchyaddresstypes:ResponsibleComType" />
+      <xs:element minOccurs="0" name="ExtendedFields" type="act:ObjectDataType" />
+    </xs:sequence>
+    <xs:attribute name="mode" type="xs:string" use="optional" />
+  </xs:complexType>
+  <xs:simpleType name="EmployeeInitialsSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="6" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TextSimType1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="80" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PrioritySimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CreditAdviceNumberSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AdditionalExpensesSimType">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="12" />
+      <xs:fractionDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DocumentReferenceSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="128" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NoteSimType1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="4096" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EmployeeNumberSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="QuantitySimType">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="8" />
+      <xs:fractionDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ContactNumberSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AddressNumberSimType1">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Number1SimType1">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="12" />
+      <xs:fractionDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Number2SimType1">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="12" />
+      <xs:fractionDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DossierNumberSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="26" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ModificationUserSimType">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="2" />
+      <xs:fractionDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AmountSimType">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="12" />
+      <xs:fractionDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ActivityTypeIdSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="6" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ActivityTypeComType">
+    <xs:sequence>
+      <xs:element name="Identifier" type="hierarchyaddresstypes:IdentifierSimType">
+        <xs:annotation>
+          <xs:documentation>Identifier</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Designation" type="hierarchyaddresstypes:DesignationSimType">
+        <xs:annotation>
+          <xs:documentation>Designation</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="PlannedDays" type="hierarchyaddresstypes:PlannedDaysSimType">
+        <xs:annotation>
+          <xs:documentation>Planned days</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Amount" type="hierarchyaddresstypes:AmountSimType1">
+        <xs:annotation>
+          <xs:documentation>Amount</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Priority" type="hierarchyaddresstypes:PrioritySimType1">
+        <xs:annotation>
+          <xs:documentation>Priority</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Expense" type="hierarchyaddresstypes:ExpenseSimType">
+        <xs:annotation>
+          <xs:documentation>Expenditure</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Quantity" type="hierarchyaddresstypes:QuantitySimType1">
+        <xs:annotation>
+          <xs:documentation>Quantity</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Delete" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Delete</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="VariableTerm" type="hierarchyaddresstypes:VariableTermSimType">
+        <xs:annotation>
+          <xs:documentation>Variable term</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ArticleNumber" type="hierarchyaddresstypes:ArticleNumberSimType">
+        <xs:annotation>
+          <xs:documentation>Article no</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AutoCompleted" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Automatically set to 'settled'</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AutoInvoiced" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Automatically set to 'invoiced'</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="mode" type="xs:string" use="optional" />
+  </xs:complexType>
+  <xs:simpleType name="IdentifierSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="6" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DesignationSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PlannedDaysSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AmountSimType1">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="12" />
+      <xs:fractionDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PrioritySimType1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ExpenseSimType">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="12" />
+      <xs:fractionDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="QuantitySimType1">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="8" />
+      <xs:fractionDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="VariableTermSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ArticleNumberSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="16" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ResponsibleComType">
+    <xs:sequence>
+      <xs:element name="Number" type="hierarchyaddresstypes:NumberSimType">
+        <xs:annotation>
+          <xs:documentation>Number</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ShortName" type="hierarchyaddresstypes:ShortNameSimType">
+        <xs:annotation>
+          <xs:documentation>Shortname</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Name" type="hierarchyaddresstypes:NameSimType">
+        <xs:annotation>
+          <xs:documentation>Name</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FirstName" type="hierarchyaddresstypes:FirstNameSimType1">
+        <xs:annotation>
+          <xs:documentation>Firstname</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Department" type="hierarchyaddresstypes:DepartmentSimType">
+        <xs:annotation>
+          <xs:documentation>Department</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="mode" type="xs:string" use="optional" />
+  </xs:complexType>
+  <xs:simpleType name="NumberSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ShortNameSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NameSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FirstNameSimType1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="15" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DepartmentSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ContactComType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FreeSwitch1" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Freie Zuständigkeit 1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Text" type="hierarchyaddresstypes:TextSimType2">
+        <xs:annotation>
+          <xs:documentation>Contact remark</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="SalutationNumber" type="hierarchyaddresstypes:SalutationNumberSimType1">
+        <xs:annotation>
+          <xs:documentation>Contact salutation number</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Priority" type="hierarchyaddresstypes:PrioritySimType2">
+        <xs:annotation>
+          <xs:documentation>Contact priority</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Phone1" type="hierarchyaddresstypes:Phone1SimType1">
+        <xs:annotation>
+          <xs:documentation>Kontakt-Telefon</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="EntryUser" type="hierarchyaddresstypes:EntryUserSimType">
+        <xs:annotation>
+          <xs:documentation>Erfassungs-Benutzer</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Fax" type="hierarchyaddresstypes:FaxSimType1">
+        <xs:annotation>
+          <xs:documentation>Kontakt-Telefax</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Mobile" type="hierarchyaddresstypes:MobileSimType1">
+        <xs:annotation>
+          <xs:documentation>Kontakt-Natel</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FirstName" type="hierarchyaddresstypes:FirstNameSimType2">
+        <xs:annotation>
+          <xs:documentation>Contact first name</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Note" type="hierarchyaddresstypes:NoteSimType2">
+        <xs:annotation>
+          <xs:documentation>Note pad</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Phone2" type="hierarchyaddresstypes:Phone2SimType1">
+        <xs:annotation>
+          <xs:documentation>Kontakt-Telefon 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="EntryDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Contact documented</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Function" type="hierarchyaddresstypes:FunctionSimType">
+        <xs:annotation>
+          <xs:documentation>Contact function</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Name" type="hierarchyaddresstypes:NameSimType1">
+        <xs:annotation>
+          <xs:documentation>Contact name</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Department" type="hierarchyaddresstypes:DepartmentSimType1">
+        <xs:annotation>
+          <xs:documentation>Department</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Initials" type="hierarchyaddresstypes:InitialsSimType">
+        <xs:annotation>
+          <xs:documentation>Contact initials</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FreeSwitch4" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Freie Zuständigkeit 4</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Website" type="hierarchyaddresstypes:WebsiteSimType1">
+        <xs:annotation>
+          <xs:documentation>Kontakt-WWW</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="AddressNumber" type="hierarchyaddresstypes:AddressNumberSimType2">
+        <xs:annotation>
+          <xs:documentation>Address number</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ModificationDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Contact modified</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FreeDate" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Geburtstag</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FreeSwitch2" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Freie Zuständigkeit 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ModificationUser" type="hierarchyaddresstypes:ModificationUserSimType1">
+        <xs:annotation>
+          <xs:documentation>Mutations-Benutzer</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Email" type="hierarchyaddresstypes:EmailSimType1">
+        <xs:annotation>
+          <xs:documentation>Kontakt-E-Mail</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FreeField1" type="hierarchyaddresstypes:FreeField1SimType1">
+        <xs:annotation>
+          <xs:documentation>Kontakt-Selektion 1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FreeSwitch3" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Freie Zuständigkeit 3</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Number" type="hierarchyaddresstypes:NumberSimType1">
+        <xs:annotation>
+          <xs:documentation>Contact number</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FreeField2" type="hierarchyaddresstypes:FreeField2SimType1">
+        <xs:annotation>
+          <xs:documentation>Kontakt-Selektion 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Title" type="hierarchyaddresstypes:TitleSimType1">
+        <xs:annotation>
+          <xs:documentation>Contact title</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="SalutationName" type="hierarchyaddresstypes:SalutationNameSimType1">
+        <xs:annotation>
+          <xs:documentation>Contact salutation name</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Salutation" type="hierarchyaddresstypes:SalutationComType" />
+      <xs:element minOccurs="0" name="ExtendedFields" type="act:ObjectDataType" />
+    </xs:sequence>
+    <xs:attribute name="mode" type="xs:string" use="optional" />
+  </xs:complexType>
+  <xs:simpleType name="TextSimType2">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="80" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SalutationNumberSimType1">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PrioritySimType2">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Phone1SimType1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EntryUserSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FaxSimType1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="MobileSimType1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FirstNameSimType2">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NoteSimType2">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="4064" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Phone2SimType1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FunctionSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NameSimType1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DepartmentSimType1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="InitialsSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="WebsiteSimType1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="65" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AddressNumberSimType2">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ModificationUserSimType1">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EmailSimType1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="65" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FreeField1SimType1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NumberSimType1">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FreeField2SimType1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="3" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TitleSimType1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SalutationNameSimType1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="SalutationComType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Number" type="hierarchyaddresstypes:NumberSimType2">
+        <xs:annotation>
+          <xs:documentation>Salutation number</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Used" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Used</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Title" type="hierarchyaddresstypes:TitleSimType2">
+        <xs:annotation>
+          <xs:documentation>Salutation</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="SalutationPhrase" type="hierarchyaddresstypes:SalutationPhraseSimType">
+        <xs:annotation>
+          <xs:documentation>Salutation text</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="mode" type="xs:string" use="optional" />
+  </xs:complexType>
+  <xs:simpleType name="NumberSimType2">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TitleSimType2">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SalutationPhraseSimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="SalutationComType1">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Number" type="hierarchyaddresstypes:NumberSimType3">
+        <xs:annotation>
+          <xs:documentation>Salutation number</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Used" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Used</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Title" type="hierarchyaddresstypes:TitleSimType3">
+        <xs:annotation>
+          <xs:documentation>Salutation</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="SalutationPhrase" type="hierarchyaddresstypes:SalutationPhraseSimType1">
+        <xs:annotation>
+          <xs:documentation>Salutation text</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="mode" type="xs:string" use="optional" />
+  </xs:complexType>
+  <xs:simpleType name="NumberSimType3">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TitleSimType3">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="SalutationPhraseSimType1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="IndustryComType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" type="hierarchyaddresstypes:AmountSimType2">
+        <xs:annotation>
+          <xs:documentation>Branch amount</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FreeNumber2" type="hierarchyaddresstypes:FreeNumber2SimType">
+        <xs:annotation>
+          <xs:documentation>Free2N</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FreeDate2" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Free2D</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Designation" type="hierarchyaddresstypes:DesignationSimType1">
+        <xs:annotation>
+          <xs:documentation>Branch designation</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Code" type="hierarchyaddresstypes:CodeSimType">
+        <xs:annotation>
+          <xs:documentation>Branch code</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FreeDate1" type="xs:date">
+        <xs:annotation>
+          <xs:documentation>Free1D</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FreeText1" type="hierarchyaddresstypes:FreeText1SimType">
+        <xs:annotation>
+          <xs:documentation>Free1A</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FreiText2" type="hierarchyaddresstypes:FreiText2SimType">
+        <xs:annotation>
+          <xs:documentation>Free2A</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FreeNumber1" type="hierarchyaddresstypes:FreeNumber1SimType">
+        <xs:annotation>
+          <xs:documentation>Free1N</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="mode" type="xs:string" use="optional" />
+  </xs:complexType>
+  <xs:simpleType name="AmountSimType2">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="12" />
+      <xs:fractionDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FreeNumber2SimType">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="12" />
+      <xs:fractionDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DesignationSimType1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="30" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CodeSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FreeText1SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FreiText2SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FreeNumber1SimType">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="12" />
+      <xs:fractionDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="RelationComType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Responsible" type="hierarchyaddresstypes:ResponsibleComType1" />
+      <xs:element name="Type" type="hierarchyaddresstypes:TypeSimType">
+        <xs:annotation>
+          <xs:documentation>Type</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="EmployeeNumber" type="hierarchyaddresstypes:EmployeeNumberSimType1">
+        <xs:annotation>
+          <xs:documentation>Employee</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AddressNumber" type="hierarchyaddresstypes:AddressNumberSimType3">
+        <xs:annotation>
+          <xs:documentation>Address</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ContactNumber" type="hierarchyaddresstypes:ContactNumberSimType1">
+        <xs:annotation>
+          <xs:documentation>Contact</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FreeNumber1" type="hierarchyaddresstypes:FreeNumber1SimType1">
+        <xs:annotation>
+          <xs:documentation>Free Num 1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FreeNumber2" type="hierarchyaddresstypes:FreeNumber2SimType1">
+        <xs:annotation>
+          <xs:documentation>Free Num 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FreeText1" type="hierarchyaddresstypes:FreeText1SimType1">
+        <xs:annotation>
+          <xs:documentation>Free Text 1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FreeText2" type="hierarchyaddresstypes:FreeText2SimType">
+        <xs:annotation>
+          <xs:documentation>Free Text 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FreeSwitch1" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Free Y/N 1</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FreeSwitch2" type="xs:boolean">
+        <xs:annotation>
+          <xs:documentation>Free Y/N 2</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="mode" type="xs:string" use="optional" />
+  </xs:complexType>
+  <xs:complexType name="ResponsibleComType1">
+    <xs:sequence>
+      <xs:element name="Number" type="hierarchyaddresstypes:NumberSimType4">
+        <xs:annotation>
+          <xs:documentation>Number</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ShortName" type="hierarchyaddresstypes:ShortNameSimType1">
+        <xs:annotation>
+          <xs:documentation>Shortname</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Name" type="hierarchyaddresstypes:NameSimType2">
+        <xs:annotation>
+          <xs:documentation>Name</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FirstName" type="hierarchyaddresstypes:FirstNameSimType3">
+        <xs:annotation>
+          <xs:documentation>Firstname</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Department" type="hierarchyaddresstypes:DepartmentSimType2">
+        <xs:annotation>
+          <xs:documentation>Department</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="mode" type="xs:string" use="optional" />
+  </xs:complexType>
+  <xs:simpleType name="NumberSimType4">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ShortNameSimType1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NameSimType2">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FirstNameSimType3">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="15" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DepartmentSimType2">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="20" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TypeSimType">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EmployeeNumberSimType1">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="AddressNumberSimType3">
+    <xs:restriction base="xs:long">
+      <xs:totalDigits value="12" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ContactNumberSimType1">
+    <xs:restriction base="xs:int">
+      <xs:totalDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FreeNumber1SimType1">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="8" />
+      <xs:fractionDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FreeNumber2SimType1">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="8" />
+      <xs:fractionDigits value="4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FreeText1SimType1">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FreeText2SimType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="50" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="AttachmentType">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="BinaryData" type="hierarchyaddresstypes:BinaryDataType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BinaryDataType">
+    <xs:sequence>
+      <xs:element name="Name" type="xs:string" />
+      <xs:element name="BinData" type="xmime:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

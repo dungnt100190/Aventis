@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{317D103A-9D9E-4A5B-B08F-1E9B6BEEEC0E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kiss.BL</RootNamespace>
+    <AssemblyName>Kiss.BL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentValidation, Version=5.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\FluentValidation.5.0.0.1\lib\Net40\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net40\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Build\Debug\log4net.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ba\BaAdresseService.cs" />
+    <Compile Include="Ba\BaDebitorSearchService.cs" />
+    <Compile Include="Ba\BaInstitutionService.cs" />
+    <Compile Include="Ba\BaKlientensystemService.cs" />
+    <Compile Include="Ba\BaZahlungswegSearchService.cs" />
+    <Compile Include="Ba\Validation\BaPersonValidator.cs" />
+    <Compile Include="Bde\BdeLeistungsartService.cs" />
+    <Compile Include="Cache\ConfigCacheItem.cs" />
+    <Compile Include="Cache\CacheManager.cs" />
+    <Compile Include="Fa\FaFallService.cs" />
+    <Compile Include="Fa\FaKategorisierungDTOService.cs" />
+    <Compile Include="Fa\FaKategorisierungEksProduktService.cs" />
+    <Compile Include="Fa\FaKategorisierungService.cs" />
+    <Compile Include="Fa\FaLeistungService.cs" />
+    <Compile Include="Fa\FaZeitachseService.cs" />
+    <Compile Include="Fa\Validation\FaKategorisierungValidator.cs" />
+    <Compile Include="Fa\Validation\FaLeistungValidator.cs" />
+    <Compile Include="Fs\FsDienstleistungAuswertungService.cs" />
+    <Compile Include="Fs\FsDienstleistungService.cs" />
+    <Compile Include="Fs\FsDienstleistungspaketService.cs" />
+    <Compile Include="Fs\FsReduktionMitarbeiterService.cs" />
+    <Compile Include="Fs\FsReduktionService.cs" />
+    <Compile Include="Fs\FsVerfuegbareArbeitszeitService.cs" />
+    <Compile Include="Fs\Validation\FsDienstleistungspaketValidator.cs" />
+    <Compile Include="Fs\Validation\FsDienstleistungValidator.cs" />
+    <Compile Include="Fs\Validation\FsReduktionMitarbeiterValidator.cs" />
+    <Compile Include="Fs\Validation\FsReduktionValidator.cs" />
+    <Compile Include="KissSystem\BerechtigungsService.cs" />
+    <Compile Include="KissSystem\XImageService.cs" />
+    <Compile Include="KissSystem\XOrgUnitService.cs" />
+    <Compile Include="KissSystem\XTaskAutoGeneratedService.cs" />
+    <Compile Include="KissSystem\XUserGroup_RightService.cs" />
+    <Compile Include="LocalResources\KissSystem\XUserServiceRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XUserServiceRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectQueryExtensions.cs" />
+    <Compile Include="RelationTableServiceCRUDBase.cs" />
+    <Compile Include="ServiceCRUDBase.cs" />
+    <Compile Include="QueryableExtensions.cs" />
+    <Compile Include="ServiceBase.cs" />
+    <Compile Include="SessionService.cs" />
+    <Compile Include="KissSystem\KissConfigurationException.cs" />
+    <Compile Include="KissSystem\SqlService.cs" />
+    <Compile Include="KissSystem\SystemService.cs" />
+    <Compile Include="KissSystem\XConfigService.cs" />
+    <Compile Include="KissSystem\XLovService.cs" />
+    <Compile Include="KissSystem\XUserService.cs" />
+    <Compile Include="UnitOfWork.cs" />
+    <Compile Include="ValidatorBase.cs" />
+    <Compile Include="Ba\Validation\BaAdresseValidator.cs" />
+    <Compile Include="Ba\BaPersonService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vm\VmPositionDTOService.cs" />
+    <Compile Include="Vm\Validation\VmKlientenbudgetValidator.cs" />
+    <Compile Include="Vm\Validation\VmPositionValidator.cs" />
+    <Compile Include="Vm\VmKlientenbudgetDTOService.cs" />
+    <Compile Include="Vm\VmKlientenbudgetService.cs" />
+    <Compile Include="Vm\VmPositionsartService.cs" />
+    <Compile Include="Vm\VmPositionService.cs" />
+    <Compile Include="XmlParser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KiSS.AssemblyInfo\BIAG.AssemblyInfo.csproj">
+      <Project>{C3A41F2E-FBF1-4628-8F6A-764A22252624}</Project>
+      <Name>BIAG.AssemblyInfo</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS.Common\KiSS.Common.csproj">
+      <Project>{FBFE7E87-7525-4260-98DD-F713ABCAC5C8}</Project>
+      <Name>KiSS.Common</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.DataAccess\Kiss.DataAccess.csproj">
+      <Project>{C8FEADA7-2D5F-4E43-818D-32E648731342}</Project>
+      <Name>Kiss.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.DbContext\Kiss.DbContext.csproj">
+      <Project>{A9733EC8-89E0-44A6-941D-A71868778675}</Project>
+      <Name>Kiss.DbContext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Interfaces\Kiss.Interfaces.csproj">
+      <Project>{936877A8-EC00-4267-8C62-344062912497}</Project>
+      <Name>Kiss.Interfaces</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Infrastructure\Kiss.Infrastructure.csproj">
+      <Project>{94D23DEF-0BEC-4EAC-B6A8-A2AB6B3A0CF1}</Project>
+      <Name>Kiss.Infrastructure</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Database\Kiss.Database.csproj">
+      <Project>{2FD04B1A-3501-498F-9F31-6853F37C730F}</Project>
+      <Name>Kiss.Database</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Model\Kiss.Model.csproj">
+      <Project>{9EDABB4F-E42D-4791-9798-4581D35B19CC}</Project>
+      <Name>Kiss.Model</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Bde\Validation\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Kiss.Interfaces.BL.KissServiceResult.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LocalResources\KissSystem\XUserServiceRes.fr.resx">
+      <DependentUpon>XUserServiceRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\KissSystem\XUserServiceRes.it.resx">
+      <DependentUpon>XUserServiceRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\KissSystem\XUserServiceRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XUserServiceRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

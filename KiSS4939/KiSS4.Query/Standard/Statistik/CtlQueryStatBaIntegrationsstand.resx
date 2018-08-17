@@ -1,0 +1,550 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>DECLARE @Stichtag DATETIME
+SET @Stichtag = GETDATE()
+---SET @Stichtag = {Stichtag}
+
+DECLARE @Personen TABLE(
+  BaPersonID  INT,
+  Geburtsdatum DATETIME,
+  UserID       INT,
+  ItemName     VARCHAR(200)
+)
+
+INSERT INTO @Personen
+SELECT DISTINCT PRS.BaPersonID, PRS.Geburtsdatum, USR.UserID, ORG.ItemName
+FROM   dbo.FaLeistung                        FAL WITH(READUNCOMMITTED)
+       INNER JOIN dbo.XUser                  USR WITH(READUNCOMMITTED) ON USR.UserID = FAL.UserID  
+       INNER JOIN dbo.XOrgUnit_User          OUU WITH(READUNCOMMITTED) ON OUU.UserID = USR.UserID
+                                                                       AND OUU.OrgUnitMemberCode = 2
+       INNER JOIN dbo.XOrgUnit               ORG WITH(READUNCOMMITTED) ON ORG.OrgUnitID = OUU.OrgUnitID
+       INNER JOIN dbo.BaPerson               FT  WITH(READUNCOMMITTED) ON FT.BaPersonID = FAL.BaPersonID
+       INNER JOIN dbo.BgFinanzPlan           FP  WITH(READUNCOMMITTED) ON FP.FaLeistungID = FAL.FaLeistungID 
+                                                                       AND FP.BgFinanzPlanID = (SELECT top 1 BgFinanzPlanID
+                                                                           FROM   dbo.BgFinanzplan WITH(READUNCOMMITTED)
+                                                                           WHERE  FaLeistungID = FAL.FaLeistungID AND
+                                                                                  BgBewilligungStatusCode IN (5) AND 
+                                                                                  @Stichtag BETWEEN DatumVon AND DatumBis
+                                                                           ORDER BY DatumVon DESC)
+       LEFT  JOIN dbo.BgFinanzPlan_BaPerson  FPP WITH(READUNCOMMITTED) ON FPP.BgFinanzPlanID = FP.BgFinanzPlanID
+                                                                       AND FPP.IstUnterstuetzt = 1
+       LEFT  JOIN dbo.BaPerson               PRS WITH(READUNCOMMITTED) ON PRS.BaPersonID = FPP.BaPersonID
+WHERE dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 16 AND 65
+  AND (ORG.OrgUnitID = 30 OR ORG.ParentID = 30) ---Sozialdienst
+--- AND (ORG.OrgUnitID = {edtOrgUnitID} OR ORG.ParentID = {edtOrgUnitID})
+--- AND USR.UserID = {edtUserID.LookupID}
+
+-----------------
+------- Übersicht
+-----------------
+SELECT BaPersonID$        = PRS.BaPersonID,
+       Person              = PRS1.Name + isNull(', ' + PRS1.Vorname,''),
+       Integrationszustand = dbo.fnLovText('Integrationsstand', ARB.IntegrationsstandCode)
+FROM @Personen                      PRS 
+  INNER JOIN dbo.BaPerson           PRS1 WITH(READUNCOMMITTED) ON PRS1.BaPersonID = PRS.BaPersonID
+  LEFT  JOIN dbo.BaArbeitAusbildung ARB  WITH(READUNCOMMITTED) ON ARB.BaPersonID = PRS.BaPersonID
+ORDER BY 2
+
+
+/*
+-----------------
+------- Statistik
+-----------------
+SELECT Integrationsstand = LOV.Text,
+       Anzahl            = CASE WHEN MAX(PRS.BaPersonID) IS NULL THEN 0
+                                ELSE COUNT(PRS.BaPersonID)
+                           END,
+       Sortkey$          = MAX(LOV.Code),
+       [16-17]       =     SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 16 AND 17
+                                         THEN 1 ELSE 0 END), 
+       [18-25]       =     SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 18 AND 25
+                                         THEN 1 ELSE 0 END), 
+       [26-40]       =     SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 26 AND 40
+                                         THEN 1 ELSE 0 END), 
+       [41-50]       =     SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 41 AND 50
+                                         THEN 1 ELSE 0 END),
+       [51-65]       =     SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 51 AND 65
+                                         THEN 1 ELSE 0 END)
+FROM dbo.XLOVCode                    LOV WITH (READUNCOMMITTED)
+  LEFT  JOIN dbo.BaArbeitAusbildung ARB WITH (READUNCOMMITTED) ON ARB.IntegrationsstandCode = LOV.Code
+  LEFT  JOIN @Personen           PRS ON PRS.BaPersonID = ARB.BaPersonID
+                                    AND dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 16 AND 65
+WHERE LOVName = 'Integrationsstand'
+GROUP BY LOV.Text
+
+UNION ALL
+
+SELECT Integrationsstand = 'nicht angegeben',
+       Anzahl            = COUNT(*),
+       Sortkey           = 9999999,
+       [16-17]           = SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 16 AND 17
+                                         THEN 1 ELSE 0 END), 
+       [18-25]           = SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 18 AND 25
+                                         THEN 1 ELSE 0 END),
+       [26-40]           = SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 26 AND 40
+                                         THEN 1 ELSE 0 END), 
+       [41-50]           = SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 41 AND 50
+                                         THEN 1 ELSE 0 END),
+       [51-65]           = SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 51 AND 65
+                                         THEN 1 ELSE 0 END) 
+FROM @Personen                   PRS
+  LEFT  JOIN dbo.BaArbeitAusbildung ARB WITH (READUNCOMMITTED) ON PRS.BaPersonID = ARB.BaPersonID
+WHERE dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 16 AND 65
+  AND ARB.IntegrationsstandCode IS NULL
+
+ORDER BY SortKey$
+
+-----------------
+------- Statistik nur Code 90,110
+-----------------
+if object_id('tempdb..#Integration') is not null
+  drop table #Integration
+
+SELECT ID$ = IDENTITY(int, 1,1),
+       OrgUnit   = CASE WHEN (GROUPING(PRS.ItemName) = 1) THEN 'Total'
+                        ELSE PRS.ItemName
+                   END,
+       SAR       = CASE WHEN (GROUPING(USR.UserID) = 1 AND GROUPING(PRS.ItemName) = 0) THEN 'Total'
+                        WHEN (GROUPING(USR.UserID) = 1 AND GROUPING(PRS.ItemName) = 1) THEN NULL
+                        ELSE MIN(USR.LastName) + isNull(', ' + MIN(USR.FirstName),'')
+                   END,
+       LOV       = CASE WHEN (GROUPING(ARB.IntegrationsstandCode) = 1 AND GROUPING(USR.UserID) = 0) THEN 'Total'
+                        WHEN (GROUPING(USR.UserID) = 1 OR GROUPING(PRS.ItemName) = 1) THEN NULL
+                        ELSE dbo.fnLovText('Integrationsstand', ARB.IntegrationsstandCode)
+                   END,
+       Anzahl    = CASE WHEN MAX(PRS.BaPersonID) IS NULL THEN 0
+                        ELSE COUNT(PRS.BaPersonID)
+                   END,
+       [16-17]       =     SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 16 AND 17
+                                         THEN 1 ELSE 0 END), 
+       [18-25]       =     SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 18 AND 25
+                                         THEN 1 ELSE 0 END), 
+       [26-40]       =     SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 26 AND 40
+                                         THEN 1 ELSE 0 END), 
+       [41-50]       =     SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 41 AND 50
+                                         THEN 1 ELSE 0 END),
+       [51-65]       =     SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 51 AND 65
+                                         THEN 1 ELSE 0 END)
+INTO   #Integration
+FROM @Personen PRS
+  LEFT  JOIN dbo.BaArbeitAusbildung ARB WITH (READUNCOMMITTED) ON ARB.BaPersonID = PRS.BaPersonID 
+  LEFT  JOIN dbo.XUser               USR WITH (READUNCOMMITTED) ON USR.UserID = PRS.UserID
+WHERE ARB.IntegrationsstandCode IN (90, 110) -- nur 'Personen mit fehlender Vermittelbarkeit wegen Krankheit' und 'Personen, bei denen auf die berufliche Integration verzichtet wird'
+GROUP BY PRS.ItemName, USR.UserID, ARB.IntegrationsstandCode WITH ROLLUP
+
+SET IDENTITY_INSERT #Integration ON
+
+INSERT INTO #Integration (ID$, OrgUnit, SAR, LOV, Anzahl, [16-17], [18-25], [26-40], [41-50], [51-65]) 
+SELECT ID$ = (SELECT MAX(ID$)-1 FROM #Integration WHERE OrgUnit = INT.OrgUnit),
+       OrgUnit = OrgUnit,
+       SAR = 'Total',
+       LOV = LOV,
+       Anzahl =  SUM(Anzahl),
+       SUM([16-17]),
+       SUM([18-25]),
+       SUM([26-40]),
+       SUM([41-50]),
+       SUM([51-65])
+FROM #Integration INT
+WHERE OrgUnit &lt;&gt; 'Total' AND SAR &lt;&gt; 'Total' AND LOV &lt;&gt; 'Total'
+GROUP BY OrgUnit, LOV
+
+----- Leerzeilen
+INSERT INTO #Integration (ID$) 
+SELECT ID$ = (SELECT MAX(ID$)+1 FROM #Integration WHERE OrgUnit = INT.OrgUnit)
+FROM #Integration INT
+WHERE SAR = 'Total'
+GROUP BY OrgUnit
+
+----- Total nach Code
+INSERT INTO #Integration (ID$, OrgUnit, SAR, LOV, Anzahl, [16-17], [18-25], [26-40], [41-50], [51-65]) 
+SELECT ID$ = (SELECT MAX(ID$) FROM #Integration),
+       NULL,
+       'Total',
+       LOV,
+       SUM(Anzahl),
+       SUM([16-17]),
+       SUM([18-25]),
+       SUM([26-40]),
+       SUM([41-50]),
+       SUM([51-65])
+FROM #Integration INT
+WHERE OrgUnit &lt;&gt; 'Total' AND SAR &lt;&gt; 'Total' AND LOV &lt;&gt; 'Total'
+GROUP BY LOV
+
+SET IDENTITY_INSERT #Integration OFF
+
+
+SELECT * FROM #Integration
+ORDER BY 1,2,3
+*/</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="xDocument.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAF1JREFUOE9jZAAC
+        Y2Pj/yAaGzh79iwjhjhIw///MzGwmJjYfxDGqSEtjeE/MgYpBhmEoYmQDSANKM7GpQHZmVg1oDsJxgdp
+        pI4N2EIKJjbqJLIiDqSJEMaVovGKAwBnM3PWBP8PfwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="ctlGotoFall1.BaPersonID" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAB9TeXN0ZW0uVW5pdHlTZXJpYWxpemF0aW9uSG9sZGVyAwAAAARE
+        YXRhCVVuaXR5VHlwZQxBc3NlbWJseU5hbWUBAAEICgIAAAAGAgAAAAAL
+</value>
+  </data>
+  <metadata name="qryListe3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>210, 17</value>
+  </metadata>
+  <data name="qryListe3.SelectStatement" xml:space="preserve">
+    <value>DECLARE @Stichtag DATETIME
+SET @Stichtag = GETDATE()
+---SET @Stichtag = {Stichtag}
+
+DECLARE @Personen2 TABLE(
+  BaPersonID  INT,
+  Geburtsdatum DATETIME,
+  UserID       INT,
+  ItemName     VARCHAR(200)
+)
+
+INSERT INTO @Personen2
+SELECT DISTINCT PRS.BaPersonID, PRS.Geburtsdatum, USR.UserID, ORG.ItemName
+FROM   dbo.FaLeistung                        FAL WITH(READUNCOMMITTED)
+       INNER JOIN dbo.XUser                  USR WITH(READUNCOMMITTED) ON USR.UserID = FAL.UserID  
+       INNER JOIN dbo.XOrgUnit_User          OUU WITH(READUNCOMMITTED) ON OUU.UserID = USR.UserID
+                                                                       AND OUU.OrgUnitMemberCode = 2
+       INNER JOIN dbo.XOrgUnit               ORG WITH(READUNCOMMITTED) ON ORG.OrgUnitID = OUU.OrgUnitID
+       INNER JOIN dbo.BaPerson               FT  WITH(READUNCOMMITTED) ON FT.BaPersonID = FAL.BaPersonID
+       INNER JOIN dbo.BgFinanzPlan           FP  WITH(READUNCOMMITTED) ON FP.FaLeistungID = FAL.FaLeistungID 
+                                                                       AND FP.BgFinanzPlanID = (SELECT top 1 BgFinanzPlanID
+                                                                           FROM   dbo.BgFinanzplan WITH(READUNCOMMITTED)
+                                                                           WHERE  FaLeistungID = FAL.FaLeistungID AND
+                                                                                  BgBewilligungStatusCode IN (5) AND 
+                                                                                  @Stichtag BETWEEN DatumVon AND DatumBis
+                                                                           ORDER BY DatumVon DESC)
+       LEFT  JOIN dbo.BgFinanzPlan_BaPerson  FPP WITH(READUNCOMMITTED) ON FPP.BgFinanzPlanID = FP.BgFinanzPlanID
+                                                                       AND FPP.IstUnterstuetzt = 1
+       LEFT  JOIN dbo.BaPerson               PRS WITH(READUNCOMMITTED) ON PRS.BaPersonID = FPP.BaPersonID
+WHERE dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 16 AND 65
+  AND (ORG.OrgUnitID = 30 OR ORG.ParentID = 30) ---Sozialdienst
+--- AND (ORG.OrgUnitID = {edtOrgUnitID} OR ORG.ParentID = {edtOrgUnitID})
+--- AND USR.UserID = {edtUserID.LookupID}
+
+
+-----------------
+------- Statistik nur Code 90,110
+-----------------
+if object_id('tempdb..#Integration') is not null
+  drop table #Integration
+
+SELECT ID$ = IDENTITY(int, 1,1),
+       OrgUnit   = CASE WHEN (GROUPING(PRS.ItemName) = 1) THEN 'Total'
+                        ELSE PRS.ItemName
+                   END,
+       SAR       = CASE WHEN (GROUPING(USR.UserID) = 1 AND GROUPING(PRS.ItemName) = 0) THEN 'Total'
+                        WHEN (GROUPING(USR.UserID) = 1 AND GROUPING(PRS.ItemName) = 1) THEN NULL
+                        ELSE MIN(USR.LastName) + isNull(', ' + MIN(USR.FirstName),'')
+                   END,
+       LOV       = CASE WHEN (GROUPING(ARB.IntegrationsstandCode) = 1 AND GROUPING(USR.UserID) = 0) THEN 'Total'
+                        WHEN (GROUPING(USR.UserID) = 1 OR GROUPING(PRS.ItemName) = 1) THEN NULL
+                        ELSE dbo.fnLovText('Integrationsstand', ARB.IntegrationsstandCode)
+                   END,
+       Anzahl    = CASE WHEN MAX(PRS.BaPersonID) IS NULL THEN 0
+                        ELSE COUNT(PRS.BaPersonID)
+                   END,
+       [16-17]       =     SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 16 AND 17
+                                         THEN 1 ELSE 0 END), 
+       [18-25]       =     SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 18 AND 25
+                                         THEN 1 ELSE 0 END), 
+       [26-40]       =     SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 26 AND 40
+                                         THEN 1 ELSE 0 END), 
+       [41-50]       =     SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 41 AND 50
+                                         THEN 1 ELSE 0 END),
+       [51-65]       =     SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 51 AND 65
+                                         THEN 1 ELSE 0 END)
+INTO   #Integration
+FROM @Personen2 PRS
+  LEFT  JOIN dbo.BaArbeitAusbildung  ARB WITH(READUNCOMMITTED) ON ARB.BaPersonID = PRS.BaPersonID 
+  LEFT  JOIN dbo.XUser               USR WITH(READUNCOMMITTED) ON USR.UserID = PRS.UserID
+WHERE ARB.IntegrationsstandCode IN (90, 110) -- nur 'Personen mit fehlender Vermittelbarkeit wegen Krankheit' und 'Personen, bei denen auf die berufliche Integration verzichtet wird'
+GROUP BY PRS.ItemName, USR.UserID, ARB.IntegrationsstandCode WITH ROLLUP
+
+SET IDENTITY_INSERT #Integration ON
+
+INSERT INTO #Integration (ID$, OrgUnit, SAR, LOV, Anzahl, [16-17], [18-25], [26-40], [41-50], [51-65]) 
+SELECT ID$ = (SELECT MAX(ID$)-1 FROM #Integration WHERE OrgUnit = INT.OrgUnit),
+       OrgUnit = OrgUnit,
+       SAR = 'Total',
+       LOV = LOV,
+       Anzahl =  SUM(Anzahl),
+       SUM([16-17]),
+       SUM([18-25]),
+       SUM([26-40]),
+       SUM([41-50]),
+       SUM([51-65])
+FROM #Integration INT
+WHERE OrgUnit &lt;&gt; 'Total' AND SAR &lt;&gt; 'Total' AND LOV &lt;&gt; 'Total'
+GROUP BY OrgUnit, LOV
+
+----- Leerzeilen
+INSERT INTO #Integration (ID$) 
+SELECT ID$ = (SELECT MAX(ID$)+1 FROM #Integration WHERE OrgUnit = INT.OrgUnit)
+FROM #Integration INT
+WHERE SAR = 'Total'
+GROUP BY OrgUnit
+
+----- Total nach Code
+INSERT INTO #Integration (ID$, OrgUnit, SAR, LOV, Anzahl, [16-17], [18-25], [26-40], [41-50], [51-65]) 
+SELECT ID$ = (SELECT MAX(ID$) FROM #Integration),
+       NULL,
+       'Total',
+       LOV,
+       SUM(Anzahl),
+       SUM([16-17]),
+       SUM([18-25]),
+       SUM([26-40]),
+       SUM([41-50]),
+       SUM([51-65])
+FROM #Integration INT
+WHERE OrgUnit &lt;&gt; 'Total' AND SAR &lt;&gt; 'Total' AND LOV &lt;&gt; 'Total'
+GROUP BY LOV
+
+SET IDENTITY_INSERT #Integration OFF
+
+
+SELECT * 
+FROM #Integration
+ORDER BY 1,2,3</value>
+  </data>
+  <data name="ctlGotoFallStelleBI.BaPersonID" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAB9TeXN0ZW0uVW5pdHlTZXJpYWxpemF0aW9uSG9sZGVyAwAAAARE
+        YXRhCVVuaXR5VHlwZQxBc3NlbWJseU5hbWUBAAEICgIAAAAGAgAAAAAL
+</value>
+  </data>
+  <metadata name="qryListe2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>114, 17</value>
+  </metadata>
+  <data name="qryListe2.SelectStatement" xml:space="preserve">
+    <value>DECLARE @Stichtag DATETIME
+SET @Stichtag = GETDATE()
+---SET @Stichtag = {Stichtag}
+
+DECLARE @Personen1 TABLE(
+  BaPersonID  INT,
+  Geburtsdatum DATETIME,
+  UserID       INT,
+  ItemName     VARCHAR(200)
+)
+
+INSERT INTO @Personen1
+SELECT DISTINCT PRS.BaPersonID, PRS.Geburtsdatum, USR.UserID, ORG.ItemName
+FROM   dbo.FaLeistung                        FAL WITH(READUNCOMMITTED)
+       INNER JOIN dbo.XUser                  USR WITH(READUNCOMMITTED) ON USR.UserID = FAL.UserID  
+       INNER JOIN dbo.XOrgUnit_User          OUU WITH(READUNCOMMITTED) ON OUU.UserID = USR.UserID
+                                                                       AND OUU.OrgUnitMemberCode = 2
+       INNER JOIN dbo.XOrgUnit               ORG WITH(READUNCOMMITTED) ON ORG.OrgUnitID = OUU.OrgUnitID
+       INNER JOIN dbo.BaPerson               FT  WITH(READUNCOMMITTED) ON FT.BaPersonID = FAL.BaPersonID
+       INNER JOIN dbo.BgFinanzPlan           FP  WITH(READUNCOMMITTED) ON FP.FaLeistungID = FAL.FaLeistungID 
+                                                                       AND FP.BgFinanzPlanID = (SELECT top 1 BgFinanzPlanID
+                                                                           FROM   dbo.BgFinanzplan WITH(READUNCOMMITTED)
+                                                                           WHERE  FaLeistungID = FAL.FaLeistungID AND
+                                                                                  BgBewilligungStatusCode IN (5) AND 
+                                                                                  @Stichtag BETWEEN DatumVon AND DatumBis
+                                                                           ORDER BY DatumVon DESC)
+       LEFT  JOIN dbo.BgFinanzPlan_BaPerson  FPP WITH(READUNCOMMITTED) ON FPP.BgFinanzPlanID = FP.BgFinanzPlanID
+                                                                       AND FPP.IstUnterstuetzt = 1
+       LEFT  JOIN dbo.BaPerson               PRS WITH(READUNCOMMITTED) ON PRS.BaPersonID = FPP.BaPersonID
+WHERE dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 16 AND 65
+  AND (ORG.OrgUnitID = 30 OR ORG.ParentID = 30) ---Sozialdienst
+--- AND (ORG.OrgUnitID = {edtOrgUnitID} OR ORG.ParentID = {edtOrgUnitID})
+--- AND USR.UserID = {edtUserID.LookupID}
+
+
+-----------------
+------- Statistik
+-----------------
+SELECT Integrationsstand = LOV.Text,
+       Anzahl            = CASE WHEN MAX(PRS.BaPersonID) IS NULL THEN 0
+                                ELSE COUNT(PRS.BaPersonID)
+                           END,
+       Sortkey$          = MAX(LOV.Code),
+       [16-17]       =     SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 16 AND 17
+                                         THEN 1 ELSE 0 END), 
+       [18-25]       =     SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 18 AND 25
+                                         THEN 1 ELSE 0 END), 
+       [26-40]       =     SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 26 AND 40
+                                         THEN 1 ELSE 0 END), 
+       [41-50]       =     SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 41 AND 50
+                                         THEN 1 ELSE 0 END),
+       [51-65]       =     SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 51 AND 65
+                                         THEN 1 ELSE 0 END)
+FROM dbo.XLOVCode                    LOV WITH(READUNCOMMITTED)
+  LEFT  JOIN dbo.BaArbeitAusbildung  ARB WITH(READUNCOMMITTED) ON ARB.IntegrationsstandCode = LOV.Code
+  LEFT  JOIN @Personen1          PRS ON PRS.BaPersonID = ARB.BaPersonID
+                                    AND dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 16 AND 65
+WHERE LOVName = 'Integrationsstand'
+GROUP BY LOV.Text
+
+UNION ALL
+
+SELECT Integrationsstand = 'nicht angegeben',
+       Anzahl            = COUNT(*),
+       Sortkey           = 9999999,
+       [16-17]           = SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 16 AND 17
+                                         THEN 1 ELSE 0 END), 
+       [18-25]           = SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 18 AND 25
+                                         THEN 1 ELSE 0 END),
+       [26-40]           = SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 26 AND 40
+                                         THEN 1 ELSE 0 END), 
+       [41-50]           = SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 41 AND 50
+                                         THEN 1 ELSE 0 END),
+       [51-65]           = SUM(CASE WHEN  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 51 AND 65
+                                         THEN 1 ELSE 0 END) 
+FROM @Personen1                   PRS
+  LEFT  JOIN dbo.BaArbeitAusbildung ARB WITH(READUNCOMMITTED) ON PRS.BaPersonID = ARB.BaPersonID
+WHERE dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 16 AND 65
+  AND ARB.IntegrationsstandCode IS NULL
+
+ORDER BY SortKey$</value>
+  </data>
+  <data name="edtUserID.LookupSQL" xml:space="preserve">
+    <value>select ID = UserID, 
+SAR = LastName + isNull(', ' + FirstName,''), 
+[Kuerzel] = LogonName
+             from   XUser 
+      where LastName + isNull(', ' + FirstName,'') like isNull({0},'') + '%' 
+       order by SAR</value>
+  </data>
+  <data name="edtStichtag.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFVJREFUOE9jZAAC
+        Y2Pj/yCaEDh79iwjWA1MAzaNWOVAgsRguAuIcRKKGmROQwMD3D/IbKwaQApgitBp6mgAeYokG4abBmT/
+        YKQ3smKapLREKFkjywMAd9eDN3Z9MMsAAAAASUVORK5CYII=
+</value>
+  </data>
+</root>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="file:///E:/KiSS/VSS/sozmim/KiSS4.FAMOZ/KiSSSvc/KiSSSvc/KiSSSvc.SAP.PSCD.WebServiceHelper/wsdl/MI_SD01_CREATE_WS.wsdl" filename="MI_SD01_CREATE_WS.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

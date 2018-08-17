@@ -1,0 +1,263 @@
+﻿<UserControl x:Class="Kiss.UI.View.Wsh.Controls.WshAuszahlvorschlagControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:converter="clr-namespace:Kiss.UI.Controls.Converter;assembly=Kiss.UI.Controls"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d" 
+             xmlns:Controls="clr-namespace:Kiss.UI.Controls;assembly=Kiss.UI.Controls" 
+             xmlns:Constant="clr-namespace:Kiss.UI.Controls.Constant;assembly=Kiss.UI.Controls" 
+             xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" 
+             xmlns:local="clr-namespace:Kiss.UI.View" 
+             xmlns:Settings="clr-namespace:DevExpress.Xpf.Editors.Settings;assembly=DevExpress.Xpf.Core.v10.2" 
+             xmlns:Wsh="clr-namespace:Kiss.UI.ViewModel.Wsh;assembly=Kiss.UI.ViewModel" 
+             d:DesignHeight="387" d:DesignWidth="1059" 
+             HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+>
+    <UserControl.Resources>
+        <!-- ist im Code verwendet -->
+        <DataTemplate x:Key="ReadonlyDataTemplate">
+            <TextBlock Background="#EDE4DD"/>
+        </DataTemplate>
+        
+        <Style x:Key="RedIfNegativeStyle" TargetType="dxg:CellContentPresenter">
+            <Setter Property="TextBlock.Foreground"
+                    Value="{Binding Path=DataContext.Rest, Converter={StaticResource ResourceKey=RedIfNegativeConverter}}"/>
+            <Setter Property="TextBlock.IsEnabled"
+                    Value="False"/>
+            <Setter Property="Background"
+                    Value="#EDE4DD"/>
+        </Style>
+        <Style x:Key="EditableCellStyle" TargetType="dxg:CellContentPresenter">
+            <Setter Property="TextBlock.FontWeight" Value="Bold"/>
+        </Style>
+
+        <Style x:Key="ReadonlyCellStyle" TargetType="dxg:CellContentPresenter">                        
+            <Setter Property="Background"
+                    Value="#EDE4DD"/>
+        </Style>
+    </UserControl.Resources>
+    <UserControl.CommandBindings>
+        <CommandBinding Command="{x:Static Wsh:WshAuszahlvorschlagBelegVM.BelegFreigebenCommand}"
+                    Executed="BelegFreigeben_Executed"
+                    CanExecute="BelegFreigeben_CanExecute"/>
+        <CommandBinding Command="{x:Static Wsh:WshAuszahlvorschlagBelegVM.SplitBelegCommand}"
+                    Executed="SplitBeleg_Executed"
+                    CanExecute="SplitBeleg_CanExecute"/>
+        <CommandBinding Command="{x:Static Wsh:WshAuszahlvorschlagBelegVM.DeleteBelegCommand}"
+                    Executed="DeleteBeleg_Executed"
+                    CanExecute="DeleteBeleg_CanExecute"/>
+        <CommandBinding Command="{x:Static Wsh:WshAuszahlvorschlagBelegVM.AlleBelegeFreigebenCommand}"
+                        Executed="AlleBelegeFreigeben_Executed"
+                        CanExecute="AlleFreigeben_CanExecute"/>
+                        
+    </UserControl.CommandBindings>
+
+    <Grid Margin="{x:Static Constant:LayoutConstant.MarginOuterControl}">
+        <Grid.Resources>
+
+            <converter:DateTime2StringConverter x:Key="Date2StringConverter"/>
+            <converter:Boolean2VisibilityConverter x:Key="Boolean2VisibilityConverter" UseAndOperator="False" TrueValue="Visible" FalseValue="Collapsed"/>
+            <converter:KbuStatusBeleg2ColorConverter x:Key="KbuStatusBeleg2ColorConverter" />
+            
+            <Style TargetType="Button">
+                <Setter Property="MinWidth" Value="22"/>
+                <Setter Property="Margin" Value="6"/>
+            </Style>
+
+            <!--<Style TargetType="TextBlock">
+                <Setter Property="Padding" Value="2" />
+            </Style>-->
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35" />
+            <RowDefinition Height="54" />
+            <RowDefinition Height="35" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="437" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="80" />
+            <ColumnDefinition Width="19" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Kreditor-Header -->
+        <Border BorderBrush="Gray" BorderThickness="1,1,1,0" HorizontalAlignment="Right" Width="70">
+            <TextBlock Name="textBlock1" Text="Valuta" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" TextAlignment="Right" Padding="0,3,3,0" Background="#EDE4DD"/>
+        </Border>
+        <Border BorderBrush="Gray" Grid.Row="1"  BorderThickness="1,1,1,0" HorizontalAlignment="Right" Width="70">
+            <TextBlock Name="textBlock2" Text="Kreditor" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" TextAlignment="Right" Padding="0,3,3,0" Background="#EDE4DD" />
+        </Border>
+        <Border BorderBrush="Gray" Grid.Row="2" BorderThickness="1" HorizontalAlignment="Right" Width="70">
+            <TextBlock Name="textBlock3" Text="Status" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" TextAlignment="Right" Padding="0,3,3,0" Background="#EDE4DD" />
+        </Border>
+
+        <!-- Kreditor-ItemsControl -->
+        <ScrollViewer Name="scrKreditor" Grid.Column="1" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" Grid.RowSpan="3">
+            <ItemsControl ItemsSource="{Binding AuszahlvorschlagBelege}" >
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Width="{Binding Width, Mode=OneWay}">
+                            <Grid.Visibility>
+                                <MultiBinding Converter="{StaticResource Boolean2VisibilityConverter}">
+                                    <Binding Path="InklFreigegebene"/>
+                                    <Binding Path="IsNotFreigegeben"/>
+                                </MultiBinding>
+                            </Grid.Visibility>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35" />
+                                <RowDefinition Height="54" />
+                                <RowDefinition Height="35" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border BorderBrush="Gray" BorderThickness="0,1,1,0" Background="{Binding Path=DTO.Status, Converter={StaticResource ResourceKey=KbuStatusBeleg2ColorConverter}}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Controls:KissDateEdit 
+                                               DateTime="{Binding Path=DTO.Valuta, Mode=TwoWay}" 
+                                               Width="100" HorizontalAlignment="Right"
+                                               Padding="3,3,3,3"
+                                               IsEnabled="{Binding Path=DTO.IsVorschlag}"/>                                                                                                                     
+                                </Grid>
+                            </Border>
+                            <Border Grid.Row="1" BorderBrush="Gray" BorderThickness="0,1,1,0" Background="{Binding Path=DTO.Status, Converter={StaticResource ResourceKey=KbuStatusBeleg2ColorConverter}}">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="{Binding Path=DTO.Kreditor.Name}" TextTrimming="CharacterEllipsis" Padding="3,3,0,0"/>
+                                    <TextBlock Grid.Row="1" Padding="3,0,0,0">
+                                        <TextBlock.Text>
+                                             <MultiBinding Converter="{StaticResource PostkontoNrFormattingConverter}" Mode="OneWay">
+                                                <Binding Path="DTO.Kreditor.PostKontoNr"/>
+                                                <Binding Path="DTO.Kreditor.BankKontoNr"/>
+                                            </MultiBinding>
+                                        </TextBlock.Text>
+                                    </TextBlock>
+                                    <TextBlock Grid.Row="2" Text="{Binding Path=DTO.Kreditor.BankName}" TextTrimming="CharacterEllipsis" Padding="3,0,0,3"/>
+                                    <Button Grid.Row="1" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Bottom"  Content="..."/>
+                                </Grid>
+                            </Border>
+                            <Border Grid.Row="2" BorderBrush="Gray" BorderThickness="0,1,1,1" Background="{Binding Path=DTO.Status, Converter={StaticResource ResourceKey=KbuStatusBeleg2ColorConverter}}">
+                                <TextBlock Text="{Binding Path=DTO.Status}" Padding="3,3,3,3"/>
+                            </Border>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </ScrollViewer>
+
+        <Controls:KissGridDevX Grid.ColumnSpan="4" Grid.Row="3" 
+                               local:ComplexBindingHelper.ItemsSource="{Binding AuszahlvorschlagPositionen}" 
+                               Name="grdAuszahlvorschlagPositionen" 
+                               ScrollViewer.ScrollChanged="grdAuszahlvorschlagPositionen_ScrollChanged" Background="Transparent">
+            <Controls:KissGridDevX.Columns>
+                
+                <dxg:GridColumn Name="colBudgetmonat" FieldName="DTO.MonatVon" VisibleIndex="0" Fixed="Left" Header="Budgetmonat" Width="85" ReadOnly="True" AllowResizing="False" AllowSorting="False" AllowMoving="False" AllowGrouping="False" CellStyle="{StaticResource ResourceKey=ReadonlyCellStyle}" >
+                    <dxg:GridColumn.EditSettings>
+                        <Settings:TextEditSettings DisplayFormat="MMM yyyy" />
+                    </dxg:GridColumn.EditSettings>
+                </dxg:GridColumn>
+                
+                <dxg:GridColumn Name="colKostenart" FieldName="DTO.Kostenart" VisibleIndex="1" Fixed="Left" Header="KOA" Width="50" ReadOnly="True"  AllowResizing="False" AllowSorting="False" AllowMoving="False" AllowGrouping="False" CellStyle="{StaticResource ResourceKey=ReadonlyCellStyle}" />
+                <dxg:GridColumn Name="colText" FieldName="DTO.Text" VisibleIndex="2" Fixed="Left" Header="Text" Width="130" ReadOnly="True"  AllowResizing="False" AllowSorting="False" AllowMoving="False" AllowGrouping="False" CellStyle="{StaticResource ResourceKey=ReadonlyCellStyle}" />
+                <dxg:GridColumn Name="colBetrifft" FieldName="DTO.Betrifft.NameVornameAlter" VisibleIndex="3" Fixed="Left" Header="betrifft" Width="100" ReadOnly="True"  AllowResizing="False" AllowSorting="False" AllowMoving="False" AllowGrouping="False" CellStyle="{StaticResource ResourceKey=ReadonlyCellStyle}" >
+                    <dxg:GridColumn.EditSettings>
+                        <Settings:TextEditSettings NullText="UE" />                        
+                    </dxg:GridColumn.EditSettings>
+                </dxg:GridColumn>
+                <dxg:GridColumn Name="colVerfuegbar" FieldName="DTO.Verfuegbar" VisibleIndex="4" Fixed="Left" Header="verfügbar" Width="70" ReadOnly="True" AllowResizing="False" AllowSorting="False" AllowMoving="False" AllowGrouping="False" AllowEditing="False" AllowUnboundExpressionEditor="False" CellStyle="{StaticResource ResourceKey=ReadonlyCellStyle}" >
+                    <dxg:GridColumn.EditSettings>
+                        <Settings:CalcEditSettings Precision="2" DisplayFormat="N2" IsTextEditable="False" AllowDefaultButton="False" />    
+                    </dxg:GridColumn.EditSettings>
+                </dxg:GridColumn>               
+            </Controls:KissGridDevX.Columns>
+            <Controls:KissGridDevX.View>
+                <dxg:TableView Name="tableView1" ShowGroupPanel="False" AllowMoveColumnToDropArea="False" AllowColumnFiltering="False" IsColumnMenuEnabled="False" FixedLineWidth="1" ShowIndicator="False" Background="Transparent" />
+            </Controls:KissGridDevX.View>
+        </Controls:KissGridDevX>
+
+        <!-- Auszahlbetrag + Beleg-Aktionen - ItemsControl-->
+        <StackPanel Height="50" Grid.Row="4" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+            <TextBlock Text="Auszahlbetrag (netto)" HorizontalAlignment="Stretch" TextAlignment="Right" Background="LightGray" Padding="0,3,3,3" />
+        </StackPanel>
+
+
+        <!-- Total und Buttons Freigeben, Split, Delete  -->
+        <ScrollViewer Name="scrAuszahlvorschlagBelegActions" 
+                      Grid.Column="1" Grid.Row="4"
+                      VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Hidden">
+
+            <ItemsControl ItemsSource="{Binding AuszahlvorschlagBelege}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Height="50" Width="{Binding Width}">
+                            <StackPanel.Visibility>
+                                <MultiBinding Converter="{StaticResource Boolean2VisibilityConverter}">
+                                    <Binding Path="InklFreigegebene"/>
+                                    <Binding Path="IsNotFreigegeben"/>
+                                </MultiBinding>
+                            </StackPanel.Visibility>
+                            <Border BorderBrush="Gray" BorderThickness="1">
+                                <TextBlock Text="{Binding Path=DTO.AuszahlbetragNetto, StringFormat=N2}" HorizontalAlignment="Stretch" TextAlignment="Center" Background="{Binding Path=DTO.Status, Converter={StaticResource ResourceKey=KbuStatusBeleg2ColorConverter}}" Padding="2,2,2,2" />
+                            </Border>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Button Content="F" Command="{x:Static Wsh:WshAuszahlvorschlagBelegVM.BelegFreigebenCommand}" CommandParameter="{Binding}" ToolTip="Freigeben"/>
+                                <Button Content="S" Command="{x:Static Wsh:WshAuszahlvorschlagBelegVM.SplitBelegCommand}" CommandParameter="{Binding}" ToolTip="Split"/>
+                                <Button Content="L" Command="{x:Static Wsh:WshAuszahlvorschlagBelegVM.DeleteBelegCommand}" CommandParameter="{Binding}" ToolTip="Löschen"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </ScrollViewer>
+
+        <!-- Restbetrag Total -->
+        <StackPanel Height="50" Width="80" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Left">
+            <!-- Für Sprint 6 zeigen wir deises Feld nicht an. -->
+            <!-- Border BorderBrush="Gray" BorderThickness="1"  HorizontalAlignment="Left" >
+                <TextBlock Text="{Binding Path=TotalRest,  StringFormat=N2}" HorizontalAlignment="Left" TextAlignment="Center" Background="LightGray" Padding="2,2,2,2" />
+            </Border-->
+        </StackPanel>        
+               
+
+        <StackPanel Grid.Row="5" 
+                    HorizontalAlignment="Right" 
+                    VerticalAlignment="Stretch" 
+                    Orientation="Horizontal" 
+                    Grid.ColumnSpan="4"
+                    Margin="0,40,0,0">
+
+            <!--
+                IsChecked="{Binding DritteAnzeigen}" 
+            -->
+            <!--<CheckBox Name="cbxDritteAnzeigen" Margin="0,0,20,0 " Content="Dritte anzeigen" Click="cbxDritteAnzeigen_Click"/>-->
+            <Controls:KissCheckBox Name="cbxInklFreigegebene" Margin="0,0,20,0" Content="inkl. freigegebene" Click="cbxInklFreigegebene_Click"/>
+            <Controls:KissButton Content="Alle freigeben" Padding="10,0" Width="120" Margin="0,0,6,0" VerticalAlignment="Center" IsDefault="True" Command="{x:Static Wsh:WshAuszahlvorschlagBelegVM.AlleBelegeFreigebenCommand}" />
+            <Controls:KissButton Content="Schliessen" Padding="10,0" Width="90" Margin="0" IsCancel="True"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

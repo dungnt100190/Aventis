@@ -1,0 +1,713 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B33FEDB0-6887-4B90-9093-8A23853CCDA4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kiss.UserInterface.View</RootNamespace>
+    <AssemblyName>Kiss.UserInterface.View</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BIAG.AssemblyInfo, Version=4.2.49.215, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\KiSS\Build\Debug\BIAG.AssemblyInfo.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Mvvm.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Core.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Printing.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Grid.v14.1, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Grid.v14.1.Core, Version=14.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Build\Debug\Microsoft.Expression.Interactions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Build\Debug\System.Windows.Interactivity.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WPFLocalizeExtension, Version=2.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WpfLocalizeExtension.2.3\lib\net35\WPFLocalizeExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="XAMLMarkupExtensions, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\XAMLMarkupExtensions.1.2\lib\net40\XAMLMarkupExtensions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ba\BaGemeindeView.xaml.cs">
+      <DependentUpon>BaGemeindeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ba\BaLandView.xaml.cs">
+      <DependentUpon>BaLandView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ba\BaPlzView.xaml.cs">
+      <DependentUpon>BaPlzView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CommandBindingToCommand.cs" />
+    <Compile Include="Common\CommonGastrechtAnfragenView.xaml.cs">
+      <DependentUpon>CommonGastrechtAnfragenView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\OpenFileService.cs" />
+    <Compile Include="Common\OpenPopupOnMouseOverBehavior.cs" />
+    <Compile Include="Converter\LovToStringConverter.cs" />
+    <Compile Include="Converter\TimelineEventDTOToEnumerableConverter.cs" />
+    <Compile Include="Converter\ItemToEnumerableConverter.cs" />
+    <Compile Include="Converter\FaTimelineEventToImageConverter.cs" />
+    <Compile Include="Converter\NullToVisibleConverter.cs" />
+    <Compile Include="Converter\StringToVisibleConverter.cs" />
+    <Compile Include="Converter\TimelineEventToTooltipConverter.cs" />
+    <Compile Include="Converter\TimelinePeriodToTooltipConverter.cs" />
+    <Compile Include="Converter\TrueToCollapsedConverter.cs" />
+    <Compile Include="Converter\ZeroToCollapsedConverter.cs" />
+    <Compile Include="Fa\FaAbfrageDokumentAblageView.xaml.cs">
+      <DependentUpon>FaAbfrageDokumentAblageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fa\FaDokumentAblageView.xaml.cs">
+      <DependentUpon>FaDokumentAblageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fa\Timeline\FaTimelineEventDetailList.xaml.cs">
+      <DependentUpon>FaTimelineEventDetailList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fa\Timeline\FaTimelineEventBatch.xaml.cs">
+      <DependentUpon>FaTimelineEventBatch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fa\Timeline\FaTimelineEvent.xaml.cs">
+      <DependentUpon>FaTimelineEvent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fa\Timeline\FaTimelinePeriod.xaml.cs">
+      <DependentUpon>FaTimelinePeriod.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fa\Timeline\FaTimelineSwimlaneView.xaml.cs">
+      <DependentUpon>FaTimelineSwimlaneView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fa\FaKategorisierungView.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>FaKategorisierungView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fa\Timeline\FaTimelineContainerView.xaml.cs">
+      <DependentUpon>FaTimelineContainerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fa\Timeline\FaTimelineListView.xaml.cs">
+      <DependentUpon>FaTimelineListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fa\Timeline\FaTimelineView.xaml.cs">
+      <DependentUpon>FaTimelineView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fs\FsAbfrageAuslastungGesamtView.xaml.cs">
+      <DependentUpon>FsAbfrageAuslastungGesamtView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Fs\FsReduktionView.xaml.cs">
+      <DependentUpon>FsReduktionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Kes\KesDossiernachweisView.xaml.cs">
+      <DependentUpon>KesDossiernachweisView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Kes\KesKokesExportView.xaml.cs">
+      <DependentUpon>KesKokesExportView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Kes\KesPflegekinderaufsichtErfassenView.xaml.cs">
+      <DependentUpon>KesPflegekinderaufsichtErfassenView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Kes\KesPflegekinderaufsichtView.xaml.cs">
+      <DependentUpon>KesPflegekinderaufsichtView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Kes\KesFachstelleMandatsfuehrendePersonView.xaml.cs">
+      <DependentUpon>KesFachstelleMandatsfuehrendePersonView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Kes\KesFachstelleMassnahmeView.xaml.cs">
+      <DependentUpon>KesFachstelleMassnahmeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Kes\KesVerlaufView.xaml.cs">
+      <DependentUpon>KesVerlaufView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Kes\KesFachstelleView.xaml.cs">
+      <DependentUpon>KesFachstelleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Kes\KesMassnahmeAuftragView.xaml.cs">
+      <DependentUpon>KesMassnahmeAuftragView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Kes\KesMandatsfuehrendePersonView.xaml.cs">
+      <DependentUpon>KesMandatsfuehrendePersonView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Kes\KesMassnahmeBerichtView.xaml.cs">
+      <DependentUpon>KesMassnahmeBerichtView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Kes\KesMassnahmeErfassenView.xaml.cs">
+      <DependentUpon>KesMassnahmeErfassenView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Kes\KesMassnahmeView.xaml.cs">
+      <DependentUpon>KesMassnahmeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Kes\KesAuftragErfassenView.xaml.cs">
+      <DependentUpon>KesAuftragErfassenView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Kes\KesDokumentView.xaml.cs">
+      <DependentUpon>KesDokumentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Kes\KesAuftragView.xaml.cs">
+      <DependentUpon>KesAuftragView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Kes\KesLeistungView.xaml.cs">
+      <DependentUpon>KesLeistungView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Kes\KesPraeventionView.xaml.cs">
+      <DependentUpon>KesPraeventionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KissView.cs" />
+    <Compile Include="LocalResources\Ba\BaGemeindeViewRes.Designer.cs">
+      <DependentUpon>BaGemeindeViewRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="LocalResources\Ba\BaLandViewRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaLandViewRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LocalResources\Ba\BaPlzViewRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaPlzViewRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LocalResources\Common\CommonGastrechtAnfragenViewRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommonGastrechtAnfragenViewRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LocalResources\Kes\KesDossiernachweisViewRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KesDossiernachweisViewRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LocalResources\Kes\KesKokesExportViewRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KesKokesExportViewRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LocalResources\Kes\KesPflegekinderaufsichtViewRes.Designer.cs">
+      <DependentUpon>KesPflegekinderaufsichtViewRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="LocalResources\Kes\KesMassnahmeViewRes.Designer.cs">
+      <DependentUpon>KesMassnahmeViewRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="LocalResources\Kes\KesDokumentViewRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KesDokumentViewRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LocalResources\Kes\KesAuftragViewRes.Designer.cs">
+      <DependentUpon>KesAuftragViewRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="LocalResources\Kes\KesLeistungViewRes.Designer.cs">
+      <DependentUpon>KesLeistungViewRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="LocalResources\Kes\KesPraeventionViewRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KesPraeventionViewRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LocalResources\Kes\KesVerlaufViewRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KesVerlaufViewRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LocalResources\Log\ServiceProcessErrorRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServiceProcessErrorRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Log\ServiceProcessErrorView.xaml.cs">
+      <DependentUpon>ServiceProcessErrorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LocalResources\Log\ServiceCallViewRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServiceCallViewRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Log\ServiceCallView.xaml.cs">
+      <DependentUpon>ServiceCallView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewBootstrapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewHelper.cs" />
+    <Compile Include="Vm\VmKlientenbudgetKategorieView.xaml.cs">
+      <DependentUpon>VmKlientenbudgetKategorieView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vm\VmKlientenbudgetEditorView.xaml.cs">
+      <DependentUpon>VmKlientenbudgetEditorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vm\VmPositionToFontWeightConverter.cs" />
+    <Compile Include="Vm\VmPositionSaldoCellTemplateSelector.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Kiss.BusinessLogic\Kiss.BusinessLogic.csproj">
+      <Project>{E70D5BFA-19A7-49CD-9C71-3DB46C8B111C}</Project>
+      <Name>Kiss.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.DbContext\Kiss.DbContext.csproj">
+      <Project>{A9733EC8-89E0-44A6-941D-A71868778675}</Project>
+      <Name>Kiss.DbContext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Interfaces\Kiss.Interfaces.csproj">
+      <Project>{936877A8-EC00-4267-8C62-344062912497}</Project>
+      <Name>Kiss.Interfaces</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Infrastructure\Kiss.Infrastructure.csproj">
+      <Project>{94D23DEF-0BEC-4EAC-B6A8-A2AB6B3A0CF1}</Project>
+      <Name>Kiss.Infrastructure</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.UI.Controls\Kiss.UI.Controls.csproj">
+      <Project>{41CABAC4-C031-4A83-AC36-0138FDA1BB6B}</Project>
+      <Name>Kiss.UI.Controls</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.UI.Theme\DevExpress.Xpf.Themes.Kiss.csproj">
+      <Project>{20ACD936-50C4-4693-8D09-8FF5A7B687AF}</Project>
+      <Name>DevExpress.Xpf.Themes.Kiss</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.UserInterface.ViewModel\Kiss.UserInterface.ViewModel.csproj">
+      <Project>{9DA4AA23-AD46-4FF7-9909-8D4EB864D2B8}</Project>
+      <Name>Kiss.UserInterface.ViewModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Utilities\Kiss.Utilities.csproj">
+      <Project>{B523447C-56F2-4283-9531-81E31F82F454}</Project>
+      <Name>Kiss.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LocalResources\Ba\BaGemeindeViewRes.fr.resx">
+      <DependentUpon>BaGemeindeViewRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Ba\BaGemeindeViewRes.it.resx">
+      <DependentUpon>BaGemeindeViewRes.resx</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Ba\BaGemeindeViewRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>BaGemeindeViewRes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Ba\BaLandViewRes.fr.resx">
+      <DependentUpon>BaLandViewRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Ba\BaLandViewRes.it.resx">
+      <DependentUpon>BaLandViewRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Ba\BaLandViewRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BaLandViewRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Ba\BaPlzViewRes.fr.resx">
+      <DependentUpon>BaPlzViewRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Ba\BaPlzViewRes.it.resx">
+      <DependentUpon>BaPlzViewRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Ba\BaPlzViewRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>BaPlzViewRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Common\CommonGastrechtAnfragenViewRes.fr.resx" />
+    <EmbeddedResource Include="LocalResources\Common\CommonGastrechtAnfragenViewRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CommonGastrechtAnfragenViewRes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesDossiernachweisViewRes.fr.resx">
+      <DependentUpon>KesDossiernachweisViewRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesDossiernachweisViewRes.it.resx">
+      <DependentUpon>KesDossiernachweisViewRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesDossiernachweisViewRes.resx">
+      <SubType>Resource</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>KesDossiernachweisViewRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesKokesExportViewRes.fr.resx">
+      <DependentUpon>KesKokesExportViewRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesKokesExportViewRes.it.resx">
+      <DependentUpon>KesKokesExportViewRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesKokesExportViewRes.resx">
+      <SubType>Resource</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>KesKokesExportViewRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesPflegekinderaufsichtViewRes.fr.resx">
+      <DependentUpon>KesPflegekinderaufsichtViewRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesPflegekinderaufsichtViewRes.it.resx">
+      <DependentUpon>KesPflegekinderaufsichtViewRes.resx</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesPflegekinderaufsichtViewRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>KesPflegekinderaufsichtViewRes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesMassnahmeViewRes.fr.resx">
+      <DependentUpon>KesMassnahmeViewRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesMassnahmeViewRes.it.resx">
+      <DependentUpon>KesMassnahmeViewRes.resx</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesMassnahmeViewRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>KesMassnahmeViewRes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesDokumentViewRes.fr.resx">
+      <DependentUpon>KesDokumentViewRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesDokumentViewRes.it.resx">
+      <DependentUpon>KesDokumentViewRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesDokumentViewRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>KesDokumentViewRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesAuftragViewRes.fr.resx">
+      <DependentUpon>KesAuftragViewRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesAuftragViewRes.it.resx">
+      <DependentUpon>KesAuftragViewRes.resx</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesAuftragViewRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>KesAuftragViewRes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesLeistungViewRes.fr.resx">
+      <DependentUpon>KesLeistungViewRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesLeistungViewRes.it.resx">
+      <DependentUpon>KesLeistungViewRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesLeistungViewRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>KesLeistungViewRes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesPraeventionViewRes.fr.resx">
+      <DependentUpon>KesPraeventionViewRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesPraeventionViewRes.it.resx">
+      <DependentUpon>KesPraeventionViewRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesPraeventionViewRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>KesPraeventionViewRes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesVerlaufViewRes.fr.resx">
+      <DependentUpon>KesVerlaufViewRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesVerlaufViewRes.it.resx">
+      <DependentUpon>KesVerlaufViewRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Kes\KesVerlaufViewRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>KesVerlaufViewRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Log\ServiceProcessErrorRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ServiceProcessErrorRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Log\ServiceCallViewRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ServiceCallViewRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Kiss.UI.ViewModel.Ba.BaAdresseVM.datasource" />
+    <None Include="Properties\DataSources\Kiss.UI.ViewModel.Ba.BaPersonVM.datasource" />
+    <None Include="Properties\DataSources\Kiss.UI.ViewModel.Ba.SearchBaPersonVM.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Fa\Controls\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Sys\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Ba\BaGemeindeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ba\BaLandView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ba\BaPlzView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Common\CommonGastrechtAnfragenView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Fa\FaAbfrageDokumentAblageView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Fa\FaDokumentAblageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fa\Timeline\FaTimelineEventDetailList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Fa\Timeline\FaTimelineEventBatch.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Fa\Timeline\FaTimelineEvent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Fa\Timeline\FaTimelinePeriod.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Fa\Timeline\FaTimelineSwimlaneView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Fa\FaKategorisierungView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Fa\Timeline\FaTimelineContainerView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Fa\Timeline\FaTimelineListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Fa\Timeline\FaTimelineView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Fs\FsAbfrageAuslastungGesamtView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Fs\FsReduktionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Kes\KesDossiernachweisView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Kes\KesKokesExportView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Kes\KesPflegekinderaufsichtErfassenView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Kes\KesPflegekinderaufsichtView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Kes\KesFachstelleMandatsfuehrendePersonView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Kes\KesFachstelleMassnahmeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Kes\KesVerlaufView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Kes\KesFachstelleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Kes\KesMassnahmeAuftragView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Kes\KesMandatsfuehrendePersonView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Kes\KesMassnahmeBerichtView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Kes\KesMassnahmeErfassenView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Kes\KesMassnahmeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Kes\KesAuftragErfassenView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Kes\KesDokumentView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Kes\KesAuftragView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Kes\KesLeistungView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Kes\KesPraeventionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Log\ServiceProcessErrorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Properties\DesignTimeResources.xaml" Condition="'$(DesignTime)'=='true' OR ('$(SolutionPath)'!='' AND Exists('$(SolutionPath)') AND '$(BuildingInsideVisualStudio)'!='true' AND '$(BuildingInsideExpressionBlend)'!='true')">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
+    </Page>
+    <Page Include="Log\ServiceCallView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vm\VmKlientenbudgetKategorieView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vm\VmKlientenbudgetEditorView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Falluebergabe.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ExcelDocument.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\WordDocument.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Batch.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\DateLabel.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\GenericDocument.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\AcrobatDocument.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

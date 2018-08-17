@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryIkGlaeubiger.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryIkGlaeubiger.SelectStatement" xml:space="preserve">
+    <value>SELECT 
+  IstGlaeubiger = CONVERT(BIT, 1),
+  IstElternteil = GLB.IstElternteil,
+  HatDaten = CONVERT(BIT, CASE WHEN EXISTS(
+    SELECT TOP 1 1 FROM dbo.IkForderung FD WITH(READUNCOMMITTED)
+    WHERE FD.IkRechtstitelID = GLB.IkRechtstitelID
+      AND FD.BaPersonID = GLB.BaPersonID
+    UNION ALL
+    SELECT TOP 1 1 FROM dbo.IkPosition FD WITH(READUNCOMMITTED)
+    INNER JOIN dbo.IkRechtstitelPosition RTP ON RTP.IkPositionID = FD.IkPositionID 
+    WHERE RTP.IkRechtstitelID = GLB.IkRechtstitelID
+      AND FD.BaPersonID = GLB.BaPersonID
+    UNION ALL
+    SELECT TOP 1 1 FROM dbo.IkPosition FD WITH(READUNCOMMITTED)
+    WHERE FD.Einmalig = 1 AND FD.IkRechtstitelID = GLB.IkRechtstitelID
+      AND FD.BaPersonID = GLB.BaPersonID
+    UNION ALL
+    SELECT TOP 1 1 FROM dbo.IkVerrechnungskonto FD WITH(READUNCOMMITTED)
+    WHERE FD.IkRechtstitelID = GLB.IkRechtstitelID
+      AND FD.BaPersonID = GLB.BaPersonID
+  ) THEN 1 ELSE 0 END),
+  HatDatenEltern = CONVERT(BIT, CASE WHEN EXISTS(
+    SELECT TOP 1 1 FROM dbo.IkForderung FD WITH(READUNCOMMITTED)
+    WHERE FD.IkRechtstitelID = GLB.IkRechtstitelID
+      AND FD.BaPersonID = GLB.BaPersonID
+  ) THEN 1 ELSE 0 END),
+  GLB.IkGlaeubigerID,  
+  GLB.IkRechtstitelID,  
+  GLB.BaPersonID,  
+  GLB.IkGlaeubigerStatusCode,
+  OLD_IkGlaeubigerStatusCode = GLB.IkGlaeubigerStatusCode,
+  Status = dbo.fnLOVText('IkGlaeubigerStatus', GLB.IkGlaeubigerStatusCode),
+  GLB.IkGlaeubigerTS,
+  PersonName = PRS.NameVorname + 
+    ISNULL(', '+CONVERT(VARCHAR, PRS.Geburtsdatum, 104)+'', ''),
+  AnzahlRT = (
+    SELECT COUNT(*) FROM dbo.IkGlaeubiger G WITH(READUNCOMMITTED)
+    LEFT JOIN dbo.IkRechtstitel R WITH(READUNCOMMITTED) ON R.IkRechtstitelID = G.IkRechtstitelID
+    LEFT JOIN dbo.FaLeistung L WITH(READUNCOMMITTED) ON L.FaLeistungID = R.FaLeistungID
+    WHERE L.FaFallID = {1}
+      AND (
+        -- Bei KKBB sollen nur Rechtstitel KKBB angezeigt werden
+        ({3} = 407 AND L.FaProzessCode = 407) OR
+        -- Bei ALBV und UeBH sollen nur Rechtstitel ALBV und UeBH angezeigt werden
+        ({3} IN (405, 406) AND L.FaProzessCode IN (405, 406) AND NOT R.IkRechtstitelGueltigBis IS NULL)
+      ) 
+      AND G.BaPersonID = GLB.BaPersonID
+      AND NOT R.IkRechtstitelID = {0}
+  ),
+  IstFallPerson = CONVERT(BIT, CASE WHEN GLB.BaPersonID = FAL.BaPersonID THEN 1 ELSE 0 END),
+  PersGeburtsDatum = dbo.fnGetAge(PRS.Geburtsdatum, GETDATE())
+FROM dbo.IkGlaeubiger GLB 
+  LEFT JOIN dbo.vwPerson      PRS WITH(READUNCOMMITTED) ON PRS.BaPersonID = GLB.BaPersonID 
+  LEFT JOIN dbo.IkRechtstitel RTT WITH(READUNCOMMITTED) ON RTT.IkRechtstitelID = GLB.IkRechtstitelID
+  LEFT JOIN dbo.FaLeistung    LST WITH(READUNCOMMITTED) ON LST.FaLeistungID = RTT.FaLeistungID
+  LEFT JOIN dbo.FaFall        FAL WITH(READUNCOMMITTED) ON FAL.FaFallID = LST.FaFallID
+WHERE GLB.IkRechtstitelID = {0}
+
+UNION ALL
+
+SELECT 
+  IstGlaeubiger = CONVERT(BIT, 0),
+  IstElternteil = CONVERT(BIT, 0),
+  HatDaten = CONVERT(BIT, 0),
+  HatDatenEltern = CONVERT(BIT, 0),
+  NULL,  
+  NULL,  
+  FFP.BaPersonID,  
+  NULL,  
+  NULL,  
+  NULL,
+  NULL,
+  PersonName = PRS.NameVorname + 
+    ISNull(', '+CONVERT(VARCHAR, PRS.Geburtsdatum, 104)+'', ''),
+  AnzahlRT = (
+    SELECT COUNT(*) FROM dbo.IkGlaeubiger G WITH(READUNCOMMITTED) 
+    LEFT JOIN dbo.IkRechtstitel R WITH(READUNCOMMITTED) ON R.IkRechtstitelID = G.IkRechtstitelID
+    LEFT JOIN dbo.FaLeistung L WITH(READUNCOMMITTED) ON L.FaLeistungID = R.FaLeistungID
+    WHERE L.FaFallID = {1}
+      AND (
+        -- Bei KKBB sollen nur Rechtstitel KKBB angezeigt werden
+        ({3} = 407 and L.FaProzessCode = 407) OR
+        -- Bei ALBV und UeBH sollen nur Rechtstitel ALBV und UeBH angezeigt werden
+        ({3} IN (405, 406) AND L.FaProzessCode IN (405, 406) AND NOT R.IkRechtstitelGueltigBis IS NULL)
+      ) 
+      AND G.BaPersonID = FFP.BaPersonID
+      AND NOT R.IkRechtstitelID = {0}
+  ),
+  IstFallPerson = CONVERT(BIT, CASE WHEN FFP.BaPersonID = FAL.BaPersonID THEN 1 ELSE 0 END),
+  PersGeburtsDatum = dbo.fnGetAge(PRS.Geburtsdatum, GETDATE())
+FROM dbo.FaFallPerson    FFP WITH(READUNCOMMITTED)
+  LEFT JOIN dbo.FaFall   FAL WITH(READUNCOMMITTED) ON FAL.FaFallID = FFP.FaFallID
+  LEFT JOIN dbo.vwPerson PRS WITH(READUNCOMMITTED) ON PRS.BaPersonID = FFP.BaPersonID 
+WHERE FFP.FaFallID = {1}
+  AND ({2}=1) 
+  AND NOT PRS.BaPersonID IN ( 
+    SELECT L.SchuldnerBaPersonID FROM dbo.IkRechtstitel R WITH(READUNCOMMITTED)
+    LEFT JOIN dbo.FaLeistung L WITH(READUNCOMMITTED) ON L.FaLeistungID = R.FaLeistungID
+    WHERE L.FaFallID = {1} 
+      AND L.FaProzessCode = {3}
+      AND NOT L.SchuldnerBaPersonID IS NULL
+    UNION ALL
+    SELECT DISTINCT Q.BaPersonID FROM dbo.IkGlaeubiger Q WITH(READUNCOMMITTED)
+    WHERE Q.IkRechtstitelID = {0}
+  )
+ORDER BY
+  IstGlaeubiger DESC,
+  IstFallPerson DESC,
+  PersGeburtsDatum DESC,
+  PersonName ASC</value>
+  </data>
+  <metadata name="qryStatus.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>148, 17</value>
+  </metadata>
+</root>

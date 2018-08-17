@@ -1,0 +1,13 @@
+﻿SET NOCOUNT ON
+BEGIN TRANSACTION
+GO
+DELETE FROM [BgGruppe_BFSFrage]
+GO
+SET IDENTITY_INSERT [BgGruppe_BFSFrage] ON
+GO
+-- INSERT INTO [BgGruppe_BFSFrage] ([BgGruppeCode], [Variable]) VALUES (1, '10.0.1')
+GO
+SET IDENTITY_INSERT [BgPositionsart] OFF
+GO
+COMMIT
+GO  

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://ws.salary.solutionfactory.ch" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ax23="http://response.beans.salary.solutionfactory.ch/xsd" xmlns:ax21="http://query.beans.salary.solutionfactory.ch/xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://ws.salary.solutionfactory.ch">
+    <wsdl:documentation>
+		ProInfirmis Salary WebService (KiSS - BDO - ABACUS)
+	</wsdl:documentation>
+    <wsdl:types>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://query.beans.salary.solutionfactory.ch/xsd">
+            <xs:complexType name="QueryEmployeeRequest">
+                <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="allKnownEmployees" nillable="false" type="xs:long"/>
+                    <xs:element minOccurs="1" name="mandator" type="xs:int"/>
+                    <xs:element minOccurs="1" name="division" type="xs:int"/>
+                    <xs:element minOccurs="1" name="monthRecordDate" type="xs:int"/>
+                    <xs:element minOccurs="1" name="passwordAbacus" nillable="false" type="xs:string"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="queryEmployees" nillable="false" type="xs:long"/>
+                    <xs:element minOccurs="1" name="usernameAbacus" nillable="false" type="xs:string"/>
+                    <xs:element minOccurs="1" name="yearRecordDate" type="xs:int"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="QueryAllEmployeesRequest">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="division" type="xs:int"/>
+                    <xs:element minOccurs="1" name="mandator" type="xs:int"/>
+                    <xs:element minOccurs="1" name="monthRecordDate" type="xs:int"/>
+                    <xs:element minOccurs="1" name="passwordAbacus" nillable="false" type="xs:string"/>
+                    <xs:element minOccurs="1" name="usernameAbacus" nillable="false" type="xs:string"/>
+                    <xs:element minOccurs="1" name="yearRecordDate" type="xs:int"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://response.beans.salary.solutionfactory.ch/xsd">
+            <xs:complexType name="SalaryRecord">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="employeeData" nillable="false" type="ax23:EmployeeData"/>
+                    <xs:element minOccurs="1" name="salaryAmounts" nillable="false" type="ax23:SalaryAmounts"/>
+                    <xs:element minOccurs="1" name="targetTime" nillable="false" type="ax23:TargetTime"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="EmployeeData">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="CCenter1" type="xs:long"/> <!-- LOHN_LEN.CCENTER_1 -->
+                    <xs:element minOccurs="1" name="EMail" nillable="false" type="xs:string"/> <!--PUBL_ADR.EMAIL  -->
+	                <xs:element minOccurs="1" name="accountA1" type="xs:long"/> <!-- LOHN_LEN.ACCOUNT_A1 -->
+                    <xs:element minOccurs="1" name="birthday" nillable="true" type="xs:date"/> <!-- LOHN_LEN.BIRTHDAY -->
+                    <xs:element minOccurs="1" name="city" nillable="false" type="xs:string"/> <!-- PUBL_ADR.ORT -->
+                    <xs:element minOccurs="1" name="country" nillable="false" type="xs:string"/> <!-- PUBL_ADR.LAND -->
+                    <xs:element minOccurs="1" name="dateIn" nillable="false" type="xs:date"/> <!-- LOHN_LEN.DATE_IN -->
+                    <xs:element minOccurs="1" name="dateOut" nillable="true" type="xs:date"/> <!-- LOHN_LEN.DATE_OUT -->
+                    <xs:element minOccurs="1" name="division" type="xs:int"/> <!-- LOHN_LPE.GB  -->
+                    <xs:element minOccurs="1" name="employeeNumber" type="xs:long"/> <!-- LOHN_LEN.EMPL_NR -->
+                    <xs:element minOccurs="1" name="firstName" nillable="false" type="xs:string"/> <!-- PUBL_ADR.VORNAME -->
+                    <xs:element minOccurs="1" name="functionId"  nillable="false" type="xs:string"/> <!-- LOHN_LEN.CODE_1 -->
+                    <xs:element minOccurs="1" name="functionTitle" nillable="false" type="xs:string"/> <!-- LOHN_LEN.CODE_1 -->
+                    <xs:element minOccurs="1" name="languageCode" nillable="false" type="xs:string"/> <!-- LOHN_LEN.LANGUAGE_CODE -->
+                    <xs:element minOccurs="1" name="name" nillable="false" type="xs:string"/> <!-- PUBL_ADR.NAME -->
+                    <xs:element minOccurs="1" name="national1" type="xs:long"/> <!-- LOHN_LEN.NATIONAL_1 -->
+                    <xs:element minOccurs="1" name="phone1" nillable="false" type="xs:string"/> <!-- PUBL_ADR.TEL -->
+                    <xs:element minOccurs="1" name="phone2" nillable="false" type="xs:string"/> <!-- PUBL_ADR.TEL2 -->
+                    <xs:element minOccurs="1" name="postalCode" nillable="false" type="xs:string"/> <!-- PUBL_ADR.PLZ -->
+                    <xs:element minOccurs="1" name="postfachUndNr" nillable="false" type="xs:string"/> <!-- PUBL_ADR.ZEILE3 -->                    
+                    <xs:element minOccurs="1" name="project1" type="xs:long"/> <!-- LOHN_LEN.PROJECT_1 -->                   
+                    <xs:element minOccurs="1" name="qualificationNumber" type="xs:int"/> <!-- LOHN_LEN.NR_3 -->
+                    <xs:element minOccurs="1" name="qualificationTitle" nillable="false" type="xs:string"/> <!-- LOHN_LEN.NR_3 -->
+                    <xs:element minOccurs="1" name="sex" nillable="false" type="xs:string"/> <!-- LOHN_LEN.SEX -->
+                    <xs:element minOccurs="1" name="strasseHausNr" nillable="false" type="xs:string"/> <!-- PUBL_ADR.ZEILE2 -->                    
+                    <xs:element minOccurs="1" name="telefax" nillable="false" type="xs:string"/> <!-- PUBL_ADR.TELFAX -->
+                    <xs:element minOccurs="1" name="telex" nillable="false" type="xs:string"/> <!-- PUBL_ADR.TELEX -->
+                    <xs:element minOccurs="1" name="timeAxisMonth" type="xs:int"/> <!-- LOHN_LEN.LPE_MONTH -->
+                    <xs:element minOccurs="1" name="timeAxisYear" type="xs:int"/> <!-- LOHN_LEN.LPE_YEAR -->
+                    <xs:element minOccurs="1" name="type" nillable="false" type="xs:string"/> <!-- LOHN_LEN.TYPE -->
+                    <xs:element minOccurs="1" name="zusatz" nillable="false" type="xs:string"/> <!-- PUBL_ADR.ZEILE1 -->                    
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="SalaryAmounts">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="amount_11" type="xs:float"/> <!-- LOHN_LEM.AMOUNT_11 -->
+                    <xs:element minOccurs="1" name="amount_12" type="xs:float"/> <!-- LOHN_LEM.AMOUNT_12 -->
+                    <xs:element minOccurs="1" name="amount_13" type="xs:float"/> <!-- LOHN_LEM.AMOUNT_13 -->
+                    <xs:element minOccurs="1" name="amount_17" type="xs:float"/> <!-- LOHN_LEM.AMOUNT_17 -->
+                    <xs:element minOccurs="1" name="amount_3" type="xs:float"/> <!-- LOHN_LEM.AMOUNT_3 -->
+                    <xs:element minOccurs="1" name="amount_51" type="xs:float"/> <!-- LOHN_LEM.AMOUNT_51, Stundenlohn BK 1 -->
+                    <xs:element minOccurs="1" name="amount_52" type="xs:float"/> <!-- LOHN_LEM.AMOUNT_52, Stundenlohn BK 2 -->
+                    <xs:element minOccurs="1" name="amount_53" type="xs:float"/> <!-- LOHN_LEM.AMOUNT_53, Stundenlohn BK 3 -->
+                    <xs:element minOccurs="1" name="amount_54" type="xs:float"/> <!-- LOHN_LEM.AMOUNT_54, Stundenlohn BK 4 -->
+					          <xs:element minOccurs="1" name="amount_55" type="xs:float"/> <!-- LOHN_LEM.AMOUNT_55, Stundenlohn BK 5 -->
+                    <xs:element minOccurs="1" name="amount_56" type="xs:float"/> <!-- LOHN_LEM.AMOUNT_56, Stundenlohn BK 6 -->
+                    <xs:element minOccurs="1" name="amount_70" nillable="true" type="xs:date"/> <!-- LOHN_LEM.AMOUNT_70 (als Datum konvertiert, kann null sein) -->
+                    <xs:element minOccurs="1" name="amount_71" type="xs:float"/> <!-- LOHN_LEM.AMOUNT_71 -->
+                    <xs:element minOccurs="1" name="amount_72" nillable="true" type="xs:date"/> <!-- LOHN_LEM.AMOUNT_72 (als Datum konvertiert, kann null sein) -->
+                    <xs:element minOccurs="1" name="amount_73" type="xs:float"/> <!-- LOHN_LEM.AMOUNT_73 -->
+                    <xs:element minOccurs="1" name="amount_74" nillable="true" type="xs:date"/> <!-- LOHN_LEM.AMOUNT_74 (als Datum konvertiert, kann null sein) -->
+                    <xs:element minOccurs="1" name="amount_75" type="xs:float"/> <!-- LOHN_LEM.AMOUNT_75 -->
+                    <xs:element minOccurs="1" name="amount_76" type="xs:float"/> <!-- LOHN_LEM.AMOUNT_76 -->
+                    <xs:element minOccurs="1" name="amount_77" nillable="true" type="xs:date"/> <!-- LOHN_LEM.AMOUNT_77 (als Datum konvertiert, kann null sein) -->
+                    <xs:element minOccurs="1" name="timeAxisMonth" type="xs:int"/> <!-- LOHN_LEM.MONTH -->
+                    <xs:element minOccurs="1" name="timeAxisYear" type="xs:int"/> <!-- LOHN_LEM.YEAR -->
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TargetTime">
+                <xs:sequence>
+                    <xs:element minOccurs="1" name="april" type="xs:float"/> <!-- LOHN_LTV.VALUE_4 -->
+                    <xs:element minOccurs="1" name="august" type="xs:float"/> <!-- LOHN_LTV.VALUE_8 -->
+                    <xs:element minOccurs="1" name="december" type="xs:float"/> <!-- LOHN_LTV.VALUE_12 -->
+                    <xs:element minOccurs="1" name="february" type="xs:float"/> <!-- LOHN_LTV.VALUE_2 -->
+                    <xs:element minOccurs="1" name="january" type="xs:float"/> <!-- LOHN_LTV.VALUE_1 -->
+                    <xs:element minOccurs="1" name="july" type="xs:float"/> <!-- LOHN_LTV.VALUE_7 -->
+                    <xs:element minOccurs="1" name="june" type="xs:float"/> <!-- LOHN_LTV.VALUE_6 -->
+                    <xs:element minOccurs="1" name="march" type="xs:float"/> <!-- LOHN_LTV.VALUE_3 -->
+                    <xs:element minOccurs="1" name="may" type="xs:float"/> <!-- LOHN_LTV.VALUE_5 -->
+                    <xs:element minOccurs="1" name="november" type="xs:float"/> <!-- LOHN_LTV.VALUE_11 -->
+                    <xs:element minOccurs="1" name="october" type="xs:float"/> <!-- LOHN_LTV.VALUE_10 -->
+                    <xs:element minOccurs="1" name="september" type="xs:float"/> <!-- LOHN_LTV.VALUE_9 -->
+                    <xs:element minOccurs="1" name="timeAxisYear" type="xs:int"/> <!-- LOHN_LTV.YEAR -->
+                    <xs:element minOccurs="1" name="workArea" type="xs:int"/> <!-- LOHN_LTV.VALUE_14 -->
+                    <xs:element minOccurs="1" name="yearTotal" type="xs:float"/> <!-- LOHN_LTV.VALUE_13 -->
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema xmlns:ax24="http://response.beans.salary.solutionfactory.ch/xsd" xmlns:ax22="http://query.beans.salary.solutionfactory.ch/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://ws.salary.solutionfactory.ch">
+            <xs:import namespace="http://query.beans.salary.solutionfactory.ch/xsd"/>
+            <xs:import namespace="http://response.beans.salary.solutionfactory.ch/xsd"/>
+            <xs:element name="getEmployeeData">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="1" name="queryEmployeeRequest" nillable="false" type="ax21:QueryEmployeeRequest"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getEmployeeDataResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" minOccurs="1" name="return" nillable="false" type="ax23:SalaryRecord"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getAllEmployeeData">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="1" name="queryAllEmployeesRequest" nillable="false" type="ax21:QueryAllEmployeesRequest"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getAllEmployeeDataResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" minOccurs="1" name="return" nillable="false" type="ax23:SalaryRecord"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="getAllEmployeeDataRequest">
+        <wsdl:part name="parameters" element="ns:getAllEmployeeData"/>
+    </wsdl:message>
+    <wsdl:message name="getAllEmployeeDataResponse">
+        <wsdl:part name="parameters" element="ns:getAllEmployeeDataResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getEmployeeDataRequest">
+        <wsdl:part name="parameters" element="ns:getEmployeeData"/>
+    </wsdl:message>
+    <wsdl:message name="getEmployeeDataResponse">
+        <wsdl:part name="parameters" element="ns:getEmployeeDataResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="EmployeeQueryPortType">
+        <wsdl:operation name="getAllEmployeeData">
+            <wsdl:input message="ns:getAllEmployeeDataRequest" wsaw:Action="urn:getAllEmployeeData"/>
+            <wsdl:output message="ns:getAllEmployeeDataResponse" wsaw:Action="urn:getAllEmployeeDataResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getEmployeeData">
+            <wsdl:input message="ns:getEmployeeDataRequest" wsaw:Action="urn:getEmployeeData"/>
+            <wsdl:output message="ns:getEmployeeDataResponse" wsaw:Action="urn:getEmployeeDataResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="EmployeeQuerySoap11Binding" type="ns:EmployeeQueryPortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="getAllEmployeeData">
+            <soap:operation soapAction="urn:getAllEmployeeData" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getEmployeeData">
+            <soap:operation soapAction="urn:getEmployeeData" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="EmployeeQuery">
+        <wsdl:port name="EmployeeQueryHttpSoap11Endpoint" binding="ns:EmployeeQuerySoap11Binding">
+            <soap:address location="http://localhost:8181/ProInfirmisSalary/services/EmployeeQuery.EmployeeQueryHttpSoap11Endpoint/"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

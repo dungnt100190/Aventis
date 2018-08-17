@@ -1,0 +1,12 @@
+CREATE TABLE [dbo].[XIcon](
+	[XIconID] [int] NOT NULL,
+	[Name] [varchar](100) NOT NULL,
+	[Icon] [image] NULL,
+	[XIconTS] [timestamp] NOT NULL,
+ CONSTRAINT [PK_XICON] PRIMARY KEY CLUSTERED 
+(
+	[XIconID] ASC
+) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO

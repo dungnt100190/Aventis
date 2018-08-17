@@ -1,0 +1,79 @@
+﻿<View:KissView x:Class="Kiss.UI.View.Wsh.WshFalluebersichtAbzugView"
+               xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+               xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+               xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+               xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+               xmlns:View="clr-namespace:Kiss.UI.View"
+               xmlns:Controls="clr-namespace:Kiss.UI.Controls;assembly=Kiss.UI.Controls"
+               xmlns:Constant="clr-namespace:Kiss.UI.Controls.Constant;assembly=Kiss.UI.Controls"
+               xmlns:dxg="clr-namespace:DevExpress.Xpf.Grid;assembly=DevExpress.Xpf.Grid.v10.2" 
+               xmlns:Wsh="clr-namespace:Kiss.UI.ViewModel.Wsh;assembly=Kiss.UI.ViewModel" mc:Ignorable="d"
+               d:DesignHeight="500"
+               d:DesignWidth="800">
+
+    <View:KissView.Resources>
+        <Wsh:WshFalluebersichtAbzugVM x:Key="viewModel" />
+    </View:KissView.Resources>
+
+    <Grid Name="panRoot" DataContext="{StaticResource ResourceKey=viewModel}" Margin="{x:Static Constant:LayoutConstant.MarginOuterControl}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            
+            <Controls:KissLabel x:Name="fallName" />
+            <Controls:KissCheckBox Content="inkl. abgeschlossene" IsChecked="{Binding Path=IsAbgeschlosseneIncluded, Mode=TwoWay}" />
+            
+        </Grid>
+        
+        <!-- DataGrid -->
+        <Controls:KissGridDevX Grid.Row="1"
+                               Grid.Column="0"
+                               Name="grdFalluebersichtAbzug"
+                               DataSource="{Binding Path=EntityList}"
+                               SelectedItem="{Binding Path=SelectedEntity, Mode=TwoWay}"
+                               AutoExpandAllGroups="True"
+                               >
+            <Controls:KissGridDevX.Columns>
+                <dxg:GridColumn FieldName="LeistungDisplayText" Header="L" GroupIndex="0" />
+                <dxg:GridColumn FieldName="KategorieText" Header="Kategorie" Width="Auto" />
+                <dxg:GridColumn FieldName="Koa" Header="KOA" Width="50" FixedWidth="True" />
+                <dxg:GridColumn FieldName="Text" Header="Text" Width="Auto" />
+                <dxg:GridColumn FieldName="Betrifft" Header="Betrifft" Width="Auto" />
+
+                <Controls:GridColumnDate FieldName="DatumVon" Header="gültig von" DisplayFormat="MMM yyyy" Width="Auto" />
+                <Controls:GridColumnDate FieldName="DatumBis" Header="gültig bis" DisplayFormat="MMM yyyy" Width="Auto" />
+
+                <Controls:GridColumnBetrag FieldName="Saldo" Header="Saldo" Width="Auto" />
+                <Controls:GridColumnBetrag FieldName="BetragMonatlich" Header="monatlich" Width="Auto" />
+                <Controls:GridColumnProzent FieldName="PercentageGBL" Header="% GBL" Width="Auto"/>
+                
+                <Controls:GridColumnDate FieldName="AbschlussDatum" Header="Abschluss" Width="Auto" />
+                <Controls:GridColumnLookUp FieldName="WshAbzugAbschlussAktionCode" ItemsSource="{Binding Path=AbschlussAktion}" Header="Abschluss" Width="Auto"/>
+            </Controls:KissGridDevX.Columns>
+            <Controls:KissGridDevX.View>
+                <dxg:TableView Name="grvFalluebersichtAbzug"
+                               NavigationStyle="Row"
+                               AutoWidth="True"
+                               ShowGroupPanel="False"
+                               FocusedRow="{Binding Path=SelectedEntity, Mode=TwoWay}"
+                               />
+            </Controls:KissGridDevX.View>
+        </Controls:KissGridDevX>
+
+        <!-- Details -->
+        <Grid Grid.Row="2" Name="panDetail" Margin="{x:Static Constant:LayoutConstant.MarginMainControlTop}" >
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
+                <Controls:KissButton x:Name="btnGotoGrundbudget" Content="> Grundbudget" Width="110" Click="btnGotoGrundbudget_Click"/>
+                <Controls:KissButton x:Name="btnSchliessen" Content="Schliessen" Width="90" Margin="10, 0, 0, 0" Click="btnSchliessen_Click" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</View:KissView>

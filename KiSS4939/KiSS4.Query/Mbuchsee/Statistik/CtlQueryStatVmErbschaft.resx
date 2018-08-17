@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>--Analog Fallentwicklung nach Modulen
+DECLARE @Fall TABLE (
+      UserID    INT,
+      AtBegin   INT,
+      Opened    INT,
+      Closed    INT,
+      Reason    INT)
+
+DECLARE @User TABLE (
+      UserID    int,
+      UserName  VARCHAR(100),
+      AtBegin   INT,
+      Opened    INT,
+      Closed    INT,
+      Code      INT)
+
+DECLARE @Gruende TABLE(
+      ID$            INT IDENTITY(1,1) PRIMARY KEY,
+      Sortkey$       INT,
+      SAR            VARCHAR(100),
+      Abschlussgrund VARCHAR(100),
+      Anzahl         INT)
+
+DECLARE @DateFrom     DATETIME,
+        @DateTo       DATETIME,
+        @DateFuture   DATETIME,
+        @ModulCode    INT
+
+SET @DateFrom   = {edtDatumVon}
+SET @DateTo     = {edtDatumBis}
+SET @DateFuture = '99991231'
+
+SET @DateTo = DATEADD(s,-1,DATEADD(d,1,@DateTo)) -- unmittelbar vor Mitternacht
+
+-- @Fall: Vormundschaft (nur Erbschaft) im betrachteten Zeitraum
+INSERT @Fall
+SELECT FAL.UserID,
+       AtBegin = case when DatumVon &lt;  @DateFrom then 1 else 0 end,
+       Opened  = case when DatumVon &gt;= @DateFrom then 1 else 0 end,
+       Closed  = case when isNull(DatumBis,@DateFuture) &lt;= @DateTo   then 1 else 0 end,
+       FAL.AbschlussGrundCode
+FROM   dbo.FaLeistung     FAL WITH (READUNCOMMITTED)
+  INNER JOIN dbo.BaPerson PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = FAL.BaPersonID
+                                                    AND PRS.Testperson = 0
+WHERE DatumVon &lt;= @DateTo 
+  AND ISNULL(DatumBis,@DateFuture) &gt;= @DateFrom 
+  AND ISNULL(@ModulCode, ModulID) = ModulID 
+  AND FAL.ModulID = 5     --Vormundschaftsmodul
+  AND FAL.FaProzessCode = 503 --Erbschaft
+
+
+-- Gruppierung nach User
+INSERT @User
+SELECT F.UserID,
+       UserName = null,
+       AtBegin  = sum(F.AtBegin),
+       Opened   = sum(F.Opened),
+       Closed   = sum(F.Closed),
+       Code = 3
+FROM   @Fall F
+GROUP BY F.UserID
+ORDER BY F.UserID
+
+-- ModulTxt, OrgName, UserName nachtragen (separat wegen Performance)
+UPDATE @User
+SET    UserName  = USR.LastName + isnull(', ' + USR.FirstName,'')
+FROM   @User U
+  INNER JOIN dbo.XUser USR WITH (READUNCOMMITTED) ON USR.UserID = U.UserID
+
+-- 2. Leerzeile
+INSERT @User (Code)
+SELECT Code = 4
+
+-- 2 Totalzeile
+INSERT @User
+SELECT UserID = NULL,
+       UserName = NULL,
+       AtBegin  = SUM(AtBegin),
+       Opened   = SUM(Opened),
+       Closed   = SUM(Closed),
+       Code = 7
+FROM   @User
+WHERE  Code = 3
+
+-- Resultat aufbereiten
+SELECT SAR       = CASE Code
+                     WHEN 3 THEN U.UserName
+                     WHEN 7 THEN 'Total '
+                   ELSE ''
+                   END,
+       [Aktuelle Fälle Beginn] = U.AtBegin,
+       [Aufgenommene Fälle]    = U.Opened,
+       [Total Bearbeitet]      = U.AtBegin + U.Opened,
+       [Abgeschlossene Fälle]  = U.Closed,
+       [Aktuelle Fälle Ende]   = U.AtBegin + U.Opened - U.Closed
+FROM   @User U
+ORDER BY U.Code, U.UserName
+
+---------------------------------
+-------- Liste 2: Abschlussgründe
+---------------------------------
+
+------ SAR
+INSERT INTO  @Gruende
+SELECT Reason,
+       SAR    = MAX(USR.LastName) + isnull(', ' + MAX(USR.FirstName),''),
+       Grund  = dbo.fnLovText('VmErbschaftAbschlussgrund', FAL.Reason),
+       Anzahl = COUNT(*)
+FROM @Fall             FAL
+  INNER JOIN dbo.XUser USR WITH (READUNCOMMITTED) ON USR.UserID = FAL.UserID
+WHERE Reason IS NOT NULL
+GROUP BY FAL.UserID, Reason
+ORDER BY 2
+
+------ Total Grund
+INSERT INTO  @Gruende
+SELECT Reason,
+       'Total',
+       Grund  = dbo.fnLovText('VmErbschaftAbschlussgrund', FAL.Reason),
+       Anzahl = COUNT(*)
+FROM @Fall         FAL
+  INNER JOIN dbo.XUser USR WITH (READUNCOMMITTED) ON USR.UserID = FAL.UserID
+WHERE Reason IS NOT NULL
+GROUP BY Reason
+
+------ Leerzeile nach Total Grund
+INSERT INTO  @Gruende
+SELECT Reason, NULL, NULL, NULL
+FROM @Fall         FAL
+  INNER JOIN dbo.XUser USR WITH (READUNCOMMITTED) ON USR.UserID = FAL.UserID
+WHERE Reason IS NOT NULL
+GROUP BY Reason
+
+------ Total 
+INSERT INTO  @Gruende
+SELECT 99999,
+       'Total',
+       NULL,
+       Anzahl = (SELECT COUNT(*) 
+                 FROM @Fall FAL  
+                   INNER JOIN dbo.XUser USR WITH (READUNCOMMITTED) ON USR.UserID = FAL.UserID 
+                 WHERE Reason IS NOT NULL)
+
+------ Leerzeile nach Total
+INSERT INTO  @Gruende SELECT 8888, NULL, NULL, NULL
+
+SELECT SAR, Abschlussgrund, Anzahl 
+FROM @Gruende
+ORDER BY Sortkey$, ID$</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="xDocument.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAF1JREFUOE9jZAAC
+        Y2Pj/yAaGzh79iwjhjhIw///MzGwmJjYfxDGqSEtjeE/MgYpBhmEoYmQDSANKM7GpQHZmVg1oDsJxgdp
+        pI4N2EIKJjbqJLIiDqSJEMaVovGKAwBnM3PWBP8PfwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="edtDatumBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFVJREFUOE9jZAAC
+        Y2Pj/yCaEDh79iwjWA1MAzaNWOVAgsRguAuIcRKKGmROQwMD3D/IbKwaQApgitBp6mgAeYokG4abBmT/
+        YKQ3smKapLREKFkjywMAd9eDN3Z9MMsAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="edtDatumVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFVJREFUOE9jZAAC
+        Y2Pj/yCaEDh79iwjWA1MAzaNWOVAgsRguAuIcRKKGmROQwMD3D/IbKwaQApgitBp6mgAeYokG4abBmT/
+        YKQ3smKapLREKFkjywMAd9eDN3Z9MMsAAAAASUVORK5CYII=
+</value>
+  </data>
+</root>

@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>DECLARE @DatumVon DATETIME;
+DECLARE @DatumBis DATETIME;
+--- SET @DatumVon = {edtDatumVon.EditValue} ;
+--- SET @DatumBis = {edtDatumBis.EditValue};
+
+DECLARE @PersonenSuche BIT;
+SET @PersonenSuche = 0;
+--- SET @PersonenSuche = 1; -- {edtWhSucheKlientX.LookupID}
+--- SET @PersonenSuche = 1; -- {edtPersonenNr.EditValue}
+
+DECLARE @OrgGruppeID INT;
+--- SET @OrgGruppeID = {ctlOrgUnitTeamUser.SucheGruppe};
+
+DECLARE @TeamID INT;
+--- SET @TeamID = {ctlOrgUnitTeamUser.SucheTeam};
+
+DECLARE @BaInstitutionID INT;
+--- SET @BaInstitutionID = {edtSucheInstitution.LookupID};
+
+DECLARE @Result TABLE
+(
+  KbBuchungBruttoID INT,
+  BgPositionID INT,
+  KbBuchungStatuscode INT,
+  FaellikeitsDatum DATETIME,
+  FaFallID INT,
+  FallBaPersonID INT,
+  BgBudgetID INT,
+  BgFinanzplanID INT,
+  BaPersonID INT,
+  DetailBuchungstext VARCHAR(300),
+  Buchungstext VARCHAR(300),
+  KontoNr INT,
+  DisplayText VARCHAR(100),
+  DatumEffektiv DATETIME,
+  Betrag MONEY,
+  BetragEffektiv MONEY,
+  VerwPeriodeVon DATETIME,
+  VerwPeriodeBis DATETIME,
+  SZ VARCHAR(100),
+  Team VARCHAR(100),
+  SA VARCHAR(100),
+  FaLeistungID INT,
+  Budget VARCHAR(5),
+  Dritte BIT,
+  Kreditor VARCHAR(500)
+);
+
+;WITH Umbuchungen
+(
+  KbBuchungBruttoID,
+  NeubuchungVonKbBuchungBruttoID,
+  KbBuchungBruttoID_ORIG,
+  KbBuchungBruttoPersonID,
+  KontoNr,
+  BaPersonID,
+  Betrag,
+  VerwPeriodeVon,
+  VerwPeriodeBis,
+  Buchungstext,
+  FaLeistungID
+)
+AS
+(
+  SELECT
+    KBB.KbBuchungBruttoID,
+    KBB.NeubuchungVonKbBuchungBruttoID,
+    KBB.KbBuchungBruttoID,
+    KBP.KbBuchungBruttoPersonID,
+    KOS.KontoNr,
+    KBP.BaPersonID,
+    ABS(KBP.Betrag),
+    KBP.VerwPeriodeVon,
+    KBP.VerwPeriodeBis,
+    KBP.Buchungstext,
+    KBB.FaLeistungID
+  FROM dbo.KbBuchungBruttoPerson      KBP WITH(READUNCOMMITTED)
+    INNER JOIN dbo.KbBuchungBrutto    KBB WITH(READUNCOMMITTED) ON KBB.KbBuchungBruttoID = KBP.KbBuchungBruttoID
+    INNER JOIN dbo.FaLeistung         LEI	WITH(READUNCOMMITTED) ON LEI.FaLeistungID = KBB.FaLeistungID AND LEI.ModulID = 3 -- W
+    INNER JOIN dbo.FaFall             FAL	WITH(READUNCOMMITTED) ON LEI.FaFallID = FAL.FaFallID
+    INNER JOIN dbo.vwUser             USR WITH(READUNCOMMITTED) ON FAL.UserID = USR.UserID
+---	AND ({edtAktiveW.Checked}   = 0 OR LEI.DatumBis IS NULL OR LEI.DatumBis &gt;= GetDate())
+--- AND ({edtInaktiveW.Checked} = 0 OR LEI.DatumBis IS NOT NULL AND LEI.DatumBis &lt; GetDate())
+    INNER JOIN dbo.BgKostenart		    KOS WITH(READUNCOMMITTED) ON KOS.BgKostenartID = KBB.BgKostenartID
+    OUTER APPLY dbo.fnBruttoToNettos(KBP.KbBuchungBruttoPersonID, KBP.BgPositionID, KBB.Betrag, KBB.ValutaDatum) NET
+    OUTER APPLY (SELECT KbBuchungStatusCode = CASE
+                                                WHEN KBB.KbBuchungStatusCode = 8 -- Stornierter Bruttobeleg
+                                                  THEN KBB.KbBuchungStatusCode	-- Wir haben eine Stornobuchung gefunden (Stornierter Original-Beleg oder den STO-Beleg), d.h. wir wollen den Brutto-Status anzeigen, unabhängig vom Netto-Status
+                                                ELSE
+                                                  CASE
+                                                    WHEN NET.maxStatusCode IS NOT NULL THEN NET.maxStatusCode
+                                                    ELSE KBB.KbBuchungStatusCode
+                                                  END
+                                              END) STA
+  WHERE STA.KbBuchungStatusCode &gt; 5
+    AND STA.KbBuchungStatusCode NOT IN (7, 8, 9)
+    AND KBP.Betrag &lt;= $0.0 -- Ausgaben
+    AND ({0} IS NULL OR KOS.KontoNr NOT IN (SELECT SplitValue FROM [dbo].[fnSplitStringToValues]({0}, ',', 0))) -- verfügbar
+    AND ({1} IS NULL OR KOS.KontoNr     IN (SELECT SplitValue FROM [dbo].[fnSplitStringToValues]({1}, ',', 0))) -- zugeteilt
+--- AND FAL.FaFallID = {edtFaFallID.EditValue}
+--- AND LEI.UserID = {ctlOrgUnitTeamUser.SucheUserID.LookupID}
+--- AND LEI.BaPersonID = {edtWhSucheKlientX.LookupID}
+--- AND KBP.BaPersonID = {edtPersonenNr.EditValue}
+    --AND FAL.FaFallID = 66796 -- Test
+    --AND LEI.UserID = 1034 -- Test
+    AND ((@OrgGruppeID IS NULL AND @TeamID IS NULL) OR USR.OrgUnitID IN (SELECT OrgUnitID FROM dbo.fnOrgUnitsOfTeam(@OrgGruppeID,@TeamID)))
+
+  UNION ALL
+
+  SELECT 
+    KBB.KbBuchungBruttoID,
+    KBB.NeubuchungVonKbBuchungBruttoID,
+    UMB.KbBuchungBruttoID_ORIG,
+    UMB.KbBuchungBruttoPersonID,
+    UMB.KontoNr,
+    UMB.BaPersonID,
+    UMB.Betrag,
+    UMB.VerwPeriodeVon,
+    UMB.VerwPeriodeBis,
+    UMB.Buchungstext,
+    UMB.FaLeistungID
+  FROM KbBuchungBrutto KBB WITH (READUNCOMMITTED)
+    INNER JOIN Umbuchungen UMB ON UMB.NeubuchungVonKbBuchungBruttoID = KBB.KbBuchungBruttoID
+) -- /Umbuchungen
+-- Temporäre Tabelle verwenden, da zwei Result-Sets zurückgegeben werden
+INSERT INTO @Result
+  SELECT
+    KbBuchungBruttoID   = UMB.KbBuchungBruttoID_ORIG,
+	  BgPositionID        = KBP_UMB.BgPositionID,
+	  KbBuchungStatuscode = NET.maxStatuscode,
+	  FaellikeitsDatum    = ISNULL(NET.DatumEffektiv, KBB.ValutaDatum),
+	  FaFallID            = FAL.FaFallID,
+	  FallBaPersonID      = FAL.BaPersonID,
+	  BgBudgetID          = BUD.BgBudgetID,
+	  BgFinanzplanID      = BUD.BgFinanzplanID,
+	  BaPersonID          = UMB.BaPersonID,
+	  DetailBuchungstext  = UMB.Buchungstext,
+	  Buchungstext        = POS.Buchungstext,
+	  KontoNr             = UMB.KontoNr,
+	  DisplayText         = PER.DisplayText,
+	  DatumEffektiv       = ISNULL(NET.datumEffektiv, KBB.ValutaDatum),
+	  Betrag              = UMB.Betrag,
+	  BetragEffektiv      = CASE
+	                          WHEN NET.anteil IS NOT NULL THEN UMB.Betrag * NET.anteil
+							              WHEN NET.Betrag IS NOT NULL AND NET.BetragEffektiv IS NOT NULL THEN UMB.Betrag * (NET.BetragEffektiv / NET.Betrag)
+							              ELSE UMB.Betrag
+							            END,
+	  VerwPeriodeVon      = UMB.VerwPeriodeVon,
+	  VerwPeriodeBis      = UMB.VerwPeriodeBis,
+	  SZ                  = USR.SozialzentrumKurz,
+	  Team                = USR.OrgUnitShort,
+	  SA                  = USR.NameVorname,
+	  FaLeistungID        = UMB.FaLeistungID,
+	  Budget              = CASE
+                            WHEN BUD.Monat &gt; 9 THEN ''
+                            ELSE '0'
+                          END + CONVERT(VARCHAR(2), BUD.Monat) + '.' + SUBSTRING(CONVERT(VARCHAR(4), BUD.Jahr), 3, 2),
+	  Dritte              = CASE
+                            WHEN KRE.BaZahlungswegID IS NOT NULL AND KRE.BaPersonID IS NOT NULL THEN 0
+                            ELSE 1
+                          END,
+    Kreditor            = KRE.Kreditor + ', ' + KRE.Zahlungsweg
+  FROM Umbuchungen					             UMB WITH(READUNCOMMITTED)
+    INNER JOIN dbo.KbBuchungBrutto	     KBB WITH(READUNCOMMITTED) ON KBB.KbBuchungBruttoID = UMB.KbBuchungBruttoID
+    LEFT  JOIN dbo.KbBuchungBruttoPerson KBP_UMB WITH(READUNCOMMITTED) ON KBP_UMB.KbBuchungBruttoPersonID = UMB.KbBuchungBruttoPersonID
+    OUTER APPLY (SELECT TOP 1 BgPositionID
+                 FROM dbo.KbBuchungBruttoPerson KBP WITH(READUNCOMMITTED)
+                 WHERE KBP_UMB.KbBuchungBruttoPersonID IS NULL
+                   AND KBP.KbBuchungBruttoID = UMB.KbBuchungBruttoID) KBP_UMB2
+    INNER JOIN dbo.BgPosition		         POS WITH(READUNCOMMITTED) ON POS.BgPositionID = ISNULL(KBP_UMB.BgPositionID, KBP_UMB2.BgPositionID)
+    OUTER APPLY dbo.fnBruttoToNettos(UMB.KbBuchungBruttoPersonID, ISNULL(KBP_UMB.BgPositionID, KBP_UMB2.BgPositionID), KBB.Betrag, KBB.ValutaDatum) AS NET
+    LEFT  JOIN dbo.KbBuchungBrutto       KBB_ORIG WITH(READUNCOMMITTED) ON KBB_ORIG.KbBuchungBruttoID = UMB.KbBuchungBruttoID_ORIG
+    LEFT  JOIN dbo.FaLeistung		         LEI WITH(READUNCOMMITTED) ON LEI.FaLeistungID = KBB_ORIG.FaLeistungID
+    LEFT  JOIN dbo.FaFall			           FAL WITH(READUNCOMMITTED) ON FAL.FaFallID = LEI.FaFallID
+    LEFT  JOIN dbo.vwUser			           USR WITH(READUNCOMMITTED) ON USR.UserID = LEI.UserID
+    LEFT  JOIN dbo.vwPerson			         PER WITH(READUNCOMMITTED) ON PER.BaPersonID = UMB.BaPersonID
+    LEFT  JOIN dbo.BgBudget			         BUD WITH(READUNCOMMITTED) ON BUD.BgBudgetID = KBB.BgBudgetID
+    LEFT  JOIN dbo.BgAuszahlungPerson    BAP WITH(READUNCOMMITTED) ON BAP.BgPositionID = POS.BgPositionID
+                                                                  AND BAP.BgAuszahlungPersonID = (SELECT TOP 1 BgAuszahlungPersonID
+                                                                                                  FROM dbo.BgAuszahlungPerson WITH(READUNCOMMITTED)
+                                                                                                  WHERE BgPositionID = POS.BgPositionID
+                                                                                                  ORDER BY
+                                                                                                    CASE
+                                                                                                      WHEN BaPersonID IS NULL THEN 1
+                                                                                                      WHEN BaPersonID = POS.BaPersonID THEN 2
+                                                                                                      WHEN BaPersonID = LEI.BaPersonID THEN 3
+                                                                                                      ELSE 4
+                                                                                                    END)
+    LEFT  JOIN dbo.vwKreditor            KRE ON KRE.BaZahlungswegID = BAP.BaZahlungswegID
+  WHERE UMB.NeuBuchungVonKbBuchungBruttoID IS NULL
+    AND (@DatumVon IS NULL AND @DatumBis IS NULL
+      OR ISNULL(NET.datumEffektiv, KBB.ValutaDatum) BETWEEN ISNULL(@DatumVon, CONVERT(DATETIME,'17530101')) AND ISNULL(@DatumBis, CONVERT(DATETIME,'99991231')))
+    AND (@BaInstitutionID IS NULL OR @BaInstitutionID = KRE.BaInstitutionID);
+
+SELECT
+  KbBuchungBruttoID = RES.KbBuchungBruttoID,
+  BgPositionID      = RES.BgPositionID,
+  FaFallID          = MAX(RES.FaFallID),
+  FallBaPersonID    = MAX(RES.FallBaPersonID),
+  BgBudgetID        = MAX(RES.BgBudgetID),
+  BgFinanzplanID    = MAX(RES.BgFinanzplanID),
+  BaPersonID        = CASE WHEN MAX(RES.BaPersonID) &lt;&gt; MIN(RES.BaPersonID) THEN NULL ELSE MAX(RES.BaPersonID) END,
+  Buchungstext      = CASE WHEN @PersonenSuche = 1 THEN MAX(RES.DetailBuchungstext) ELSE MAX(RES.Buchungstext) END,
+  KontoNr           = MAX(RES.KontoNr),
+  DisplayText       = CASE WHEN MAX(RES.BaPersonID) &lt;&gt; MIN(RES.BaPersonID) THEN MAX(PER.DisplayText) + ' ganze UE (' + CONVERT(VARCHAR(4), count(DISTINCT RES.BaPersonID)) + ')' ELSE MAX(RES.DisplayText) END,
+  Betrag            = SUM(RES.Betrag),
+  BetragEffektiv    = SUM(RES.BetragEffektiv),
+  DatumEffektiv     = MAX(RES.DatumEffektiv),
+  VerwPeriodeVon    = MIN(RES.VerwPeriodeVon),
+  VerwPeriodeBis    = MAX(RES.VerwPeriodeBis),
+  SZ                = MAX(RES.SZ),
+  Team              = MAX(RES.Team),
+  SA                = MAX(RES.SA),
+  Budget            = MAX(RES.Budget),
+  Dritte            = CASE WHEN MAX(CAST(RES.Dritte AS INT)) = 1 THEN 'D' ELSE 'K' END,
+  Kreditor          = MAX(RES.Kreditor)
+FROM @Result                RES
+  INNER JOIN dbo.FaLeistung LEI WITH(READUNCOMMITTED) ON LEI.FaLeistungID = RES.FaLeistungID
+  INNER JOIN dbo.vwPerson   PER ON PER.BaPersonID = LEI.BaPersonID
+GROUP BY KbBuchungBruttoID, BgPositionID
+ORDER BY MIN(RES.DisplayText) ASC, MAX(RES.FaellikeitsDatum) DESC;
+
+IF (@PersonenSuche = 0)
+BEGIN
+	SELECT
+		KbBuchungBruttoID,
+		BgPositionID,
+		DisplayText,
+		VerwPeriodeVon,
+		VerwPeriodeBis,
+		Betrag,
+		BetragEffektiv
+	FROM @Result;
+END;
+</value>
+  </data>
+  <data name="edtSucheInstitution.LookupSQL" xml:space="preserve">
+    <value>SELECT ID$                 = INS.BaInstitutionID,
+       Institution         = INS.Name,
+       Adresse             = INS.Adresse,
+       Typ                 = INS.Typ,
+       InstitutionTypCode$ = INS.InstitutionTypCode,
+       OrtStrasse$         = INS.OrtStrasse
+FROM   vwInstitution INS
+WHERE  INS.BaFreigabeStatusCode = 2 AND
+       INS.Name LIKE '%' + {0} + '%'
+ORDER BY INS.Name
+</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="edtDatumBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="edtDatumVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="edtWhSucheKlientX.LookupSQL" xml:space="preserve">
+    <value>select 
+  ID$ = BaPersonID, 
+  Klient = Name + isNull(', ' + Vorname,''),
+  [Person ID] = BaPersonID
+from   BaPerson 
+where Name + IsNull(', ' + Vorname,'') LIKE '%' + {0} + '%'
+order by Klient
+----</value>
+  </data>
+  <metadata name="qryVerfuegbar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>119, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>62</value>
+  </metadata>
+  <metadata name="qryZugeteilt.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>249, 17</value>
+  </metadata>
+</root>

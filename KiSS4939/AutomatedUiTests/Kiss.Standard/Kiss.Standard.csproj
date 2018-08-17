@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{3FADFB9D-FC3D-4A4F-B888-781180DFD1DB}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AutomatedUiTests</RootNamespace>
+    <AssemblyName>Kiss.Standard</AssemblyName>
+    <RanorexVersion>4</RanorexVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <RxSccProvider>Microsoft Team Foundation Server MSSCCI Provider</RxSccProvider>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <projectdefaultrepository>61d9815d-5974-4e9d-82fe-6a1c468fc2d1</projectdefaultrepository>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+  <ItemGroup>
+    <Reference Include="Kiss.Interfaces">
+      <HintPath>..\..\Build\Debug\Kiss.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="KiSS4">
+      <HintPath>..\..\Build\Debug\KiSS4.exe</HintPath>
+    </Reference>
+    <Reference Include="KiSS4.Gui">
+      <HintPath>..\..\Build\Debug\KiSS4.Gui.dll</HintPath>
+    </Reference>
+    <Reference Include="Ranorex.Core, Version=$(RanorexVersion)" />
+    <Reference Include="Ranorex.Plugin.ChromeWeb, Version=$(RanorexVersion)" />
+    <Reference Include="Ranorex.Plugin.Flex, Version=$(RanorexVersion)" />
+    <Reference Include="Ranorex.Plugin.Java, Version=$(RanorexVersion)" />
+    <Reference Include="Ranorex.Plugin.Mobile, Version=$(RanorexVersion)" />
+    <Reference Include="Ranorex.Plugin.MozillaWeb, Version=$(RanorexVersion)" />
+    <Reference Include="Ranorex.Plugin.Msaa, Version=$(RanorexVersion)" />
+    <Reference Include="Ranorex.Plugin.Office, Version=$(RanorexVersion)" />
+    <Reference Include="Ranorex.Plugin.RawText, Version=$(RanorexVersion)" />
+    <Reference Include="Ranorex.Plugin.Sap, Version=$(RanorexVersion)" />
+    <Reference Include="Ranorex.Plugin.Web, Version=$(RanorexVersion)" />
+    <Reference Include="Ranorex.Plugin.Win32, Version=$(RanorexVersion)" />
+    <Reference Include="Ranorex.Plugin.WinForms, Version=$(RanorexVersion)" />
+    <Reference Include="Ranorex.Plugin.Wpf, Version=$(RanorexVersion)" />
+    <Reference Include="SharpLibrary">
+      <HintPath>..\..\Build\Debug\SharpLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <id>24b1d096-8b4e-4504-9c29-ed60e242407c</id>
+    </Compile>
+    <Compile Include="AutomatedUiTestsRepository.cs">
+      <BoundTo>61d9815d-5974-4e9d-82fe-6a1c468fc2d1</BoundTo>
+      <DependentUpon>AutomatedUiTestsRepository.rxrep</DependentUpon>
+      <RepositoryCode>true</RepositoryCode>
+      <id>5301a971-6917-4d8e-a44e-75b4c5ff8475</id>
+    </Compile>
+    <Compile Include="Common\SelectDatenexplorer.cs">
+      <BoundTo>f8d41944-465f-4cd8-bb53-529cf4b03221</BoundTo>
+      <DependentUpon>SelectDatenexplorer.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>c127a76a-27ad-4b40-a22a-5773812fc2be</id>
+    </Compile>
+    <Compile Include="Common\SelectDatenexplorer.UserCode.cs">
+      <BoundTo>f8d41944-465f-4cd8-bb53-529cf4b03221</BoundTo>
+      <DependentUpon>SelectDatenexplorer.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>a5a2d99d-e629-4942-b97d-aa8ff8bd7760</id>
+    </Compile>
+    <Compile Include="Common\SelectInstitutionenstamm.cs">
+      <BoundTo>0627255a-8d96-4532-9859-e923f62e278a</BoundTo>
+      <DependentUpon>SelectInstitutionenstamm.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>2661e802-6d4c-4a8e-bfda-e4ef9bfea704</id>
+    </Compile>
+    <Compile Include="Common\SelectInstitutionenstamm.UserCode.cs">
+      <BoundTo>0627255a-8d96-4532-9859-e923f62e278a</BoundTo>
+      <DependentUpon>SelectInstitutionenstamm.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>0553195f-6b79-4bfc-a0b8-c01e4531fba1</id>
+    </Compile>
+    <Compile Include="Common\SelectPendenzenverwaltung.cs">
+      <BoundTo>f689b3f3-c4a3-42f3-a3b9-ce1aa8a982d1</BoundTo>
+      <DependentUpon>SelectPendenzenverwaltung.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>39e142d7-3a8f-4339-a4e2-7cea511705c0</id>
+    </Compile>
+    <Compile Include="Common\SelectPendenzenverwaltung.UserCode.cs">
+      <BoundTo>f689b3f3-c4a3-42f3-a3b9-ce1aa8a982d1</BoundTo>
+      <DependentUpon>SelectPendenzenverwaltung.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>1f2a7ad2-a263-4207-8cf5-b81eb4dbfb4a</id>
+    </Compile>
+    <Compile Include="Common\UserActions.cs">
+      <id>c3a43e96-d8d2-427a-b7a6-8ea7fd0520df</id>
+    </Compile>
+    <Compile Include="Common\CloseKiSS.cs">
+      <BoundTo>c2d2003b-39dc-4cf4-9c8b-69ad5999fc24</BoundTo>
+      <DependentUpon>CloseKiSS.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>8acea012-167a-4ba8-bd53-a269445ae5fe</id>
+    </Compile>
+    <Compile Include="Common\CloseKiSS.UserCode.cs">
+      <BoundTo>c2d2003b-39dc-4cf4-9c8b-69ad5999fc24</BoundTo>
+      <DependentUpon>CloseKiSS.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>2c1d7802-22a3-4429-8bda-df44a9cde9b2</id>
+    </Compile>
+    <Compile Include="Common\Login.cs">
+      <id>4074b86d-e3be-414b-9b9c-126ea05d8443</id>
+      <RecorderCode>true</RecorderCode>
+      <DependentUpon>Login.rxrec</DependentUpon>
+      <BoundTo>0f7ad868-805c-4ba1-a9b6-227b293b890f</BoundTo>
+    </Compile>
+    <Compile Include="Common\Login.UserCode.cs">
+      <id>cad53852-221b-4600-a29c-81887fce9142</id>
+      <UserCode>true</UserCode>
+      <DependentUpon>Login.rxrec</DependentUpon>
+      <BoundTo>0f7ad868-805c-4ba1-a9b6-227b293b890f</BoundTo>
+    </Compile>
+    <Compile Include="Common\SelectFallnavigator_Toolbar.cs">
+      <BoundTo>f4499914-a773-4ac9-9256-031f27fc2531</BoundTo>
+      <DependentUpon>SelectFallnavigator_Toolbar.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>0ff58156-226a-45e9-b043-2b3d3eba5af0</id>
+    </Compile>
+    <Compile Include="Common\SelectFallnavigator_Toolbar.UserCode.cs">
+      <BoundTo>f4499914-a773-4ac9-9256-031f27fc2531</BoundTo>
+      <DependentUpon>SelectFallnavigator_Toolbar.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>793953c1-cba0-47cd-90b7-cf4ea1e36356</id>
+    </Compile>
+    <Compile Include="Common\SelectModul.cs">
+      <id>8bd54f83-f097-4b9c-b5f7-0f51abe1d5cd</id>
+    </Compile>
+    <Compile Include="Common\StartKiSS.cs">
+      <id>7f76a384-045c-4680-909e-c2d9bb475f19</id>
+      <RecorderCode>true</RecorderCode>
+      <BoundTo>389884e9-3d10-4757-9975-9b05f0add352</BoundTo>
+      <DependentUpon>StartKiSS.rxrec</DependentUpon>
+    </Compile>
+    <Compile Include="Common\StartKiSS.UserCode.cs">
+      <id>4d9a2fb9-b7eb-42d5-9276-bf71e32b28f3</id>
+      <UserCode>true</UserCode>
+      <BoundTo>389884e9-3d10-4757-9975-9b05f0add352</BoundTo>
+      <DependentUpon>StartKiSS.rxrec</DependentUpon>
+    </Compile>
+    <Compile Include="Fallfuehrung\AdresseErfassen.cs">
+      <id>6ebaf27d-ccb0-4511-aa50-71cdb8624b67</id>
+      <RecorderCode>true</RecorderCode>
+      <DependentUpon>AdresseErfassen.rxrec</DependentUpon>
+      <BoundTo>28ceb07b-e7be-4ceb-908c-f03db43b0db2</BoundTo>
+    </Compile>
+    <Compile Include="Fallfuehrung\AdresseErfassen.UserCode.cs">
+      <id>ff40ab19-edca-4ff9-ae1d-3e4014db25c4</id>
+      <UserCode>true</UserCode>
+      <DependentUpon>AdresseErfassen.rxrec</DependentUpon>
+      <BoundTo>28ceb07b-e7be-4ceb-908c-f03db43b0db2</BoundTo>
+    </Compile>
+    <Compile Include="Fallfuehrung\BesprechungErfassen.cs">
+      <BoundTo>5427445b-b526-455d-8fb7-bd5dddaea9a9</BoundTo>
+      <DependentUpon>BesprechungErfassen.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>9dc115f3-76b7-4340-8d6a-f640ebb3a424</id>
+    </Compile>
+    <Compile Include="Fallfuehrung\BesprechungErfassen.UserCode.cs">
+      <BoundTo>5427445b-b526-455d-8fb7-bd5dddaea9a9</BoundTo>
+      <DependentUpon>BesprechungErfassen.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>627bf000-dcae-46cd-801a-4a88aea39dd9</id>
+    </Compile>
+    <Compile Include="Fallfuehrung\BezugspersonErfassen_ExistierendePerson.cs">
+      <BoundTo>753f0ebf-0793-45a7-a86d-da0c98ca290d</BoundTo>
+      <DependentUpon>BezugspersonErfassen_ExistierendePerson.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>b0adc2bb-bc7e-45cb-8c3e-09f7e78f6659</id>
+    </Compile>
+    <Compile Include="Fallfuehrung\BezugspersonErfassen_ExistierendePerson.UserCode.cs">
+      <BoundTo>753f0ebf-0793-45a7-a86d-da0c98ca290d</BoundTo>
+      <DependentUpon>BezugspersonErfassen_ExistierendePerson.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>059e69d7-0b71-4929-8faf-c3982018743d</id>
+    </Compile>
+    <Compile Include="Fallfuehrung\CheckboxGleicherHaushaltAktivieren.cs">
+      <BoundTo>ea512d8b-3fd0-4bca-b195-7529a4dd25a3</BoundTo>
+      <DependentUpon>CheckboxGleicherHaushaltAktivieren.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>c883c427-fbae-46f8-94a3-0058c5d16b0f</id>
+    </Compile>
+    <Compile Include="Fallfuehrung\CheckboxGleicherHaushaltAktivieren.UserCode.cs">
+      <BoundTo>ea512d8b-3fd0-4bca-b195-7529a4dd25a3</BoundTo>
+      <DependentUpon>CheckboxGleicherHaushaltAktivieren.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>183fc639-2a60-4979-9b48-b17cedb621f0</id>
+    </Compile>
+    <Compile Include="Fallfuehrung\FallOeffnen.cs">
+      <BoundTo>a1e17988-b00e-4d79-bdac-cceb292ec645</BoundTo>
+      <DependentUpon>FallOeffnen.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>2cf10ae9-7119-4090-9b42-fea841adbca0</id>
+    </Compile>
+    <Compile Include="Fallfuehrung\FallOeffnen.UserCode.cs">
+      <BoundTo>a1e17988-b00e-4d79-bdac-cceb292ec645</BoundTo>
+      <DependentUpon>FallOeffnen.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>d6c195d5-7b11-41d4-8e6f-52c70170d333</id>
+    </Compile>
+    <Compile Include="Fallfuehrung\NeuerFallErfassen_NeuePerson.cs">
+      <id>9d3c0789-b900-4120-adc4-daf22193438e</id>
+      <RecorderCode>true</RecorderCode>
+      <DependentUpon>NeuerFallErfassen_NeuePerson.rxrec</DependentUpon>
+      <BoundTo>010062bf-5407-4d54-8bae-5fd3131e5f67</BoundTo>
+    </Compile>
+    <Compile Include="Fallfuehrung\NeuerFallErfassen_NeuePerson.UserCode.cs">
+      <id>e38e756a-dfbb-4d4b-a666-7648f9cca85a</id>
+      <UserCode>true</UserCode>
+      <DependentUpon>NeuerFallErfassen_NeuePerson.rxrec</DependentUpon>
+      <BoundTo>010062bf-5407-4d54-8bae-5fd3131e5f67</BoundTo>
+    </Compile>
+    <Compile Include="Institutionen\InstitutionenSuchen.cs">
+      <BoundTo>695d3cb9-1392-4323-a180-c40f937ce1ee</BoundTo>
+      <DependentUpon>InstitutionenSuchen.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>f11d6c8d-e553-4fc9-b5d0-b59cf1d9ca01</id>
+    </Compile>
+    <Compile Include="Institutionen\InstitutionenSuchen.UserCode.cs">
+      <BoundTo>695d3cb9-1392-4323-a180-c40f937ce1ee</BoundTo>
+      <DependentUpon>InstitutionenSuchen.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>d8d30a33-058c-4a52-a86c-eb6dc68fe16d</id>
+    </Compile>
+    <Compile Include="Institutionen\InstitutionErfassen.cs">
+      <BoundTo>949de249-0b64-4803-a55b-1a10af0b0494</BoundTo>
+      <DependentUpon>InstitutionErfassen.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>571ce05d-07f2-46eb-b5e0-3adb82909af0</id>
+    </Compile>
+    <Compile Include="Institutionen\InstitutionErfassen.UserCode.cs">
+      <BoundTo>949de249-0b64-4803-a55b-1a10af0b0494</BoundTo>
+      <DependentUpon>InstitutionErfassen.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>8b49c91d-a736-40c9-847e-49c2172ae7fd</id>
+    </Compile>
+    <Compile Include="Pendenzen\PendenzenSuchen.cs">
+      <BoundTo>0646e1a8-490c-4bc3-89c3-3f56824deb2c</BoundTo>
+      <DependentUpon>PendenzenSuchen.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>d6febfbc-0d9e-413b-98b6-8c812edfd78d</id>
+    </Compile>
+    <Compile Include="Pendenzen\PendenzenSuchen.UserCode.cs">
+      <BoundTo>0646e1a8-490c-4bc3-89c3-3f56824deb2c</BoundTo>
+      <DependentUpon>PendenzenSuchen.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>9245b4e3-a380-42ab-87b9-24f01c6a732a</id>
+    </Compile>
+    <Compile Include="Pendenzen\PendenzErfassen.cs">
+      <BoundTo>4a1125fe-6832-4c1b-bc3d-f57f13f09f1e</BoundTo>
+      <DependentUpon>PendenzErfassen.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>e9c11706-f34f-42d5-ad52-2c47ffc720c4</id>
+    </Compile>
+    <Compile Include="Pendenzen\PendenzErfassen.UserCode.cs">
+      <BoundTo>4a1125fe-6832-4c1b-bc3d-f57f13f09f1e</BoundTo>
+      <DependentUpon>PendenzErfassen.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>23a9724c-545c-466c-a169-42f85aaa8211</id>
+    </Compile>
+    <Compile Include="Program.cs">
+      <id>2e542ada-dcb7-4213-9945-f8e627704a39</id>
+    </Compile>
+    <Compile Include="Query\BaPersonenSuchen.UserCode.cs">
+      <BoundTo>3f84fd1f-9cea-4d62-9e2c-2884be288b28</BoundTo>
+      <DependentUpon>BaPersonenSuchen.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>12fb8215-7102-4a0e-a6c5-5fe7f0650235</id>
+    </Compile>
+    <Compile Include="Query\BaPersonenSuchen.cs">
+      <BoundTo>3f84fd1f-9cea-4d62-9e2c-2884be288b28</BoundTo>
+      <DependentUpon>BaPersonenSuchen.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>6389a8b7-ee64-4cc7-af0f-0d60a297b97a</id>
+    </Compile>
+    <Compile Include="Query\GotoFall.cs">
+      <BoundTo>39912f38-864e-42be-9f64-aa71095ecfe2</BoundTo>
+      <DependentUpon>GotoFall.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>1a91ee60-edc7-4131-920c-a54ee1d1cad2</id>
+    </Compile>
+    <Compile Include="Query\GotoFall.UserCode.cs">
+      <BoundTo>39912f38-864e-42be-9f64-aa71095ecfe2</BoundTo>
+      <DependentUpon>GotoFall.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>60cf0f72-b116-4e37-87a4-0621e30c3f80</id>
+    </Compile>
+    <None Include="app.config">
+      <id>1e71d695-54bf-4c1d-b983-35c0acd50683</id>
+    </None>
+    <None Include="AutomatedUiTestsRepository.rxrep">
+      <id>61d9815d-5974-4e9d-82fe-6a1c468fc2d1</id>
+      <repoid>4db00752-9e70-45eb-aab7-29a46f45b18e</repoid>
+      <reporootid>680b6596-0db6-4d9b-961b-314b28dd950e</reporootid>
+    </None>
+    <None Include="Common\CloseKiSS.rxrec">
+      <id>c2d2003b-39dc-4cf4-9c8b-69ad5999fc24</id>
+      <BoundTo>61d9815d-5974-4e9d-82fe-6a1c468fc2d1</BoundTo>
+    </None>
+    <None Include="Common\Login.rxrec">
+      <id>0f7ad868-805c-4ba1-a9b6-227b293b890f</id>
+      <BoundTo>61d9815d-5974-4e9d-82fe-6a1c468fc2d1</BoundTo>
+    </None>
+    <None Include="Common\SelectDatenexplorer.rxrec">
+      <BoundTo>61d9815d-5974-4e9d-82fe-6a1c468fc2d1</BoundTo>
+      <id>f8d41944-465f-4cd8-bb53-529cf4b03221</id>
+    </None>
+    <None Include="Common\SelectFallnavigator_Toolbar.rxrec">
+      <BoundTo>61d9815d-5974-4e9d-82fe-6a1c468fc2d1</BoundTo>
+      <id>f4499914-a773-4ac9-9256-031f27fc2531</id>
+    </None>
+    <None Include="Common\SelectInstitutionenstamm.rxrec">
+      <id>0627255a-8d96-4532-9859-e923f62e278a</id>
+      <BoundTo>61d9815d-5974-4e9d-82fe-6a1c468fc2d1</BoundTo>
+    </None>
+    <None Include="Common\SelectPendenzenverwaltung.rxrec">
+      <id>f689b3f3-c4a3-42f3-a3b9-ce1aa8a982d1</id>
+      <BoundTo>61d9815d-5974-4e9d-82fe-6a1c468fc2d1</BoundTo>
+    </None>
+    <None Include="Common\StartKiSS.rxrec">
+      <id>389884e9-3d10-4757-9975-9b05f0add352</id>
+      <BoundTo>61d9815d-5974-4e9d-82fe-6a1c468fc2d1</BoundTo>
+    </None>
+    <None Include="Fallfuehrung\AdresseErfassen.rxrec">
+      <id>28ceb07b-e7be-4ceb-908c-f03db43b0db2</id>
+      <BoundTo>61d9815d-5974-4e9d-82fe-6a1c468fc2d1</BoundTo>
+    </None>
+    <None Include="Fallfuehrung\BesprechungErfassen.rxrec">
+      <id>5427445b-b526-455d-8fb7-bd5dddaea9a9</id>
+      <BoundTo>61d9815d-5974-4e9d-82fe-6a1c468fc2d1</BoundTo>
+    </None>
+    <None Include="Fallfuehrung\BezugspersonErfassen_ExistierendePerson.rxrec">
+      <BoundTo>61d9815d-5974-4e9d-82fe-6a1c468fc2d1</BoundTo>
+      <id>753f0ebf-0793-45a7-a86d-da0c98ca290d</id>
+    </None>
+    <None Include="Fallfuehrung\CheckboxGleicherHaushaltAktivieren.rxrec">
+      <BoundTo>61d9815d-5974-4e9d-82fe-6a1c468fc2d1</BoundTo>
+      <id>ea512d8b-3fd0-4bca-b195-7529a4dd25a3</id>
+    </None>
+    <None Include="Fallfuehrung\FallOeffnen.rxrec">
+      <BoundTo>61d9815d-5974-4e9d-82fe-6a1c468fc2d1</BoundTo>
+      <id>a1e17988-b00e-4d79-bdac-cceb292ec645</id>
+    </None>
+    <None Include="Fallfuehrung\NeuerFallErfassen_NeuePerson.rxrec">
+      <id>010062bf-5407-4d54-8bae-5fd3131e5f67</id>
+      <BoundTo>61d9815d-5974-4e9d-82fe-6a1c468fc2d1</BoundTo>
+    </None>
+    <Content Include="KiSS4.exe.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <id>e72cc099-f6ce-489d-8e28-96ed598e61d9</id>
+    </Content>
+    <None Include="Institutionen\InstitutionenSuchen.rxrec">
+      <id>695d3cb9-1392-4323-a180-c40f937ce1ee</id>
+      <BoundTo>61d9815d-5974-4e9d-82fe-6a1c468fc2d1</BoundTo>
+    </None>
+    <None Include="Institutionen\InstitutionErfassen.rxrec">
+      <id>949de249-0b64-4803-a55b-1a10af0b0494</id>
+      <BoundTo>61d9815d-5974-4e9d-82fe-6a1c468fc2d1</BoundTo>
+    </None>
+    <None Include="Pendenzen\PendenzenSuchen.rxrec">
+      <id>0646e1a8-490c-4bc3-89c3-3f56824deb2c</id>
+      <BoundTo>61d9815d-5974-4e9d-82fe-6a1c468fc2d1</BoundTo>
+    </None>
+    <None Include="Pendenzen\PendenzErfassen.rxrec">
+      <id>4a1125fe-6832-4c1b-bc3d-f57f13f09f1e</id>
+      <BoundTo>61d9815d-5974-4e9d-82fe-6a1c468fc2d1</BoundTo>
+    </None>
+    <None Include="Query\BaPersonenSuchen.rxrec">
+      <BoundTo>61d9815d-5974-4e9d-82fe-6a1c468fc2d1</BoundTo>
+      <id>3f84fd1f-9cea-4d62-9e2c-2884be288b28</id>
+    </None>
+    <None Include="Query\GotoFall.rxrec">
+      <BoundTo>61d9815d-5974-4e9d-82fe-6a1c468fc2d1</BoundTo>
+      <id>39912f38-864e-42be-9f64-aa71095ecfe2</id>
+    </None>
+    <Content Include="AutomatedUiTests.rxtmg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <id>da1787fd-93a6-498c-ad9f-400fb21ff8e9</id>
+    </Content>
+    <Content Include="AutomatedUiTests.rxtst">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <id>26545939-b067-45af-8707-e40bc0034a3c</id>
+    </Content>
+  </ItemGroup>
+  <Import Condition="Exists('$(MSBuildExtensionsPath)\Ranorex$(RanorexVersion)\Ranorex.MSBuild.Targets')" Project="$(MSBuildExtensionsPath)\Ranorex$(RanorexVersion)\Ranorex.MSBuild.Targets" />
+  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Institutionen">
+      <id>52086896-4522-4970-8219-9694977ba5db</id>
+    </Folder>
+  </ItemGroup>
+</Project>

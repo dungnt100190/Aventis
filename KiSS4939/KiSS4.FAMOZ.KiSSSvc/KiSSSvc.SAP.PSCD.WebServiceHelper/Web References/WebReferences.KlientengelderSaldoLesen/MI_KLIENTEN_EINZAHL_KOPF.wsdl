@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p2="urn:sap-com:document:sap:rfc:functions" xmlns:p1="http://STZH" name="MI_KLIENTEN_EINZAHL_KOPF" targetNamespace="http://STZH" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="urn:sap-com:document:sap:rfc:functions" targetNamespace="urn:sap-com:document:sap:rfc:functions" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="_-STZH_-READ_KLIENTEN_EINZ_KOPF">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="T_KLIENTEN_EINZAHL">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="p2:_-STZH_-SOZ_FEBKO" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="_-STZH_-READ_KLIENTEN_EINZ_KOPF.Response">
+        <xsd:complexType>
+          <xsd:all>
+            <xsd:element name="T_KLIENTEN_EINZAHL">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="0" maxOccurs="unbounded" name="item" type="p2:_-STZH_-SOZ_FEBKO" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:all>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:simpleType name="genericDate">
+        <xsd:restriction base="xsd:string">
+          <xsd:pattern value="....-..-.." />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="genericTime">
+        <xsd:restriction base="xsd:string">
+          <xsd:pattern value="..:..:.." />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="time">
+        <xsd:union xmlns="urn:sap-com:document:sap:rfc:functions" memberTypes="xsd:time p2:genericTime" />
+      </xsd:simpleType>
+      <xsd:simpleType name="date">
+        <xsd:union xmlns="urn:sap-com:document:sap:rfc:functions" memberTypes="xsd:date p2:genericDate" />
+      </xsd:simpleType>
+      <xsd:complexType name="_-STZH_-SOZ_FEBKO">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="MANDT">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="3" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="ABSND">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="50" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="AZIDT">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="20" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="KUKEY">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="8" />
+                <xsd:pattern value="\d+" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="AZDAT" type="p2:date" />
+          <xsd:element minOccurs="0" name="WAERS">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="5" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="SSTYP">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="SSVOZ">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="SSBTR">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="17" />
+                <xsd:fractionDigits value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="SUMSO">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="17" />
+                <xsd:fractionDigits value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="SUMHA">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="17" />
+                <xsd:fractionDigits value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="ESTYP">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="ESVOZ">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="1" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="ESBTR">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="17" />
+                <xsd:fractionDigits value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="EUSER">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="12" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="EDATE" type="p2:date" />
+          <xsd:element minOccurs="0" name="ETIME" type="p2:time" />
+          <xsd:element minOccurs="0" name="SIBAN">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="34" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="STATUS">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:string">
+                <xsd:maxLength value="2" />
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="p2._-STZH_-READ_KLIENTEN_EINZ_KOPF.Input">
+    <wsdl:part name="parameters" element="p2:_-STZH_-READ_KLIENTEN_EINZ_KOPF" />
+  </wsdl:message>
+  <wsdl:message name="p2._-STZH_-READ_KLIENTEN_EINZ_KOPF.Output">
+    <wsdl:part name="parameters" element="p2:_-STZH_-READ_KLIENTEN_EINZ_KOPF.Response" />
+  </wsdl:message>
+  <wsdl:portType name="MI_KLIENTEN_EINZAHL_KOPF">
+    <wsdl:operation name="MI_KLIENTEN_EINZAHL_KOPF">
+      <wsdl:input message="p1:p2._-STZH_-READ_KLIENTEN_EINZ_KOPF.Input" />
+      <wsdl:output message="p1:p2._-STZH_-READ_KLIENTEN_EINZ_KOPF.Output" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MI_KLIENTEN_EINZAHL_KOPFBinding" type="p1:MI_KLIENTEN_EINZAHL_KOPF">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="MI_KLIENTEN_EINZAHL_KOPF">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MI_KLIENTEN_EINZAHL_KOPFService">
+    <wsdl:port name="MI_KLIENTEN_EINZAHL_KOPFPort" binding="p1:MI_KLIENTEN_EINZAHL_KOPFBinding">
+      <address location="http://szhm2179:8001/XISOAPAdapter/MessageServlet?channel=:BS_KISS_KLIENTEN_EINZAHL_KOPF_SENDEN_450:CC_SOAP_GET_KLIENTEN_EINZAHL_KOPF&amp;version=3.0&amp;Sender.Service=BS_KISS_KLIENTEN_EINZAHL_KOPF_SENDEN_450&amp;Interface=http%3A%2F%2FSTZH%5EMI_KLIENTEN_EINZAHL_KOPF" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

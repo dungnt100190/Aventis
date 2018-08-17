@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C8FEADA7-2D5F-4E43-818D-32E648731342}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kiss.DataAccess</RootNamespace>
+    <AssemblyName>Kiss.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation, Version=5.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\FluentValidation.5.0.0.1\lib\Net40\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaGesundheitRepository.cs" />
+    <Compile Include="BaPersonRepository.cs" />
+    <Compile Include="Ba\BaEinwohnerregisterEmpfangeneEreignisseRepository.cs" />
+    <Compile Include="Ba\BaEinwohnerregisterPersonAnAbmeldungRepository.cs" />
+    <Compile Include="Ba\BaEinwohnerregisterPersonStatusRepository.cs" />
+    <Compile Include="Ba\BaGemeindeRepository.cs" />
+    <Compile Include="Ba\BaLandRepository.cs" />
+    <Compile Include="Ba\BaInstitutionRepository.cs" />
+    <Compile Include="Ba\BaPlzRepository.cs" />
+    <Compile Include="Ba\BaAdresseRepository.cs" />
+    <Compile Include="Ba\BaEinwohnerregisterEmpfangeneEreignisseRohdatenRepository.cs" />
+    <Compile Include="Ba\BaPraemienverbilligungRepository.cs" />
+    <Compile Include="Fa\FaFallPersonRepository.cs" />
+    <Compile Include="Fa\FaDokumentAblageRepository.cs" />
+    <Compile Include="Fa\FaLeistungZugriffRepository.cs" />
+    <Compile Include="Fa\FaLeistungArchivRepository.cs" />
+    <Compile Include="Fa\FaFallRepository.cs" />
+    <Compile Include="Fa\FaWeisungRepository.cs" />
+    <Compile Include="Fa\FaPendenzgruppeRepository.cs" />
+    <Compile Include="Fa\FaDokumentRepository.cs" />
+    <Compile Include="Fa\FaLeistungUserHistRepository.cs" />
+    <Compile Include="Fa\FaAktennotizenRepository.cs" />
+    <Compile Include="Fa\FaLeistungRepository.cs" />
+    <Compile Include="Fa\FaKategorisierungEksProduktRepository.cs" />
+    <Compile Include="Fa\FaPhaseRepository.cs" />
+    <Compile Include="Fa\FaKategorisierungRepository.cs" />
+    <Compile Include="Fs\FsDienstleistungspaketRepository.cs" />
+    <Compile Include="Fs\FsReduktionRepository.cs" />
+    <Compile Include="Kes\KesBehoerdeRepository.cs" />
+    <Compile Include="Kes\KesLeistungRepository.cs" />
+    <Compile Include="Kes\KesPflegekinderaufsichtRepository.cs" />
+    <Compile Include="Kes\KesMassnahmeAuftragRepository.cs" />
+    <Compile Include="Kes\KesMandatsfuehrendePersonRepository.cs" />
+    <Compile Include="Kes\KesArtikelRepository.cs" />
+    <Compile Include="Kes\KesMassnahmeArtikelRepository.cs" />
+    <Compile Include="Kes\KesMassnahmeBerichtRepository.cs" />
+    <Compile Include="Kes\KesMassnahmeRepository.cs" />
+    <Compile Include="Kes\KesDokumentRepository.cs" />
+    <Compile Include="Kes\KesAuftragRepository.cs" />
+    <Compile Include="Kes\KesPraeventionRepository.cs" />
+    <Compile Include="Kes\KesVerlaufRepository.cs" />
+    <Compile Include="LocalResources\Fa\FaLeistungValidatorRes.Designer.cs">
+      <DependentUpon>FaLeistungValidatorRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="LocalResources\KesRes.Designer.cs">
+      <DependentUpon>KesRes.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Log\ServiceProcessErrorMessageRepository.cs" />
+    <Compile Include="Log\ServiceProcessErrorRepository.cs" />
+    <Compile Include="Log\UserSessionRepository.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QueryableExtensions.cs" />
+    <Compile Include="Sys\XTaskAutoGeneratedRepository.cs" />
+    <Compile Include="Log\ServiceCallRepository.cs" />
+    <Compile Include="Sys\XLangTextRepository.cs" />
+    <Compile Include="Sys\XDocumentRepository.cs" />
+    <Compile Include="Sys\XIconRepository.cs" />
+    <Compile Include="Sys\XModulRepository.cs" />
+    <Compile Include="Sys\XTaskRepository.cs" />
+    <Compile Include="Sys\XClassRepository.cs" />
+    <Compile Include="Sys\XConfigRepository.cs" />
+    <Compile Include="Sys\XOrgUnitRepository.cs" />
+    <Compile Include="Sys\XOrgUnit_UserRepository.cs" />
+    <Compile Include="Sys\XLovCodeRepository.cs" />
+    <Compile Include="Sys\XUserGroup_RightRepository.cs" />
+    <Compile Include="Sys\XUserRepository.cs" />
+    <Compile Include="Validation\BaPersonValidator.cs" />
+    <Compile Include="FbBuchungRepository.cs" />
+    <Compile Include="FbKontoRepository.cs" />
+    <Compile Include="FbPeriodeRepository.cs" />
+    <Compile Include="Interfaces\IKissUnitOfWork.cs" />
+    <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Interfaces\IUnitOfWork.cs" />
+    <Compile Include="Interfaces\IUnitOfWorkFactory.cs" />
+    <Compile Include="KissUnitOfWork.cs" />
+    <Compile Include="KissUnitOfWorkFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository.cs" />
+    <Compile Include="UnitOfWork.cs" />
+    <Compile Include="Validation\ServiceCallValidator.cs" />
+    <Compile Include="Validation\XTaskValidator.cs" />
+    <Compile Include="Validation\KesDokumentValidator.cs" />
+    <Compile Include="Validation\KesVerlaufValidator.cs" />
+    <Compile Include="Validation\KesPflegekinderaufsichtValidator.cs" />
+    <Compile Include="Validation\KesMassnahmeValidator.cs" />
+    <Compile Include="Validation\KesMandatsfuehrendePersonValidator.cs" />
+    <Compile Include="Validation\KesMassnahmeAuftragValidator.cs" />
+    <Compile Include="Validation\KesMassnahmeBerichtValidator.cs" />
+    <Compile Include="Validation\KesAuftragValidator.cs" />
+    <Compile Include="Validation\FaLeistungValidator.cs" />
+    <Compile Include="Validation\FaDokumentAblageValidator.cs" />
+    <Compile Include="Validation\FaKategorisierungValidator.cs" />
+    <Compile Include="Validation\FsReduktionValidator.cs" />
+    <Compile Include="Validation\KesPraeventionValidator.cs" />
+    <Compile Include="Validation\ValidatorBase.cs" />
+    <Compile Include="Vm\VmPositionsartRepository.cs" />
+    <Compile Include="Vm\Validation\VmPositionValidator.cs" />
+    <Compile Include="Vm\Validation\VmKlientenbudgetValidator.cs" />
+    <Compile Include="Vm\VmKlientenbudgetRepository.cs" />
+    <Compile Include="Vm\VmPositionRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KiSS.AssemblyInfo\BIAG.AssemblyInfo.csproj">
+      <Project>{C3A41F2E-FBF1-4628-8F6A-764A22252624}</Project>
+      <Name>BIAG.AssemblyInfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.DbContext\Kiss.DbContext.csproj">
+      <Project>{A9733EC8-89E0-44A6-941D-A71868778675}</Project>
+      <Name>Kiss.DbContext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Edmx\Kiss.Edmx.csproj">
+      <Project>{DF19F1BA-0582-4EAB-8613-C010F5D802DC}</Project>
+      <Name>Kiss.Edmx</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Infrastructure\Kiss.Infrastructure.csproj">
+      <Project>{94D23DEF-0BEC-4EAC-B6A8-A2AB6B3A0CF1}</Project>
+      <Name>Kiss.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="LocalResources\Fa\FaLeistungValidatorRes.fr.resx">
+      <DependentUpon>FaLeistungValidatorRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Fa\FaLeistungValidatorRes.it.resx">
+      <DependentUpon>FaLeistungValidatorRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\Fa\FaLeistungValidatorRes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FaLeistungValidatorRes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\KesRes.fr.resx">
+      <DependentUpon>KesRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\KesRes.it.resx">
+      <DependentUpon>KesRes.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalResources\KesRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>KesRes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.fr.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

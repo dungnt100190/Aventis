@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryKgPosition.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>282, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="picTitel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAHlJREFUOE+tjQEO
+        gCAMA3mkT/IZvsHn8B21huoYGwzjJU02aLv0gUOpZbs+qPIksUMEobwvj4wSv0CHnRLMVM1EQQtMFENy
+        LjYwvix3FQbYX/XC8g1Jk98LGJBzsfroEuzUbVhzrKQKEYR76jIyDAuAvGYpRNg4TUonu77umR7nZvAA
+        AAAASUVORK5CYII=
+</value>
+  </data>
+  <metadata name="qryKgDokumente.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>143, 17</value>
+  </metadata>
+  <data name="qryKgDokumente.SelectStatement" xml:space="preserve">
+    <value>SELECT
+  KDO.KgDokumentID,
+  KDO.KgBudgetID,
+  KDO.KgPositionID,
+  KDO.KgBuchungID,
+  KDO.KgDokumentTypCode,
+  KDO.Stichwort,
+  DOC.DocumentID,
+  DOC.DateCreation,
+  DOC.DateLastSave
+FROM   dbo.KgPosition POS WITH (READUNCOMMITTED)
+       INNER JOIN dbo.KgBudget   BDG WITH (READUNCOMMITTED) ON BDG.KgBudgetID = POS.KgBudgetID
+       INNER JOIN dbo.KgDokument KDO WITH (READUNCOMMITTED) ON KDO.KgPositionID = POS.KgPositionID or
+                                    KDO.KgBudgetID = POS.KgBudgetID or
+                                    KDO.KgBudgetID = BDG.KgMasterbudgetID
+       LEFT JOIN dbo.XDocument   DOC WITH (READUNCOMMITTED) ON DOC.DocumentID = KDO.DocumentID
+WHERE  POS.KgPositionID = {0}
+ORDER BY KDO.KgDokumentTypCode, Stichwort</value>
+  </data>
+  <data name="edtDocument.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABfSURBVDhPrY7RDYAwCESZgkXYqTs5LeYqRFsBNfaS98W9
+        cISIiGb0whwcVLcbzNyx2hkXWqMBlF206pGnD2CYlwlXQmGe5KRCxRohmgNSoWKNEM0BqVDxX3iD1b+E
+        aAfWfHr9nSYTxgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="edtDocument.Properties.Buttons1" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABYSURBVDhPnY3BDQAgCAPZyf1nw6DWGC2gXuID2wMxtIja
+        a8MNEL6kMR4cGQQmuYuY4C2ZrIW0bKB0VQZPZePpwlpOhb0USix0BQQspP9eGUQZJVtI6YJIBeu5cfV3
+        tfQcAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="edtDocument.Properties.Buttons2" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABBSURBVDhPYwABY2Pj/7gwWAE6AEn8/z8TA4uJiYExVBkC
+        4NMAo6FKIYCQDSCM4jxcGpDxqIbhooEYDFVOCmBgAADnY6JvpgSjlwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="edtDocument.Properties.Buttons3" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABdSURBVDhPxY6LCcAwCESdwkWcNtNaLlUam5oPBHrwCJJ7
+        KCEiohm18A4+VEsHM1es9mQk+GvVO7MNIJyXCS1nhSIUZpAKKC8LXh4RhFby2UlPAtvCFz8IK1h9J0QX
+        DTKNHhU9EmkAAAAASUVORK5CYII=
+</value>
+  </data>
+  <metadata name="qryKgPosition2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>410, 17</value>
+  </metadata>
+  <data name="qryKgPosition2.SelectStatement" xml:space="preserve">
+    <value>select --POS.*,
+       POS.KgPositionID,
+       POS.BuchungDatum,
+       POS.Betrag,
+       POS.KontoNr,
+       POS.BaInstitutionID,
+       POS.KgPositionTS,
+       BUC.KgBuchungID,
+       Doc      = (select case when count(KgDokumentID) &gt; 0 then count(*) end from dbo.KgDokument WITH (READUNCOMMITTED) where KgPositionID = POS.KgPositionID),
+       Debitor  = DEB.Name,
+       Status   = ISNULL(BUC.KgBuchungStatusCode,1),
+       KontoBez = (select top 1 KTO.KontoName 
+                   from   dbo.KgBudget BDG WITH (READUNCOMMITTED) 
+                          left join dbo.KgPeriode PER WITH (READUNCOMMITTED) on PER.FaLeistungID = BDG.FaLeistungID
+                          left join dbo.KgKonto   KTO WITH (READUNCOMMITTED) on KTO.KgPeriodeID = PER.KgPeriodeID and 
+                                                  KTO.KontoNr = POS.KontoNr 
+                   where  BDG.KgBudgetID = POS.KgBudgetID
+                   order by PER.PeriodeVon),
+       Konto    = (select top 1 POS.KontoNr + ' ' + KTO.KontoName 
+                   from   dbo.KgBudget BDG WITH (READUNCOMMITTED) 
+                          left join dbo.KgPeriode PER WITH (READUNCOMMITTED) on PER.FaLeistungID = BDG.FaLeistungID
+                          left join dbo.KgKonto   KTO WITH (READUNCOMMITTED) on KTO.KgPeriodeID = PER.KgPeriodeID and 
+                                                  KTO.KontoNr = POS.KontoNr 
+                   where  BDG.KgBudgetID = POS.KgBudgetID
+                   order by PER.PeriodeVon),
+       Buchungstext = ISNULL(BUC.Text, POS.Buchungstext),
+       kgPeriodeStatusCode = KGP.KgPeriodeStatusCode,
+       LEI.BaPersonID,
+       ZusatzInfo = '' -- Dummy-Feld, damit qryKgPosition2 mit qryKgPosition austauschbar ist
+from   dbo.KgPosition POS WITH (READUNCOMMITTED)
+       inner join dbo.KgBudget      BDG WITH (READUNCOMMITTED) on BDG.KgBudgetID = POS.KgBudgetID
+       inner join dbo.FaLeistung    LEI WITH (READUNCOMMITTED) on LEI.FaLeistungID = BDG.FaLeistungID
+       inner join dbo.KgBuchung     BUC WITH (READUNCOMMITTED) on BUC.KgPositionID = POS.KgPositionID
+       left  join dbo.vwInstitution DEB WITH (READUNCOMMITTED) on DEB.BaInstitutionID = POS.BaInstitutionID 
+       left join KgPeriode          KGP WITH (READUNCOMMITTED) ON KGP.KgPeriodeID = BUC.KgPeriodeID
+where  LEI.BaPersonID = {0} and
+       BDG.KgMasterbudgetID is not null and
+       POS.KgPositionsKategorieCode = 3 and -- Einnahmen
+       POS.Betrag = {1}
+order by POS.BuchungDatum desc, POS.KgPositionID desc</value>
+  </data>
+  <metadata name="qryKgDokumente2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryKgDokumente2.SelectStatement" xml:space="preserve">
+    <value>SELECT
+  KDO.KgDokumentID,
+  KDO.KgBudgetID,
+  KDO.KgPositionID,
+  KDO.KgBuchungID,
+  KDO.KgDokumentTypCode,
+  KDO.Stichwort,
+  DOC.DocumentID,
+  DOC.DateCreation,
+  DOC.DateLastSave
+FROM   dbo.KgPosition POS WITH (READUNCOMMITTED)
+       INNER JOIN dbo.KgBudget   BDG WITH (READUNCOMMITTED) ON BDG.KgBudgetID = POS.KgBudgetID
+       INNER JOIN dbo.KgDokument KDO WITH (READUNCOMMITTED) ON KDO.KgPositionID = POS.KgPositionID or
+                                    KDO.KgBudgetID = POS.KgBudgetID or
+                                    KDO.KgBudgetID = BDG.KgMasterbudgetID
+       LEFT JOIN dbo.XDocument   DOC WITH (READUNCOMMITTED) ON DOC.DocumentID = KDO.DocumentID
+WHERE 0 = 1 -- standardmässig nichts auswählt
+</value>
+  </data>
+  <data name="edtDokument2.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABfSURBVDhPrY7RDYAwCESZgkXYqTs5LeYqRFsBNfaS98W9
+        cISIiGb0whwcVLcbzNyx2hkXWqMBlF206pGnD2CYlwlXQmGe5KRCxRohmgNSoWKNEM0BqVDxX3iD1b+E
+        aAfWfHr9nSYTxgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="edtFaelligAm.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <metadata name="qryMonatsbudget.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>545, 17</value>
+  </metadata>
+  <data name="qryMonatsbudget.SelectStatement" xml:space="preserve">
+    <value>select BDG.KgBudgetID,
+       BDG.Jahr, 
+       BDG.Monat, 
+       BDG.KgBewilligungCode,
+       MonatText  = dbo.fnXMonat(BDG.Monat),
+       EZ         = (select count(*) from dbo.KgPosition WITH (READUNCOMMITTED) 
+                     where  KgBudgetID = BDG.KgBudgetID and
+                            KgPositionsKategorieCode = 2), -- Auszahlung Dritte
+       MasterBewilligungCode = MST.KgBewilligungCode,
+       MasterbudgetID        = MST.KgBudgetID,
+       BDG.FaLeistungID,
+       LEI.DatumBis,
+       FallBaPersonID = FAL.BaPersonID
+from   dbo.KgBudget BDG WITH (READUNCOMMITTED)
+       inner join dbo.FaLeistung LEI WITH (READUNCOMMITTED) on LEI.FaLeistungID = BDG.FaLeistungID
+       inner join dbo.FaFall     FAL WITH (READUNCOMMITTED) on FAL.FaFallID = LEI.FaFallID
+       inner join dbo.KgBudget   MST WITH (READUNCOMMITTED) on MST.KgBudgetID = BDG.KgMasterBudgetID
+where  LEI.BaPersonID = {0} and
+       BDG.KgBudgetID = isnull({1},BDG.KgBudgetID)
+order by BDG.Jahr, BDG.Monat</value>
+  </data>
+  <data name="edtErfassungDatum.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="qryKgPosition.SelectStatement" xml:space="preserve">
+    <value>select POS.*,
+       FaelligAm     = VAL.Datum,
+       Text          = POS.Buchungstext,
+       Doc           = (select case when count(*) &gt; 0 then count(*) end from dbo.KgDokument WITH (READUNCOMMITTED) where KgPositionID = POS.KgPositionID),
+       Konto         = (select top 1 KTO.KontoNr + ' ' + KTO.KontoName 
+                        from   dbo.KgBudget BDG WITH (READUNCOMMITTED) 
+                               left join dbo.KgPeriode PER WITH (READUNCOMMITTED) on PER.FaLeistungID = BDG.FaLeistungID
+                               left join dbo.KgKonto   KTO WITH (READUNCOMMITTED) on KTO.KgPeriodeID = PER.KgPeriodeID and 
+                                                          KTO.KontoNr = POS.KontoNr 
+                        where  BDG.KgBudgetID = POS.KgBudgetID
+                        order by PER.PeriodeVon),
+       Debitor       = DEB.Name,
+       ZusatzInfo    = DEB.AdresseMehrzeilig,
+       Mandant       = PRS.NameVorname,
+       BaPersonID    = PRS.BaPersonID,
+       Adresse       = PRS.Wohnsitz,
+       MT            = dbo.fnVmGetMTName(PRS.BaPersonID),
+       MA            = USR.LogonName,
+       Status        = isnull(MAX.KgBuchungStatusCode,1),
+       FallBaPersonID= FAL.BaPersonID,
+       Sel           = CASE WHEN MAX.KgBuchungID IS NULL THEN CONVERT(Bit, 0) ELSE NULL END,
+       MaxBuchungStatusCode = MAX.KgBuchungStatusCode,
+       kgPeriodeStatusCode = KGP.KgPeriodeStatusCode,
+       LEI.FaLeistungID
+FROM   dbo.KgPosition POS WITH (READUNCOMMITTED)
+       inner join dbo.KgBudget          BDG WITH (READUNCOMMITTED) on BDG.KgBudgetID = POS.KgBudgetID
+       inner join dbo.FaLeistung        LEI WITH (READUNCOMMITTED) on LEI.FaLeistungID = BDG.FaLeistungID
+       inner join dbo.FaFall            FAL WITH (READUNCOMMITTED) on FAL.FaFallID = LEI.FaFallID
+       inner join dbo.vwPerson          PRS WITH (READUNCOMMITTED) on PRS.BaPersonID = LEI.BaPersonID
+       left  join vwInstitution         DEB WITH (READUNCOMMITTED) on DEB.BaInstitutionID = POS.BaInstitutionID 
+       left  join dbo.XUser             USR WITH (READUNCOMMITTED) on USR.UserID = POS.ErstelltUserID 
+
+       left  join dbo.KgPositionValuta  VAL WITH (READUNCOMMITTED) on VAL.KgPositionID = POS.KgPositionID
+       left  join dbo.KgBuchung         MAX WITH (READUNCOMMITTED) on MAX.KgPositionID = POS.KgPositionID and
+                                                                      MAX.KgBuchungID = (select top 1 KgBuchungID
+                                                                                         from   dbo.KgBuchung B WITH (READUNCOMMITTED)
+                                                                                                inner join dbo.XLOVCode S WITH (READUNCOMMITTED) on S.LOVName = 'KgBuchungsStatus' and
+                                                                                                                                                    S.Code = KgBuchungStatusCode 
+                                                                                         where  KgPositionID = POS.KgPositionID
+                                                                                         order by S.SortKey desc)
+       left join KgPeriode              KGP WITH (READUNCOMMITTED) ON KGP.KgPeriodeID = MAX.KgPeriodeID
+where  BDG.KgMasterbudgetID is not null and
+       POS.KgPositionsKategorieCode = 3 -- Einnahmen
+
+--- and POS.ErstelltUserID = (select UserID from dbo.XUser WITH (READUNCOMMITTED) where LogonName = {edtSucheErfassungMA})
+--- and POS.ErstelltDatum &gt;= {edtSucheErfassungVon}
+--- and POS.ErstelltDatum &lt;= dateadd(ms,-10,dateadd(d,1,{edtSucheErfassungBis}))  
+--- and POS.MutiertUserID = (select UserID from dbo.XUser WITH (READUNCOMMITTED) where LogonName = {edtSucheMutationMA})
+--- and POS.MutiertDatum &gt;= {edtSucheMutationVon}
+--- and POS.MutiertDatum &lt;= dateadd(ms,-10,dateadd(d,1,{edtSucheMutationBis}))
+--- and VAL.Datum &gt;= {edtSucheValutaVon}
+--- and VAL.Datum &lt;= {edtSucheValutaBis}
+--- and isnull(MAX.KgBuchungStatusCode,1) = {edtSucheStatus}
+
+order by POS.ErstelltDatum, POS.KgPositionID</value>
+  </data>
+  <data name="edtSucheValutaBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtSucheValutaVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtSucheMutationBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtSucheMutationVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtSucheErfassungBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <data name="edtSucheErfassungVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <metadata name="qryKgPeriode.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>683, 17</value>
+  </metadata>
+</root>

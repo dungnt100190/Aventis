@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>
+
+
+DECLARE @OrgGruppeID int
+SET @OrgGruppeID = NULL
+--- SET @OrgGruppeID = {ctlOrgUnitTeamUser.SucheGruppe}
+
+DECLARE @TeamID int
+SET @TeamID = NULL
+--- SET @TeamID = {ctlOrgUnitTeamUser.SucheTeam}
+
+DECLARE @OrgGruppe_ParenID  int
+SELECT @OrgGruppe_ParenID = CONVERT(int, Value1)  
+FROM   XLOVCode 
+WHERE  LOVName = 'FaSozialzentrum' 
+AND    Code = @OrgGruppeID
+
+SELECT TMP.Name,
+       TMP.Vorname,
+       TMP.Geburtsdatum,
+       TMP.ZIPNr,
+       TMP.EinwohnerregisterID,
+       TMP.EinwohnerregisterIDOhne0er,
+       TMP.AHVNummer,
+       TMP.PersonID,
+       TMP.WohnsitzStrasseHausNr,
+       TMP.WohnsitzPLZ,
+       TMP.WohnsitzOrt,
+       TMP.Aufenthalt,
+       TMP.FT,
+       TMP.LT,
+       TMP.[Alter],
+       TMP.[Geschlecht],
+       TMP.Heimatort,
+       TMP.ResoNr,
+       TMP.AltePNr,
+       TMP.AlteFallNr,
+       TMP.KlientensystemID$,
+       BaPersonID = isNull(KLS.BaPersonID,TMP.PersonID),
+       KlientensystemVon = KLS.Name + isNull(', ' + KLS.Vorname,''),
+       OrgUnit    = (SELECT TOP 1 USR.OrgEinheitName 
+		                 FROM   FaFall FAL
+			                LEFT JOIN vwUser USR ON USR.UserID = FAL.UserID
+		                 WHERE BaPersonID = KLS.BaPersonID
+		                 ORDER BY FAL.DatumVon DESC),
+       FallNr     = dbo.fnGetFallNrOfPerson(KLS.BaPersonID),
+       FallVerantwortlicheMA = FV.LogonName + CASE WHEN (SELECT COUNT(UserID) FROM (SELECT UserID FROM dbo.FaLeistung WITH (READUNCOMMITTED) WHERE FaFallID = FAL.FaFallID AND IsNull(DatumBis, '2999-12-31') &gt;= GetDate() GROUP BY UserID) TMP1) &gt; 1 THEN
+       					            ' (' + CONVERT(VARCHAR, (SELECT COUNT(UserID) FROM (SELECT UserID FROM dbo.FaLeistung WITH (READUNCOMMITTED) WHERE FaFallID = FAL.FaFallID AND IsNull(DatumBis, '2999-12-31') &gt;= GetDate() GROUP BY UserID) TMP1) -1) +  ')' ELSE '' END,
+       FallVerantwortlicheSB = SB.LogonName
+FROM (
+  SELECT PRS.Name, 
+         PRS.Vorname,
+         PRS.Geburtsdatum,
+         PRS.ZIPNr,
+         PRS.EinwohnerregisterID,
+         PRS.EinwohnerregisterIDOhne0er,
+         PRS.AHVNummer,
+         PersonID = PRS.BaPersonID,
+         PRS.WohnsitzStrasseHausNr,
+         PRS.WohnsitzPLZ,
+         PRS.WohnsitzOrt,
+         PRS.Aufenthalt,
+         FT = CONVERT(BIT, CASE WHEN FAL.FaFallID IS NOT NULL THEN 1 ELSE 0 END),
+         LT = CONVERT(BIT, CASE WHEN LEI.FaLeistungID IS NOT NULL THEN 1 ELSE 0 END),
+         [Alter] = CONVERT(INT, ((DATEDIFF(dd,Geburtsdatum,GETDATE())+.5)/365.25)), 
+         Geschlecht = CASE PRS.GeschlechtCode 
+                      WHEN 1 THEN 'm' 
+                      WHEN 2 THEN 'w' 
+                      ELSE '' END, 
+         Heimatort  = dbo.fnLOVText('Gemeinde', PRS.HeimatgemeindeCode),
+         ResoNr     = (SELECT TOP 1 CONVERT(VARCHAR(30),ResoNrAlt) FROM dbo.BaAlteFallNr WITH (READUNCOMMITTED) WHERE BaPersonID = PRS.BaPersonID) +
+                      CASE WHEN (SELECT COUNT(1) FROM dbo.BaAlteFallNr WITH (READUNCOMMITTED) WHERE BaPersonID = PRS.BaPersonID AND ResoNrAlt IS NOT NULL) &gt; 1 THEN '+' ELSE '' END,
+         AltePNr    = (SELECT TOP 1 CONVERT(VARCHAR(30),PersonNrAlt) FROM dbo.BaAlteFallNr WITH (READUNCOMMITTED) WHERE BaPersonID = PRS.BaPersonID) +
+                      CASE WHEN (SELECT COUNT(1) FROM dbo.BaAlteFallNr WITH (READUNCOMMITTED) WHERE BaPersonID = PRS.BaPersonID AND PersonNrAlt IS NOT NULL) &gt; 1 THEN '+' ELSE '' END,
+         AlteFallNr = (SELECT TOP 1 CONVERT(VARCHAR(30),FallNrAlt)   FROM dbo.BaAlteFallNr WITH (READUNCOMMITTED) WHERE BaPersonID = PRS.BaPersonID) +
+                      CASE WHEN (SELECT COUNT(1) FROM dbo.BaAlteFallNr WITH (READUNCOMMITTED) WHERE BaPersonID = PRS.BaPersonID AND FallNrAlt IS NOT NULL) &gt; 1 THEN '+' ELSE '' END,
+         KlientensystemID$ = dbo.[fnGetHauptpersonFuerMitglied](PRS.BaPersonID)
+  FROM   dbo.vwPerson              PRS WITH (READUNCOMMITTED)
+    LEFT JOIN dbo.FaFall     FAL WITH (READUNCOMMITTED) ON FAL.BaPersonID = PRS.BaPersonID 
+                                                       AND FAL.FaFallID = (SELECT TOP 1 FaFallID FROM FaFall WHERE BaPersonID = PRS.BaPersonID ORDER BY DatumVon DESC)
+    LEFT JOIN dbo.FaLeistung LEI WITH (READUNCOMMITTED) ON LEI.BaPersonID = PRS.BaPersonID 
+                                                       AND LEI.FaLeistungID = (SELECT TOP 1 FaLeistungID FROM FaLeistung WHERE BaPersonID = PRS.BaPersonID ORDER BY DatumVon DESC)
+  WHERE (COALESCE(@OrgGruppeID, @TeamID) IS NULL 
+    OR EXISTS (SELECT TOP 1 1
+                FROM FaFall                FAL WITH (READUNCOMMITTED)
+                  INNER JOIN XOrgUnit_User OUU WITH (READUNCOMMITTED) ON OUU.UserID = FAL.UserID AND OUU.OrgUnitMemberCode = 2
+                  INNER JOIN XOrgUnit      ORG WITH (READUNCOMMITTED) ON ORG.OrgUnitID = OUU.OrgUnitID
+                WHERE FAL.BaPersonID = PRS.BaPersonID
+                  AND ORG.ParentID = ISNULL(@OrgGruppe_ParenID, ORG.ParentID)
+  ---             AND ORG.OrgUnitID = {ctlOrgUnitTeamUser.SucheTeam}
+              )
+  OR  EXISTS (SELECT TOP 1 1
+              FROM dbo.FaLeistung            FLE WITH (READUNCOMMITTED)
+                INNER JOIN dbo.XOrgUnit_User OUU WITH (READUNCOMMITTED) ON OUU.UserID = FLE.UserID AND OUU.OrgUnitMemberCode = 2
+                INNER JOIN dbo.XOrgUnit      ORG WITH (READUNCOMMITTED) ON ORG.OrgUnitID = OUU.OrgUnitID
+              WHERE FLE.BaPersonID = PRS.BaPersonID
+                AND ORG.ParentID = isNull(@OrgGruppe_ParenID, ORG.ParentID)
+---             AND ORG.OrgUnitID = {ctlOrgUnitTeamUser.SucheTeam}
+              )
+  OR  EXISTS (SELECT TOP 1 1
+              FROM dbo.FaFallPerson          FAP WITH (READUNCOMMITTED)
+                INNER JOIN dbo.FaFall        FAL WITH (READUNCOMMITTED) ON FAL.FaFallID = FAP.FaFallID
+                INNER JOIN dbo.XOrgUnit_User OUU WITH (READUNCOMMITTED) ON OUU.UserID = FAL.UserID AND OUU.OrgUnitMemberCode = 2
+                INNER JOIN dbo.XOrgUnit      ORG WITH (READUNCOMMITTED) ON ORG.OrgUnitID = OUU.OrgUnitID
+              WHERE FAP.BaPersonID = PRS.BaPersonID
+                AND ORG.ParentID = isNull(@OrgGruppe_ParenID, ORG.ParentID)
+---             AND ORG.OrgUnitID = {ctlOrgUnitTeamUser.SucheTeam}
+              )
+  ) 
+--- AND (LEI.UserID = {ctlOrgUnitTeamUser.SucheUserID.LookupID} OR FAL.UserID = {ctlOrgUnitTeamUser.SucheUserID.LookupID})
+--- AND PRS.Name_AI LIKE CONVERT(varchar(100), {edtSucheName}) + '%' 
+--- AND PRS.Vorname_AI LIKE {edtSucheVorname} + '%' 
+--- AND PRS.AHVNummer LIKE {edtSucheAHV} + '%'
+--- AND PRS.Versichertennummer LIKE {edtSucheVersichertenNr} + '%'
+--- AND PRS.WohnsitzStrasseHausNr LIKE {edtSucheStrasse} + '%'
+--- AND PRS.WohnsitzPLZ LIKE {edtSuchePLZ} + '%'
+--- AND PRS.WohnsitzOrt LIKE {edtSucheOrt} + '%'
+--- AND ({edtSucheFalltraeger} = 0 OR FAL.FaFallID IS NOT NULL)
+--- AND ({edtSucheLeistungstraeger} = 0 OR LEI.FaLeistungID IS NOT NULL) 
+--- AND PRS.Geburtsdatum = {edtSucheGeburt}
+--- AND PRS.BaPersonID = {edtSucheBaPersonID}
+--- AND (PRS.EinwohnerregisterID = {edtSucheEinwohnerregisterId} OR PRS.EinwohnerregisterIDOhne0er = {edtSucheEinwohnerregisterId})
+--- AND PRS.BaPersonID = (SELECT BaPersonID FROM dbo.FaFall  WITH (READUNCOMMITTED) WHERE FaFallID = {edtSucheFaFallID})
+--- AND PRS.BaPersonID IN (SELECT DISTINCT BaPersonID FROM BaAlteFallNr WHERE ResoNrAlt = CONVERT(VARCHAR(50),{edtSucheResoNr}))  
+--- AND PRS.BaPersonID IN (SELECT DISTINCT BaPersonID FROM BaAlteFallNr WHERE FallNrAlt = CONVERT(VARCHAR(50),{edtSucheAlteFallNr}))
+--- AND PRS.BaPersonID IN (SELECT DISTINCT BaPersonID FROM BaAlteFallNr WHERE PersonNrAlt = CONVERT(VARCHAR(50),{edtSucheAltePNr}))
+)                     TMP
+  LEFT JOIN dbo.BaPerson KLS WITH (READUNCOMMITTED) ON KLS.BaPersonID = TMP.KlientensystemID$
+  LEFT JOIN dbo.FaFall   FAL WITH (READUNCOMMITTED) ON FAL.BaPersonID = TMP.KlientensystemID$ AND FAL.FaFallID = (SELECT TOP 1 FaFallID FROM dbo.FaFall WITH (READUNCOMMITTED) WHERE BaPersonID = TMP.KlientensystemID$ ORDER BY DatumVon DESC)
+  LEFT JOIN dbo.FaLeistung LEI WITH (READUNCOMMITTED) ON LEI.FaFallID = FAL.FaFallID AND LEI.FaLeistungID = (SELECT TOP 1 FaLeistungID FROM FaLeistung WHERE FaFallID = FAL.FaFallID AND FaProzessCode = 200 ORDER BY DatumVon DESC)
+  LEFT JOIN dbo.XUser   FV WITH (READUNCOMMITTED) ON FV.UserID = FAL.UserID
+  LEFT JOIN dbo.XUser   SB WITH (READUNCOMMITTED) ON SB.UserID = LEI.SachbearbeiterID
+ORDER BY TMP.Name, TMP.Vorname;</value>
+  </data>
+  <metadata name="qryBaPerson.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>119, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="edtSucheGeburt.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+</root>

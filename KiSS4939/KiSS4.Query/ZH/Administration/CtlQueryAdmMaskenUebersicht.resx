@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>select * from 
+  (
+   -- Modulbaum-Maske
+   select Modul = isNull(MOD2.ShortName,'-'),
+         InternerName = CLA.ClassName,
+         Typ = 'Modulbaum-Maske',
+         Pfad = 'Fallbearbeitung -&gt; Modul ' + MOD.ShortName + ' -&gt; ' +
+                isnull(TRE5.Name + ' -&gt; ','') +
+                isnull(TRE4.Name + ' -&gt; ','') +
+                isnull(TRE3.Name + ' -&gt; ','') +
+                isnull(TRE2.Name + ' -&gt; ','') +
+                isnull(TRE1.Name + ' -&gt; ','') +
+                isnull(TRE0.Name,''),
+         Modulname = MOD2.Name,
+         ModulID$ = CLA.ModulID,
+         Kommentar = CLA.Description
+   from  XClass CLA
+         inner join XModulTree TRE0 on TRE0.ClassName = CLA.ClassName
+         left  join XModulTree TRE1 on TRE1.ModulTreeID = TRE0.ModulTreeID_Parent
+         left  join XModulTree TRE2 on TRE2.ModulTreeID = TRE1.ModulTreeID_Parent
+         left  join XModulTree TRE3 on TRE3.ModulTreeID = TRE2.ModulTreeID_Parent
+         left  join XModulTree TRE4 on TRE4.ModulTreeID = TRE3.ModulTreeID_Parent
+         left  join XModulTree TRE5 on TRE5.ModulTreeID = TRE4.ModulTreeID_Parent
+         left  join XModul     MOD  on MOD.ModulID = TRE0.ModulID
+         left  join XModul     MOD2 on MOD2.ModulID = CLA.ModulID
+    where isNull(TRE0.Active,1) = 1 AND
+         isNull(TRE1.Active,1) = 1 AND
+         isNull(TRE2.Active,1) = 1 AND
+         isNull(TRE3.Active,1) = 1 AND
+         isNull(TRE4.Active,1) = 1 AND
+         isNull(TRE5.Active,1) = 1
+
+   union all
+
+   -- Submaske
+   select Modul = isNull(MOD2.ShortName,'-'),
+         InternerName = CLA2.ClassName,
+         Typ = 'Submaske',
+         Pfad = 'Fallbearbeitung -&gt; Modul ' + MOD.ShortName + ' -&gt; ' +
+                isnull(TRE5.Name + ' -&gt; ','') +
+                isnull(TRE4.Name + ' -&gt; ','') +
+                isnull(TRE3.Name + ' -&gt; ','') +
+                isnull(TRE2.Name + ' -&gt; ','') +
+                isnull(TRE1.Name + ' -&gt; ','') +
+                isnull(TRE0.Name,''),
+         Modulname = MOD2.Name,
+         ModulID$ = CLA.ModulID,
+         Kommentar = CLA.Description
+   from  XClass CLA
+         inner join XClassReference REF  on REF.ClassName = CLA.ClassName
+         inner join XClass          CLA2 on CLA2.ClassName = REF.ClassName_Ref and
+                                            CLA2.BaseType = 'KiSS4.Gui.KissUserControl'
+         inner join XModulTree      TRE0 on TRE0.ClassName = CLA.ClassName
+         left  join XModulTree      TRE1 on TRE1.ModulTreeID = TRE0.ModulTreeID_Parent
+         left  join XModulTree      TRE2 on TRE2.ModulTreeID = TRE1.ModulTreeID_Parent
+         left  join XModulTree      TRE3 on TRE3.ModulTreeID = TRE2.ModulTreeID_Parent
+         left  join XModulTree      TRE4 on TRE4.ModulTreeID = TRE3.ModulTreeID_Parent
+         left  join XModulTree      TRE5 on TRE5.ModulTreeID = TRE4.ModulTreeID_Parent
+         left  join XModul          MOD  on MOD.ModulID = TRE0.ModulID
+         left  join XModul          MOD2 on MOD2.ModulID = CLA.ModulID
+   where isNull(TRE0.Active,1) = 1 AND
+         isNull(TRE1.Active,1) = 1 AND
+         isNull(TRE2.Active,1) = 1 AND
+         isNull(TRE3.Active,1) = 1 AND
+         isNull(TRE4.Active,1) = 1 AND
+         isNull(TRE5.Active,1) = 1
+
+  union all
+
+  -- Menu-Maske
+  select Modul = isNull(MOD2.ShortName,'-'),
+         InternerName = CLA.ClassName,
+         Typ = 'Menu-Maske',
+         Pfad = 'Hauptmenu -&gt; ' +
+                isnull(MEN5.Caption + ' -&gt; ','') +
+                isnull(MEN4.Caption + ' -&gt; ','') +
+                isnull(MEN3.Caption + ' -&gt; ','') +
+                isnull(MEN2.Caption + ' -&gt; ','') +
+                isnull(MEN1.Caption + ' -&gt; ','') +
+                isnull(MEN0.Caption,''),
+         Modulname = MOD2.Name,
+         ModulID$ = CLA.ModulID,
+         Kommentar = CLA.Description
+  from   XClass CLA
+         inner join XMenuItem MEN0 on MEN0.ClassName = CLA.ClassName
+         left  join XMenuItem MEN1 on MEN1.MenuItemID = MEN0.ParentMenuItemID AND MEN1.ParentMenuItemID is not null
+         left  join XMenuItem MEN2 on MEN2.MenuItemID = MEN1.ParentMenuItemID AND MEN2.ParentMenuItemID is not null
+         left  join XMenuItem MEN3 on MEN3.MenuItemID = MEN2.ParentMenuItemID AND MEN3.ParentMenuItemID is not null
+         left  join XMenuItem MEN4 on MEN4.MenuItemID = MEN3.ParentMenuItemID AND MEN4.ParentMenuItemID is not null
+         left  join XMenuItem MEN5 on MEN5.MenuItemID = MEN4.ParentMenuItemID AND MEN5.ParentMenuItemID is not null
+         left  join XModul    MOD2 on MOD2.ModulID = CLA.ModulID
+   where isNull(MEN0.Visible,1) = 1 AND
+         isNull(MEN1.Visible,1) = 1 AND
+         isNull(MEN2.Visible,1) = 1 AND
+         isNull(MEN3.Visible,1) = 1 AND
+         isNull(MEN4.Visible,1) = 1 AND
+         isNull(MEN5.Visible,1) = 1
+
+  union all
+
+  -- Dialog
+  select Modul = isNull(MOD2.ShortName,'-'),
+         InternerName = CLA.ClassName,
+         Typ = 'Dialog',
+         Pfad = 'Aufruf via ' + isnull(REF.ClassName,'?'),
+         Modulname = MOD2.Name,
+         ModulID$ = CLA.ModulID,
+         Kommentar = CLA.Description
+  from   XClass CLA
+         left  join XMenuItem       MEN  on MEN.ClassName = CLA.ClassName
+         inner join XClassReference REF  on REF.ClassName_Ref = CLA.ClassName
+         left  join XModul          MOD2 on MOD2.ModulID = CLA.ModulID  
+  where  BaseType like '%Dialog%' and
+         MEN.MenuItemID is null and
+         isNull(MEN.Visible,1) = 1 
+
+  union all
+
+  -- Modul Navigatoren
+  select Modul = isNull(MOD2.ShortName,'-'),
+         InternerName = CLA.ClassName,
+         Typ = 'Modul-Navigatoren',
+         Pfad = '',
+         Modulname = MOD2.Name,
+         ModulID$ = CLA.ModulID,
+         Kommentar = CLA.Description
+  from   XClass CLA
+         left  join XModul          MOD2 on MOD2.ModulID = CLA.ModulID  
+  where  BaseType like 'KiSS4.Common.KissModulTree'
+
+  union all
+
+  -- Spezialrecht
+  select Modul = isNull(MOD.ShortName,'-'),
+         InternerName = RGT.RightName,
+         Typ = 'Spezialrecht',
+         Pfad = '',
+         Modulname = MOD.Name,
+         ModulID$ = CLA.ModulID,
+         Kommentar = Usertext
+  from   XRight RGT
+         inner join XClass          CLA  on CLA.ClassName = RGT.ClassName
+         left  join XModul          MOD  on MOD.ModulID = CLA.ModulID
+
+  union all
+
+  -- **********************************
+  -- Masken, die sonst nirgens sind
+
+  select Modul = isNull(MOD2.ShortName,'-'),
+         InternerName = CLA.ClassName,
+         Typ = 'Sonstige-Masken',
+         Pfad = 'Nicht aufgeführte und nicht verwendete Masken',
+         Modulname = MOD2.Name,
+         ModulID$ = CLA.ModulID,
+         Kommentar = CLA.Description
+  from   XClass CLA
+         left  join XModul         MOD2 on MOD2.ModulID = CLA.ModulID  
+  where CLA.ClassName NOT IN (
+
+  -- vvvv beginn obere selects vvvvvv --
+  select InternerName from
+  (
+   -- Modulbaum-Maske
+   select Modul = isNull(MOD2.ShortName,'-'),
+         InternerName = CLA.ClassName,
+         Typ = 'Modulbaum-Maske',
+         Pfad = 'Fallbearbeitung -&gt; Modul ' + MOD.ShortName + ' -&gt; ' +
+                isnull(TRE5.Name + ' -&gt; ','') +
+                isnull(TRE4.Name + ' -&gt; ','') +
+                isnull(TRE3.Name + ' -&gt; ','') +
+                isnull(TRE2.Name + ' -&gt; ','') +
+                isnull(TRE1.Name + ' -&gt; ','') +
+                isnull(TRE0.Name,''),
+         Modulname = MOD2.Name,
+         ModulID$ = CLA.ModulID,
+         Kommentar = CLA.Description
+   from  XClass CLA
+         inner join XModulTree TRE0 on TRE0.ClassName = CLA.ClassName
+         left  join XModulTree TRE1 on TRE1.ModulTreeID = TRE0.ModulTreeID_Parent
+         left  join XModulTree TRE2 on TRE2.ModulTreeID = TRE1.ModulTreeID_Parent
+         left  join XModulTree TRE3 on TRE3.ModulTreeID = TRE2.ModulTreeID_Parent
+         left  join XModulTree TRE4 on TRE4.ModulTreeID = TRE3.ModulTreeID_Parent
+         left  join XModulTree TRE5 on TRE5.ModulTreeID = TRE4.ModulTreeID_Parent
+         left  join XModul     MOD  on MOD.ModulID = TRE0.ModulID
+         left  join XModul     MOD2 on MOD2.ModulID = CLA.ModulID
+    where isNull(TRE0.Active,1) = 1 AND
+         isNull(TRE1.Active,1) = 1 AND
+         isNull(TRE2.Active,1) = 1 AND
+         isNull(TRE3.Active,1) = 1 AND
+         isNull(TRE4.Active,1) = 1 AND
+         isNull(TRE5.Active,1) = 1
+
+   union all
+
+   -- Submaske
+   select Modul = isNull(MOD2.ShortName,'-'),
+         InternerName = CLA2.ClassName,
+         Typ = 'Submaske',
+         Pfad = 'Fallbearbeitung -&gt; Modul ' + MOD.ShortName + ' -&gt; ' +
+                isnull(TRE5.Name + ' -&gt; ','') +
+                isnull(TRE4.Name + ' -&gt; ','') +
+                isnull(TRE3.Name + ' -&gt; ','') +
+                isnull(TRE2.Name + ' -&gt; ','') +
+                isnull(TRE1.Name + ' -&gt; ','') +
+                isnull(TRE0.Name,''),
+         Modulname = MOD2.Name,
+         ModulID$ = CLA.ModulID,
+         Kommentar = CLA.Description
+   from  XClass CLA
+         inner join XClassReference REF  on REF.ClassName = CLA.ClassName
+         inner join XClass          CLA2 on CLA2.ClassName = REF.ClassName_Ref and
+                                            CLA2.BaseType = 'KiSS4.Gui.KissUserControl'
+         inner join XModulTree      TRE0 on TRE0.ClassName = CLA.ClassName
+         left  join XModulTree      TRE1 on TRE1.ModulTreeID = TRE0.ModulTreeID_Parent
+         left  join XModulTree      TRE2 on TRE2.ModulTreeID = TRE1.ModulTreeID_Parent
+         left  join XModulTree      TRE3 on TRE3.ModulTreeID = TRE2.ModulTreeID_Parent
+         left  join XModulTree      TRE4 on TRE4.ModulTreeID = TRE3.ModulTreeID_Parent
+         left  join XModulTree      TRE5 on TRE5.ModulTreeID = TRE4.ModulTreeID_Parent
+         left  join XModul          MOD  on MOD.ModulID = TRE0.ModulID
+         left  join XModul          MOD2 on MOD2.ModulID = CLA.ModulID
+   where isNull(TRE0.Active,1) = 1 AND
+         isNull(TRE1.Active,1) = 1 AND
+         isNull(TRE2.Active,1) = 1 AND
+         isNull(TRE3.Active,1) = 1 AND
+         isNull(TRE4.Active,1) = 1 AND
+         isNull(TRE5.Active,1) = 1
+
+  union all
+
+  -- Menu-Maske
+  select Modul = isNull(MOD2.ShortName,'-'),
+         InternerName = CLA.ClassName,
+         Typ = 'Menu-Maske',
+         Pfad = 'Hauptmenu -&gt; ' +
+                isnull(MEN5.Caption + ' -&gt; ','') +
+                isnull(MEN4.Caption + ' -&gt; ','') +
+                isnull(MEN3.Caption + ' -&gt; ','') +
+                isnull(MEN2.Caption + ' -&gt; ','') +
+                isnull(MEN1.Caption + ' -&gt; ','') +
+                isnull(MEN0.Caption,''),
+         Modulname = MOD2.Name,
+         ModulID$ = CLA.ModulID,
+         Kommentar = CLA.Description
+  from   XClass CLA
+         inner join XMenuItem MEN0 on MEN0.ClassName = CLA.ClassName
+         left  join XMenuItem MEN1 on MEN1.MenuItemID = MEN0.ParentMenuItemID AND MEN1.ParentMenuItemID is not null
+         left  join XMenuItem MEN2 on MEN2.MenuItemID = MEN1.ParentMenuItemID AND MEN2.ParentMenuItemID is not null
+         left  join XMenuItem MEN3 on MEN3.MenuItemID = MEN2.ParentMenuItemID AND MEN3.ParentMenuItemID is not null
+         left  join XMenuItem MEN4 on MEN4.MenuItemID = MEN3.ParentMenuItemID AND MEN4.ParentMenuItemID is not null
+         left  join XMenuItem MEN5 on MEN5.MenuItemID = MEN4.ParentMenuItemID AND MEN5.ParentMenuItemID is not null
+         left  join XModul    MOD2 on MOD2.ModulID = CLA.ModulID
+   where isNull(MEN0.Visible,1) = 1 AND
+         isNull(MEN1.Visible,1) = 1 AND
+         isNull(MEN2.Visible,1) = 1 AND
+         isNull(MEN3.Visible,1) = 1 AND
+         isNull(MEN4.Visible,1) = 1 AND
+         isNull(MEN5.Visible,1) = 1
+
+  union all
+
+  -- Dialog
+  select Modul = isNull(MOD2.ShortName,'-'),
+         InternerName = CLA.ClassName,
+         Typ = 'Dialog',
+         Pfad = 'Aufruf via ' + isnull(REF.ClassName,'?'),
+         Modulname = MOD2.Name,
+         ModulID$ = CLA.ModulID,
+         Kommentar = CLA.Description
+  from   XClass CLA
+         left  join XMenuItem       MEN  on MEN.ClassName = CLA.ClassName
+         inner join XClassReference REF  on REF.ClassName_Ref = CLA.ClassName
+         left  join XModul          MOD2 on MOD2.ModulID = CLA.ModulID  
+  where  BaseType like '%Dialog%' and
+         MEN.MenuItemID is null and
+         isNull(MEN.Visible,1) = 1 
+
+  union all
+
+  -- Modul Navigatoren
+  select Modul = isNull(MOD2.ShortName,'-'),
+         InternerName = CLA.ClassName,
+         Typ = 'Modul-Navigatoren',
+         Pfad = '',
+         Modulname = MOD2.Name,
+         ModulID$ = CLA.ModulID,
+         Kommentar = CLA.Description
+  from   XClass CLA
+         left  join XModul          MOD2 on MOD2.ModulID = CLA.ModulID  
+  where  BaseType like 'KiSS4.Common.KissModulTree'
+
+  union all
+
+  -- Spezialrecht
+  select Modul = isNull(MOD.ShortName,'-'),
+         InternerName = RGT.RightName,
+         Typ = 'Spezialrecht',
+         Pfad = Usertext,
+         Modulname = MOD.Name,
+         ModulID$ = CLA.ModulID,
+         Kommentar = CLA.Description
+  from   XRight RGT
+         inner join XClass          CLA  on CLA.ClassName = RGT.ClassName
+         left  join XModul          MOD  on MOD.ModulID = CLA.ModulID
+
+  -- ^^^^^^ ende obere selects ^^^^^ --
+    ) FOUND
+
+  )
+
+
+
+) T
+
+where 1=1
+-- T.Modul not in ('NV','FIB')
+--- AND ({edtSearchInklNV} = 1 OR T.Modul != 'NV')
+--- AND ({edtSearchInklFIB} = 1 OR T.Modul != 'FIB')
+--- AND ({edtSearchNotShown} = 1 OR T.Typ != 'Sonstige-Masken')
+--- AND InternerName LIKE '%' + {edtSucheClassName} + '%'
+--- AND ModulID$ = {edtSucheModul}
+
+order by case when Modul = '-' then 1 else 0 end,Modul,InternerName</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="xDocument.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAF1JREFUOE9jZAAC
+        Y2Pj/yAaGzh79iwjhjhIw///MzGwmJjYfxDGqSEtjeE/MgYpBhmEoYmQDSANKM7GpQHZmVg1oDsJxgdp
+        pI4N2EIKJjbqJLIiDqSJEMaVovGKAwBnM3PWBP8PfwAAAABJRU5ErkJggg==
+</value>
+  </data>
+</root>

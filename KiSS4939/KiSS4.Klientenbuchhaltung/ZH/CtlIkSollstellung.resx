@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryKbBuchung.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="qryListe.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>142, 17</value>
+  </metadata>
+  <data name="qryListe.SelectStatement" xml:space="preserve">
+    <value>select 
+  IstSelektiert = CONVERT(BIT, 0),
+  F.IkPositionID,
+  F.Monat, F.Jahr, F.Datum,
+  ErledigterMonat = convert(bit, case when Exists(
+    select top 1 BUC.KbBuchungID from dbo.KbBuchung BUC WITH (READUNCOMMITTED)
+    where BUC.IkPositionID = F.IkPositionID
+      and BUC.KbBuchungStatusCode != 8
+  ) then 1 else 0 end),
+  F.Unterstuetzungsfall,
+  Glaubiger = P.Name + IsNull(' ' + P.Vorname, ''),
+  ZahlungAn = case 
+    when Z.BaPersonID is NULL then Zi.Name 
+    else Zp.Name + IsNull(' ' + Zp.Vorname, '')
+  end +
+  case 
+    when Z.AdresseName is not null 
+      and Z.AdressePLZ is not null 
+      and Z.AdresseOrt is not null 
+      then ' ('+Z.AdresseName + ')'
+    else ''
+  end,
+  ZusatzzahlungAn = case 
+    when G.ZusatzBaZahlungswegID is NULL then NULL
+    when XZ.BaPersonID is NULL then XZi.Name 
+    else XZp.Name + IsNull(' ' + XZp.Vorname, '')
+  end +
+  case 
+    when XZ.AdresseName is not null 
+      and XZ.AdressePLZ is not null 
+      and XZ.AdresseOrt is not null 
+      then ' ('+XZ.AdresseName + ')'
+    else ''
+  end,
+  P.Geburtsdatum,
+  Schuldner = Ps.Name + IsNull(' ' + Ps.Vorname, ''),
+  ForderungTitel = case 
+    when F.Einmalig = 1 then X.Text
+    when L.FaProzessCode = 405 and G.IstElternteil = 1 then 'Erwachsenenalimente'
+    when L.FaProzessCode = 405 and ( IsNull(F.BetragALBV,0) + IsNull(F.BetragALBVverrechnung,0)&lt;= 0) then 'ALV'
+    when L.FaProzessCode = 405 then 'ALBV'
+    when L.FaProzessCode = 406 then 'UeBH'
+    when L.FaProzessCode = 407 then 'KKBB'
+    --when L.FaProzessCode = 408 then 'Rückforderung ALBV'
+    --when L.FaProzessCode = 409 then 'Rückforderung UeBH'
+    --when L.FaProzessCode = 410 then 'Rückforderung KKBB'
+    when F.Einmalig = 0 then XLOV2.Text
+     else NULL
+  end,
+  Username = U.Displaytext,
+  Betrag = case 
+    when F.Einmalig = 1 then F.BetragEinmalig
+    when L.FaProzessCode in (301,302,304,408,409,410) then F.TotalAliment
+    when L.FaProzessCode in (406,407) then F.BetragALBV
+    when G.IstElternteil = 1 
+      then dbo.fnIkGetForderungBetrag(0, F.Einmalig,
+        G.ZusatzBaZahlungswegID, G.Betrag, G.ZusatzBetrag, F.BetragEinmalig,
+        IsNull(F.TotalAliment,0) )
+    when IsNull(F.BetragALBV,0) &gt; 0 
+      then dbo.fnIkGetForderungBetrag(0, F.Einmalig,
+        G.ZusatzBaZahlungswegID, G.Betrag, G.ZusatzBetrag, F.BetragEinmalig,
+        IsNull(F.BetragZahlung,0) ) 
+    else dbo.fnIkGetForderungBetrag(0, F.Einmalig,
+      G.ZusatzBaZahlungswegID, G.Betrag, G.ZusatzBetrag, F.BetragEinmalig,
+      IsNull(F.TotalAliment, 0) ) 
+  end,
+  ZahlBetrag = case 
+    when F.Einmalig = 1 and F.IkForderungEinmaligCode in (151,152,161,162,171,172) then F.BetragEinmalig
+    when F.BetragZahlung &gt; 0 then F.BetragZahlung
+    else NULL
+  end,
+  ZusatzBetrag = case 
+    when F.Einmalig = 1 then NULL
+    when L.FaProzessCode in (301,302,304,408,409,410) then NULL
+    when G.IstElternteil = 1 
+      then dbo.fnIkGetForderungBetrag(1, F.Einmalig,
+        G.ZusatzBaZahlungswegID, G.Betrag, G.ZusatzBetrag, F.BetragEinmalig,
+        IsNull(F.TotalAliment,0))
+    else dbo.fnIkGetForderungBetrag(1, F.Einmalig,
+      G.ZusatzBaZahlungswegID, G.Betrag, G.ZusatzBetrag, F.BetragEinmalig,
+      IsNull(F.BetragALBV,0) + IsNull(F.BetragALBVverrechnung,0))
+  end,
+  IstGesendet = Convert(bit, 
+    case when Exists(
+      select K.KbBuchungStatusCode from dbo.KbBuchung K WITH (READUNCOMMITTED)
+      where K.IkPositionID = F.IkPositionID and not K.KbBuchungStatusCode in (2,5,8) ) 
+    then 1 else 0 end),
+  TotalStornoIstMoeglich = Convert(bit, 
+    case when Exists(
+      select K.KbBuchungStatusCode from dbo.KbBuchung K WITH (READUNCOMMITTED)
+      where K.IkPositionID = F.IkPositionID 
+        and (K.KbBuchungStatusCode not in (3,8) or K.IkForderungArtCode in (10,11,12,13,14,15,31,32))
+    ) 
+    then 0 else 1 end),
+  Status = case
+    when Exists(
+      select top 1 BUC.KbBuchungID from dbo.KbBuchung BUC WITH (READUNCOMMITTED)
+      where BUC.IkPositionID = F.IkPositionID
+        and BUC.KbBuchungStatusCode != 8
+    ) then 'verbucht'
+    else 'nicht verbucht'
+  end,
+  FallPersonID = FF.BaPersonID,
+  L.FaProzessCode,
+  F.Einmalig,
+  IstBarzahlung = convert(bit, case when Exists(
+    select QK.KbBuchungID from dbo.KbBuchung QK WITH (READUNCOMMITTED)
+    where QK.IkPositionID = F.IkPositionID 
+      and QK.BarbelegDatum is not null
+      and QK.BarbelegUserID is not null
+  ) then 1 else 0 end)
+from dbo.IkPosition F
+left outer join dbo.BaPerson P WITH (READUNCOMMITTED) on P.BaPersonID = F.BaPersonID
+left outer join dbo.IkRechtstitel R WITH (READUNCOMMITTED) on R.IkRechtstitelID = F.IkRechtstitelID 
+left outer join dbo.IkGlaeubiger G WITH (READUNCOMMITTED) on G.IkRechtstitelID = R.IkRechtstitelID and G.BaPersonID = F.BaPersonID
+-- 1. Zahlungsweg
+left outer join dbo.BaZahlungsweg Z WITH (READUNCOMMITTED) on Z.BaZahlungswegID = G.BaZahlungswegID
+left outer join dbo.BaPerson Zp WITH (READUNCOMMITTED) on Zp.BaPersonID = Z.BaPersonID
+left outer join dbo.BaInstitution Zi WITH (READUNCOMMITTED) on Zi.BaInstitutionID = Z.BaInstitutionID
+-- 2. Zahlungsweg
+left outer join dbo.BaZahlungsweg XZ WITH (READUNCOMMITTED) on XZ.BaZahlungswegID = G.ZusatzBaZahlungswegID
+left outer join dbo.BaPerson XZp WITH (READUNCOMMITTED) on XZp.BaPersonID = XZ.BaPersonID
+left outer join dbo.BaInstitution XZi WITH (READUNCOMMITTED) on XZi.BaInstitutionID = XZ.BaInstitutionID
+
+left outer join dbo.FaLeistung L WITH (READUNCOMMITTED) on L.FaLeistungID = COALESCE(R.FaLeistungID, F.FaLeistungID)
+left outer join dbo.FaFall FF WITH (READUNCOMMITTED) on FF.FaFallID = L.FaFallID
+left outer join dbo.BaPerson Ps WITH (READUNCOMMITTED) on Ps.BaPersonID = L.SchuldnerBaPersonID
+left outer join dbo.vwUser U on U.UserID = L.UserID
+left outer join dbo.XLovCode X WITH(READUNCOMMITTED) on X.LovName = 'IkForderungEinmalig' and X.Code = F.IkForderungEinmaligCode
+left outer join dbo.XLOVCode XLOV2 WITH(READUNCOMMITTED) on XLOV2.LOVName='IkForderungPeriodisch' and XLOV2.Code = F.IkForderungEinmaligCode
+
+where (
+    (F.Jahr = {0} and F.Monat = {1} and {2} = '1') or       -- nur diesen Monat
+    (F.Datum &lt; DATEADD(MONTH, 1, dbo.fnDateSerial({0}, {1}, 1)) and {2} = '2') -- alle vor diesem Monat
+  )
+  and (Exists(
+    select top 1 BUC.KbBuchungID from dbo.KbBuchung BUC WITH (READUNCOMMITTED)
+    where BUC.IkPositionID = F.IkPositionID
+      and BUC.KbBuchungStatusCode != 8
+  ) or G.IkGlaeubigerStatusCode = 2)
+  and (  
+    -- Selektion Inkassotyp
+    ({3} = '1' and F.Einmalig = 0 and L.FaProzessCode = 405 and G.IstElternteil = 0 
+      and (IsNull(F.BetragALBV,0) + IsNull(F.BetragALBVverrechnung,0)&gt;0) ) or -- ALBV Auszahlung
+    ({3} = '2' and F.Einmalig = 0 and L.FaProzessCode = 406) or -- UeBH Auszahlung
+    ({3} = '3' and F.Einmalig = 0 and L.FaProzessCode = 407) or -- KKBB Auszahlung
+    ({3} = '4' and F.Einmalig = 0 and L.FaProzessCode = 405 
+      and (IsNull(F.BetragALBV,0) + IsNull(F.BetragALBVverrechnung,0)&lt;=0) ) or -- ALV Auszahlung
+    ({3} = '5' and F.Einmalig = 1 and L.FaProzessCode &gt;= 400) or -- Forderungen (alle einmaligen und ALBV)
+    ({3} = '7' and L.FaProzessCode &lt; 400) or -- W-Inkassi
+    ({3} = '6' and L.FaProzessCode &gt;= 400) -- alle
+  )
+  and (
+    -- Selektion Fälle
+    (FF.UserID = {4} or {5} = '9')
+  )
+  and (
+    -- Selektion Status
+    -- alle
+    ({6} = '9' and (F.Einmalig = 0 or not Exists(
+      select top 1 BUC.KbBuchungID from dbo.KbBuchung BUC WITH(READUNCOMMITTED)
+      where BUC.IkPositionID = F.IkPositionID
+        and BUC.KbBuchungStatusCode = 8
+    ))) or
+    -- nur unerledigte or
+    ({6} = '1' and Exists(
+      select top 1 BUC.KbBuchungID from dbo.KbBuchung BUC WITH (READUNCOMMITTED)
+      where BUC.IkPositionID = F.IkPositionID
+        and BUC.KbBuchungStatusCode != 8
+    )) or 
+    -- nur verbuchte
+    ({6} = '2' and Exists(
+      select top 1 BUC.KbBuchungID from dbo.KbBuchung BUC WITH (READUNCOMMITTED)
+      where BUC.IkPositionID = F.IkPositionID
+        and BUC.KbBuchungStatusCode != 8
+    )) or 
+    -- nur fehlerhafte
+    ({6} = '3' and Exists(
+      select K.KbBuchungStatusCode from dbo.KbBuchung K WITH (READUNCOMMITTED)
+      where K.IkPositionID = F.IkPositionID 
+        and K.KbBuchungStatusCode = 5 )) 
+  ) 
+order by Username, F.Jahr, F.Monat, Glaubiger</value>
+  </data>
+  <data name="qryKbBuchung.SelectStatement" xml:space="preserve">
+    <value>select 
+  B.BelegNr,
+  B.KbBuchungID,
+  Text = B.MitteilungZeile2,
+  Konto = case when B.SollKtoNr is NULL then B.HabenKtoNr else B.SollKtoNr end,
+  B.BelegDatum,
+  K.Betrag,
+  KontoNr = case when B.HabenKtoNr is NULL then B.SollKtoNr else B.HabenKtoNr end, 
+  DetailBetrag = K.Betrag,
+  K.Hauptvorgang,
+  K.Teilvorgang,
+  DetailText = K.Buchungstext,
+  DetailKonto = K.KontoNr,
+  B.BeguenstigtName,
+  B.PscdFehlermeldung,
+  B.IkForderungArtCode,
+  B.KbBuchungStatusCode,
+  Intern = convert(bit, case when B.KbAuszahlungsArtCode = 105 then 1 else 0 end)
+from dbo.KbBuchungKostenArt K WITH (READUNCOMMITTED)
+left join dbo.KbBuchung B WITH (READUNCOMMITTED) ON B.KbBuchungID = K.KbBuchungID
+where B.IkPositionID = {0}
+order by B.KbBuchungID</value>
+  </data>
+  <metadata name="qryValuta.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>233, 17</value>
+  </metadata>
+  <data name="qryValuta.SelectStatement" xml:space="preserve">
+    <value>SELECT Datum = ZLV.Datum1 FROM dbo.IkZahlungslaufValuta ZLV WITH(READUNCOMMITTED)
+  WHERE (ZLV.Jahr = {0} OR ZLV.Jahr = {1}) AND ZLV.Datum1 IS NOT NULL AND ZLV.Datum1 &gt;= GETDATE()
+UNION ALL
+SELECT Datum = ZLV.Datum2 FROM dbo.IkZahlungslaufValuta ZLV WITH(READUNCOMMITTED)
+  WHERE (ZLV.Jahr = {0} OR ZLV.Jahr = {1}) AND ZLV.Datum2 IS NOT NULL AND ZLV.Datum2 &gt;= GETDATE()
+UNION ALL
+SELECT Datum = ZLV.Datum3 FROM dbo.IkZahlungslaufValuta ZLV WITH(READUNCOMMITTED)
+  WHERE (ZLV.Jahr = {0} OR ZLV.Jahr = {1}) AND ZLV.Datum3 IS NOT NULL AND ZLV.Datum3 &gt;= GETDATE()
+UNION ALL
+SELECT Datum = ZLV.Datum4 FROM dbo.IkZahlungslaufValuta ZLV WITH(READUNCOMMITTED)
+  WHERE (ZLV.Jahr = {0} OR ZLV.Jahr = {1}) AND ZLV.Datum4 IS NOT NULL AND ZLV.Datum4 &gt;= GETDATE()
+UNION ALL
+SELECT Datum = ZLV.Datum5 FROM dbo.IkZahlungslaufValuta ZLV WITH(READUNCOMMITTED)
+  WHERE (ZLV.Jahr = {0} OR ZLV.Jahr = {1}) AND ZLV.Datum5 IS NOT NULL AND ZLV.Datum5 &gt;= GETDATE()
+UNION ALL
+SELECT Datum = ZLV.Datum6 FROM dbo.IkZahlungslaufValuta ZLV WITH(READUNCOMMITTED)
+  WHERE (ZLV.Jahr = {0} OR ZLV.Jahr = {1}) AND ZLV.Datum6 IS NOT NULL AND ZLV.Datum6 &gt;= GETDATE()
+UNION ALL
+SELECT Datum = ZLV.Datum7 FROM dbo.IkZahlungslaufValuta ZLV WITH(READUNCOMMITTED)
+  WHERE (ZLV.Jahr = {0} OR ZLV.Jahr = {1}) AND ZLV.Datum7 IS NOT NULL AND ZLV.Datum7 &gt;= GETDATE()
+UNION ALL
+SELECT Datum = ZLV.Datum8 FROM dbo.IkZahlungslaufValuta ZLV WITH(READUNCOMMITTED)
+  WHERE (ZLV.Jahr = {0} OR ZLV.Jahr = {1}) AND ZLV.Datum8 IS NOT NULL AND ZLV.Datum8 &gt;= GETDATE()
+UNION ALL
+SELECT Datum = ZLV.Datum9 FROM dbo.IkZahlungslaufValuta ZLV WITH(READUNCOMMITTED)
+  WHERE (ZLV.Jahr = {0} OR ZLV.Jahr = {1}) AND ZLV.Datum9 IS NOT NULL AND ZLV.Datum9 &gt;= GETDATE()
+UNION ALL
+SELECT Datum = ZLV.Datum10 FROM dbo.IkZahlungslaufValuta ZLV WITH(READUNCOMMITTED)
+  WHERE (ZLV.Jahr = {0} OR ZLV.Jahr = {1}) AND ZLV.Datum10 IS NOT NULL AND ZLV.Datum10 &gt;= GETDATE()
+ORDER BY Datum ASC</value>
+  </data>
+  <data name="ctlGotoFall1.BaPersonID" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAAB9TeXN0ZW0uVW5pdHlTZXJpYWxpemF0aW9uSG9sZGVyAwAAAARE
+        YXRhCVVuaXR5VHlwZQxBc3NlbWJseU5hbWUBAAEICgIAAAAGAgAAAAAL
+</value>
+  </data>
+  <data name="kissLabel2.Text" xml:space="preserve">
+    <value>Die Filteroptionen "nur verbuchte Daten" und "alle Daten" in der Gruppe Selektion Status sind nur wählbar, wenn entweder bei der Selektion Monat "alle für diesen Monat" gewählt ist oder nach einer genauen Fall-Nummer gesucht wird (Feld "nach Fall-Nr. suchen" ist nicht leer).
+</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="edtSollstellungsMonat.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFVJREFUOE9jZAAC
+        Y2Pj/yCaEDh79iwjWA1MAzaNWOVAgsRguAuIcRKKGmROQwMD3D/IbKwaQApgitBp6mgAeYokG4abBmT/
+        YKQ3smKapLREKFkjywMAd9eDN3Z9MMsAAAAASUVORK5CYII=
+</value>
+  </data>
+</root>

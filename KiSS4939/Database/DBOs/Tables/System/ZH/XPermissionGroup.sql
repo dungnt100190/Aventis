@@ -1,0 +1,13 @@
+﻿CREATE TABLE [dbo].[XPermissionGroup](
+	[PermissionGroupID] [int] IDENTITY(1,1) NOT NULL,
+	[PermissionGroupName] [varchar](100) NOT NULL,
+	[Description] [text] NULL,
+	[XPermissionGroupTS] [timestamp] NOT NULL,
+ CONSTRAINT [PK_XPermissionGroup] PRIMARY KEY CLUSTERED 
+(
+	[PermissionGroupID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [SYSTEM]
+) ON [SYSTEM] TEXTIMAGE_ON [PRIMARY]
+
+GO
+SET ANSI_PADDING ON

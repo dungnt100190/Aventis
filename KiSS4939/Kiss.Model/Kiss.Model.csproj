@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9EDABB4F-E42D-4791-9798-4581D35B19CC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kiss.Model</RootNamespace>
+    <AssemblyName>Kiss.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BIAG.AssemblyInfo, Version=4.2.49.215, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\KiSS\Build\Debug\BIAG.AssemblyInfo.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FluentValidation, Version=3.1.0.0, Culture=neutral, PublicKeyToken=a82054b837897c66, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaAdresse.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaBank.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaEinwohnerregisterEmpfangeneEreignisse.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaEinwohnerregisterEmpfangeneEreignisseRohdaten.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaEinwohnerregisterPersonAnAbmeldung.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaEinwohnerregisterPersonStatus.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaGemeinde.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaGesundheit.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaInstitution.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaLand.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaPerson.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaPersonExtension.cs" />
+    <Compile Include="BaPerson_BaInstitution.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaPerson_Relation.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaPLZ.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaPraemienverbilligung.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaZahlungsweg.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BDELeistungsart.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BDEPensum_XUser.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BDESollStundenProJahr_XUser.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\Ba\BaDebitorDTO.cs" />
+    <Compile Include="DTO\Ba\BaZahlungswegDTO.cs" />
+    <Compile Include="DTO\Ba\BaPersonAdresseDTO.cs" />
+    <Compile Include="DTO\ChangeTrackingDTO.cs" />
+    <Compile Include="DTO\DateRangeSearchParamDTO.cs" />
+    <Compile Include="DTO\Fa\FaKategorisierungDTO.cs" />
+    <Compile Include="DTO\Fa\FaZeitachseDTO.cs" />
+    <Compile Include="DTO\Fs\FsDienstleistungAuswertungGesamtDTO.cs" />
+    <Compile Include="DTO\KissSystem\MaskenRechtDTO.cs" />
+    <Compile Include="DTO\KissSystem\ZugriffRechtDTO.cs" />
+    <Compile Include="DTO\VerarbeitungsProgressDTO.cs" />
+    <Compile Include="DTO\Vm\VmPositionDTO.cs" />
+    <Compile Include="DTO\Vm\VmKlientenbudgetDTO.cs" />
+    <Compile Include="FaAktennotizen.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FaDokumentAblage.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FaDokumentAblage_BaPerson.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FaDokumente.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FaFall.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FaFallPerson.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FaKategorisierung.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FaKategorisierungEksProdukt.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FaLeistung.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FaLeistungArchiv.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FaLeistungUserHist.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FaLeistungZugriff.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FaPendenzgruppe.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FaPhase.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FaWeisung.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FaWeisungProtokoll.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FaWeisung_BaPerson.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FbBuchung.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FbKonto.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FbPeriode.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FsDienstleistung.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FsDienstleistungspaket.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FsDienstleistung_FsDienstleistungspaket.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FsReduktion.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FsReduktionMitarbeiter.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryVersion.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KesArtikel.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KesAuftrag.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KesAuftrag_BaPerson.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KesBehoerde.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KesDokument.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KesMandatsfuehrendePerson.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KesMassnahme.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KesMassnahmeAuftrag.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KesMassnahmeBericht.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KesMassnahme_KesArtikel.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KesPflegekinderaufsicht.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KesPraevention.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KesVerlauf.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KiSS_Entities.Partial.cs" />
+    <Compile Include="Partial\BaPerson.Partial.cs" />
+    <Compile Include="DTO\Ba\SearchPersonAdresseDTO.cs" />
+    <Compile Include="DTO\DTO.cs" />
+    <Compile Include="DTO\Fs\FsDienstleistungAuswertungDTO.cs" />
+    <Compile Include="DTO\Fs\FsDienstleistungAuswSearchParamDTO.cs" />
+    <Compile Include="DTO\Fs\FsReduktionMitarbeiterZeitraumDTO.cs" />
+    <Compile Include="DTO\Fs\FsMitarbeiterArbeitszeitDTO.cs" />
+    <Compile Include="Partial\VmKlientenbudget.Partial.cs" />
+    <Compile Include="Partial\VmPosition.Partial.cs" />
+    <Compile Include="Partial\FaFall.Partial.cs" />
+    <Compile Include="Partial\FsReduktionMitarbeiter.Partial.cs" />
+    <Compile Include="EntityBase.cs" />
+    <Compile Include="MetaModelHelper.cs" />
+    <Compile Include="Partial\VmPositionsart.Partial.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceCall.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceProcessError.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceProcessErrorMessage.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="STE.Context.BIAGExtensions.cs" />
+    <Compile Include="STE.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>STE.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="STE.Context.Extensions.cs">
+      <DependentUpon>STE.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="STE.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Partial\XUser.Partial.cs" />
+    <Compile Include="UserSession.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VmKlientenbudget.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VmPosition.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VmPositionsart.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="vwBaKlientensystemPerson.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XClass.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XConfig.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XDBVersion.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XDocument.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XIcon.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XLangText.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XLOV.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XLOVCode.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XModul.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XOrgUnit.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XOrgUnit_User.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XRight.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XTask.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XTaskAutoGenerated.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XUser.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XUserGroup.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XUserGroup_Right.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+    <Compile Include="XUser_UserGroup.cs">
+      <DependentUpon>STE.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="STE.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>STE.Context.cs</LastGenOutput>
+    </None>
+    <None Include="STE.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>STE.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Kiss.Infrastructure\Kiss.Infrastructure.csproj">
+      <Project>{94D23DEF-0BEC-4EAC-B6A8-A2AB6B3A0CF1}</Project>
+      <Name>Kiss.Infrastructure</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Interfaces\Kiss.Interfaces.csproj">
+      <Project>{936877A8-EC00-4267-8C62-344062912497}</Project>
+      <Name>Kiss.Interfaces</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

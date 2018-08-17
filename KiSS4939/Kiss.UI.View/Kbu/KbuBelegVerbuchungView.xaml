@@ -1,0 +1,167 @@
+﻿<View:KissView
+    x:Class="Kiss.UI.View.Kbu.KbuBelegVerbuchungView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:View="clr-namespace:Kiss.UI.View"
+    xmlns:Controls="clr-namespace:Kiss.UI.Controls;assembly=Kiss.UI.Controls"
+    xmlns:ViewModel="clr-namespace:Kiss.UI.ViewModel.Kbu;assembly=Kiss.UI.ViewModel"
+    xmlns:Constant="clr-namespace:Kiss.UI.Controls.Constant;assembly=Kiss.UI.Controls"
+    xmlns:dxe="clr-namespace:DevExpress.Xpf.Editors.Settings;assembly=DevExpress.Xpf.Core.v10.2" 
+    mc:Ignorable="d"
+    d:DesignHeight="500"
+    d:DesignWidth="800" xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid">
+
+    <View:KissView.Resources>
+        <ViewModel:KbuBelegVerbuchungVM x:Key="viewModel" />
+    </View:KissView.Resources>
+
+    <!-- Grid -->
+    <Grid Name="panRoot" DataContext="{StaticResource ResourceKey=viewModel}" Margin="{x:Static Constant:LayoutConstant.MarginOuterControl}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="Auto" />
+            <!-- <RowDefinition Height="Auto"/> -->
+        </Grid.RowDefinitions>
+
+        <!-- Grid row 0 -->
+        <Grid Grid.Row="0" HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="327" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Spalte 0 -->
+            <StackPanel HorizontalAlignment="Left" FlowDirection="LeftToRight" Orientation="Horizontal" >
+                <Label Name="lblValutaDatum" Content="Suche Belege mit Plan-Valutadatum" 
+                       Height="24"  />
+                <Controls:KissDateEdit Name="edtValutaDatum" EditValue="{Binding Path=DatumValutaSuchen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                       HorizontalAlignment="Left" Margin="10,0,0,0" Width="103" Height="24" />
+            </StackPanel>
+            <!-- Spalte 1 -->
+            <Button Grid.Column="1"  Name="btnFehlerKopieren" Content="Kopiere Fehler in die Zwischenablage" 
+                    Height="24" HorizontalAlignment="Right" Width="255" Command="{Binding Path=CopyErrorsToClipboardCommand}"
+                    Visibility="Collapsed"/>
+        </Grid>
+
+        <!-- Grid row 1 -->
+        <CheckBox Grid.Row="1" Name="chkNurmitFehler" Content="Zeige nur Belege mit Plausibilisierungsfehler" 
+                  Height="23" HorizontalAlignment="Left" 
+                  IsChecked="{Binding NurBelegeMitFehler, Mode=TwoWay}"/>
+
+        <Label Grid.Row="2"  Name="lblSumme" Content="{Binding Path=InfoSelectionText}" HorizontalAlignment="Right"
+                   Height="{x:Static Member=Constant:LayoutConstant.DefaultHeightDetailControl}" Margin="10,0,0,0" />
+
+        <!-- Grid row 2 -->
+        <Label Grid.Row="2" Name="lblInfoText" Content="{Binding Path=InfoSearchText}" 
+               Height="24" HorizontalAlignment="Left" />
+
+        <!-- Grid row 3 -->
+        <Controls:KissGridDevX Grid.Row="3"  DataSource="{Binding Path=Belege}" 
+                               HorizontalAlignment="Stretch" Name="kissGridVerbuchung" VerticalAlignment="Stretch" >
+            <Controls:KissGridDevX.Columns>
+                
+                <!-- Selected -->
+                <dxg:GridColumn FieldName="Selected" Header="Sel." Width="35" FixedWidth="True" 
+                                HorizontalHeaderContentAlignment="Center" 
+                                AllowEditing="{Binding Path=IsVerbuchungslaufInProgress, Converter={StaticResource ResourceKey=Bool2DefaultBooleanConverter}, ConverterParameter=inverse}">
+                    
+                    <dxg:GridColumn.EditTemplate>
+                        <ControlTemplate>
+                            <CheckBox HorizontalAlignment="Center" IsChecked="{Binding Path=RowData.Row.Selected, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                        </ControlTemplate>
+                    </dxg:GridColumn.EditTemplate>
+                    
+                </dxg:GridColumn>
+
+                <!-- Valuta-Datum -->
+                <dxg:GridColumn FieldName="ValutaDatum" Header="Valuta Plan" Width="75" FixedWidth="True" AllowEditing="False" 
+                                HorizontalHeaderContentAlignment="Center">
+                    <dxg:GridColumn.EditSettings>
+                        <dxe:DateEditSettings DisplayFormat="dd.MM.yyyy" HorizontalContentAlignment="Center" />
+                    </dxg:GridColumn.EditSettings>
+                </dxg:GridColumn>
+
+                <!-- Tage -->
+                <dxg:GridColumn FieldName="TageValuta" Header="Tage" Width="55" FixedWidth="True" 
+                                HorizontalHeaderContentAlignment="Right" AllowEditing="False">
+                    <dxg:GridColumn.EditSettings>
+                        <dxe:CalcEditSettings DisplayFormat="0" HorizontalContentAlignment="Right"/>
+                    </dxg:GridColumn.EditSettings>
+                </dxg:GridColumn>
+
+                <!-- Klient -->
+                <dxg:GridColumn FieldName="Klient" Header="Klient" Width="250" AllowEditing="False" />
+
+                <!-- Fall -->
+                <dxg:GridColumn FieldName="FaFallID" Header="Fall" Width="50" AllowEditing="False"/>
+
+                <!-- Betrag -->
+                <dxg:GridColumn FieldName="Betrag" Header="Betrag" Width="75" HorizontalHeaderContentAlignment="Right" AllowEditing="False">
+                    <dxg:GridColumn.EditSettings>
+                        <dxe:CalcEditSettings DisplayFormat="0.00" HorizontalContentAlignment="Right"/>
+                    </dxg:GridColumn.EditSettings>
+                </dxg:GridColumn>
+
+                <!-- Text -->
+                <dxg:GridColumn FieldName="Text" Header="Text" Width="450" AllowEditing="False"/>
+
+                <!-- Fehlermeldung -->
+                <dxg:GridColumn FieldName="ErrorMessage" Header="Fehler" Width="450" AllowEditing="False"/>
+            </Controls:KissGridDevX.Columns>
+
+            <!-- VIEW -->
+            <Controls:KissGridDevX.View>
+                <dxg:TableView Name="tableViewVerbuchung" ShowGroupPanel="False"/>
+            </Controls:KissGridDevX.View>
+
+        </Controls:KissGridDevX>
+
+        <!-- Grid row 4 Button (select) und Progressinfo -->
+        <StackPanel Grid.Row="4" FlowDirection="LeftToRight" Orientation="Horizontal" Height="30">
+            
+            <Button Name="btnAlle" Content="Alle" 
+                    Height="{x:Static Member=Constant:LayoutConstant.DefaultHeightDetailControl}" HorizontalAlignment="Left" Width="70" Command="{Binding Path=SelectionAllCommand}"/>
+            
+            <Button Name="btnKeine" Content="Keine" 
+                    Height="{x:Static Member=Constant:LayoutConstant.DefaultHeightDetailControl}" HorizontalAlignment="Left" Margin="10,0,0,0" Width="70" Command="{Binding Path=SelectionNoneCommand}"/>
+            
+            <ProgressBar Value="{Binding Path=VerbuchungslaufProgress}" Width="200" 
+                         VerticalAlignment="Center" Height="{x:Static Member=Constant:LayoutConstant.DefaultHeightDetailControl}" 
+                         Margin="5,0,0,0"
+                         Visibility="{Binding Path=IsVerbuchungslaufInProgress, Converter={StaticResource ResourceKey=BooleanToVisibilityConverter}}"/>
+        
+            <Label Content="{Binding Path=VerbuchungslaufProgressText}" 
+                   Height="{x:Static Member=Constant:LayoutConstant.DefaultHeightDetailControl}" HorizontalAlignment="Left" Margin="10,0,0,0" />
+
+        </StackPanel>
+
+  
+
+        <!-- Grid row 5 -->
+        <StackPanel Grid.Row="5" FlowDirection="RightToLeft" Orientation="Horizontal" Height="30" >
+            <Button Name="btnVerbuchen" Content="Verbuchen" 
+                    Height="{x:Static Member=Constant:LayoutConstant.DefaultHeightDetailControl}" Width="95" Command="{Binding Path=SelektionVerbuchenCommand}"/>
+            <Controls:KissDateEdit Name="edtValutaEffektiv" Margin="10,0,0,0" Width="85" Height="24" 
+                                   EditValue="{Binding Path=DatumValutaVerbuchen, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                                   FlowDirection="LeftToRight"/>
+            <Label Name="lblValutaEffektiv" Content="Effektives Valutadatum" 
+                   Height="{x:Static Member=Constant:LayoutConstant.DefaultHeightDetailControl}" Margin="10,0,0,0" />
+        </StackPanel>
+
+        <!-- Grid row 6 -->
+        <Controls:ValidationSummary Grid.Row="6"                                       
+                                    ServiceResult="{Binding Path=ValidationResult}"
+                                    Height="{x:Static Member=Constant:LayoutConstant.DefaultHeightDetailControl}"/>        
+        
+
+        
+
+    </Grid>
+</View:KissView>

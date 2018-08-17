@@ -1,0 +1,96 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:Controls="clr-namespace:Kiss.UI.Controls"
+                    xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero"
+                    xmlns:Kiss="clr-namespace:DevExpress.Xpf.Themes.Kiss;assembly=DevExpress.Xpf.Themes.Kiss.v14.1"
+                    xmlns:Constant="clr-namespace:Kiss.UI.Controls.Constant"
+                    xmlns:lex="http://wpflocalizeextension.codeplex.com">
+    <Style TargetType="{x:Type Controls:KissButtonSearchBox}">
+        <Setter Property="Height" Value="{x:Static Constant:LayoutConstant.DefaultHeightDetailControl}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Controls:KissButtonSearchBox}">
+                    <Microsoft_Windows_Themes:ListBoxChrome x:Name="Bd"
+                                                            Margin="0"
+                                                            BorderBrush="{DynamicResource {Kiss:KissBrushKey ResourceKey=EditControlBorder}}"
+                                                            BorderThickness="1"
+                                                            Background="{DynamicResource {Kiss:KissBrushKey ResourceKey=EditControlBackgroundNormal}}"
+                                                            RenderMouseOver="{TemplateBinding IsMouseOver}"
+                                                            RenderFocused="{TemplateBinding IsKeyboardFocusWithin}"
+                                                            SnapsToDevicePixels="true">
+                        <DockPanel x:Name="DockPanel" LastChildFill="True" Margin="0,0,-1,0">
+                            <Controls:KissButton x:Name="PART_BtnDelete"
+                                                 HorizontalAlignment="Right"
+                                                 Margin="0,-1"
+                                                 Width="16"
+                                                 Content="X"
+                                                 ToolTip="{lex:Loc Kiss.UI.Controls:Resources:SearchBoxEintragLoeschen}"
+                                                 DockPanel.Dock="Right"
+                                                 VerticalContentAlignment="Center"
+                                                 Focusable="False"
+                                                 Style="{DynamicResource {Controls:ControlResourceKey ResourceKey=InlineButtonStyle}}" />
+
+                            <Controls:KissButton x:Name="PART_BtnSearchFiltered"
+                                                 HorizontalAlignment="Right"
+                                                 Margin="0,-1"
+                                                 Width="16"
+                                                 Content="."
+                                                 ToolTip="{lex:Loc Kiss.UI.Controls:Resources:SearchBoxGefilterteSucheOeffnen}"
+                                                 DockPanel.Dock="Right"
+                                                 VerticalContentAlignment="Center"
+                                                 Focusable="False"
+                                                 Style="{DynamicResource {Controls:ControlResourceKey ResourceKey=InlineButtonStyle}}" />
+
+                            <Controls:KissButton x:Name="PART_BtnSearch"
+                                                 HorizontalAlignment="Right"
+                                                 Margin="0,-1"
+                                                 Width="16"
+                                                 Content="..."
+                                                 ToolTip="{lex:Loc Kiss.UI.Controls:Resources:SearchBoxSucheOeffnen}"
+                                                 DockPanel.Dock="Right"
+                                                 VerticalContentAlignment="Center"
+                                                 Focusable="False"
+                                                 Style="{DynamicResource {Controls:ControlResourceKey ResourceKey=InlineButtonStyle}}" />
+
+                            <Controls:KissTextEdit x:Name="PART_TxtSearch"
+                                                   Background="Transparent"
+                                                   HorizontalAlignment="Stretch"
+                                                   VerticalAlignment="Center"
+                                                   Margin="0,0,1,0"
+                                                   BorderThickness="0"
+                                                   VerticalContentAlignment="Center"
+                                                   DataContext="{TemplateBinding SelectedItem}"
+                                                   BorderBrush="{x:Null}"
+                                                   AcceptsReturn="False"
+                                                   IsReadOnly="{TemplateBinding IsReadOnly}"
+                                                   IsAuthorized="{TemplateBinding IsAuthorized}"
+                                                   IsRequired="{TemplateBinding IsRequired}" />
+                        </DockPanel>
+                    </Microsoft_Windows_Themes:ListBoxChrome>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsRequired" Value="true">
+                            <Setter Property="Background" TargetName="Bd" Value="{DynamicResource {Kiss:KissBrushKey ResourceKey=EditControlBackgroundRequired}}" />
+                        </Trigger>
+                        <Trigger Property="IsReadOnly" Value="true">
+                            <Setter Property="Background" TargetName="Bd" Value="{DynamicResource {Kiss:KissBrushKey ResourceKey=EditControlBackgroundReadOnly}}" />
+                            <Setter Property="RenderMouseOver" TargetName="Bd" Value="False" />
+                            <Setter Property="RenderFocused" TargetName="Bd" Value="False" />
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsReadOnly" Value="false" />
+                                <Condition Property="IsAuthorized" Value="false" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter Property="Background" TargetName="Bd" Value="{DynamicResource {Kiss:KissBrushKey ResourceKey=EditControlBackgroundReadOnly}}" />
+                                <Setter Property="RenderMouseOver" TargetName="Bd" Value="False" />
+                                <Setter Property="RenderFocused" TargetName="Bd" Value="False" />
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

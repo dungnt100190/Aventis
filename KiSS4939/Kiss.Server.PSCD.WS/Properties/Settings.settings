@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Kiss.Server.PSCD.WS.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PSCD_URL_ZAHLUNGSEINGAENGE_ABHOLEN" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://szhm2179.stzh.ch:8001/XISOAPAdapter/MessageServlet?channel=:BSV_FAMOZ_SD02_WS_OUT:CC_SD02_WS_OUT&amp;version=3.0&amp;Sender.Service=BSV_FAMOZ_SD02_WS_OUT&amp;Interface=http%3A%2F%2Fstzh.ch%2FFAMOZ_SD02_CREATE_WS%5EMI_SD02_CREATE_WS</Value>
+    </Setting>
+    <Setting Name="PSCDUsername" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">KOMM</Value>
+    </Setting>
+    <Setting Name="PSCDPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">KOMM01</Value>
+    </Setting>
+    <Setting Name="PSCD_URL_BELEG_ANLEGEN" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://szhm2179.stzh.ch:8001/XISOAPAdapter/MessageServlet?channel=:BSV_FAMOZ_SD01_WS_OUT:CC_SD01_WS_OUT&amp;version=3.0&amp;Sender.Service=BSV_FAMOZ_SD01_WS_OUT&amp;Interface=http%3A%2F%2Fstzh.ch%2FFAMOZ_SD01_CREATE_WS%5EMI_SD01_CREATE_WS</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

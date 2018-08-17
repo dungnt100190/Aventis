@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.bedag.ch/KiSS/FAMOZ/WorkerProcess/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://www.bedag.ch/KiSS/FAMOZ/WorkerProcess/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bedag.ch/KiSS/FAMOZ/WorkerProcess/">
+
+      <s:element name="IKAuszuegeGenerieren">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userIDSender" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userWinLogonName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IKAuszuegeGenerierenResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="IKAuszuegeGenerierenSoapIn">
+    <wsdl:part name="parameters" element="tns:IKAuszuegeGenerieren" />
+  </wsdl:message>
+  <wsdl:message name="IKAuszuegeGenerierenSoapOut">
+    <wsdl:part name="parameters" element="tns:IKAuszuegeGenerierenResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WorkerProcessSvcSoap">
+    <wsdl:operation name="IKAuszuegeGenerieren">
+      <wsdl:input message="tns:IKAuszuegeGenerierenSoapIn" />
+      <wsdl:output message="tns:IKAuszuegeGenerierenSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WorkerProcessSvcSoap" type="tns:WorkerProcessSvcSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IKAuszuegeGenerieren">
+      <soap:operation soapAction="http://www.bedag.ch/KiSS/FAMOZ/WorkerProcess/IKAuszuegeGenerieren" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WorkerProcessSvcSoap12" type="tns:WorkerProcessSvcSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IKAuszuegeGenerieren">
+      <soap12:operation soapAction="http://www.bedag.ch/KiSS/FAMOZ/WorkerProcess/IKAuszuegeGenerieren" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WorkerProcessSvc">
+    <wsdl:port name="WorkerProcessSvcSoap" binding="tns:WorkerProcessSvcSoap">
+      <soap:address location="http://localhost/BackgroundWorkerSvc/Master/WorkerProcess.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WorkerProcessSvcSoap12" binding="tns:WorkerProcessSvcSoap12">
+      <soap12:address location="http://localhost/BackgroundWorkerSvc/Master/WorkerProcess.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

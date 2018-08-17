@@ -1,0 +1,33 @@
+﻿CREATE TABLE [dbo].[KbWVLauf](
+	[KbWVLaufID] [int] IDENTITY(1,1) NOT NULL,
+	[UserID] [int] NOT NULL,
+	[StartDatum] [datetime] NOT NULL CONSTRAINT [DF_KbWVLauf_StartDatum]  DEFAULT (getdate()),
+	[EndDatum] [datetime] NULL,
+	[Testlauf] [bit] NOT NULL CONSTRAINT [DF_KbWVLauf_Testlauf]  DEFAULT ((0)),
+	[KbWVLaufPeriodeCode] [int] NULL,
+	[Jahr] [int] NULL,
+	[BuchungenBis] [datetime] NULL,
+	[WVCodes] [varchar](200) NULL,
+	[BEDs] [varchar](200) NULL,
+	[Text] [varchar](200) NULL,
+	[KbWVLaufTS] [timestamp] NOT NULL,
+ CONSTRAINT [PK_KbWVLauf] PRIMARY KEY CLUSTERED 
+(
+	[KbWVLaufID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING ON
+GO
+
+/****** Object:  Index [IX_KbWVLauf_UserID]    Script Date: 11/23/2011 15:58:59 ******/
+CREATE NONCLUSTERED INDEX [IX_KbWVLauf_UserID] ON [dbo].[KbWVLauf] 
+(
+	[UserID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[KbWVLauf]  WITH CHECK ADD  CONSTRAINT [FK_KbWVLauf_XUser] FOREIGN KEY([UserID])
+REFERENCES [dbo].[XUser] ([UserID])
+GO
+ALTER TABLE [dbo].[KbWVLauf] CHECK CONSTRAINT [FK_KbWVLauf_XUser]

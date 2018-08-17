@@ -1,0 +1,5 @@
+﻿{DISPATCHER}
+spXSetTableColumnText
+spFaInsertFaFallPerson
+spFaDeleteFaFallPerson
+spFaUpdateFaFallPerson

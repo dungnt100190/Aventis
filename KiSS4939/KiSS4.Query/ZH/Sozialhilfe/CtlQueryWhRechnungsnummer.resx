@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>DECLARE @Rechnungsnummer VARCHAR(100);
+--- SET @Rechnungsnummer = {edtSucheRechnungsnummer};
+
+DECLARE @RechnungDatum DATETIME;
+--- SET @RechnungDatum = {edtSucheRechnungDatum};
+
+
+DECLARE @TMP TABLE(BgPositionID INT, BgPositionID_Parent INT, [Status] INT, BetragEffektiv MONEY, DatumEffektiv DATETIME);
+
+;WITH TmpCte AS
+(
+  -- Hauptpositionen
+  SELECT
+    POS.BgPositionID,
+    POS.BgPositionID_Parent
+  FROM dbo.BgPosition POS WITH(READUNCOMMITTED)
+  WHERE POS.BgKategorieCode IN (100, 101)
+    AND POS.BgPositionID_Parent IS NULL
+    AND POS.Rechnungsnummer = @Rechnungsnummer
+   
+  UNION ALL 
+  
+  -- Subpositionen
+  SELECT
+    POS.BgPositionID,
+    POS.BgPositionID_Parent
+  FROM dbo.BgPosition POS WITH(READUNCOMMITTED)
+    INNER JOIN TmpCte CTE ON CTE.BgPositionID = POS.BgPositionID_Parent
+)
+
+INSERT INTO @TMP (BgPositionID, BgPositionID_Parent)
+  SELECT 
+    BgPositionID, 
+    BgPositionID_Parent
+  FROM TmpCte;
+  
+
+UPDATE TMP
+  SET [Status] = CASE WHEN BDG.MasterBudget = 0
+                          THEN CASE WHEN STA.Status IS NULL
+                               THEN CASE
+                                     WHEN POS.BgKategorieCode = 2 AND KRE.BaZahlungswegID IS NULL AND POS.BgSpezkontoID IS NOT NULL -- Auszahlung an Spezialkonto
+                                          THEN CASE WHEN BDG.BgBewilligungStatusCode in (5,9) THEN 2 ELSE 1 END
+                                     WHEN POS.BgKategorieCode = 100 AND KRE.BaZahlungswegID IS NULL AND POS.BgSpezkontoID IS NOT NULL -- Zusätzliche Leistung an Spezialkonto
+                                          THEN	
+												CASE POS.BgBewilligungStatusCode
+													WHEN 1 THEN 1   -- grau
+													WHEN 2 THEN 15  -- abgelehnt
+													WHEN 3 THEN 12  -- angefragt
+													WHEN 5 THEN 14  -- bewilligt
+													WHEN 9 THEN 7   -- gesperrt
+												END
+                                     WHEN POS.BgKategorieCode = 1 AND POS.VerwaltungSD = 0 -- nicht abgetretene Einnahmen
+                                          THEN CASE WHEN BDG.BgBewilligungStatusCode in (5,9) THEN 2 ELSE 1 END
+                                     WHEN POS.BgKategorieCode = 3 -- Verrechnungen
+                                          THEN CASE WHEN BDG.BgBewilligungStatusCode in (5,9) THEN 2 ELSE 1 END
+                                     ELSE CASE WHEN POS.BgKategorieCode = 2 AND KRE.BaZahlungswegID IS NOT NULL AND KRE.BaPersonID IS NOT NULL -- Ausgaben an Klient (ohne tatsähliche Auszahlung)
+--                                          THEN CASE WHEN BDG.BgBewilligungStatusCode in (5,9) THEN 2 ELSE 1 END
+                                          THEN 
+												CASE BDG.BgBewilligungStatusCode
+													WHEN 5 THEN CASE WHEN dbo.fnDateSerial(BDG.Jahr, BDG.Monat, 1) &lt; '2009-12-31' THEN 2 ELSE 1 END -- im grünen Budget grün - früher, da noch keine 0er-Positionen erstellt wurden
+													WHEN 9 THEN 7 -- im roten Budget gesperrt
+													ELSE 1
+                                               END
+                                          ELSE
+												CASE POS.BgBewilligungStatusCode
+													WHEN 1 THEN 1   -- grau
+													WHEN 2 THEN 15  -- abgelehnt
+													WHEN 3 THEN 12  -- angefragt
+													WHEN 5 THEN 14  -- bewilligt
+													WHEN 9 THEN 7   -- gesperrt
+												END
+                                          END
+                                     END
+                               ELSE STA.Status
+                               END
+                          END
+FROM @TMP TMP
+  INNER JOIN dbo.BgPosition              POS WITH(READUNCOMMITTED) ON POS.BgPositionID = TMP.BgPositionID
+  INNER JOIN dbo.BgBudget                BDG WITH(READUNCOMMITTED) ON BDG.BgBudgetID = POS.BgBudgetID
+  LEFT  JOIN dbo.BgAuszahlungPerson      BAP WITH(READUNCOMMITTED) ON BAP.BgPositionID = POS.BgPositionID 
+                                                                  AND BAP.BgAuszahlungPersonID = (SELECT TOP 1 BgAuszahlungPersonID
+                                                                                                  FROM dbo.BgAuszahlungPerson WITH (READUNCOMMITTED)
+                                                                                                  WHERE BgPositionID = POS.BgPositionID
+                                                                                                  ORDER BY 
+                                                                                                    CASE WHEN BaPersonID IS NULL THEN 1
+                                                                                                         WHEN BaPersonID = POS.BaPersonID THEN 2
+                                                                                                         ELSE 3
+                                                                                                    END)
+  LEFT JOIN dbo.vwKreditor               KRE WITH(READUNCOMMITTED) ON KRE.BaZahlungswegID = BAP.BaZahlungswegID
+  LEFT JOIN (SELECT KBU.BgBudgetID,
+                    KBK.BgPositionID,
+                    Status       = MAX(KBU.KbBuchungStatusCode)
+             FROM   dbo.KbBuchungKostenart KBK WITH(READUNCOMMITTED)
+               LEFT JOIN dbo.KbBuchung     KBU WITH(READUNCOMMITTED) ON KBU.KbBuchungID = KBK.KbBuchungID
+             GROUP  BY KBU.BgBudgetID, KBK.BgPositionID) STA ON STA.BgBudgetID = POS.BgBudgetID AND STA.BgPositionID = POS.BgPositionID
+                
+UPDATE TMP
+SET BetragEffektiv = EFF.BetragEffektiv,
+    DatumEffektiv  = EFF.DatumEffektiv
+FROM @TMP TMP
+  INNER JOIN (SELECT KBK.BgPositionID, 
+                     BetragEffektiv = CASE WHEN SUM(KBU.Betrag) = $0.00 THEN $0.00 ELSE SUM(KBK.Betrag * AUG.Total / KBU.Betrag) END,
+                     DatumEffektiv  = MAX(AUG.Datum)
+              FROM dbo.KbBuchungKostenart KBK WITH(READUNCOMMITTED)
+                INNER JOIN dbo.KbBuchung  KBU WITH(READUNCOMMITTED) ON KBU.KbBuchungID = KBK.KbBuchungID
+                INNER JOIN (SELECT OpBuchungID, Total = SUM(OPA.Betrag), Datum = MAX(AGB.BelegDatum)
+                            FROM dbo.KbOpAusgleich     OPA WITH(READUNCOMMITTED)
+                              INNER JOIN dbo.KbBuchung AGB WITH(READUNCOMMITTED) ON AGB.KbBuchungID = OPA.AusgleichBuchungID
+                            GROUP BY OpBuchungID) AUG ON AUG.OpBuchungID = KBU.KbBuchungID
+              GROUP BY KBK.BgPositionID) EFF ON EFF.BgPositionID = TMP.BgPositionID
+
+----------------------------------------------
+-- output
+----------------------------------------------
+-- Hauptposition inkl. Betrag von Detailpositionen
+SELECT
+  Rechnungsnummer,
+  BaPersonID_POS = POS.BaPersonID,
+  BaPersonID_LEI = LEI.BaPersonID,
+  BaPersonID_FAL = FAL.BaPersonID,
+  POS.BgPositionID,
+  POS.BgPositionID_Parent,
+  BDG.BgBudgetID,
+  BDG.BgFinanzplanID,
+  LEI.FaFallID,
+  Klient = PRL.NameVorname,
+  VerwPeriodeVon,
+  VerwPeriodeBis,
+  Budget              = CASE
+                          WHEN BDG.Monat &gt; 9 THEN ''
+                            ELSE '0'
+                        END + CONVERT(VARCHAR(2), BDG.Monat) + '.' + SUBSTRING(CONVERT(VARCHAR(4), BDG.Jahr), 3, 2),
+  KontoNr             = ISNULL(KOA.KontoNr, KOS.KontoNr),
+  Buchungstext,
+  Person = (SELECT dbo.ConcDistinct(PRS.DisplayText)
+            FROM dbo.BgPosition        POS1 WITH (READUNCOMMITTED)
+              LEFT  JOIN dbo.vwPerson2 PRS WITH(READUNCOMMITTED) ON PRS.BaPersonID = POS1.BaPersonID
+            WHERE POS1.BgPositionID_Parent = POS.BgPositionID
+               OR POS1.BgPositionID = POS.BgPositionID),
+  Betrag              = POS.Betrag + ISNULL((SELECT SUM(POS1.Betrag)
+                                             FROM dbo.BgPosition POS1 WITH (READUNCOMMITTED)
+                                             WHERE POS1.BgPositionID_Parent = POS.BgPositionID), 0),
+  Dokument = (SELECT COUNT(1)
+              FROM dbo.BgDokument WITH(READUNCOMMITTED)
+              WHERE BgPositionID = POS.BgPositionID) + 
+             (SELECT COUNT(1)
+              FROM dbo.BgDokument WITH(READUNCOMMITTED)
+              WHERE BgPositionID IN (SELECT T.BgPositionID
+                                     FROM @TMP T
+                                     WHERE T.BgPositionID_Parent = POS.BgPositionID)),
+  KRE.Kreditor,
+  [Status] = TMP.[Status],
+  Effektiv = 'effektiv ' + 
+             CONVERT(VARCHAR(20), TMP.BetragEffektiv + ISNULL(CHD.BetragEffektiv, 0), 1) + 
+             ' (' + 
+             CONVERT(VARCHAR(10), CASE WHEN TMP.DatumEffektiv &gt; ISNULL(CHD.DatumEffektiv, '17530101') THEN TMP.DatumEffektiv ELSE CHD.DatumEffektiv END, 104) + 
+             ')'
+
+FROM @TMP TMP
+  INNER JOIN dbo.BgPosition              POS WITH(READUNCOMMITTED) ON POS.BgPositionID = TMP.BgPositionID
+  INNER JOIN dbo.BgBudget                BDG WITH(READUNCOMMITTED) ON BDG.BgBudgetID = POS.BgBudgetID
+  INNER JOIN dbo.BgFinanzplan            FPL WITH(READUNCOMMITTED) ON FPL.BgFinanzplanID = BDG.BgFinanzplanID
+  INNER JOIN dbo.FaLeistung              LEI WITH(READUNCOMMITTED) ON LEI.FaLeistungID = FPL.FaLeistungID
+  INNER JOIN dbo.FaFall                  FAL WITH(READUNCOMMITTED) ON FAL.FaFallID = LEI.FaFallID
+  INNER JOIN dbo.vwPerson2               PRL WITH(READUNCOMMITTED) ON PRL.BaPersonID = LEI.BaPersonID
+  LEFT  JOIN dbo.BgPositionsart          POA WITH(READUNCOMMITTED) ON POA.BgPositionsartID = POS.BgPositionsartID
+  LEFT  JOIN dbo.BgKostenart             KOA WITH(READUNCOMMITTED) ON KOA.BgKostenartID = POA.BgKostenartID
+  LEFT  JOIN dbo.BgSpezkonto             SPK WITH(READUNCOMMITTED) ON SPK.BgSpezkontoID = POS.BgSpezkontoID
+  LEFT  JOIN dbo.BgKostenart             KOS WITH(READUNCOMMITTED) ON KOS.BgKostenartID = SPK.BgKostenartID
+  LEFT  JOIN dbo.BgAuszahlungPerson      BAP WITH(READUNCOMMITTED) ON BAP.BgPositionID = POS.BgPositionID 
+                                                                  AND BAP.BgAuszahlungPersonID = (SELECT TOP 1 BgAuszahlungPersonID
+                                                                                                  FROM dbo.BgAuszahlungPerson WITH (READUNCOMMITTED)
+                                                                                                  WHERE BgPositionID = POS.BgPositionID
+                                                                                                  ORDER BY 
+                                                                                                    CASE WHEN BaPersonID IS NULL THEN 1
+                                                                                                         WHEN BaPersonID = POS.BaPersonID THEN 2
+                                                                                                         ELSE 3
+                                                                                                    END)
+  LEFT JOIN dbo.BgAuszahlungPersonTermin VAL WITH(READUNCOMMITTED) ON VAL.BgAuszahlungPersonID = BAP.BgAuszahlungPersonID 
+                                                                  AND VAL.DATUM = (SELECT TOP 1 Datum
+                                                                                   FROM dbo.BgAuszahlungPersonTermin WITH (READUNCOMMITTED)
+                                                                                   WHERE BgAuszahlungPersonID = BAP.BgAuszahlungPersonID
+                                                                                   ORDER BY Datum)
+  LEFT JOIN dbo.vwKreditor               KRE WITH(READUNCOMMITTED) ON KRE.BaZahlungswegID = BAP.BaZahlungswegID
+  LEFT JOIN (SELECT BgPositionID_Parent, BetragEffektiv = SUM(BetragEffektiv), DatumEffektiv = MAX(DatumEffektiv)
+             FROM @TMP
+             WHERE BgPositionID_Parent IS NOT NULL
+             GROUP BY BgPositionID_Parent) CHD ON CHD.BgPositionID_Parent = TMP.BgPositionID
+WHERE TMP.BgPositionID_Parent IS NULL
+  AND VAL.Datum &gt;=  @RechnungDatum;
+
+-- Hauptposition und Detailposition im Detail-Grid anzeigen
+SELECT  
+  POS.BgPositionID,
+  BgPositionID_Parent = ISNULL(TMP.BgPositionID_Parent, TMP.BgPositionID),
+  POS.VerwPeriodeVon,
+  POS.VerwPeriodeBis,
+  Budget = CASE 
+             WHEN BDG.Monat &gt; 9 THEN ''
+               ELSE '0'
+           END + CONVERT(VARCHAR(2), BDG.Monat) + '.' + SUBSTRING(CONVERT(VARCHAR(4), BDG.Jahr), 3, 2),
+  KontoNr     = ISNULL(KOA.KontoNr, KOS.KontoNr),
+  Buchungstext = POS.Buchungstext,
+  Person = PRS.DisplayText,
+  Betrag = POS.Betrag,
+  KRE.Kreditor,
+  [Status] = TMP.[Status],
+  Effektiv = 'effektiv ' + CONVERT(varchar(20), TMP.BetragEffektiv, 1) + ' (' + CONVERT(varchar, TMP.DatumEffektiv, 104) + ')'
+FROM @TMP TMP
+  INNER JOIN BgPosition POS ON POS.BgPositionID = TMP.BgPositionID
+  INNER JOIN dbo.BgBudget BDG WITH(READUNCOMMITTED) ON BDG.BgBudgetID = POS.BgBudgetID
+  INNER JOIN dbo.BgFinanzplan          FPL WITH(READUNCOMMITTED) ON FPL.BgFinanzplanID = BDG.BgFinanzplanID
+  INNER JOIN dbo.FaLeistung            LEI WITH(READUNCOMMITTED) ON LEI.FaLeistungID = FPL.FaLeistungID
+  INNER JOIN dbo.FaFall                FAL WITH(READUNCOMMITTED) ON FAL.FaFallID = LEI.FaFallID
+  INNER JOIN dbo.vwPerson2             PRL WITH(READUNCOMMITTED) ON PRL.BaPersonID = LEI.BaPersonID
+  LEFT  JOIN dbo.BgPositionsart        POA WITH(READUNCOMMITTED) ON POA.BgPositionsartID = POS.BgPositionsartID
+  LEFT  JOIN dbo.BgKostenart           KOA WITH(READUNCOMMITTED) ON KOA.BgKostenartID = POA.BgKostenartID
+  LEFT  JOIN dbo.BgSpezkonto           SPK WITH(READUNCOMMITTED) ON SPK.BgSpezkontoID = POS.BgSpezkontoID
+  LEFT  JOIN dbo.BgKostenart           KOS WITH(READUNCOMMITTED) ON KOS.BgKostenartID = SPK.BgKostenartID
+  LEFT  JOIN dbo.vwPerson2             PRS WITH(READUNCOMMITTED) ON PRS.BaPersonID = POS.BaPersonID
+  LEFT  JOIN dbo.BgAuszahlungPerson    BAP WITH(READUNCOMMITTED) ON BAP.BgPositionID = POS.BgPositionID 
+                                                                AND BAP.BgAuszahlungPersonID = (SELECT TOP 1 BgAuszahlungPersonID
+                                                                                                FROM dbo.BgAuszahlungPerson WITH (READUNCOMMITTED)
+                                                                                                WHERE BgPositionID = POS.BgPositionID
+                                                                                                ORDER BY 
+                                                                                                  CASE WHEN BaPersonID IS NULL THEN 1
+                                                                                                       WHEN BaPersonID = POS.BaPersonID THEN 2
+                                                                                                       ELSE 3
+                                                                                                  END)
+  LEFT JOIN dbo.BgAuszahlungPersonTermin VAL WITH(READUNCOMMITTED) ON VAL.BgAuszahlungPersonID = BAP.BgAuszahlungPersonID 
+                                                                  AND VAL.DATUM = (SELECT TOP 1 Datum
+                                                                                   FROM dbo.BgAuszahlungPersonTermin WITH (READUNCOMMITTED)
+                                                                                   WHERE BgAuszahlungPersonID = BAP.BgAuszahlungPersonID
+                                                                                   ORDER BY Datum)
+  LEFT JOIN dbo.vwKreditor               KRE WITH(READUNCOMMITTED) ON KRE.BaZahlungswegID = BAP.BaZahlungswegID
+WHERE  VAL.Datum &gt;=  @RechnungDatum 
+  AND (TMP.BgPositionID_Parent IS NOT NULL
+    OR EXISTS(SELECT TOP 1 1 
+              FROM @TMP TMP1
+              WHERE TMP1.BgPositionID_Parent = POS.BgPositionID));</value>
+  </data>
+  <metadata name="qryDocuments.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>119, 17</value>
+  </metadata>
+  <data name="qryDocuments.SelectStatement" xml:space="preserve">
+    <value>DECLARE @BgPositionID INT;
+SET @BgPositionID = {0};
+
+SELECT
+  BDO.DocumentID,
+  BDO.BgDokumentTypCode,
+  BDO.Stichwort,
+  DOC.DateLastSave,
+  DOC.DateCreation
+FROM dbo.BgDokument       BDO WITH(READUNCOMMITTED)
+  LEFT JOIN dbo.XDocument DOC WITH(READUNCOMMITTED) ON DOC.DocumentID = BDO.DocumentID
+WHERE BgPositionID IN (SELECT BgPositionID
+                      FROM dbo.BgPosition WITH (READUNCOMMITTED)
+                      WHERE BgPositionID_Parent = @BgPositionID
+                        OR BgPositionID = @BgPositionID);</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="edtSucheRechnungDatum.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>57</value>
+  </metadata>
+</root>

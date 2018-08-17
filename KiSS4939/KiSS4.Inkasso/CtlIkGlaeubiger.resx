@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryZahlInfo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>313, 17</value>
+  </metadata>
+  <metadata name="qryIkGlaeubiger.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>174, 17</value>
+  </metadata>
+  <data name="qryIkGlaeubiger.SelectStatement" xml:space="preserve">
+    <value>SELECT IstGlaeubiger = CONVERT(BIT, CASE WHEN GLB.IkGlaeubigerID IS NULL THEN 0 ELSE 1 END),
+       IstKind       = CONVERT(BIT, ISNULL(BPRKND.IstKind,0)),
+       HatDaten      = CONVERT(BIT, CASE WHEN EXISTS(SELECT 1 FROM IkForderung FD
+                                                     WHERE FD.IkRechtstitelID = GLB.IkRechtstitelID
+                                                       AND FD.BaPersonID = PRS.BaPersonID
+                                                     UNION ALL
+                                                     SELECT 1 FROM IkPosition FD
+                                                     WHERE FD.IkRechtstitelID = GLB.IkRechtstitelID
+                                                       AND FD.BaPersonID = PRS.BaPersonID
+                                                       AND FD.Einmalig = 1
+                                                     ) 
+                                      THEN 1 ELSE 0 
+                                    END),
+       GLB.IkGlaeubigerID,  
+       GLB.IkRechtstitelID,
+       GLB.FaLeistungID,
+       GLB.Bemerkung,
+       GLB.Ausbildung,
+       PRS.BaPersonID,
+       GLB.BaPersonID_AntragStellendePerson,
+       GLB.BaZahlungswegID,  
+       KostenstelleKiss             = dbo.fnKbGetKostenstelle(GLB.BaPersonID),
+       PersonName                   = PRS.NameVorname + ISNULL(' (' + CONVERT(VARCHAR, PRS.Geburtsdatum, 104) + ')', ''),
+       Kreditor                     = PRS.NameVorname + PRS.WohnsitzMehrzeilig,
+       ZahlungswegName              = CASE WHEN ZLW.BaZahlungswegID IS NOT NULL 
+                                        THEN PRS.NameVorname + ISNULL(', ' + dbo.fnLOVText('BgEinzahlungsschein', EinzahlungsscheinCode), '')
+                                      END,
+       SchuldnerBaPersonID          = LST.BaPersonID, -- BE: schuldner ist fallträger
+       Aktiv                        = CONVERT(BIT, ISNULL(GLB.Aktiv, 0)),
+       AuszahlungVermittlungStoppen = CONVERT(BIT, ISNULL(GLB.AuszahlungVermittlungStoppen, 0)),
+       IstALBV                      = CONVERT(BIT, CASE WHEN LST.EroeffnungsgrundCode = 40001 THEN 1 ELSE 0 END), --40001: Alimentenbevorschussung
+       GLB.IkGlaeubigerTS
+FROM dbo.FaFallPerson         FFP WITH (READUNCOMMITTED)
+  LEFT JOIN dbo.FaFall        FAL WITH (READUNCOMMITTED) ON FAL.FaFallID = FFP.FaFallID
+  LEFT JOIN dbo.vwPerson      PRS ON PRS.BaPersonID = FFP.BaPersonID 
+  LEFT JOIN ( SELECT IstKind = 1, BaPersonID_1 , BaPersonID_2 
+              FROM BaPerson_Relation BPR WITH (READUNCOMMITTED)
+              WHERE 1=1
+              AND BPR.BaRelationID = 1) BPRKND ON BPRKND.BaPersonID_1 = FFP.FaFallID 
+                                              AND BPRKND.BaPersonID_2 = PRS.BaPersonID
+  LEFT JOIN dbo.IkGlaeubiger  GLB WITH (READUNCOMMITTED) ON PRS.BaPersonID = GLB.BaPersonID 
+                                                        AND (GLB.IkRechtstitelID = {0} OR GLB.FaLeistungID = {3})
+  LEFT JOIN dbo.IkRechtstitel RTT WITH (READUNCOMMITTED) ON RTT.IkRechtstitelID = ISNULL(GLB.IkRechtstitelID, {0})
+  LEFT JOIN dbo.FaLeistung    LST WITH (READUNCOMMITTED) ON LST.FaLeistungID = ISNULL(RTT.FaLeistungID, {3})
+  LEFT JOIN dbo.BaZahlungsweg ZLW WITH (READUNCOMMITTED) ON ZLW.BaZahlungswegID = GLB.BaZahlungswegID
+  LEFT JOIN dbo.BaBank        BNK WITH (READUNCOMMITTED) ON BNK.BaBankID = ZLW.BaBankID
+WHERE FFP.FaFallID = {1}
+  AND (({0} &gt; 0 AND RTT.FaLeistungID = LST.FaLeistungID) OR LST.FaLeistungID = {3})
+  AND (FFP.BaPersonID &lt;&gt; FAL.BaPersonID OR LST.FaProzessCode IN (403, 407, 406)) -- Schuldner (== fallträger in BE) nicht anzeigen ausser in Rückerstattung/Rückerst. POM und Nachlass! ticket 3314
+  AND (({2}=1) OR ({2}=0 AND NOT GLB.IkGlaeubigerID IS NULL ))
+ORDER BY
+  CONVERT(BIT, CASE WHEN FFP.BaPersonID = FAL.BaPersonID THEN 1 ELSE 0 END) DESC,
+  dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) DESC,
+  PRS.NameVorname
+</value>
+  </data>
+  <metadata name="qryZahlungsweg.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>426, 17</value>
+  </metadata>
+  <data name="qryZahlungsweg.SelectStatement" xml:space="preserve">
+    <value>SELECT Code = BaZahlungswegID, 
+       ZLW.DatumVon,
+       Text = PRS.NameVorname + IsNull(', ' + dbo.fnLOVText('BgEinzahlungsschein', EinzahlungsscheinCode), ''),
+       KontoNummer = isNull(ZLW.BankKontoNummer, dbo.fnTnToPc(ZLW.PostKontoNummer))
+FROM FaFallPerson          FFP
+  INNER JOIN BaZahlungsweg ZLW ON ZLW.BaPersonID = FFP.BaPersonID
+  INNER JOIN vwPerson      PRS ON PRS.BaPersonID = FFP.BaPersonID
+WHERE FFP.FaFallID = {0}
+  AND FFP.BaPersonID &lt;&gt; {1} -- Person nicht Schuldner
+
+UNION ALL
+
+SELECT Code = NULL, DatumVon = NULL, Text = NULL, KontoNummer = null
+
+UNION ALL
+
+-- cka : IN Bern soll immer TeamA/B zur Auswahl stehen und Zahlungsverbindung des Alters- und Versicherungsamtes (Ticket 2293)
+-- hässliche lösung... aber item
+SELECT Code = BaZahlungswegID,
+       ZLW.DatumVon,
+       Text = INS.Name,
+       KontoNummer = isNull(ZLW.BankKontoNummer, dbo.fnTnToPc(ZLW.PostKontoNummer))
+FROM BaZahlungsweg         ZLW
+  INNER JOIN BaInstitution INS ON INS.BaInstitutionID = ZLW.BaInstitutionID
+WHERE ZLW.BaInstitutionID  IN (SELECT BaInstitutionID FROM BaInstitution WHERE Name IN ('EKS - Team A', 'EKS - Team B') OR BaInstitutionID = 431)
+ORDER BY Text ASC, ZLW.DatumVon desc</value>
+  </data>
+  <metadata name="qryAntragStellendePerson.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>568, 17</value>
+  </metadata>
+  <data name="qryAntragStellendePerson.SelectStatement" xml:space="preserve">
+    <value>SELECT BaPersonID_AntragStellendePerson = NULL,
+   AntragStellendePerson = NULL
+UNION ALL
+  SELECT 
+    BaPersonID_AntragStellendePerson = PRS.BaPersonID,
+    AntragStellendePerson            = PRS.NameVorname
+  FROM dbo.FaFallPerson    FFP WITH (READUNCOMMITTED)
+    LEFT JOIN dbo.FaFall   FAL WITH (READUNCOMMITTED) ON FAL.FaFallID = FFP.FaFallID
+    LEFT JOIN dbo.vwPerson PRS ON PRS.BaPersonID = FFP.BaPersonID
+  WHERE FAL.FaFallID = {0}
+    AND FFP.BaPersonID &lt;&gt; FAL.BaPersonID -- Schuldner nicht auflisten
+</value>
+  </data>
+  <metadata name="qryAlteKostenstelle.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryAlteKostenstelle.SelectStatement" xml:space="preserve">
+    <value>SELECT Kostenstelle = Nr + ' ' + Name
+FROM KbKostenstelle_BaPerson PRK
+  LEFT JOIN KbKostenstelle  KST ON KST.KbKostenstelleID = PRK.KbKostenstelleID
+WHERE PRK.BaPersonID = {0}
+AND (PRK.DatumBis IS NULL OR GetDate() BETWEEN PRK.DatumVon AND PRK.DatumBis)</value>
+  </data>
+  <data name="qryZahlInfo.SelectStatement" xml:space="preserve">
+    <value>SELECT KRD.BaZahlungswegID,
+       EZTyp   = Convert(varchar, KRD.ZahlungswegDatumVon, 104) + ', ' + dbo.fnLOVText('BgEinzahlungsschein', KRD.EinzahlungsscheinCode),
+       Info    = ZahlungswegMehrZeilig,
+       Kreditor = KreditorMehrZeilig
+FROM vwKreditor KRD
+WHERE BaZahlungswegID = {0}</value>
+  </data>
+</root>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>DECLARE @DatumVon DATETIME
+DECLARE @DatumBis DATETIME
+
+SET @DatumVon = {edtDatumVon}
+SET @DatumBis = {edtDatumBis}
+
+DECLARE @Result TABLE(
+   Beschreibung VARCHAR (100),
+   Gruppe       VARCHAR (100),
+   SAR          VARCHAR (100),
+   Anzahl       INT,
+   Sortkey$     INT
+)
+
+/*
+Sortkey: 1 errichtung Jugendliche nach Sar
+         2 errichtung Jugendliche Total
+         3 Leerzeile
+         4 aufhebung Jugendliche nach Sar
+         5 aufhebung Jugendliche Total
+         6 Leerzeile
+         7 Abschlüsse Jugendliche nach Art
+         8 Leerzeile
+         9 Wechsel Jugendliche nach SAR
+         10 Wechsel Jugendliche Total
+         11 Leerzeile
+         12 Umplatzierung Jugendliche nach SAR
+         13 Umplatzierung Jugenldiche Total
+         14 Leerzeile
+         15 errichtung Erwachsene nach SAR
+         16 errichtung Erwachsene Total
+         17 Leerzeile
+         18 aufhebung Erwachsene nach SAR
+         19 aufhebung Erwachsene Total
+         20 Leerzeile
+         21 Abschlüsse Erwachsene nach Art
+*/
+
+----- Errichtungen
+--nach SAR
+INSERT @Result
+SELECT Beschreibung = 'Errichtung/Übernahme',
+       Gruppe = CASE WHEN dbo.fnGetAge(MAX(PRS.Geburtsdatum), GETDATE()) &gt; 17 THEN 'Erwachsene' ELSE 'Jugendliche' END,
+       SAR = ISNULL(PRM.Name,'') + ISNULL(', ' + PRM.Vorname,''),
+       Anzahl = COUNT(*),
+       Sortkey$ = CASE WHEN dbo.fnGetAge(MAX(PRS.Geburtsdatum), GETDATE()) &gt; 17 THEN 15 ELSE 1 END
+FROM dbo.FaLeistung          FAL WITH (READUNCOMMITTED)
+  INNER JOIN dbo.VmMassnahme MSN WITH (READUNCOMMITTED) ON MSN.FaLeistungID = FAL.FaLeistungID
+  INNER JOIN dbo.VmErnennung ERN WITH (READUNCOMMITTED) ON ERN.VmMassnahmeID = MSN.VmMassnahmeID
+  INNER JOIN dbo.VmPrima     PRM WITH (READUNCOMMITTED) ON PRM.VmPriMaID = ERN.VmPriMaID
+  INNER JOIN dbo.BaPerson    PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = FAL.BaPersonID
+WHERE FAL.ModulID = 5
+  AND FAL.FaProzessCode = 501
+  AND FAL.DatumVon BETWEEN @DatumVon AND @DatumBis
+GROUP BY ISNULL(PRM.Name,'') + ISNULL(', ' + PRM.Vorname,''),
+         CASE WHEN dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) &gt; 17 THEN 0 ELSE 1 END
+         
+--Total
+INSERT @Result
+SELECT 'Errichtung/Übernahme', 'Jugendliche', 'Total',
+       Anzahl = (SELECT SUM(Anzahl) FROM @Result WHERE Beschreibung = 'Errichtung/Übernahme' AND Gruppe = 'Jugendliche'),
+       2
+INSERT @Result
+SELECT 'Errichtung/Übernahme', 'Erwachsene', 'Total',
+       Anzahl = (SELECT SUM(Anzahl) FROM @Result WHERE Beschreibung = 'Errichtung/Übernahme' AND Gruppe = 'Erwachsene'),
+       16
+
+----- Aufhebungen
+--nach SAR
+INSERT @Result
+SELECT Beschreibung = 'Aufhebung/Übertragung',
+       Gruppe = CASE WHEN dbo.fnGetAge(MAX(PRS.Geburtsdatum), GETDATE()) &gt; 17 THEN 'Erwachsene' ELSE 'Jugendliche' END,
+       SAR = ISNULL(PRM.Name,'') + ISNULL(', ' + PRM.Vorname,''),
+       Anzahl = COUNT(*),
+       Sortkey$ = CASE WHEN dbo.fnGetAge(MAX(PRS.Geburtsdatum), GETDATE()) &gt; 17 THEN 18 ELSE 4 END
+FROM dbo.FaLeistung          FAL WITH (READUNCOMMITTED)
+  INNER JOIN dbo.VmMassnahme MSN WITH (READUNCOMMITTED) ON MSN.FaLeistungID = FAL.FaLeistungID
+  INNER JOIN dbo.VmErnennung ERN WITH (READUNCOMMITTED) ON ERN.VmMassnahmeID = MSN.VmMassnahmeID
+  INNER JOIN dbo.VmPrima     PRM WITH (READUNCOMMITTED) ON PRM.VmPriMaID = ERN.VmPriMaID
+  INNER JOIN dbo.BaPerson    PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = FAL.BaPersonID
+WHERE FAL.ModulID = 5
+  AND FAL.FaProzessCode = 501
+  AND FAL.DatumBis BETWEEN @DatumVon AND @DatumBis
+GROUP BY ISNULL(PRM.Name,'') + ISNULL(', ' + PRM.Vorname,''),
+         CASE WHEN dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) &gt; 17 THEN 0 ELSE 1 END
+         
+--Total
+INSERT @Result
+SELECT 'Aufhebung/Übertragung', 'Jugendliche', 'Total',
+       Anzahl = (SELECT SUM(Anzahl) FROM @Result WHERE Beschreibung = 'Aufhebung/Übertragung' AND Gruppe = 'Jugendliche'),
+       5
+INSERT @Result
+SELECT 'Aufhebung/Übertragung', 'Erwachsene', 'Total',
+       Anzahl = (SELECT SUM(Anzahl) FROM @Result WHERE Beschreibung = 'Aufhebung/Übertragung' AND Gruppe = 'Erwachsene'),
+       19
+
+----- Abschlussgründe
+INSERT @Result
+SELECT Beschreibung = CASE WHEN FAL.AbschlussGrundCode IS NULL THEN 'nicht angegeben'
+                           WHEN dbo.fnLOVText('VmMassnahmeAbschlussgrund', FAL.AbschlussGrundCode) LIKE '' THEN 'Codewert nicht erfasst'
+                           ELSE dbo.fnLOVText('VmMassnahmeAbschlussgrund', FAL.AbschlussGrundCode)
+                      END,
+       Gruppe = CASE WHEN dbo.fnGetAge(MAX(PRS.Geburtsdatum), GETDATE()) &gt; 17 THEN 'Erwachsene' ELSE 'Jugendliche' END,
+       SAR = NULL,
+       Anzahl = COUNT(*),
+       Sortkey$ = CASE WHEN dbo.fnGetAge(MAX(PRS.Geburtsdatum), GETDATE()) &gt; 17 THEN 21 ELSE 7 END
+FROM dbo.FaLeistung          FAL WITH (READUNCOMMITTED)
+  INNER JOIN dbo.VmMassnahme MSN WITH (READUNCOMMITTED) ON MSN.FaLeistungID = FAL.FaLeistungID
+  INNER JOIN dbo.VmErnennung ERN WITH (READUNCOMMITTED) ON ERN.VmMassnahmeID = MSN.VmMassnahmeID
+  INNER JOIN dbo.VmPrima     PRM WITH (READUNCOMMITTED) ON PRM.VmPriMaID = ERN.VmPriMaID
+  INNER JOIN dbo.BaPerson    PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = FAL.BaPersonID
+WHERE FAL.ModulID = 5
+  AND FAL.FaProzessCode = 501
+  AND FAL.DatumBis BETWEEN @DatumVon AND @DatumBis
+GROUP BY FAL.AbschlussGrundCode, CASE WHEN dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) &gt; 17 THEN 0 ELSE 1 END
+
+--Spacerrows
+INSERT @Result SELECT NULL, NULL, NULL, NULL, 3
+INSERT @Result SELECT NULL, NULL, NULL, NULL, 6
+INSERT @Result SELECT 'Abschlussgründe', NULL, NULL, NULL, 7
+INSERT @Result SELECT NULL, NULL, NULL, NULL, 8
+INSERT @Result SELECT NULL, NULL, NULL, NULL, 17
+INSERT @Result SELECT NULL, NULL, NULL, NULL, 20
+INSERT @Result SELECT 'Abschlussgründe', NULL, NULL, NULL, 21
+
+SELECT Beschreibung, Gruppe, SAR, Anzahl 
+FROM @Result
+ORDER BY Sortkey$,2</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="xDocument.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAF1JREFUOE9jZAAC
+        Y2Pj/yAaGzh79iwjhjhIw///MzGwmJjYfxDGqSEtjeE/MgYpBhmEoYmQDSANKM7GpQHZmVg1oDsJxgdp
+        pI4N2EIKJjbqJLIiDqSJEMaVovGKAwBnM3PWBP8PfwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="edtDatumBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFVJREFUOE9jZAAC
+        Y2Pj/yCaEDh79iwjWA1MAzaNWOVAgsRguAuIcRKKGmROQwMD3D/IbKwaQApgitBp6mgAeYokG4abBmT/
+        YKQ3smKapLREKFkjywMAd9eDN3Z9MMsAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="edtDatumVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAFVJREFUOE9jZAAC
+        Y2Pj/yCaEDh79iwjWA1MAzaNWOVAgsRguAuIcRKKGmROQwMD3D/IbKwaQApgitBp6mgAeYokG4abBmT/
+        YKQ3smKapLREKFkjywMAd9eDN3Z9MMsAAAAASUVORK5CYII=
+</value>
+  </data>
+</root>

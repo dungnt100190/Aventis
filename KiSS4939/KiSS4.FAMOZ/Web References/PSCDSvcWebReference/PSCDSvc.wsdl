@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.born.ch/KiSS/FAMOZ/PSCD/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.born.ch/KiSS/FAMOZ/PSCD/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.born.ch/KiSS/FAMOZ/PSCD/">
+      <s:element name="CreateAndSubmitBusinessPartnerPersonData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userIDSender" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userWinLogonName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="baPersonID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateAndSubmitBusinessPartnerPersonDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateAndSubmitBusinessPartnerPersonDataResult" type="tns:ReturnMsg" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ReturnMsg">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="tns:CreateObjectResult" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExceptionMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WarningMessage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ErrorCode" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="CreateObjectResult">
+        <s:restriction base="s:string">
+          <s:enumeration value="Success" />
+          <s:enumeration value="Warning" />
+          <s:enumeration value="ExceptionOccured" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="CreateAndSubmitBusinessPartnerInstitutionData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userIDSender" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userWinLogonName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="baInstitutionID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateAndSubmitBusinessPartnerInstitutionDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateAndSubmitBusinessPartnerInstitutionDataResult" type="tns:ReturnMsg" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitWhBelegeByIDs2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userIDSender" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userWinLogonName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="kbBuchungIDs" type="tns:ArrayOfInt" />
+            <s:element minOccurs="0" maxOccurs="1" name="kbBuchungBruttoIDs" type="tns:ArrayOfInt" />
+            <s:element minOccurs="1" maxOccurs="1" name="valutaDatum" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SubmitWhBelegeByIDs2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitWhBelegeByIDs2Result" type="tns:ReturnMsg" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitWhBelegeByIDs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userIDSender" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userWinLogonName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="kbBuchungIDs" type="tns:ArrayOfInt" />
+            <s:element minOccurs="0" maxOccurs="1" name="kbBuchungBruttoIDs" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitWhBelegeByIDsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitWhBelegeByIDsResult" type="tns:ReturnMsg" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StornoNettoBelege2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userIDSender" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userWinLogonName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KbBuchungIDs" type="tns:ArrayOfInt" />
+            <s:element minOccurs="1" maxOccurs="1" name="stornoDatum" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StornoNettoBelege2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StornoNettoBelege2Result" type="tns:ReturnMsg" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StornoNettoBelege">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userIDSender" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userWinLogonName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="KbBuchungIDs" type="tns:ArrayOfInt" />
+            <s:element minOccurs="1" maxOccurs="1" name="test" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StornoNettoBelegeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StornoNettoBelegeResult" type="tns:ReturnMsg" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StornoBruttoBelege">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userIDSender" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userWinLogonName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="kbBuchungBruttoIDs" type="tns:ArrayOfInt" />
+            <s:element minOccurs="1" maxOccurs="1" name="test" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="stornoDatum" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StornoBruttoBelegeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StornoBruttoBelegeResult" type="tns:ReturnMsg" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitAlimBelegeByIDs2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userIDSender" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userWinLogonName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="kbBuchungIDs" type="tns:ArrayOfInt" />
+            <s:element minOccurs="1" maxOccurs="1" name="valutaDatum" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitAlimBelegeByIDs2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitAlimBelegeByIDs2Result" type="tns:ReturnMsg" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitAlimBelegeByIDs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userIDSender" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userWinLogonName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="kbBuchungIDs" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitAlimBelegeByIDsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitAlimBelegeByIDsResult" type="tns:ReturnMsg" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitKgBelege">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userIDSender" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userWinLogonName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="kgBuchungIDs" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitKgBelegeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitKgBelegeResult" type="tns:ReturnMsg" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StornoKgBelege">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userIDSender" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userWinLogonName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="kgBuchungIDs" type="tns:ArrayOfInt" />
+            <s:element minOccurs="1" maxOccurs="1" name="test" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StornoKgBelegeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StornoKgBelegeResult" type="tns:ReturnMsg" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitWVEinzelpostenByIDs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userIDSender" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userWinLogonName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="kbWVEinzelpostenIDs" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubmitWVEinzelpostenByIDsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitWVEinzelpostenByIDsResult" type="tns:ReturnMsg" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClearCache">
+        <s:complexType />
+      </s:element>
+      <s:element name="ClearCacheResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetServerVersion">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetServerVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServerVersionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateAndSubmitBusinessPartnerPersonDataSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateAndSubmitBusinessPartnerPersonData" />
+  </wsdl:message>
+  <wsdl:message name="CreateAndSubmitBusinessPartnerPersonDataSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateAndSubmitBusinessPartnerPersonDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateAndSubmitBusinessPartnerInstitutionDataSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateAndSubmitBusinessPartnerInstitutionData" />
+  </wsdl:message>
+  <wsdl:message name="CreateAndSubmitBusinessPartnerInstitutionDataSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateAndSubmitBusinessPartnerInstitutionDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitWhBelegeByIDs2SoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitWhBelegeByIDs2" />
+  </wsdl:message>
+  <wsdl:message name="SubmitWhBelegeByIDs2SoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitWhBelegeByIDs2Response" />
+  </wsdl:message>
+  <wsdl:message name="SubmitWhBelegeByIDsSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitWhBelegeByIDs" />
+  </wsdl:message>
+  <wsdl:message name="SubmitWhBelegeByIDsSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitWhBelegeByIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="StornoNettoBelege2SoapIn">
+    <wsdl:part name="parameters" element="tns:StornoNettoBelege2" />
+  </wsdl:message>
+  <wsdl:message name="StornoNettoBelege2SoapOut">
+    <wsdl:part name="parameters" element="tns:StornoNettoBelege2Response" />
+  </wsdl:message>
+  <wsdl:message name="StornoNettoBelegeSoapIn">
+    <wsdl:part name="parameters" element="tns:StornoNettoBelege" />
+  </wsdl:message>
+  <wsdl:message name="StornoNettoBelegeSoapOut">
+    <wsdl:part name="parameters" element="tns:StornoNettoBelegeResponse" />
+  </wsdl:message>
+  <wsdl:message name="StornoBruttoBelegeSoapIn">
+    <wsdl:part name="parameters" element="tns:StornoBruttoBelege" />
+  </wsdl:message>
+  <wsdl:message name="StornoBruttoBelegeSoapOut">
+    <wsdl:part name="parameters" element="tns:StornoBruttoBelegeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitAlimBelegeByIDs2SoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitAlimBelegeByIDs2" />
+  </wsdl:message>
+  <wsdl:message name="SubmitAlimBelegeByIDs2SoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitAlimBelegeByIDs2Response" />
+  </wsdl:message>
+  <wsdl:message name="SubmitAlimBelegeByIDsSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitAlimBelegeByIDs" />
+  </wsdl:message>
+  <wsdl:message name="SubmitAlimBelegeByIDsSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitAlimBelegeByIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitKgBelegeSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitKgBelege" />
+  </wsdl:message>
+  <wsdl:message name="SubmitKgBelegeSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitKgBelegeResponse" />
+  </wsdl:message>
+  <wsdl:message name="StornoKgBelegeSoapIn">
+    <wsdl:part name="parameters" element="tns:StornoKgBelege" />
+  </wsdl:message>
+  <wsdl:message name="StornoKgBelegeSoapOut">
+    <wsdl:part name="parameters" element="tns:StornoKgBelegeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitWVEinzelpostenByIDsSoapIn">
+    <wsdl:part name="parameters" element="tns:SubmitWVEinzelpostenByIDs" />
+  </wsdl:message>
+  <wsdl:message name="SubmitWVEinzelpostenByIDsSoapOut">
+    <wsdl:part name="parameters" element="tns:SubmitWVEinzelpostenByIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClearCacheSoapIn">
+    <wsdl:part name="parameters" element="tns:ClearCache" />
+  </wsdl:message>
+  <wsdl:message name="ClearCacheSoapOut">
+    <wsdl:part name="parameters" element="tns:ClearCacheResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetServerVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServerVersion" />
+  </wsdl:message>
+  <wsdl:message name="GetServerVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServerVersionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PSCDSvcSoap">
+    <wsdl:operation name="CreateAndSubmitBusinessPartnerPersonData">
+      <wsdl:input message="tns:CreateAndSubmitBusinessPartnerPersonDataSoapIn" />
+      <wsdl:output message="tns:CreateAndSubmitBusinessPartnerPersonDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAndSubmitBusinessPartnerInstitutionData">
+      <wsdl:input message="tns:CreateAndSubmitBusinessPartnerInstitutionDataSoapIn" />
+      <wsdl:output message="tns:CreateAndSubmitBusinessPartnerInstitutionDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitWhBelegeByIDs2">
+      <wsdl:input message="tns:SubmitWhBelegeByIDs2SoapIn" />
+      <wsdl:output message="tns:SubmitWhBelegeByIDs2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitWhBelegeByIDs">
+      <wsdl:input message="tns:SubmitWhBelegeByIDsSoapIn" />
+      <wsdl:output message="tns:SubmitWhBelegeByIDsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StornoNettoBelege2">
+      <wsdl:input message="tns:StornoNettoBelege2SoapIn" />
+      <wsdl:output message="tns:StornoNettoBelege2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StornoNettoBelege">
+      <wsdl:input message="tns:StornoNettoBelegeSoapIn" />
+      <wsdl:output message="tns:StornoNettoBelegeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StornoBruttoBelege">
+      <wsdl:input message="tns:StornoBruttoBelegeSoapIn" />
+      <wsdl:output message="tns:StornoBruttoBelegeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitAlimBelegeByIDs2">
+      <wsdl:input message="tns:SubmitAlimBelegeByIDs2SoapIn" />
+      <wsdl:output message="tns:SubmitAlimBelegeByIDs2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitAlimBelegeByIDs">
+      <wsdl:input message="tns:SubmitAlimBelegeByIDsSoapIn" />
+      <wsdl:output message="tns:SubmitAlimBelegeByIDsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitKgBelege">
+      <wsdl:input message="tns:SubmitKgBelegeSoapIn" />
+      <wsdl:output message="tns:SubmitKgBelegeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StornoKgBelege">
+      <wsdl:input message="tns:StornoKgBelegeSoapIn" />
+      <wsdl:output message="tns:StornoKgBelegeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitWVEinzelpostenByIDs">
+      <wsdl:input message="tns:SubmitWVEinzelpostenByIDsSoapIn" />
+      <wsdl:output message="tns:SubmitWVEinzelpostenByIDsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearCache">
+      <wsdl:input message="tns:ClearCacheSoapIn" />
+      <wsdl:output message="tns:ClearCacheSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServerVersion">
+      <wsdl:input message="tns:GetServerVersionSoapIn" />
+      <wsdl:output message="tns:GetServerVersionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PSCDSvcSoap" type="tns:PSCDSvcSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateAndSubmitBusinessPartnerPersonData">
+      <soap:operation soapAction="http://www.born.ch/KiSS/FAMOZ/PSCD/CreateAndSubmitBusinessPartnerPersonData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAndSubmitBusinessPartnerInstitutionData">
+      <soap:operation soapAction="http://www.born.ch/KiSS/FAMOZ/PSCD/CreateAndSubmitBusinessPartnerInstitutionData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitWhBelegeByIDs2">
+      <soap:operation soapAction="http://www.born.ch/KiSS/FAMOZ/PSCD/SubmitWhBelegeByIDs2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitWhBelegeByIDs">
+      <soap:operation soapAction="http://www.born.ch/KiSS/FAMOZ/PSCD/SubmitWhBelegeByIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StornoNettoBelege2">
+      <soap:operation soapAction="http://www.born.ch/KiSS/FAMOZ/PSCD/StornoNettoBelege2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StornoNettoBelege">
+      <soap:operation soapAction="http://www.born.ch/KiSS/FAMOZ/PSCD/StornoNettoBelege" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StornoBruttoBelege">
+      <soap:operation soapAction="http://www.born.ch/KiSS/FAMOZ/PSCD/StornoBruttoBelege" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitAlimBelegeByIDs2">
+      <soap:operation soapAction="http://www.born.ch/KiSS/FAMOZ/PSCD/SubmitAlimBelegeByIDs2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitAlimBelegeByIDs">
+      <soap:operation soapAction="http://www.born.ch/KiSS/FAMOZ/PSCD/SubmitAlimBelegeByIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitKgBelege">
+      <soap:operation soapAction="http://www.born.ch/KiSS/FAMOZ/PSCD/SubmitKgBelege" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StornoKgBelege">
+      <soap:operation soapAction="http://www.born.ch/KiSS/FAMOZ/PSCD/StornoKgBelege" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitWVEinzelpostenByIDs">
+      <soap:operation soapAction="http://www.born.ch/KiSS/FAMOZ/PSCD/SubmitWVEinzelpostenByIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearCache">
+      <soap:operation soapAction="http://www.born.ch/KiSS/FAMOZ/PSCD/ClearCache" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerVersion">
+      <soap:operation soapAction="http://www.born.ch/KiSS/FAMOZ/PSCD/GetServerVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PSCDSvcSoap12" type="tns:PSCDSvcSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateAndSubmitBusinessPartnerPersonData">
+      <soap12:operation soapAction="http://www.born.ch/KiSS/FAMOZ/PSCD/CreateAndSubmitBusinessPartnerPersonData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAndSubmitBusinessPartnerInstitutionData">
+      <soap12:operation soapAction="http://www.born.ch/KiSS/FAMOZ/PSCD/CreateAndSubmitBusinessPartnerInstitutionData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitWhBelegeByIDs2">
+      <soap12:operation soapAction="http://www.born.ch/KiSS/FAMOZ/PSCD/SubmitWhBelegeByIDs2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitWhBelegeByIDs">
+      <soap12:operation soapAction="http://www.born.ch/KiSS/FAMOZ/PSCD/SubmitWhBelegeByIDs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StornoNettoBelege2">
+      <soap12:operation soapAction="http://www.born.ch/KiSS/FAMOZ/PSCD/StornoNettoBelege2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StornoNettoBelege">
+      <soap12:operation soapAction="http://www.born.ch/KiSS/FAMOZ/PSCD/StornoNettoBelege" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StornoBruttoBelege">
+      <soap12:operation soapAction="http://www.born.ch/KiSS/FAMOZ/PSCD/StornoBruttoBelege" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitAlimBelegeByIDs2">
+      <soap12:operation soapAction="http://www.born.ch/KiSS/FAMOZ/PSCD/SubmitAlimBelegeByIDs2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitAlimBelegeByIDs">
+      <soap12:operation soapAction="http://www.born.ch/KiSS/FAMOZ/PSCD/SubmitAlimBelegeByIDs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitKgBelege">
+      <soap12:operation soapAction="http://www.born.ch/KiSS/FAMOZ/PSCD/SubmitKgBelege" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StornoKgBelege">
+      <soap12:operation soapAction="http://www.born.ch/KiSS/FAMOZ/PSCD/StornoKgBelege" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitWVEinzelpostenByIDs">
+      <soap12:operation soapAction="http://www.born.ch/KiSS/FAMOZ/PSCD/SubmitWVEinzelpostenByIDs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearCache">
+      <soap12:operation soapAction="http://www.born.ch/KiSS/FAMOZ/PSCD/ClearCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerVersion">
+      <soap12:operation soapAction="http://www.born.ch/KiSS/FAMOZ/PSCD/GetServerVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PSCDSvc">
+    <wsdl:port name="PSCDSvcSoap" binding="tns:PSCDSvcSoap">
+      <soap:address location="http://localhost/PscdSvc/Master/PscdSvc.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PSCDSvcSoap12" binding="tns:PSCDSvcSoap12">
+      <soap12:address location="http://localhost/PscdSvc/Master/PscdSvc.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

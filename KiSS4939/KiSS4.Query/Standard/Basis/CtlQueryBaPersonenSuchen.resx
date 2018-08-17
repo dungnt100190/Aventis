@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>DECLARE @LanguageCode INT;
+SET @LanguageCode = {1};
+
+SELECT BaPersonID$ = CASE WHEN V.FT = 1 THEN V.FTID$ ELSE V.KlientensystemID$ END,
+       [in Klientensystem von] = KLS.Name + ISNULL(', ' + KLS.Vorname,''),
+       V.*
+FROM
+(SELECT
+       FTID$				=		PRS.BaPersonID,
+       FT					=		CONVERT(BIT,
+									CASE WHEN EXISTS(SELECT 1 FROM dbo.FaLeistung WITH (READUNCOMMITTED) WHERE BaPersonID = PRS.BaPersonID)
+											THEN 1 ELSE 0 END),
+       KlientensystemID$ = (SELECT TOP 1 LEI.BAPersonID 
+                            FROM   dbo.BaPerson_Relation  REL WITH (READUNCOMMITTED) 
+                                   LEFT JOIN dbo.FaLeistung LEI WITH (READUNCOMMITTED) 
+                                   ON LEI.BaPersonID = CASE WHEN REL.BaPersonID_1 = PRS.BaPersonID 
+                                                                             THEN REL.BaPersonID_2
+                                                                             ELSE REL.BaPersonID_1
+                                                                             END
+                            WHERE  (REL.BaPersonID_1 = PRS.BaPersonID OR
+                                   REL.BaPersonID_2 = PRS.BaPersonID) AND
+                                   LEI.BaPersonID IS NOT NULL
+                            ORDER BY LEI.ModulID, LEI.DatumVon DESC),
+       [Name]				=		PRS.Name,
+       [Früherer Name] = PRS.FruehererName,
+       Vorname				=		PRS.Vorname,
+       Geburtsdatum			=		PRS.Geburtsdatum,
+       [Alter]				=		CONVERT(INT, ((DATEDIFF(dd,Geburtsdatum,GETDATE())+.5)/365.25)),
+       [m/w]				=		dbo.fnGetGenderMLTitleMF(PRS.GeschlechtCode, @LanguageCode),
+       [AHV-Nr.]			=		PRS.AHVNummer,
+       [Vers.-Nr.]			=		PRS.Versichertennummer, 
+       NNr					=		PRS.NNummer,
+       Strasse				=		PRS.WohnsitzStrassehausNr,
+       PLZ					=		PRS.WohnsitzPLZ,
+       Ort					=		PRS.WohnsitzOrt,
+       Heimatort			=		PRS.Heimatort,
+       PersonSichtbarSDFlag$    =          PRS.PersonSichtbarSDFlag,
+       [SAR Fallführung]        =
+                 (SELECT TOP 1 USR.LastName + ISNULL(', ' + USR.FirstName, '')
+                  FROM   dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+                         INNER JOIN dbo.XUser USR WITH (READUNCOMMITTED) ON USR.UserID = FAL.UserID
+                  WHERE  BaPersonID = PRS.BaPersonID AND FAL.ModulID = 2
+                  ORDER BY (CASE WHEN FAL.DatumBis IS NULL THEN 1 ELSE 0 END) DESC, --Offene Leistungen werden zuoberst sortiert
+                           DatumBis DESC, 
+                           DatumVon DESC),
+       [SAR Sozialhilfe]	     =
+                 (SELECT TOP 1 USR.LastName + ISNULL(', ' + USR.FirstName, '')
+                  FROM   dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+                         INNER JOIN dbo.XUser USR WITH (READUNCOMMITTED) ON USR.UserID = FAL.UserID
+                  WHERE  BaPersonID = PRS.BaPersonID AND FAL.ModulID = 3
+                  ORDER BY (CASE WHEN FAL.DatumBis IS NULL THEN 1 ELSE 0 END) DESC, --Offene Leistungen werden zuoberst sortiert
+                           DatumBis DESC, 
+                           DatumVon DESC),
+       [SAR Inkasso]		     =
+                 (SELECT TOP 1 USR.LastName + ISNULL(', ' + USR.FirstName, '')
+                  FROM   dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+                         INNER JOIN dbo.XUser USR WITH (READUNCOMMITTED) ON USR.UserID = FAL.UserID
+                  WHERE  BaPersonID = PRS.BaPersonID AND FAL.ModulID = 4
+                  ORDER BY (CASE WHEN FAL.DatumBis IS NULL THEN 1 ELSE 0 END) DESC, --Offene Leistungen werden zuoberst sortiert
+                           DatumBis DESC, 
+                           DatumVon DESC),
+       [SAR Vormundschaft]      =
+                 (SELECT TOP 1 USR.LastName + ISNULL(', ' + USR.FirstName, '')
+                  FROM   dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+                         INNER JOIN dbo.XUser USR WITH (READUNCOMMITTED) ON USR.UserID = FAL.UserID
+                  WHERE  BaPersonID = PRS.BaPersonID AND FAL.ModulID = 5
+                  ORDER BY (CASE WHEN FAL.DatumBis IS NULL THEN 1 ELSE 0 END) DESC, --Offene Leistungen werden zuoberst sortiert
+                           DatumBis DESC, 
+                           DatumVon DESC),
+       [SAR Asyl]		     =
+                 (SELECT TOP 1 USR.LastName + ISNULL(', ' + USR.FirstName, '')
+                  from   dbo.FaLeistung FAL WITH (READUNCOMMITTED)
+                         INNER JOIN dbo.XUser USR WITH (READUNCOMMITTED) ON USR.UserID = FAL.UserID
+                  WHERE  BaPersonID = PRS.BaPersonID AND FAL.ModulID = 6
+                  ORDER BY (CASE WHEN FAL.DatumBis IS NULL THEN 1 ELSE 0 END) DESC, --Offene Leistungen werden zuoberst sortiert
+                           DatumBis DESC, 
+                           DatumVon DESC)
+FROM   dbo.vwPerson PRS WITH (READUNCOMMITTED)
+) V
+LEFT JOIN dbo.BaPerson KLS WITH (READUNCOMMITTED) on KLS.BaPersonID = KlientensystemID$
+WHERE 1=1
+AND (PersonSichtbarSDFlag$ = dbo.fnGetPersonSichtbarFlag({0}) OR PersonSichtbarSDFlag$ = 1) 
+--- AND (({Soundex} = 0 AND V.Name LIKE {edtName} + '%') OR ({Soundex} = 1 AND soundex(V.Name) = soundex({edtName})))
+--- AND (({Soundex} = 0 AND V.Vorname LIKE {edtVorname} + '%') OR ({Soundex} = 1 AND soundex(V.Vorname) = soundex({edtVorname})))
+--- AND (V.Name LIKE {edtName} + '%' OR [Früherer Name] LIKE {edtName} + '%')
+--- AND V.Vorname LIKE {edtVorname} + '%'
+--- AND V.[AHV-Nr.] LIKE {edtAHV} + '%'
+--- AND V.[Vers.-Nr.] LIKE {edtVersNr} + '%'
+--- AND V.NNr LIKE {edtNNr} + '%'
+--- AND V.Strasse LIKE {edtStrasse} + '%'
+--- AND V.PLZ LIKE {edtPLZ} + '%'
+--- AND V.Ort LIKE {edtOrt} + '%'
+--- AND V.FT = CASE WHEN {edtFT} = 1 THEN 1 ELSE FT END
+--- AND V.Geburtsdatum &gt;= {edtGeburtVon}
+--- AND V.Geburtsdatum &lt;= {edtGeburtBis}</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="edtGeburtBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="edtGeburtVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+</root>

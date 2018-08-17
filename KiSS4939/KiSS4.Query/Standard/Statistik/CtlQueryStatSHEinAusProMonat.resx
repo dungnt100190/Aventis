@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>declare @Jahr          int,
+        @Vorjahr       int,
+        @GemeindeCode  int
+
+set @Jahr = 2005
+--- set @Jahr = {edtJahr}
+set @Vorjahr = @Jahr-1
+--- set @GemeindeCode = {edtGemeindeCode}
+
+DECLARE @BudgetMonat TABLE (
+    ID                int identity(1,1),
+    BaPersonID       int,
+    GemeindeCode      int,
+    BgBudgetID        int,
+    Jahr              int,
+    Monat             int,
+    AnzahlUE          int,
+    Einnahmen         money,
+    Ausgaben          money,
+    NRMNummer         INT,
+    PRIMARY KEY (Jahr,Monat,BaPersonID,[ID])
+)
+
+-- Einnahmen, Ausgaben
+INSERT @BudgetMonat (BaPersonID,GemeindeCode,BgBudgetID,Jahr,Monat,AnzahlUE,Einnahmen,Ausgaben)
+SELECT LEI.BaPersonID,
+       LEI.GemeindeCode,
+       BDG.BgBudgetID,
+       BDG.Jahr,
+       BDG.Monat,
+       AnzahlUE    = (SELECT COUNT(*) 
+                      FROM   BgFinanzPlan_BaPerson
+                      WHERE  BgFinanzPlanID = SFP.BgFinanzPlanID AND
+                             IstUnterstuetzt = 1),
+       Einnahmen   = IsNull((SELECT SUM(BetragFinanzplan) 
+                             FROM   vwBgPosition
+                             WHERE  BgBudgetID = BDG.BgBudgetID AND 
+                                    BgKategorieCode IN (1, 4)), $0.00),  -- Einnahmen / Kürzungen
+
+       Ausgaben    = IsNull((SELECT SUM(BetragFinanzplan) 
+                             FROM   vwBgPosition
+                             WHERE  BgBudgetID = BDG.BgBudgetID AND 
+                                    BgKategorieCode IN  (2, 101)), $0.00)       -- Ausgaben / Einzelzahlung
+FROM   FaLeistung LEI
+       INNER JOIN BgFinanzPlan          SFP ON SFP.FaLeistungID = LEI.FaLeistungID
+       INNER JOIN BgBudget              BDG ON BDG.BgFinanzPlanID = SFP.BgFinanzPlanID 
+                                           AND BDG.BgBewilligungStatusCode in (5, 9) -- bewilligt/gesperrt
+       INNER JOIN BgFinanzPlan_BaPerson SPP ON SPP.BgFinanzPlanID = SFP.BgFinanzPlanID --NRM von Fallträger
+                                            AND SPP.BaPersonID = LEI.BaPersonID
+  AND (@GemeindeCode IS NULL OR IsNull(LEI.GemeindeCode, 0) = @GemeindeCode)
+GROUP BY LEI.BaPersonID, LEI.GemeindeCode, SFP.BgFinanzPlanID, BDG.BgBudgetID, BDG.Jahr, BDG.Monat
+
+--Doppelmonate eliminieren
+delete BMO
+from   @BudgetMonat BMO
+       inner join @BudgetMonat BMO2 on BMO2.BaPersonID = BMO.BaPersonID AND
+                                       BMO2.Jahr = BMO.Jahr AND
+                                       BMO2.Monat = BMO.Monat AND
+                                       BMO2.ID &lt; BMO.ID
+
+
+-- Output pro Klient
+SELECT Sort$         = PRS.NameVorname,
+       BaPersonID$  = PID.BaPersonID,
+       KlientIn      = CASE WHEN YAR.Jahr = @Jahr THEN PRS.NameVorname ELSE '' END,
+       Jahr          = YAR.Jahr,
+       NRMNummer     = (SELECT MAX(NRMNummer) FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr),
+       Jan_UE  = (SELECT AnzahlUE FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 1),
+       Feb_UE  = (SELECT AnzahlUE FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 2),
+       Mrz_UE  = (SELECT AnzahlUE FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 3),
+       Apr_UE  = (SELECT AnzahlUE FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 4),
+       Mai_UE  = (SELECT AnzahlUE FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 5),
+       Jun_UE  = (SELECT AnzahlUE FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 6),
+       Jul_UE  = (SELECT AnzahlUE FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 7),
+       Aug_UE  = (SELECT AnzahlUE FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 8),
+       Sep_UE  = (SELECT AnzahlUE FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 9),
+       Okt_UE  = (SELECT AnzahlUE FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 10),
+       Nov_UE  = (SELECT AnzahlUE FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 11),
+       Dez_UE  = (SELECT AnzahlUE FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 12),
+       Jan_Ein = (SELECT convert(int,Einnahmen) FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 1),
+       Feb_Ein = (SELECT convert(int,Einnahmen) FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 2),
+       Mrz_Ein = (SELECT convert(int,Einnahmen) FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 3),
+       Apr_Ein = (SELECT convert(int,Einnahmen) FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 4),
+       Mai_Ein = (SELECT convert(int,Einnahmen) FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 5),
+       Jun_Ein = (SELECT convert(int,Einnahmen) FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 6),
+       Jul_Ein = (SELECT convert(int,Einnahmen) FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 7),
+       Aug_Ein = (SELECT convert(int,Einnahmen) FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 8),
+       Sep_Ein = (SELECT convert(int,Einnahmen) FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 9),
+       Okt_Ein = (SELECT convert(int,Einnahmen) FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 10),
+       Nov_Ein = (SELECT convert(int,Einnahmen) FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 11),
+       Dez_Ein = (SELECT convert(int,Einnahmen) FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 12),
+       Jan_Aus = (SELECT convert(int,Ausgaben) FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 1),
+       Feb_Aus = (SELECT convert(int,Ausgaben) FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 2),
+       Mrz_Aus = (SELECT convert(int,Ausgaben) FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 3),
+       Apr_Aus = (SELECT convert(int,Ausgaben) FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 4),
+       Mai_Aus = (SELECT convert(int,Ausgaben) FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 5),
+       Jun_Aus = (SELECT convert(int,Ausgaben) FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 6),
+       Jul_Aus = (SELECT convert(int,Ausgaben) FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 7),
+       Aug_Aus = (SELECT convert(int,Ausgaben) FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 8),
+       Sep_Aus = (SELECT convert(int,Ausgaben) FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 9),
+       Okt_Aus = (SELECT convert(int,Ausgaben) FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 10),
+       Nov_Aus = (SELECT convert(int,Ausgaben) FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 11),
+       Dez_Aus = (SELECT convert(int,Ausgaben) FROM @BudgetMonat WHERE BaPersonID = PID.BaPersonID AND Jahr = YAR.Jahr AND Monat = 12)
+FROM (SELECT DISTINCT BaPersonID FROM @BudgetMonat) PID
+  INNER JOIN vwPerson     PRS ON PRS.BaPersonID = PID.BaPersonID,
+  (SELECT Jahr = @Jahr UNION SELECT @Vorjahr)  YAR
+ORDER BY 1, YAR.Jahr DESC
+
+
+-- Output Total Monat
+SELECT Gemeinde  = CASE WHEN YAR.Jahr = @Jahr THEN GMD.Gemeinde ELSE '' END,
+       YAR.Jahr,
+       Jan_UE  = (SELECT sum(isNull(AnzahlUE,0)) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 1),
+       Feb_UE  = (SELECT sum(isNull(AnzahlUE,0)) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 2),
+       Mrz_UE  = (SELECT sum(isNull(AnzahlUE,0)) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 3),
+       Apr_UE  = (SELECT sum(isNull(AnzahlUE,0)) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 4),
+       Mai_UE  = (SELECT sum(isNull(AnzahlUE,0)) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 5),
+       Jun_UE  = (SELECT sum(isNull(AnzahlUE,0)) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 6),
+       Jul_UE  = (SELECT sum(isNull(AnzahlUE,0)) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 7),
+       Aug_UE  = (SELECT sum(isNull(AnzahlUE,0)) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 8),
+       Sep_UE  = (SELECT sum(isNull(AnzahlUE,0)) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 9),
+       Okt_UE  = (SELECT sum(isNull(AnzahlUE,0)) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 10),
+       Nov_UE  = (SELECT sum(isNull(AnzahlUE,0)) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 11),
+       Dez_UE  = (SELECT sum(isNull(AnzahlUE,0)) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 12),
+       Jan_Ein = (SELECT convert(int,sum(isNull(Einnahmen,0))) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 1),
+       Feb_Ein = (SELECT convert(int,sum(isNull(Einnahmen,0))) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 2),
+       Mrz_Ein = (SELECT convert(int,sum(isNull(Einnahmen,0))) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 3),
+       Apr_Ein = (SELECT convert(int,sum(isNull(Einnahmen,0))) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 4),
+       Mai_Ein = (SELECT convert(int,sum(isNull(Einnahmen,0))) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 5),
+       Jun_Ein = (SELECT convert(int,sum(isNull(Einnahmen,0))) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 6),
+       Jul_Ein = (SELECT convert(int,sum(isNull(Einnahmen,0))) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 7),
+       Aug_Ein = (SELECT convert(int,sum(isNull(Einnahmen,0))) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 8),
+       Sep_Ein = (SELECT convert(int,sum(isNull(Einnahmen,0))) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 9),
+       Okt_Ein = (SELECT convert(int,sum(isNull(Einnahmen,0))) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 10),
+       Nov_Ein = (SELECT convert(int,sum(isNull(Einnahmen,0))) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 11),
+       Dez_Ein = (SELECT convert(int,sum(isNull(Einnahmen,0))) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 12),
+       Jan_Aus = (SELECT convert(int,sum(isNull(Ausgaben,0))) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 1),
+       Feb_Aus = (SELECT convert(int,sum(isNull(Ausgaben,0))) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 2),
+       Mrz_Aus = (SELECT convert(int,sum(isNull(Ausgaben,0))) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 3),
+       Apr_Aus = (SELECT convert(int,sum(isNull(Ausgaben,0))) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 4),
+       Mai_Aus = (SELECT convert(int,sum(isNull(Ausgaben,0))) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 5),
+       Jun_Aus = (SELECT convert(int,sum(isNull(Ausgaben,0))) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 6),
+       Jul_Aus = (SELECT convert(int,sum(isNull(Ausgaben,0))) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 7),
+       Aug_Aus = (SELECT convert(int,sum(isNull(Ausgaben,0))) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 8),
+       Sep_Aus = (SELECT convert(int,sum(isNull(Ausgaben,0))) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 9),
+       Okt_Aus = (SELECT convert(int,sum(isNull(Ausgaben,0))) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 10),
+       Nov_Aus = (SELECT convert(int,sum(isNull(Ausgaben,0))) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 11),
+       Dez_Aus = (SELECT convert(int,sum(isNull(Ausgaben,0))) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr AND Monat = 12)
+FROM (SELECT Jahr = @Jahr UNION SELECT @Vorjahr)  YAR,
+  (SELECT Code, Gemeinde = Text, SortKey FROM XLOVCode WHERE LOVName = 'GemeindeSozialdienst' AND EXISTS (SELECT * FROM @BudgetMonat WHERE GemeindeCode = Code)
+   UNION ALL SELECT NULL, 'Total', 9999) GMD
+ORDER BY GMD.SortKey, YAR.Jahr DESC
+
+-- Output Total Jahr
+SELECT Gemeinde  = CASE WHEN YAR.Jahr = @Jahr THEN GMD.Gemeinde ELSE '' END,
+       YAR.Jahr,
+       Einnahmen = (SELECT convert(int,sum(isNull(Einnahmen,0))) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr),
+       Ausgaben  = (SELECT convert(int,sum(isNull(Ausgaben,0))) FROM @BudgetMonat WHERE GemeindeCode = IsNull(GMD.Code, GemeindeCode) AND Jahr = YAR.Jahr)
+FROM (SELECT Jahr = @Jahr UNION SELECT @Vorjahr)  YAR,
+  (SELECT Code, Gemeinde = Text, SortKey FROM XLOVCode WHERE LOVName = 'GemeindeSozialdienst' AND EXISTS (SELECT * FROM @BudgetMonat WHERE GemeindeCode = Code)
+   UNION ALL SELECT NULL, 'Total', 9999) GMD
+ORDER BY GMD.SortKey, YAR.Jahr DESC</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="xDocument.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAF1JREFUOE9jZAAC
+        Y2Pj/yAaGzh79iwjhjhIw///MzGwmJjYfxDGqSEtjeE/MgYpBhmEoYmQDSANKM7GpQHZmVg1oDsJxgdp
+        pI4N2EIKJjbqJLIiDqSJEMaVovGKAwBnM3PWBP8PfwAAAABJRU5ErkJggg==
+</value>
+  </data>
+</root>

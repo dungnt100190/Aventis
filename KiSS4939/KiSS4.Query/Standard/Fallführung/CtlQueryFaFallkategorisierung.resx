@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>DECLARE @LanguageCode INT;
+DECLARE @DatumVon DATETIME;
+DECLARE @DatumBis DATETIME;
+DECLARE @BaPersonID INT;
+DECLARE @OrgUnitID INT;
+DECLARE @KategorieID INT;
+DECLARE @FaKontaktart INT;
+DECLARE @UserID INT;
+DECLARE @Aktuellste BIT;
+DECLARE @Aktiv BIT;
+DECLARE @Archiviert BIT;
+DECLARE @Geschlossen BIT;
+DECLARE @Kontaktart VARCHAR(MAX);
+
+SET @LanguageCode = {0};
+SET @DatumVon = '17530101';
+SET @DatumBis = '99991231';
+SET @BaPersonID = 0;
+SET @OrgUnitID = 0;
+SET @KategorieID = 0;
+SET @UserID = 0;
+SET @Aktuellste = 1;
+SET @Aktiv = 1;
+SET @Archiviert = 0;
+SET @Geschlossen = 0;
+SET @Kontaktart = '';
+--- SET @DatumVon = {edtDatumVon};
+--- SET @DatumBis = {edtDatumBis};
+--- SET @BaPersonID = {edtBaPersonID.LookupID};
+--- SET @OrgUnitID = {edtOrgUnitID};
+--- SET @KategorieID = {edtKategorie};
+--- SET @UserID = {edtUserID.LookupID};
+--- SET @Aktuellste = {chkNuraktuellste};
+--- SET @Aktiv = {chkAktiv};
+--- SET @Archiviert = {chkArchiviert};
+--- SET @Geschlossen = {chkGeschlossen};
+--- SET @Kontaktart = {edtKontaktart};
+
+
+SELECT  
+  BaPersonID$               = LEI.BaPersonID,
+  FaLeistungID$             = LEI.FaLeistungID,
+  Sektion                   = XOU.ItemName,  
+  SAR                       = USR.NameVorname,
+  [Name Klient]             = PRS.NameVorname,
+  [Alter]                   = PRS.[Alter],  
+  Geburtsdatum              = PRS.Geburtsdatum,
+  Altertyp                  = CASE
+                                WHEN dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 0 AND 17 THEN '0-17'
+                                WHEN dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 18 AND 25 THEN '18-25'
+                                WHEN dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 26 AND 35 THEN '26-35'
+                                WHEN dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 36 AND 50 THEN '36-50'
+                                WHEN dbo.fnGetAge(PRS.Geburtsdatum, GETDATE()) BETWEEN 51 AND 65 THEN '51-65'
+                                ELSE dbo.fnGetMLTextFromName('CtlQueryFaFalltraegerÜbersicht', 'Ab66', @LanguageCode) 
+                              END,
+  Geschlecht                = dbo.fnLOVMLText('Geschlecht', PRS.GeschlechtCode, @LanguageCode),
+  Nation                    = PRS.Nationalitaet,
+  Zivilstand                = dbo.fnLOVMLText('Zivilstand', PRS.ZivilstandCode, @LanguageCode),
+  Versichertennummer        = PRS.Versichertennummer,
+  AnzPersHaushalt           = (SELECT COUNT(1)
+                               FROM dbo.BgFinanzPlan_BaPerson WITH (READUNCOMMITTED)
+                               WHERE BgFinanzPlanID = (SELECT TOP 1 FPL.BgFinanzplanID
+                                                       FROM dbo.BgFinanzplan       FPL  WITH (READUNCOMMITTED)
+                                                         INNER JOIN dbo.FaLeistung LEI2 WITH (READUNCOMMITTED) ON LEI2.BaPersonID = LEI.BaPersonID
+                                                                                                              AND LEI2.FaLeistungID = FPL.FaLeistungID
+                                                       WHERE BgBewilligungStatusCode IN (5, 9)
+                                                         AND dbo.fnDateOf(ISNULL(FPL.GeplantVon, FPL.DatumVon)) &lt;= @DatumBis 
+                                                         AND dbo.fnDateOf(ISNULL(FPL.GeplantBis, FPL.DatumBis)) &gt;= @DatumVon 
+                                                       ORDER BY ISNULL(FPL.GeplantVon, FPL.DatumVon) DESC)),
+  Strasse                   = ADR.Strasse,
+  StrasseNr                 = ADR.HausNr,
+  PLZ                       = ADR.PLZ,
+  Ort                       = ADR.Ort,
+  Kategorie                 = dbo.fnLOVMLText('FaKategorie', FKA.FaKategorieCode, @LanguageCode),
+  Beginn                    = FKA.Datum,
+  Abschluss                 = FKA.Abschlussdatum,
+  [Anzahl Gespräche intern] = (SELECT COUNT(1) 
+                               FROM dbo.FaAktennotizen FAA 
+                               WHERE FAA.FaLeistungID = LEI.FaLeistungID
+                                 AND FAA.Datum BETWEEN ISNULL(FKA.Datum, @DatumVon) AND ISNULL(FKA.Abschlussdatum, @DatumBis)
+                                 AND FaKontaktartCode = 1), -- Gespräch intern
+  [Anzahl Gespräche extern] = (SELECT COUNT(1) 
+                               FROM dbo.FaAktennotizen FAA 
+                               WHERE FAA.FaLeistungID = LEI.FaLeistungID
+                                 AND FAA.Datum BETWEEN ISNULL(FKA.Datum, @DatumVon) AND ISNULL(FKA.Abschlussdatum, @DatumBis)
+                                 AND FaKontaktartCode = 2), -- Gespräch extern
+  [Anzahl Telefone]         = (SELECT COUNT(1) 
+                               FROM dbo.FaAktennotizen FAA 
+                               WHERE FAA.FaLeistungID = LEI.FaLeistungID
+                                 AND FAA.Datum BETWEEN ISNULL(FKA.Datum, @DatumVon) AND ISNULL(FKA.Abschlussdatum, @DatumBis)
+                                 AND FaKontaktartCode = 3), -- Telefon
+  [Anzahl Schriftlich]      = (SELECT COUNT(1) 
+                               FROM dbo.FaAktennotizen FAA 
+                               WHERE FAA.FaLeistungID = LEI.FaLeistungID
+                                 AND FAA.Datum BETWEEN ISNULL(FKA.Datum, @DatumVon) AND ISNULL(FKA.Abschlussdatum, @DatumBis)
+                                 AND FaKontaktartCode = 4), -- Schriftlich
+  [Anzahl E-Mail]           = (SELECT COUNT(1) 
+                               FROM dbo.FaAktennotizen FAA 
+                               WHERE FAA.FaLeistungID = LEI.FaLeistungID
+                                 AND FAA.Datum BETWEEN ISNULL(FKA.Datum, @DatumVon) AND ISNULL(FKA.Abschlussdatum, @DatumBis)
+                                 AND FaKontaktartCode = 5), -- E-Mail
+  [Eröffnung Modul]         = LEIS.DatumVon,
+  [Eröffnungsgrund Modul]   = dbo.fnLOVMLText('EroeffnungsGrund', LEIS.EroeffnungsGrundCode, @LanguageCode),
+  [Abschluss Modul]         = LEIS.DatumBis,
+  [Abschlussgrund Modul]    = dbo.fnLOVMLText('AbschlussHauptGrund', LEIS.AbschlussGrundCode, @LanguageCode)
+FROM dbo.FaLeistung       LEI WITH (READUNCOMMITTED)
+  INNER JOIN dbo.vwUser   USR WITH (READUNCOMMITTED) ON USR.UserID = LEI.UserID
+  INNER JOIN dbo.vwPerson PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = LEI.BaPersonID
+                                                    AND PRS.Testperson = 0
+  CROSS APPLY (SELECT TOP 1 
+                 LEI2.FaLeistungID, 
+                 LEI2.DatumVon,
+                 LEI2.DatumBis,
+                 LEI2.EroeffnungsGrundCode,
+                 LEI2.AbschlussGrundCode
+               FROM dbo.FaLeistung LEI2 WITH (READUNCOMMITTED)
+               WHERE LEI2.BaPersonID = LEI.BaPersonID
+                 AND LEI2.ModulID = 3
+               ORDER BY LEI2.DatumVon DESC) LEIS -- jüngste S-Leistung (muss nicht im Suchzeitraum liegen)
+  LEFT  JOIN dbo.FaKategorisierung FKA  WITH (READUNCOMMITTED) ON FKA.BaPersonID = LEI.BaPersonID
+                                                              AND FKA.Datum &lt;= @DatumBis
+                                                              AND ISNULL(FKA.Abschlussdatum, '99991231') &gt;= @DatumVon
+                                                              AND (@Aktuellste = 0 OR FKA.FaKategorisierungID = (SELECT TOP 1 FKA1.FaKategorisierungID -- Nur aktuellste Kategorie falls @Aktuallste=1
+                                                                                                                 FROM dbo.FaKategorisierung FKA1
+                                                                                                                 WHERE FKA1.BaPersonID = LEI.BaPersonID
+                                                                                                                   AND FKA1.Datum &lt;= @DatumBis
+                                                                                                                   AND ISNULL(FKA1.Abschlussdatum, '99991231') &gt;= @DatumVon
+                                                                                                                 ORDER BY FKA1.Datum DESC)) 
+  LEFT  JOIN dbo.XOrgUnit_User     OUU  WITH (READUNCOMMITTED) ON OUU.UserID = LEI.UserID 
+                                                              AND OUU.OrgUnitMemberCode = 2
+  LEFT  JOIN dbo.XOrgUnit          XOU  WITH (READUNCOMMITTED) ON XOU.OrgUnitID = OUU.OrgUnitID
+  LEFT  JOIN dbo.BaAdresse         ADR  WITH (READUNCOMMITTED) ON ADR.BaAdresseID = (SELECT FCN.BaAdresseID -- aktuellste Adresse im Suchzeitraum
+                                                                                     FROM dbo.fnBaGetBaAdresseID_BaPerson(1, @DatumBis) FCN
+                                                                                     WHERE FCN.BaPersonID = PRS.BaPersonID)
+WHERE LEI.ModulID = 2
+  AND dbo.fnDateOf(LEI.DatumVon) &lt;= @DatumBis
+  AND ISNULL(dbo.fnDateOf(LEI.DatumBis), @DatumBis) &gt;= @DatumVon 
+  AND (@OrgUnitID = 0 OR (XOU.OrgUnitID = @OrgUnitID OR XOU.ParentID = @OrgUnitID))
+  AND (@UserID = 0 OR OUU.UserID = @UserID)
+  AND (@BaPersonID = 0 OR PRS.BaPersonID = @BaPersonID)
+  AND (@KategorieID = 0 OR FKA.FaKategorieCode = @KategorieID)
+  AND (@Aktiv = 1 AND LEI.DatumBis IS NULL
+    OR @Geschlossen = 1 AND LEI.DatumBis IS NOT NULL AND NOT EXISTS(SELECT TOP 1 1
+                                                                    FROM dbo.FaLeistungArchiv WITH (READUNCOMMITTED)
+                                                                    WHERE FaLeistungID = LEI.FaLeistungID)
+    OR @Archiviert = 1 AND EXISTS(SELECT TOP 1 1
+                                  FROM dbo.FaLeistungArchiv WITH (READUNCOMMITTED)
+                                  WHERE FaLeistungID = LEI.FaLeistungID)
+    OR @Aktiv = 0 AND @Geschlossen = 0 AND @Archiviert = 0
+  )
+  AND (@Kontaktart = '' OR EXISTS(SELECT TOP 1 1
+                                  FROM dbo.FaAktennotizen WITH (READUNCOMMITTED)
+                                  WHERE FaLeistungID = LEI.FaLeistungID
+                                    AND Datum BETWEEN @DatumVon AND @DatumBis
+                                    AND FaKontaktartCode IN (SELECT SplitValue
+                                                             FROM dbo.fnSplitStringToValues(@Kontaktart, ',', 1))))
+ORDER BY PRS.NameVorname, PRS.BaPersonID, FKA.Datum;
+</value>
+  </data>
+  <data name="edtUserID.LookupSQL" xml:space="preserve">
+    <value>SELECT
+  ID = UserID,
+  SAR = LastName + ISNULL(', ' + FirstName, ''),
+  [Kuerzel] = LogonName
+FROM dbo.XUser WITH (READUNCOMMITTED)
+WHERE LastName + ISNULL(', ' + FirstName, '') LIKE ISNULL({0}, '') + '%'
+ORDER BY SAR;</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="edtDatumBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="edtDatumVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+</root>

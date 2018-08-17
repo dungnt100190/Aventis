@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{69A4A7DB-153F-413C-BDE9-AB3D0A032EC7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kiss.BL.Test</RootNamespace>
+    <AssemblyName>Kiss.BL.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentValidation, Version=5.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\FluentValidation.5.0.0.1\lib\Net40\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Build\Debug\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ba\BaDebitorSearchServiceTest.cs" />
+    <Compile Include="Ba\BaKlientensystemServiceTest.cs" />
+    <Compile Include="Ba\BaZahlungswegSearchServiceTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Bde\BdeLeistungsartServiceTest.cs" />
+    <Compile Include="Common\SelfTrackingEntitiesCascadingTest.cs" />
+    <Compile Include="Common\TransactionScopeTest.cs" />
+    <Compile Include="Fa\FaFallServiceTest.cs" />
+    <Compile Include="Fa\FaKategorisierungServiceTest.cs" />
+    <Compile Include="Fa\FaZeitachseServiceTest.cs" />
+    <Compile Include="Fs\FsDienstleistungAuswertungServiceTest.cs" />
+    <Compile Include="Fs\FsDienstleistungspaketServiceTest.cs" />
+    <Compile Include="Fs\FsReduktionMitarbeiterServiceTest.cs" />
+    <Compile Include="Fs\FsReduktionServiceTest.cs" />
+    <Compile Include="Fs\FsVerfuegbareArbeitszeitServiceTest.cs" />
+    <Compile Include="Fs\Validation\FsReduktionMitarbeiterValidatorTest.cs" />
+    <Compile Include="Fs\Validation\FsReduktionValidatorTest.cs" />
+    <Compile Include="Fs\Validation\FsDienstleistungValidatorTest.cs" />
+    <Compile Include="Helpers\BaPersonHelper.cs" />
+    <Compile Include="Helpers\BaseHelper.cs" />
+    <Compile Include="Helpers\BaZahlungswegHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Helpers\BaGesundheitHelper.cs" />
+    <Compile Include="Helpers\BaInstitutionHelper.cs" />
+    <Compile Include="Helpers\FaZeitachseHelper.cs" />
+    <Compile Include="Helpers\FbBuchungHelper.cs" />
+    <Compile Include="Helpers\FbKontoHelper.cs" />
+    <Compile Include="Helpers\FbPeriodeHelper.cs" />
+    <Compile Include="Helpers\VmPositionHelper.cs" />
+    <Compile Include="Helpers\VmPositionsartHelper.cs" />
+    <Compile Include="Helpers\VmKlientenbudgetHelper.cs" />
+    <Compile Include="Helpers\XOrgUnitHelper.cs" />
+    <Compile Include="Helpers\FaFallHelper.cs" />
+    <Compile Include="Helpers\FsDienstleistungHelper.cs" />
+    <Compile Include="Helpers\FsDienstleistungspaketHelper.cs" />
+    <Compile Include="Helpers\FaLeistungHelper.cs" />
+    <Compile Include="Helpers\FaPhaseHelper.cs" />
+    <Compile Include="Helpers\FsDienstleistung_FsDienstleistungspaketHelper.cs" />
+    <Compile Include="Helpers\FsReduktionHelper.cs" />
+    <Compile Include="Helpers\FsReduktionMitarbeiterHelper.cs" />
+    <Compile Include="Helpers\XUserGroupHelper.cs" />
+    <Compile Include="Helpers\XUserHelper.cs" />
+    <Compile Include="KissSystem\BerechtigungsServiceTest.cs" />
+    <Compile Include="ParameterInjectionTest.cs" />
+    <Compile Include="ServiceCRUDBaseTest.cs" />
+    <Compile Include="Session\AuthenticatedUser.cs" />
+    <Compile Include="Ba\BaPersonServiceTest.cs" />
+    <Compile Include="Ba\PersonServiceTest.cs" />
+    <Compile Include="Ba\Validation\BaPersonValidatorTest.cs" />
+    <Compile Include="Ba\Validation\BaAdresseValidatorTest.cs" />
+    <Compile Include="Fs\FsDienstleistungServiceTest.cs" />
+    <Compile Include="Fs\Validation\FsDienstleistungspaketValidatorTest.cs" />
+    <Compile Include="ObjectContextMock.cs" />
+    <Compile Include="ObjectSetMock.cs" />
+    <Compile Include="Session\SessionServiceMock.cs" />
+    <Compile Include="System\SystemServiceTest.cs" />
+    <Compile Include="System\XConfigServiceTest.cs" />
+    <Compile Include="System\XLovServiceTest.cs" />
+    <Compile Include="System\XTaskAutoGeneratedServiceTest.cs" />
+    <Compile Include="TestServiceBase.cs" />
+    <Compile Include="TestUtils.cs" />
+    <Compile Include="TransactionTest.cs" />
+    <Compile Include="TransactionTestBase.cs" />
+    <Compile Include="UnitOfWorkFactoryMock.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryMock.cs" />
+    <Compile Include="TransactionalLock.cs" />
+    <Compile Include="UnitOfWorkMock.cs" />
+    <Compile Include="ValidatorBaseTest.cs" />
+    <Compile Include="Vm\VmPositionDTOServiceTest.cs" />
+    <Compile Include="Vm\Validation\VmKlientenbudgetValidatorTest.cs" />
+    <Compile Include="Vm\Validation\VmPositionValidatorTest.cs" />
+    <Compile Include="Vm\VmKlientenbudgetDTOServiceTest.cs" />
+    <Compile Include="Vm\VmKlientenbudgetServiceTest.cs" />
+    <Compile Include="Vm\VmPositionServiceTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KiSS.AssemblyInfo\BIAG.AssemblyInfo.csproj">
+      <Project>{C3A41F2E-FBF1-4628-8F6A-764A22252624}</Project>
+      <Name>BIAG.AssemblyInfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS.Common\KiSS.Common.csproj">
+      <Project>{FBFE7E87-7525-4260-98DD-F713ABCAC5C8}</Project>
+      <Name>KiSS.Common</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Interfaces\Kiss.Interfaces.csproj">
+      <Project>{936877A8-EC00-4267-8C62-344062912497}</Project>
+      <Name>Kiss.Interfaces</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.BL\Kiss.BL.csproj">
+      <Project>{317D103A-9D9E-4A5B-B08F-1E9B6BEEEC0E}</Project>
+      <Name>Kiss.BL</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Database\Kiss.Database.csproj">
+      <Project>{2FD04B1A-3501-498F-9F31-6853F37C730F}</Project>
+      <Name>Kiss.Database</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Infrastructure\Kiss.Infrastructure.csproj">
+      <Project>{94D23DEF-0BEC-4EAC-B6A8-A2AB6B3A0CF1}</Project>
+      <Name>Kiss.Infrastructure</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Model\Kiss.Model.csproj">
+      <Project>{9EDABB4F-E42D-4791-9798-4581D35B19CC}</Project>
+      <Name>Kiss.Model</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <Content Include="TestFiles\BaLandServiceTestFiles.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\BaGemeindeServiceTestFiles.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

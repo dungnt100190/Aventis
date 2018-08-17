@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="af04f9e7-a234-4a59-9a71-f216ea7a491e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://chbehvs006.chbe01.local:88/Kiss.Server.PSCD/Kiss.Server.PSCD.SstZahlungseingaengeAbholenWebService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Kiss.xsd" MetadataType="Schema" ID="c222127d-fb7a-486a-944f-143d309aeb72" SourceId="1" SourceUrl="http://chbehvs006.chbe01.local:88/Kiss.Server.PSCD/Kiss.Server.PSCD.SstZahlungseingaengeAbholenWebService.svc?xsd=xsd0" />
+    <MetadataFile FileName="Kiss1.xsd" MetadataType="Schema" ID="f7f62b13-3f06-4520-9f2a-b532224f5b2f" SourceId="1" SourceUrl="http://chbehvs006.chbe01.local:88/Kiss.Server.PSCD/Kiss.Server.PSCD.SstZahlungseingaengeAbholenWebService.svc?xsd=xsd3" />
+    <MetadataFile FileName="Kiss2.xsd" MetadataType="Schema" ID="c902f9ab-6775-4073-a2d8-17e598cf6b0b" SourceId="1" SourceUrl="http://chbehvs006.chbe01.local:88/Kiss.Server.PSCD/Kiss.Server.PSCD.SstZahlungseingaengeAbholenWebService.svc?xsd=xsd2" />
+    <MetadataFile FileName="Kiss3.xsd" MetadataType="Schema" ID="03778d76-701d-4a8f-9c94-38e163f35d65" SourceId="1" SourceUrl="http://chbehvs006.chbe01.local:88/Kiss.Server.PSCD/Kiss.Server.PSCD.SstZahlungseingaengeAbholenWebService.svc?xsd=xsd5" />
+    <MetadataFile FileName="Kiss4.xsd" MetadataType="Schema" ID="a2e49b93-0065-4e03-92c4-fbf6139bf1f2" SourceId="1" SourceUrl="http://chbehvs006.chbe01.local:88/Kiss.Server.PSCD/Kiss.Server.PSCD.SstZahlungseingaengeAbholenWebService.svc?xsd=xsd4" />
+    <MetadataFile FileName="Kiss.wsdl" MetadataType="Wsdl" ID="c43d33d7-f732-408e-bcf3-70cc7c1025a5" SourceId="1" SourceUrl="http://chbehvs006.chbe01.local:88/Kiss.Server.PSCD/Kiss.Server.PSCD.SstZahlungseingaengeAbholenWebService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="SstZahlungseingaengeAbholenWebService.wsdl" MetadataType="Wsdl" ID="de06231a-96f7-49e2-a2c4-4098f39c4ce7" SourceId="1" SourceUrl="http://chbehvs006.chbe01.local:88/Kiss.Server.PSCD/Kiss.Server.PSCD.SstZahlungseingaengeAbholenWebService.svc?wsdl" />
+    <MetadataFile FileName="Kiss5.xsd" MetadataType="Schema" ID="61cf087b-64d0-4209-adfd-d26417e7d66f" SourceId="1" SourceUrl="http://chbehvs006.chbe01.local:88/Kiss.Server.PSCD/Kiss.Server.PSCD.SstZahlungseingaengeAbholenWebService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

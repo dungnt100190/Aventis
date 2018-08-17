@@ -1,0 +1,619 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryBgBudget.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>389, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>68</value>
+  </metadata>
+  <metadata name="qryBgPosition.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>657, 17</value>
+  </metadata>
+  <data name="qryBgPosition.SelectStatement" xml:space="preserve">
+    <value>DECLARE @BgBudgetID      int
+DECLARE @GetDate         datetime
+
+SELECT @BgBudgetID = {0},
+       @GetDate = GetDate()
+
+
+DECLARE @BgFinanzplanID  int
+DECLARE @RefDate         datetime
+
+SELECT @BgFinanzplanID = BBG.BgFinanzplanID,
+       @RefDate = CASE WHEN BBG.MasterBudget = 1 
+                  THEN CONVERT(datetime, dbo.fnMIN(dbo.fnMAX(IsNull(SFP.DatumVon, SFP.GeplantVon), @GetDate), IsNull(SFP.DatumBis, SFP.GeplantBis)))
+                  ELSE dbo.fnDateSerial(BBG.Jahr, BBG.Monat, 15)
+                  END
+FROM   BgBudget BBG
+       INNER JOIN BgFinanzplan  SFP ON SFP.BgFinanzplanID = BBG.BgFinanzplanID
+WHERE  BBG.BgBudgetID = @BgBudgetID
+
+DECLARE @Position table (
+  -- BgPosition
+  BgPositionID            int,
+  BgBudgetID              int,
+  BgKategorieCode         int,
+  DatumVon                datetime,
+  DatumBis                datetime,
+  BgPositionID_CopyOf     int,
+  BgPositionID_Parent     int,
+  BaPersonID              int,
+  BaInstitutionID         int,
+  DebitorBaPersonID       int,
+  BgPositionsartID        int,
+  Buchungstext            varchar(100),
+  Betrag                  money,
+  Reduktion               money,
+  Abzug                   money,
+  BgSpezkontoID           int,
+  Bemerkung               text,
+  VerwPeriodeVon          datetime,
+  VerwPeriodeBis          datetime,
+  FaelligAm               datetime,
+  RechnungDatum           datetime,
+  VerwaltungSD            bit,
+  BgBewilligungStatusCode int,
+  ErstelltUserID          int,
+  ErstelltDatum           datetime,
+  MutiertUserID           int,
+  MutiertDatum            datetime,
+  -- BgAuszahlungPerson
+  BgAuszahlungPersonID    int,
+  KbAuszahlungsArtCode    int,
+  BgAuszahlungsTerminCode int,
+  BgWochentagCodes        varchar(20),
+  BaZahlungswegID         int,
+  MitteilungZeile1        varchar(35),
+  MitteilungZeile2        varchar(35),
+  MitteilungZeile3        varchar(35),
+  MitteilungZeile4        varchar(35),
+  ReferenzNummer          varchar(50),
+  -- Darstellung Budget
+  Kategorie               bit,
+  Gruppe                  bit,
+  Style                   int,
+  KOA                     varchar(10),
+  Bezeichnung             varchar(200),
+  EffektivBetrag          money,
+  Total                   money,
+  DetailPos               varchar(5),
+  Doc                     int,
+  Info                    varchar(200),
+  Status                  int,
+  AnzahlBelege            int,
+  StatusMin               int,
+  M                       varchar(1),
+  -- Lookup/Calculated
+  BgGruppeCode            int, 
+  Dritte                  bit,
+  Kostenart               varchar(100),
+  BgKostenartID           int,
+  Masterbudget_EditMask   int,
+  Monatsbudget_EditMask   int,
+  ProPerson               bit,
+  ProUE                   bit,
+  BgSplittingartCode      int,
+  Debitor                 varchar(150),
+  Kreditor                varchar(200),
+  ZusatzInfo              varchar(500), 
+  PscdFehlermeldung       varchar(200),
+  EffektivText            varchar(200),
+  ValutaDatum             datetime,
+  ValutaTermine           varchar(1000),
+  EinzahlungsscheinCode   int,
+  Quoting                 bit,
+  BetragBudget            money,
+  BetragRechnung          money,
+  GruppeFilter            varchar(50),
+  KreditorEingeschraenkt  bit,
+  BgPositionTS_TEMP       bigint
+)
+
+INSERT INTO @Position (
+  BgPositionID,BgBudgetID,BgKategorieCode,DatumVon,DatumBis,BgPositionID_CopyOf,BgPositionID_Parent,
+  BaPersonID,BaInstitutionID,DebitorBaPersonID,BgPositionsartID,Buchungstext,Betrag,Reduktion,Abzug,BgSpezkontoID,
+  Bemerkung,VerwPeriodeVon,VerwPeriodeBis,FaelligAm,RechnungDatum,VerwaltungSD,BgBewilligungStatusCode,
+  ErstelltUserID,ErstelltDatum,MutiertUserID,MutiertDatum,
+  BgAuszahlungPersonID,KbAuszahlungsArtCode,BgAuszahlungsTerminCode,BgWochentagCodes,BaZahlungswegID,
+  MitteilungZeile1,MitteilungZeile2,MitteilungZeile3,MitteilungZeile4,ReferenzNummer,
+  Kategorie,Gruppe,Style,KOA,Bezeichnung,EffektivBetrag,Total,DetailPos,Doc,Info,Status,AnzahlBelege,StatusMin,M,
+  BgGruppeCode,Dritte,Kostenart,BgKostenartID,Masterbudget_EditMask,Monatsbudget_EditMask,ProPerson,ProUE,
+  BgSplittingartCode,Debitor,Kreditor,ZusatzInfo,PscdFehlermeldung,
+  EffektivText,ValutaDatum,ValutaTermine,EinzahlungsscheinCode, Quoting, BetragBudget, BetragRechnung, GruppeFilter, KreditorEingeschraenkt, BgPositionTS_TEMP)
+SELECT   
+  BPO.BgPositionID,BPO.BgBudgetID,BPO.BgKategorieCode,BPO.DatumVon,BPO.DatumBis,BPO.BgPositionID_CopyOf,BPO.BgPositionID_Parent,
+  BPO.BaPersonID,BPO.BaInstitutionID,BPO.DebitorBaPersonID,BPO.BgPositionsartID,BPO.Buchungstext,BPO.Betrag,BPO.Reduktion,BPO.Abzug,BPO.BgSpezkontoID,
+  BPO.Bemerkung,BPO.VerwPeriodeVon,BPO.VerwPeriodeBis,BPO.FaelligAm,BPO.RechnungDatum,BPO.VerwaltungSD,BPO.BgBewilligungStatusCode,
+  BPO.ErstelltUserID,BPO.ErstelltDatum,BPO.MutiertUserID,BPO.MutiertDatum,
+  BAP.BgAuszahlungPersonID,BAP.KbAuszahlungsArtCode,BAP.BgAuszahlungsTerminCode,BAP.BgWochentagCodes,BAP.BaZahlungswegID,
+  BAP.MitteilungZeile1,MitteilungZeile2,BAP.MitteilungZeile3,BAP.MitteilungZeile4,BAP.ReferenzNummer,
+  Kategorie             = 0,
+  Gruppe                = 0,
+  Style                 = CASE
+                            WHEN BPO.BgKategorieCode = 1   AND BPO.VerwaltungSD = 1             THEN 12
+                            WHEN BPO.BgKategorieCode = 2   AND BPO.BgSpezkontoID IS NOT NULL    THEN 23
+                            WHEN BPO.BgKategorieCode = 101 AND BPO.BgSpezkontoID IS NULL        THEN 81
+                            WHEN BPO.BgKategorieCode = 101 AND BPO.BgSpezkontoID IS NOT NULL    THEN 82
+                            WHEN BPO.BgKategorieCode = 100 AND BPO.BgBewilligungStatusCode = 1  THEN 83
+                            WHEN BPO.BgKategorieCode = 100 AND BPO.BgBewilligungStatusCode = 3  THEN 84
+                            WHEN BPO.BgKategorieCode = 100 AND BPO.BgBewilligungStatusCode = 5  THEN 85
+                            ELSE BPO.BgKategorieCode * 10 + 1
+                          END,
+  KOA                   = BKA.KontoNr,
+  Bezeichnung           = '    ' + COALESCE(BPO.Buchungstext, BPA.Name, BSK.NameSpezkonto) + IsNull(' (' + PRS.NameVorname + ')', ''),
+  EffektivBetrag        = EFF.BetragEffektiv, --TODO
+  Total                 = NULL,
+  DetailPos             = CASE WHEN BPO.BgKategorieCode in (100,101)
+                          THEN CASE WHEN BPO.BgPositionID_Parent IS NOT NULL THEN '+'  -- DetailPosition
+                                    WHEN EXISTS(SELECT 1 FROm BgPosition WHERE BgPositionID_Parent = BPO.BgPositionID) THEN '*' -- HauptPosition
+                               END
+                          END,
+  Doc                   = (SELECT CASE WHEN COUNT(*) &gt; 0 THEN COUNT(*) END FROM BgDokument WHERE BgPositionID = BPO.BgPositionID),
+  Info                  = CASE WHEN (SELECT COUNT(*) FROM BgAuszahlungPerson WHERE BgPositionID = BPO.BgPositionID) &gt; 1 THEN 'Z+, ' ELSE '' END
+                        + CASE 
+                          WHEN BAP.KbAuszahlungsArtCode = 103 OR (KRE.BaZahlungswegID IS NOT NULL AND KRE.BaPersonID IS NOT NULL)  -- bar oder Auszahlung an Person
+                               THEN AZA.ShortText + CASE BAP.BgAuszahlungsTerminCode
+                                                    WHEN 4 THEN IsNull(', ' + CONVERT(varchar,VAL.Datum,104),'')
+                                                    WHEN 6 THEN ' (' + dbo.fnLOVTextListe('BgWochentag',BAP.BgWochentagCodes) + ')'
+                                                    ELSE ', ' + AZT.Text + isnull(', ' + KRE.Kreditor,'')
+                                                    END
+                          WHEN KRE.BaZahlungswegID IS NOT NULL AND KRE.BaPersonID IS NULL  -- Auszahlung an Dritte
+                               THEN CASE BAP.BgAuszahlungsTerminCode
+                                    WHEN 4 THEN IsNull(CONVERT(varchar,VAL.Datum,104),'?') + isnull(', ' + KRE.InstitutionName,'')
+                                    WHEN 6 THEN ' (' + dbo.fnLOVTextListe('BgWochentag',BAP.BgWochentagCodes) + ')'
+                                    ELSE AZT.Text + isnull(', ' + KRE.InstitutionName,'')
+                                    END
+                          WHEN KRE.BaZahlungswegID IS NULL AND BPO.BgSpezkontoID IS NOT NULL  -- Auszahlung/Verrechnung an Spezialkonto
+                               THEN SPT.ShortText + ': ' + BSK.NameSpezkonto
+                          WHEN BPO.BgKategorieCode = 1 -- Einnahme
+                               THEN IsNull(CONVERT(varchar,BPO.FaelligAm,104),'') + ISNULL(', ' + ISNULL(DEBI.Name,DEBP.NameVorname),'')
+                          END,
+  Status                = CASE WHEN BDG.MasterBudget = 0 
+                          THEN CASE WHEN STA.Status IS NULL
+                               THEN CASE 
+                                    WHEN BPO.BgKategorieCode IN (2) AND KRE.BaZahlungswegID IS NULL AND BPO.BgSpezkontoID IS NOT NULL -- Auszahlung an Spezialkonto
+                                         THEN CASE WHEN BDG.BgBewilligungStatusCode in (5,9) THEN 2 ELSE 1 END
+                                    WHEN BPO.BgKategorieCode = 1 AND BPO.VerwaltungSD = 0 -- nicht abgetretene Einnahmen
+                                         THEN CASE WHEN BDG.BgBewilligungStatusCode in (5,9) THEN 2 ELSE 1 END
+                                    WHEN BPO.BgKategorieCode = 2 AND ((KRE.BaPersonID IS NOT NULL AND KRE.BaZahlungswegID IS NOT NULL) OR BAP.KbAuszahlungsArtCode = 103)-- Ausgaben an Klient (ohne tatsächliche Auszahlung), elektronisch oder bar (103).
+                                         THEN CASE WHEN BDG.BgBewilligungStatusCode in (5,9) THEN 2 ELSE 1 END
+                                    WHEN BPO.BgKategorieCode IN (3, 4, 6)  -- Abzahlung / Kürzung / Vorabzug
+                                         THEN CASE WHEN BDG.BgBewilligungStatusCode in (5,9) THEN 2 ELSE 1 END
+                                    WHEN BPO.BgKategorieCode IN (101)   -- Einzelzahlungen
+                                         THEN CASE WHEN BDG.BgBewilligungStatusCode in (5,9) THEN 14 ELSE 1 END
+                                    ELSE CASE BPO.BgBewilligungStatusCode
+                                         WHEN 1 THEN 1   -- grau
+                                         WHEN 2 THEN 15  -- abgelehnt
+                                         WHEN 3 THEN 12  -- angefragt
+                                         WHEN 5 THEN 14  -- bewilligt
+                                         WHEN 9 THEN 7   -- gesperrt
+                                         END
+                                    END
+                               ELSE STA.Status
+                               END
+                          END, 
+  AnzahlBelege          = CASE WHEN BDG.MasterBudget = 0 AND STA.AnzahlBelege &gt; 1 THEN STA.AnzahlBelege END,
+  StatusMin             = CASE WHEN BDG.MasterBudget = 0 AND STA.Status &lt;&gt; STA.StatusMin THEN STA.StatusMin END,
+  M                     = CASE WHEN BDG.MasterBudget = 0 AND BPO.BgPositionID_CopyOf IS NOT NULL THEN 'M' END,
+  BgGruppeCode          = BPA.BgGruppeCode,
+  Dritte                = CASE
+                            WHEN KRE.BaZahlungswegID IS NULL         THEN 0
+                            WHEN EXISTS (SELECT *
+                                         FROM BgFinanzplan_BaPerson
+                                         WHERE BaPersonID = KRE.BaPersonID
+                                           AND BgFinanzplanID = @BgFinanzplanID
+                                           AND IstUnterstuetzt = 1)  THEN 0
+                            ELSE 1
+                          END,
+  Kostenart             = BKA.KontoNr + ' ' + ISNULL(BPA.Name, GBL.Name),
+  BgKostenartID         = BPA.BgKostenartID,
+  Masterbudget_EditMask = BPA.Masterbudget_EditMask,
+  Monatsbudget_EditMask = BPA.Monatsbudget_EditMask,
+  ProPerson             = BPA.ProPerson,
+  ProUE                 = BPA.ProUE,
+  BgSplittingartCode    = BKA.BgSplittingartCode,
+  Debitor               = ISNULL(DEBI.Name,DEBP.NameVorname),
+  Kreditor              = KRE.Kreditor,
+  ZusatzInfo            = CASE 
+                          WHEN BAP.BaZahlungswegID IS NOT NULL THEN KRE.ZusatzInfo
+                          WHEN ISNULL(BPO.BaInstitutionID,BPO.DebitorBaPersonID) IS NOT NULL THEN ISNULL(DEBI.AdresseMehrzeilig,DEBP.WohnsitzMehrzeilig)
+                          END,
+  PscdFehlermeldung     = NULL,
+  EffektivText          = NULL, --TODO
+  ValutaDatum           = case when BAP.BgAuszahlungsTerminCode = 4 then VAL.Datum end,
+  ValutaTermine         = dbo.fnBgGetValutaTermine(BAP.BgAuszahlungPersonID),
+  EinzahlungsscheinCode = KRE.EinzahlungsscheinCode,
+  Quoting               = isNull(BKA.Quoting,0),
+  BetragBudget          = BPO.BetragBudget,
+  BetragRechnung        = BPO.BetragRechnung,
+  GruppeFilter          = CONVERT(varchar(50),GRP.Value3),
+  KreditorEingeschraenkt = BPA.KreditorEingeschraenkt,
+  BgPositionTS_TEMP     = BPO.BgPositionTS
+
+FROM   vwBgPosition BPO
+       INNER JOIN BgBudget                 BDG  ON BDG.BgBudgetID = BPO.BgBudgetID
+       INNER JOIN BgFinanzplan             FPL  ON FPL.BgFinanzplanID = BDG.BgFinanzplanID
+       INNER JOIN FaLeistung               LEI  ON LEI.FaLeistungID = FPL.FaLeistungID
+       LEFT  JOIN BgSpezkonto              SSK  ON SSK.BgSpezkontoID = BPO.BgSpezkontoID
+       LEFT  JOIN BgPositionsart           BPA  ON BPA.BgPositionsartID = COALESCE(BPO.BgPositionsartID,SSK.BgPositionsartID)
+       LEFT  JOIN vwPerson                 PRS  ON PRS.BaPersonID = BPO.BaPersonID
+       LEFT  JOIN BgPositionsart           GBL  ON GBL.BgPositionsartID = FPL.WhGrundbedarfTypCode
+       LEFT  JOIN BgKostenart              BKA  ON BKA.BgKostenartID = COALESCE(BPA.BgKostenartID, SSK.BgKostenartID, GBL.BgKostenartID)
+       LEFT  JOIN BgAuszahlungPerson       BAP  ON BAP.BgPositionID = BPO.BgPositionID AND
+                                                   BAP.BgAuszahlungPersonID = (SELECT TOP 1 BgAuszahlungPersonID
+                                                                               FROM   BgAuszahlungPerson
+                                                                               WHERE  BgPositionID = BPO.BgPositionID
+                                                                               ORDER BY 
+                                                                                 CASE WHEN BaPersonID IS NULL THEN 1
+                                                                                      WHEN BaPersonID = BPO.BaPersonID THEN 2
+                                                                                      ELSE 3
+                                                                                 END)
+       LEFT  JOIN vwKreditor               KRE  ON KRE.BaZahlungswegID = BAP.BaZahlungswegID
+       LEFT  JOIN vwInstitution            DEBI ON DEBI.BaInstitutionID = BPO.BaInstitutionID AND
+                                                   BPO.BgKategorieCode = 1
+       LEFT  JOIN vwPerson                 DEBP ON DEBP.BaPersonID = BPO.DebitorBaPersonID
+       LEFT  JOIN BgSpezkonto              BSK  ON BSK.BgSpezkontoID = BPO.BgSpezkontoID
+       LEFT  JOIN BgPosition               BP2  ON BP2.BgPositionID = BPO.BgPositionID_CopyOf
+       LEFT  JOIN BgPosition               BP3  ON BP3.BgPositionID = BP2.BgPositionID_CopyOf
+       LEFT  JOIN XLOVCode                 AZA  ON AZA.LOVName = 'KbAuszahlungsart' and AZA.Code = BAP.KbAuszahlungsArtCode
+       LEFT  JOIN XLOVCode                 AZT  ON AZT.LOVName = 'BgAuszahlungsTermin' and AZT.Code = BAP.BgAuszahlungsTerminCode
+       LEFT  JOIN XLOVCode                 SPT  ON SPT.LOVName = 'BgSpezkontoTyp' and SPT.Code = BSK.BgSpezkontoTypCode
+       LEFT  JOIN XLOVCode                 GRP  ON GRP.LOVName = 'BgGruppe' AND GRP.Code = BPA.BgGruppeCode
+       LEFT  JOIN BgAuszahlungPersonTermin VAL  ON VAL.BgAuszahlungPersonID = BAP.BgAuszahlungPersonID AND
+                                                   VAL.DATUM = (SELECT TOP 1 Datum
+                                                                FROM   BgAuszahlungPersonTermin
+                                                                WHERE  BgAuszahlungPersonID = BAP.BgAuszahlungPersonID
+                                                                ORDER BY Datum)
+       LEFT  JOIN   (SELECT BUC.BgBudgetID, BUK.BgPositionID, 
+                            Status       = MAX(BUC.KbBuchungStatusCode), 
+                            StatusMin    = MIN(BUC.KbBuchungStatusCode), 
+                            AnzahlBelege = COUNT(DISTINCT BUC.KbBuchungID)
+                     FROM   KbBuchungKostenart BUK 
+                            LEFT JOIN KbBuchung BUC ON BUC.KbBuchungID = BUK.KbBuchungID
+                     GROUP  BY BUC.BgBudgetID, BUK.BgPositionID) STA ON STA.BgBudgetID = BPO.BgBudgetID AND STA.BgPositionID = BPO.BgPositionID
+       LEFT  JOIN (SELECT KBK.BgPositionID, BetragEffektiv = CASE WHEN SUM(KBU.Betrag) = $0.00 THEN $0.00 ELSE SUM(KBK.Betrag * AUG.Total / (CASE WHEN KBU.Betrag &lt;&gt; 0 THEN KBU.Betrag ELSE 1 END)) END
+                   FROM KbBuchungKostenart KBK
+                     INNER JOIN KbBuchung  KBU ON KBU.KbBuchungID = KBK.KbBuchungID
+                     INNER JOIN (SELECT OpBuchungID, Total = SUM(Betrag)
+                                 FROM KbOpAusgleich
+                                 GROUP BY OpBuchungID) AUG ON AUG.OpBuchungID = KBU.KbBuchungID
+                   GROUP BY KBK.BgPositionID) EFF ON EFF.BgPositionID = BPO.BgPositionID
+WHERE  BPO.BgBudgetID = @BgBudgetID 
+  AND BPO.BgKategorieCode &lt;&gt; 5 -- Vermögen
+  AND @RefDate BETWEEN IsNull(BPO.DatumVon, '19000101') AND IsNull(BPO.DatumBis, '20790606')
+  AND (BPO.BetragBudget &lt;&gt; $0.00 OR BP2.Betrag &lt;&gt; $0.00 OR BP3.Betrag &lt;&gt; $0.00 OR
+       BPO.BgPositionsartID IN (39900, 39910) OR /* Sanktionen immer anzeigen */
+       BPO.BgKategorieCode = 4 OR /*Kürzungen immer anzeigen*/
+       BPO.BgKategorieCode IN (100, 101) )
+
+-- Kategorien
+INSERT @Position (Kategorie, Gruppe, Style, BgKategorieCode, Bezeichnung, Buchungstext, Total)
+SELECT 1,0,1,KAT.Code,UPPER(KAT.Text),UPPER(KAT.Text),(SELECT SUM(BetragBudget) FROM @Position WHERE BgKategorieCode = KAT.Code)
+FROM   XLOVCode KAT
+WHERE  LOVName = 'BgKategorie' AND
+       EXISTS (SELECT * FROM @Position WHERE BgKategorieCode = KAT.Code)
+
+-- Gruppen
+INSERT @Position (Kategorie, Gruppe, Style, BgKategorieCode, BgGruppeCode, Bezeichnung, Buchungstext, Total)
+SELECT 0,1,2,POS.BgKategorieCode,POS.BgGruppeCode,'  ' + GRP.Text, GRP.Text, SUM(BetragBudget)
+FROM @Position               POS
+  INNER JOIN BgPositionsart  BPA ON BPA.BgPositionsartID = POS.BgPositionsartID AND BPA.BgKategorieCode = POS.BgKategorieCode
+  INNER JOIN XLOVCode        GRP ON GRP.LOVName = 'BgGruppe' AND GRP.Code = BPA.BgGruppeCode
+GROUP BY POS.BgKategorieCode,POS.BgGruppeCode,GRP.Text
+
+UPDATE @Position
+  SET Style = Style + 1
+WHERE Dritte = 1 AND Style = 21
+
+-- Output
+SELECT POS.*, 
+       IDBgPositionID = 'Position-ID: ' + CONVERT(VARCHAR(50), POS.BgPositionID),
+       BgPositionTS   = Convert(timestamp, BgPositionTS_TEMP),
+       SD             = CASE 
+                          WHEN POS.VerwaltungSD = 1 THEN 'S' 
+                        END,
+       Dri            = CASE 
+                          WHEN POS.Dritte = 1 THEN 'D' 
+                        END
+FROM @Position               POS
+  LEFT  JOIN BgPositionsart  BPA ON BPA.BgPositionsartID = POS.BgPositionsartID AND BPA.BgKategorieCode = POS.BgKategorieCode
+  LEFT  JOIN XLOVCode        GRP ON GRP.LOVName = 'BgGruppe' AND GRP.Code = POS.BgGruppeCode
+  LEFT  JOIN XLOVCode        KAT ON KAT.LOVName = 'BgKategorie' AND KAT.Code = POS.BgKategorieCode
+ORDER BY KAT.SortKey, case when Kategorie = 1 then -2 else isNull(GRP.SortKey, -1) end, GRP.Code, isNull(BPA.SortKey, -1)</value>
+  </data>
+  <metadata name="qryBgBewilligung.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>243, 17</value>
+  </metadata>
+  <data name="qryBgBewilligung.SelectStatement" xml:space="preserve">
+    <value>SELECT BBW.*,
+       Absender       = ABS.NameVorname,
+       Empfaenger     = EMP.NameVorname,
+       AbsenderText   = ABS.LogonNameVornameOrgUnit,
+       EmpfaengerText = EMP.LogonNameVornameOrgUnit
+FROM   BgBewilligung BBW
+       INNER JOIN vwUser  ABS ON ABS.UserID = BBW.UserID
+       LEFT  JOIN vwUser  EMP ON EMP.UserID = BBW.UserID_An
+WHERE BBW.BgPositionID = {0}
+ORDER BY BBW.Datum</value>
+  </data>
+  <metadata name="qryWhBudgetUebersicht.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1076, 17</value>
+  </metadata>
+  <metadata name="qryBgDokumente.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>511, 17</value>
+  </metadata>
+  <data name="qryBgDokumente.SelectStatement" xml:space="preserve">
+    <value>SELECT 
+  BDO.BgDokumentID, 
+  BDO.BgFinanzplanID, 
+  BDO.BgBudgetID, 
+  BDO.BgPositionID, 
+  BDO.BgDokumentTypCode, 
+  BDO.DocumentID, 
+  BDO.Stichwort, 
+  BDO.BgDocumentTS,
+  DOC.DateCreation,
+  DOC.DateLastSave
+FROM BgPosition POS
+INNER JOIN BgBudget   BDG ON BDG.BgBudgetID = POS.BgBudgetID
+INNER JOIN BgDokument BDO ON BDO.BgPositionID = POS.BgPositionID or
+                             BDO.BgBudgetID = POS.BgBudgetID or
+                             BDO.BgFinanzplanID = BDG.BgFinanzplanID
+LEFT JOIN XDocument   DOC ON DOC.DocumentID = BDO.DocumentID
+WHERE  POS.BgPositionID = {0}
+ORDER BY Stichwort</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="edtDocument.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABbSURBVDhPY2AAAmNj4/+4MEgeA4AU//8/EwOLiYn9B2Gc
+        GtLSGP4jY5BikEEYmgjZANIAUgO3CZcGZGdi1YDuJBgfpJE6NmALKZjYqJPIijh8KRYmhzXlEhIEANZ8
+        ev1ASni6AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="edtDocument.Properties.Buttons1" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABYSURBVDhPY2AAgv/GDP9BGMQmCsA0kKUJlw0YhuGzBafN
+        2PxC0H/ICggqRg4xohTDPEySYnRbCMYLcmgRjBd0p+B1GklBSijScMYy0cmCUEiQHMywoAbRAOu5cfWb
+        3MWkAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="edtDocument.Properties.Buttons2" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABESURBVDhPY2AAAmNj4/+4MEgeA4AU//8/EwOLiYn9B2GS
+        NIAMwtBEyAaQBpAauE24NCA7c1TDcAklfCkWJoc15RISBADnY6JvWzLnEAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="edtDocument.Properties.Buttons3" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABmSURBVDhPrVILCkAhCPMUXsTTdlprD3wE0z6QIIFuTk2R
+        YWbmlSNPBrB7I1dVh18RUIhIOwUQgPmVKsLc5ltCM6EFlAoAHxMCvHq/weehrxRiK8ctZb8dsbdrzZRI
+        YXWxkUsvdxfsDTKNHjjMKwAAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="edtRechnungDatum.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="edtValutaDatum.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="edtFaelligAm.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="btnPositionBewilligung.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAGxJREFUOE/tkV0K
+        wDAIg3t0j+bNukUalsroXN8GE4oWzOdfa7+92UA/k/WVtSFy9w6jH7CAZPL0h+BODBghEzknLypfACSx
+        TVbMPrevHcQYZhYQeI11foWwqG4SAN0J4/BP4spJts9YgX855wC678tx5FbaTwAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="edtVerwPeriodeBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="edtVerwPeriodeVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="qryBgBudget.SelectStatement" xml:space="preserve">
+    <value>SELECT FPL.FaLeistungID, 
+       LEI.FaFallID,
+       BDG.*,
+       BgMasterbudgetID   = MST.BgBudgetID,
+       LeistungBaPersonID = LEI.BaPersonID,
+       LeistungDatumBis   = LEI.DatumBis,
+       FallBaPersonID     = FAL.BaPersonID,
+       FPL.WhGrundbedarfTypCode,
+       IDBgBudgetID       = 'Budget-ID: ' + CONVERT(VARCHAR(50), BDG.BgBudgetID)
+FROM dbo.BgBudget BDG
+  INNER JOIN dbo.BgFinanzplan FPL ON FPL.BgFinanzplanID = BDG.BgFinanzplanID
+  INNER JOIN dbo.FaLeistung   LEI ON LEI.FaLeistungID = FPL.FaLeistungID
+  INNER JOIN dbo.FaFall       FAL ON FAL.FaFallID = LEI.FaFallID
+  LEFT  JOIN dbo.BgBudget     MST ON MST.BgFinanzplanID = FPL.BgFinanzplanID 
+                                 AND MST.MasterBudget = 1
+WHERE BDG.BgBudgetID = {0}</value>
+  </data>
+  <metadata name="qryBgAuszahlungPersonTermin.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="qryKbBuchung.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>782, 17</value>
+  </metadata>
+  <data name="qryKbBuchung.SelectStatement" xml:space="preserve">
+    <value>SELECT 
+  BetragTotal = -Betrag,
+  *, 
+  Zahlungsempfaenger  = IsNull(ZPR.NameVorname, ZIN.Name),
+  AusgleichBelegNr    = (SELECT dbo.Conc(ABU.BelegNr)
+                         FROM KbOpAusgleich     OPA WITH (READUNCOMMITTED)
+                           LEFT  JOIN KbBuchung ABU WITH (READUNCOMMITTED) ON ABU.KbBuchungID = OPA.AusgleichBuchungID
+                         WHERE OPA.OpBuchungID = KBU.KbBuchungID),
+  AusgleichBelegDatum = (SELECT dbo.Conc(CONVERT(VARCHAR, ABU.BelegDatum, 104))
+                         FROM KbOpAusgleich     OPA WITH (READUNCOMMITTED)
+                           LEFT  JOIN KbBuchung ABU WITH (READUNCOMMITTED) ON ABU.KbBuchungID = OPA.AusgleichBuchungID
+                         WHERE OPA.OpBuchungID = KBU.KbBuchungID)
+FROM KbBuchung KBU
+  LEFT JOIN BaZahlungsweg      ZAL ON ZAL.BaZahlungswegID   = KBU.BaZahlungswegID
+  LEFT JOIN vwPerson           ZPR ON ZPR.BaPersonID        = ZAL.BaPersonID
+  LEFT JOIN vwInstitution      ZIN ON ZIN.BaInstitutionID   = ZAL.BaInstitutionID
+  LEFT JOIN KbKonto            KRE ON KRE.KbPeriodeID       = KBU.KbPeriodeID AND ',' + KRE.KbKontoartCodes + ',' LIKE '%30%'
+WHERE BgBudgetID = {0}
+  AND KbBuchungTypCode IN (1,2) -- stornierte doch anzeigen! AND KbBuchungStatusCode NOT IN (8)
+
+SELECT BKA.*, PersonName = PRS.NameVorname
+FROM KbBuchungKostenart  BKA
+  INNER JOIN KbBuchung   BUC ON BUC.KbBuchungID = BKA.KbBuchungID
+  LEFT  JOIN vwPerson    PRS ON PRS.BaPersonID  = BKA.BaPersonID
+WHERE BUC.BgBudgetID = {0}
+  AND BUC.KbBuchungTypCode IN (1,2) -- stornierte doch anzeigen! AND BUC.KbBuchungStatusCode NOT IN (8)</value>
+  </data>
+  <metadata name="tmrTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 54</value>
+  </metadata>
+</root>

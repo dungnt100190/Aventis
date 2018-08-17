@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.born.ch/KiSS/FAMOZ/Alpha/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://www.born.ch/KiSS/FAMOZ/Alpha/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.born.ch/KiSS/FAMOZ/Alpha/">
+      <s:element name="GetServerVersion">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetServerVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServerVersionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestSearchDTO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userIDSender" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestSearchDTOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestSearchDTOResult" type="tns:ArrayOfAlphaSearchPersonDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAlphaSearchPersonDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AlphaSearchPersonDTO" nillable="true" type="tns:AlphaSearchPersonDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AlphaSearchPersonDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ZIPNummer" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Vorname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nachname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AHVNummer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VersichertenNummer" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Geburtsdatum" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="GeschlechtCode" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NationalitaetCode" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AlphaAktiv" nillable="true" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Adresszusatz" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StrasseHausNr" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StrasseCode" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="HausNr" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrgUnitID" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Postfach" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLZOrt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLZ" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrtCode" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ort" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Kanton" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LandCode" nillable="true" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DoAlphaQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userIDSender" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userWinLogonName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="firstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="street" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="streetCode" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ortCode" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="houseNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="birthDateFrom" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="birthDateTo" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="nationality" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="ahvNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="zipNr" nillable="true" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="svn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoAlphaQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoAlphaQueryResult" type="tns:ReturnMsg" />
+            <s:element minOccurs="0" maxOccurs="1" name="dto" type="tns:ArrayOfAlphaSearchPersonDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ReturnMsg">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="tns:CreateObjectResult" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExceptionMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WarningMessage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ErrorCode" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="CreateObjectResult">
+        <s:restriction base="s:string">
+          <s:enumeration value="Success" />
+          <s:enumeration value="Warning" />
+          <s:enumeration value="ExceptionOccured" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetPersonDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userIDSender" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userWinLogonName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="zipNr" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPersonDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPersonDetailsResult" type="tns:ReturnMsg" />
+            <s:element minOccurs="0" maxOccurs="1" name="dto" type="tns:AlphaPersonDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AlphaPersonDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Vorname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WeitereVornamen" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nachname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FruehererName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ZIPNummer" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AHVNummer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VersichertenNummer" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Geburtsdatum" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Todesdatum" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="GeschlechtCode" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NationalitaetCode" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="HeimatortCode" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="HeimatortCodes" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AlphaAktiv" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="AufenthaltsartCode" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AufenthaltsartBis" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="KonfessionCode" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ZivilstandCode" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ZivilstandDatum" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="FrepoNummer" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ZuzugInGemeindeVonOrtCode" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZuzugInGemeindeVonOrtText" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ZuzugInGemeindeDatum" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="WegzugAusGemeindeNachOrtPLZ" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WegzugAusGemeindeNachOrtCode" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="WegzugAusGemeindeNachOrtName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WegzugAusGemeindeNachOrtKanton" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WegzugAusGemeindeNachLandCode" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="WegzugAusGemeindeDatum" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLZ" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrtCode" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ort" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Kanton" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Adressen" type="tns:ArrayOfAlphaAdresseDTO" />
+          <s:element minOccurs="0" maxOccurs="1" name="Praemienverbilligungen" type="tns:ArrayOfOkvAuszugVerbilligungDTO" />
+          <s:element minOccurs="0" maxOccurs="1" name="Praemienuebernahmen" type="tns:ArrayOfOkvAuszugUebernahmeDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAlphaAdresseDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AlphaAdresseDTO" nillable="true" type="tns:AlphaAdresseDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AlphaAdresseDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AdressTyp" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DatumVon" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DatumBis" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Adresszusatz" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StrasseCode" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Strasse" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HausNr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Postfach" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLZ" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrtCode" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ort" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Kanton" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LandCode" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AdressSperre" nillable="true" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Stadtkreis" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Stadtquartier" nillable="true" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfOkvAuszugVerbilligungDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OkvAuszugVerbilligungDTO" nillable="true" type="tns:OkvAuszugVerbilligungDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OkvAuszugVerbilligungDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Jahr" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Folgenummer" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BetragAnspruch" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BetragAuszahlung" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="ZahlungAn" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LetzteMutation" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Kassenkurzbezeichnung" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Grund" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfOkvAuszugUebernahmeDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="OkvAuszugUebernahmeDTO" nillable="true" type="tns:OkvAuszugUebernahmeDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OkvAuszugUebernahmeDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Folgenummer" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AnzahlVerlustscheine" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Krankenkasse" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PraemieVon" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="PraemieBis" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="BetroffenePersonen" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BetragLetzteUebernahme" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ueberpruefungspflichtig" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ClearCache">
+        <s:complexType />
+      </s:element>
+      <s:element name="ClearCacheResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SendClientsToZVM">
+        <s:complexType />
+      </s:element>
+      <s:element name="SendClientsToZVMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendClientsToZVMResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessZVMVorfaelle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dontDeleteTable" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessZVMVorfaelleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessZVMVorfaelleResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetServerVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServerVersion" />
+  </wsdl:message>
+  <wsdl:message name="GetServerVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServerVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestSearchDTOSoapIn">
+    <wsdl:part name="parameters" element="tns:TestSearchDTO" />
+  </wsdl:message>
+  <wsdl:message name="TestSearchDTOSoapOut">
+    <wsdl:part name="parameters" element="tns:TestSearchDTOResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoAlphaQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:DoAlphaQuery" />
+  </wsdl:message>
+  <wsdl:message name="DoAlphaQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:DoAlphaQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPersonDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetPersonDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPersonDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClearCacheSoapIn">
+    <wsdl:part name="parameters" element="tns:ClearCache" />
+  </wsdl:message>
+  <wsdl:message name="ClearCacheSoapOut">
+    <wsdl:part name="parameters" element="tns:ClearCacheResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendClientsToZVMSoapIn">
+    <wsdl:part name="parameters" element="tns:SendClientsToZVM" />
+  </wsdl:message>
+  <wsdl:message name="SendClientsToZVMSoapOut">
+    <wsdl:part name="parameters" element="tns:SendClientsToZVMResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessZVMVorfaelleSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessZVMVorfaelle" />
+  </wsdl:message>
+  <wsdl:message name="ProcessZVMVorfaelleSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessZVMVorfaelleResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AlphaSvcSoap">
+    <wsdl:operation name="GetServerVersion">
+      <wsdl:input message="tns:GetServerVersionSoapIn" />
+      <wsdl:output message="tns:GetServerVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestSearchDTO">
+      <wsdl:input message="tns:TestSearchDTOSoapIn" />
+      <wsdl:output message="tns:TestSearchDTOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoAlphaQuery">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Search a person</wsdl:documentation>
+      <wsdl:input message="tns:DoAlphaQuerySoapIn" />
+      <wsdl:output message="tns:DoAlphaQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonDetails">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get details for a person</wsdl:documentation>
+      <wsdl:input message="tns:GetPersonDetailsSoapIn" />
+      <wsdl:output message="tns:GetPersonDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClearCache">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Clear all cached lists so they will be reloaded from the DB</wsdl:documentation>
+      <wsdl:input message="tns:ClearCacheSoapIn" />
+      <wsdl:output message="tns:ClearCacheSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendClientsToZVM">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Start the job to (un)register the KiSS-clients in ALPHA</wsdl:documentation>
+      <wsdl:input message="tns:SendClientsToZVMSoapIn" />
+      <wsdl:output message="tns:SendClientsToZVMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessZVMVorfaelle">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Start the job to process the events from ALPHA ZVM</wsdl:documentation>
+      <wsdl:input message="tns:ProcessZVMVorfaelleSoapIn" />
+      <wsdl:output message="tns:ProcessZVMVorfaelleSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AlphaSvcSoap" type="tns:AlphaSvcSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServerVersion">
+      <soap:operation soapAction="http://www.born.ch/KiSS/FAMOZ/Alpha/GetServerVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestSearchDTO">
+      <soap:operation soapAction="http://www.born.ch/KiSS/FAMOZ/Alpha/TestSearchDTO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoAlphaQuery">
+      <soap:operation soapAction="http://www.born.ch/KiSS/FAMOZ/Alpha/DoAlphaQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonDetails">
+      <soap:operation soapAction="http://www.born.ch/KiSS/FAMOZ/Alpha/GetPersonDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearCache">
+      <soap:operation soapAction="http://www.born.ch/KiSS/FAMOZ/Alpha/ClearCache" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendClientsToZVM">
+      <soap:operation soapAction="http://www.born.ch/KiSS/FAMOZ/Alpha/SendClientsToZVM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessZVMVorfaelle">
+      <soap:operation soapAction="http://www.born.ch/KiSS/FAMOZ/Alpha/ProcessZVMVorfaelle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AlphaSvcSoap12" type="tns:AlphaSvcSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServerVersion">
+      <soap12:operation soapAction="http://www.born.ch/KiSS/FAMOZ/Alpha/GetServerVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestSearchDTO">
+      <soap12:operation soapAction="http://www.born.ch/KiSS/FAMOZ/Alpha/TestSearchDTO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoAlphaQuery">
+      <soap12:operation soapAction="http://www.born.ch/KiSS/FAMOZ/Alpha/DoAlphaQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonDetails">
+      <soap12:operation soapAction="http://www.born.ch/KiSS/FAMOZ/Alpha/GetPersonDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClearCache">
+      <soap12:operation soapAction="http://www.born.ch/KiSS/FAMOZ/Alpha/ClearCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendClientsToZVM">
+      <soap12:operation soapAction="http://www.born.ch/KiSS/FAMOZ/Alpha/SendClientsToZVM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessZVMVorfaelle">
+      <soap12:operation soapAction="http://www.born.ch/KiSS/FAMOZ/Alpha/ProcessZVMVorfaelle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AlphaSvc">
+    <wsdl:port name="AlphaSvcSoap" binding="tns:AlphaSvcSoap">
+      <soap:address location="http://localhost/AlphaSvc/Master/AlphaSvc.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AlphaSvcSoap12" binding="tns:AlphaSvcSoap12">
+      <soap12:address location="http://localhost/AlphaSvc/Master/AlphaSvc.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

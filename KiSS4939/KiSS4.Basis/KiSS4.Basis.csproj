@@ -1,0 +1,820 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{97C96FDC-3E62-4A9D-A46E-A81024C1A62C}</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>KiSS4.Basis</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>KiSS4.Basis</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/KiSS4.Basis/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\Build\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <SignAssembly>false</SignAssembly>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\Build\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <SignAssembly>false</SignAssembly>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.5, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="SharpLibrary, Version=1.4.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\KiSS.AssemblyInfo\BIAG.AssemblyInfo.csproj">
+      <Project>{C3A41F2E-FBF1-4628-8F6A-764A22252624}</Project>
+      <Name>BIAG.AssemblyInfo</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.BusinessLogic\Kiss.BusinessLogic.csproj">
+      <Project>{E70D5BFA-19A7-49CD-9C71-3DB46C8B111C}</Project>
+      <Name>Kiss.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.DbContext\Kiss.DbContext.csproj">
+      <Project>{A9733EC8-89E0-44A6-941D-A71868778675}</Project>
+      <Name>Kiss.DbContext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS.DBScheme\KiSS.DBScheme.csproj">
+      <Project>{48E78A43-B4AD-4426-9422-8ABB846CC345}</Project>
+      <Name>KiSS.DBScheme</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Infrastructure\Kiss.Infrastructure.csproj">
+      <Project>{94D23DEF-0BEC-4EAC-B6A8-A2AB6B3A0CF1}</Project>
+      <Name>Kiss.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Interfaces\Kiss.Interfaces.csproj">
+      <Project>{936877A8-EC00-4267-8C62-344062912497}</Project>
+      <Name>Kiss.Interfaces</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS.KliBu.UI\KiSS.KliBu.UI.csproj">
+      <Project>{245D1871-6952-4C9C-8443-5832F4B10FD3}</Project>
+      <Name>KiSS.KliBu.UI</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.UserInterface.ViewModel\Kiss.UserInterface.ViewModel.csproj">
+      <Project>{9DA4AA23-AD46-4FF7-9909-8D4EB864D2B8}</Project>
+      <Name>Kiss.UserInterface.ViewModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Common\KiSS4.Common.csproj">
+      <Name>KiSS4.Common</Name>
+      <Project>{B9295AD3-0104-4E8D-88E6-14B4D2EDD647}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.DB\KiSS4.DB.csproj">
+      <Name>KiSS4.DB</Name>
+      <Project>{94EF0808-6193-443F-ACE3-A54ABC4BDE8D}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Dokument\KiSS4.Dokument.csproj">
+      <Name>KiSS4.Dokument</Name>
+      <Project>{25932622-2762-49B9-9FF6-60B623E28111}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.FAMOZ\KiSS4.FAMOZ.csproj">
+      <Project>{0799AC59-F06B-4AC0-A16A-E040B3534357}</Project>
+      <Name>KiSS4.FAMOZ</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.GraphLib\KiSS4.GraphLib.csproj">
+      <Name>KiSS4.GraphLib</Name>
+      <Project>{A47EFCF7-1F9B-442A-9B0E-BE0D0A240D0D}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Gui\KiSS4.Gui.csproj">
+      <Name>KiSS4.Gui</Name>
+      <Project>{9AB1DBC3-F48B-4CE0-A557-4D3B46149A98}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Main\KiSS4.Main.csproj">
+      <Project>{BBE176A4-B003-4643-B333-DAF32310BDF8}</Project>
+      <Name>KiSS4.Main</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Query\KiSS4.Query.csproj">
+      <Project>{2F1CC8CB-5482-4FE4-AC8F-F766266B95E7}</Project>
+      <Name>KiSS4.Query</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Schnittstellen\KiSS4.Schnittstellen.csproj">
+      <Project>{2C441842-BFFD-4C69-A215-6246BAB83462}</Project>
+      <Name>KiSS4.Schnittstellen</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BSS\CtlBaPerson.Designer.cs">
+      <DependentUpon>CtlBaPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlInstitutionenStamm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlInstitutionenStamm.Designer.cs">
+      <DependentUpon>CtlInstitutionenStamm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlArbeit.Designer.cs">
+      <DependentUpon>CtlArbeit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlBaInstitutionenFachpersonen.Designer.cs">
+      <DependentUpon>CtlBaInstitutionenFachpersonen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlBaPerson.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlBaPerson.Designer.cs">
+      <DependentUpon>CtlBaPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlBaPersonAdresse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlBaPersonAdresse.Designer.cs">
+      <DependentUpon>CtlBaPersonAdresse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlBaZahlungsweg.Designer.cs">
+      <DependentUpon>CtlBaZahlungsweg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInstitutionenStamm.Designer.cs">
+      <DependentUpon>FrmInstitutionenStamm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CtlPersonenStamm.Designer.cs">
+      <DependentUpon>CtlPersonenStamm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPersonenStamm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPersonenStamm.Designer.cs">
+      <DependentUpon>FrmPersonenStamm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IBE\CtlBaArbeit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IBE\CtlBaGesundheit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IBE\CtlBaModulTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IBE\CtlBaModulTree.Designer.cs">
+      <DependentUpon>CtlBaModulTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IBE\CtlBaPerson.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IBE\CtlBaPerson.Designer.cs">
+      <DependentUpon>CtlBaPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IBE\CtlBaPersonWVCode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IBE\CtlBaPersonWV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IBE\CtlBaPersonWVCode.Designer.cs">
+      <DependentUpon>CtlBaPersonWVCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IBE\CtlDemographieH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IBE\CtlDemographieH.Designer.cs">
+      <DependentUpon>CtlDemographieH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IBE\DlgDemographieH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IBE\CtlPersonenStamm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BSS\CtlBaPerson.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlBaInstitutionenFachpersonen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IBE\FrmPersonenStamm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IBE\FrmPersonenStamm.Designer.cs">
+      <DependentUpon>FrmPersonenStamm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PI\CtlBaKlientensystem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PI\CtlBaKlientensystem.Designer.cs">
+      <DependentUpon>CtlBaKlientensystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PI\CtlBaModulTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PI\CtlBaStammdaten.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PI\CtlBaStammdaten.Designer.cs">
+      <DependentUpon>CtlBaStammdaten.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PI\CtlPersonenStamm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PI\DlgBaIVBerechtigung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PI\DlgBaIVBerechtigung.Designer.cs">
+      <DependentUpon>DlgBaIVBerechtigung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PI\DlgNeuePerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PI\DlgPersonenStammHist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PI\FrmPersonenStamm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PI\KZSHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CtlArbeit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlBaModulTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlDemographieH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlGesundheit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtlBaHaushalt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DlgDemographieH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInstitutionenStamm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CtlPersonenStamm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlInstitutionenStamm.resx">
+      <DependentUpon>CtlInstitutionenStamm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlArbeit.resx">
+      <DependentUpon>CtlArbeit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlBaModulTree.resx">
+      <DependentUpon>CtlBaModulTree.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlBaPerson.resx">
+      <DependentUpon>CtlBaPerson.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlBaPersonAdresse.resx">
+      <DependentUpon>CtlBaPersonAdresse.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlDemographieH.resx">
+      <DependentUpon>CtlDemographieH.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlGesundheit.resx">
+      <DependentUpon>CtlGesundheit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlBaHaushalt.resx">
+      <DependentUpon>CtlBaHaushalt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgDemographieH.resx">
+      <DependentUpon>DlgDemographieH.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInstitutionenStamm.resx">
+      <DependentUpon>FrmInstitutionenStamm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlPersonenStamm.resx">
+      <DependentUpon>CtlPersonenStamm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPersonenStamm.resx">
+      <DependentUpon>FrmPersonenStamm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IBE\CtlBaArbeit.resx">
+      <DependentUpon>CtlBaArbeit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IBE\CtlBaGesundheit.resx">
+      <DependentUpon>CtlBaGesundheit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IBE\CtlBaModulTree.resx">
+      <DependentUpon>CtlBaModulTree.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IBE\CtlBaPerson.resx">
+      <DependentUpon>CtlBaPerson.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IBE\CtlBaPersonWVCode.resx">
+      <DependentUpon>CtlBaPersonWVCode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IBE\CtlBaPersonWV.resx">
+      <DependentUpon>CtlBaPersonWV.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IBE\CtlDemographieH.resx">
+      <DependentUpon>CtlDemographieH.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IBE\DlgDemographieH.resx">
+      <DependentUpon>DlgDemographieH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IBE\CtlPersonenStamm.resx">
+      <DependentUpon>CtlPersonenStamm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BSS\CtlBaPerson.resx">
+      <DependentUpon>CtlBaPerson.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CtlBaInstitutionenFachpersonen.resx">
+      <DependentUpon>CtlBaInstitutionenFachpersonen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IBE\FrmPersonenStamm.resx">
+      <DependentUpon>FrmPersonenStamm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PI\CtlBaKlientensystem.resx">
+      <DependentUpon>CtlBaKlientensystem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PI\CtlBaModulTree.resx">
+      <DependentUpon>CtlBaModulTree.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PI\CtlBaStammdaten.resx">
+      <DependentUpon>CtlBaStammdaten.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PI\CtlPersonenStamm.resx">
+      <DependentUpon>CtlPersonenStamm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PI\DlgBaIVBerechtigung.resx">
+      <DependentUpon>DlgBaIVBerechtigung.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PI\DlgNeuePerson.resx">
+      <DependentUpon>DlgNeuePerson.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PI\DlgPersonenStammHist.resx">
+      <DependentUpon>DlgPersonenStammHist.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <Compile Include="CtlBaZahlungsweg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlBaZahlungsweg.resx">
+      <DependentUpon>CtlBaZahlungsweg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="CtlBaPersonWV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ZH\CtlBaModulTree.Designer.cs">
+      <DependentUpon>CtlBaModulTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZH\CtlBaPerson.Designer.cs">
+      <DependentUpon>CtlBaPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZH\CtlBaPersonArbeit.Designer.cs">
+      <DependentUpon>CtlBaPersonArbeit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZH\CtlBaPersonErsatzeinkommen.Designer.cs">
+      <DependentUpon>CtlBaPersonErsatzeinkommen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZH\CtlBaPersonKrankenkasse.Designer.cs">
+      <DependentUpon>CtlBaPersonKrankenkasse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZH\CtlBaPersonWVCode.Designer.cs">
+      <DependentUpon>CtlBaPersonWVCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZH\CtlBaWohnsituation.Designer.cs">
+      <DependentUpon>CtlBaWohnsituation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZH\CtlBaZahlungsweg.Designer.cs">
+      <DependentUpon>CtlBaZahlungsweg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZH\FrmPersonenStamm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZH\FrmPersonenStamm.Designer.cs">
+      <DependentUpon>FrmPersonenStamm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZH\FrmSicherheitsleistungen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZH\FrmSicherheitsleistungen.Designer.cs">
+      <DependentUpon>FrmSicherheitsleistungen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZH\Strassenverzeichnis\BaHausDTOComparer.cs" />
+    <Compile Include="ZH\Strassenverzeichnis\BaStrasseDTO.cs" />
+    <Compile Include="ZH\Strassenverzeichnis\BaStrasseHausDTO.cs" />
+    <Compile Include="ZH\Strassenverzeichnis\BaStrassenverzeichnisParser.cs" />
+    <Compile Include="ZH\Strassenverzeichnis\BaHausDTO.cs" />
+    <Compile Include="ZH\Strassenverzeichnis\FrmBaStrassenverzeichnis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZH\Strassenverzeichnis\FrmBaStrassenverzeichnis.Designer.cs">
+      <DependentUpon>FrmBaStrassenverzeichnis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZH\FrmSstIKAuszugImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlSstIKAuszugImport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\FrmSstIKAuszugExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlBaBank.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlBaInvolviertePerson.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlBaInvolvierteStelle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlBaKlientensystem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlBaModulTree.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlBaPerson.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlBaPersonAdresse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlBaPersonAlteFallnr.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlBaPersonArbeit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlBaPersonErsatzeinkommen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlBaPersonKrankenkasse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlBaPersonVermoegen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlBaPersonWVCode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlBaUebersicht.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlBaWohnsituation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlBaZahlungsweg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlSstIKAuszugExport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\FrmAdressenStamm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZH\FrmBaPersonArchiv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZH\FrmInstitutionenStamm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlPersonenStamm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ZH\CtlSicherheitsleistungen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="CtlBaPersonWV.resx">
+      <DependentUpon>CtlBaPersonWV.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\FrmPersonenStamm.resx">
+      <DependentUpon>FrmPersonenStamm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\FrmSicherheitsleistungen.resx">
+      <DependentUpon>FrmSicherheitsleistungen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\Strassenverzeichnis\FrmBaStrassenverzeichnis.resx">
+      <DependentUpon>FrmBaStrassenverzeichnis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\FrmSstIKAuszugImport.resx">
+      <DependentUpon>FrmSstIKAuszugImport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlSstIKAuszugImport.resx">
+      <DependentUpon>CtlSstIKAuszugImport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\FrmSstIKAuszugExport.resx">
+      <DependentUpon>FrmSstIKAuszugExport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlBaBank.resx">
+      <DependentUpon>CtlBaBank.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlBaInvolviertePerson.resx">
+      <DependentUpon>CtlBaInvolviertePerson.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlBaInvolvierteStelle.resx">
+      <DependentUpon>CtlBaInvolvierteStelle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlBaKlientensystem.resx">
+      <DependentUpon>CtlBaKlientensystem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlBaModulTree.resx">
+      <DependentUpon>CtlBaModulTree.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlBaPerson.resx">
+      <DependentUpon>CtlBaPerson.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlBaPersonAdresse.resx">
+      <DependentUpon>CtlBaPersonAdresse.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlBaPersonAlteFallnr.resx">
+      <DependentUpon>CtlBaPersonAlteFallnr.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlBaPersonArbeit.resx">
+      <DependentUpon>CtlBaPersonArbeit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlBaPersonErsatzeinkommen.resx">
+      <DependentUpon>CtlBaPersonErsatzeinkommen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlBaPersonKrankenkasse.resx">
+      <DependentUpon>CtlBaPersonKrankenkasse.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlBaPersonVermoegen.resx">
+      <DependentUpon>CtlBaPersonVermoegen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlBaPersonWVCode.resx">
+      <DependentUpon>CtlBaPersonWVCode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlBaUebersicht.resx">
+      <DependentUpon>CtlBaUebersicht.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlBaWohnsituation.resx">
+      <DependentUpon>CtlBaWohnsituation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlBaZahlungsweg.resx">
+      <DependentUpon>CtlBaZahlungsweg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlSstIKAuszugExport.resx">
+      <DependentUpon>CtlSstIKAuszugExport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\FrmAdressenStamm.resx">
+      <DependentUpon>FrmAdressenStamm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\FrmBaPersonArchiv.resx">
+      <DependentUpon>FrmBaPersonArchiv.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\FrmInstitutionenStamm.resx">
+      <DependentUpon>FrmInstitutionenStamm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlPersonenStamm.resx">
+      <DependentUpon>CtlPersonenStamm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZH\CtlSicherheitsleistungen.resx">
+      <DependentUpon>CtlSicherheitsleistungen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewEntryEdt.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteEntryEdt.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

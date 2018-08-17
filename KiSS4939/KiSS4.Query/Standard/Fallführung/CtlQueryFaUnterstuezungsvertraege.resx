@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>--FRAGEN:
+-- DATUMSEINSCHRÄNKUNG AUF FALL/PHASE/VERTRAGSDATUM? (Momentan auf FALL und PHASE)
+
+DECLARE @VertragBeginFieldID INT;
+DECLARE @VertragAuswertungFieldID INT;
+DECLARE @VertragBegin2FieldID INT;
+DECLARE @VertragAuswertung2FieldID INT;
+DECLARE @DatumVon DATETIME;
+DECLARE @DatumBis DATETIME
+DECLARE @LanguageCode INT;
+
+SET @LanguageCode = {0};
+
+SET @DatumVon = CONVERT(DATETIME, '01.01.1900', 104)
+SET @DatumBis = CONVERT(DATETIME, '01.01.9999', 104)
+--- SET @DatumVon = {edtDatumVon}
+--- SET @DatumBis = {edtDatumBis}
+
+SET @VertragBeginFieldID = (SELECT DynaFieldID FROM dbo.DynaField WITH (READUNCOMMITTED) WHERE FieldName = 'FaIntAusstattungVerBeginn')
+SET @VertragAuswertungFieldID = (SELECT DynaFieldID FROM dbo.DynaField WITH (READUNCOMMITTED) WHERE FieldName = 'FaIntAusstattungVerAuswert')
+SET @VertragBegin2FieldID = (SELECT DynaFieldID FROM dbo.DynaField WITH (READUNCOMMITTED) WHERE FieldName = 'FaAusstattungVerBeginn')
+SET @VertragAuswertung2FieldID = (SELECT DynaFieldID FROM dbo.DynaField WITH (READUNCOMMITTED) WHERE FieldName = 'FaAusstattungVerAuswert')
+
+SELECT SAR                  = BEN.LastName + ISNULL(', ' + BEN.FirstName,''),
+       Person               = PRS.Name + ISNULL(', ' + PRS.Vorname,''),
+       [Beginn Vertrag]     = CASE
+                                      WHEN SQL_VARIANT_PROPERTY(VBG.Value,'BaseType') = 'datetime' THEN CONVERT(datetime, VBG.Value)
+                                      WHEN SQL_VARIANT_PROPERTY(VBG.Value,'BaseType') = 'nvarchar' THEN CONVERT(datetime, VBG.Value,104)
+                                      WHEN VBG.Value is not null THEN dbo.fnGetMLTextFromName('CtlQueryFaUnterstuezungsvertraege', 'KeinGueltigesDatum', @LanguageCode)
+                              END,
+       [Auswertung geplant] = CASE
+                                      WHEN SQL_VARIANT_PROPERTY(AWV.Value,'BaseType') = 'datetime' THEN CONVERT(datetime, AWV.Value)
+                                      WHEN SQL_VARIANT_PROPERTY(AWV.Value,'BaseType') = 'nvarchar' THEN CONVERT(datetime, AWV.Value,104)
+                                      WHEN AWV.Value is not null THEN dbo.fnGetMLTextFromName('CtlQueryFaUnterstuezungsvertraege', 'KeinGueltigesDatum', @LanguageCode)
+                              END,
+       BaPersonID$          = FAL.BaPersonID
+FROM dbo.BaPerson      PRS WITH(READUNCOMMITTED)
+INNER JOIN dbo.FaLeistung   FAL WITH(READUNCOMMITTED) ON FAL.BaPersonID = PRS.BaPersonID
+INNER JOIN dbo.XUser    BEN WITH(READUNCOMMITTED) ON FAL.UserID = BEN.UserID
+INNER JOIN dbo.FaPhase  PHS WITH(READUNCOMMITTED) ON PHS.FaLeistungID = FAL.FaLeistungID
+LEFT JOIN dbo.DynaValue VBG WITH(READUNCOMMITTED) ON VBG.DynaFieldID IN (@VertragBeginFieldID, @VertragBegin2FieldID) AND
+                           VBG.FaPhaseID   = PHS.FaPhaseID
+LEFT JOIN dbo.DynaValue AWV WITH(READUNCOMMITTED) ON AWV.DynaFieldID IN (@VertragAuswertungFieldID, @VertragAuswertung2FieldID) AND
+                           AWV.FaPhaseID   = PHS.FaPhaseID
+
+WHERE VBG.Value IS NOT NULL
+--- AND BEN.UserID =  {edtUserID.LookupID}
+AND FAL.DatumVon &gt;= @DatumVon
+AND (FAL.DatumBis IS NULL OR FAL.DatumBis &lt;= @DatumBis)
+AND PHS.FaPhaseID = (SELECT TOP 1 PHA.FaPhaseID 
+                     FROM   dbo.FaPhase PHA WITH(READUNCOMMITTED)
+                     WHERE  PHA.FaLeistungID = FAL.FaLeistungID
+                     AND    PHA.DatumVon &lt;= @DatumBis
+                     AND   (PHA.DatumBis IS NULL OR PHA.DatumBis &gt;= @DatumVon)
+                     ORDER BY DatumVon DESC)</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="edtDatumBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="edtDatumVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="edtUserID.LookupSQL" xml:space="preserve">
+    <value>select ID = UserID, SAR = LastName + isNull(', ' + FirstName,''), 
+[Kuerzel] = LogonName
+             from   XUser 
+            
+ where LastName + isNull(', ' + FirstName,'') like isNull({0},'') + '%' 
+             order by SAR</value>
+  </data>
+</root>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.bedag.ch/KiSS/FAMOZ/WorkerProcess/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.bedag.ch/KiSS/FAMOZ/WorkerProcess/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.bedag.ch/KiSS/FAMOZ/WorkerProcess/">
+      <s:element name="GetServerVersion">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetServerVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServerVersionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IKAuszuegeGenerieren">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userIDSender" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userWinLogonName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IKAuszuegeGenerierenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IKAuszuegeGenerierenResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZKBDokumenteImportieren">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dbName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="userIDSender" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userWinLogonName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="minSize" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZKBDokumenteImportierenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZKBDokumenteImportierenResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetServerVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServerVersion" />
+  </wsdl:message>
+  <wsdl:message name="GetServerVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServerVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKAuszuegeGenerierenSoapIn">
+    <wsdl:part name="parameters" element="tns:IKAuszuegeGenerieren" />
+  </wsdl:message>
+  <wsdl:message name="IKAuszuegeGenerierenSoapOut">
+    <wsdl:part name="parameters" element="tns:IKAuszuegeGenerierenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZKBDokumenteImportierenSoapIn">
+    <wsdl:part name="parameters" element="tns:ZKBDokumenteImportieren" />
+  </wsdl:message>
+  <wsdl:message name="ZKBDokumenteImportierenSoapOut">
+    <wsdl:part name="parameters" element="tns:ZKBDokumenteImportierenResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WorkerProcessSvcSoap">
+    <wsdl:operation name="GetServerVersion">
+      <wsdl:input message="tns:GetServerVersionSoapIn" />
+      <wsdl:output message="tns:GetServerVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IKAuszuegeGenerieren">
+      <wsdl:input message="tns:IKAuszuegeGenerierenSoapIn" />
+      <wsdl:output message="tns:IKAuszuegeGenerierenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZKBDokumenteImportieren">
+      <wsdl:input message="tns:ZKBDokumenteImportierenSoapIn" />
+      <wsdl:output message="tns:ZKBDokumenteImportierenSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WorkerProcessSvcSoap" type="tns:WorkerProcessSvcSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServerVersion">
+      <soap:operation soapAction="http://www.bedag.ch/KiSS/FAMOZ/WorkerProcess/GetServerVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IKAuszuegeGenerieren">
+      <soap:operation soapAction="http://www.bedag.ch/KiSS/FAMOZ/WorkerProcess/IKAuszuegeGenerieren" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZKBDokumenteImportieren">
+      <soap:operation soapAction="http://www.bedag.ch/KiSS/FAMOZ/WorkerProcess/ZKBDokumenteImportieren" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WorkerProcessSvcSoap12" type="tns:WorkerProcessSvcSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServerVersion">
+      <soap12:operation soapAction="http://www.bedag.ch/KiSS/FAMOZ/WorkerProcess/GetServerVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IKAuszuegeGenerieren">
+      <soap12:operation soapAction="http://www.bedag.ch/KiSS/FAMOZ/WorkerProcess/IKAuszuegeGenerieren" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZKBDokumenteImportieren">
+      <soap12:operation soapAction="http://www.bedag.ch/KiSS/FAMOZ/WorkerProcess/ZKBDokumenteImportieren" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WorkerProcessSvc">
+    <wsdl:port name="WorkerProcessSvcSoap" binding="tns:WorkerProcessSvcSoap">
+      <soap:address location="http://localhost:64486/WorkerProcess.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WorkerProcessSvcSoap12" binding="tns:WorkerProcessSvcSoap12">
+      <soap12:address location="http://localhost:64486/WorkerProcess.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

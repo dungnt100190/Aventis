@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryFalltraeger.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>49</value>
+  </metadata>
+  <metadata name="qryMietvertrag.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>245, 17</value>
+  </metadata>
+  <data name="qryMietvertrag.SelectStatement" xml:space="preserve">
+    <value>SELECT DMV.*,
+       --
+       Vermieter = INS.NameVorname
+FROM dbo.BaMietvertrag    DMV WITH (READUNCOMMITTED)
+  LEFT JOIN vwInstitution INS WITH (READUNCOMMITTED) ON INS.BaInstitutionID = DMV.BaInstitutionID
+WHERE DMV.BaPersonID = {0};</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="edtDatumBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="edtDatumVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="kissDateEdit1.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <metadata name="qryRelation.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>137, 17</value>
+  </metadata>
+  <data name="qryRelation.SelectStatement" xml:space="preserve">
+    <value>SELECT	DRE.*,
+		Person     = PRS.Name + isNull(', ' + PRS.Vorname,''),
+		PersonID   = PRS.BaPersonID,
+		RelationID = DRE.BaRelationID 
+					 +  
+					 case when DRE.BaPersonID_1 = {0} and 
+							   (DRL.NameWeiblich1 &lt;&gt; DRL.NameWeiblich2 or DRL.NameMaennlich1 &lt;&gt; DRL.NameMaennlich2)
+					 then 1000 
+					 else 0 end 
+					 +
+					 case PRS.GeschlechtCode 
+					 when 1 then 100
+					 when 2 then 200
+					 else 0 end,
+		Age        = CONVERT(INT, ((datediff(dd,Geburtsdatum,getDate())+.5)/365.25)),
+		Klient     = CONVERT(bit,
+					    CASE WHEN EXISTS (SELECT 1 FROM FaLeistung WHERE BaPersonID = PRS.BaPersonID) 
+					    THEN 1 ELSE 0 END),
+		GlHaushalt   = dbo.fnGleicheAdresse({0}, PRS.BaPersonID),
+		Unterstuetzt = dbo.fnUnterstuetzt({0}, PRS.BaPersonID, getdate()),
+		PRS.GeschlechtCode
+FROM    BaPerson_Relation DRE
+  INNER JOIN BaPerson    PRS on PRS.BaPersonID IN (DRE.BaPersonID_1, DRE.BaPersonID_2)
+  LEFT  JOIN BaRelation  DRL on DRL.BaRelationID = DRE.BaRelationID
+WHERE  (DRE.BaPersonID_1 = {0} or DRE.BaPersonID_2 = {0}) AND PRS.BaPersonID != {0}
+ORDER BY Age DESC</value>
+  </data>
+  <data name="picTitel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAH5JREFUOE/NU0EO
+        wCAI8+k+jZ8xjRYYEdNkl2lIVKC2oK39eeggdzKKs/bezUREYRv0CmKJmQELYrTBIiXCX7LQobzSH31H
+        gBXAzFXgAmQ6MdGJvL+U0WlGKVj7GSEhv4MojZKQpbyLS3QhFxOAl9uBWveBSHaQD3+B+jAz6AFke72d
+        eik08wAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="qryFalltraeger.SelectStatement" xml:space="preserve">
+    <value>SELECT Falltraeger       = CASE PRS.GeschlechtCode
+                             WHEN 1 THEN dbo.fnGetMLTextFromName('CtlBaHaushalt', 'Falltraeger', {1})
+                             WHEN 2 THEN dbo.fnGetMLTextFromName('CtlBaHaushalt', 'Falltraegerin', {1})
+                             ELSE dbo.fnGetMLTextFromName('CtlBaHaushalt', 'FalltraegerInUnklar', {1})
+                           END,
+       Person            = PRS.NameVorname,
+       Wohnsitz          = ISNULL(PRS.Wohnsitz, ''),
+       Aufenthaltsort    = ISNULL(ISNULL(PRS.AufenthaltInstitutionName, PRS.AufenthaltAdressZusatz) + CHAR(13) + CHAR(10), '') + 
+                           ISNULL(PRS.AufenthaltStrasseHausNr + ', ', '') + ISNULL(PRS.AufenthaltPLZOrt, ''),
+       Heimatort         = PRS.Heimatort,
+       Nationalitaet     = CASE {1}
+                             WHEN 1 THEN PRS.Nationalitaet
+                             WHEN 2 THEN PRS.NationalitaetFR
+                             WHEN 3 THEN PRS.NationalitaetIT
+                             ELSE PRS.Nationalitaet
+                           END,
+       [Alter]           = PRS.[Alter],
+       Geburtstag        = CONVERT(VARCHAR, PRS.Geburtsdatum, 104),
+       Geschlecht        = dbo.fnLOVMLText('Geschlecht', PRS.GeschlechtCode, {1}),
+       Zivilstand        = dbo.fnLOVMLText('Zivilstand', PRS.ZivilstandCode, {1}),
+       WohnsitzAdresseID = ISNULL(PRS.WohnsitzBaAdresseID, -1)
+FROM dbo.vwPerson      PRS WITH (READUNCOMMITTED)
+WHERE PRS.BaPersonID = {0};
+
+</value>
+  </data>
+</root>

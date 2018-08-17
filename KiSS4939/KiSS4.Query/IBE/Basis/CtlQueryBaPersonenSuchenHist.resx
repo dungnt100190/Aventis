@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>DECLARE @PersID TABLE(
+  BaPersonID INT
+)
+
+-- First we look for the PersonID's of our interest
+INSERT @PersID
+SELECT DISTINCT(BaPersonID) 
+FROM dbo.Hist_BaPerson HDP WITH (READUNCOMMITTED)
+WHERE 1=1
+--- AND Name LIKE {edtName}+'%'
+--- AND Vorname LIKE {edtVorname}+'%'
+--- AND AHVNummer like {edtAHV} + '%'
+--- AND Versichertennummer like {edtVersNr} + '%'
+--- AND HaushaltVersicherungsNummer like {edtHaushaltVersNr} + '%'
+--- AND NNummer like {edtNNr} + '%'
+--- AND Geburtsdatum &gt;= {edtGeburtVon}
+--- AND Geburtsdatum &lt;= {edtGeburtBis}
+
+SELECT BaPersonID$ = CASE WHEN TMP.FT = 1 THEN TMP.FTID$ ELSE TMP.KlientensystemID$ END,
+       *
+FROM(
+-- History von BaPerson
+SELECT FTID$             = HPR.BaPersonID,
+       KlientensystemID$ = (select top 1 FAL.BaPersonID 
+                            from   dbo.BaPerson_Relation  REL WITH (READUNCOMMITTED) 
+                                   left join dbo.FaLeistung FAL WITH (READUNCOMMITTED) on FAL.BaPersonID = case when REL.BaPersonID_1 = PRS.BaPersonID 
+                                                                             then REL.BaPersonID_2
+                                                                             else REL.BaPersonID_1
+                                                                             end
+                            where  (REL.BaPersonID_1 = PRS.BaPersonID or
+                                   REL.BaPersonID_2 = PRS.BaPersonID) and
+                                   FAL.BaPersonID is not null
+                            order by FAL.ModulID, FAL.DatumVon desc),
+       Änderungsdatum1  = CASE WHEN HVR.VersionDate &lt;&gt; '19000101' 
+                               THEN CONVERT(VARCHAR, HVR.VersionDate, 104)+' '+CONVERT(VARCHAR, HVR.VersionDate, 108) 
+                          END, --'19000101': initial date--'19000101': initial date
+       [Änderung durch] = HVR.AppUser,
+       FT               = CONVERT(BIT,
+	                     CASE WHEN EXISTS(SELECT 1 FROM dbo.FaLeistung WITH (READUNCOMMITTED) WHERE BaPersonID = HPR.BaPersonID) THEN 1 
+                                  ELSE 0 
+                             END),
+       Titel            = HPR.Titel,
+       Name             = HPR.Name,
+       FruehererName    = HPR.FruehererName,
+       Vorname          = HPR.Vorname,
+       Vorname2         = HPR.Vorname2,
+       Geburtsdatum     = HPR.Geburtsdatum,
+       Sterbedatum      = HPR.Sterbedatum,
+       [AHV-Nr.]        = HPR.AhvNummer,
+       [Vers.-Nr.]      = HPR.Versichertennummer,
+       NNr              = HPR.NNummer,
+       BFFNummer        = HPR.BFFNummer,
+      [Haushaltvers.-Nr] =  HPR.HaushaltVersicherungsNummer,
+       Geschlecht       = dbo.fnLovText('Geschlecht', HPR.GeschlechtCode),
+       Konfession       = dbo.fnLovText('Konfession', HPR.KonfessionCode),
+       Zivilstand       = dbo.fnLovText('Zivilstand', HPR.ZivilstandCode),
+       ZivilstandDatum  = ZivilstandDatum,
+       Heimatgemeinde   = GMD.Name,
+       [Nationalität]   = LAN.Text,
+       AusländerStatus  = dbo.fnLovText('Aufenthaltsstatus', HPR.AuslaenderStatusCode),
+       AusländerStatusGueltigBis = AuslaenderStatusGueltigBis,
+       AusländerStatusDatum = InCHSeit,
+       Telefon_P        = HPR.Telefon_P,
+       Telefon_G        = HPR.Telefon_G,
+       MobilTel         = HPR.MobilTel,
+       Fax              = HPR.Fax,
+       EMail            = HPR.EMail,
+       Strasse          = HAD.Strasse + isNull(' ' + HAD.HausNr,''),
+       PLZ              = HAD.PLZ,
+       Ort              = HAD.Ort,
+       VerID$           = HVR.VerID
+FROM @PersID                 PRS
+  LEFT  JOIN dbo.Hist_BaPerson   HPR WITH (READUNCOMMITTED) ON HPR.BaPersonID = PRS.BaPersonID
+  LEFT  JOIN dbo.BaGemeinde      GMD WITH (READUNCOMMITTED) ON GMD.BaGemeindeID = HPR.HeimatgemeindeBaGemeindeID
+  INNER JOIN dbo.HistoryVersion  HVR WITH (READUNCOMMITTED) ON HVR.VerID = HPR.VerID
+  LEFT  JOIN dbo.Hist_BaAdresse  HWO WITH (READUNCOMMITTED) ON HWO.BaPersonID = HPR.BaPersonID --Wohnsitz (zivilrechtlich)
+                                AND HWO.AdresseCode = 1
+                                AND HWO.VerID &lt;= HVR.VerID
+                                AND IsNull(HWO.VerID_Deleted, HVR.VerID+1) &gt; HVR.VerID
+  LEFT  JOIN dbo.Hist_BaAdresse  HAD WITH (READUNCOMMITTED) ON HAD.BaAdresseID = HWO.BaAdresseID
+                                AND HAD.VerID &lt;= HVR.VerID
+                                AND IsNull(HAD.VerID_Deleted, HVR.VerID+1) &gt; HVR.VerID
+  LEFT	JOIN dbo.BaLand			 LAN WITH (READUNCOMMITTED) ON HPR.NationalitaetCode = LAN.BaLandID
+
+WHERE 1=1
+AND (PersonSichtbarSDFlag = dbo.fnGetPersonSichtbarFlag({0}) or PersonSichtbarSDFlag = 1) 
+
+UNION ALL
+
+-- History von BaAdresse
+SELECT FTID$             = HPR.BaPersonID,
+       KlientensystemID$ = (select top 1 FAL.BaPersonID 
+                            from   dbo.BaPerson_Relation  REL WITH (READUNCOMMITTED) 
+                                   left join dbo.FaLeistung FAL WITH (READUNCOMMITTED) on FAL.BaPersonID = case when REL.BaPersonID_1 = PRS.BaPersonID 
+                                                                             then REL.BaPersonID_2
+                                                                             else REL.BaPersonID_1
+                                                                             end
+                            where  (REL.BaPersonID_1 = PRS.BaPersonID or
+                                   REL.BaPersonID_2 = PRS.BaPersonID) and
+                                   FAL.BaPersonID is not null
+                            order by FAL.ModulID, FAL.DatumVon desc),
+       Änderungsdatum1  = CASE WHEN HVR.VersionDate &lt;&gt; '19000101' 
+                               THEN CONVERT(VARCHAR, HVR.VersionDate, 104)+' '+CONVERT(VARCHAR, HVR.VersionDate, 108) 
+                          END, --'19000101': initial date--'19000101': initial date
+       [Änderung durch] = HVR.AppUser,
+       FT               = CONVERT(BIT,
+	                     CASE WHEN EXISTS(SELECT 1 FROM dbo.FaLeistung WITH (READUNCOMMITTED) WHERE BaPersonID = HPR.BaPersonID) THEN 1 
+                                  ELSE 0 
+                             END),
+       Titel            = HPR.Titel,
+       Name             = HPR.Name,
+       FruehererName    = HPR.FruehererName,
+       Vorname          = HPR.Vorname,
+       Vorname2         = HPR.Vorname2,
+       Geburtsdatum     = HPR.Geburtsdatum,
+       Sterbedatum      = HPR.Sterbedatum,
+       [AHV-Nr.]        = HPR.AhvNummer,
+       [Vers.-Nr.]      = HPR.Versichertennummer,
+       NNr              = HPR.NNummer,
+       BFFNummer        = HPR.BFFNummer,
+      [Haushaltvers.-Nr] =  HPR.HaushaltVersicherungsNummer,
+       Geschlecht       = dbo.fnLovText('Geschlecht', HPR.GeschlechtCode),
+       Konfession       = dbo.fnLovText('Konfession', HPR.KonfessionCode),
+       Zivilstand       = dbo.fnLovText('Zivilstand', HPR.ZivilstandCode),
+       ZivilstandDatum  = ZivilstandDatum,
+       Heimatgemeinde   = GMD.Name,
+       [Nationalität]   = LAN.Text,
+       AusländerStatus  = dbo.fnLovText('Aufenthaltsstatus', HPR.AuslaenderStatusCode),
+       AusländerStatusGueltigBis = AuslaenderStatusGueltigBis,
+       AusländerStatusDatum = InCHSeit,
+       Telefon_P        = HPR.Telefon_P,
+       Telefon_G        = HPR.Telefon_G,
+       MobilTel         = HPR.MobilTel,
+       Fax              = HPR.Fax,
+       EMail            = HPR.EMail,
+       Strasse          = HAD.Strasse + isNull(' ' + HAD.HausNr,''),
+       PLZ              = HAD.PLZ,
+       Ort              = HAD.Ort,
+       VerID$           = HVR.VerID
+FROM @PersID                 PRS
+  LEFT  JOIN dbo.Hist_BaAdresse  HAD WITH (READUNCOMMITTED) ON HAD.BaPersonID = PRS.BaPersonID
+  INNER JOIN dbo.HistoryVersion  HVR WITH (READUNCOMMITTED) ON HVR.VerID = HAD.VerID
+  LEFT  JOIN dbo.Hist_BaPerson   HPR WITH (READUNCOMMITTED) ON HPR.BaPersonID = HAD.BaPersonID
+    AND HPR.VerID &lt;= HVR.VerID
+    AND IsNull(HPR.VerID_Deleted, HVR.VerID+1) &gt; HVR.VerID
+  LEFT  JOIN dbo.BaGemeinde      GMD WITH (READUNCOMMITTED) ON GMD.BaGemeindeID = HPR.HeimatgemeindeBaGemeindeID
+  LEFT	JOIN dbo.BaLand			 LAN WITH (READUNCOMMITTED) ON HPR.NationalitaetCode = LAN.BaLandID
+
+WHERE 1=1
+AND (PersonSichtbarSDFlag = dbo.fnGetPersonSichtbarFlag({0}) or PersonSichtbarSDFlag = 1) 
+
+
+) TMP
+ORDER BY BaPersonID$, TMP.VerID$</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="xDocument.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABbSURBVDhPY2AAAmNj4/+4MEgeA4AU//8/EwOLiYn9B2Gc
+        GtLSGP4jY5BikEEYmgjZANIAUgO3CZcGZGdi1YDuJBgfpJE6NmALKZjYqJPIijh8KRYmhzXlEhIEANZ8
+        ev1ASni6AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="edtGeburtBis.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="edtGeburtVon.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABRSURBVDhPY2AAAmNj4//EYJBaMAApRqbhErjkiDEdZiiK
+        Dcgmo7NxamhoYAA7DwSQ2Vg1gBTAFKHT1NGA7AyibBhuGoiKB5Jimpj0hM9AnHIA7aiPJlUTWpwAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+</root>

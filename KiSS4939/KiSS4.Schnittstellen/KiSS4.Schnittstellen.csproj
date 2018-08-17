@@ -1,0 +1,747 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2C441842-BFFD-4C69-A215-6246BAB83462}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KiSS4.Schnittstellen</RootNamespace>
+    <AssemblyName>KiSS4.Schnittstellen</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>http://localhost/KiSS4.Schnittstellen/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <SignAssembly>false</SignAssembly>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Build\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <SignAssembly>false</SignAssembly>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Compile Include="Abacus\ASCII\CtlAbaASCIIBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Abacus\ASCII\CtlAbaASCIIBase.Designer.cs">
+      <DependentUpon>CtlAbaASCIIBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Abacus\ASCII\CtlAbaLeistungsdaten.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Abacus\ASCII\CtlAbaLeistungsdaten.Designer.cs">
+      <DependentUpon>CtlAbaLeistungsdaten.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Abacus\ASCII\CtlAbaStundenlohn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Abacus\ASCII\CtlAbaStundenlohn.Designer.cs">
+      <DependentUpon>CtlAbaStundenlohn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Abacus\CtlAbaLogView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Abacus\CtlSchnittstellenAbacus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Abacus\FrmSchnittstellenAbacus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Abacus\FrmSchnittstellenAbacus.Designer.cs">
+      <DependentUpon>FrmSchnittstellenAbacus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Abacus\KACon\AbaDelegator.cs" />
+    <Compile Include="Abacus\KACon\AbaDelegatorImpl.cs" />
+    <Compile Include="Abacus\KACon\ODBC\ODBCDriver.cs" />
+    <Compile Include="Abacus\KACon\ODBC\ODBCDSN.cs" />
+    <Compile Include="Abacus\KACon\ODBC\ODBCManager.cs" />
+    <Compile Include="Abacus\KlientenStammdaten\AbacusConnection.cs" />
+    <Compile Include="Abacus\KlientenStammdaten\Adresse\AddressWrapper.cs" />
+    <Compile Include="Abacus\KlientenStammdaten\Adresse\KlientenAddress.cs" />
+    <Compile Include="Abacus\KlientenStammdaten\Constants.cs" />
+    <Compile Include="Abacus\ASCII\CtlAbaFakturierung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Abacus\ASCII\CtlAbaFakturierung.designer.cs">
+      <DependentUpon>CtlAbaFakturierung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Abacus\KlientenStammdaten\CtlAbaKlientenStammdaten.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Abacus\KlientenStammdaten\CtlAbaKlientenStammdaten.designer.cs">
+      <DependentUpon>CtlAbaKlientenStammdaten.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Abacus\KlientenStammdaten\DataHandler.cs" />
+    <Compile Include="Abacus\KlientenStammdaten\Exporter.cs" />
+    <Compile Include="Abacus\KlientenStammdaten\ExporterResult.cs" />
+    <Compile Include="Abacus\KlientenStammdaten\Klient.cs" />
+    <Compile Include="Abacus\KlientenStammdaten\KlientenKonto\FibuClassificationWrapper.cs" />
+    <Compile Include="Abacus\KlientenStammdaten\KlientenKonto\Konto.cs" />
+    <Compile Include="Abacus\KlientenStammdaten\KlientenStammdatenException.cs" />
+    <Compile Include="Abacus\KlientenStammdaten\KlientExceptionPair.cs" />
+    <Compile Include="Abacus\KlientenStammdaten\Sozialberater.cs" />
+    <Compile Include="Abacus\KlientenStammdaten\StatusChangedEventArgs.cs" />
+    <Compile Include="Abacus\KlientenStammdaten\WebServiceHelper.cs" />
+    <Compile Include="Abacus\Mitarbeiter\CtlAbaMitarbeiter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Abacus\Mitarbeiter\CtlAbaMitarbeiter.designer.cs">
+      <DependentUpon>CtlAbaMitarbeiter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Abacus\Mitarbeiter\KAConRead.cs" />
+    <Compile Include="Abacus\Mitarbeiter\KAConUtil.cs" />
+    <Compile Include="Abacus\Mitarbeiter\KAConWrite.cs" />
+    <Compile Include="Abacus\Mitarbeiter\MitarbeiterDTO.cs" />
+    <Compile Include="Abacus\Mitarbeiter\MitarbeiterServiceAdapter.cs" />
+    <Compile Include="Abacus\Mitarbeiter\MitarbeiterServiceAdapterExcepiton.cs" />
+    <Compile Include="Abacus\Mitarbeiter\MitarbeiterServiceAdapterMock.cs" />
+    <Compile Include="Abacus\Mitarbeiter\TypeHelper.cs" />
+    <Compile Include="DTA_EZAG\BuchungsRecord.cs" />
+    <Compile Include="DTA_EZAG\DlgEzagInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DTA_EZAG\DtaHeader.cs" />
+    <Compile Include="DTA_EZAG\DtaPaymentInformation.cs" />
+    <Compile Include="DTA_EZAG\Iso20022RecordFactory.cs" />
+    <Compile Include="DTA_EZAG\EzagPaymentInformation.cs" />
+    <Compile Include="DTA_EZAG\Iso20022Order.cs" />
+    <Compile Include="DTA_EZAG\DtaOrder.cs" />
+    <Compile Include="DTA_EZAG\DtaRecord.cs" />
+    <Compile Include="DTA_EZAG\DtaRecord826.cs" />
+    <Compile Include="DTA_EZAG\DtaRecord827.cs" />
+    <Compile Include="DTA_EZAG\DtaRecord836.cs" />
+    <Compile Include="DTA_EZAG\DtaRecord890.cs" />
+    <Compile Include="DTA_EZAG\DTARecordFactory.cs" />
+    <Compile Include="DTA_EZAG\Ezag22.cs" />
+    <Compile Include="DTA_EZAG\Ezag24.cs" />
+    <Compile Include="DTA_EZAG\Ezag27.cs" />
+    <Compile Include="DTA_EZAG\Ezag28.cs" />
+    <Compile Include="DTA_EZAG\Ezag97.cs" />
+    <Compile Include="DTA_EZAG\EzagHeader.cs" />
+    <Compile Include="DTA_EZAG\EzagNoBsrRecord.cs" />
+    <Compile Include="DTA_EZAG\EzagOrder.cs" />
+    <Compile Include="DTA_EZAG\EzagRecord.cs" />
+    <Compile Include="DTA_EZAG\EzagRecordFactory.cs" />
+    <Compile Include="DTA_EZAG\IOrder.cs" />
+    <Compile Include="DTA_EZAG\Iso20022PaymentInformation.cs" />
+    <Compile Include="DTA_EZAG\pain_001_001_03_ch_02.cs" />
+    <Compile Include="DTA_EZAG\PaymentFatalException.cs" />
+    <Compile Include="DTA_EZAG\PaymentInformation.cs" />
+    <Compile Include="DTA_EZAG\PaymentWarningException.cs" />
+    <Compile Include="DTA_EZAG\Swox.cs" />
+    <Compile Include="DTA_EZAG\Utilities.cs" />
+    <Compile Include="Klientenbuchhaltung\ActivationException.cs" />
+    <Compile Include="Klientenbuchhaltung\TransferBelegResult.cs" />
+    <Compile Include="Klientenbuchhaltung\LogonException.cs" />
+    <Compile Include="Newod\Converter\LOVConverter.cs" />
+    <Compile Include="Newod\Converter\SAPConverter.cs" />
+    <Compile Include="Newod\CtlKiSSNewodKomplettImport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Newod\CtlKiSSNewodKomplettImport.Designer.cs">
+      <DependentUpon>CtlKiSSNewodKomplettImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Newod\CtlKiSSNewodMappingWeb.Designer.cs">
+      <DependentUpon>CtlKiSSNewodMappingWeb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Newod\CtlKiSSNewodMarkierungen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Newod\CtlKiSSNewodMutationen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Newod\CtlKiSSNewodProtokolle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Newod\CtlKiSSNewodProtokolle.Designer.cs">
+      <DependentUpon>CtlKiSSNewodProtokolle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Newod\CtlQueryNewodVerbindungenLoesen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Newod\CtlQueryNewodVerbindungenLoesen.Designer.cs">
+      <DependentUpon>CtlQueryNewodVerbindungenLoesen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Newod\DlgNewodMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Newod\DTO\BaPersonNewodFlags.cs" />
+    <Compile Include="Newod\DTO\FallLeistungUser.cs" />
+    <Compile Include="Newod\DTO\GetPersonRequest.cs" />
+    <Compile Include="Newod\DTO\GuiPerson.cs" />
+    <Compile Include="Newod\DTO\MarkFlags.cs" />
+    <Compile Include="Newod\DTO\PersonAdressDaten.cs" />
+    <Compile Include="Newod\DTO\PersonBasisDaten.cs" />
+    <Compile Include="Newod\BO\ServiceResult.cs" />
+    <Compile Include="Newod\Constants.cs" />
+    <Compile Include="Newod\CtlKiSSNewodMappingWeb.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Newod\DTO\BaPerson.cs" />
+    <Compile Include="Newod\DTO\Person.cs" />
+    <Compile Include="Newod\DTO\PersonSearchCriteria.cs" />
+    <Compile Include="Newod\CtlNewodAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Newod\CtlKiSSNewodMapping.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Newod\DTO\NewodPerson.cs" />
+    <Compile Include="Newod\FrmNewodAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Newod\FrmNewodAdmin.Designer.cs">
+      <DependentUpon>FrmNewodAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Newod\NewodUtils.cs" />
+    <Compile Include="Newod\Service\BaPersonService.cs" />
+    <Compile Include="Newod\Service\NewodPendenzService.cs" />
+    <Compile Include="Newod\Service\PersonService.cs" />
+    <Compile Include="Newod\Helpers\ArraySlicer.cs" />
+    <Compile Include="Newod\Service\NewodService.cs" />
+    <Compile Include="Newod\Web\ServiceInitializer.cs" />
+    <Compile Include="Newod\WSDL\NewodProxy.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Klientenbuchhaltung\Sesam\FrmSchnittstellenTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Klientenbuchhaltung\Sesam\FrmSchnittstellenTest.Designer.cs">
+      <DependentUpon>FrmSchnittstellenTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTA_EZAG\SozialDienst.cs" />
+    <Compile Include="Service References\AbacAddress200710\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AbacHierarchyAddress200710\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AbakusMitarbeiterWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AbacFibuClassification201100\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v6.2, Version=6.2.6.0, Culture=neutral, PublicKeyToken=79868b8147b5eae4, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Interop.SOK, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Services3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Build\Debug\Microsoft.Web.Services3.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpLibrary, Version=1.4.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KiSS.AssemblyInfo\BIAG.AssemblyInfo.csproj">
+      <Project>{C3A41F2E-FBF1-4628-8F6A-764A22252624}</Project>
+      <Name>BIAG.AssemblyInfo</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS.DBScheme\KiSS.DBScheme.csproj">
+      <Project>{48E78A43-B4AD-4426-9422-8ABB846CC345}</Project>
+      <Name>KiSS.DBScheme</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Infrastructure\Kiss.Infrastructure.csproj">
+      <Project>{94D23DEF-0BEC-4EAC-B6A8-A2AB6B3A0CF1}</Project>
+      <Name>Kiss.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kiss.Interfaces\Kiss.Interfaces.csproj">
+      <Project>{936877A8-EC00-4267-8C62-344062912497}</Project>
+      <Name>Kiss.Interfaces</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Common\KiSS4.Common.csproj">
+      <Project>{B9295AD3-0104-4E8D-88E6-14B4D2EDD647}</Project>
+      <Name>KiSS4.Common</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.DB\KiSS4.DB.csproj">
+      <Project>{94EF0808-6193-443F-ACE3-A54ABC4BDE8D}</Project>
+      <Name>KiSS4.DB</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Dokument\KiSS4.Dokument.csproj">
+      <Project>{25932622-2762-49B9-9FF6-60B623E28111}</Project>
+      <Name>KiSS4.Dokument</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\KiSS4.Gui\KiSS4.Gui.csproj">
+      <Project>{9AB1DBC3-F48B-4CE0-A557-4D3B46149A98}</Project>
+      <Name>KiSS4.Gui</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Abacus\ASCII\CtlAbaLeistungsdaten.resx">
+      <DependentUpon>CtlAbaLeistungsdaten.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Abacus\ASCII\CtlAbaStundenlohn.resx">
+      <DependentUpon>CtlAbaStundenlohn.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Abacus\CtlAbaLogView.resx">
+      <DependentUpon>CtlAbaLogView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Abacus\ASCII\CtlAbaFakturierung.resx">
+      <DependentUpon>CtlAbaFakturierung.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Abacus\FrmSchnittstellenAbacus.resx">
+      <DependentUpon>FrmSchnittstellenAbacus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Abacus\KlientenStammdaten\CtlAbaKlientenStammdaten.resx">
+      <DependentUpon>CtlAbaKlientenStammdaten.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Abacus\Mitarbeiter\CtlAbaMitarbeiter.resx">
+      <DependentUpon>CtlAbaMitarbeiter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DTA_EZAG\DlgEzagInfo.resx">
+      <DependentUpon>DlgEzagInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newod\CtlKiSSNewodKomplettImport.resx">
+      <DependentUpon>CtlKiSSNewodKomplettImport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newod\CtlKiSSNewodMarkierungen.resx">
+      <DependentUpon>CtlKiSSNewodMarkierungen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newod\CtlKiSSNewodMappingWeb.resx">
+      <DependentUpon>CtlKiSSNewodMappingWeb.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newod\CtlKiSSNewodMapping.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CtlKiSSNewodMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newod\CtlKiSSNewodMutationen.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CtlKiSSNewodMutationen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newod\CtlKiSSNewodProtokolle.resx">
+      <DependentUpon>CtlKiSSNewodProtokolle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newod\CtlQueryNewodVerbindungenLoesen.resx">
+      <DependentUpon>CtlQueryNewodVerbindungenLoesen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newod\DlgNewodMapping.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DlgNewodMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newod\CtlNewodAdmin.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CtlNewodAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Newod\FrmNewodAdmin.resx">
+      <DependentUpon>FrmNewodAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Klientenbuchhaltung\Sesam\FrmSchnittstellenTest.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmSchnittstellenTest.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Abacus\WSDL\Address_2007_10\AbaConnectTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Abacus\WSDL\Address_2007_10\Address.wsdl" />
+    <None Include="Abacus\WSDL\Address_2007_10\Address.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Abacus\WSDL\Address_2007_10\AddressTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Abacus\WSDL\Address_2007_10\xmlmime.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Abacus\WSDL\EmployeeQuery.wsdl">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Abacus\WSDL\HierarchyAddress_2007_10\AbaConnectTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Abacus\WSDL\HierarchyAddress_2007_10\HierarchyAddress.wsdl" />
+    <None Include="Abacus\WSDL\HierarchyAddress_2007_10\HierarchyAddress.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Abacus\WSDL\HierarchyAddress_2007_10\HierarchyAddressTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Abacus\WSDL\HierarchyAddress_2007_10\xmlmime.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.config" />
+    <None Include="DTA_EZAG\pain.001.001.03.ch.02.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Newod\WSDL\client.cmd" />
+    <None Include="Newod\WSDL\MI_CheckPersonOut.wsdl" />
+    <None Include="Newod\WSDL\MI_GetMutationenOut.wsdl" />
+    <None Include="Newod\WSDL\MI_GetPersonMulti_eChOut.wsdl" />
+    <None Include="Newod\WSDL\MI_MarkPersonOut.wsdl" />
+    <None Include="Newod\WSDL\MI_SearchPerson_Out.wsdl" />
+    <None Include="Properties\DataSources\KiSS4.Schnittstellen.Newod.DTO.BaPerson.datasource" />
+    <None Include="Properties\DataSources\KiSS4.Schnittstellen.Newod.DTO.NewodPerson.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AbacAddress200710\AbaConnectTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AbacAddress200710\Address.wsdl" />
+    <None Include="Service References\AbacAddress200710\Address.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AbacAddress200710\AddressTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AbacAddress200710\KiSS4.Schnittstellen.AbacAddress200710.CheckInteroperabilityResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacAddress200710\KiSS4.Schnittstellen.AbacAddress200710.defaultValuesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacAddress200710\KiSS4.Schnittstellen.AbacAddress200710.deleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacAddress200710\KiSS4.Schnittstellen.AbacAddress200710.findResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacAddress200710\KiSS4.Schnittstellen.AbacAddress200710.insertResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacAddress200710\KiSS4.Schnittstellen.AbacAddress200710.interoperabilityTestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacAddress200710\KiSS4.Schnittstellen.AbacAddress200710.isAliveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacAddress200710\KiSS4.Schnittstellen.AbacAddress200710.isFinishedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacAddress200710\KiSS4.Schnittstellen.AbacAddress200710.IsSessionAliveResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacAddress200710\KiSS4.Schnittstellen.AbacAddress200710.LoginLogoutResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacAddress200710\KiSS4.Schnittstellen.AbacAddress200710.loginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacAddress200710\KiSS4.Schnittstellen.AbacAddress200710.logoutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacAddress200710\KiSS4.Schnittstellen.AbacAddress200710.pingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacAddress200710\KiSS4.Schnittstellen.AbacAddress200710.PingType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacAddress200710\KiSS4.Schnittstellen.AbacAddress200710.ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacAddress200710\KiSS4.Schnittstellen.AbacAddress200710.saveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacAddress200710\KiSS4.Schnittstellen.AbacAddress200710.updateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacAddress200710\xmlmime.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AbacFibuClassification201100\KiSS4.Schnittstellen.AbacFibuClassification201100.CheckInteroperabilityResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacFibuClassification201100\KiSS4.Schnittstellen.AbacFibuClassification201100.IsSessionAliveResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacFibuClassification201100\KiSS4.Schnittstellen.AbacFibuClassification201100.LoginLogoutResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacFibuClassification201100\KiSS4.Schnittstellen.AbacFibuClassification201100.PingType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacFibuClassification201100\KiSS4.Schnittstellen.AbacFibuClassification201100.ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacHierarchyAddress200710\AbaConnectTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AbacHierarchyAddress200710\HierarchyAddress.wsdl" />
+    <None Include="Service References\AbacHierarchyAddress200710\HierarchyAddress.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AbacHierarchyAddress200710\HierarchyAddressTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AbacHierarchyAddress200710\KiSS4.Schnittstellen.AbacHierarchyAddress200710.CheckInteroperabilityResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacHierarchyAddress200710\KiSS4.Schnittstellen.AbacHierarchyAddress200710.defaultValuesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacHierarchyAddress200710\KiSS4.Schnittstellen.AbacHierarchyAddress200710.deleteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacHierarchyAddress200710\KiSS4.Schnittstellen.AbacHierarchyAddress200710.findResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacHierarchyAddress200710\KiSS4.Schnittstellen.AbacHierarchyAddress200710.insertResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacHierarchyAddress200710\KiSS4.Schnittstellen.AbacHierarchyAddress200710.interoperabilityTestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacHierarchyAddress200710\KiSS4.Schnittstellen.AbacHierarchyAddress200710.isAliveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacHierarchyAddress200710\KiSS4.Schnittstellen.AbacHierarchyAddress200710.isFinishedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacHierarchyAddress200710\KiSS4.Schnittstellen.AbacHierarchyAddress200710.IsSessionAliveResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacHierarchyAddress200710\KiSS4.Schnittstellen.AbacHierarchyAddress200710.LoginLogoutResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacHierarchyAddress200710\KiSS4.Schnittstellen.AbacHierarchyAddress200710.loginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacHierarchyAddress200710\KiSS4.Schnittstellen.AbacHierarchyAddress200710.logoutResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacHierarchyAddress200710\KiSS4.Schnittstellen.AbacHierarchyAddress200710.pingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacHierarchyAddress200710\KiSS4.Schnittstellen.AbacHierarchyAddress200710.PingType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacHierarchyAddress200710\KiSS4.Schnittstellen.AbacHierarchyAddress200710.ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacHierarchyAddress200710\KiSS4.Schnittstellen.AbacHierarchyAddress200710.saveResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacHierarchyAddress200710\KiSS4.Schnittstellen.AbacHierarchyAddress200710.updateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AbacHierarchyAddress200710\xmlmime.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AbakusMitarbeiterWebService\EmployeeQuery.wsdl" />
+    <None Include="Service References\AbakusMitarbeiterWebService\KiSS4.Schnittstellen.AbakusMitarbeiterWebService.SalaryRecord.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AbacFibuClassification201100\AbaConnectTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AbacFibuClassification201100\FibuClassification.wsdl" />
+    <None Include="Service References\AbacFibuClassification201100\FibuClassification.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AbacFibuClassification201100\FibuClassificationTypes.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AbacFibuClassification201100\xmlmime.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Klientenbuchhaltung\Abacus\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AbacAddress200710\" />
+    <WCFMetadataStorage Include="Service References\AbacHierarchyAddress200710\" />
+    <WCFMetadataStorage Include="Service References\AbakusMitarbeiterWebService\" />
+    <WCFMetadataStorage Include="Service References\AbacFibuClassification201100\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AbakusMitarbeiterWebService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AbakusMitarbeiterWebService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AbakusMitarbeiterWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AbacFibuClassification201100\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AbacFibuClassification201100\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AbacFibuClassification201100\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AbacAddress200710\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AbacAddress200710\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AbacAddress200710\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AbacHierarchyAddress200710\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AbacHierarchyAddress200710\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AbacHierarchyAddress200710\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+</Project>

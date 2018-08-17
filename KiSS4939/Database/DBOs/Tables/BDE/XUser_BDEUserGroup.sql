@@ -1,0 +1,28 @@
+CREATE TABLE [dbo].[XUser_BDEUserGroup](
+	[UserID] [int] NOT NULL,
+	[BDEUserGroupID] [int] NOT NULL,
+	[XUser_BDEUserGroupTS] [timestamp] NOT NULL,
+ CONSTRAINT [PK_XUser_BDEUserGroup] PRIMARY KEY CLUSTERED 
+(
+	[UserID] ASC,
+	[BDEUserGroupID] ASC
+) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+ALTER TABLE [dbo].[XUser_BDEUserGroup] ADD  CONSTRAINT [FK_XUser_BDEUserGroup_XUser] FOREIGN KEY([UserID])
+REFERENCES [XUser] ([UserID])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+GO
+
+ALTER TABLE [dbo].[XUser_BDEUserGroup] CHECK CONSTRAINT [FK_XUser_BDEUserGroup_XUser]
+GO
+
+ALTER TABLE [dbo].[XUser_BDEUserGroup] ADD  CONSTRAINT [FK_XUser_UserGroup_BDEUserGroup] FOREIGN KEY([BDEUserGroupID])
+REFERENCES [BDEUserGroup] ([BDEUserGroupID])
+GO
+
+ALTER TABLE [dbo].[XUser_BDEUserGroup] CHECK CONSTRAINT [FK_XUser_UserGroup_BDEUserGroup]
+GO

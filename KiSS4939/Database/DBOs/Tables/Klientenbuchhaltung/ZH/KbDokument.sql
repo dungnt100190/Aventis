@@ -1,0 +1,43 @@
+﻿CREATE TABLE [dbo].[KbDokument](
+	[KbDokumentID] [int] IDENTITY(1,1) NOT NULL,
+	[KbBuchungID] [int] NULL,
+	[KbBuchungBruttoID] [int] NULL,
+	[DocumentID] [int] NULL,
+	[Stichwort] [varchar](200) NULL,
+	[KbDocumentTS] [timestamp] NOT NULL,
+ CONSTRAINT [PK_KbDokument] PRIMARY KEY CLUSTERED 
+(
+	[KbDokumentID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING ON
+GO
+
+/****** Object:  Index [IX_KbDokument_KbBuchungBruttoID]    Script Date: 11/23/2011 15:55:44 ******/
+CREATE NONCLUSTERED INDEX [IX_KbDokument_KbBuchungBruttoID] ON [dbo].[KbDokument] 
+(
+	[KbBuchungBruttoID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO
+
+/****** Object:  Index [IX_KbDokument_KbBuchungID]    Script Date: 11/23/2011 15:55:44 ******/
+CREATE NONCLUSTERED INDEX [IX_KbDokument_KbBuchungID] ON [dbo].[KbDokument] 
+(
+	[KbBuchungID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, SORT_IN_TEMPDB = OFF, IGNORE_DUP_KEY = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON, FILLFACTOR = 90) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[KbDokument]  WITH CHECK ADD  CONSTRAINT [FK_KbDokument_KbBuchung] FOREIGN KEY([KbBuchungID])
+REFERENCES [dbo].[KbBuchung] ([KbBuchungID])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[KbDokument] CHECK CONSTRAINT [FK_KbDokument_KbBuchung]
+GO
+ALTER TABLE [dbo].[KbDokument]  WITH CHECK ADD  CONSTRAINT [FK_KbDokument_KbBuchungBrutto] FOREIGN KEY([KbBuchungBruttoID])
+REFERENCES [dbo].[KbBuchungBrutto] ([KbBuchungBruttoID])
+ON UPDATE CASCADE
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[KbDokument] CHECK CONSTRAINT [FK_KbDokument_KbBuchungBrutto]

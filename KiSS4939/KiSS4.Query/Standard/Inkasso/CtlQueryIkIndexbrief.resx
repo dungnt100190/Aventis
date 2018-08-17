@@ -1,0 +1,813 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>-------------------------------------------------------------------------------
+-- init vars
+-------------------------------------------------------------------------------
+DECLARE
+  @Delete BIT,
+  @UserID INT,
+  @IkRechtstitelID INT,
+  @OldRTID INT,
+  @NummerID INT,
+  @IkForderungID INT,
+  @BaPersonID INT,
+  @Teuerungseinsprache BIT,
+  @ALBVBerechtigt BIT,
+  @TeilALBV BIT,
+  @Unterstuetzungsfall BIT,
+  @Forderungstitel VARCHAR(200),
+  @Betrag_Basis MONEY,
+  @Betrag_Berechnet MONEY,
+  @Betrag_Berechnet_Old MONEY,
+  @Betrag_KiZu MONEY,
+  @TeilALBVBetrag MONEY,
+  @VornameName VARCHAR(200),
+  @Geburtsdatum DATETIME,
+  @Date DATETIME, 
+  @Basisindex MONEY,
+  @NovIndex MONEY,
+  @NovIndex_Old MONEY,
+  @AnpassgIndex INT,
+  @Rundung INT,
+  @IndexCode INT,
+  @Teuerung MONEY;
+
+SET @Date = {0};
+SET @AnpassgIndex = {1};
+SET @UserID = {2};
+SET @Delete = {3};
+
+/*
+-- DEBUG
+SET @Date = '20160101';
+SET @AnpassgIndex = 1;
+SET @UserID = 2091;
+SET @Delete = 0;
+--*/
+
+-------------------------------------------------------------------------------
+-- check if delete
+-------------------------------------------------------------------------------
+IF (@Delete = 0)
+BEGIN
+  CREATE TABLE #GLBs 
+  (
+    ID INT IDENTITY(1,1) NOT NULL,
+    IkRechtstitelID INT,
+    NummerID INT,
+    BaPersonID INT,
+    IkForderungID INT,
+    Teuerungseinsprache BIT,
+    ALBVBerechtigt BIT,
+    TeilALBV BIT,
+    Unterstuetzungsfall BIT,
+    Forderungstitel VARCHAR(200),
+    Betrag_Basis MONEY,
+    Betrag_Berechnet MONEY,
+    Betrag_KiZu MONEY,
+    TeilALBVBetrag MONEY,
+    VornameName VARCHAR(200),
+    Geburtsdatum DATETIME,
+    IndexPunkte_Neu MONEY,
+    IndexPunkte_Alt MONEY,
+    Teuerung MONEY,
+    Betrag_Berechnet_Old MONEY,
+    CONSTRAINT [PK_ID] PRIMARY KEY CLUSTERED(ID) 
+  );
+    
+  DECLARE CursorChilds CURSOR FAST_FORWARD FOR
+    SELECT ALBVBerechtigt, 
+           Unterstuetzungsfall,
+           F.IkRechtstitelID, 
+           F.IkForderungID, 
+           F.BaPersonID, 
+           F.TeuerungsEinsprache, 
+           FLOV.Text,
+           F.Betrag,
+           F.TeilALBV,
+           F.TeilALBVBetrag,
+           R.IndexStandPunkte,
+           (SELECT FKZ.Betrag 
+            FROM dbo.IkForderung FKZ WITH (READUNCOMMITTED)
+            WHERE (FKZ.DatumGueltigBis IS NULL OR FKZ.DatumGueltigBis &gt; @Date)
+              AND FKZ.IkForderungID = (SELECT TOP 1 IkForderungID
+                                       FROM dbo.IkForderung FF WITH (READUNCOMMITTED)
+                                       WHERE FF.IkRechtstitelID = F.IkRechtstitelID
+                                         AND FF.BaPersonID = F.BaPersonID
+                                         AND FF.IkForderungPeriodischCode = 3
+                                         AND FF.DatumAnpassenAb &lt; @Date
+                                       ORDER BY FF.DatumAnpassenAb DESC)),
+           ISNULL(P.Vorname + ' ', '') + P.Name, 
+           P.Geburtsdatum,
+           R.IkIndexRundenCode,
+           R.IkIndexTypCode
+    FROM dbo.IkForderung           F    WITH (READUNCOMMITTED)
+      INNER JOIN dbo.IkRechtstitel R    WITH (READUNCOMMITTED) ON R.IkRechtstitelID = F.IkRechtstitelID
+      LEFT  JOIN dbo.FaLeistung    LST  WITH (READUNCOMMITTED) ON LST.FaLeistungID = R.FaLeistungID
+      LEFT  JOIN dbo.XLovCode      FLOV WITH (READUNCOMMITTED) ON FLOV.LOVName = 'IkForderungPeriodisch' 
+                                                              AND FLOV.Code = F.IkForderungPeriodischCode
+      LEFT  JOIN dbo.BaPerson      P    WITH (READUNCOMMITTED) ON P.BaPersonID = F.BaPersonID
+    WHERE F.IkForderungPeriodischCode IN (1, 2)
+      AND (@UserID = 0 OR LST.UserID = @UserID)
+      AND F.Betrag &gt; 0
+      AND (F.DatumGueltigBis IS NULL OR F.DatumGueltigBis &gt; @Date)
+      AND F.IkAnpassungsRegelCode = @AnpassgIndex
+      AND F.IkForderungID = (SELECT TOP 1 FF.IkForderungID 
+                             FROM dbo.IkForderung FF WITH (READUNCOMMITTED)
+                             WHERE FF.IkRechtstitelID = F.IkRechtstitelID
+                               AND FF.BaPersonID = F.BaPersonID
+                               AND FF.IkForderungPeriodischCode = F.IkForderungPeriodischCode
+                               AND FF.DatumAnpassenAb &lt; @Date
+                             ORDER BY FF.DatumAnpassenAb DESC)
+      AND NOT EXISTS (SELECT TOP 1 
+                             FF.IkForderungID 
+                      FROM dbo.IkForderung FF WITH(READUNCOMMITTED)
+                      WHERE FF.IkRechtstitelID = F.IkRechtstitelID
+                        AND FF.BaPersonID = F.BaPersonID
+                        AND FF.IkForderungPeriodischCode = F.IkForderungPeriodischCode
+                        AND ISNULL(FF.Betrag, 0) = 0
+                        AND FF.DatumAnpassenAb &lt; @Date
+                        AND FF.DatumAnpassenAb &gt; F.DatumAnpassenAb
+                        AND (FF.DatumGueltigBis IS NULL OR FF.DatumGueltigBis &lt; @Date))
+      AND NOT EXISTS (SELECT TOP 1 
+                             FF.IkForderungID 
+                      FROM dbo.IkForderung FF WITH(READUNCOMMITTED)
+                      WHERE FF.IkRechtstitelID = F.IkRechtstitelID
+                        AND FF.BaPersonID = F.BaPersonID
+                        AND FF.IkForderungPeriodischCode = F.IkForderungPeriodischCode
+                        AND FF.DatumAnpassenAb = @Date
+                        AND FF.IkAnpassungsRegelCode = @AnpassgIndex
+                        AND FF.IkAnpassungsGrundCode = 2)
+    ORDER BY F.IkRechtstitelID ASC, P.Geburtsdatum ASC;
+  
+  OPEN CursorChilds;
+
+  SET @NummerID = 0;
+  SET @OldRTID = -1;
+  
+  WHILE (1 = 1)
+  BEGIN
+    FETCH NEXT 
+    FROM CursorChilds 
+    INTO @ALBVBerechtigt, @Unterstuetzungsfall, @IkRechtstitelID, @IkForderungID, @BaPersonID, @Teuerungseinsprache, 
+         @Forderungstitel, @Betrag_Basis, @TeilALBV, @TeilALBVBetrag, @Basisindex, @Betrag_KiZu, @VornameName, @Geburtsdatum, @Rundung, @IndexCode;
+    
+    IF (@@FETCH_STATUS != 0)
+    BEGIN
+      BREAK;
+    END;
+    
+    SET @NummerID = @NummerID + 1;
+    
+    IF (@OldRTID != @IkRechtstitelID)
+    BEGIN
+      SET @NummerID = 1;
+    END;
+
+    -- es wird immer der November-Index des Vorjahres genommen
+    SET @NovIndex = dbo.fnIkGetLandesindexWert(@IndexCode, (YEAR(@Date) - 1), 11);
+    
+    -- es wird immer der November-Index des Vor-Vorjahres genommen
+    SET @NovIndex_Old = dbo.fnIkGetLandesindexWert(@IndexCode, (YEAR(@Date) - 2), 11);
+    
+    SET @Teuerung = ROUND(ROUND(((@NovIndex / ISNULL(@NovIndex_Old, 100)) - 1) * 10000, 0) / 100, 1);
+    
+    IF (@AnpassgIndex = 1)
+    BEGIN
+      SET @Betrag_Berechnet = dbo.fnIkAlimenteRunden(@Rundung, @Betrag_Basis * ISNULL(@NovIndex, 100) / ISNULL(@Basisindex, 100));
+    END
+    ELSE IF (@AnpassgIndex = 2)
+    BEGIN
+      SET @Betrag_Berechnet = dbo.fnIkAlimenteRunden(@Rundung, @Betrag_Basis * ISNULL(@NovIndex, 100) / ISNULL(@NovIndex_Old, 100));
+    END
+    ELSE
+    BEGIN
+      SET @Betrag_Berechnet = @Betrag_Basis;
+    END;
+
+    SET @Betrag_Berechnet_Old = @Betrag_Basis;
+
+    INSERT INTO #GLBs (ALBVBerechtigt, TeilALBV, Unterstuetzungsfall, IkRechtstitelID, IkForderungID, NummerID, BaPersonID, 
+                       Teuerungseinsprache, Forderungstitel, Betrag_Basis, Betrag_Berechnet, Betrag_KiZu,
+                       TeilALBVBetrag, VornameName, 
+                       Geburtsdatum, IndexPunkte_Neu, IndexPunkte_Alt, Teuerung, Betrag_Berechnet_Old)
+    VALUES (@ALBVBerechtigt, @TeilALBV, @Unterstuetzungsfall, @IkRechtstitelID, @IkForderungID, @NummerID, @BaPersonID, 
+            @Teuerungseinsprache, @Forderungstitel, @Betrag_Basis, @Betrag_Berechnet, @Betrag_KiZu,
+            @TeilALBVBetrag, @VornameName, 
+            @Geburtsdatum, @NovIndex, @NovIndex_Old, @Teuerung, @Betrag_Berechnet_Old);
+    
+    SET @OldRTID = @IkRechtstitelID;
+  END;
+  
+  CLOSE CursorChilds;
+  DEALLOCATE CursorChilds;
+  
+  -----------------------------------------------------------------------------
+  -- output
+  -----------------------------------------------------------------------------
+  SELECT Schuldner_Anrede             = CASE PRS.GeschlechtCode
+                                          WHEN 1 THEN 'Herr'
+                                          WHEN 2 THEN 'Frau'
+                                          ELSE ''
+                                        END,
+         Schuldner_Name               = PRS.Name,
+         Schuldner_Vorname            = PRS.Vorname,
+         Schuldner_Zusatz             = PRS.WohnsitzAdressZusatz,
+         Schuldner_Strasse            = PRS.WohnsitzStrasseHausNr,
+         Schuldner_Postfach           = PRS.WohnsitzPostfach,
+         Schuldner_PLZ                = PRS.WohnsitzPLZ,
+         Schuldner_Ort                = PRS.WohnsitzOrt,
+         Schuldner_PersonenNummer     = PRS.BaPersonID,
+         Schuldner_WohnsitzMehrzeilig = PRS.WohnsitzMehrzeilig,
+         Falltraeger_Name             = FT.Name,
+         Falltraeger_Vorname          = FT.Vorname,
+         Falltraeger_PersonenNummer   = FT.BaPersonID,
+         Falltraeger_FallNummer       = FLL.FaFallID,
+         IkRechtstitelID              = RT.IkRechtstitelID,
+         RT_Typ                       = dbo.fnLOVText('IkRechtstitel', RT.IkRechtstitelTypCode),
+         RT_IndexTyp                  = dbo.fnLOVText('IkIndexTyp', RT.IkIndexTypCode),
+         RT_Datum                     = RT.RechtstitelDatumVon,
+         RT_Teuerungseinsprache       = NULL,
+         RT_IndexStand                = SUBSTRING(CONVERT(VARCHAR(10), RT.IndexStandVom, 104), 4, 7),
+         RT_IndexPunkte               = RT.IndexStandPunkte,
+         
+         ----------------------------------------------------------------------
+         -- Total
+         ----------------------------------------------------------------------
+         Total_BetragBerechnet_Alt = ISNULL(CH01.Betrag_Berechnet_Old, 0) + ISNULL(CH02.Betrag_Berechnet_Old, 0)
+                                   + ISNULL(CH03.Betrag_Berechnet_Old, 0) + ISNULL(CH04.Betrag_Berechnet_Old, 0)
+                                   + ISNULL(CH05.Betrag_Berechnet_Old, 0) + ISNULL(CH06.Betrag_Berechnet_Old, 0)
+                                   + ISNULL(CH07.Betrag_Berechnet_Old, 0) + ISNULL(CH08.Betrag_Berechnet_Old, 0)
+                                   + ISNULL(CH09.Betrag_Berechnet_Old, 0) + ISNULL(CH10.Betrag_Berechnet_Old, 0),
+         
+         Total_BetragBerechnet     = ISNULL(CH01.Betrag_Berechnet, 0) + ISNULL(CH02.Betrag_Berechnet, 0)
+                                   + ISNULL(CH03.Betrag_Berechnet, 0) + ISNULL(CH04.Betrag_Berechnet, 0) + ISNULL(CH05.Betrag_Berechnet, 0)
+                                   + ISNULL(CH06.Betrag_Berechnet, 0) + ISNULL(CH07.Betrag_Berechnet, 0) + ISNULL(CH08.Betrag_Berechnet, 0)
+                                   + ISNULL(CH09.Betrag_Berechnet, 0) + ISNULL(CH10.Betrag_Berechnet, 0),
+         
+         Total_BetragKiZu          = ISNULL(CH01.Betrag_KiZu, 0) + ISNULL(CH02.Betrag_KiZu, 0) + ISNULL(CH03.Betrag_KiZu, 0)
+                                   + ISNULL(CH04.Betrag_KiZu, 0) + ISNULL(CH05.Betrag_KiZu, 0) + ISNULL(CH06.Betrag_KiZu, 0)
+                                   + ISNULL(CH07.Betrag_KiZu, 0) + ISNULL(CH08.Betrag_KiZu, 0) + ISNULL(CH09.Betrag_KiZu, 0)
+                                   + ISNULL(CH10.Betrag_KiZu, 0),
+         
+         Total_InklKiZu            = ISNULL(CH01.Betrag_Berechnet, 0) + ISNULL(CH02.Betrag_Berechnet, 0)
+                                   + ISNULL(CH03.Betrag_Berechnet, 0) + ISNULL(CH04.Betrag_Berechnet, 0) + ISNULL(CH05.Betrag_Berechnet, 0)
+                                   + ISNULL(CH06.Betrag_Berechnet, 0) + ISNULL(CH07.Betrag_Berechnet, 0) + ISNULL(CH08.Betrag_Berechnet, 0)
+                                   + ISNULL(CH09.Betrag_Berechnet, 0) + ISNULL(CH10.Betrag_Berechnet, 0) + ISNULL(CH01.Betrag_KiZu, 0)
+                                   + ISNULL(CH02.Betrag_KiZu, 0) + ISNULL(CH03.Betrag_KiZu, 0) + ISNULL(CH04.Betrag_KiZu, 0)
+                                   + ISNULL(CH05.Betrag_KiZu, 0) + ISNULL(CH06.Betrag_KiZu, 0) + ISNULL(CH07.Betrag_KiZu, 0)
+                                   + ISNULL(CH08.Betrag_KiZu, 0) + ISNULL(CH09.Betrag_KiZu, 0) + ISNULL(CH10.Betrag_KiZu, 0),
+         
+         ----------------------------------------------------------------------
+         -- 1. Gläubiger
+         ----------------------------------------------------------------------
+         Glb01_BaPersonID           = CH01.BaPersonID,
+         Glb01_VornameName          = CH01.VornameName,
+         Glb01_Geburtsdatum         = CH01.Geburtsdatum,
+         Glb01_IkForderungID        = CH01.IkForderungID,
+         Glb01_Forderungstitel      = CH01.Forderungstitel,
+         Glb01_BetragBasis          = CH01.Betrag_Basis,
+         Glb01_BetragBerechnet      = CH01.Betrag_Berechnet,
+         Glb01_BetragKiZu           = CH01.Betrag_KiZu,
+         Glb01_TeilALBV             = CH01.TeilALBVBetrag,
+         Glb01_ALBVBerechtigt       = CASE 
+                                        WHEN CH01.ALBVBerechtigt = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb01_Unterstuetzungsfall  = CASE 
+                                        WHEN CH01.Unterstuetzungsfall = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb01_Teuerungseinsprache  = CASE 
+                                        WHEN CH01.Teuerungseinsprache = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb01_IndexPunkte_Neu      = CH01.IndexPunkte_Neu,
+         Glb01_IndexPunkte_Alt      = CH01.IndexPunkte_Alt,
+         Glb01_Teuerung             = CH01.Teuerung,
+         Glb01_Betrag_Berechnet_Alt = CH01.Betrag_Berechnet_Old,
+
+         ----------------------------------------------------------------------
+         -- 2. Gläubiger
+         ----------------------------------------------------------------------
+         Glb02_BaPersonID           = CH02.BaPersonID,
+         Glb02_VornameName          = CH02.VornameName,
+         Glb02_Geburtsdatum         = CH02.Geburtsdatum,
+         Glb02_IkForderungID        = CH02.IkForderungID,
+         Glb02_Forderungstitel      = CH02.Forderungstitel,
+         Glb02_BetragBasis          = CH02.Betrag_Basis,
+         Glb02_BetragBerechnet      = CH02.Betrag_Berechnet,
+         Glb02_BetragKiZu           = CH02.Betrag_KiZu,
+         Glb02_TeilALBV             = CH02.TeilALBVBetrag,
+         Glb02_ALBVBerechtigt       = CASE 
+                                        WHEN CH02.ALBVBerechtigt = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb02_Unterstuetzungsfall  = CASE 
+                                        WHEN CH02.Unterstuetzungsfall = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb02_Teuerungseinsprache  = CASE 
+                                        WHEN CH02.Teuerungseinsprache = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb02_IndexPunkte_Neu      = CH02.IndexPunkte_Neu,
+         Glb02_IndexPunkte_Alt      = CH02.IndexPunkte_Alt,
+         Glb02_Teuerung             = CH02.Teuerung,
+         Glb02_Betrag_Berechnet_Alt = CH02.Betrag_Berechnet_Old,
+
+         ----------------------------------------------------------------------
+         -- 3. Gläubiger
+         ----------------------------------------------------------------------
+         Glb03_BaPersonID           = CH03.BaPersonID,
+         Glb03_VornameName          = CH03.VornameName,
+         Glb03_Geburtsdatum         = CH03.Geburtsdatum,
+         Glb03_IkForderungID        = CH03.IkForderungID,
+         Glb03_Forderungstitel      = CH03.Forderungstitel,
+         Glb03_BetragBasis          = CH03.Betrag_Basis,
+         Glb03_BetragBerechnet      = CH03.Betrag_Berechnet,
+         Glb03_BetragKiZu           = CH03.Betrag_KiZu,
+         Glb03_TeilALBV             = CH03.TeilALBVBetrag,
+         Glb03_ALBVBerechtigt       = CASE 
+                                        WHEN CH03.ALBVBerechtigt = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb03_Unterstuetzungsfall  = CASE 
+                                        WHEN CH03.Unterstuetzungsfall = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb03_Teuerungseinsprache  = CASE 
+                                        WHEN CH03.Teuerungseinsprache = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb03_IndexPunkte_Neu      = CH03.IndexPunkte_Neu,
+         Glb03_IndexPunkte_Alt      = CH03.IndexPunkte_Alt,
+         Glb03_Teuerung             = CH03.Teuerung,
+         Glb03_Betrag_Berechnet_Alt = CH03.Betrag_Berechnet_Old,
+         
+         ----------------------------------------------------------------------
+         -- 4. Gläubiger
+         ----------------------------------------------------------------------
+         Glb04_BaPersonID           = CH04.BaPersonID,
+         Glb04_VornameName          = CH04.VornameName,
+         Glb04_Geburtsdatum         = CH04.Geburtsdatum,
+         Glb04_IkForderungID        = CH04.IkForderungID,
+         Glb04_Forderungstitel      = CH04.Forderungstitel,
+         Glb04_BetragBasis          = CH04.Betrag_Basis,
+         Glb04_BetragBerechnet      = CH04.Betrag_Berechnet,
+         Glb04_BetragKiZu           = CH04.Betrag_KiZu,
+         Glb04_TeilALBV             = CH04.TeilALBVBetrag,
+         Glb04_ALBVBerechtigt       = CASE 
+                                        WHEN CH04.ALBVBerechtigt = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb04_Unterstuetzungsfall  = CASE 
+                                        WHEN CH04.Unterstuetzungsfall = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb04_Teuerungseinsprache  = CASE 
+                                        WHEN CH04.Teuerungseinsprache = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb04_IndexPunkte_Neu      = CH04.IndexPunkte_Neu,
+         Glb04_IndexPunkte_Alt      = CH04.IndexPunkte_Alt,
+         Glb04_Teuerung             = CH04.Teuerung,
+         Glb04_Betrag_Berechnet_Alt = CH04.Betrag_Berechnet_Old,
+
+         ----------------------------------------------------------------------
+         -- 5. Gläubiger
+         ----------------------------------------------------------------------
+         Glb05_BaPersonID           = CH05.BaPersonID,
+         Glb05_VornameName          = CH05.VornameName,
+         Glb05_Geburtsdatum         = CH05.Geburtsdatum,
+         Glb05_IkForderungID        = CH05.IkForderungID,
+         Glb05_Forderungstitel      = CH05.Forderungstitel,
+         Glb05_BetragBasis          = CH05.Betrag_Basis,
+         Glb05_BetragBerechnet      = CH05.Betrag_Berechnet,
+         Glb05_BetragKiZu           = CH05.Betrag_KiZu,
+         Glb05_TeilALBV             = CH05.TeilALBVBetrag,
+         Glb05_ALBVBerechtigt       = CASE 
+                                        WHEN CH05.ALBVBerechtigt = 1 THEN 'Ja'
+                                         ELSE 'Nein'
+                                      END,
+         Glb05_Unterstuetzungsfall  = CASE 
+                                        WHEN CH05.Unterstuetzungsfall = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb05_Teuerungseinsprache  = CASE 
+                                        WHEN CH05.Teuerungseinsprache = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb05_IndexPunkte_Neu      = CH05.IndexPunkte_Neu,
+         Glb05_IndexPunkte_Alt      = CH05.IndexPunkte_Alt,
+         Glb05_Teuerung             = CH05.Teuerung,
+         Glb05_Betrag_Berechnet_Alt = CH05.Betrag_Berechnet_Old,
+
+         ----------------------------------------------------------------------
+         -- 6. Gläubiger
+         ----------------------------------------------------------------------
+         Glb06_BaPersonID           = CH06.BaPersonID,
+         Glb06_VornameName          = CH06.VornameName,
+         Glb06_Geburtsdatum         = CH06.Geburtsdatum,
+         Glb06_IkForderungID        = CH06.IkForderungID,
+         Glb06_Forderungstitel      = CH06.Forderungstitel,
+         Glb06_BetragBasis          = CH06.Betrag_Basis,
+         Glb06_BetragBerechnet      = CH06.Betrag_Berechnet,
+         Glb06_BetragKiZu           = CH06.Betrag_KiZu,
+         Glb06_TeilALBV             = CH06.TeilALBVBetrag,
+         Glb06_ALBVBerechtigt       = CASE 
+                                        WHEN CH06.ALBVBerechtigt = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb06_Unterstuetzungsfall  = CASE 
+                                        WHEN CH06.Unterstuetzungsfall = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb06_Teuerungseinsprache  = CASE 
+                                        WHEN CH06.Teuerungseinsprache = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb06_IndexPunkte_Neu      = CH06.IndexPunkte_Neu,
+         Glb06_IndexPunkte_Alt      = CH06.IndexPunkte_Alt,
+         Glb06_Teuerung             = CH06.Teuerung,
+         Glb06_Betrag_Berechnet_Alt = CH06.Betrag_Berechnet_Old,
+
+         ----------------------------------------------------------------------
+         -- 7. Gläubiger
+         ----------------------------------------------------------------------
+         Glb07_BaPersonID           = CH07.BaPersonID,
+         Glb07_VornameName          = CH07.VornameName,
+         Glb07_Geburtsdatum         = CH07.Geburtsdatum,
+         Glb07_IkForderungID        = CH07.IkForderungID,
+         Glb07_Forderungstitel      = CH07.Forderungstitel,
+         Glb07_BetragBasis          = CH07.Betrag_Basis,
+         Glb07_BetragBerechnet      = CH07.Betrag_Berechnet,
+         Glb07_BetragKiZu           = CH07.Betrag_KiZu,
+         Glb07_TeilALBV             = CH07.TeilALBVBetrag,
+         Glb07_ALBVBerechtigt       = CASE 
+                                        WHEN CH07.ALBVBerechtigt = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb07_Unterstuetzungsfall  = CASE 
+                                        WHEN CH07.Unterstuetzungsfall = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb07_Teuerungseinsprache  = CASE 
+                                        WHEN CH07.Teuerungseinsprache = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb07_IndexPunkte_Neu      = CH07.IndexPunkte_Neu,
+         Glb07_IndexPunkte_Alt      = CH07.IndexPunkte_Alt,
+         Glb07_Teuerung             = CH07.Teuerung,
+         Glb07_Betrag_Berechnet_Alt = CH07.Betrag_Berechnet_Old,
+         
+         ----------------------------------------------------------------------
+         -- 8. Gläubiger
+         ----------------------------------------------------------------------
+         Glb08_BaPersonID           = CH08.BaPersonID,
+         Glb08_VornameName          = CH08.VornameName,
+         Glb08_Geburtsdatum         = CH08.Geburtsdatum,
+         Glb08_IkForderungID        = CH08.IkForderungID,
+         Glb08_Forderungstitel      = CH08.Forderungstitel,
+         Glb08_BetragBasis          = CH08.Betrag_Basis,
+         Glb08_BetragBerechnet      = CH08.Betrag_Berechnet,
+         Glb08_BetragKiZu           = CH08.Betrag_KiZu,
+         Glb08_TeilALBV             = CH08.TeilALBVBetrag,
+         Glb08_ALBVBerechtigt       = CASE 
+                                        WHEN CH08.ALBVBerechtigt = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb08_Unterstuetzungsfall  = CASE 
+                                        WHEN CH08.Unterstuetzungsfall = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb08_Teuerungseinsprache  = CASE 
+                                        WHEN CH08.Teuerungseinsprache = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb08_IndexPunkte_Neu      = CH08.IndexPunkte_Neu,
+         Glb08_IndexPunkte_Alt      = CH08.IndexPunkte_Alt,
+         Glb08_Teuerung             = CH08.Teuerung,
+         Glb08_Betrag_Berechnet_Alt = CH08.Betrag_Berechnet_Old,
+         
+         ----------------------------------------------------------------------
+         -- 9. Gläubiger
+         ----------------------------------------------------------------------
+         Glb09_BaPersonID           = CH09.BaPersonID,
+         Glb09_VornameName          = CH09.VornameName,
+         Glb09_Geburtsdatum         = CH09.Geburtsdatum,
+         Glb09_IkForderungID        = CH09.IkForderungID,
+         Glb09_Forderungstitel      = CH09.Forderungstitel,
+         Glb09_BetragBasis          = CH09.Betrag_Basis,
+         Glb09_BetragBerechnet      = CH09.Betrag_Berechnet,
+         Glb09_BetragKiZu           = CH09.Betrag_KiZu,
+         Glb09_TeilALBV             = CH09.TeilALBVBetrag,
+         Glb09_ALBVBerechtigt       = CASE 
+                                        WHEN CH09.ALBVBerechtigt = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb09_Unterstuetzungsfall  = CASE 
+                                        WHEN CH09.Unterstuetzungsfall = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb09_Teuerungseinsprache  = CASE 
+                                        WHEN CH09.Teuerungseinsprache = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb09_IndexPunkte_Neu      = CH09.IndexPunkte_Neu,
+         Glb09_IndexPunkte_Alt      = CH09.IndexPunkte_Alt,
+         Glb09_Teuerung             = CH09.Teuerung,
+         Glb09_Betrag_Berechnet_Alt = CH09.Betrag_Berechnet_Old,
+         
+         ----------------------------------------------------------------------
+         -- 10. Gläubiger
+         ----------------------------------------------------------------------
+         Glb10_BaPersonID           = CH10.BaPersonID,
+         Glb10_VornameName          = CH10.VornameName,
+         Glb10_Geburtsdatum         = CH10.Geburtsdatum,
+         Glb10_IkForderungID        = CH10.IkForderungID,
+         Glb10_Forderungstitel      = CH10.Forderungstitel,
+         Glb10_BetragBasis          = CH10.Betrag_Basis,
+         Glb10_BetragBerechnet      = CH10.Betrag_Berechnet,
+         Glb10_BetragKiZu           = CH10.Betrag_KiZu,
+         Glb10_TeilALBV             = CH10.TeilALBVBetrag,
+         Glb10_ALBVBerechtigt       = CASE 
+                                        WHEN CH10.ALBVBerechtigt = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb10_Unterstuetzungsfall  = CASE 
+                                        WHEN CH10.Unterstuetzungsfall = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb10_Teuerungseinsprache  = CASE 
+                                        WHEN CH10.Teuerungseinsprache = 1 THEN 'Ja'
+                                        ELSE 'Nein'
+                                      END,
+         Glb10_IndexPunkte_Neu      = CH10.IndexPunkte_Neu,
+         Glb10_IndexPunkte_Alt      = CH10.IndexPunkte_Alt,
+         Glb10_Teuerung             = CH10.Teuerung,
+         Glb10_Betrag_Berechnet_Alt = CH10.Betrag_Berechnet_Old,
+ 
+         ----------------------------------------------------------------------
+         -- Selektion
+         ----------------------------------------------------------------------
+         LaufendesJahr      = YEAR(@Date) - 1,
+         VorhergehendesJahr = YEAR(@Date) - 2,
+         DatumPer           = @Date,
+
+         ----------------------------------------------------------------------
+         -- User
+         ----------------------------------------------------------------------
+         SB_LogonName    = USR.LogonName,
+         SB_VornameName  = USR.VornameName,
+         SB_Displayname  = USR.DisplayText,
+         SB_Abteilung    = USR.OrgEinheitName,
+         SB_Telefon      = USR.Phone,
+         SB_Email        = USR.Email,
+         SB_Text1        = USR.Text1,
+         SB_AbteilungFax = USR.OrgEinheitFax,
+         SB_AbteilungWWW = USR.OrgEinheitWWW
+  
+  FROM dbo.FaLeistung           LST WITH (READUNCOMMITTED)
+    LEFT JOIN dbo.vwUser        USR WITH (READUNCOMMITTED) ON USR.UserID = LST.UserID
+    LEFT JOIN dbo.FaFall        FLL WITH (READUNCOMMITTED) ON FLL.FaFallID = LST.FaFallID
+    LEFT JOIN dbo.vwPerson      FT  WITH (READUNCOMMITTED) ON FT.BaPersonID = FLL.BaPersonID
+    LEFT JOIN dbo.vwPerson      PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = LST.SchuldnerBaPersonID
+    LEFT JOIN dbo.IkRechtstitel RT  WITH (READUNCOMMITTED) ON RT.FaLeistungID = LST.FaLeistungID
+    --
+    LEFT JOIN #GLBs CH01 ON CH01.IkRechtstitelID = RT.IkRechtstitelID
+                        AND CH01.NummerID = 1
+    LEFT JOIN #GLBs CH02 ON CH02.IkRechtstitelID = RT.IkRechtstitelID
+                        AND CH02.NummerID = 2
+    LEFT JOIN #GLBs CH03 ON CH03.IkRechtstitelID = RT.IkRechtstitelID
+                        AND CH03.NummerID = 3
+    LEFT JOIN #GLBs CH04 ON CH04.IkRechtstitelID = RT.IkRechtstitelID
+                        AND CH04.NummerID = 4
+    LEFT JOIN #GLBs CH05 ON CH05.IkRechtstitelID = RT.IkRechtstitelID
+                        AND CH05.NummerID = 5
+    LEFT JOIN #GLBs CH06 ON CH06.IkRechtstitelID = RT.IkRechtstitelID
+                        AND CH06.NummerID = 6
+    LEFT JOIN #GLBs CH07 ON CH07.IkRechtstitelID = RT.IkRechtstitelID
+                        AND CH07.NummerID = 7
+    LEFT JOIN #GLBs CH08 ON CH08.IkRechtstitelID = RT.IkRechtstitelID
+                        AND CH08.NummerID = 8
+    LEFT JOIN #GLBs CH09 ON CH09.IkRechtstitelID = RT.IkRechtstitelID
+                        AND CH09.NummerID = 9
+    LEFT JOIN #GLBs CH10 ON CH10.IkRechtstitelID = RT.IkRechtstitelID
+                        AND CH10.NummerID = 10
+  WHERE LST.FaProzessCode IN (401)
+    AND LST.DatumBis IS NULL
+    AND RT.IkRechtstitelID IN (SELECT CH.IkRechtstitelID
+                               FROM #GLBs CH)
+  ORDER BY FT.Name, FT.Vorname;
+
+  DROP TABLE #GLBs;
+END
+ELSE 
+-------------------------------------------------------------------------------
+-- case: @Delete = 1
+-------------------------------------------------------------------------------
+BEGIN
+  SELECT Schuldner_Anrede             = CASE PRS.GeschlechtCode
+                                          WHEN 1 THEN 'Herr'
+                                          WHEN 2 THEN 'Frau'
+                                          ELSE ''
+                                       END,
+         Schuldner_Name               = PRS.Name,
+         Schuldner_Vorname            = PRS.Vorname,
+         Schuldner_Zusatz             = PRS.WohnsitzAdressZusatz,
+         Schuldner_Strasse            = PRS.WohnsitzStrasseHausNr,
+         Schuldner_Postfach           = PRS.WohnsitzPostfach,
+         Schuldner_PLZ                = PRS.WohnsitzPLZ,
+         Schuldner_Ort                = PRS.WohnsitzOrt,
+         Schuldner_PersonenNummer     = PRS.BaPersonID,
+         Schuldner_WohnsitzMehrzeilig = PRS.WohnsitzMehrzeilig,
+         Falltraeger_Name             = FT.Name,
+         Falltraeger_Vorname          = FT.Vorname,
+         Falltraeger_PersonenNummer   = FT.BaPersonID,
+         Falltraeger_FallNummer       = FLL.FaFallID,
+         IkRechtstitelID              = RT.IkRechtstitelID,
+         RT_Typ                       = dbo.fnLOVText('IkRechtstitel', RT.IkRechtstitelTypCode),
+         RT_IndexTyp                  = dbo.fnLOVText('IkIndexTyp', RT.IkIndexTypCode),
+         RT_Datum                     = RT.RechtstitelDatumVon,
+         RT_Teuerungseinsprache       = NULL,
+         RT_IndexStand                = SUBSTRING(CONVERT(VARCHAR(10), RT.IndexStandVom, 104), 4, 7),
+         RT_IndexPunkte               = RT.IndexStandPunkte,
+         
+         ----------------------------------------------------------------------
+         -- Angaben Forderung
+         ----------------------------------------------------------------------
+         Frdrg_IkForderungID   = F.IkForderungID,
+         Frdrg_BaPersonID      = F.BaPersonID,
+         Frdrg_VornameName     = GLB.VornameName,
+         Frdrg_Geburtsdatum    = GLB.Geburtsdatum,
+         Frdrg_IkForderungID   = F.IkForderungID,
+         Frdrg_Forderungstitel = dbo.fnLOVText('IkForderungPeriodisch', F.IkForderungPeriodischCode),
+         Frdrg_BetragBasis     = F.Betrag,
+         Frdrg_DatumAb         = F.DatumAnpassenAb,
+         Frdrg_Gueltigbis      = F.DatumGueltigBis,
+         
+         ----------------------------------------------------------------------
+         -- User
+         ----------------------------------------------------------------------
+         SB_LogonName    = USR.LogonName,
+         SB_VornameName  = USR.VornameName,
+         SB_Displayname  = USR.DisplayText,
+         SB_Abteilung    = USR.OrgEinheitName,
+         SB_Telefon      = USR.Phone,
+         SB_Email        = USR.Email,
+         SB_Text1        = USR.Text1,
+         SB_AbteilungFax = USR.OrgEinheitFax,
+         SB_AbteilungWWW = USR.OrgEinheitWWW
+  
+  FROM dbo.IkForderung           F   WITH (READUNCOMMITTED)
+    INNER JOIN dbo.IkRechtstitel RT  WITH (READUNCOMMITTED) ON RT.IkRechtstitelID = F.IkRechtstitelID
+    LEFT  JOIN dbo.FaLeistung    LST WITH (READUNCOMMITTED) ON LST.FaLeistungID = RT.FaLeistungID
+    LEFT  JOIN dbo.vwUser        USR WITH (READUNCOMMITTED) ON USR.UserID = LST.UserID
+    LEFT  JOIN dbo.FaFall        FLL WITH (READUNCOMMITTED) ON FLL.FaFallID = LST.FaFallID
+    LEFT  JOIN dbo.vwPerson      FT  WITH (READUNCOMMITTED) ON FT.BaPersonID = FLL.BaPersonID
+    LEFT  JOIN dbo.vwPerson      PRS WITH (READUNCOMMITTED) ON PRS.BaPersonID = LST.SchuldnerBaPersonID
+    LEFT  JOIN dbo.vwPerson      GLB WITH (READUNCOMMITTED) ON GLB.BaPersonID = F.BaPersonID
+  WHERE LST.FaProzessCode IN (401)
+    AND F.DatumAnpassenAb = @Date
+    AND F.IkForderungPeriodischCode IN (1, 2)
+    AND (@UserID = 0 OR LST.UserID = @UserID)
+    AND F.IkAnpassungsRegelCode = @AnpassgIndex
+    AND F.IkAnpassungsGrundCode = 2
+  ORDER BY FT.Name, FT.Vorname;
+END;</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="edtDatumPer.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABMSURBVDhPYwABY2Pj/8RgsGIQgHFQBKEAqxyIQwyGKsdu
+        MjrAqaGhgQErG6sGkAKYInSaOhpAYERrAAFkNk4NuACGBmIwVDkpgIEBAO2ojyYwtBe7AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>54</value>
+  </metadata>
+</root>

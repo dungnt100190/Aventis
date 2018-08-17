@@ -1,0 +1,94 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:themes="http://schemas.devexpress.com/winfx/2008/xaml/pdf/themekeys" xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" xmlns:dxbt="http://schemas.devexpress.com/winfx/2008/xaml/bars/themekeys" xmlns:dxpdf="http://schemas.devexpress.com/winfx/2008/xaml/pdf" xmlns:dxdst="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys">
+
+    <Style x:Key="{dxdst:DefaultStyleThemeKey FullName=DevExpress.Xpf.PdfViewer.PdfBarContainerControl}" TargetType="{x:Type dxpdf:PdfBarContainerControl}">
+        <Setter Property="ItemsPanel" Value="{DynamicResource {dxbt:BarContainerControlThemeKey ResourceKey=ItemsPanelTemplate}}" />
+        <Setter Property="Template" Value="{DynamicResource {themes:PdfViewerThemeKey ResourceKey=PdfBarContainerControlTemplate}}" />        
+        <Setter Property="Focusable" Value="false" />
+        <Setter Property="Padding" Value="{Binding ActualPadding, RelativeSource={RelativeSource Mode=Self}}" />
+    </Style>
+    <Style x:Key="{dxdst:DefaultStyleThemeKey FullName=DevExpress.Xpf.PdfViewer.PdfBarControl}" TargetType="{x:Type dxpdf:PdfBarControl}">
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="ItemsPanel" Value="{DynamicResource {dxbt:BarControlThemeKey ResourceKey=ItemsPanelTemplate}}" />
+        <Setter Property="Template" Value="{DynamicResource {themes:PdfViewerThemeKey ResourceKey=PdfBarControlTemplate}}" />        
+    </Style>
+    <Style x:Key="{dxdst:DefaultStyleThemeKey FullName=DevExpress.Xpf.PdfViewer.PdfPresenterControl}" TargetType="{x:Type dxpdf:PdfPresenterControl}">
+        <Setter Property="MinHeight" Value="10" />
+        <Setter Property="PagePadding" Value="{Binding Path=(dxpdf:PdfViewerControl.ActualViewer).PagePadding, RelativeSource={RelativeSource Self}}" />
+        <Setter Property="Template" Value="{DynamicResource ResourceKey={themes:PdfViewerThemeKey ResourceKey=PdfPresenterControlTemplate}}" />
+        <Setter Property="AllowCurrentPageHighlighting" Value="{Binding Path=(dxpdf:PdfViewerControl.ActualViewer).AllowCurrentPageHighlighting, RelativeSource={RelativeSource Self}}" />
+        <Setter Property="FlowDirection" Value="LeftToRight" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+    </Style>
+    <Style x:Key="{dxdst:DefaultStyleThemeKey FullName=DevExpress.Xpf.PdfViewer.PdfPageControl}" TargetType="{x:Type dxpdf:PdfPageControl}">
+        <Setter Property="Margin" Value="{Binding Path=(dxpdf:PdfViewerControl.ActualViewer).PagePadding, RelativeSource={RelativeSource Self}}" />
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="Template" Value="{DynamicResource ResourceKey={themes:PdfViewerThemeKey ResourceKey=PdfPageControlTemplate}}" />
+        <Setter Property="IsSelected" Value="{Binding Path=Page.IsSelected, RelativeSource={RelativeSource Self}}" />
+    </Style>
+    <Style TargetType="{x:Type dxb:BarButtonItem}" x:Key="{themes:PdfViewerThemeKey ResourceKey=BarButtonItemStyle}">
+        <Setter Property="Content" Value="{Binding Path=Caption}" />
+        <Setter Property="Hint" Value="{Binding Path=Hint}" />
+        <Setter Property="Glyph" Value="{Binding Path=SmallGlyph, Converter={dxpdf:UriToBitmapImageConverter}}" />
+        <Setter Property="LargeGlyph" Value="{Binding Path=LargeGlyph, Converter={dxpdf:UriToBitmapImageConverter}}" />
+        <Setter Property="GlyphAlignment" Value="Top" />
+    </Style>
+    <Style TargetType="{x:Type dxb:BarStaticItem}" x:Key="{themes:PdfViewerThemeKey ResourceKey=BarStaticItemStyle}">
+        <Setter Property="Content" Value="{Binding}" />
+        <Setter Property="Hint" Value="{Binding Path=Hint}" />
+        <Setter Property="Glyph" Value="{Binding Path=SmallGlyph, Converter={dxpdf:UriToBitmapImageConverter}}" />
+        <Setter Property="LargeGlyph" Value="{Binding Path=LargeGlyph, Converter={dxpdf:UriToBitmapImageConverter}}" />
+        <Setter Property="GlyphAlignment" Value="Top" />
+        <Setter Property="ContentTemplate" Value="{DynamicResource ResourceKey={themes:PdfViewerThemeKey ResourceKey=BarStaticItemContentTemplate}}" />
+    </Style>
+    <dxpdf:PdfCheckBarItemTemplateSelector x:Key="checkItemTemplateSelector" />
+    <Style TargetType="{x:Type dxb:BarSubItem}" x:Key="{themes:PdfViewerThemeKey ResourceKey=BarSubItemStyle}">
+        <Setter Property="Content" Value="{Binding Path=Caption}" />
+        <Setter Property="Hint" Value="{Binding Path=Hint}" />
+        <Setter Property="Glyph" Value="{Binding Path=SmallGlyph, Converter={dxpdf:UriToBitmapImageConverter}}" />
+        <Setter Property="LargeGlyph" Value="{Binding Path=LargeGlyph, Converter={dxpdf:UriToBitmapImageConverter}}" />
+        <Setter Property="GlyphAlignment" Value="Top" />
+        <Setter Property="ItemLinksSource" Value="{Binding Path=Links}" />
+        <Setter Property="ItemTemplateSelector" Value="{StaticResource checkItemTemplateSelector}" />
+    </Style>
+    <Style TargetType="{x:Type dxb:BarCheckItem}" x:Key="{themes:PdfViewerThemeKey ResourceKey=BarCheckItemStyle}">
+        <Setter Property="Content" Value="{Binding Path=Caption}" />
+        <Setter Property="Hint" Value="{Binding Path=Hint}" />
+        <Setter Property="Glyph" Value="{Binding Path=SmallGlyph, Converter={dxpdf:UriToBitmapImageConverter}}" />
+        <Setter Property="LargeGlyph" Value="{Binding Path=LargeGlyph, Converter={dxpdf:UriToBitmapImageConverter}}" />
+        <Setter Property="GlyphAlignment" Value="Top" />
+        <Setter Property="CommandParameter" Value="{Binding Path=CommandValue}" />
+        <Setter Property="IsChecked" Value="{Binding Path=IsChecked}" />
+    </Style>
+    <Style TargetType="{x:Type dxb:BarSplitButtonItem}" x:Key="{themes:PdfViewerThemeKey ResourceKey=BarSplitButtonItemStyle}">
+        <Setter Property="Content" Value="{Binding Path=Caption}" />
+        <Setter Property="Hint" Value="{Binding Path=Hint}" />
+        <Setter Property="Glyph" Value="{Binding Path=SmallGlyph, Converter={dxpdf:UriToBitmapImageConverter}}" />
+        <Setter Property="LargeGlyph" Value="{Binding Path=LargeGlyph, Converter={dxpdf:UriToBitmapImageConverter}}" />
+        <Setter Property="GlyphAlignment" Value="Top" />
+    </Style>
+    <Style x:Key="{dxdst:DefaultStyleThemeKey FullName=DevExpress.Xpf.PdfViewer.PdfViewerControl}" TargetType="{x:Type dxpdf:PdfViewerControl}">
+        <Setter Property="PagePadding" Value="{DynamicResource {themes:PdfViewerThemeKey ResourceKey=PagePaddingThickness}}" />
+        <Setter Property="RibbonTemplate" Value="{DynamicResource {themes:PdfViewerThemeKey ResourceKey=RibbonTemplate}}" />
+        <Setter Property="BarsTemplate" Value="{DynamicResource {themes:PdfViewerThemeKey ResourceKey=BarsTemplate}}" />
+        <Setter Property="PdfPresenterTemplate" Value="{DynamicResource {themes:PdfViewerThemeKey ResourceKey=PresenterTemplate}}" />
+        <Setter Property="Template" Value="{DynamicResource {themes:PdfViewerThemeKey ResourceKey=Template}}" />
+        <Setter Property="HighlightSelectionColor" Value="{DynamicResource {themes:PdfViewerThemeKey ResourceKey=HighlightSelectionColor}}" />
+        <Setter Property="CaretColor" Value="{DynamicResource {themes:PdfViewerThemeKey ResourceKey=CaretColor}}" />
+    </Style>
+    <Style x:Key="{themes:PdfViewerThemeKey ResourceKey=PdfPagesSelectorStyle}" TargetType="{x:Type dxpdf:PdfPagesSelector}" BasedOn="{StaticResource {x:Type ListBox}}">
+        <Setter Property="Template" Value="{DynamicResource {themes:PdfViewerThemeKey ResourceKey=PdfPageSelectorTemplate}}" />
+    </Style>
+    <Style x:Key="{dxdst:DefaultStyleThemeKey FullName=DevExpress.Xpf.PdfViewer.SearchControlContainer}" TargetType="{x:Type dxpdf:SearchControlContainer}">
+        <Setter Property="Template" Value="{DynamicResource {themes:PdfViewerThemeKey ResourceKey=SearchControlContainerTemplate}}" />
+        <Setter Property="Focusable" Value="False" />
+    </Style>
+    <Style x:Key="{dxdst:DefaultStyleThemeKey FullName=DevExpress.Xpf.PdfViewer.SelectionCanvas}" TargetType="{x:Type dxpdf:SelectionCanvas}">
+        <Setter Property="Template" Value="{DynamicResource {themes:PdfViewerThemeKey ResourceKey=SelectionCanvasTemplate}}" />
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="IsHitTestVisible" Value="False" />
+    </Style>
+    <Style x:Key="{dxdst:DefaultStyleThemeKey FullName=DevExpress.Xpf.PdfViewer.StartScreenControl}" TargetType="{x:Type dxpdf:StartScreenControl}">
+        <Setter Property="Template" Value="{DynamicResource {themes:PdfViewerThemeKey ResourceKey=StartScreenControlTemplate}}" />
+        <Setter Property="Focusable" Value="False" />
+    </Style>
+</ResourceDictionary>

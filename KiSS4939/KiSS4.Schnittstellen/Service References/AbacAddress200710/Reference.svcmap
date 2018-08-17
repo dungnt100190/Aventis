@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b3116fe3-e275-4927-bb1b-f8cf42c2a9d8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="C:\Projects\KiSS40\KiSS\KiSS4.Schnittstellen\Abacus\WSDL\Address_2007_10\Address.wsdl" Protocol="file" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="xmlmime.xsd" MetadataType="Schema" ID="1ac4020f-5e72-4cd0-8fc7-2c815404ea0a" SourceId="1" SourceUrl="file:///C:/Projects/KiSS40/KiSS/KiSS4.Schnittstellen/Abacus/WSDL/Address_2007_10/xmlmime.xsd" />
+    <MetadataFile FileName="AddressTypes.xsd" MetadataType="Schema" ID="eeed241b-a766-4d85-822b-7a345411f679" SourceId="1" SourceUrl="file:///C:/Projects/KiSS40/KiSS/KiSS4.Schnittstellen/Abacus/WSDL/Address_2007_10/AddressTypes.xsd" />
+    <MetadataFile FileName="Address.xsd" MetadataType="Schema" ID="38497841-3818-4a1d-84c6-b65f3d6cf948" SourceId="1" SourceUrl="file:///C:/Projects/KiSS40/KiSS/KiSS4.Schnittstellen/Abacus/WSDL/Address_2007_10/Address.xsd" />
+    <MetadataFile FileName="AbaConnectTypes.xsd" MetadataType="Schema" ID="6d0c22c0-a046-428a-9af2-6c2c8a74ee2f" SourceId="1" SourceUrl="file:///C:/Projects/KiSS40/KiSS/KiSS4.Schnittstellen/Abacus/WSDL/Address_2007_10/AbaConnectTypes.xsd" />
+    <MetadataFile FileName="Address.wsdl" MetadataType="Wsdl" ID="82cbb6b8-93d2-405d-9f61-9910f87c3bea" SourceId="1" SourceUrl="file:///C:/Projects/KiSS40/KiSS/KiSS4.Schnittstellen/Abacus/WSDL/Address_2007_10/Address.wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

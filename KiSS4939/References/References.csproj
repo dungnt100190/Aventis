@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace>References</RootNamespace>
+    <AssemblyName>References</AssemblyName>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ProjectGuid>{93337AC5-F9AC-44D1-9217-E0C1DC13E1B0}</ProjectGuid>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/References/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>..\KiSS4.Main\bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Component Include="AcroPDF\AxInterop.AcroPDFLib.dll" />
+    <Component Include="AcroPDF\Interop.AcroPDFLib.dll" />
+    <Component Include="ComponentOne\C1.C1Zip.dll" />
+    <Component Include="DevExpress\DevExpress.Data.v6.2.dll" />
+    <Component Include="DevExpress\DevExpress.Utils.v6.2.dll" />
+    <Component Include="DevExpress\DevExpress.XtraBars.v6.2.Design.dll" />
+    <Component Include="DevExpress\DevExpress.XtraBars.v6.2.dll" />
+    <Component Include="DevExpress\DevExpress.XtraCharts.v6.2.Design.dll" />
+    <Component Include="DevExpress\DevExpress.XtraCharts.v6.2.dll" />
+    <Component Include="DevExpress\DevExpress.XtraCharts.v6.2.UI.dll" />
+    <Component Include="DevExpress\DevExpress.XtraEditors.v6.2.Design.dll" />
+    <Component Include="DevExpress\DevExpress.XtraEditors.v6.2.dll" />
+    <Component Include="DevExpress\DevExpress.XtraGrid.v6.2.Design.dll" />
+    <Component Include="DevExpress\DevExpress.XtraGrid.v6.2.dll" />
+    <Component Include="DevExpress\DevExpress.XtraNavBar.v6.2.Design.dll" />
+    <Component Include="DevExpress\DevExpress.XtraNavBar.v6.2.dll" />
+    <Component Include="DevExpress\DevExpress.XtraPrinting.v6.2.Design.dll" />
+    <Component Include="DevExpress\DevExpress.XtraPrinting.v6.2.dll" />
+    <Component Include="DevExpress\DevExpress.XtraReports.v6.2.Design.dll" />
+    <Component Include="DevExpress\DevExpress.XtraReports.v6.2.dll" />
+    <Component Include="DevExpress\DevExpress.XtraReports.v6.2.Import.dll" />
+    <Component Include="DevExpress\DevExpress.XtraRichTextEdit.v6.2.dll" />
+    <Component Include="DevExpress\DevExpress.XtraTreeList.v6.2.Design.dll" />
+    <Component Include="DevExpress\DevExpress.XtraTreeList.v6.2.dll" />
+    <Component Include="ICSharpCode\ICSharpCode.TextEditor.dll" />
+    <Component Include="Interop\Interop.Excel.dll" />
+    <Component Include="Interop\Interop.Excel2000.dll" />
+    <Component Include="Interop\Interop.Microsoft.Office.Core.dll" />
+    <Component Include="Interop\Interop.MSForms.dll" />
+    <Component Include="Interop\Interop.Office.dll" />
+    <Component Include="Interop\Interop.Outlook.dll" />
+    <Component Include="Interop\Interop.VBA.dll" />
+    <Component Include="Interop\Interop.VBIDE.dll" />
+    <Component Include="Interop\Interop.Word.dll" />
+    <Component Include="Log4Net\log4net.dll" />
+    <Component Include="RectTracker\RectTracker.dll" />
+    <Component Include="SBSXAS\Interop.SBSXASLib.dll" />
+    <Component Include="SharpLibrary\SharpLibrary.dll" />
+    <Component Include="Sostat\Interop.GeneralImpex.dll" />
+    <Component Include="SourceSafe\Microsoft.VisualStudio.SourceSafe.Interop.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Autofac\Autofac.dll" />
+    <Content Include="Autofac\Autofac.XML" />
+    <Content Include="Common.Logging\Common.Logging.dll" />
+    <Content Include="Common.Logging\Common.Logging.Log4Net.dll" />
+    <Content Include="DevExpress\DevExpress.Data.v6.2.xml" />
+    <Content Include="DevExpress\DevExpress.Utils.v6.2.xml" />
+    <Content Include="DevExpress\DevExpress.XtraBars.v6.2.xml" />
+    <Content Include="DevExpress\DevExpress.XtraEditors.v6.2.xml" />
+    <Content Include="DevExpress\DevExpress.XtraGrid.v6.2.xml" />
+    <Content Include="DevExpress\DevExpress.XtraNavBar.v6.2.xml" />
+    <Content Include="DevExpress\DevExpress.XtraPrinting.v6.2.xml" />
+    <Content Include="DevExpress\DevExpress.XtraTreeList.v6.2.xml" />
+    <Content Include="FluentValidator\de\FluentValidation.resources.dll" />
+    <Content Include="FluentValidator\FluentValidation.dll" />
+    <Content Include="FluentValidator\FluentValidation.XML" />
+    <Content Include="FluentValidator\fr\FluentValidation.resources.dll" />
+    <Content Include="Sesam\Buchtext.dll" />
+    <Content Include="Sesam\DLib50.dll" />
+    <Content Include="Sesam\fbsdk50.dll" />
+    <Content Include="Sesam\Interop.FaktNT.dll" />
+    <Content Include="Sesam\Interop.SesamCRM.dll" />
+    <Content Include="Sesam\Interop.SOK.dll" />
+    <Content Include="Sesam\SSM32.dll" />
+    <Content Include="Sesam\w3aif110.dll" />
+    <Content Include="Sesam\w3btrv7.dll" />
+    <Content Include="Sesam\w3scmv7.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Nunit\" />
+  </ItemGroup>
+  <Target Name="Build">
+  </Target>
+  <Target Name="ReBuild">
+  </Target>
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <Target Name="Clean">
+  </Target>
+</Project>

@@ -1,0 +1,169 @@
+﻿<View:KissView x:Class="Kiss.UserInterface.View.Kes.KesVerlaufView"
+               xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+               xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+               xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+               xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+               xmlns:ViewModel="clr-namespace:Kiss.UserInterface.ViewModel.Kes;assembly=Kiss.UserInterface.ViewModel"
+               xmlns:Controls="clr-namespace:Kiss.UI.Controls;assembly=Kiss.UI.Controls"
+               xmlns:View="clr-namespace:Kiss.UserInterface.View"
+               mc:Ignorable="d"
+               d:DesignHeight="600"
+               d:DesignWidth="800"
+               xmlns:lex="http://wpflocalizeextension.codeplex.com"
+               xmlns:Constant="clr-namespace:Kiss.UI.Controls.Constant;assembly=Kiss.UI.Controls"
+               xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+               xmlns:Converter="clr-namespace:Kiss.UI.Controls.Converter;assembly=Kiss.UI.Controls"
+               lex:LocalizeDictionary.DesignCulture="de"
+               lex:ResxLocalizationProvider.DefaultAssembly="Kiss.UserInterface.View"
+               lex:ResxLocalizationProvider.DefaultDictionary="KesVerlaufViewRes"
+               BindCommands="False">
+    <View:KissView.Resources>
+        <Converter:NullableInt2IntConverter x:Key="NullableInt2IntConverter" />
+    </View:KissView.Resources>
+    <d:DesignProperties.DataContext>
+        <ViewModel:KesVerlaufVM />
+    </d:DesignProperties.DataContext>
+
+    <Controls:BusyPanel IsBusy="{Binding IsCompletelyBusy}">
+        <Grid Name="panVerlauf" Margin="{x:Static Constant:LayoutConstant.MarginOuterControl}">
+            <Grid.RowDefinitions>
+                <!-- Titel -->
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControl}" />
+                <!-- Liste -->
+                <RowDefinition Height="*" />
+                <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControl}" />
+                <!-- Validation -->
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControl}" />
+                <!-- Editfelder -->
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- Titel -->
+            <Controls:KissLabel
+                Grid.Row="0"
+                FontWeight="Bold"
+                Content="{lex:Loc Verlauf}"
+                Margin="{x:Static Constant:LayoutConstant.MarginDetailControlBottom}" />
+
+            <!-- Liste -->
+            <Controls:KissGrid Grid.Row="2" DataSource="{Binding Path=EntityListView}" AutoExpandAllGroups="True">
+                <Controls:KissGrid.Columns>
+                    <Controls:GridColumnDate Header="{lex:Loc Datum}" FieldName="WrappedEntity.Datum" Width="110" />
+                    <Controls:GridColumnLookUp Header="{lex:Loc Kontaktart}" FieldName="WrappedEntity.KesKontaktartCode" ItemsSource="{Binding KesKontaktartCodeList}" />
+                    <Controls:GridColumnLookUp Header="{lex:Loc Dienstleistung}" FieldName="WrappedEntity.KesDienstleistungCode" ItemsSource="{Binding KesDienstleistungCodeList}" />
+                    <dxg:GridColumn Header="{lex:Loc Stichwort}" FieldName="WrappedEntity.Stichwort" />
+                    <dxg:GridColumn Header="{lex:Loc Verfasser}" FieldName="WrappedEntity.XUser.LastNameFirstName" />
+                    <dxg:GridColumn Header="{lex:Loc Adressat}" FieldName="AdressatName" />
+                    <Controls:GridColumnLookUp Header="{lex:Loc AufwandInMin}" FieldName="WrappedEntity.FaDauerCode" ItemsSource="{Binding FaDauerCodeList}" />
+                </Controls:KissGrid.Columns>
+                <Controls:KissGrid.View>
+                    <dxg:TableView
+                        AllowBestFit="True"
+                        AutoWidth="True"
+                        NavigationStyle="Row"
+                        ShowGroupPanel="False"
+                        AllowEditing="False"
+                        ShowGroupedColumns="False"
+                        ShowTotalSummary="False"
+                        GroupSummaryDisplayMode="AlignByColumns" />
+                </Controls:KissGrid.View>
+            </Controls:KissGrid>
+
+            <!-- Validation -->
+            <Controls:ValidationSummary Grid.Row="4" Grid.ColumnSpan="2" ServiceResult="{Binding Path=ValidationResult}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
+
+            <!-- Editfelder -->
+            <Grid Grid.Row="6" Focusable="False" IsEnabled="{Binding SelectedEntity, Converter={StaticResource Null2BoolConverter}}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControl}" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControl}" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControl}" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControl}" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControl}" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControl}" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControl}" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="{x:Static Constant:LayoutConstant.RowHeightDetailControl}" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="{x:Static Constant:LayoutConstant.ColumnWidthDetailControl}" />
+                    <ColumnDefinition Width="250" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Datum -->
+                <Controls:KissLabel Grid.Row="0" Grid.Column="0" Content="{lex:Loc Datum}" />
+                <Controls:KissDateEdit Grid.Row="0" Grid.Column="2" EditValue="{Binding Path=SelectedEntity.WrappedEntity.Datum, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+                <!-- Kontaktart -->
+                <Controls:KissLabel Grid.Row="2" Grid.Column="0" Content="{lex:Loc Kontaktart}" />
+                <Controls:KissComboBox Grid.Row="2" Grid.Column="2" EditValue="{Binding Path=SelectedEntity.WrappedEntity.KesKontaktartCode, Converter={StaticResource ResourceKey=NullableInt2IntConverter}}" ItemsSource="{Binding KesKontaktartCodeList}" />
+
+                <!-- Dienstleistung -->
+                <Controls:KissLabel Grid.Row="4" Grid.Column="0" Content="{lex:Loc Dienstleistung}" />
+                <Controls:KissComboBox Grid.Row="4" Grid.Column="2" EditValue="{Binding Path=SelectedEntity.WrappedEntity.KesDienstleistungCode, Converter={StaticResource ResourceKey=NullableInt2IntConverter}}" ItemsSource="{Binding KesDienstleistungCodeList}" />
+
+                <!-- Stichwort -->
+                <Controls:KissLabel Grid.Row="6" Grid.Column="0" Content="{lex:Loc StichwortTitel}" />
+                <Controls:KissTextEdit Grid.Row="6" Grid.Column="2" Text="{Binding Path=SelectedEntity.WrappedEntity.Stichwort, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+                <!-- Verfasser -->
+                <Controls:KissLabel Grid.Row="8" Grid.Column="0" Content="{lex:Loc Verfasser}" />
+                <Controls:KissButtonSearchBox
+                    Grid.Row="8"
+                    Grid.Column="2"
+                    SelectedItem="{Binding Path=SelectedUser, Mode=TwoWay}"
+                    SearchMethod="{Binding Path=UserSearchBoxVM.SearchEventHandler}"
+                    DisplayMemberPath="LastNameFirstName">
+                    <Controls:KissButtonSearchBox.SearchColumnPath>
+                        <Controls:GridColumnDefinition Fieldname="LastNameFirstName" Title="{lex:Loc Kiss.UserInterface.View:KesVerlaufViewRes:Name}" />
+                        <Controls:GridColumnDefinition Fieldname="LogonName" Title="{lex:Loc Kiss.UserInterface.View:KesVerlaufViewRes:LogonName}" />
+                    </Controls:KissButtonSearchBox.SearchColumnPath>
+                </Controls:KissButtonSearchBox>
+
+                <!-- Adressat -->
+                <Controls:KissLabel Grid.Row="10" Grid.Column="0" Content="{lex:Loc Adressat}" />
+                <Controls:KissButtonSearchBox
+                    Grid.Row="10"
+                    Grid.Column="2"
+                    SelectedItem="{Binding Path=SelectedAdressat, Mode=TwoWay}"
+                    SearchMethod="{Binding Path=AdressatSearchBoxVM.SearchEventHandler}"
+                    DisplayMemberPath="NameVorname">
+                    <Controls:KissButtonSearchBox.SearchColumnPath>
+                        <Controls:GridColumnDefinition Fieldname="NameVorname" Title="{lex:Loc Kiss.UserInterface.View:KesVerlaufViewRes:Name}" />
+                        <Controls:GridColumnDefinition Fieldname="IsTypBaInstitution" Title="{lex:Loc Kiss.UserInterface.View:KesVerlaufViewRes:Institution}" />
+                    </Controls:KissButtonSearchBox.SearchColumnPath>
+                </Controls:KissButtonSearchBox>
+
+                <!-- Dauer -->
+                <Controls:KissLabel Grid.Row="12" Grid.Column="0" Content="{lex:Loc Dauer}" />
+                <Controls:KissComboBox Grid.Row="12" Grid.Column="2" EditValue="{Binding Path=SelectedEntity.WrappedEntity.FaDauerCode, Converter={StaticResource ResourceKey=NullableInt2IntConverter}}" ItemsSource="{Binding FaDauerCodeList}" />
+
+                <!-- Dokument -->
+                <Controls:KissLabel Grid.Row="14" Grid.Column="0" Content="{lex:Loc Dokument}" />
+                <Controls:KissDocumentEdit Grid.Row="14" Grid.Column="2" XDocumentId="{Binding Path=SelectedEntity.WrappedEntity.DocumentID}" Context="{Binding Path=DocContextName}" />
+
+                <!-- Inhalt -->
+                <Controls:KissLabel Grid.Row="16" Grid.Column="0" Content="{lex:Loc Inhalt}" VerticalAlignment="Top" />
+                <Controls:KissTextEditMultiline
+                    Grid.Row="16"
+                    Grid.Column="2"
+                    Grid.ColumnSpan="2"
+                    Text="{Binding Path=SelectedEntity.WrappedEntity.Inhalt, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    Height="75" />
+            </Grid>
+        </Grid>
+    </Controls:BusyPanel>
+</View:KissView>

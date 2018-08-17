@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="qryQuery.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="qryQuery.SelectStatement" xml:space="preserve">
+    <value>DECLARE @OrgGruppeID int
+SET @OrgGruppeID = NULL
+--- SET @OrgGruppeID = {ctlOrgUnitTeamUser.SucheGruppe}
+
+DECLARE @TeamID int
+SET @TeamID = NULL
+--- SET @TeamID = {ctlOrgUnitTeamUser.SucheTeam}
+
+-- Liste der angewählten LeistungsTypen 
+DECLARE @ProzessCodeListe varchar(500)
+SET @ProzessCodeListe =  N'200,300,301,302,304,210,500,201,402,404,405,406,407,408,409,410' -- Alle setzten für den Fall, dass nichts übergeben wird
+--- SET @ProzessCodeListe = {edtSucheFaProzessCodes} -- Wert wie er von KiSS übergeben wird
+SET @ProzessCodeListe = @ProzessCodeListe + ','
+
+-- Liste der LeistungsTypen in temporäre Tabelle abfüllen
+DECLARE @tblFaProzessCode TABLE (FaProzessCode int)
+DECLARE @Pos int, @OldPos int
+SELECT @Pos = 1, @OldPos = 1
+
+WHILE	@Pos &lt; len(@ProzessCodeListe) BEGIN
+  SET @Pos = CharIndex(',', @ProzessCodeListe, @OldPos)
+  INSERT INTO @tblFaProzessCode VALUES (SubString(@ProzessCodeListe, @OldPos, @Pos - @OldPos))
+  SET @OldPos = @Pos + 1
+END
+
+-- Wurde nur Aktiv ausgewählt?
+DECLARE @nurAktiv bit
+---SET @nurAktiv = {edtNurAktive}
+
+
+-- Temporäre Tabelle für Resultat erstellen
+DECLARE @tblTempRes TABLE (FaFallID int, FT int, LT int, Rolle varchar(30), FaLeistungID int, BaPersonID int, BaAdresseID int,  FaProzessCode int, UserID int)
+
+--
+-- Nach allen angewählten LeistungsTypen suchen
+--
+INSERT @tblTempRes(FaFallID, FT, LT, Rolle, LEI.FaLeistungID, PRS.BaPersonID, LEI.FaProzessCode, LEI.UserID)
+SELECT FAL.FaFallID, 
+       FT = CASE WHEN FAL.BaPersonID = PRS.BaPersonID THEN 1 ELSE 0 END, 
+       LT = CASE WHEN LEI.BaPersonID = PRS.BaPersonID THEN 1 ELSE 0 END,
+       CASE LEI.FaProzessCode
+         WHEN 200 THEN 'Mitglied Klientensystem' 
+         WHEN 201 THEN 'Mitglied Klientensystem'
+         WHEN 210 THEN 'Person mit zivilr. Massn.'
+         WHEN 300 THEN 'Unterstützte Person'
+         WHEN 301 THEN 'Schuldner/in'
+         WHEN 302 THEN 'Schuldner/in'
+         WHEN 304 THEN 'Schuldner/in'
+         WHEN 402 THEN 'Gesuchsteller/in'
+         WHEN 404 THEN 'Gesuchsteller/in'
+         WHEN 405 THEN 'Schuldner/in'
+         WHEN 406 THEN 'Gesuchsteller/in'
+         WHEN 407 THEN 'Gesuchsteller/in'
+         WHEN 408 THEN 'Schuldner/in'
+         WHEN 409 THEN 'Schuldner/in'
+         WHEN 410 THEN 'Schuldner/in'
+         WHEN 500 THEN 'Person mit zivilr. Massn.'
+       END,
+       LEI.FaLeistungID, 
+       PRS.BaPersonID, 
+       LEI.FaProzessCode,
+       LEI.UserID
+FROM   FaFall FAL
+       INNER JOIN FaLeistung LEI ON LEI.FaFallID = FAL.FaFallID
+       INNER JOIN BaPerson   PRS ON PRS.BaPersonID = LEI.BaPersonID
+       INNER JOIN vwUser     USR ON USR.UserID = LEI.UserID
+WHERE ((@OrgGruppeID IS NULL AND @TeamID IS NULL) OR USR.OrgUnitID IN (SELECT OrgUnitID FROM dbo.fnOrgUnitsOfTeam(@OrgGruppeID,@TeamID)))
+AND LEI.FaProzessCode IN (SELECT FaProzessCode FROM @tblFaProzessCode WHERE FaProzessCode IN (200, 201, 210, 300, 301, 302, 304, 402, 404, 405, 406, 407, 408, 409, 410, 500)) -- Einschränkung
+---AND LEI.FaFallID = {edtSucheFaFallID}
+---AND LEI.UserID = {ctlOrgUnitTeamUser.SucheUserID.LookupID}
+---AND PRS.ZIPNr = {edtSucheZIPNr}
+---AND PRS.Name LIKE {edtName} + '%'
+---AND PRS.Vorname LIKE {edtVorname} + '%'
+---AND PRS.BaPersonID = {edtSucheBaPersonID}
+---AND ({edtSucheFalltraeger} = 0 OR FAL.BaPersonID = PRS.BaPersonID)
+---AND ({edtSucheLeistungstraeger} = 0 OR LEI.BaPersonID = PRS.BaPersonID)
+---AND convert (datetime, LEI.DatumVon,104) &gt;= {edtAufDatumNach} -- Wurde nach dem Tag 'X' eröffnet
+---AND convert (datetime, LEI.DatumVon,104) &lt;= {edtAufDatumVor} -- Wurde vor dem Tag 'X' eröffnet
+---AND (convert (datetime, LEI.DatumBis,104) &gt;= {edtAbDatumNach} OR (@nurAktiv = 0 AND LEI.DatumBis IS NULL)) -- Wurde nach dem Tag 'X' abgeschlossen oder ist noch Offen falls nicht "nur Aktive" angewählt wurde
+---AND convert (datetime, LEI.DatumBis,104) &lt;= {edtAbDatumVor}  -- Wurde vor dem Tag 'X' abgeschlossen
+---AND ({edtNurAktive} = 0 OR LEI.DatumBis IS NULL) -- Nur Aktive haben ein DatumBis welches NULL ist, "Abschluss" ist Disabled
+---AND ({edtNurPassive} = 0 OR LEI.DatumBis IS NOT NULL) -- Nur Passive haben ein DatumBis welches &lt;&gt; NULL ist plus ev. eine Einschränkung von "Abschluss"
+
+
+--
+-- Suche aller Personen im Klientensystem (200, 201)
+--
+IF EXISTS(SELECT FaProzessCode FROM @tblFaProzessCode WHERE FaProzessCode IN (200, 201)) 
+BEGIN
+  -- Alle Personen im Klientsystem zu einem Fall
+  INSERT @tblTempRes(FaFallID, FT, LT, Rolle, LEI.FaLeistungID, PRS.BaPersonID, LEI.FaProzessCode, LEI.UserID)
+  SELECT FAL.FaFallID, 
+         FT = CASE WHEN FAL.BaPersonID = PRS.BaPersonID THEN 1 ELSE 0 END, 
+         LT = CASE WHEN LEI.BaPersonID = PRS.BaPersonID THEN 1 ELSE 0 END,
+         'Mitglied Klientensystem',
+         LEI.FaLeistungID, 
+         PRS.BaPersonID, 
+         LEI.FaProzessCode,
+         LEI.UserID 
+  FROM   FaFall FAL
+         INNER JOIN FaLeistung   LEI ON LEI.FaFallID = FAL.FaFallID
+         INNER JOIN FaFallPerson FAP ON FAP.FaFallID = FAL.FaFallID
+         INNER JOIN BaPerson     PRS ON PRS.BaPersonID = FAP.BaPersonID
+         INNER JOIN vwUser       USR ON USR.UserID = LEI.UserID
+  WHERE ((@OrgGruppeID IS NULL AND @TeamID IS NULL) OR USR.OrgUnitID IN (SELECT OrgUnitID FROM dbo.fnOrgUnitsOfTeam(@OrgGruppeID,@TeamID)))
+  AND LEI.FaProzessCode IN (SELECT FaProzessCode FROM @tblFaProzessCode WHERE FaProzessCode IN (200, 201)) -- Einschränkung
+  AND LEI.BaPersonID &lt;&gt; PRS.BaPersonID -- nicht Leistungsträger
+---  AND LEI.FaFallID = {edtSucheFaFallID}
+---  AND LEI.UserID = {ctlOrgUnitTeamUser.SucheUserID.LookupID}
+---  AND PRS.ZIPNr = {edtSucheZIPNr}
+---  AND PRS.Name LIKE {edtName} + '%'
+---  AND PRS.Vorname LIKE {edtVorname} + '%'
+---  AND PRS.BaPersonID = {edtSucheBaPersonID}
+---  AND ({edtSucheFalltraeger} = 0 OR FAL.BaPersonID = PRS.BaPersonID)
+---  AND ({edtSucheLeistungstraeger} = 0 OR LEI.BaPersonID = PRS.BaPersonID)
+---  AND convert (datetime, LEI.DatumVon,104) &gt;= {edtAufDatumNach} -- Wurde nach dem Tag 'X' eröffnet
+---  AND convert (datetime, LEI.DatumVon,104) &lt;= {edtAufDatumVor} -- Wurde vor dem Tag 'X' eröffnet
+---  AND (convert (datetime, LEI.DatumBis,104) &gt;= {edtAbDatumNach} OR (@nurAktiv = 0 AND LEI.DatumBis IS NULL)) -- Wurde nach dem Tag 'X' abgeschlossen oder ist noch Offen falls nicht "nur Aktive" angewählt wurde
+---  AND convert (datetime, LEI.DatumBis,104) &lt;= {edtAbDatumVor}  -- Wurde vor dem Tag 'X' abgeschlossen
+---  AND ({edtNurAktive} = 0 OR LEI.DatumBis IS NULL) -- Nur Aktive haben ein DatumBis welches NULL ist, "Abchluss" ist Disabled
+---  AND ({edtNurPassive} = 0 OR LEI.DatumBis IS NOT NULL) -- Nur Passive haben ein DatumBis welches &lt;&gt; NULL ist plus ev. eine Einschränkung von "Abschluss"
+END
+
+
+--
+-- Suche nach Finanzplan für 300 = 'W - Wirtschaftliche Hilfe' 
+--
+IF EXISTS(SELECT FaProzessCode FROM @tblFaProzessCode WHERE FaProzessCode IN (300)) 
+BEGIN
+  -- Finanzpläne in welchen die Personen vorhanden sind auf Grund des Falls (ohne Leistungsträger)
+  INSERT @tblTempRes(FaFallID, FT, LT, Rolle, LEI.FaLeistungID, PRS.BaPersonID, LEI.FaProzessCode, LEI.UserID)
+  SELECT DISTINCT FAL.FaFallID,
+         FT = CASE WHEN FAL.BaPersonID = FPP.BaPersonID THEN 1 ELSE 0 END, 
+         LT = CASE WHEN LEI.BaPersonID = FPP.BaPersonID THEN 1 ELSE 0 END,
+         'Unterstützte Person',
+         LEI.FaLeistungID, 
+         FPP.BaPersonID, 
+         --FPL.BgFinanzplanID, -- es kann mehrere Finanzpläne geben, deshalb DISTINCT
+         LEI.FaProzessCode,
+         LEI.UserID
+  FROM   FaFall FAL
+         INNER JOIN FaLeistung            LEI ON LEI.FaFallID = FAL.FaFallID
+         INNER JOIN BgFinanzplan          FPL ON FPL.FaLeistungID = LEI.FaLeistungID
+         INNER JOIN BgFinanzPlan_BaPerson FPP ON FPP.BgFinanzplanID = FPL.BgFinanzplanID
+         INNER JOIN BaPerson              PRS ON PRS.BaPersonID = FPP.BaPersonID
+         INNER JOIN vwUser                USR ON USR.UserID = LEI.UserID
+  WHERE ((@OrgGruppeID IS NULL AND @TeamID IS NULL) OR USR.OrgUnitID IN (SELECT OrgUnitID FROM dbo.fnOrgUnitsOfTeam(@OrgGruppeID,@TeamID)))
+  AND LEI.FaProzessCode IN (SELECT FaProzessCode FROM @tblFaProzessCode WHERE FaProzessCode IN (300))  -- Einschränken 
+  AND FPP.BaPersonID &lt;&gt; LEI.BaPersonID
+---  AND LEI.FaFallID = {edtSucheFaFallID}
+---  AND LEI.UserID = {ctlOrgUnitTeamUser.SucheUserID.LookupID}
+---  AND PRS.ZIPNr = {edtSucheZIPNr}
+---  AND PRS.Name LIKE {edtName} + '%'
+---  AND PRS.Vorname LIKE {edtVorname} + '%'
+---  AND PRS.BaPersonID = {edtSucheBaPersonID}
+---  AND ({edtSucheFalltraeger} = 0 OR FAL.BaPersonID = PRS.BaPersonID)
+---  AND ({edtSucheLeistungstraeger} = 0 OR LEI.BaPersonID = PRS.BaPersonID)
+---  AND convert (datetime, LEI.DatumVon,104) &gt;= {edtAufDatumNach} -- Wurde nach dem Tag 'X' eröffnet
+---  AND convert (datetime, LEI.DatumVon,104) &lt;= {edtAufDatumVor} -- Wurde vor dem Tag 'X' eröffnet
+---  AND (convert (datetime, LEI.DatumBis,104) &gt;= {edtAbDatumNach} OR (@nurAktiv = 0 AND LEI.DatumBis IS NULL)) -- Wurde nach dem Tag 'X' abgeschlossen oder ist noch Offen falls nicht "nur Aktive" angewählt wurde
+---  AND convert (datetime, LEI.DatumBis,104) &lt;= {edtAbDatumVor}  -- Wurde vor dem Tag 'X' abgeschlossen
+---  AND ({edtNurAktive} = 0 OR LEI.DatumBis IS NULL) -- Nur Aktive haben ein DatumBis welches NULL ist, "Abchluss" ist Disabled
+---  AND ({edtNurPassive} = 0 OR LEI.DatumBis IS NOT NULL) -- Nur Passive haben ein DatumBis welches &lt;&gt; NULL ist plus ev. eine Einschränkung von "Abschluss"
+END
+
+
+--
+-- Suche aller Anspruchsberechtigten Personen (402, 404)
+--
+IF EXISTS(SELECT FaProzessCode FROM @tblFaProzessCode WHERE FaProzessCode IN (402, 404)) 
+BEGIN
+  -- Alle Personen zu einem Fall
+  INSERT @tblTempRes(FaFallID, FT, LT, Rolle, LEI.FaLeistungID, PRS.BaPersonID, LEI.FaProzessCode, LEI.UserID)
+  SELECT FAL.FaFallID, 
+         FT = CASE WHEN FAL.BaPersonID = PRS.BaPersonID THEN 1 ELSE 0 END, 
+         LT = CASE WHEN LEI.BaPersonID = PRS.BaPersonID THEN 1 ELSE 0 END,
+	     'Anspruchsperson',
+         LEI.FaLeistungID, 
+         PRS.BaPersonID, 
+         LEI.FaProzessCode,
+         LEI.UserID 
+  FROM   FaFall FAL
+         INNER JOIN FaLeistung            LEI ON LEI.FaFallID = FAL.FaFallID
+         INNER JOIN AmAnspruchsberechnung AAB ON AAB.FaLeistungID = LEI.FaLeistungID
+         INNER JOIN AmAbKind              AAK ON AAK.AmAnspruchsberechnungID = AAB.AmAnspruchsberechnungID 
+         INNER JOIN BaPerson              PRS ON PRS.BaPersonID = AAK.BaPersonID
+         INNER JOIN vwUser                USR ON USR.UserID = LEI.UserID
+  WHERE ((@OrgGruppeID IS NULL AND @TeamID IS NULL) OR USR.OrgUnitID IN (SELECT OrgUnitID FROM dbo.fnOrgUnitsOfTeam(@OrgGruppeID,@TeamID)))
+  AND LEI.FaProzessCode IN (SELECT FaProzessCode FROM @tblFaProzessCode WHERE FaProzessCode IN (402, 404)) -- Einschränkung
+---  AND LEI.FaFallID = {edtSucheFaFallID}
+---  AND LEI.UserID = {ctlOrgUnitTeamUser.SucheUserID.LookupID}
+---  AND PRS.ZIPNr = {edtSucheZIPNr}
+---  AND PRS.Name LIKE {edtName} + '%'
+---  AND PRS.Vorname LIKE {edtVorname} + '%'
+---  AND PRS.BaPersonID = {edtSucheBaPersonID}
+---  AND ({edtSucheFalltraeger} = 0 OR FAL.BaPersonID = PRS.BaPersonID)
+---  AND ({edtSucheLeistungstraeger} = 0 OR LEI.BaPersonID = PRS.BaPersonID)
+---  AND convert (datetime, LEI.DatumVon,104) &gt;= {edtAufDatumNach} -- Wurde nach dem Tag 'X' eröffnet
+---  AND convert (datetime, LEI.DatumVon,104) &lt;= {edtAufDatumVor} -- Wurde vor dem Tag 'X' eröffnet
+---  AND (convert (datetime, LEI.DatumBis,104) &gt;= {edtAbDatumNach} OR (@nurAktiv = 0 AND LEI.DatumBis IS NULL)) -- Wurde nach dem Tag 'X' abgeschlossen oder ist noch Offen falls nicht "nur Aktive" angewählt wurde
+---  AND convert (datetime, LEI.DatumBis,104) &lt;= {edtAbDatumVor}  -- Wurde vor dem Tag 'X' abgeschlossen
+---  AND ({edtNurAktive} = 0 OR LEI.DatumBis IS NULL) -- Nur Aktive haben ein DatumBis welches NULL ist, "Abchluss" ist Disabled
+---  AND ({edtNurPassive} = 0 OR LEI.DatumBis IS NOT NULL) -- Nur Passive haben ein DatumBis welches &lt;&gt; NULL ist plus ev. eine Einschränkung von "Abschluss"
+END
+
+
+--
+-- Suche nach Gläubiger zu (301, 302, 304, 405, 406, 407, 408, 409, 410)
+--
+IF EXISTS(SELECT FaProzessCode FROM @tblFaProzessCode WHERE FaProzessCode IN (301, 302, 304, 405, 406, 407, 408, 409, 410)) 
+BEGIN
+  -- Gläubiger zu einem Fall (IkGlaeubiger)
+  INSERT @tblTempRes(FaFallID, FT, LT, Rolle, LEI.FaLeistungID, PRS.BaPersonID, LEI.FaProzessCode, LEI.UserID)
+  SELECT DISTINCT FAL.FaFallID,
+         FT = CASE WHEN FAL.BaPersonID = PRS.BaPersonID THEN 1 ELSE 0 END, 
+         LT = CASE WHEN LEI.BaPersonID = PRS.BaPersonID THEN 1 ELSE 0 END,
+		 CASE WHEN GLA.IstElternteil = 1 then 'Gläubiger/in, Elternteil' ELSE 'Gläubiger/in, Kind' END, -- Rolle als Gläubiger notieren
+         LEI.FaLeistungID, 
+         PRS.BaPersonID, 
+         LEI.FaProzessCode,
+         --RTI.IkRechtstitelID, -- es kann mehrere Rechtstitel geben, deshalb DISTINCT
+         LEI.UserID
+  FROM   FaFall FAL
+         INNER JOIN FaLeistung    LEI ON LEI.FaFallID = FAL.FaFallID
+         INNER JOIN IkRechtstitel RTI ON RTI.FaLeistungID = LEI.FaLeistungID
+         INNER JOIN vwUser        USR ON USR.UserID = LEI.UserID
+         INNER JOIN IkGlaeubiger  GLA ON GLA.IkRechtstitelID = RTI.IkRechtstitelID
+         INNER JOIN BaPerson      PRS ON PRS.BaPersonID = GLA.BaPersonID
+  WHERE ((@OrgGruppeID IS NULL AND @TeamID IS NULL) OR USR.OrgUnitID IN (SELECT OrgUnitID FROM dbo.fnOrgUnitsOfTeam(@OrgGruppeID,@TeamID)))
+  AND LEI.FaProzessCode IN (SELECT FaProzessCode FROM @tblFaProzessCode WHERE FaProzessCode IN (301, 302, 304, 405, 406, 407, 408, 409, 410))  -- Einschränken 
+---  AND LEI.FaFallID = {edtSucheFaFallID}
+---  AND LEI.UserID = {ctlOrgUnitTeamUser.SucheUserID.LookupID}
+---  AND PRS.ZIPNr = {edtSucheZIPNr}
+---  AND PRS.Name LIKE {edtName} + '%'
+---  AND PRS.Vorname LIKE {edtVorname} + '%'
+---  AND PRS.BaPersonID = {edtSucheBaPersonID}
+---  AND ({edtSucheFalltraeger} = 0 OR FAL.BaPersonID = PRS.BaPersonID)
+---  AND ({edtSucheLeistungstraeger} = 0 OR LEI.BaPersonID = PRS.BaPersonID)
+---  AND convert (datetime, LEI.DatumVon,104) &gt;= {edtAufDatumNach} -- Wurde nach dem Tag 'X' eröffnet
+---  AND convert (datetime, LEI.DatumVon,104) &lt;= {edtAufDatumVor} -- Wurde vor dem Tag 'X' eröffnet
+---  AND (convert (datetime, LEI.DatumBis,104) &gt;= {edtAbDatumNach} OR (@nurAktiv = 0 AND LEI.DatumBis IS NULL)) -- Wurde nach dem Tag 'X' abgeschlossen oder ist noch Offen falls nicht "nur Aktive" angewählt wurde
+---  AND convert (datetime, LEI.DatumBis,104) &lt;= {edtAbDatumVor}  -- Wurde vor dem Tag 'X' abgeschlossen
+---  AND ({edtNurAktive} = 0 OR LEI.DatumBis IS NULL) -- Nur Aktive haben ein DatumBis welches NULL ist, "Abchluss" ist Disabled
+---  AND ({edtNurPassive} = 0 OR LEI.DatumBis IS NOT NULL) -- Nur Passive haben ein DatumBis welches &lt;&gt; NULL ist plus ev. eine Einschränkung von "Abschluss"
+END
+
+
+--SELECT * FROM @tblTempRes ORDER BY FaProzessCode
+
+-- AdresseID der gültigen Korespondenzadresse (8) und wenn nicht vorhanden Wohn/Meldeadresse (1) in die Zwischentabelle schreiben
+UPDATE T
+SET    T.BaAdresseID = isnull(BAK.BaAdresseID, BAW.BaAdresseID) 
+FROM   @tblTempRes T
+       LEFT JOIN BaAdresse BAK ON BAK.BaPersonID  = T.BaPersonID and
+                                  BAK.BaAdresseID = (SELECT TOP 1 BaAdresseID
+                                                     FROM   BaAdresse
+                                                     WHERE  BaPersonID = T.BaPersonID
+                                                     AND    AdresseCode = 8
+                                                     AND    getdate() between isnull(DatumVon,getdate()) AND isnull(DatumBis,getdate())
+                                                     --AND    isnull(Gesperrt,0) &lt;&gt; 1 -- #4807
+                                                     ORDER BY DatumVon DESC)
+       LEFT JOIN BaAdresse BAW ON BAW.BaPersonID  = T.BaPersonID AND
+                                  BAW.BaAdresseID = (SELECT TOP 1 BaAdresseID
+                                                     FROM   BaAdresse
+                                                     WHERE  BaPersonID = T.BaPersonID
+                                                     AND    AdresseCode = 1
+                                                     AND    getdate() between isnull(DatumVon,getdate()) AND isnull(DatumBis,getdate())
+                                                     --AND    isnull(Gesperrt,0) &lt;&gt; 1 -- #4807
+                                                     ORDER BY DatumVon DESC)
+
+
+--
+-- Hinzujoinen von Informationen für Anzeige in KiSS
+--
+SELECT --DISTINCT 
+       [Fall-Nr.]       = RES.FaFallID,
+       [Leistung-Nr.]   = LEI.FaLeistungID,
+       [FT]             = FT,
+       [LT]             = LT,
+       [Rolle]          = Rolle,
+       [Pers.Nr.]       = PRS.BaPersonID, 
+       [Name]           = PRS.Name, 
+       [Vorname]        = PRS.Vorname, 
+       [Geb.Dat.]       = PRS.Geburtsdatum, 
+       [Monat]          = MONTH(PRS.Geburtsdatum), 
+       [Tag]            = DAY(PRS.Geburtsdatum), 
+       [Leistung]       = PRZ.Value3, --LEI.FaProzessCode,
+       --[Leistungsdauer] = convert(varchar, LEI.DatumVon,104) + ' - ' + IsNull(convert(varchar, LEI.DatumBis,104), ''), 
+       [Strasse]        = ADR.Strasse,
+       [Nr.]            = ADR.HausNr,
+       [Zusatz]         = ADR.Zusatz,
+       [PLZ]            = ADR.PLZ,
+       [Ort]            = ADR.Ort,
+       [OE]             = SA.SozialzentrumKurz,
+       [Team]           = SA.OrgUnitShort,
+       BaPersonID$ = RES.BaPersonID
+FROM   @tblTempRes RES
+       INNER JOIN FaFall           FAL ON FAL.FaFallID = RES.FaFallID
+       INNER JOIN FaLeistung       LEI ON LEI.FaLeistungID = RES.FaLeistungID
+       LEFT  JOIN FaLeistungArchiv ARC ON ARC.FaLeistungID = LEI.FaLeistungID 
+       INNER JOIN vwUser           SA  ON SA.UserID = RES.UserID
+       INNER JOIN BaPerson         PRS ON PRS.BaPersonID = RES.BaPersonID
+       INNER JOIN BaAdresse        ADR ON ADR.BaAdresseID = RES.BaAdresseID -- Alle Personen anzeigen, wenn eine gültige Adresse vorhanden und nicht gesperrt aus Alpha
+       INNER JOIN XLOVCode         PRZ ON PRZ.Code = RES.FaProzessCode AND PRZ.LOVName = 'FaProzess'
+---WHERE ({edtMitSchuldner} = 1 OR Rolle &lt;&gt; 'Schuldner/in')
+AND (ARC.FaLeistungID IS NULL OR ARC.CheckOut IS NOT NULL)  -- Falls Eintrag im Archiv, muss das CheckOut Datum Null sein -&gt; ist wirklich im Archiv
+ORDER BY FT DESC, LT DESC, PRS.Name, PRS.Vorname</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="xDocument.Properties.Buttons" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABbSURBVDhPY2AAAmNj4/+4MEgeA4AU//8/EwOLiYn9B2Gc
+        GtLSGP4jY5BikEEYmgjZANIAUgO3CZcGZGdi1YDuJBgfpJE6NmALKZjYqJPIijh8KRYmhzXlEhIEANZ8
+        ev1ASni6AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="xWordBericht1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        Qk02BQAAAAAAADYEAAAoAAAAEAAAABAAAAABAAgAAAAAAAAAAADEDgAAxA4AAAABAAAAAQAAAAAA/wAA
+        gP8AgAD/AICA/4AAAP+AAID/gIAA/8DAwP/A3MD/8Mqm/wQEBP8ICAj/DAwM/xEREf8WFhb/HBwc/yIi
+        Iv8pKSn/VVVV/01NTf9CQkL/OTk5/4B8//9QUP//kwDW///szP/G1u//1ufn/5Cprf8AADP/AABm/wAA
+        mf8AAMz/ADMA/wAzM/8AM2b/ADOZ/wAzzP8AM///AGYA/wBmM/8AZmb/AGaZ/wBmzP8AZv//AJkA/wCZ
+        M/8AmWb/AJmZ/wCZzP8Amf//AMwA/wDMM/8AzGb/AMyZ/wDMzP8AzP//AP9m/wD/mf8A/8z/MwAA/zMA
+        M/8zAGb/MwCZ/zMAzP8zAP//MzMA/zMzM/8zM2b/MzOZ/zMzzP8zM///M2YA/zNmM/8zZmb/M2aZ/zNm
+        zP8zZv//M5kA/zOZM/8zmWb/M5mZ/zOZzP8zmf//M8wA/zPMM/8zzGb/M8yZ/zPMzP8zzP//M/8z/zP/
+        Zv8z/5n/M//M/zP///9mAAD/ZgAz/2YAZv9mAJn/ZgDM/2YA//9mMwD/ZjMz/2YzZv9mM5n/ZjPM/2Yz
+        //9mZgD/ZmYz/2ZmZv9mZpn/ZmbM/2aZAP9mmTP/Zplm/2aZmf9mmcz/Zpn//2bMAP9mzDP/ZsyZ/2bM
+        zP9mzP//Zv8A/2b/M/9m/5n/Zv/M/8wA////AMz/mZkA/5kzmf+ZAJn/mQDM/5kAAP+ZMzP/mQBm/5kz
+        zP+ZAP//mWYA/5lmM/+ZM2b/mWaZ/5lmzP+ZM///mZkz/5mZZv+ZmZn/mZnM/5mZ//+ZzAD/mcwz/2bM
+        Zv+ZzJn/mczM/5nM//+Z/wD/mf8z/5nMZv+Z/5n/mf/M/5n////MAAD/mQAz/8wAZv/MAJn/zADM/5kz
+        AP/MMzP/zDNm/8wzmf/MM8z/zDP//8xmAP/MZjP/mWZm/8xmmf/MZsz/mWb//8yZAP/MmTP/zJlm/8yZ
+        mf/Mmcz/zJn//8zMAP/MzDP/zMxm/8zMmf/MzMz/zMz//8z/AP/M/zP/mf9m/8z/mf/M/8z/zP///8wA
+        M///AGb//wCZ/8wzAP//MzP//zNm//8zmf//M8z//zP///9mAP//ZjP/zGZm//9mmf//Zsz/zGb///+Z
+        AP//mTP//5lm//+Zmf//mcz//5n////MAP//zDP//8xm///Mmf//zMz//8z/////M//M/2b///+Z////
+        zP9mZv//Zv9m/2b/////Zmb//2b/////Zv8hAKX/X19f/3d3d/+Ghob/lpaW/8vLy/+ysrL/19fX/93d
+        3f/j4+P/6urq//Hx8f/4+Pj/8Pv//6SgoP+AgID/AAD//wD/AP8A/////wAA//8A/////wD///////T0
+        9OwKCgoKCgoKCgoKCgr09PTsBwcHBwcHBwcHBwcK9PT07P////////////8HCvT09Oz//////wcHBwf/
+        BwoK/Ar8CvwK/Ar8/////wcK/P//////////CgcHB/8HCgr/Cvz//Ar///z/////Bwr8//wKBwr8B/8K
+        BwcH/wcKCv8K/Ar8Cvz//Af/B/8HCvz//P/8Cv8KBwoH/wf/BwoK/Ar/Cvz//Ar8//8H/wcK/Ar8CvwK
+        /Ar8CgcHB/8HCgr///////////z//woKCgr8CvwK/Ar8CvwK///s/wr09PT07P//////////7Ar09PT0
+        9Ozs7Ozs7Ozs7Oz09PQ=
+</value>
+  </data>
+</root>
