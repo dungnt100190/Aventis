@@ -37,10 +37,35 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>SozialHilfe_CtlWhSpezialkonto_GetAusgabekonti.feature</DependentUpon>
     </Compile>
-    <Compile Update="Pendenzen\Pendenzen.feature.cs">
+    <Compile Update="Pendenzen\CreatePendenzen.feature.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>Pendenzen.feature</DependentUpon>
+      <DependentUpon>CreatePendenzen.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Pendenzen\EditPendenzen.feature.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>EditPendenzen.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Pendenzen\GetPendenzenDetail.feature.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>GetPendenzenDetail.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Pendenzen\LoadNavbarItem.feature.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LoadNavbarItem.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Pendenzen\LoadPendenzen.feature.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LoadPendenzen.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Pendenzen\SearchPendenzen.feature.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SearchPendenzen.feature</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -49,9 +74,29 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>SozialHilfe_CtlWhSpezialkonto_GetAusgabekonti.feature.cs</LastGenOutput>
     </None>
-    <None Update="Pendenzen\Pendenzen.feature">
+    <None Update="Pendenzen\CreatePendenzen.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>Pendenzen.feature.cs</LastGenOutput>
+      <LastGenOutput>CreatePendenzen.feature.cs</LastGenOutput>
+    </None>
+    <None Update="Pendenzen\EditPendenzen.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>EditPendenzen.feature.cs</LastGenOutput>
+    </None>
+    <None Update="Pendenzen\GetPendenzenDetail.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>GetPendenzenDetail.feature.cs</LastGenOutput>
+    </None>
+    <None Update="Pendenzen\LoadNavbarItem.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>LoadNavbarItem.feature.cs</LastGenOutput>
+    </None>
+    <None Update="Pendenzen\LoadPendenzen.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>LoadPendenzen.feature.cs</LastGenOutput>
+    </None>
+    <None Update="Pendenzen\SearchPendenzen.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SearchPendenzen.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
 

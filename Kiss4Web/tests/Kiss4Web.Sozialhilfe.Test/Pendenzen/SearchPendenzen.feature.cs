@@ -17,17 +17,17 @@ namespace SpecFlow.GeneratedTests.Pendenzen
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class PendenzenFeature : Xunit.IClassFixture<PendenzenFeature.FixtureData>, System.IDisposable
+    public partial class SearchPendenzenFeature : Xunit.IClassFixture<SearchPendenzenFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "Pendenzen.feature"
+#line 1 "SearchPendenzen.feature"
 #line hidden
         
-        public PendenzenFeature(PendenzenFeature.FixtureData fixtureData, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public SearchPendenzenFeature(SearchPendenzenFeature.FixtureData fixtureData, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -36,7 +36,7 @@ namespace SpecFlow.GeneratedTests.Pendenzen
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Pendenzen", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "SearchPendenzen", "\tSearch Pendenzen ", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -68,9 +68,64 @@ namespace SpecFlow.GeneratedTests.Pendenzen
         
         public virtual void FeatureBackground()
         {
-#line 2
+#line 3
  #line hidden
-            TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table34 = new TechTalk.SpecFlow.Table(new string[] {
+                        "UserID",
+                        "PermissionGroupID",
+                        "GrantPermGroupID",
+                        "LogonName",
+                        "PasswordHash",
+                        "FirstName",
+                        "LastName",
+                        "ShortName",
+                        "IsLocked",
+                        "IsUserAdmin",
+                        "IsUserBIAGAdmin",
+                        "IsMandatsTraeger",
+                        "GenderCode",
+                        "KeinBDEExport",
+                        "MigUserFix",
+                        "VerID"});
+            table34.AddRow(new string[] {
+                        "USR1",
+                        "9",
+                        "9",
+                        "test_admin_1",
+                        "kR9Y+JkxEwo=",
+                        "CMC",
+                        "Global",
+                        "cg",
+                        "0",
+                        "1",
+                        "1",
+                        "0",
+                        "1",
+                        "0",
+                        "0",
+                        "257000"});
+            table34.AddRow(new string[] {
+                        "USR2",
+                        "9",
+                        "9",
+                        "test_admin_2",
+                        "kR9Y+JkxEwo=",
+                        "CMC",
+                        "Soft",
+                        "cs",
+                        "0",
+                        "1",
+                        "1",
+                        "0",
+                        "1",
+                        "0",
+                        "0",
+                        "258000"});
+#line 4
+ testRunner.Given("these UserAdmin for SearchPendenzen feature", ((string)(null)), table34, "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table35 = new TechTalk.SpecFlow.Table(new string[] {
+                        "XTaskID",
                         "BaPersonID",
                         "TaskStatusCode",
                         "TaskTypeCode",
@@ -83,193 +138,192 @@ namespace SpecFlow.GeneratedTests.Pendenzen
                         "ExpirationDate",
                         "StartDate",
                         "DoneDate",
-                        "UserID_InBearbeitung",
                         "TaskDescription",
                         "ResponseText",
                         "TaskReceiverCode",
                         "TaskSenderCode"});
-            table9.AddRow(new string[] {
+            table35.AddRow(new string[] {
+                        "TSK1",
                         "64807",
                         "1",
                         "4",
                         "Task 20180817-01",
-                        "2091",
-                        "3343",
+                        "USR2",
+                        "USR1",
                         "64807",
                         "98766",
                         "2018-01-10 00:00:00.000",
                         "2020-01-10 00:00:00.000",
                         "",
                         "",
-                        "",
                         "Task 20180817-1 autotest",
                         "Task 20180817-1 text",
                         "1",
                         ""});
-            table9.AddRow(new string[] {
+            table35.AddRow(new string[] {
+                        "TSK2",
                         "65134",
                         "1",
                         "4",
                         "Task 20180817-02",
-                        "2091",
-                        "3343",
+                        "USR2",
+                        "USR1",
                         "64807",
                         "99137",
                         "2018-01-10 00:00:00.000",
                         "2018-05-10 00:00:00.000",
-                        "",
                         "",
                         "",
                         "Task 20180817-2 autotest",
                         "Task 20180817-2 text",
                         "1",
                         ""});
-            table9.AddRow(new string[] {
+            table35.AddRow(new string[] {
+                        "TSK3",
                         "64807",
                         "2",
                         "6",
                         "Task 20180817-03",
-                        "2092",
-                        "3343",
+                        "USR2",
+                        "USR1",
                         "65134",
                         "99153",
                         "2018-01-10 00:00:00.000",
                         "2018-10-10 00:00:00.000",
                         "2018-04-10 00:00:00.000",
                         "",
-                        "",
                         "Task 20180817-3 autotest",
                         "Task 20180817-3 text",
                         "1",
                         ""});
-            table9.AddRow(new string[] {
+            table35.AddRow(new string[] {
+                        "TSK4",
                         "65134",
                         "2",
                         "4",
                         "Task 20180817-04",
-                        "2092",
-                        "3343",
+                        "USR2",
+                        "USR1",
                         "64807",
                         "98766",
                         "2018-01-10 00:00:00.000",
                         "2018-07-10 00:00:00.000",
                         "2018-06-10 00:00:00.000",
                         "",
-                        "",
                         "Task 20180817-4 autotest",
                         "Task 20180817-4 text",
                         "1",
                         ""});
-            table9.AddRow(new string[] {
+            table35.AddRow(new string[] {
+                        "TSK5",
                         "65134",
                         "1",
                         "6",
                         "Task 20180817-05",
-                        "3343",
-                        "2091",
+                        "USR1",
+                        "USR2",
                         "65659",
                         "99153",
                         "2018-01-10 00:00:00.000",
                         "2019-02-10 00:00:00.000",
                         "",
                         "",
-                        "",
                         "Task 20180817-5 autotest",
                         "Task 20180817-5 text",
                         "1",
                         "1"});
-            table9.AddRow(new string[] {
+            table35.AddRow(new string[] {
+                        "TSK6",
                         "65139",
                         "2",
                         "6",
                         "Task 20180817-06",
-                        "3343",
-                        "2091",
+                        "USR1",
+                        "USR2",
                         "65659",
                         "98960",
                         "2018-01-10 00:00:00.000",
                         "2018-06-10 00:00:00.000",
                         "2018-03-10 00:00:00.000",
                         "",
-                        "",
                         "Task 20180817-6 autotest",
                         "Task 20180817-6 text",
                         "1",
                         "1"});
-            table9.AddRow(new string[] {
+            table35.AddRow(new string[] {
+                        "TSK7",
                         "65139",
                         "2",
                         "2",
                         "Task 20180817-07",
-                        "3343",
-                        "2093",
+                        "USR1",
+                        "USR2",
                         "65659",
                         "98960",
                         "2018-01-10 00:00:00.000",
                         "2018-09-10 00:00:00.000",
                         "2018-05-10 00:00:00.000",
                         "",
-                        "",
                         "Task 20180817-7 autotest",
                         "Task 20180817-7 text",
                         "1",
                         "1"});
-            table9.AddRow(new string[] {
+            table35.AddRow(new string[] {
+                        "TSK8",
                         "64807",
                         "2",
                         "4",
                         "Task 20180817-08",
-                        "3343",
-                        "3343",
+                        "USR1",
+                        "USR1",
                         "65134",
                         "99137",
                         "2018-01-10 00:00:00.000",
                         "2018-10-10 00:00:00.000",
                         "2018-05-10 00:00:00.000",
                         "",
-                        "",
                         "Task 20180817-8 autotest",
                         "Task 20180817-8 text",
                         "1",
                         "1"});
-            table9.AddRow(new string[] {
+            table35.AddRow(new string[] {
+                        "TSK9",
                         "64807",
                         "1",
                         "4",
                         "Task 20180817-09",
-                        "2093",
-                        "3343",
+                        "USR2",
+                        "USR1",
                         "65134",
                         "99137",
                         "2018-01-10 00:00:00.000",
                         "2018-11-10 00:00:00.000",
                         "",
                         "",
-                        "",
                         "Task 20180817-9 autotest",
                         "Task 20180817-9 text",
                         "1",
                         "2"});
-            table9.AddRow(new string[] {
+            table35.AddRow(new string[] {
+                        "TSK10",
                         "65139",
                         "1",
                         "2",
                         "Task 20180817-10",
-                        "2075",
-                        "3343",
+                        "USR2",
+                        "USR1",
                         "64805",
                         "98761",
                         "2018-01-10 00:00:00.000",
                         "2018-12-10 00:00:00.000",
                         "",
                         "",
-                        "",
                         "Task 20180817-10 autotest",
                         "Task 20180817-10 text",
                         "1",
                         "2"});
-#line 3
- testRunner.Given("these Tasks", ((string)(null)), table9, "Given ");
+#line 24
+ testRunner.And("these Tasks for SearchPendenzen feature", ((string)(null)), table35, "And ");
 #line hidden
         }
         
@@ -278,157 +332,35 @@ namespace SpecFlow.GeneratedTests.Pendenzen
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Get count of navbar items")]
-        [Xunit.TraitAttribute("FeatureTitle", "Pendenzen")]
-        [Xunit.TraitAttribute("Description", "Get count of navbar items")]
-        [Xunit.TraitAttribute("Category", "servicetest")]
-        public virtual void GetCountOfNavbarItems()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get count of navbar items", new string[] {
-                        "servicetest"});
-#line 17
-this.ScenarioSetup(scenarioInfo);
-#line 2
- this.FeatureBackground();
-#line 18
- testRunner.When("call LoadNavBarItems", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-            TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
-                        "ItmMeineFaellig",
-                        "ItmMeineOffen",
-                        "ItmMeineInBearbeitung",
-                        "ItmMeineErstellt",
-                        "ItmMeineErhalten",
-                        "ItmMeineZuVisieren",
-                        "ItmVersandteFaellig",
-                        "ItmVersandteZuVisieren",
-                        "ItmVersandteAllgemein",
-                        "ItmVersandteOffen"});
-            table10.AddRow(new string[] {
-                        "2",
-                        "7",
-                        "3",
-                        "1",
-                        "6",
-                        "1",
-                        "1",
-                        "1",
-                        "3",
-                        "4"});
-#line 19
- testRunner.Then("the count of navbar items should be", ((string)(null)), table10, "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Get Pendenzen data")]
-        [Xunit.TraitAttribute("FeatureTitle", "Pendenzen")]
-        [Xunit.TraitAttribute("Description", "Get Pendenzen data")]
-        [Xunit.TraitAttribute("Category", "servicetest")]
-        public virtual void GetPendenzenData()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get Pendenzen data", new string[] {
-                        "servicetest"});
-#line 24
-this.ScenarioSetup(scenarioInfo);
-#line 2
- this.FeatureBackground();
-#line 25
- testRunner.Given("id of menu item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 26
- testRunner.When("call GetPendenzenData", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-            TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
-                        "ExpirationDate",
-                        "Subject",
-                        "LeistungModul",
-                        "FaFall",
-                        "Fallnummer",
-                        "PersonBP",
-                        "Sender",
-                        "Receiver",
-                        "TaskStatusCode",
-                        "CreateDate",
-                        "StartDate",
-                        "DoneDate",
-                        "ResponseText"});
-#line 27
- testRunner.Then("the list of Task should be", ((string)(null)), table11, "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Get Pendenzen detail")]
-        [Xunit.TraitAttribute("FeatureTitle", "Pendenzen")]
-        [Xunit.TraitAttribute("Description", "Get Pendenzen detail")]
-        [Xunit.TraitAttribute("Category", "servicetest")]
-        public virtual void GetPendenzenDetail()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get Pendenzen detail", new string[] {
-                        "servicetest"});
-#line 31
-this.ScenarioSetup(scenarioInfo);
-#line 2
- this.FeatureBackground();
-#line 32
- testRunner.Given("Task Id", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 33
- testRunner.When("call GetPendenzenDetail", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-            TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
-                        "status",
-                        "pendenzTyp",
-                        "betreff",
-                        "beschreibung",
-                        "empfangerId",
-                        "falltrager",
-                        "leistung"});
-#line 34
- testRunner.Then("the detail data of Task should be", ((string)(null)), table12, "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
         [Xunit.FactAttribute(DisplayName="Search Pendenzen")]
-        [Xunit.TraitAttribute("FeatureTitle", "Pendenzen")]
+        [Xunit.TraitAttribute("FeatureTitle", "SearchPendenzen")]
         [Xunit.TraitAttribute("Description", "Search Pendenzen")]
         [Xunit.TraitAttribute("Category", "servicetest")]
         public virtual void SearchPendenzen()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Search Pendenzen", new string[] {
                         "servicetest"});
-#line 38
+#line 49
 this.ScenarioSetup(scenarioInfo);
-#line 2
+#line 3
  this.FeatureBackground();
-#line 39
- testRunner.Given("id of menu item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 50
+ testRunner.Given("SearchPendenzen client has LogonName is test_admin_1, PasswordHash is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 51
+ testRunner.And("menu item id for SearchPendenzen is 1_2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-            TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table36 = new TechTalk.SpecFlow.Table(new string[] {
                         "IdStatus",
-                        "IdPendenzTyp",
-                        "Betreff",
-                        "IdErsteller",
-                        "IdEmpfanger",
-                        "NameKlientIn",
-                        "VornameKlientIn",
-                        "Fallnummer",
-                        "IdLeistungsverantw",
-                        "IdOrganisationseinheit",
-                        "FromErfasst",
-                        "ToErfasst",
-                        "FromFallig",
-                        "ToFallig",
-                        "FromBearbeitung",
-                        "ToBearbeitung",
-                        "FromErledigt",
-                        "ToErledigt"});
-#line 40
- testRunner.And("search condition", ((string)(null)), table13, "And ");
-#line 42
+                        "IdPendenzTyp"});
+            table36.AddRow(new string[] {
+                        "1",
+                        "4"});
+#line 52
+ testRunner.And("search condition", ((string)(null)), table36, "And ");
+#line 58
  testRunner.When("call SearchPendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-            TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table37 = new TechTalk.SpecFlow.Table(new string[] {
                         "ExpirationDate",
                         "Subject",
                         "LeistungModul",
@@ -442,8 +374,50 @@ this.ScenarioSetup(scenarioInfo);
                         "StartDate",
                         "DoneDate",
                         "ResponseText"});
-#line 43
- testRunner.Then("the list of Task should be", ((string)(null)), table14, "Then ");
+            table37.AddRow(new string[] {
+                        "2020-01-10 00:00:00.000",
+                        "Task 20180817-01",
+                        "S",
+                        "Sahli, Heidi (64807)",
+                        "64807",
+                        "Sahli, Heidi",
+                        "NULL",
+                        "test_admin_1 - Global, CMC",
+                        "1",
+                        "2018-01-10 00:00:00.000",
+                        "",
+                        "",
+                        "Task 20180817-1 text"});
+            table37.AddRow(new string[] {
+                        "2018-05-10 00:00:00.000",
+                        "Task 20180817-02",
+                        "S",
+                        "de Lignie, Ivo (65659)",
+                        "65659",
+                        "Meier, Hans",
+                        "NULL",
+                        "test_admin_1 - Global, CMC",
+                        "1",
+                        "2018-01-10 00:00:00.000",
+                        "",
+                        "",
+                        "Task 20180817-2 text"});
+            table37.AddRow(new string[] {
+                        "2018-11-10 00:00:00.000",
+                        "Task 20180817-09",
+                        "S",
+                        "de Lignie, Ivo (65659)",
+                        "65659",
+                        "Sahli, Heidi",
+                        "NULL",
+                        "test_admin_1 - Global, CMC",
+                        "1",
+                        "2018-01-10 00:00:00.000",
+                        "",
+                        "",
+                        "Task 20180817-9 text"});
+#line 59
+ testRunner.Then("the list of found Task should be", ((string)(null)), table37, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -455,12 +429,12 @@ this.ScenarioSetup(scenarioInfo);
             
             public FixtureData()
             {
-                PendenzenFeature.FeatureSetup();
+                SearchPendenzenFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                PendenzenFeature.FeatureTearDown();
+                SearchPendenzenFeature.FeatureTearDown();
             }
         }
     }

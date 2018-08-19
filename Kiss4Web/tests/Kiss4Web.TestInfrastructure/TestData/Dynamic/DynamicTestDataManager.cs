@@ -129,6 +129,26 @@ namespace Kiss4Web.TestInfrastructure.TestData.Dynamic
                                 {
                                     // value is the logical name of another entity (which should already be created)
                                     var entityName = GetEntityNameFromHeader(idProperty);
+                                    // apply for XTask
+                                    if (entityTypeName.Equals("Xtask"))
+                                    {
+                                        if (idProperty.Equals("SenderID") || idProperty.Equals("ReceiverID"))
+                                        {
+                                            entityName = "XUser";
+                                        }
+                                        if (idProperty.Equals("FaFallID"))
+                                        {
+                                            entityName = "BaPerson";
+                                        }
+                                    }
+                                    // apply for FaLeistung
+                                    if (entityTypeName.Equals("FaLeistung"))
+                                    {
+                                        if (idProperty.Equals("FaFallID"))
+                                        {
+                                            entityName = "BaPerson";
+                                        }
+                                    }
                                     var lookup = _identifierLookup[entityName];
                                     var referencedEntityId = lookup[value.Normalize()];
                                     property.SetValue(entity, referencedEntityId);

@@ -28,7 +28,7 @@ namespace Kiss4Web.TestInfrastructure.TestServer
 
         public TestServerFixture()
         {
-            const string connectionString = "server=192.168.35.205,1433;initial catalog=KiSS_Ivos_TestDB_R4929_1;user id=testKiss;";
+            const string connectionString = "server=CMC-DUNGNT31;initial catalog=KiSS_Ivos_TestDB_R4929_1;user id=testKiss;";
             DockerStarter.TryStartDbContainer(connectionString);
             DateTime = new TestDateTimeProvider();
 
@@ -88,17 +88,7 @@ namespace Kiss4Web.TestInfrastructure.TestServer
             var userTestData = TestData<XUserTestData>();
             XUser user;
             string password;
-            if (testUser == TestUser.NewAdmin)
-            {
-                user = userTestData.NewAdmin;
-                password = XUserTestData.NewAdminPassword;
-            }
-            else if (testUser == TestUser.DiagAdmin)
-            {
-                user = userTestData.DiagAdmin;
-                password = XUserTestData.DiagAdminPassword;
-            }
-            else if (testUser == TestUser.Administrator)
+            if (testUser == TestUser.Administrator)
             {
                 user = userTestData.Administrator;
                 password = XUserTestData.AdminPassword;

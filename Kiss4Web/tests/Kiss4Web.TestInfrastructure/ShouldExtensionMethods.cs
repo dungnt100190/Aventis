@@ -24,6 +24,7 @@ namespace Kiss4Web.TestInfrastructure
                 {
                     var actualValue = property.GetValue(actual);
                     var expectedValue = property.GetValue(expected);
+                    if (expectedValue != null && expectedValue.Equals("NULL")) expectedValue = null;
 
                     actualValue.ShouldBe(expectedValue, $"{property.Name} should be {expectedValue}, but was {actualValue}");
                 }
