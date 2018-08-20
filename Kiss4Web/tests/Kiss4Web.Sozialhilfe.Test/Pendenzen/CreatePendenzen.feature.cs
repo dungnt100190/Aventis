@@ -91,7 +91,7 @@ namespace SpecFlow.GeneratedTests.Pendenzen
                         "USR1",
                         "9",
                         "9",
-                        "test_admin_3",
+                        "test_admin_1",
                         "kR9Y+JkxEwo=",
                         "CMC",
                         "Global",
@@ -108,7 +108,7 @@ namespace SpecFlow.GeneratedTests.Pendenzen
                         "USR2",
                         "9",
                         "9",
-                        "test_admin_4",
+                        "test_admin_2",
                         "kR9Y+JkxEwo=",
                         "CMC",
                         "Soft",
@@ -177,7 +177,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 2
  this.FeatureBackground();
 #line 14
- testRunner.Given("CreatePendenzen client has LogonName is test_admin_3, PasswordHash is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("CreatePendenzen client has LogonName is test_admin_1, PasswordHash is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
                         "status",
@@ -229,8 +229,8 @@ this.ScenarioSetup(scenarioInfo);
                         "2",
                         "Insert 20180817-01",
                         "Insert 20180817-1 autotest",
-                        "test_admin_4 - Soft, CMC",
-                        "test_admin_3 - Global, CMC",
+                        "test_admin_2 - Soft, CMC",
+                        "test_admin_1 - Global, CMC",
                         "65134",
                         "Meier, Hans (65134)",
                         "98952",

@@ -7,7 +7,6 @@ using Kiss4Web.TestInfrastructure.TestData.Dynamic;
 using Kiss4Web.TestInfrastructure.TestServer;
 using NUnit.Framework;
 using Shouldly;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -23,6 +22,7 @@ namespace Kiss4Web.Sozialhilfe.Test.Pendenzen
         private HttpClient _client;
         private CreateUpdateQuery _inputPendenzen;
         private ServiceResult<bool> _result;
+        private int _preTaskId;
 
         public CreatePendenzenSteps(TestServerFixture integrationTestEnvironment) : base(integrationTestEnvironment)
         {
@@ -39,19 +39,19 @@ namespace Kiss4Web.Sozialhilfe.Test.Pendenzen
         {
             await _testDataManager.Insert<XUser>(table);
         }
-        
+
         [Given(@"these Tasks for CreatePendenzen feature")]
         public async Task GivenTheseTasksForCreatePendenzenFeature(Table table)
         {
             await _testDataManager.Insert<Xtask>(table);
         }
-        
+
         [Given(@"CreatePendenzen client has LogonName is (.*), PasswordHash is (.*)")]
         public async Task GivenCreatePendenzenClientHasLogonNameIsPasswordHashIs(string p0, string p1)
         {
             _client = await IntegrationTestEnvironment.GetClient(p0, p1);
         }
-        
+
         [Given(@"this new Pendenzen, \[empfangerId] is (\w+), \[SenderId] is (\w+)")]
         public void GivenThisNewPendenzenEmpfangerIdIsUSRSenderIdIsUSR(string receiverLogicalName, string senderLogicalName, Table table)
         {
@@ -75,8 +75,8 @@ namespace Kiss4Web.Sozialhilfe.Test.Pendenzen
         [Then(@"the created Pendenzen is after (\w+) and should be")]
         public async Task ThenTheCreatedPendenzenShouldBe(string taskLogicalName, Table table)
         {
-            var taskId = _testDataManager.Lookup<Xtask>(taskLogicalName);
-            var outputPendenzen = await _client.GetAsJsonAsync<PendenzenDetailItem>(string.Format(Url.GetPendenzenDetail, taskId + 1), null);
+            _preTaskId = _testDataManager.Lookup<Xtask>(taskLogicalName);
+            var outputPendenzen = await _client.GetAsJsonAsync<PendenzenDetailItem>(string.Format(Url.GetPendenzenDetail, _preTaskId + 1), null);
 
             var detailPendenzenReceived = new List<PendenzenDetailItem>();
             detailPendenzenReceived.Add(outputPendenzen.Result);
@@ -85,6 +85,9 @@ namespace Kiss4Web.Sozialhilfe.Test.Pendenzen
 
             var expected = _testDataManager.CreateSetWithLookup<PendenzenDetailItem>(table).ToList();
             detailPendenzenReceived.ShouldBePartially(expected, table.Header);
+
+            _testDataManager.Delete<Xtask>(_preTaskId + 1);
+            await _testDataManager.Cleanup();
         }
 
         //[AfterScenario]

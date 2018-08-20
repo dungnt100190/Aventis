@@ -19,6 +19,7 @@ namespace Kiss4Web.Sozialhilfe.Test.Pendenzen
     public class EditPendenzenSteps : IntegrationTest
     {
         private DynamicTestDataManager _testDataManager;
+        private List<XUser> _listUser;
         private HttpClient _client;
         private CreateUpdateQuery _inputPendenzen;
         private ServiceResult<bool> _result;
@@ -38,20 +39,21 @@ namespace Kiss4Web.Sozialhilfe.Test.Pendenzen
         public async Task GivenTheseUserAdminForEditPendenzenFeature(Table table)
         {
             await _testDataManager.Insert<XUser>(table);
+            _listUser = _testDataManager.CreateSetWithLookupForEntity<XUser>(table).ToList();
         }
-        
+
         [Given(@"these Tasks for EditPendenzen feature")]
         public async Task GivenTheseTasksForEditPendenzenFeature(Table table)
         {
             await _testDataManager.Insert<Xtask>(table);
         }
-        
+
         [Given(@"EditPendenzen client has LogonName is (.*), PasswordHash is (.*)")]
         public async Task GivenEditPendenzenClientHasLogonNameIsPasswordHashIs(string p0, string p1)
         {
             _client = await IntegrationTestEnvironment.GetClient(p0, p1);
         }
-        
+
         [Given(@"this new data for Pendenzen (\w+), \[empfangerId] is (\w+)")]
         public void GivenThisNewDataForPendenzen(string taskLogicalName, string receiverLogicalName, Table table)
         {
@@ -59,20 +61,20 @@ namespace Kiss4Web.Sozialhilfe.Test.Pendenzen
             _inputPendenzen.id = _testDataManager.Lookup<Xtask>(taskLogicalName);
             _inputPendenzen.empfangerId = _testDataManager.Lookup<XUser>(receiverLogicalName);
         }
-        
+
         [When(@"call CreateUpdateTask for EditPendenzen feature")]
         public async Task WhenCallCreateUpdateTask()
         {
             _result = await _client.PostAsJsonAsync<CreateUpdateQuery, bool>(Url.CreateUpdateTask, _inputPendenzen) as ServiceResult<bool>;
             _outputPendenzen = await _client.GetAsJsonAsync<PendenzenDetailItem>(string.Format(Url.GetPendenzenDetail, _inputPendenzen.id), null);
         }
-        
+
         [Then(@"the call UpdateTask should be return true")]
         public void ThenTheCallShouldBeReturnTrue()
         {
             Assert.That(_result.Result == true);
         }
-        
+
         [Then(@"the updated Pendenzen should be")]
         public void ThenTheUpdatedPendenzenShouldBe(Table table)
         {
@@ -83,12 +85,18 @@ namespace Kiss4Web.Sozialhilfe.Test.Pendenzen
 
             var expected = _testDataManager.CreateSetWithLookup<PendenzenDetailItem>(table).ToList();
             detailPendenzenReceived.ShouldBePartially(expected, table.Header);
+
+            _testDataManager.Delete<Xtask>(_inputPendenzen.id);
+            for (int i = 0; i < _listUser.Count; ++i)
+            {
+                _testDataManager.Delete<XUser>(_listUser[i].UserId);
+            }
         }
 
         //[AfterScenario]
-        //public Task CleanupData()
+        //public void CleanupData()
         //{
-        //    return _testDataManager.Cleanup();
+
         //}
     }
 }

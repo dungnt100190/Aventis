@@ -85,6 +85,64 @@ namespace Kiss4Web.TestInfrastructure.TestData.Dynamic
             return result;
         }
 
+        public IEnumerable<T> CreateSetWithLookupForEntity<T>(Table table)
+            where T : new()
+        {
+            var entities = table.CreateSet<T>().ToList();
+            var idProperties = table.Header
+                                    .Where(hdr => hdr.EndsWith("ID", StringComparison.InvariantCultureIgnoreCase))
+                                    .ToList();
+            var entityProperties = typeof(T).GetProperties();
+            var entityTypeName = typeof(T).Name;
+            var result = new List<T>();
+
+            for (var i = 0; i < table.RowCount; i++)
+            {
+                var entity = entities[i];
+                foreach (var idProperty in idProperties)
+                {
+                    var value = table.Rows[i][idProperty];
+                    if (!int.TryParse(value, out var id))
+                    {
+                        var property = entityProperties.First(prp => string.Equals(prp.Name, idProperty, StringComparison.InvariantCultureIgnoreCase));
+                        if (string.Equals(value, "NULL", StringComparison.OrdinalIgnoreCase))
+                        {
+                            property.SetValue(entity, null);
+                        }
+                        else
+                        {
+                            // value is the logical name of entity (which should already be created)
+                            var entityName = GetEntityNameFromHeader(idProperty);
+                            if (entityName.Equals("XTask")) entityName = "Xtask";
+                            // apply for XTask
+                            if (entityTypeName.Equals("Xtask"))
+                            {
+                                if (idProperty.Equals("SenderID") || idProperty.Equals("ReceiverID"))
+                                {
+                                    entityName = "XUser";
+                                }
+                                if (idProperty.Equals("FaFallID"))
+                                {
+                                    entityName = "BaPerson";
+                                }
+                            }
+                            var lookup = _identifierLookup.Lookup(entityName);
+                            var referencedEntityId = lookup.Lookup(value.Normalize());
+                            if (referencedEntityId == default(int))
+                            {
+                                throw new KeyNotFoundException($"Logical name {value} not found. Have you set up test data?");
+                            }
+                            property.SetValue(entity, referencedEntityId);
+                        }
+                    }
+                }
+
+                result.Add(entity);
+            }
+
+            return result;
+        }
+
         public void Dispose()
         {
             Cleanup().Wait();
@@ -187,6 +245,19 @@ namespace Kiss4Web.TestInfrastructure.TestData.Dynamic
                 _createdEntities.Add(entity);
                 return entity;
             }
+        }
+
+        public bool Delete<TEntity>(object key) where TEntity : class
+        {
+            var context = CreateDbContext();
+            var dbSet = context.Set<TEntity>();
+            TEntity entity = dbSet.Find(key);
+            if (context.Entry(entity).State == EntityState.Detached)
+            {
+                dbSet.Attach(entity);
+            }
+            dbSet.Remove(entity);
+            return context.SaveChanges() >= 1;
         }
 
         public int Lookup<TEntity>(string logicalName)
