@@ -349,6 +349,7 @@ namespace Kiss4Web.Test.DataAccess
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            // Tables
             modelBuilder.Entity<BaAdresse>()
                 .Property(e => e.CareOf)
                 .IsUnicode(false);
@@ -10004,6 +10005,4187 @@ namespace Kiss4Web.Test.DataAccess
             modelBuilder.Entity<XPlausiFehler>()
                 .Property(e => e.XPlausiFehlerTS)
                 .IsFixedLength();
+
+            // Views
+            modelBuilder.Entity<AyKostenart>()
+                .Property(e => e.Name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<AyKostenart>()
+                .Property(e => e.KontoNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<AyKostenart>()
+                .Property(e => e.BgKostenartTS)
+                .IsFixedLength();
+
+            modelBuilder.Entity<AyPositionsart>()
+                .Property(e => e.Name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<AyPositionsart>()
+                .Property(e => e.HilfeText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<AyPositionsart>()
+                .Property(e => e.sqlRichtlinie)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<AyPositionsart>()
+                .Property(e => e.VarName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<AyPositionsart>()
+                .Property(e => e.Bemerkung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<AyPositionsart>()
+                .Property(e => e.BgPositionsartTS)
+                .IsFixedLength();
+
+            modelBuilder.Entity<viewDauerauftrag>()
+                .Property(e => e.Text)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDauerauftrag>()
+                .Property(e => e.Betrag)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<viewDauerauftrag>()
+                .Property(e => e.ReferenzNummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDauerauftrag>()
+                .Property(e => e.Zahlungsgrund)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDauerauftrag>()
+                .Property(e => e.FbDauerauftragTS)
+                .IsFixedLength();
+
+            modelBuilder.Entity<viewDauerauftrag>()
+                .Property(e => e.AuftragStatus)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDauerauftrag>()
+                .Property(e => e.AuftragPeriodizitaet)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDauerauftrag>()
+                .Property(e => e.Mandant)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDauerauftrag>()
+                .Property(e => e.HabenKtoName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDauerauftrag>()
+                .Property(e => e.SollKtoName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDauerauftrag>()
+                .Property(e => e.PlzOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDTAFbBuchungen>()
+                .Property(e => e.BelegNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDTAFbBuchungen>()
+                .Property(e => e.IBAN)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDTAFbBuchungen>()
+                .Property(e => e.VertragNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDTAFbBuchungen>()
+                .Property(e => e.Mandant)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDTAFbBuchungen>()
+                .Property(e => e.KontoName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDTAFbBuchungen>()
+                .Property(e => e.DTAKontoNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDTAFbBuchungen>()
+                .Property(e => e.DTAZugang)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDTAFbBuchungen>()
+                .Property(e => e.Betrag)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<viewDTAFbBuchungen>()
+                .Property(e => e.Kreditor)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDTAFbBuchungen>()
+                .Property(e => e.KreditorName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDTAFbBuchungen>()
+                .Property(e => e.KreditorStrasse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDTAFbBuchungen>()
+                .Property(e => e.KreditorZusatz)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDTAFbBuchungen>()
+                .Property(e => e.KreditorPLZ)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDTAFbBuchungen>()
+                .Property(e => e.KreditorOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDTAFbBuchungen>()
+                .Property(e => e.Zahlungsgrund)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDTAFbBuchungen>()
+                .Property(e => e.PCKontoNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDTAFbBuchungen>()
+                .Property(e => e.BankKontoNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDTAFbBuchungen>()
+                .Property(e => e.BankName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDTAFbBuchungen>()
+                .Property(e => e.BankStrasse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDTAFbBuchungen>()
+                .Property(e => e.BankPLZ)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDTAFbBuchungen>()
+                .Property(e => e.BankOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDTAFbBuchungen>()
+                .Property(e => e.ClearingNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewDTAFbBuchungen>()
+                .Property(e => e.StatusText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungCode>()
+                .Property(e => e.Code)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungCode>()
+                .Property(e => e.Betrag)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<viewFbBuchungCode>()
+                .Property(e => e.Text)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungCode>()
+                .Property(e => e.FbBuchungCodeTS)
+                .IsFixedLength();
+
+            modelBuilder.Entity<viewFbBuchungCode>()
+                .Property(e => e.SollKtoName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungCode>()
+                .Property(e => e.HabenKtoName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungCode>()
+                .Property(e => e.Mandant)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungCode>()
+                .Property(e => e.PlzOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungCode>()
+                .Property(e => e.MTLogon)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungCode>()
+                .Property(e => e.MTName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungen>()
+                .Property(e => e.Code)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungen>()
+                .Property(e => e.BelegNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungen>()
+                .Property(e => e.Betrag)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<viewFbBuchungen>()
+                .Property(e => e.Text)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungen>()
+                .Property(e => e.PCKontoNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungen>()
+                .Property(e => e.BankKontoNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungen>()
+                .Property(e => e.IBAN)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungen>()
+                .Property(e => e.ReferenzNummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungen>()
+                .Property(e => e.Zahlungsgrund)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungen>()
+                .Property(e => e.Name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungen>()
+                .Property(e => e.Zusatz)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungen>()
+                .Property(e => e.Strasse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungen>()
+                .Property(e => e.PLZ)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungen>()
+                .Property(e => e.Ort)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungen>()
+                .Property(e => e.Creator)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungen>()
+                .Property(e => e.Modifier)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungen>()
+                .Property(e => e.FbBuchungTS)
+                .IsFixedLength();
+
+            modelBuilder.Entity<viewFbBuchungen>()
+                .Property(e => e.SollKtoName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungen>()
+                .Property(e => e.HabenKtoName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungen>()
+                .Property(e => e.Mandant)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungen>()
+                .Property(e => e.PlzOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungen>()
+                .Property(e => e.MTLogon)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungen>()
+                .Property(e => e.MTName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungen>()
+                .Property(e => e.ErfLogon)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungen>()
+                .Property(e => e.ErfName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<viewFbBuchungen>()
+                .Property(e => e.StatusText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwBaAdressate>()
+                .Property(e => e.Typ)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwBaAdressate>()
+                .Property(e => e.Name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwBaAdressate>()
+                .Property(e => e.Strasse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwBaAdressate>()
+                .Property(e => e.Ort)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwBaZahlungsweg>()
+                .Property(e => e.BankKontoNummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwBaZahlungsweg>()
+                .Property(e => e.IBANNummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwBaZahlungsweg>()
+                .Property(e => e.PostKontoNummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwBaZahlungsweg>()
+                .Property(e => e.ReferenzNummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwBaZahlungsweg>()
+                .Property(e => e.AdresseName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwBaZahlungsweg>()
+                .Property(e => e.AdresseName2)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwBaZahlungsweg>()
+                .Property(e => e.AdresseStrasse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwBaZahlungsweg>()
+                .Property(e => e.AdresseHausNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwBaZahlungsweg>()
+                .Property(e => e.AdressePostfach)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwBaZahlungsweg>()
+                .Property(e => e.AdressePLZ)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwBaZahlungsweg>()
+                .Property(e => e.AdresseOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwBaZahlungsweg>()
+                .Property(e => e.BaZahlwegModulStdCodes)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwBaZahlungsweg>()
+                .Property(e => e.BaZahlungswegTS)
+                .IsFixedLength();
+
+            modelBuilder.Entity<vwBaZahlungsweg>()
+                .Property(e => e.Name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwBaZahlungsweg>()
+                .Property(e => e.Adresse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwBaZahlungsweg>()
+                .Property(e => e.Empfaenger)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwBgPosition>()
+                .Property(e => e.Betrag)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<vwBgPosition>()
+                .Property(e => e.Reduktion)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<vwBgPosition>()
+                .Property(e => e.Abzug)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<vwBgPosition>()
+                .Property(e => e.BetragEff)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<vwBgPosition>()
+                .Property(e => e.MaxBeitragSD)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<vwBgPosition>()
+                .Property(e => e.Buchungstext)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwBgPosition>()
+                .Property(e => e.Bemerkung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwBgPosition>()
+                .Property(e => e.BgPositionTS)
+                .IsFixedLength();
+
+            modelBuilder.Entity<vwBgPosition>()
+                .Property(e => e.BetragFinanzplan)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<vwBgPosition>()
+                .Property(e => e.BetragBudget)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<vwBgPosition>()
+                .Property(e => e.BetragRechnung)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<vwBgPositionFinanzplan>()
+                .Property(e => e.Betrag)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<vwBgPositionFinanzplan>()
+                .Property(e => e.Reduktion)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<vwBgPositionFinanzplan>()
+                .Property(e => e.Abzug)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.InstitutionNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.Anrede)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.Briefanrede)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.Titel)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.Name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.Vorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.Telefon)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.Telefon2)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.Telefon3)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.Fax)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.EMail)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.Homepage)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.Bemerkung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.Creator)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.Modifier)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.BaInstitutionTS)
+                .IsFixedLength();
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.NameVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.Adresse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.AdresseMehrzeilig)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.OrtStrasse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.Zusatz)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.AdressZusatz)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.Strasse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.HausNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.StrasseHausNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.Postfach)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.PostfachTextD)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.PLZ)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.Ort)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.PLZOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.Bezirk)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.Kanton)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwInstitution>()
+                .Property(e => e.Land)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwIxBDELeistung_BDELeistungsart_AuswDLCode>()
+                .Property(e => e.DauerSUM)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.BankKontoNummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.IBANNummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.PostKontoNummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.ReferenzNummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.BankName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.BankZusatz)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.BankStrasse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.BankPLZ)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.BankOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.BankClearingNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.BankPCKontoNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.InstitutionName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.InstitutionAdresse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.InstitutionOrtStrasse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.InstitutionAdressZusatz)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.InstitutionStrasse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.InstitutionHausNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.InstitutionStrasseHausNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.InstitutionPostfach)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.InstitutionPLZ)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.InstitutionOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.InstitutionPLZOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.InstitutionKanton)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.InstitutionLand)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.PersonName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.PersonVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.PersonNameVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.PersonAdresse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.PersonAdressZusatz)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.PersonStrasse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.PersonHausNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.PersonStrasseHausNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.PersonPostfach)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.PersonPLZ)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.PersonOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.PersonPLZOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.PersonKanton)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.PersonLand)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.Kreditor)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.KreditorMehrZeilig)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.KreditorEinzeilig)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.Zahlungsweg)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.ZahlungswegMehrZeilig)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.PCKontoNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.ZusatzInfo)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.BeguenstigtName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.BeguenstigtName2)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.BeguenstigtStrasse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.BeguenstigtPLZ)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwKreditor>()
+                .Property(e => e.BeguenstigtOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.Titel)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.Name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.FruehererName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.Vorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.Vorname2)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.AHVNummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.Versichertennummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.HaushaltVersicherungsNummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.NNummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.ZEMISNummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.BFFNummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.HeimatgemeindeCodes)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.Telefon_P)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.Telefon_G)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.MobilTel)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.Fax)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.EMail)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.NavigatorZusatz)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.Bemerkung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.BaPersonTS)
+                .IsFixedLength();
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.ZuzugKtPLZ)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.ZuzugKtOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.ZuzugKtKanton)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.ZuzugGdePLZ)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.ZuzugGdeOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.ZuzugGdeKanton)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.UntWohnsitzPLZ)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.UntWohnsitzOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.UntWohnsitzKanton)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.WegzugPLZ)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.WegzugOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.WegzugKanton)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.Creator)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.Modifier)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.NameVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.VornameName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.Nationalitaet)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.NationalitaetFR)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.NationalitaetIT)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.Heimatort)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.Wohnsitz)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.WohnsitzMehrzeilig)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.WohnsitzAdressZusatz)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.WohnsitzStrasse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.WohnsitzHausNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.WohnsitzStrasseHausNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.WohnsitzPostfach)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.WohnsitzPostfachD)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.WohnsitzPLZ)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.WohnsitzOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.WohnsitzPLZOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.WohnsitzKanton)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.WohnsitzLand)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.WohnsitzBemerkung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.Aufenthalt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.AufenthaltMehrzeilig)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.AufenthaltAdressZusatz)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.AufenthaltStrasse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.AufenthaltHausNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.AufenthaltStrasseHausNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.AufenthaltPostfach)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.AufenthaltPostfachD)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.AufenthaltPLZ)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.AufenthaltOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.AufenthaltPLZOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.AufenthaltKanton)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.AufenthaltLand)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.AufenthaltBemerkung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.AufenthaltInstitutionName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPerson>()
+                .Property(e => e.Anrede)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPersonSimple>()
+                .Property(e => e.NameVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwPersonSimple>()
+                .Property(e => e.Versichertennummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwShMassendruckPapierverfuegung>()
+                .Property(e => e.SAR)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwShMassendruckPapierverfuegung>()
+                .Property(e => e.Klient)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwShMassendruckPapierverfuegung>()
+                .Property(e => e.BudgetMonat)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwShMassendruckPapierverfuegung>()
+                .Property(e => e.Intern)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwShMassendruckPapierverfuegung>()
+                .Property(e => e.Betrag)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<vwTmAbklPhasen>()
+                .Property(e => e.Fragestellungen)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmAbklPhasen>()
+                .Property(e => e.GrundDossier)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmAbklPhasen>()
+                .Property(e => e.IntegBeurteilung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmAbklPhasen>()
+                .Property(e => e.KursDatumBis)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmAbklPhasen>()
+                .Property(e => e.KursDatumVon)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmAbklPhasen>()
+                .Property(e => e.Phase)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmAbklPhasen>()
+                .Property(e => e.PhaseDatum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmAbklPhasen>()
+                .Property(e => e.Rueckfragen)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmAbklPhasen>()
+                .Property(e => e.Kursnummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmAbklPhasen>()
+                .Property(e => e.EinsatzIn)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmAdressat>()
+                .Property(e => e.GeehrteFrauHerr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmAdressat>()
+                .Property(e => e.ErsteZeile)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmAdressat>()
+                .Property(e => e.AdresseMehrzeilig)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmAdressat>()
+                .Property(e => e.Ort)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmAdressat>()
+                .Property(e => e.PLZ)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmAdressat>()
+                .Property(e => e.PLZOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmAdressat>()
+                .Property(e => e.Strasse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmAdressat>()
+                .Property(e => e.Zusatzzeile)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmAdressat>()
+                .Property(e => e.Fax)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmAllgemein>()
+                .Property(e => e.Bemerkungen)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmAllgemein>()
+                .Property(e => e.Kursabschluss)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmAllgemein>()
+                .Property(e => e.Kursaustritt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmAllgemein>()
+                .Property(e => e.Kurseintritt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmAllgemein>()
+                .Property(e => e.Kursname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.AHVNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.DerDes)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.DerDesBesch)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.DieDer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.DieDerBesch)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.Todesdatum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.TodesdatumBesch)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.TodesdatumOderBereich)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.Todesort)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.ErblasserAdresseEinzeln)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.ErblasserAdresseEinzelnBesch)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.ErblasserAnrede)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.ErblasserAnredeBesch)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.ErblasserElternnamen)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.ErblasserElternnamenBesch)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.ErblasserFamilienNamen)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.ErblasserFamilienNamenBesch)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.ErblasserGeburtsdatum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.ErblasserGeburtsdatumBesch)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.ErblasserHeimatorte)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.ErblasserHeimatorteBesch)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.ErblasserVornamen)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.ErblasserVornamenBesch)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.ErblasserZivilstand)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.ErblasserZivilstandBesch)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.lasserLasserin)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.ErblasserInfo1)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.ErblasserInfo2)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.ErblasserInfo3)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmErblasser>()
+                .Property(e => e.ErblasserInfo4)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.ID)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.Datum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.Dauer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.Kontaktart)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.GespraechsStatus)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.Gespraechstyp)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.Kontaktpartner)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.AlimentenstelleTyp)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.Stichwort)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.InhaltMitFmt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.InhaltOhneFmt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.Themen)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.Vertraulich)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.BesprechungThema1)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.BesprechungThema2)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.BesprechungThema3)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.BesprechungThema4)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.BesprechungThemaText1)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.BesprechungThemaText2)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.BesprechungThemaText3)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.BesprechungThemaText4)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.BesprechungZiel1)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.BesprechungZiel2)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.BesprechungZiel3)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.BesprechungZiel4)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.BesprechungZielGrad1)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.BesprechungZielGrad2)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.BesprechungZielGrad3)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.BesprechungZielGrad4)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.Pendenz1)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.Pendenz2)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.Pendenz3)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.Pendenz4)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.PendenzErledigt1)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.PendenzErledigt2)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.PendenzErledigt3)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.PendenzErledigt4)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.UserLogin)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.UserNachname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.UserVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.UserKuerzel)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.UserNameVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.UserNameVornameOhneKomma)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmFaAktennotizen>()
+                .Property(e => e.UserVornameName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.Gesuchsgrund)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.BetragBewilligt)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.BegruendungMitFmt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.BegruendungOhneFmt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.Bemerkung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.BewilligungBetragKS1)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.BewilligungBemerkungKS1)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.BewilligungBetragKS2)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.BewilligungBemerkungKS2)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.BewilligtVonName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.BewilligtVonVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.BewilligtVonAbteilung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.AbschlussgrundD)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.AbschlussgrundF)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.AbschlussgrundI)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.BetragBeantragt)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.BetragEigenleistung)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.TotalAusFLBFond)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.Mitarbeiter)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.KGS)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.Kostenstelle)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.Klient)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.FondsNameKurz)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.FondsNameLang)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.FondsBemerkungD)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.FondsBemerkungF)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.FondsBemerkungI)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.FondsTypD)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.FondsTypF)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.FondsTypI)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.Verteiler)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmGvGesuch>()
+                .Property(e => e.VerteilerMehrzeilig)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.InstitutionNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.Name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.Vorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.NameVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.Telefon)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.Fax)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.EMail)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.Homepage)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.CareOf)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.AdressZusatz)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.ZuhandenVon)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.Strasse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.HausNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.Postfach)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.PostfachTextD)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.PLZ)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.Ort)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.Kanton)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.Bezirk)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.StrasseHausNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.OrtStrasse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.PLZOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.LandD)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.LandF)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.LandI)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.LandE)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.AdresseEinzeilig)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.AdresseEinzOhneName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.AdresseMehrzeilig)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmInstitution>()
+                .Property(e => e.AdresseMehrzOhneName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaBetrieb>()
+                .Property(e => e.Name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaBetrieb>()
+                .Property(e => e.AdressZusatz)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaBetrieb>()
+                .Property(e => e.AdresseMehrzeilig)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaBetrieb>()
+                .Property(e => e.Land)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaBetrieb>()
+                .Property(e => e.TeilbetriebVon)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaBetrieb>()
+                .Property(e => e.Telefon)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaBetrieb>()
+                .Property(e => e.Fax)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaBetrieb>()
+                .Property(e => e.EMail)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaBetrieb>()
+                .Property(e => e.Internet)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaBetrieb>()
+                .Property(e => e.Charakter)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaBetrieb>()
+                .Property(e => e.DokStichworte)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaBetrieb>()
+                .Property(e => e.DokAbsenderVornameName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaBetrieb>()
+                .Property(e => e.DokAdressatAnrede)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaBetrieb>()
+                .Property(e => e.DokAdressatSehrGeehrte)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaBetrieb>()
+                .Property(e => e.DokAdressatLieberLiebe)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaBetrieb>()
+                .Property(e => e.DokAdressatName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaBetrieb>()
+                .Property(e => e.DokAdressatVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaBetrieb>()
+                .Property(e => e.DokAdressatVornameName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaBetrieb>()
+                .Property(e => e.DokAdressatTel)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaBetrieb>()
+                .Property(e => e.DokAdressatMobil)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaBetrieb>()
+                .Property(e => e.DokAdressatAdresseMehrz)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaBetriebVerlauf>()
+                .Property(e => e.Kontaktperson)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaBetriebVerlauf>()
+                .Property(e => e.Autor)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaBetriebVerlauf>()
+                .Property(e => e.Stichwort)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEafSozioberuflicheBilanz>()
+                .Property(e => e.AnwTeilzeit)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEafSozioberuflicheBilanz>()
+                .Property(e => e.Schwerpunkte)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEafSozioberuflicheBilanz>()
+                .Property(e => e.BemAbschluss)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEafSozioberuflicheBilanz>()
+                .Property(e => e.ZielRav)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEafSozioberuflicheBilanz>()
+                .Property(e => e.Ergebnisse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEafSpezifischeErmittlung>()
+                .Property(e => e.AnwTeilzeit)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEafSpezifischeErmittlung>()
+                .Property(e => e.Zielsetzungen)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEafSpezifischeErmittlung>()
+                .Property(e => e.BemAbschluss)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.Aktiv)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.Bezeichnung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.Branche)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.Betrieb)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.BetriebAdresse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.Stellenbeschreibung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.KAProgramm)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.ZustaendigKA)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.Lehrberuf)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.TypAusbildung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.NeuGeschLehrstelle)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.unbefristet)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.aufteilbar)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.PensumUnbestimmt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.Fuehrerausweis)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.FuehrerausweisKat)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.PCKenntnisse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.Geschlecht)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.WeitereAnforderungen)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.DeutschMuendlich)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.DeutschSchriftlich)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.Ausbildung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.Kontaktperson)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.KontaktFunktion)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.KontaktBemerkung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.KontaktTelefon)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.KontaktTelefonMobil)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.KontaktFax)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaEinsatzplatz>()
+                .Property(e => e.KontaktEMail)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaQJFallfuehrung>()
+                .Property(e => e.Vorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaQJFallfuehrung>()
+                .Property(e => e.Name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaQJFallfuehrung>()
+                .Property(e => e.Adressat)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaQJFallfuehrung>()
+                .Property(e => e.Adresse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaQJFallfuehrung>()
+                .Property(e => e.Briefanrede)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaQJFallfuehrung>()
+                .Property(e => e.Anrede)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaQJFallfuehrung>()
+                .Property(e => e.EMail)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaQJFallfuehrung>()
+                .Property(e => e.Telefon)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaQJFallfuehrung>()
+                .Property(e => e.Institution)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaTransfer>()
+                .Property(e => e.AllgZiele)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaTransfer>()
+                .Property(e => e.Bewerbungsstrategie)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaTransfer>()
+                .Property(e => e.MuendAufforderungBem1)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaTransfer>()
+                .Property(e => e.MuendAufforderungBem2)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaTransfer>()
+                .Property(e => e.AustrittBem)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaVerlauf>()
+                .Property(e => e.Autor)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaVerlauf>()
+                .Property(e => e.Kontaktart)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaVerlauf>()
+                .Property(e => e.Kontaktperson)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaVerlauf>()
+                .Property(e => e.Stichwort)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaVerlauf>()
+                .Property(e => e.Thema)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaVerlauf>()
+                .Property(e => e.InhaltRTF)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaVerlauf>()
+                .Property(e => e.InhaltNORTF)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaVermittlung>()
+                .Property(e => e.SIZuweiserVornameName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaVermittlung>()
+                .Property(e => e.SIZuweiserAnrede)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaVermittlung>()
+                .Property(e => e.SIZuweiserSektion)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaVermittlung>()
+                .Property(e => e.BIBIPZuweiserVornameName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaVermittlung>()
+                .Property(e => e.BIBIPZuweiserAnrede)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaVermittlung>()
+                .Property(e => e.BIBIPZuweiserSektion)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaVermittlungBIBIP>()
+                .Property(e => e.ZustaendigKA)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKaVermittlungSI>()
+                .Property(e => e.ZustaendigKA)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesAuftrag>()
+                .Property(e => e.AbklaerungDurch)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesAuftrag>()
+                .Property(e => e.MeldungDurchD)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesAuftrag>()
+                .Property(e => e.MeldungDurchF)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesAuftrag>()
+                .Property(e => e.MeldungDurchI)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesAuftrag>()
+                .Property(e => e.AuftragDurchD)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesAuftrag>()
+                .Property(e => e.AuftragDurchF)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesAuftrag>()
+                .Property(e => e.AuftragDurchI)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesAuftrag>()
+                .Property(e => e.AbklaerungsartDE)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesAuftrag>()
+                .Property(e => e.AbklaerungsartFR)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesAuftrag>()
+                .Property(e => e.AbklaerungsartIT)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesAuftrag>()
+                .Property(e => e.Anlass)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesAuftrag>()
+                .Property(e => e.Auftrag)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesAuftrag>()
+                .Property(e => e.AbschlussgrundD)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesAuftrag>()
+                .Property(e => e.AbschlussgrundF)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesAuftrag>()
+                .Property(e => e.AbschlussgrundI)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesDokument>()
+                .Property(e => e.VerfasserFrauHerr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesDokument>()
+                .Property(e => e.VerfasserFrauHerrn)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesDokument>()
+                .Property(e => e.VerfasserNameVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesDokument>()
+                .Property(e => e.VerfasserNameVornameOhneKomma)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesDokument>()
+                .Property(e => e.VerfasserVornameName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesDokument>()
+                .Property(e => e.VerfasserAbteilungEMail)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesDokument>()
+                .Property(e => e.VerfasserAbteilungFax)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesDokument>()
+                .Property(e => e.VerfasserAbteilungName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesDokument>()
+                .Property(e => e.VerfasserAbteilungTelefon)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesDokument>()
+                .Property(e => e.VerfasserNachname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesDokument>()
+                .Property(e => e.VerfasserVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesDokument>()
+                .Property(e => e.VerfasserKuerzel)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesDokument>()
+                .Property(e => e.VerfasserTelephon)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesDokument>()
+                .Property(e => e.VerfasserEMail)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesDokument>()
+                .Property(e => e.Stichwort)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesDokument>()
+                .Property(e => e.ResultatD)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesDokument>()
+                .Property(e => e.ResultatF)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesDokument>()
+                .Property(e => e.ResultatI)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesDokument>()
+                .Property(e => e.ArtDE)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesDokument>()
+                .Property(e => e.ArtFR)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesDokument>()
+                .Property(e => e.ArtIT)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.MFPNameVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.MFPNmVrnmOhnKmma)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.MFPVornameName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.MFPAdrssEinzeilg)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.MFPAdrssMhrzeilg)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.SARFrauHerr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.SARFrauHerrn)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.SARNameVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.SARNamVrnmOhnKma)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.SARVornameName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.SARAbteilungEMai)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.SARAbteilungFax)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.SARAbteilungName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.SARAbteilungTel)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.SARNachname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.SARVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.SARKuerzel)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.SARTelephon)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.SAREMail)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.ElterlicheSorgeD)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.ElterlicheSorgeF)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.ElterlicheSorgeI)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.MassAuftragstext)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.BrchtArtDsBrchtD)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.BrchtArtDsBrchtF)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.BrchtArtDsBrchtI)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.AuftragAuftrag)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.AuftrgrtGschftsD)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.AuftrgrtGschftsF)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesMassnahmeBericht>()
+                .Property(e => e.AuftrgrtGschftsI)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesVerlauf>()
+                .Property(e => e.KontaktartDE)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesVerlauf>()
+                .Property(e => e.KontaktartFR)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesVerlauf>()
+                .Property(e => e.KontaktartIT)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesVerlauf>()
+                .Property(e => e.DienstleistungD)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesVerlauf>()
+                .Property(e => e.DienstleistungF)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesVerlauf>()
+                .Property(e => e.DienstleistungI)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesVerlauf>()
+                .Property(e => e.Stichwort)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesVerlauf>()
+                .Property(e => e.VerfasserFrauHerr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesVerlauf>()
+                .Property(e => e.VerfasserFrauHerrn)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesVerlauf>()
+                .Property(e => e.VerfasserNameVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesVerlauf>()
+                .Property(e => e.VerfasserNameVornameOhneKomma)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesVerlauf>()
+                .Property(e => e.VerfasserVornameName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesVerlauf>()
+                .Property(e => e.VerfasserAbteilungEMail)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesVerlauf>()
+                .Property(e => e.VerfasserAbteilungFax)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesVerlauf>()
+                .Property(e => e.VerfasserAbteilungName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesVerlauf>()
+                .Property(e => e.VerfasserAbteilungTelefon)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesVerlauf>()
+                .Property(e => e.VerfasserNachname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesVerlauf>()
+                .Property(e => e.VerfasserVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesVerlauf>()
+                .Property(e => e.VerfasserKuerzel)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesVerlauf>()
+                .Property(e => e.VerfasserTelephon)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesVerlauf>()
+                .Property(e => e.VerfasserEMail)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesVerlauf>()
+                .Property(e => e.DauerD)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesVerlauf>()
+                .Property(e => e.DauerF)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesVerlauf>()
+                .Property(e => e.DauerI)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmKesVerlauf>()
+                .Property(e => e.Inhalt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.Anrede)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.Name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.FrühererName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.Vorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.VornameName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.Vorname2)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.NameVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.NameVornameOhneKomma)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.NameGB)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.NameGBVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.NameGBVornameOhneKomma)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.Nationalitaet)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.Geschlecht)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.Geburtsdatum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.GeburtsdatumAmerikanisch)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.GestorbenAm)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.AHVNummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.Versichertennummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.VersichertennummerSonstAHVNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.BemerkungOhneFmt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.BemerkungMitFmt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.NNummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.BFFNummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.HaushaltVersicherungsNummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.Konfession)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.Heimatort)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.HeimatortNationalitaet)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.HeimatortNationalitaetD)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.HeimatortNationalitaetF)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.HeimatortNationalitaetI)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.PLZHeimatort)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.Sprache)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.SpracheVertsaendigung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.Permis)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.PermisBis)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.PermisSeit)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.AufenthaltGueltigBis)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.InCHseit)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.EndeZustaendigkeit)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.TelefonP)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.TelefonG)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.TelefonMobil)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.EMail)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.Fax)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.Navigatorzusatz)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.WegzugOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.WegzugPLZ)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.Zivilstand)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.ZivilstandD)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.ZivilstandF)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.ZivilstandI)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.ZivilstandSeit)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.ZuzugOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.ZuzugPLZ)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.ZEMISNummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.ErSie)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.ErSieGross)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.HerrFrau)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.HerrFrauName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.GeehrterHerrFrau)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.GeehrterHerrFrauName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.HerrnFrau)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.HerrnFrauName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.FrauHerrVornameName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.IhmIhr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.LieberLiebe)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.SeinIhr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.SeineIhre)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.SeinerIhrer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.ProjektteilnehmerIn)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.TeilnehmerIn)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.AufenthaltsortAdresseEinzeilig)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.AufenthaltsortAdresseEinzOhneName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.AufenthaltsortAdresseMehrzeilig)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.AufenthaltsortAdresseMehrzOhneName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.AufenthaltsortStrasseNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.AufenthaltsortPLZOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.AufenthaltWohnortAdrEinzeilig)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.AufenthaltWohnortAdrEinzOhneName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.AufenthaltWohnortAdrMehrzeilig)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.AufenthaltWohnortAdrMehrzOhneName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.AufenthaltWohnsitzStrasseNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.AufenthaltWohnsitzPLZOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.AufenthaltWohnsitzPLZ)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.AufenthaltWohnsitzOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.AufenthaltPostfachD)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.AufenthaltPostfachF)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.AufenthaltPostfachI)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.AufenthaltInstitutionName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.WohnsitzAdresseEinzeilig)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.WohnsitzAdresseEinzeiligGB)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.WohnsitzAdresseEinzOhneName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.WohnsitzAdresseMehrzeilig)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.WohnsitzAdresseMehrzOhneName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.WohnsitzStrasseNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.WohnsitzPLZOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.WohnsitzOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.WohnsitzPLZ)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.WohnsitzPostfachD)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.WohnsitzPostfachF)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.WohnsitzPostfachI)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.Wohnsituation)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.Wohnungsgroesse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.ArbeitslosSeit)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.AusgesteuertSeit)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.Beruf)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.ErlernterBeruf)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.Schulbildung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.VermieterName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.VermieterAdresseEinzOhneName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.VermieterAdresseMehrzOhneName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.VermieterAdresseStrasseNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.VermieterAdressePLZOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.VermieterAdressePLZ)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.VermieterAdresseOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.KVGName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.KVGMitgliedNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.KVGAdresseEinzOhneName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.VVGName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.VVGMitgliedNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.VVGAdresseEinzOhneName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.EhepartnerNachname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.EhepartnerVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.EhepartnerVorname2)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.EhepartnerNachnameVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.EhepartnerNNummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.EhepartnerBFFNummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.EhepartnerInCHseit)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.EhepartnerNationalitaet)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.EhepartnerZivilstand)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.EhepartnerBeruf)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.EhepartnerEndeZustaendigkeit)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.EhepartnerErteilungVA)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.EhepartnerGeschlecht)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.EhepartnerPermis)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.EhepartnerGebDatum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.EhepartnerAHVNummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.EhepartnerVersichertennummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.EhepartnerAnrede)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.EhepartnerPLZOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.EhepartnerStrasseNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.EhepartnerStrassePLZOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmPerson>()
+                .Property(e => e.Kostenstelle)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.Login)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.Nachname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.Vorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.Kuerzel)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.Telephon)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.EMail)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.ErSieGross)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.FrauHerr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.FrauHerrn)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.Briefanrede)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.NameVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.NameVornameOhneKomma)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.VornameName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.Text1MitFmt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.Text1OhneFmt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.Text2MitFmt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.Text2OhneFmt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.AbteilungEMail)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.AbteilungFax)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.AbteilungName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.AbteilungTelefon)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.AbteilungTelFaxWWW)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.AbteilungText1MitFmt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.AbteilungText1OhneFmt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.AbteilungText2MitFmt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.AbteilungText2OhneFmt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.AbteilungText3MitFmt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.AbteilungText3OhneFmt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.AbteilungText4MitFmt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.AbteilungText4OhneFmt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.AbteilungWWW)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.CareOf)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.AdressZusatz)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.ZuhandenVon)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.Strasse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.HausNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.Postfach)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.PostfachTextD)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.PLZ)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.Ort)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.Kanton)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.Bezirk)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.StrasseHausNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.OrtStrasse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.PLZOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.LandD)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.LandF)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.LandI)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.LandE)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.AdresseEinzeilig)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.AdresseEinzOhneName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.AdresseMehrzeilig)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.AdresseMehrzOhneName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmUser>()
+                .Property(e => e.AbteilungLeitungInitialen)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.BIBruttolohn)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.ZustKANachname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.ZustKAVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.ZustKAKuerzel)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.ZustKATelephon)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.ZustKAEMail)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.ZustKANameVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.ZustKANameVornameOhneKomma)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.ZustKAVornameName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.Einsatzplatz)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.EPBranche)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.EPKaProgramm)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.EPLehrberuf)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.EPBerufsausbildung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.Betrieb)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.BetriebAdressZusatz)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.BetriebStrasse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.BetriebHausNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.BetriebPostfach)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.BetriebPLZ)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.BetriebOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.BetriebKanton)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.BetriebLand)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.BetriebAdresseMehrzeilig)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.KontaktTitel)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.KontaktName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.KontaktVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.KontaktGeschlecht)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.KontaktTelefon)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.KontaktTelefonMobil)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.KontaktFax)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.KontaktEmail)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.KontaktNameVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.KontaktVornameName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungEinsatz>()
+                .Property(e => e.KontaktLieberLiebe)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.Branchen)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.Betriebe)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.Einsatzbereiche)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.Lehrberuf)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.DeutschMuendlich)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.DeutschSchriftlich)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.Sprachstandermittlung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.VermittelbarkeitBIBIP)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.VermittelbarkeitSI)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.VermittelbarkeitBemerkung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.Sucht)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.Suchtart)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.Gesundheit)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.GesundheitEinschraenkungen)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.GesundheitKoerperlich)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.EinschraenkungenKoerperlich)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.GesundheitBemerkung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.GesundheitPsychisch)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.Therapie)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.Zuverlaessigkeit)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.MotivationInizio)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.MotivationBIBIPSI)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.AeussereErscheinungBIBIP)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.AeussereErscheinungSI)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.Kinderbetreuung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.BesondereWuensche)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.BesondereFaehigkeiten)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.Fuehrerausweis)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.FuehrerausweisKategorie)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.PCKenntnisse)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.Ausbildung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.Arbeitszeiten)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.Unterstützung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.SIGespraechfuehrerin)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.Ausbildungswunsch)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.Berufswunsch)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.Bemerkungen)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.ArbeitsgebietBemerkung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.Schweizerdeutsch)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.LohnabtretungSD)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.LaufendeBetreibungen)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.AktuelleTaetigkeit)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.Verfuegbarkeit)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.EinschraenkungMontag)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.EinschraenkungDienstag)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.EinschraenkungMittwoch)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.EinschraenkungDonnerstag)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.EinschraenkungFreitag)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.EinschraenkungSamstag)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.EinschraenkungSonntag)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVermittlungProfil>()
+                .Property(e => e.Nachtarbeit)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmAntragEKSK>()
+                .Property(e => e.Titel)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmAntragEKSK>()
+                .Property(e => e.Begruendung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmAntragEKSK>()
+                .Property(e => e.DatumAntrag)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmAntragEKSK>()
+                .Property(e => e.Antrag)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmAntragEKSK>()
+                .Property(e => e.GenehmigtEKSK)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmAntragEKSK>()
+                .Property(e => e.Autor)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmGefaehrdungsMeldung>()
+                .Property(e => e.DatumEingang)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmGefaehrdungsMeldung>()
+                .Property(e => e.Kontaktveranlasser)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmGefaehrdungsMeldung>()
+                .Property(e => e.GefaehrdungNSB)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmGefaehrdungsMeldung>()
+                .Property(e => e.Themen)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmGefaehrdungsMeldung>()
+                .Property(e => e.Ausgangslage)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmGefaehrdungsMeldung>()
+                .Property(e => e.Auflagen)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmGefaehrdungsMeldung>()
+                .Property(e => e.Ueberpruefung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmGefaehrdungsMeldung>()
+                .Property(e => e.Konsequenzen)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmGefaehrdungsMeldung>()
+                .Property(e => e.AuflageDatum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.GrundMassnahme)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.Berichtstitel)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.BerichtDatumVon)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.BerichtDatumBis)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.GrundMassnahmeText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.AuftragZielsetzungText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.ZielErreicht)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.VeraenderungInPeriodCBText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.Begruendung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.NeueZieleText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.Wohnen)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.Gesundheit)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.Verhalten)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.Taetigkeit)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.FamiliaereSituationCBText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.SozialeKompetenzenCBText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.FreizeitCBText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.ResourcenCBText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.WohnenText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.GesundheitText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.VerhaltenText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.TaetigkeitText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.FamSituationText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.SozialeKompetenzenText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.FreizeitText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.BesondereRessourcenText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.HandlungenText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.BesSchwierigkeitenText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.KlientCBText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.DritteCBText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.InstitutionenCBText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.KlientText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.DritteText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.InstitutionenText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.MCSCMandat)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.BerichtBelastAngMCSCAdmin)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.BelastungMandatText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.BelastungAdminText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.EinnahmenAngaben)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.EA)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.BerichtVersicherungen)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.BV)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.BerichtBesondereAngaben)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.BBA)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.EinnahmenBemerkungen)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.VersicherungenBemerkungen)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.BesondereAngabenBem)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.AbrechnungUnterschrieben)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.PassationTeilnahmeCBText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.PassationBemerkung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.AntragBericht)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.AntragBegruendung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.ErstellungDatum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.BerichtBeilagen)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.BsDatum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.BelegeZurueckRevision)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.ZurueckVomBS)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.Berichtsart)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmMandBericht>()
+                .Property(e => e.Autor)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmSachversicherung>()
+                .Property(e => e.VerArt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmSachversicherung>()
+                .Property(e => e.Policenummer)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmSachversicherung>()
+                .Property(e => e.Selbstbehalt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmSachversicherung>()
+                .Property(e => e.Grundpraemie)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmSachversicherung>()
+                .Property(e => e.Zahlungsturnus)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmSachversicherung>()
+                .Property(e => e.LaufzeitVon)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmSachversicherung>()
+                .Property(e => e.LaufzeitBis)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmSachversicherung>()
+                .Property(e => e.VersichertSeit)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmSachversicherung>()
+                .Property(e => e.Person)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmSachversicherung>()
+                .Property(e => e.Bemerkungen)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmSachversicherung>()
+                .Property(e => e.Adressat_NameVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmSachversicherung>()
+                .Property(e => e.Adressat_StrasseNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmSachversicherung>()
+                .Property(e => e.Adressat_PLZOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmSachversicherung>()
+                .Property(e => e.Adressat_AdrMehrzeilig)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmSachversicherung>()
+                .Property(e => e.Adressat_AdrEinzeilig)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmSituationsBericht>()
+                .Property(e => e.AntragDatum)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmSituationsBericht>()
+                .Property(e => e.TypSHAntrag)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmSituationsBericht>()
+                .Property(e => e.Themen)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmSituationsBericht>()
+                .Property(e => e.BerichtFinanzen)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmSituationsBericht>()
+                .Property(e => e.ZielPrognose)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmSituationsBericht>()
+                .Property(e => e.AntragText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmSituationsBericht>()
+                .Property(e => e.Autor)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmVaterschaft>()
+                .Property(e => e.AnerkennungDat)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmVaterschaft>()
+                .Property(e => e.AnerkennungOrt)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmVaterschaft>()
+                .Property(e => e.UHVDat)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmVaterschaft>()
+                .Property(e => e.SgeVDat)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwTmVmVaterschaft>()
+                .Property(e => e.GenehmDat)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwUser>()
+                .Property(e => e.LogonName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwUser>()
+                .Property(e => e.FirstName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwUser>()
+                .Property(e => e.LastName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwUser>()
+                .Property(e => e.ShortName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwUser>()
+                .Property(e => e.PasswordHash)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwUser>()
+                .Property(e => e.Phone)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwUser>()
+                .Property(e => e.EMail)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwUser>()
+                .Property(e => e.Text1)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwUser>()
+                .Property(e => e.Text2)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwUser>()
+                .Property(e => e.XUserTS)
+                .IsFixedLength();
+
+            modelBuilder.Entity<vwUser>()
+                .Property(e => e.NameVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwUser>()
+                .Property(e => e.NameVornameOhneKomma)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwUser>()
+                .Property(e => e.VornameName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwUser>()
+                .Property(e => e.LogonNameVornameOrgUnit)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwUser>()
+                .Property(e => e.OrgEinheitName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwUser>()
+                .Property(e => e.OrgUnit)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwUser>()
+                .Property(e => e.OrgEinheitEmail)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwUser>()
+                .Property(e => e.OrgEinheitFax)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwUser>()
+                .Property(e => e.OrgEinheitWWW)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwUser>()
+                .Property(e => e.DisplayText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwUserSimple>()
+                .Property(e => e.LogonName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwUserSimple>()
+                .Property(e => e.LastName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwUserSimple>()
+                .Property(e => e.FirstName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwUserSimple>()
+                .Property(e => e.NameVorname)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwUserSimple>()
+                .Property(e => e.DisplayText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwXConfig_public>()
+                .Property(e => e.KeyPath)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwXConfig_public>()
+                .Property(e => e.LOVName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwXConfig_public>()
+                .Property(e => e.ValueDecimal)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<vwXConfig_public>()
+                .Property(e => e.OriginalValueDecimal)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<vwXConfig_public>()
+                .Property(e => e.ValueMoney)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<vwXConfig_public>()
+                .Property(e => e.OriginalValueMoney)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<vwXConfig_public>()
+                .Property(e => e.ValueVarchar)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<vwXConfig_public>()
+                .Property(e => e.OriginalValueVarchar)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<WhKostenart>()
+                .Property(e => e.Name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<WhKostenart>()
+                .Property(e => e.KontoNr)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<WhKostenart>()
+                .Property(e => e.BgKostenartTS)
+                .IsFixedLength();
+
+            modelBuilder.Entity<WhPositionsart>()
+                .Property(e => e.Name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<WhPositionsart>()
+                .Property(e => e.Hilfetext)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<WhPositionsart>()
+                .Property(e => e.sqlRichtlinie)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<WhPositionsart>()
+                .Property(e => e.BgPositionsartTS)
+                .IsFixedLength();
+
+            modelBuilder.Entity<WhPositionsart>()
+                .Property(e => e.VarName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<WhPositionsart>()
+                .Property(e => e.Bemerkung)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<WhPositionsart>()
+                .Property(e => e.KontoNrName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<XViewForeignKey>()
+                .Property(e => e.PKColumns)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<XViewForeignKey>()
+                .Property(e => e.FKColumns)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<XViewIndex>()
+                .Property(e => e.Keys)
+                .IsUnicode(false);
         }
     }
 }

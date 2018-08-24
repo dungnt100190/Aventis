@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Kiss4Web.Test.TestInfrastructure
 {
-    public static class DictionaryExtensionMethods
+    internal static class DictionaryExtensionMethods
     {
         public static TValue Lookup<TKey, TValue>(this IDictionary<TKey, TValue> source, TKey key, Func<TValue> fallbackValue)
         {

@@ -7,7 +7,7 @@ namespace Kiss4Web.Test.DataAccess
     using System.Data.Entity.Spatial;
 
     [Table("XModul")]
-    public partial class XModul
+    public partial class XModul : IEntity
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public XModul()
@@ -96,5 +96,9 @@ namespace Kiss4Web.Test.DataAccess
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<XUser> XUsers { get; set; }
+
+        public int Id => ModulID;
+
+        public byte[] RowVersion => XModulTS;
     }
 }

@@ -155,7 +155,7 @@ namespace Kiss4Web.Test.Pendenzen
                         "LEI1",
                         "BPS1",
                         "BPS1",
-                        "3",
+                        "2",
                         "USR1",
                         "0",
                         "0",
@@ -166,7 +166,7 @@ namespace Kiss4Web.Test.Pendenzen
                         "LEI2",
                         "BPS1",
                         "BPS2",
-                        "21",
+                        "7",
                         "USR1",
                         "0",
                         "0",
@@ -177,7 +177,7 @@ namespace Kiss4Web.Test.Pendenzen
                         "LEI3",
                         "BPS2",
                         "BPS1",
-                        "21",
+                        "7",
                         "USR2",
                         "0",
                         "0",
@@ -188,14 +188,14 @@ namespace Kiss4Web.Test.Pendenzen
                         "LEI4",
                         "BPS2",
                         "BPS2",
-                        "3",
+                        "2",
                         "USR2",
                         "0",
                         "0",
                         "1",
                         "0",
                         "2018-04-10 00:00:00.000"});
-#line 22
+#line 29
  testRunner.And("these FaLeistung", ((string)(null)), table3, "And ");
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
@@ -396,25 +396,25 @@ namespace Kiss4Web.Test.Pendenzen
                         "Task 20180817-10 text",
                         "1",
                         "2"});
-#line 29
+#line 36
  testRunner.And("these Tasks", ((string)(null)), table4, "And ");
 #line hidden
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("Get count of navbar items", new string[] {
-                "servicetest"}, SourceLine=42)]
+                "servicetest"}, SourceLine=49)]
         public virtual void GetCountOfNavbarItems()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get count of navbar items", null, new string[] {
                         "servicetest"});
-#line 43
+#line 50
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
  this.FeatureBackground();
-#line 44
+#line 51
  testRunner.When("User login with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 45
+#line 52
  testRunner.Then("Page Pendenzen is redirected to", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
@@ -425,9 +425,9 @@ this.ScenarioInitialize(scenarioInfo);
                         "ItmMeineErhalten",
                         "ItmMeineZuVisieren",
                         "ItmVersandteFaellig",
-                        "ItmVersandteZuVisieren",
+                        "ItmVersandteOffen",
                         "ItmVersandteAllgemein",
-                        "ItmVersandteOffen"});
+                        "ItmVersandteZuVisieren"});
             table5.AddRow(new string[] {
                         "2",
                         "7",
@@ -436,10 +436,10 @@ this.ScenarioInitialize(scenarioInfo);
                         "6",
                         "1",
                         "1",
-                        "1",
+                        "4",
                         "3",
-                        "4"});
-#line 46
+                        "1"});
+#line 53
  testRunner.And("the count of navbar items should be", ((string)(null)), table5, "And ");
 #line hidden
             this.ScenarioCleanup();

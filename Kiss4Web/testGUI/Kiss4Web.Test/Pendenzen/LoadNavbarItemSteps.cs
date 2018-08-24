@@ -6,8 +6,8 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 
 namespace Kiss4Web.Test.Pendenzen
@@ -57,6 +57,36 @@ namespace Kiss4Web.Test.Pendenzen
                 throw;
             }
         }
+
+        //[Given(@"these XModul")]
+        //public void GivenTheseXModul(Table table)
+        //{
+        //    try
+        //    {
+        //        _testDataManager.Insert<XModul>(table);
+        //    }
+        //    catch (Exception)
+        //    {
+        //        CleanupData();
+        //        throw;
+        //    }
+        //}
+
+        //[Given(@"these FaFall")]
+        //public void GivenTheseFaFall(Table table)
+        //{
+        //    Dictionary<string, string> fieldMapping = new Dictionary<string, string>();
+        //    fieldMapping.Add("FaFallID", "BaPersonID");
+        //    try
+        //    {
+        //        _testDataManager.Insert<FaFall>(table, fieldMapping, true);
+        //    }
+        //    catch (Exception)
+        //    {
+        //        CleanupData();
+        //        throw;
+        //    }
+        //}
 
         [Given(@"these FaLeistung")]
         public void GivenTheseFaLeistung(Table table)
@@ -124,17 +154,24 @@ namespace Kiss4Web.Test.Pendenzen
         {
             try
             {
+                string xpath = "//li[@data-item-id='{0}']//span";
                 var navbarItemResult = _testDataManager.CreateSetWithLookup<NavbarItem>(table).First();
-                Assert.That(_driver.FindElement(By.XPath("//li[@data-item-id='1_1']")).GetAttribute("aria-label").Equals(string.Format("fällige ({0})", navbarItemResult.ItmMeineFaellig)));
-                Assert.That(_driver.FindElement(By.XPath("//li[@data-item-id='1_2']")).GetAttribute("aria-label").Equals(string.Format("offene ({0})", navbarItemResult.ItmMeineOffen)));
-                Assert.That(_driver.FindElement(By.XPath("//li[@data-item-id='1_3']")).GetAttribute("aria-label").Equals(string.Format("in Bearbeitung ({0})", navbarItemResult.ItmMeineInBearbeitung)));
-                Assert.That(_driver.FindElement(By.XPath("//li[@data-item-id='1_4']")).GetAttribute("aria-label").Equals(string.Format("selber erstellte ({0})", navbarItemResult.ItmMeineErstellt)));
-                Assert.That(_driver.FindElement(By.XPath("//li[@data-item-id='1_5']")).GetAttribute("aria-label").Equals(string.Format("erhaltene ({0})", navbarItemResult.ItmMeineErhalten)));
-                Assert.That(_driver.FindElement(By.XPath("//li[@data-item-id='1_6']")).GetAttribute("aria-label").Equals(string.Format("zu visierende ({0})", navbarItemResult.ItmMeineZuVisieren)));
-                Assert.That(_driver.FindElement(By.XPath("//li[@data-item-id='2_1']")).GetAttribute("aria-label").Equals(string.Format("fällige ({0})", navbarItemResult.ItmVersandteFaellig)));
-                Assert.That(_driver.FindElement(By.XPath("//li[@data-item-id='2_2']")).GetAttribute("aria-label").Equals(string.Format("offene ({0})", navbarItemResult.ItmVersandteOffen)));
-                Assert.That(_driver.FindElement(By.XPath("//li[@data-item-id='2_3']")).GetAttribute("aria-label").Equals(string.Format("allgemeine ({0})", navbarItemResult.ItmVersandteAllgemein)));
-                Assert.That(_driver.FindElement(By.XPath("//li[@data-item-id='2_4']")).GetAttribute("aria-label").Equals(string.Format("zu visierende ({0})", navbarItemResult.ItmVersandteZuVisieren)));
+                var entityProperties = typeof(NavbarItem).GetProperties();
+                foreach (var property in entityProperties)
+                {
+                    object[] attrs = property.GetCustomAttributes(true);
+                    foreach (object attr in attrs)
+                    {
+                        DisplayAttribute displayAttr = attr as DisplayAttribute;
+                        if (displayAttr != null)
+                        {
+                            string elementText = _driver.FindElement(By.XPath(string.Format(xpath, displayAttr.Name))).Text;
+                            string itemValue = elementText.Remove(0, elementText.IndexOf('(') + 1).Remove(1);
+                            string expectedValue = property.GetValue(navbarItemResult).ToString();
+                            Assert.That(itemValue.Equals(expectedValue));
+                        }
+                    }
+                }
             }
             catch (Exception)
             {
@@ -146,8 +183,11 @@ namespace Kiss4Web.Test.Pendenzen
         [AfterScenario]
         public void CleanupData()
         {
+            _driver.Quit();
             _testDataManager.Cleanup<XTask>();
             _testDataManager.Cleanup<FaLeistung>();
+            //_testDataManager.Cleanup<FaFall>();
+            //_testDataManager.Cleanup<XModul>();
             _testDataManager.Cleanup<BaPerson>();
             _testDataManager.Cleanup<XUser>();
         }

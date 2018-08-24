@@ -14,17 +14,24 @@
 	| BPS1       | Person test-1 |
 	| BPS2       | Person test-2 |
 
-	#And these Xmodul
+	#And these XModul
 	#| ModulID | ShortName | 
-	#| 3       | S         | 
-	#| 21      | PEN       | 
+	#| MOD1    | M1        | 
+	#| MOD2    | M2        | 
+	#| 2       | F         | 
+	#| 7       | K         | 
+
+	#And these FaFall
+	#| FaFallID | UserID | BaPersonID |
+	#| BPS1     | USR1   | BPS1       |
+	#| BPS2     | USR2   | BPS2       |
 
 	And these FaLeistung
 	| FaLeistungID | BaPersonID | FaFallID | ModulID | UserID | IkHatUnterstuetzung | IkIstRentenbezueger | IkSchuldnerMahnen | WiederholteSpezifischeErmittlungEAF | DatumVon                |
-	| LEI1         | BPS1       | BPS1     | 3       | USR1   | 0                   | 0                   | 1                 | 0                                   | 2018-01-10 00:00:00.000 |
-	| LEI2         | BPS1       | BPS2     | 21      | USR1   | 0                   | 0                   | 1                 | 0                                   | 2018-02-10 00:00:00.000 |
-	| LEI3         | BPS2       | BPS1     | 21      | USR2   | 0                   | 0                   | 1                 | 0                                   | 2018-03-10 00:00:00.000 |
-	| LEI4         | BPS2       | BPS2     | 3       | USR2   | 0                   | 0                   | 1                 | 0                                   | 2018-04-10 00:00:00.000 |
+	| LEI1         | BPS1       | BPS1     | 2       | USR1   | 0                   | 0                   | 1                 | 0                                   | 2018-01-10 00:00:00.000 |
+	| LEI2         | BPS1       | BPS2     | 7       | USR1   | 0                   | 0                   | 1                 | 0                                   | 2018-02-10 00:00:00.000 |
+	| LEI3         | BPS2       | BPS1     | 7       | USR2   | 0                   | 0                   | 1                 | 0                                   | 2018-03-10 00:00:00.000 |
+	| LEI4         | BPS2       | BPS2     | 2       | USR2   | 0                   | 0                   | 1                 | 0                                   | 2018-04-10 00:00:00.000 |
 	
 	And these Tasks
 	| XTaskID | BaPersonID | TaskStatusCode | TaskTypeCode | Subject          | SenderID | ReceiverID | FaFallID | FaLeistungID | CreateDate              | ExpirationDate          | StartDate               | DoneDate | TaskDescription           | ResponseText          | TaskReceiverCode | TaskSenderCode |
@@ -44,5 +51,5 @@ Scenario: Get count of navbar items
 	When User login with username is test_admin_1, password is 123456 
 	Then Page Pendenzen is redirected to
 	And the count of navbar items should be
-	| ItmMeineFaellig | ItmMeineOffen | ItmMeineInBearbeitung | ItmMeineErstellt | ItmMeineErhalten | ItmMeineZuVisieren | ItmVersandteFaellig | ItmVersandteZuVisieren | ItmVersandteAllgemein | ItmVersandteOffen |
-	| 2               | 7             | 3                     | 1                | 6                | 1                  | 1                   | 1                      | 3                     | 4                 |
+	| ItmMeineFaellig | ItmMeineOffen | ItmMeineInBearbeitung | ItmMeineErstellt | ItmMeineErhalten | ItmMeineZuVisieren | ItmVersandteFaellig | ItmVersandteOffen | ItmVersandteAllgemein | ItmVersandteZuVisieren | 
+	| 2               | 7             | 3                     | 1                | 6                | 1                  | 1                   | 4                 | 3                     | 1                      | 

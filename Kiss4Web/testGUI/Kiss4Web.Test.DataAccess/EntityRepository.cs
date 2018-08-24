@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Kiss4Web.Test.DataAccess
 {
@@ -13,8 +10,8 @@ namespace Kiss4Web.Test.DataAccess
         IQueryable<T> GetAll(Expression<Func<T, bool>> filter = null, Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null, string includeProperties = "");
         T Get(object key);
         T Get(object[] keys);
-        bool Insert(T entity);
-        bool Update(T entity);
+        bool Insert(T entity, bool isView = false);
+        bool Update(T entity, bool isView = false);
         bool Delete(object key);
         bool Delete(T entity);
     }
@@ -66,17 +63,17 @@ namespace Kiss4Web.Test.DataAccess
             return _dbSet.Find(keys);
         }
 
-        public bool Insert(T entity)
+        public bool Insert(T entity, bool isView = false)
         {
             _dbSet.Add(entity);
-            _context.Entry(entity).State = EntityState.Added;
+            if (!isView) _context.Entry(entity).State = EntityState.Added;
             return _context.SaveChanges() >= 1;
         }
 
-        public bool Update(T entity)
+        public bool Update(T entity, bool isView = false)
         {
             _dbSet.Attach(entity);
-            _context.Entry(entity).State = EntityState.Modified;
+            if (!isView) _context.Entry(entity).State = EntityState.Modified;
             return _context.SaveChanges() >= 1;
         }
 
