@@ -80,7 +80,8 @@ namespace Kiss4Web.Test.DataAccess
         public bool Delete(object key)
         {
             T entity = _dbSet.Find(key);
-            return Delete(entity);
+            if (entity != null) return Delete(entity);
+            else return false;
         }
 
         public bool Delete(T entity)

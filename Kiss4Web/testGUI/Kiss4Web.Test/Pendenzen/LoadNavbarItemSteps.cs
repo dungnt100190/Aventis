@@ -155,7 +155,7 @@ namespace Kiss4Web.Test.Pendenzen
             try
             {
                 string xpath = "//li[@data-item-id='{0}']//span";
-                var navbarItemResult = _testDataManager.CreateSetWithLookup<NavbarItem>(table).First();
+                var expectedNavbarItem = _testDataManager.CreateSetWithLookup<NavbarItem>(table).First();
                 var entityProperties = typeof(NavbarItem).GetProperties();
                 foreach (var property in entityProperties)
                 {
@@ -167,7 +167,7 @@ namespace Kiss4Web.Test.Pendenzen
                         {
                             string elementText = _driver.FindElement(By.XPath(string.Format(xpath, displayAttr.Name))).Text;
                             string itemValue = elementText.Remove(0, elementText.IndexOf('(') + 1).Remove(1);
-                            string expectedValue = property.GetValue(navbarItemResult).ToString();
+                            string expectedValue = property.GetValue(expectedNavbarItem).ToString();
                             Assert.That(itemValue.Equals(expectedValue));
                         }
                     }
