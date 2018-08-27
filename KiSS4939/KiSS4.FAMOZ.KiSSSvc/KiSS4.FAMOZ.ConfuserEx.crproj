@@ -1,8 +1,0 @@
-<project outputDir="..\Obfuscated" baseDir="..\..\Binaries" xmlns="http://confuser.codeplex.com">
-  <rule pattern="decl-type('KiSSSvc.DAL.KiSSDB')" preset="normal" inherit="false" />
-  <rule pattern="decl-type('KiSSSvc.DAL.Scrambler')" preset="normal" inherit="false" />
-  <rule pattern="decl-type('KiSSSvc.DAL.SecurityTools')" preset="normal" inherit="false" />
-  <rule pattern="decl-type('KiSSSvc.SAP.PSCD.WebServiceHelper.WebConfigSettings')" preset="normal" inherit="false" />
-  <module path="KiSSSvc.DAL.dll" />
-  <module path="KiSSSvc.SAP.PSCD.WebServiceHelper.dll" />
-</project>

@@ -1,1 +1,0 @@
-INSERT INTO dbo.HistoryVersion (AppUser) VALUES ('kiss_sys');

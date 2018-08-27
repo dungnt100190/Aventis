@@ -1,1 +1,0 @@
-﻿EXECUTE dbo.spXHistoryVersion N'<TableName>', 1;

@@ -1,4 +1,0 @@
-﻿- Visual Studio Command Promt ALS ADMINISTRATOR öffnen (Startmenü->Microsoft Visual Studio 2010->Visual Studio Tools->Visual Studio Command Prompt (2010))
-- Ins Projektverzeichnis wechseln: cd C:\Projects\KiSS40\KiSS\Kiss.Server.PSCD.WindowsService
-- ev. bestehender Service deinstallieren: installutil /u bin\debug\Kiss.Server.PSCD.WindowsService.exe
-- Service mittels .NET-Tool installieren: installutil bin\debug\Kiss.Server.PSCD.WindowsService.exe

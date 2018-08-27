@@ -1,9 +1,0 @@
-<project outputDir="." snKey="" xmlns="http://confuser.codeplex.com">
-  <rule pattern="KiSSSvc.DAL.KiSSDB" preset="minimum" />
-  <rule pattern="KiSSSvc.DAL.Scrambler" preset="normal" />
-  <rule pattern="KiSSSvc.DAL.SecurityTools" preset="minimum" />
-  <rule pattern="KiSSSvc.SAP.PSCD.WebServiceHelper.WebConfigSettings" preset="minimum" />
-  <packer id="compressor" />
-    <assembly path="KiSSSvc.DAL.dll" />
-    <assembly path="KiSSSvc.SAP.PSCD.WebServiceHelper.dll" />
-</project>

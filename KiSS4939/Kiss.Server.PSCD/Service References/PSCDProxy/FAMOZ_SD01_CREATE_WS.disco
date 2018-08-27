@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
-  <contractRef ref="http://szhm5200/PscdMock/FAMOZ_SD01_CREATE_WS.asmx?wsdl" docRef="http://szhm5200/PscdMock/FAMOZ_SD01_CREATE_WS.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
-  <soap address="http://szhm5200/PscdMock/FAMOZ_SD01_CREATE_WS.asmx" xmlns:q1="http://stzh.ch/FAMOZ_SD01_CREATE_WS" binding="q1:MI_SD01_CREATE_WSBinding" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
-  <soap address="http://szhm5200/PscdMock/FAMOZ_SD01_CREATE_WS.asmx" xmlns:q2="http://stzh.ch/FAMOZ_SD01_CREATE_WS" binding="q2:MI_SD01_CREATE_WSBinding1" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
-</discovery>

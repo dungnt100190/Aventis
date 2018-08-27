@@ -1,4 +1,0 @@
-﻿Worauf beim Deployment auf einen neuen IIS zu achten ist:
-- Zuerst WebDeploy versuchen, dann übernimmt VS einige Tasks
-- Bindings zwischen mehreren WebSites dürfen sich nicht überschneiden
-- Berechtigung auf Verzeichnis muss ausreichend sein; bei Problemen grosszügig vergeben, danach schrittweise abbauen
