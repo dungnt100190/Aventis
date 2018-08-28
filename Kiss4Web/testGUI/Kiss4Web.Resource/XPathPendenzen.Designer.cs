@@ -97,7 +97,7 @@ namespace Kiss4Web.Resource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //kiss-pendenzen-content2//dx-data-grid.
+        ///   Looks up a localized string similar to //*[@id=&apos;gridContainer&apos;].
         /// </summary>
         public static string GridTask {
             get {
@@ -106,16 +106,7 @@ namespace Kiss4Web.Resource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@class=&apos;dx-datagrid-content&apos;]//div[contains(@class,&apos;dx-select-checkbox&apos;)].
-        /// </summary>
-        public static string GridTaskFieldCheckBox {
-            get {
-                return ResourceManager.GetString("GridTaskFieldCheckBox", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to //div[@class=&apos;dx-datagrid-content&apos;]//td[contains(@aria-label,&apos;Column {0}&apos;)].
+        ///   Looks up a localized string similar to //*[@id=&apos;gridContainer&apos;]//*[@class=&apos;dx-datagrid-content&apos;]//td[contains(@aria-label,&apos;Column {0}&apos;)].
         /// </summary>
         public static string GridTaskFields {
             get {
@@ -142,7 +133,7 @@ namespace Kiss4Web.Resource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //kiss-pendenzen-content1//dx-form.
+        ///   Looks up a localized string similar to //*[@id=&apos;content1&apos;].
         /// </summary>
         public static string SearchArea {
             get {

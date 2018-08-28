@@ -130,13 +130,10 @@
     <value>//*[@id='app-content3-header-body-button-Speichern']</value>
   </data>
   <data name="GridTask" xml:space="preserve">
-    <value>//kiss-pendenzen-content2//dx-data-grid</value>
-  </data>
-  <data name="GridTaskFieldCheckBox" xml:space="preserve">
-    <value>//div[@class='dx-datagrid-content']//div[contains(@class,'dx-select-checkbox')]</value>
+    <value>//*[@id='gridContainer']</value>
   </data>
   <data name="GridTaskFields" xml:space="preserve">
-    <value>//div[@class='dx-datagrid-content']//td[contains(@aria-label,'Column {0}')]</value>
+    <value>//*[@id='gridContainer']//*[@class='dx-datagrid-content']//td[contains(@aria-label,'Column {0}')]</value>
   </data>
   <data name="NavbarItems" xml:space="preserve">
     <value>//li[@data-item-id='{0}']//span</value>
@@ -145,7 +142,7 @@
     <value>//kiss-pendenzen-left-nav//dx-tree-view</value>
   </data>
   <data name="SearchArea" xml:space="preserve">
-    <value>//kiss-pendenzen-content1//dx-form</value>
+    <value>//*[@id='content1']</value>
   </data>
   <data name="TaskDetailLabelFields1" xml:space="preserve">
     <value>//div[@id='app-content3-body-lable']//dxi-item[@id='app-content3-body-form-{0}']//textarea</value>
