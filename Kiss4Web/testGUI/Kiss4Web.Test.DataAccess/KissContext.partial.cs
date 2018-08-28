@@ -24,5 +24,17 @@ namespace Kiss4Web.Test.DataAccess
             }
             return base.SaveChanges();
         }
+
+        public void ExecuteSqlCommand(string sql)
+        {
+            if (_auditors != null)
+            {
+                foreach (var auditor in _auditors)
+                {
+                    auditor.AuditEntities(ChangeTracker.Entries(), this);
+                }
+            }
+            this.Database.ExecuteSqlCommand(sql);
+        }
     }
 }

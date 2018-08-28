@@ -17,20 +17,20 @@ namespace Kiss4Web.Test.Pendenzen
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("LoadNavbarItem", Description="\tGet count of item types in left menu ", SourceFile="Pendenzen\\LoadNavbarItem.feature", SourceLine=0)]
-    public partial class LoadNavbarItemFeature
+    [TechTalk.SpecRun.FeatureAttribute("Create Pendenzen", Description="\tCreate a new Task", SourceFile="Pendenzen\\CreatePendenzen.feature", SourceLine=0)]
+    public partial class CreatePendenzenFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "LoadNavbarItem.feature"
+#line 1 "CreatePendenzen.feature"
 #line hidden
         
         [TechTalk.SpecRun.FeatureInitialize()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "LoadNavbarItem", "\tGet count of item types in left menu ", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Create Pendenzen", "\tCreate a new Task", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -69,11 +69,7 @@ namespace Kiss4Web.Test.Pendenzen
         public virtual void FeatureBackground()
         {
 #line 3
- #line 4
- testRunner.Given("Url of Login page is http://localhost:4300", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 5
- testRunner.And("Url of Pendenzen page is http://localhost:4300/pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
+ #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "UserID",
                         "PermissionGroupID",
@@ -125,20 +121,23 @@ namespace Kiss4Web.Test.Pendenzen
                         "0",
                         "0",
                         "258000"});
-#line 7
- testRunner.And("these UserAdmin", ((string)(null)), table1, "And ");
+#line 4
+ testRunner.Given("these XUsers", ((string)(null)), table1, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "BaPersonID",
-                        "Name"});
+                        "Name",
+                        "Vorname"});
             table2.AddRow(new string[] {
                         "BPS1",
-                        "Person test-1"});
+                        "Person test-1",
+                        "NT"});
             table2.AddRow(new string[] {
                         "BPS2",
-                        "Person test-2"});
-#line 12
- testRunner.And("these BaPerson", ((string)(null)), table2, "And ");
+                        "Person test-2",
+                        "NULL"});
+#line 9
+ testRunner.And("these BaPersons", ((string)(null)), table2, "And ");
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                         "FaLeistungID",
@@ -195,8 +194,8 @@ namespace Kiss4Web.Test.Pendenzen
                         "1",
                         "0",
                         "2018-04-10 00:00:00.000"});
-#line 29
- testRunner.And("these FaLeistung", ((string)(null)), table3, "And ");
+#line 26
+ testRunner.And("these FaLeistungs", ((string)(null)), table3, "And ");
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "XTaskID",
@@ -236,114 +235,6 @@ namespace Kiss4Web.Test.Pendenzen
                         ""});
             table4.AddRow(new string[] {
                         "TSK2",
-                        "BPS2",
-                        "1",
-                        "4",
-                        "Task 20180817-02",
-                        "USR2",
-                        "USR1",
-                        "BPS2",
-                        "LEI2",
-                        "2018-01-10 00:00:00.000",
-                        "2018-05-10 00:00:00.000",
-                        "",
-                        "NULL",
-                        "Task 20180817-2 autotest",
-                        "Task 20180817-2 text",
-                        "1",
-                        ""});
-            table4.AddRow(new string[] {
-                        "TSK3",
-                        "BPS1",
-                        "2",
-                        "6",
-                        "Task 20180817-03",
-                        "USR2",
-                        "USR1",
-                        "BPS2",
-                        "LEI4",
-                        "2018-01-10 00:00:00.000",
-                        "2018-10-10 00:00:00.000",
-                        "2018-04-10 00:00:00.000",
-                        "NULL",
-                        "Task 20180817-3 autotest",
-                        "Task 20180817-3 text",
-                        "1",
-                        ""});
-            table4.AddRow(new string[] {
-                        "TSK4",
-                        "BPS2",
-                        "2",
-                        "4",
-                        "Task 20180817-04",
-                        "USR2",
-                        "USR1",
-                        "BPS1",
-                        "LEI3",
-                        "2018-01-10 00:00:00.000",
-                        "2018-07-10 00:00:00.000",
-                        "2018-06-10 00:00:00.000",
-                        "NULL",
-                        "Task 20180817-4 autotest",
-                        "Task 20180817-4 text",
-                        "1",
-                        ""});
-            table4.AddRow(new string[] {
-                        "TSK5",
-                        "BPS2",
-                        "1",
-                        "6",
-                        "Task 20180817-05",
-                        "USR1",
-                        "USR2",
-                        "BPS1",
-                        "LEI1",
-                        "2018-01-10 00:00:00.000",
-                        "2019-02-10 00:00:00.000",
-                        "",
-                        "NULL",
-                        "Task 20180817-5 autotest",
-                        "Task 20180817-5 text",
-                        "1",
-                        "1"});
-            table4.AddRow(new string[] {
-                        "TSK6",
-                        "BPS2",
-                        "2",
-                        "6",
-                        "Task 20180817-06",
-                        "USR1",
-                        "USR2",
-                        "BPS1",
-                        "LEI1",
-                        "2018-01-10 00:00:00.000",
-                        "2018-06-10 00:00:00.000",
-                        "2018-03-10 00:00:00.000",
-                        "NULL",
-                        "Task 20180817-6 autotest",
-                        "Task 20180817-6 text",
-                        "1",
-                        "1"});
-            table4.AddRow(new string[] {
-                        "TSK7",
-                        "BPS2",
-                        "2",
-                        "2",
-                        "Task 20180817-07",
-                        "USR1",
-                        "USR2",
-                        "BPS2",
-                        "LEI2",
-                        "2018-01-10 00:00:00.000",
-                        "2018-09-10 00:00:00.000",
-                        "2018-05-10 00:00:00.000",
-                        "NULL",
-                        "Task 20180817-7 autotest",
-                        "Task 20180817-7 text",
-                        "1",
-                        "1"});
-            table4.AddRow(new string[] {
-                        "TSK8",
                         "BPS1",
                         "2",
                         "4",
@@ -360,87 +251,30 @@ namespace Kiss4Web.Test.Pendenzen
                         "Task 20180817-8 text",
                         "1",
                         "1"});
-            table4.AddRow(new string[] {
-                        "TSK9",
-                        "BPS1",
-                        "1",
-                        "4",
-                        "Task 20180817-09",
-                        "USR2",
-                        "USR1",
-                        "BPS2",
-                        "LEI4",
-                        "2018-01-10 00:00:00.000",
-                        "2018-11-10 00:00:00.000",
-                        "",
-                        "NULL",
-                        "Task 20180817-9 autotest",
-                        "Task 20180817-9 text",
-                        "1",
-                        "2"});
-            table4.AddRow(new string[] {
-                        "TSK10",
-                        "BPS2",
-                        "1",
-                        "2",
-                        "Task 20180817-10",
-                        "USR2",
-                        "USR1",
-                        "BPS2",
-                        "LEI4",
-                        "2018-01-10 00:00:00.000",
-                        "2018-12-10 00:00:00.000",
-                        "",
-                        "NULL",
-                        "Task 20180817-10 autotest",
-                        "Task 20180817-10 text",
-                        "1",
-                        "2"});
-#line 36
- testRunner.And("these Tasks", ((string)(null)), table4, "And ");
+#line 33
+ testRunner.And("these XTasks for Create Pendenzen", ((string)(null)), table4, "And ");
+#line 38
+ testRunner.And("User has logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 39
+ testRunner.And("Page Pendenzen is redirected to", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Get count of navbar items", new string[] {
-                "servicetest"}, SourceLine=49)]
-        public virtual void GetCountOfNavbarItems()
+        [TechTalk.SpecRun.ScenarioAttribute("Go to create mode", new string[] {
+                "servicetest"}, SourceLine=41)]
+        public virtual void GoToCreateMode()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get count of navbar items", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Go to create mode", null, new string[] {
                         "servicetest"});
-#line 50
+#line 42
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
  this.FeatureBackground();
-#line 51
- testRunner.When("User login with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 52
- testRunner.Then("Page Pendenzen is redirected to", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
-                        "ItmMeineFaellig",
-                        "ItmMeineOffen",
-                        "ItmMeineInBearbeitung",
-                        "ItmMeineErstellt",
-                        "ItmMeineErhalten",
-                        "ItmMeineZuVisieren",
-                        "ItmVersandteFaellig",
-                        "ItmVersandteOffen",
-                        "ItmVersandteAllgemein",
-                        "ItmVersandteZuVisieren"});
-            table5.AddRow(new string[] {
-                        "2",
-                        "7",
-                        "3",
-                        "1",
-                        "6",
-                        "1",
-                        "1",
-                        "4",
-                        "3",
-                        "1"});
-#line 53
- testRunner.And("the count of navbar items should be", ((string)(null)), table5, "And ");
+#line 43
+ testRunner.When("User click on button NeuePendenz", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 44
+ testRunner.Then("Navbar menu, Search area and Grid Task is disabled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

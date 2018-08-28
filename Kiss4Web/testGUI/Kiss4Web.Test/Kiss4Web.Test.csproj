@@ -88,18 +88,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pendenzen\LoadNavbarItem.feature.cs">
+    <Compile Include="Pendenzen\CreatePendenzen.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>LoadNavbarItem.feature</DependentUpon>
+      <DependentUpon>CreatePendenzen.feature</DependentUpon>
     </Compile>
-    <Compile Include="Pendenzen\LoadNavbarItemSteps.cs" />
-    <Compile Include="Pendenzen\LoadPendenzenData.feature.cs">
+    <Compile Include="Pendenzen\EditPendenzen.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>LoadPendenzenData.feature</DependentUpon>
+      <DependentUpon>EditPendenzen.feature</DependentUpon>
     </Compile>
-    <Compile Include="Pendenzen\LoadPendenzenDataSteps.cs" />
+    <Compile Include="Pendenzen\EditPendenzenSteps.cs" />
+    <Compile Include="Pendenzen\LoadPagePendenzen.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoadPagePendenzen.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Pendenzen\LoadPagePendenzenSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -108,13 +113,17 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
-    <None Include="Pendenzen\LoadNavbarItem.feature">
+    <None Include="Pendenzen\CreatePendenzen.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>LoadNavbarItem.feature.cs</LastGenOutput>
+      <LastGenOutput>CreatePendenzen.feature.cs</LastGenOutput>
     </None>
-    <None Include="Pendenzen\LoadPendenzenData.feature">
+    <None Include="Pendenzen\EditPendenzen.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>LoadPendenzenData.feature.cs</LastGenOutput>
+      <LastGenOutput>EditPendenzen.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Pendenzen\LoadPagePendenzen.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>LoadPagePendenzen.feature.cs</LastGenOutput>
     </None>
     <None Include="runtests.cmd" />
     <None Include="SpecRunTestProfile.xsd">
@@ -125,6 +134,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Kiss4Web.Resource\Kiss4Web.Resource.csproj">
+      <Project>{75589bcf-c325-47bf-a164-96d08d4c088a}</Project>
+      <Name>Kiss4Web.Resource</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Kiss4Web.Test.DataAccess\Kiss4Web.Test.DataAccess.csproj">
       <Project>{E05D995A-CCB7-4BC1-B093-D7D63B8CE3D6}</Project>
       <Name>Kiss4Web.Test.DataAccess</Name>
