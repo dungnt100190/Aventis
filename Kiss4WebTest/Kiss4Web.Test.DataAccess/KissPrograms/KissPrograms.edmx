@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="KissPrograms.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="spFaDeleteFaFall" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FaFallID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spFaInsertFaFall" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserID" Type="int" Mode="In" />
+          <Parameter Name="BaPersonID" Type="int" Mode="In" />
+          <Parameter Name="DatumVon" Type="datetime" Mode="In" />
+          <Parameter Name="DatumBis" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="spFaUpdateFaFall" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FaFallID" Type="int" Mode="In" />
+          <Parameter Name="UserID" Type="int" Mode="In" />
+          <Parameter Name="BaPersonID" Type="int" Mode="In" />
+          <Parameter Name="DatumVon" Type="datetime" Mode="In" />
+          <Parameter Name="DatumBis" Type="datetime" Mode="In" />
+        </Function>
+        <EntityContainer Name="KissProgramsStoreContainer" />
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="KissPrograms" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="KissProgramContext" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="spFaDeleteFaFall">
+            <Parameter Name="FaFallID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spFaInsertFaFall">
+            <Parameter Name="UserID" Mode="In" Type="Int32" />
+            <Parameter Name="BaPersonID" Mode="In" Type="Int32" />
+            <Parameter Name="DatumVon" Mode="In" Type="DateTime" />
+            <Parameter Name="DatumBis" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="spFaUpdateFaFall">
+            <Parameter Name="FaFallID" Mode="In" Type="Int32" />
+            <Parameter Name="UserID" Mode="In" Type="Int32" />
+            <Parameter Name="BaPersonID" Mode="In" Type="Int32" />
+            <Parameter Name="DatumVon" Mode="In" Type="DateTime" />
+            <Parameter Name="DatumBis" Mode="In" Type="DateTime" />
+          </FunctionImport>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="KissProgramsStoreContainer" CdmEntityContainer="KissProgramContext" >
+          <FunctionImportMapping FunctionImportName="spFaDeleteFaFall" FunctionName="KissPrograms.Store.spFaDeleteFaFall" />
+          <FunctionImportMapping FunctionImportName="spFaInsertFaFall" FunctionName="KissPrograms.Store.spFaInsertFaFall" />
+          <FunctionImportMapping FunctionImportName="spFaUpdateFaFall" FunctionName="KissPrograms.Store.spFaUpdateFaFall" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
