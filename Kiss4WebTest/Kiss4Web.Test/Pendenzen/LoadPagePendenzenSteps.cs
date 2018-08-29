@@ -89,7 +89,7 @@ namespace Kiss4Web.Test.Pendenzen
         {
             try
             {
-                TestDataManager.CompareUrl(Urls.UrlPendenzen);
+                TestDataManager.CheckUrl(Urls.UrlPendenzen);
             }
             catch (Exception)
             {

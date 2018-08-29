@@ -9,6 +9,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Linq;
+using System.Text;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 
@@ -64,7 +65,7 @@ namespace Kiss4Web.Test.TestInfrastructure
         /// </summary>
         /// <typeparam name="T">Type name of element in set</typeparam>
         /// <param name="table">Data table</param>
-        /// <param name="refFieldMapping">Determine field of other type in DB that field of this type refer to</param>
+        /// <param name="refFieldMapping">set of field name of this table and field name of table in database that it’s data refer to</param>
         /// <returns></returns>
         public static IEnumerable<T> CreateSetWithLookup<T>(Table table, Dictionary<string, string> refFieldMapping = null) where T : class
         {
@@ -127,32 +128,31 @@ namespace Kiss4Web.Test.TestInfrastructure
         /// </summary>
         /// <typeparam name="TEntity"></typeparam>
         /// <returns></returns>
-        public static TEntity GetLastRecord<TEntity>() where TEntity : class
-        {
-            var entityTypeName = typeof(TEntity).Name;
-            var entityIdPropertyName = _IdConventionExceptions.Lookup(entityTypeName) ?? $"{entityTypeName}ID"; // convention
-            object[] attrs = typeof(TEntity).GetProperty(entityIdPropertyName).GetCustomAttributes(true);
-            foreach (object attr in attrs)
-            {
-                KeyAttribute keyAttr = attr as KeyAttribute;
-                if (keyAttr != null)
-                {
-                    var repository = new EntityRepository<TEntity>(_CreateDbContext());
-                    var lastRecord = repository.GetAll().OrderByField(entityIdPropertyName, false).FirstOrDefault();
-                    return lastRecord;
-                }
-            }
-            return null;
-        }
+        //public static TEntity GetLastRecord<TEntity>() where TEntity : class
+        //{
+        //    var entityTypeName = typeof(TEntity).Name;
+        //    var entityIdPropertyName = _IdConventionExceptions.Lookup(entityTypeName) ?? $"{entityTypeName}ID"; // convention
+        //    object[] attrs = typeof(TEntity).GetProperty(entityIdPropertyName).GetCustomAttributes(true);
+        //    foreach (object attr in attrs)
+        //    {
+        //        KeyAttribute keyAttr = attr as KeyAttribute;
+        //        if (keyAttr != null)
+        //        {
+        //            var repository = new EntityRepository<TEntity>(_CreateDbContext());
+        //            var lastRecord = repository.GetAll().OrderByField(entityIdPropertyName, false).FirstOrDefault();
+        //            return lastRecord;
+        //        }
+        //    }
+        //    return null;
+        //}
 
         /// <summary>
-        /// 
+        /// Insert all row in table to database and add to data pool of TestDataManager
         /// </summary>
-        /// <typeparam name="TEntity"></typeparam>
+        /// <typeparam name="TEntity">name of table in database</typeparam>
         /// <param name="table"></param>
-        /// <param name="refFieldMapping"></param>
-        /// <param name="isView"></param>
-        /// <returns>id of last inserted entity</returns>
+        /// <param name="refFieldMapping">set of field name of this table and field name of other table that it’s data refer to</param>
+        /// <param name="isView">this table is View in database</param>
         public static void Insert<TEntity>(Table table, Dictionary<string, string> refFieldMapping = null, bool isView = false) where TEntity : class
         {
             var entities = table.CreateSet<TEntity>().ToList(); // Assumption: order remains as in the table
@@ -234,20 +234,41 @@ namespace Kiss4Web.Test.TestInfrastructure
         }
 
         /// <summary>
-        /// 
+        /// Find records by value of one or some field of that entity type, and add these records to data pool of TestDataManager
         /// </summary>
-        /// <typeparam name="TEntity"></typeparam>
-        /// <param name="id"></param>
-        public static void TrackEntity<TEntity>(object id) where TEntity : class
+        /// <typeparam name="TEntity">name of table in database</typeparam>
+        /// <param name="fieldData">set of field name and corresponding value</param>
+        public static void TrackEntity<TEntity>(Dictionary<string, object> fieldData) where TEntity : class
         {
+            var entityTypeName = typeof(TEntity).Name;
+
+            StringBuilder sql = new StringBuilder();
+            sql.Append($"SELECT * FROM {entityTypeName} WHERE 1 = 1 ");
+
+            foreach (var item in fieldData)
+            {
+                if (item.Value.GetType() == typeof(string))
+                {
+                    sql.Append($"AND {item.Key} = '{item.Value}' ");
+                }
+                if (item.Value.GetType() == typeof(int) || item.Value.GetType() == typeof(double))
+                {
+                    sql.Append($"AND {item.Key} = {item.Value} ");
+                }
+            }
+
             var context = _CreateDbContext();
-            var repository = new EntityRepository<TEntity>(context);
-            var entity = repository.Get(id);
-            _createdEntities.Add(entity);
+            var entities = context.Database.SqlQuery<TEntity>(sql.ToString());
+            _createdEntities.AddRange(entities);
+
+            if (!_createdEntityTypes.Contains(entityTypeName))
+            {
+                _createdEntityTypes.Add(entityTypeName);
+            }
         }
 
         /// <summary>
-        /// 
+        /// Implement Login
         /// </summary>
         /// <param name="username"></param>
         /// <param name="password"></param>
@@ -266,11 +287,11 @@ namespace Kiss4Web.Test.TestInfrastructure
         }
 
         /// <summary>
-        /// 
+        /// Implement action click
         /// </summary>
-        /// <param name="xpath"></param>
-        /// <param name="index"></param>
-        /// <param name="sleepTime"></param>
+        /// <param name="xpath">xPath of element on screen that is clicked on</param>
+        /// <param name="index">driver can find many elements by the given xPath, pass this index to determine which element that want to focus</param>
+        /// <param name="sleepTime">temporary pause time (second) after implement click action</param>
         public static void Click(string xpath, int index = 1, int sleepTime = 0)
         {
             var elements = Driver.FindElements(By.XPath(xpath));
@@ -282,11 +303,11 @@ namespace Kiss4Web.Test.TestInfrastructure
         }
 
         /// <summary>
-        /// 
+        /// Implement action input text
         /// </summary>
-        /// <param name="xpath"></param>
+        /// <param name="xpath">xPath of element on screen that is input text</param>
         /// <param name="inputText"></param>
-        /// <param name="index"></param>
+        /// <param name="index">driver can find many elements by the given xPath, pass this index to determine which element that want to focus</param>
         public static void Input(string xpath, string inputText, int index = 1)
         {
             Driver.FindElements(By.XPath(xpath))[index - 1].Clear();
@@ -294,10 +315,10 @@ namespace Kiss4Web.Test.TestInfrastructure
         }
 
         /// <summary>
-        /// 
+        /// Compare current url in web driver with given Url
         /// </summary>
         /// <param name="expectedUrl"></param>
-        public static void CompareUrl(string expectedUrl)
+        public static void CheckUrl(string expectedUrl)
         {
             try
             {
@@ -311,12 +332,12 @@ namespace Kiss4Web.Test.TestInfrastructure
         }
 
         /// <summary>
-        /// 
+        /// Compare status of element with given status 
         /// </summary>
-        /// <param name="xpath"></param>
-        /// <param name="isDisplayed"></param>
-        /// <param name="isEnabled"></param>
-        /// <param name="index"></param>
+        /// <param name="xpath">xPath of this element on screen</param>
+        /// <param name="isDisplayed">display status of this element</param>
+        /// <param name="isEnabled">enable status of this element</param>
+        /// <param name="index">driver can find many elements by the given xPath, pass this index to determine which element that want to focus</param>
         public static void CheckControlStatus(string xpath, bool? isDisplayed = null, bool? isEnabled = null, int index = 1)
         {
             if (isDisplayed != null)
@@ -348,12 +369,12 @@ namespace Kiss4Web.Test.TestInfrastructure
         }
 
         /// <summary>
-        /// 
+        /// Compare value of specific attribute in element with given value
         /// </summary>
         /// <param name="expectedValue"></param>
-        /// <param name="xpath"></param>
-        /// <param name="valueAttribute"></param>
-        /// <param name="index">index of element, start from 1</param>
+        /// <param name="xpath">xPath of this element on screen</param>
+        /// <param name="valueAttribute">name of the attribute in element that need to focus</param>
+        /// <param name="index">driver can find many elements by the given xPath, pass this index to determine which element that want to focus</param>
         public static void CheckControlContent(string expectedValue, string xpath, string valueAttribute = null, int index = 1)
         {
             var element = Driver.FindElements(By.XPath(xpath))[index - 1];
@@ -370,12 +391,14 @@ namespace Kiss4Web.Test.TestInfrastructure
         }
 
         /// <summary>
-        /// 
+        /// Compare value of each field in each row in given expected data table with value of that field in that row on screen 
         /// </summary>
-        /// <param name="expectedData"></param>
-        /// <param name="xPathAttributePairs"></param>
-        /// <param name="refFieldMapping"></param>
-        public static void CheckTableData(Table expectedData, Dictionary<string, string> xPathAttributePairs, Dictionary<string, string> screenMapping = null, Dictionary<string, string> refFieldMapping = null)
+        /// <param name="expectedData">expected data table</param>
+        /// <param name="xPathAttributePairs">set of xPath for any fields in table and the attribute to get value</param>
+        /// <param name="screenMapping">set of field name of result data table and field name on screen</param>
+        /// <param name="refFieldMapping">set of field name of result data table and field name of table in database that it’s data refer to</param>
+        /// <param name="additionalRules">additional rules as format rule, etc</param>
+        public static void CheckTableData(Table expectedData, Dictionary<string, string> xPathAttributePairs, Dictionary<string, string> screenMapping = null, Dictionary<string, string> refFieldMapping = null, Dictionary<string, string> additionalRules = null)
         {
             var properties = expectedData.Header.ToList();
             for (var i = 0; i < expectedData.RowCount; i++)
@@ -385,6 +408,10 @@ namespace Kiss4Web.Test.TestInfrastructure
                     // Get expected value from test case
                     string expectedValue = expectedData.Rows[i][prop];
                     if (expectedValue.Equals("NULL")) expectedValue = string.Empty;
+                    if (expectedValue.Equals("today") && additionalRules != null && additionalRules.ContainsKey("format-date"))
+                    {
+                        expectedValue = DateTime.Now.ToString(additionalRules["format-date"]);
+                    }
                     string refFieldName = null;
                     if (prop.EndsWith("ID", StringComparison.InvariantCultureIgnoreCase) && !int.TryParse(expectedValue, out var id1))
                     {
@@ -448,7 +475,8 @@ namespace Kiss4Web.Test.TestInfrastructure
         }
 
         /// <summary>
-        /// 
+        /// Delete all records of tables in database that correspond with records in data pool of TestDataManager 
+        /// and close driver and clear data pool of TestDataManager 
         /// </summary>
         public static void Cleanup()
         {
