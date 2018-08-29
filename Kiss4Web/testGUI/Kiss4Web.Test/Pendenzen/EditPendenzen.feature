@@ -56,6 +56,5 @@ Scenario: 02 Edit Pendenzen of status in Bearbeitung
 	Then These items are enabled: NavbarMenu, SearchArea, GridTask
 	And The Detail area switches to view mode
 	And content of Detail area should be
-	| status         | pendenzTyp  | betreff          | beschreibung             | ersteller                  | empfanger                  | falltrager               | leistung                       | leistungsverantw           | betrifftPerson    | antwort                | erfasst    | fallig     | bearbeitung | erledigt |
-	| status         | pendenzTyp  | betreff          | beschreibung             | Ersteller                  | empfanger                  | falltrager               | leistung                       | leistungsverantw           | betrifftPerson    | antwort                | erfasst    | fallig     | Bearbeitung | Erledigt |
+	| Status         | Pendenz Typ | Betreff          | Beschreibung             | Ersteller                  | Empfänger                  | Fallträger               | Leistung                       | Leistungsverantw.          | betrifft Person   | Antwort                | Erfasst    | Fällig     | Bearbeitung | Erledigt |
 	| in Bearbeitung | Fristablauf | Task 20180817-08 | Task 20180817-8 autotest | test_admin_1 - Global, CMC | test_admin_1 - Global, CMC | Person test-1, NT (BPS1) | F - Fallführung (10.01.2018 -) | test_admin_1 - Global, CMC | Person test-1, NT | Update 20180817-8 text | 10.05.2018 | 10.10.2018 | NULL        | NULL     |

@@ -417,27 +417,16 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("Page Pendenzen is redirected to", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
-                        "ItmMeineFaellig",
-                        "ItmMeineOffen",
-                        "ItmMeineInBearbeitung",
-                        "ItmMeineErstellt",
-                        "ItmMeineErhalten",
-                        "ItmMeineZuVisieren",
-                        "ItmVersandteFaellig",
-                        "ItmVersandteOffen",
-                        "ItmVersandteAllgemein",
-                        "ItmVersandteZuVisieren"});
-            table5.AddRow(new string[] {
-                        "1_1",
-                        "1_2",
-                        "1_3",
-                        "1_4",
-                        "1_5",
-                        "1_6",
-                        "2_1",
-                        "2_2",
-                        "2_3",
-                        "2_4"});
+                        "Meine fällige",
+                        "Meine offene",
+                        "Meine in Bearbeitung",
+                        "Meine selber erstellte",
+                        "Meine erhaltene",
+                        "Meine zu visierende",
+                        "Erstellte fällige",
+                        "Erstellte offene",
+                        "Erstellte allgemeine",
+                        "Erstellte zu visierende"});
             table5.AddRow(new string[] {
                         "fällige (2)",
                         "offene (7)",
@@ -456,36 +445,22 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("02 Get Pendenzen data", new string[] {
-                "LoadPendenzen"}, SourceLine=55)]
+                "LoadPendenzen"}, SourceLine=54)]
         public virtual void _02GetPendenzenData()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02 Get Pendenzen data", null, new string[] {
                         "LoadPendenzen"});
-#line 56
+#line 55
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
  this.FeatureBackground();
-#line 57
+#line 56
  testRunner.Given("User has logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 58
+#line 57
  testRunner.And("Page Pendenzen is redirected to", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Fallig",
-                        "Betreff",
-                        "Leistung",
-                        "Falltrager",
-                        "Fallnummer",
-                        "Person",
-                        "Ersteller",
-                        "Empfanger",
-                        "Status",
-                        "Erfasst",
-                        "Bearbeitung",
-                        "Erledigt",
-                        "Antwort"});
-            table6.AddRow(new string[] {
                         "Fällig",
                         "Betreff",
                         "Leistung",
@@ -597,7 +572,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "NULL",
                         "NULL",
                         "Task 20180817-10 text"});
-#line 59
+#line 58
  testRunner.Then("data of grid view Task should be", ((string)(null)), table6, "Then ");
 #line hidden
             this.ScenarioCleanup();

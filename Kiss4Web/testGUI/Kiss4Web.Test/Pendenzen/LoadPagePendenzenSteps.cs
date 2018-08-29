@@ -103,9 +103,21 @@ namespace Kiss4Web.Test.Pendenzen
         {
             Dictionary<string, string> xPaths = new Dictionary<string, string>();
             xPaths.Add(XPathPendenzen.NavbarItems, null);
+
+            Dictionary<string, string> screenMapping = new Dictionary<string, string>();
+            screenMapping.Add("Meine fällige", "1_1");
+            screenMapping.Add("Meine offene", "1_2");
+            screenMapping.Add("Meine in Bearbeitung", "1_3");
+            screenMapping.Add("Meine selber erstellte", "1_4");
+            screenMapping.Add("Meine erhaltene", "1_5");
+            screenMapping.Add("Meine zu visierende", "1_6");
+            screenMapping.Add("Erstellte fällige", "2_1");
+            screenMapping.Add("Erstellte offene", "2_2");
+            screenMapping.Add("Erstellte allgemeine", "2_3");
+            screenMapping.Add("Erstellte zu visierende", "2_4");
             try
             {
-                TestDataManager.CheckTableData(table, xPaths);
+                TestDataManager.CheckTableData(table, xPaths, screenMapping: screenMapping);
             }
             catch (Exception)
             {
@@ -121,7 +133,7 @@ namespace Kiss4Web.Test.Pendenzen
             xPaths.Add(XPathPendenzen.GridTaskFields, null);
 
             Dictionary<string, string> fieldMapping = new Dictionary<string, string>();
-            fieldMapping.Add("Falltrager", "BaPersonID");
+            fieldMapping.Add("Fallträger", "BaPersonID");
             fieldMapping.Add("Fallnummer", "BaPersonID");
 
             try

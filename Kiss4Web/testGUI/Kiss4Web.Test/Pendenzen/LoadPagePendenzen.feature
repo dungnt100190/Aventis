@@ -48,16 +48,14 @@ Scenario: 01 Get count of navbar items
 	Given User has logon with username is test_admin_1, password is 123456
 	And Page Pendenzen is redirected to
 	Then the count of navbar items should be
-	| ItmMeineFaellig | ItmMeineOffen | ItmMeineInBearbeitung | ItmMeineErstellt     | ItmMeineErhalten | ItmMeineZuVisieren | ItmVersandteFaellig | ItmVersandteOffen | ItmVersandteAllgemein | ItmVersandteZuVisieren | 
-	| 1_1             | 1_2           | 1_3                   | 1_4                  | 1_5              | 1_6                | 2_1                 | 2_2               | 2_3                   | 2_4                    | 
-	| fällige (2)     | offene (7)    | in Bearbeitung (3)    | selber erstellte (1) | erhaltene (6)    | zu visierende (1)  | fällige (1)         | offene (4)        | allgemeine (3)        | zu visierende (1)      | 
+	| Meine fällige | Meine offene | Meine in Bearbeitung | Meine selber erstellte | Meine erhaltene | Meine zu visierende | Erstellte fällige | Erstellte offene | Erstellte allgemeine | Erstellte zu visierende | 
+	| fällige (2)   | offene (7)   | in Bearbeitung (3)   | selber erstellte (1)   | erhaltene (6)   | zu visierende (1)   | fällige (1)       | offene (4)       | allgemeine (3)       | zu visierende (1)       | 
 
 @LoadPendenzen
 Scenario: 02 Get Pendenzen data
 	Given User has logon with username is test_admin_1, password is 123456
 	And Page Pendenzen is redirected to
 	Then data of grid view Task should be
-	| Fallig     | Betreff          | Leistung | Falltrager               | Fallnummer | Person            | Ersteller                  | Empfanger                  | Status         | Erfasst    | Bearbeitung | Erledigt | Antwort               |
 	| Fällig     | Betreff          | Leistung | Fallträger               | Fallnummer | Person            | Ersteller                  | Empfänger                  | Status         | Erfasst    | Bearbeitung | Erledigt | Antwort               |
 	| 10.01.2020 | Task 20180817-01 | F        | Person test-1, NT (BPS1) | BPS1       | Person test-1, NT | NULL                       | test_admin_1 - Global, CMC | Pendent        | 10.01.2018 | NULL        | NULL     | Task 20180817-1 text  |
 	| 10.05.2018 | Task 20180817-02 | K        | Person test-1, NT (BPS2) | BPS2       | Person test-2     | NULL                       | test_admin_1 - Global, CMC | Pendent        | 10.01.2018 | NULL        | NULL     | Task 20180817-2 text  |

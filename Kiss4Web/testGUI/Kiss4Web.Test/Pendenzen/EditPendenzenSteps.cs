@@ -176,12 +176,26 @@ namespace Kiss4Web.Test.Pendenzen
             xPaths.Add(XPathPendenzen.TaskDetailLabelFields2, null);
             xPaths.Add(XPathPendenzen.TaskDetailLabelFields3, null);
 
+            Dictionary<string, string> screenMapping = new Dictionary<string, string>();
+            screenMapping.Add("Status", "status");
+            screenMapping.Add("Pendenz Typ", "pendenzTyp");
+            screenMapping.Add("Betreff", "betreff");
+            screenMapping.Add("Beschreibung", "beschreibung");
+            screenMapping.Add("Empfänger", "empfanger");
+            screenMapping.Add("Fallträger", "falltrager");
+            screenMapping.Add("Leistung", "leistung");
+            screenMapping.Add("Leistungsverantw.", "leistungsverantw");
+            screenMapping.Add("betrifft Person", "betrifftPerson");
+            screenMapping.Add("Antwort", "antwort");
+            screenMapping.Add("Erfasst", "erfasst");
+            screenMapping.Add("Fällig", "fallig");
+
             Dictionary<string, string> fieldMapping = new Dictionary<string, string>();
-            fieldMapping.Add("falltrager", "BaPersonID");
+            fieldMapping.Add("Fallträger", "BaPersonID");
 
             try
             {
-                TestDataManager.CheckTableData(table, xPaths, refFieldMapping: fieldMapping);
+                TestDataManager.CheckTableData(table, xPaths, screenMapping: screenMapping, refFieldMapping: fieldMapping);
             }
             catch (Exception)
             {

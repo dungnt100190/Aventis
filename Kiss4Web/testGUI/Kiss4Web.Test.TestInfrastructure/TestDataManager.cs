@@ -375,10 +375,10 @@ namespace Kiss4Web.Test.TestInfrastructure
         /// <param name="expectedData"></param>
         /// <param name="xPathAttributePairs"></param>
         /// <param name="refFieldMapping"></param>
-        public static void CheckTableData(Table expectedData, Dictionary<string, string> xPathAttributePairs, Dictionary<string, string> refFieldMapping = null)
+        public static void CheckTableData(Table expectedData, Dictionary<string, string> xPathAttributePairs, Dictionary<string, string> screenMapping = null, Dictionary<string, string> refFieldMapping = null)
         {
             var properties = expectedData.Header.ToList();
-            for (var i = 1; i < expectedData.RowCount; i++)
+            for (var i = 0; i < expectedData.RowCount; i++)
             {
                 foreach (var prop in properties)
                 {
@@ -409,13 +409,17 @@ namespace Kiss4Web.Test.TestInfrastructure
 
                     // Get actual value from screen by xpath
                     string actualValue = null;
-                    var screenFieldName = expectedData.Rows[0][prop];
+                    var screenFieldName = prop;
+                    if (screenMapping != null && screenMapping.ContainsKey(prop))
+                    {
+                        screenFieldName = screenMapping[prop];
+                    }
                     foreach (var xpath in xPathAttributePairs)
                     {
                         var element = Driver.FindElements(By.XPath(string.Format(xpath.Key, screenFieldName)));
                         if (element != null && element.Count > 0)
                         {
-                            actualValue = element[i - 1].GetAttribute(string.IsNullOrEmpty(xpath.Value) ? "innerText" : xpath.Value);
+                            actualValue = element[i].GetAttribute(string.IsNullOrEmpty(xpath.Value) ? "innerText" : xpath.Value);
                             break;
                         }
                     }
