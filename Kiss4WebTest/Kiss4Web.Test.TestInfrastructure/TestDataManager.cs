@@ -149,29 +149,6 @@ namespace Kiss4Web.Test.TestInfrastructure
         }
 
         /// <summary>
-        /// 
-        /// </summary>
-        /// <typeparam name="TEntity"></typeparam>
-        /// <returns></returns>
-        //public static TEntity GetLastRecord<TEntity>() where TEntity : class
-        //{
-        //    var entityTypeName = typeof(TEntity).Name;
-        //    var entityIdPropertyName = _IdConventionExceptions.Lookup(entityTypeName) ?? $"{entityTypeName}ID"; // convention
-        //    object[] attrs = typeof(TEntity).GetProperty(entityIdPropertyName).GetCustomAttributes(true);
-        //    foreach (object attr in attrs)
-        //    {
-        //        KeyAttribute keyAttr = attr as KeyAttribute;
-        //        if (keyAttr != null)
-        //        {
-        //            var repository = new EntityRepository<TEntity>(_CreateDbContext());
-        //            var lastRecord = repository.GetAll().OrderByField(entityIdPropertyName, false).FirstOrDefault();
-        //            return lastRecord;
-        //        }
-        //    }
-        //    return null;
-        //}
-
-        /// <summary>
         /// Insert all row in table to database and add to data pool of TestDataManager
         /// </summary>
         /// <typeparam name="TEntity">name of table in database</typeparam>
@@ -754,11 +731,11 @@ namespace Kiss4Web.Test.TestInfrastructure
         /// <summary>
         /// Compare value of specific attribute in element with given value
         /// </summary>
-        /// <param name="expectedValue"></param>
         /// <param name="xpath">xPath of this element on screen</param>
+        /// <param name="expectedValue"></param>
         /// <param name="valueAttribute">name of the attribute in element that need to focus</param>
         /// <param name="index">driver can find many elements by the given xPath, pass this index to determine which element that want to focus, index must be >= 1</param>
-        public static void CheckControlContent(string expectedValue, string xpath, string valueAttribute = null, int index = 1)
+        public static void CheckControlContent(string xpath, string expectedValue, string valueAttribute = null, int index = 1)
         {
             if (index < 1) throw new ArgumentOutOfRangeException("index must be >= 1");
 
@@ -778,12 +755,12 @@ namespace Kiss4Web.Test.TestInfrastructure
         /// <summary>
         /// Compare value of each field in each row in given expected data table with value of that field in that row on screen 
         /// </summary>
-        /// <param name="expectedData">expected data for elements</param>
         /// <param name="xPathAndAttribute">set of xPath for elements of fields in table and the attribute to get value</param>
+        /// <param name="expectedData">expected data for elements</param>
         /// <param name="screenMapping">set of field name of expectedData table and logical name of that element on screen</param>
         /// <param name="idFieldMapping">set of field name of expectedData table and ID field name of table in database that it’s data refer to</param>
         /// <param name="additionalRules">additional rules as format rule, etc</param>
-        public static void CheckTableData(Table expectedData, Dictionary<string, string> xPathAndAttribute, Dictionary<string, string> screenMapping = null, Dictionary<string, string> idFieldMapping = null)
+        public static void CheckTableData(Dictionary<string, string> xPathAndAttribute, Table expectedData, Dictionary<string, string> screenMapping = null, Dictionary<string, string> idFieldMapping = null)
         {
             var properties = expectedData.Header.ToList();
             for (var i = 0; i < expectedData.RowCount; i++)

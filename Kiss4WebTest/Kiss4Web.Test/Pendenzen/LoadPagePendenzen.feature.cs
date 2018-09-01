@@ -439,7 +439,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "allgemeine (3)",
                         "zu visierende (1)"});
 #line 50
- testRunner.Then("data of tree LeftNavMenu should be", ((string)(null)), table5, "Then ");
+ testRunner.Then("content of tree LeftNavMenu should be", ((string)(null)), table5, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -37,7 +37,7 @@ namespace Kiss4Web.Test.Pendenzen
             {
                 TestDataManager.InputDropdownGridFilter(string.Format(XPathPendenzen.GridTaskFieldsHeader, field), filterOption);
                 TestDataManager.Input(string.Format(XPathPendenzen.GridTaskFieldsHeader + XPath0Common.Textbox, field), filterValue);
-                TestDataManager.Click(XPathPendenzen.PageHeaderLeft, waitingTime: 2);
+                TestDataManager.Click(XPathPendenzen.GridTask, waitingTime: 2);
             }
             catch (Exception)
             {
@@ -249,9 +249,9 @@ namespace Kiss4Web.Test.Pendenzen
         {
             try
             {
-                TestDataManager.CheckControlContent("true", XPathPendenzen.NavbarMenu, "ng-reflect-disabled");
-                TestDataManager.CheckControlContent("true", XPathPendenzen.SearchArea, "ng-reflect-disabled");
-                TestDataManager.CheckControlContent("true", XPathPendenzen.GridTask, "ng-reflect-disabled");
+                TestDataManager.CheckControlContent(XPathPendenzen.NavbarMenu, "true", "ng-reflect-disabled");
+                TestDataManager.CheckControlContent(XPathPendenzen.SearchArea, "true", "ng-reflect-disabled");
+                TestDataManager.CheckControlContent(XPathPendenzen.GridTask, "true", "ng-reflect-disabled");
             }
             catch (Exception)
             {
@@ -265,9 +265,9 @@ namespace Kiss4Web.Test.Pendenzen
         {
             try
             {
-                TestDataManager.CheckControlContent("false", XPathPendenzen.NavbarMenu, "ng-reflect-disabled");
-                TestDataManager.CheckControlContent("false", XPathPendenzen.SearchArea, "ng-reflect-disabled");
-                TestDataManager.CheckControlContent("false", XPathPendenzen.GridTask, "ng-reflect-disabled");
+                TestDataManager.CheckControlContent(XPathPendenzen.NavbarMenu, "false", "ng-reflect-disabled");
+                TestDataManager.CheckControlContent(XPathPendenzen.SearchArea, "false", "ng-reflect-disabled");
+                TestDataManager.CheckControlContent(XPathPendenzen.GridTask, "false", "ng-reflect-disabled");
             }
             catch (Exception)
             {
@@ -281,10 +281,10 @@ namespace Kiss4Web.Test.Pendenzen
         {
             try
             {
-                TestDataManager.CheckControlContent("false", XPathPendenzen.ButtonCreate, "ng-reflect-visible");
-                TestDataManager.CheckControlContent("false", XPathPendenzen.ButtonEdit, "ng-reflect-visible");
-                TestDataManager.CheckControlContent("true", XPathPendenzen.ButtonSave, "ng-reflect-visible");
-                TestDataManager.CheckControlContent("true", XPathPendenzen.ButtonCancel, "ng-reflect-visible");
+                TestDataManager.CheckControlContent(XPathPendenzen.ButtonCreate, "false", "ng-reflect-visible");
+                TestDataManager.CheckControlContent(XPathPendenzen.ButtonEdit, "false", "ng-reflect-visible");
+                TestDataManager.CheckControlContent(XPathPendenzen.ButtonSave, "true", "ng-reflect-visible");
+                TestDataManager.CheckControlContent(XPathPendenzen.ButtonCancel, "true", "ng-reflect-visible");
                 TestDataManager.CheckControlStatus(XPathPendenzen.TaskDetailAreaEdit, isDisplayed: true);
                 TestDataManager.CheckControlStatus(XPathPendenzen.TaskDetailAreaView, isDisplayed: false);
 
@@ -306,7 +306,7 @@ namespace Kiss4Web.Test.Pendenzen
                 screenMapping.Add("Erfasst", "erfasst");
                 screenMapping.Add("Fällig", "fallig");
 
-                TestDataManager.CheckTableData(statusTable, xPaths, screenMapping: screenMapping);
+                TestDataManager.CheckTableData(xPaths, statusTable, screenMapping: screenMapping);
             }
             catch (Exception)
             {
@@ -320,10 +320,10 @@ namespace Kiss4Web.Test.Pendenzen
         {
             try
             {
-                TestDataManager.CheckControlContent("true", XPathPendenzen.ButtonCreate, "ng-reflect-visible");
-                TestDataManager.CheckControlContent("true", XPathPendenzen.ButtonEdit, "ng-reflect-visible");
-                TestDataManager.CheckControlContent("false", XPathPendenzen.ButtonSave, "ng-reflect-visible");
-                TestDataManager.CheckControlContent("false", XPathPendenzen.ButtonCancel, "ng-reflect-visible");
+                TestDataManager.CheckControlContent(XPathPendenzen.ButtonCreate, "true", "ng-reflect-visible");
+                TestDataManager.CheckControlContent(XPathPendenzen.ButtonEdit, "true", "ng-reflect-visible");
+                TestDataManager.CheckControlContent(XPathPendenzen.ButtonSave, "false", "ng-reflect-visible");
+                TestDataManager.CheckControlContent(XPathPendenzen.ButtonCancel, "false", "ng-reflect-visible");
                 TestDataManager.CheckControlStatus(XPathPendenzen.TaskDetailAreaEdit, isDisplayed: false);
                 TestDataManager.CheckControlStatus(XPathPendenzen.TaskDetailAreaView, isDisplayed: true);
             }
@@ -339,7 +339,7 @@ namespace Kiss4Web.Test.Pendenzen
         {
             try
             {
-                TestDataManager.CheckControlContent(value, string.Format(XPathPendenzen.NavbarItems, "1_2"));
+                TestDataManager.CheckControlContent(string.Format(XPathPendenzen.NavbarItems, "1_2"), value);
             }
             catch (Exception)
             {
@@ -353,7 +353,7 @@ namespace Kiss4Web.Test.Pendenzen
         {
             try
             {
-                TestDataManager.CheckControlContent(value, string.Format(XPathPendenzen.NavbarItems, "2_2"));
+                TestDataManager.CheckControlContent(string.Format(XPathPendenzen.NavbarItems, "2_2"), value);
             }
             catch (Exception)
             {
@@ -362,8 +362,8 @@ namespace Kiss4Web.Test.Pendenzen
             }
         }
 
-        [Then(@"data of tree LeftNavMenu should be")]
-        public void DataOfTreeLeftNavMenuShouldBe(Table table)
+        [Then(@"content of tree LeftNavMenu should be")]
+        public void ContentOfTreeLeftNavMenuShouldBe(Table table)
         {
             Dictionary<string, string> xPaths = new Dictionary<string, string>();
             xPaths.Add(XPathPendenzen.NavbarItems, null);
@@ -381,7 +381,7 @@ namespace Kiss4Web.Test.Pendenzen
             screenMapping.Add("Erstellte zu visierende", "2_4");
             try
             {
-                TestDataManager.CheckTableData(table, xPaths, screenMapping: screenMapping);
+                TestDataManager.CheckTableData(xPaths, table, screenMapping: screenMapping);
             }
             catch (Exception)
             {
@@ -402,7 +402,7 @@ namespace Kiss4Web.Test.Pendenzen
 
             try
             {
-                TestDataManager.CheckTableData(table, xPaths, idFieldMapping: idFieldMapping);
+                TestDataManager.CheckTableData(xPaths, table, idFieldMapping: idFieldMapping);
             }
             catch (Exception)
             {
@@ -452,7 +452,7 @@ namespace Kiss4Web.Test.Pendenzen
 
             try
             {
-                TestDataManager.CheckTableData(table, xPaths, screenMapping: screenMapping, idFieldMapping: fieldMapping);
+                TestDataManager.CheckTableData(xPaths, table, screenMapping: screenMapping, idFieldMapping: fieldMapping);
             }
             catch (Exception)
             {
@@ -467,7 +467,7 @@ namespace Kiss4Web.Test.Pendenzen
             try
             {
                 TestDataManager.Click(string.Format(XPathPendenzen.TaskDetailFields1, "betreff"), waitingTime: 2);
-                TestDataManager.CheckControlContent(message, string.Format(XPathPendenzen.TaskDetailFields1 + XPath0DevExtreme.AutogenElement, "betreff"), valueAttribute: "textContent");
+                TestDataManager.CheckControlContent(string.Format(XPathPendenzen.TaskDetailFields1 + XPath0DevExtreme.AutogenElement, "betreff"), message, valueAttribute: "textContent");
             }
             catch (Exception)
             {
@@ -481,7 +481,7 @@ namespace Kiss4Web.Test.Pendenzen
         {
             try
             {
-                TestDataManager.CheckControlContent(message, XPathPendenzen.TopContentValidateMessage, index: 1);
+                TestDataManager.CheckControlContent(XPathPendenzen.TopContentValidateMessage, message, index: 1);
             }
             catch (Exception)
             {

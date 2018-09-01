@@ -47,7 +47,7 @@
 Scenario: 01 Get count of navbar items
 	Given logon with username is test_admin_1, password is 123456
 	And go to page Pendenzen
-	Then data of tree LeftNavMenu should be
+	Then content of tree LeftNavMenu should be
 	| Meine fällige | Meine offene | Meine in Bearbeitung | Meine selber erstellte | Meine erhaltene | Meine zu visierende | Erstellte fällige | Erstellte offene | Erstellte allgemeine | Erstellte zu visierende | 
 	| fällige (2)   | offene (7)   | in Bearbeitung (3)   | selber erstellte (1)   | erhaltene (6)   | zu visierende (1)   | fällige (1)       | offene (4)       | allgemeine (3)       | zu visierende (1)       | 
 
