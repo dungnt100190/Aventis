@@ -160,11 +160,47 @@ namespace Kiss4Web.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;app-content-header-left&apos;].
+        /// </summary>
+        public static string PageHeaderLeft {
+            get {
+                return ResourceManager.GetString("PageHeaderLeft", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //*[@id=&apos;content1&apos;].
         /// </summary>
         public static string SearchArea {
             get {
                 return ResourceManager.GetString("SearchArea", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;content1&apos;]//*[@id=&apos;search-body-left-{0}&apos;].
+        /// </summary>
+        public static string SearchFields1 {
+            get {
+                return ResourceManager.GetString("SearchFields1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;content1&apos;]//*[@id=&apos;search-body-right-{0}&apos;].
+        /// </summary>
+        public static string SearchFields2 {
+            get {
+                return ResourceManager.GetString("SearchFields2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;content1&apos;]//input[@name=&apos;{0}&apos;]/parent::*.
+        /// </summary>
+        public static string SearchFields3 {
+            get {
+                return ResourceManager.GetString("SearchFields3", resourceCulture);
             }
         }
         

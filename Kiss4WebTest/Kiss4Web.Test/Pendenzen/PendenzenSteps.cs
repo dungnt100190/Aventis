@@ -37,7 +37,7 @@ namespace Kiss4Web.Test.Pendenzen
             {
                 TestDataManager.InputDropdownGridFilter(string.Format(XPathPendenzen.GridTaskFieldsHeader, field), filterOption);
                 TestDataManager.Input(string.Format(XPathPendenzen.GridTaskFieldsHeader + XPath0Common.Textbox, field), filterValue);
-                TestDataManager.Click(XPathPendenzen.GridTask, waitingTime: 2);
+                TestDataManager.Click(XPathPendenzen.PageHeaderLeft, waitingTime: 2);
             }
             catch (Exception)
             {
@@ -138,8 +138,6 @@ namespace Kiss4Web.Test.Pendenzen
             try
             {
                 TestDataManager.InputDropdown(string.Format(XPathPendenzen.TaskDetailFields1, "leistung"), option);
-                //TestDataManager.Click(string.Format(XPathPendenzen.TaskDetailFields1, "leistung"), waitingTime: 5);
-                //TestDataManager.Click(string.Format("//div[@class='dx-popup-content']//div[@role='option']//div[contains(text(),'{0}')]", option));
             }
             catch (Exception)
             {
@@ -168,6 +166,42 @@ namespace Kiss4Web.Test.Pendenzen
             try
             {
                 TestDataManager.Clear(string.Format(XPathPendenzen.TaskDetailFields1 + XPath0Common.Textbox, "betreff"));
+            }
+            catch (Exception)
+            {
+                Cleanup();
+                throw;
+            }
+        }
+
+        [When(@"input into Pendenzen search area as below")]
+        public void InputIntoSearchAreaAsBelow(Table table)
+        {
+            try
+            {
+                string[] xPaths = new string[]
+                {
+                    XPathPendenzen.SearchFields3,
+                    XPathPendenzen.SearchFields2,
+                    XPathPendenzen.SearchFields1
+                };
+
+                Dictionary<string, InputElementType> elementType = new Dictionary<string, InputElementType>();
+                elementType.Add("Status", InputElementType.Dropdown);
+                //elementType.Add("Betreff", InputElementType.Textbox);
+                elementType.Add("Bearbeitung from", InputElementType.Datebox);
+                elementType.Add("Bearbeitung to", InputElementType.Datebox);
+                elementType.Add("Ersteller", InputElementType.GridDropdown);
+
+                Dictionary<string, string> screenMapping = new Dictionary<string, string>();
+                screenMapping.Add("Status", "status");
+                screenMapping.Add("Betreff", "betreff");
+                screenMapping.Add("Bearbeitung from", "processing-box-item1");
+                screenMapping.Add("Bearbeitung to", "processing-box-item3");
+                screenMapping.Add("Ersteller", "creator");
+
+                TestDataManager.InputTableData(xPaths, table, elementType, screenMapping);
+                TestDataManager.Click(XPathPendenzen.PageHeaderLeft, waitingTime: 2);
             }
             catch (Exception)
             {
@@ -243,7 +277,7 @@ namespace Kiss4Web.Test.Pendenzen
         }
 
         [Then(@"Pendenzen detail area switches to edit mode of status in Bearbeitung")]
-        public void DetailAreaSwitchesToEditModeOfStatusInBearbeitung()
+        public void DetailAreaSwitchesToEditModeOfStatusInBearbeitung(Table statusTable)
         {
             try
             {
@@ -252,18 +286,27 @@ namespace Kiss4Web.Test.Pendenzen
                 TestDataManager.CheckControlContent("true", XPathPendenzen.ButtonSave, "ng-reflect-visible");
                 TestDataManager.CheckControlContent("true", XPathPendenzen.ButtonCancel, "ng-reflect-visible");
                 TestDataManager.CheckControlStatus(XPathPendenzen.TaskDetailAreaEdit, isDisplayed: true);
-                TestDataManager.CheckControlContent("true", string.Format(XPathPendenzen.TaskDetailFields1, "status"), "ng-reflect-disabled");
-                TestDataManager.CheckControlContent("true", string.Format(XPathPendenzen.TaskDetailFields1, "pendenzTyp"), "ng-reflect-disabled");
-                TestDataManager.CheckControlContent("true", string.Format(XPathPendenzen.TaskDetailFields1, "betreff"), "ng-reflect-disabled");
-                TestDataManager.CheckControlContent("true", string.Format(XPathPendenzen.TaskDetailFields1, "beschreibung"), "ng-reflect-disabled");
-                TestDataManager.CheckControlContent("true", string.Format(XPathPendenzen.TaskDetailFields1, "Ersteller"), "ng-reflect-disabled");
-                TestDataManager.CheckControlContent("true", string.Format(XPathPendenzen.TaskDetailFields1, "empfanger"), "ng-reflect-disabled");
-                TestDataManager.CheckControlContent("true", string.Format(XPathPendenzen.TaskDetailFields1, "falltrager"), "ng-reflect-disabled");
-                TestDataManager.CheckControlContent("true", string.Format(XPathPendenzen.TaskDetailFields2, "leistungsverantw"), "ng-reflect-disabled");
-                TestDataManager.CheckControlContent("true", string.Format(XPathPendenzen.TaskDetailFields1, "betrifftPerson"), "ng-reflect-disabled");
-                TestDataManager.CheckControlContent("true", string.Format(XPathPendenzen.TaskDetailFields1, "erfasst"), "ng-reflect-disabled");
-                TestDataManager.CheckControlContent("true", string.Format(XPathPendenzen.TaskDetailFields1, "fallig"), "ng-reflect-disabled");
                 TestDataManager.CheckControlStatus(XPathPendenzen.TaskDetailAreaView, isDisplayed: false);
+
+                Dictionary<string, string> xPaths = new Dictionary<string, string>();
+                xPaths.Add(XPathPendenzen.TaskDetailFields2, "ng-reflect-disabled");
+                xPaths.Add(XPathPendenzen.TaskDetailFields1, "ng-reflect-disabled");
+
+                Dictionary<string, string> screenMapping = new Dictionary<string, string>();
+                screenMapping.Add("Status", "status");
+                screenMapping.Add("Pendenz Typ", "pendenzTyp");
+                screenMapping.Add("Betreff", "betreff");
+                screenMapping.Add("Beschreibung", "beschreibung");
+                screenMapping.Add("Empfänger", "empfanger");
+                screenMapping.Add("Fallträger", "falltrager");
+                screenMapping.Add("Leistung", "leistung");
+                screenMapping.Add("Leistungsverantw.", "leistungsverantw");
+                screenMapping.Add("betrifft Person", "betrifftPerson");
+                screenMapping.Add("Antwort", "antwort");
+                screenMapping.Add("Erfasst", "erfasst");
+                screenMapping.Add("Fällig", "fallig");
+
+                TestDataManager.CheckTableData(statusTable, xPaths, screenMapping: screenMapping);
             }
             catch (Exception)
             {

@@ -277,43 +277,72 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("click on button Bearbeiten", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 44
  testRunner.Then("these items are disabled: LeftNavMenu, SearchArea, GridTask", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Status",
+                        "Pendenz Typ",
+                        "Betreff",
+                        "Beschreibung",
+                        "Ersteller",
+                        "Empfänger",
+                        "Fallträger",
+                        "Leistung",
+                        "Leistungsverantw.",
+                        "betrifft Person",
+                        "Antwort",
+                        "Erfasst",
+                        "Fällig"});
+            table5.AddRow(new string[] {
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "true",
+                        "false",
+                        "true",
+                        "true",
+                        "false",
+                        "true",
+                        "true"});
 #line 45
- testRunner.And("Pendenzen detail area switches to edit mode of status in Bearbeitung", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("Pendenzen detail area switches to edit mode of status in Bearbeitung", ((string)(null)), table5, "And ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("02 Edit Pendenzen of status in Bearbeitung", new string[] {
-                "EditPendenzen"}, SourceLine=47)]
+                "EditPendenzen"}, SourceLine=50)]
         public virtual void _02EditPendenzenOfStatusInBearbeitung()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02 Edit Pendenzen of status in Bearbeitung", null, new string[] {
                         "EditPendenzen"});
-#line 48
+#line 51
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
  this.FeatureBackground();
-#line 49
- testRunner.Given("logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 50
- testRunner.And("go to page Pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 51
- testRunner.And("choose row 2 on grid Pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 52
- testRunner.And("click on button Bearbeiten", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given("logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 53
- testRunner.When("choose F - Fallführung (10.01.2018 -) in dropdown Leistung", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("go to page Pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 54
- testRunner.And("input Update 20180817-8 text into textarea Antwort", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("choose row 2 on grid Pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 55
- testRunner.And("click on button Speichern", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("click on button Bearbeiten", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 56
- testRunner.Then("these items are enabled: LeftNavMenu, SearchArea, GridTask", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("choose F - Fallführung (10.01.2018 -) in dropdown Leistung", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 57
+ testRunner.And("input Update 20180817-8 text into textarea Antwort", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 58
+ testRunner.And("click on button Speichern", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 59
+ testRunner.Then("these items are enabled: LeftNavMenu, SearchArea, GridTask", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 60
  testRunner.And("Pendenzen detail area switches to view mode", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                         "Status",
                         "Pendenz Typ",
                         "Betreff",
@@ -329,7 +358,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "Fällig",
                         "Bearbeitung",
                         "Erledigt"});
-            table5.AddRow(new string[] {
+            table6.AddRow(new string[] {
                         "in Bearbeitung",
                         "Fristablauf",
                         "Task 20180817-08",
@@ -345,36 +374,36 @@ this.ScenarioInitialize(scenarioInfo);
                         "10.10.2018",
                         "NULL",
                         "NULL"});
-#line 58
- testRunner.And("content of Pendenzen detail area should be", ((string)(null)), table5, "And ");
+#line 61
+ testRunner.And("content of Pendenzen detail area should be", ((string)(null)), table6, "And ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("03 Edit Un-Successfully", new string[] {
-                "EditPendenzen"}, SourceLine=62)]
+                "EditPendenzen"}, SourceLine=65)]
         public virtual void _03EditUn_Successfully()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03 Edit Un-Successfully", null, new string[] {
                         "EditPendenzen"});
-#line 63
+#line 66
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
  this.FeatureBackground();
-#line 64
- testRunner.Given("logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 65
- testRunner.And("go to page Pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 66
- testRunner.And("choose row 1 on grid Pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 67
- testRunner.And("click on button Bearbeiten", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given("logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 68
- testRunner.When("clear data in textbox Betreff", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("go to page Pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 69
- testRunner.And("click on button Speichern", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("choose row 1 on grid Pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 70
+ testRunner.And("click on button Bearbeiten", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 71
+ testRunner.When("clear data in textbox Betreff", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 72
+ testRunner.And("click on button Speichern", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 73
  testRunner.Then("display error message at below of textbox Betreff with content is: Das Feld \'Betr" +
                     "eff\' darf nicht leer bleiben !", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

@@ -43,6 +43,9 @@ Scenario: 01 Switch to edit mode of status in Bearbeitung
 	When click on button Bearbeiten 
 	Then these items are disabled: LeftNavMenu, SearchArea, GridTask
 	And Pendenzen detail area switches to edit mode of status in Bearbeitung
+	# disable status of elements as below:
+	| Status | Pendenz Typ | Betreff | Beschreibung | Ersteller | Empfänger | Fallträger | Leistung | Leistungsverantw. | betrifft Person | Antwort | Erfasst | Fällig | 
+	| true   | true        | true    | true         | true      | true      | true       | false    | true              | true            | false   | true    | true   | 
 
 @EditPendenzen
 Scenario: 02 Edit Pendenzen of status in Bearbeitung 

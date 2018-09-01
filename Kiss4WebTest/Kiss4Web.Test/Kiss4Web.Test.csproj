@@ -105,6 +105,11 @@
       <DependentUpon>LoadPagePendenzen.feature</DependentUpon>
     </Compile>
     <Compile Include="Pendenzen\PendenzenSteps.cs" />
+    <Compile Include="Pendenzen\SearchPendenzen.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SearchPendenzen.feature</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pendenzen\FilterPendenzen.feature.cs">
       <AutoGen>True</AutoGen>
@@ -129,6 +134,10 @@
     <None Include="Pendenzen\LoadPagePendenzen.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>LoadPagePendenzen.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Pendenzen\SearchPendenzen.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SearchPendenzen.feature.cs</LastGenOutput>
     </None>
     <None Include="runtests.cmd" />
     <None Include="SpecRunTestProfile.xsd">
