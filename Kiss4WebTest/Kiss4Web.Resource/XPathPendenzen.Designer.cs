@@ -88,11 +88,29 @@ namespace Kiss4Web.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to //*[contains(@class,&apos;dx-button-content&apos;)]//*[contains(text(),&apos;Nein&apos;)].
+        /// </summary>
+        public static string ButtonNo {
+            get {
+                return ResourceManager.GetString("ButtonNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to //*[@id=&apos;app-content3-header-body-button-Speichern&apos;].
         /// </summary>
         public static string ButtonSave {
             get {
                 return ResourceManager.GetString("ButtonSave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[contains(@class,&apos;dx-button-content&apos;)]//*[contains(text(),&apos;Ja&apos;)].
+        /// </summary>
+        public static string ButtonYes {
+            get {
+                return ResourceManager.GetString("ButtonYes", resourceCulture);
             }
         }
         
@@ -111,6 +129,15 @@ namespace Kiss4Web.Resource {
         public static string GridTaskFields {
             get {
                 return ResourceManager.GetString("GridTaskFields", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;gridContainer&apos;]//*[contains(@class,&apos;dx-datagrid-filter-row&apos;)]//*[contains(@aria-label,&apos;Column {0}&apos;)].
+        /// </summary>
+        public static string GridTaskFieldsHeader {
+            get {
+                return ResourceManager.GetString("GridTaskFieldsHeader", resourceCulture);
             }
         }
         
@@ -142,7 +169,43 @@ namespace Kiss4Web.Resource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;app-content3-body-lable&apos;]//dxi-item[@id=&apos;app-content3-body-form-{0}&apos;]//textarea.
+        ///   Looks up a localized string similar to //*[@id=&apos;app-content3-body&apos;].
+        /// </summary>
+        public static string TaskDetailAreaEdit {
+            get {
+                return ResourceManager.GetString("TaskDetailAreaEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;app-content3-body-lable&apos;].
+        /// </summary>
+        public static string TaskDetailAreaView {
+            get {
+                return ResourceManager.GetString("TaskDetailAreaView", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;app-content3-body&apos;]//*[@id=&apos;app-content3-body-form-{0}&apos;]//*[@_ngcontent-c10].
+        /// </summary>
+        public static string TaskDetailFields1 {
+            get {
+                return ResourceManager.GetString("TaskDetailFields1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;app-content3-body&apos;]//*[@ng-reflect-data-field=&apos;{0}&apos;]//*[@_ngcontent-c10].
+        /// </summary>
+        public static string TaskDetailFields2 {
+            get {
+                return ResourceManager.GetString("TaskDetailFields2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;app-content3-body-lable&apos;]//*[@id=&apos;app-content3-body-form-{0}&apos;]//*[@_ngcontent-c10].
         /// </summary>
         public static string TaskDetailLabelFields1 {
             get {
@@ -151,7 +214,7 @@ namespace Kiss4Web.Resource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;app-content3-body-lable&apos;]//dxi-item[@ng-reflect-data-field=&apos;{0}&apos;]//*[@_ngcontent-c10].
+        ///   Looks up a localized string similar to //*[@id=&apos;app-content3-body-lable&apos;]//*[@ng-reflect-data-field=&apos;{0}&apos;]//*[@_ngcontent-c10].
         /// </summary>
         public static string TaskDetailLabelFields2 {
             get {
@@ -160,11 +223,20 @@ namespace Kiss4Web.Resource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to //div[@id=&apos;app-content3-body-lable&apos;]//dxi-item[@id=&apos;app-content3-body-form-{0}&apos;]//*[@_ngcontent-c10].
+        ///   Looks up a localized string similar to //*[@id=&apos;app-content3-body-lable&apos;]//*[@id=&apos;app-content3-body-form-{0}&apos;]//textarea.
         /// </summary>
         public static string TaskDetailLabelFields3 {
             get {
                 return ResourceManager.GetString("TaskDetailLabelFields3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to //*[@id=&apos;error-container&apos;]//*[contains(@class,&apos;error-content&apos;)]//*[contains(@class,&apos;error-message&apos;)].
+        /// </summary>
+        public static string TopContentValidateMessage {
+            get {
+                return ResourceManager.GetString("TopContentValidateMessage", resourceCulture);
             }
         }
     }

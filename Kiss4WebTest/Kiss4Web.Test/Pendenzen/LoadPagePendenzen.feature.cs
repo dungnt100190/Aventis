@@ -573,7 +573,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "NULL",
                         "Task 20180817-10 text"});
 #line 58
- testRunner.Then("data of grid view Task should be", ((string)(null)), table6, "Then ");
+ testRunner.Then("Data of Task grid should be", ((string)(null)), table6, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

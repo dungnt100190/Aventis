@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants.cs" />
     <Compile Include="Extensions\DictionaryExtensionMethods.cs" />
     <Compile Include="Extensions\LinqExtensionMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

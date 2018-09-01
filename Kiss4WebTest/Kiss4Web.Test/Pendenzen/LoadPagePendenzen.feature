@@ -55,7 +55,7 @@ Scenario: 01 Get count of navbar items
 Scenario: 02 Get Pendenzen data
 	Given User has logon with username is test_admin_1, password is 123456
 	And Page Pendenzen is redirected to
-	Then data of grid view Task should be
+	Then Data of Task grid should be
 	| Fällig     | Betreff          | Leistung | Fallträger               | Fallnummer | Person            | Ersteller                  | Empfänger                  | Status         | Erfasst    | Bearbeitung | Erledigt | Antwort               |
 	| 10.01.2020 | Task 20180817-01 | F        | Person test-1, NT (BPS1) | BPS1       | Person test-1, NT | NULL                       | test_admin_1 - Global, CMC | Pendent        | 10.01.2018 | NULL        | NULL     | Task 20180817-1 text  |
 	| 10.05.2018 | Task 20180817-02 | K        | Person test-1, NT (BPS2) | BPS2       | Person test-2     | NULL                       | test_admin_1 - Global, CMC | Pendent        | 10.01.2018 | NULL        | NULL     | Task 20180817-2 text  |

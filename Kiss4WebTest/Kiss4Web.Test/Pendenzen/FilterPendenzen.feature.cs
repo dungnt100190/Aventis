@@ -17,20 +17,20 @@ namespace Kiss4Web.Test.Pendenzen
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("Edit Pendenzen", Description="\tEdit a task", SourceFile="Pendenzen\\EditPendenzen.feature", SourceLine=0)]
-    public partial class EditPendenzenFeature
+    [TechTalk.SpecRun.FeatureAttribute("Filter Pendenzen", SourceFile="Pendenzen\\FilterPendenzen.feature", SourceLine=0)]
+    public partial class FilterPendenzenFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "EditPendenzen.feature"
+#line 1 "FilterPendenzen.feature"
 #line hidden
         
         [TechTalk.SpecRun.FeatureInitialize()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Edit Pendenzen", "\tEdit a task", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Filter Pendenzen", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -68,7 +68,7 @@ namespace Kiss4Web.Test.Pendenzen
         
         public virtual void FeatureBackground()
         {
-#line 3
+#line 2
  #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "UserID",
@@ -121,7 +121,7 @@ namespace Kiss4Web.Test.Pendenzen
                         "0",
                         "0",
                         "258000"});
-#line 4
+#line 3
  testRunner.Given("these XUsers", ((string)(null)), table1, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -136,7 +136,7 @@ namespace Kiss4Web.Test.Pendenzen
                         "BPS2",
                         "Person test-2",
                         "NULL"});
-#line 9
+#line 8
  testRunner.And("these BaPersons", ((string)(null)), table2, "And ");
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
@@ -194,7 +194,7 @@ namespace Kiss4Web.Test.Pendenzen
                         "1",
                         "0",
                         "2018-04-10 00:00:00.000"});
-#line 26
+#line 25
  testRunner.And("these FaLeistungs", ((string)(null)), table3, "And ");
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
@@ -251,132 +251,188 @@ namespace Kiss4Web.Test.Pendenzen
                         "Task 20180817-8 text",
                         "1",
                         "1"});
-#line 33
+#line 32
  testRunner.And("these XTasks", ((string)(null)), table4, "And ");
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("01 Switch to edit mode of status in Bearbeitung", new string[] {
-                "EditPendenzen"}, SourceLine=38)]
-        public virtual void _01SwitchToEditModeOfStatusInBearbeitung()
+        [TechTalk.SpecRun.ScenarioAttribute("01 Check Filter by \'Fällig\' field", new string[] {
+                "FilterPendenzen"}, SourceLine=37)]
+        public virtual void _01CheckFilterByFalligField()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01 Switch to edit mode of status in Bearbeitung", null, new string[] {
-                        "EditPendenzen"});
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01 Check Filter by \'Fällig\' field", null, new string[] {
+                        "FilterPendenzen"});
+#line 38
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 2
+ this.FeatureBackground();
 #line 39
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 3
- this.FeatureBackground();
+ testRunner.Given("User has logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 40
- testRunner.Given("User has logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.And("Page Pendenzen is redirected to", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 41
- testRunner.And("Page Pendenzen is redirected to", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 42
- testRunner.And("User choose row 2 on Grid Task", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 43
- testRunner.When("User click on button Bearbeiten", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 44
- testRunner.Then("These items are disabled: NavbarMenu, SearchArea, GridTask", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 45
- testRunner.And("Pendenzen Detail area switches to edit mode of status in Bearbeitung", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("02 Edit Pendenzen of status in Bearbeitung", new string[] {
-                "EditPendenzen"}, SourceLine=47)]
-        public virtual void _02EditPendenzenOfStatusInBearbeitung()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02 Edit Pendenzen of status in Bearbeitung", null, new string[] {
-                        "EditPendenzen"});
-#line 48
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 3
- this.FeatureBackground();
-#line 49
- testRunner.Given("User has logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 50
- testRunner.And("Page Pendenzen is redirected to", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 51
- testRunner.And("User choose row 2 on Grid Task", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 52
- testRunner.And("User clicked on button Bearbeiten", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 53
- testRunner.When("User choose F - Fallführung (10.01.2018 -) in dropdown Leistung", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 54
- testRunner.And("User input Update 20180817-8 text into textarea Antwort", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 55
- testRunner.And("User click on button Speichern", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 56
- testRunner.Then("These items are enabled: NavbarMenu, SearchArea, GridTask", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 57
- testRunner.And("Pendenzen Detail area switches to view mode", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("Click search icon in Fällig field, choose option Ist nicht gleich and input 10.01" +
+                    ".2020", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Status",
-                        "Pendenz Typ",
+                        "Fällig",
                         "Betreff",
-                        "Beschreibung",
+                        "Leistung",
+                        "Fallträger",
+                        "Fallnummer",
+                        "Person",
                         "Ersteller",
                         "Empfänger",
-                        "Fallträger",
-                        "Leistung",
-                        "Leistungsverantw.",
-                        "betrifft Person",
-                        "Antwort",
+                        "Status",
                         "Erfasst",
-                        "Fällig",
                         "Bearbeitung",
-                        "Erledigt"});
+                        "Erledigt",
+                        "Antwort"});
             table5.AddRow(new string[] {
-                        "in Bearbeitung",
-                        "Fristablauf",
-                        "Task 20180817-08",
-                        "Task 20180817-8 autotest",
-                        "test_admin_1 - Global, CMC",
-                        "test_admin_1 - Global, CMC",
-                        "Person test-1, NT (BPS1)",
-                        "F - Fallführung (10.01.2018 -)",
-                        "test_admin_1 - Global, CMC",
-                        "Person test-1, NT",
-                        "Update 20180817-8 text",
-                        "10.05.2018",
                         "10.10.2018",
+                        "Task 20180817-08",
+                        "K",
+                        "Person test-2 (BPS1)",
+                        "BPS1",
+                        "Person test-1, NT",
+                        "test_admin_1 - Global, CMC",
+                        "test_admin_1 - Global, CMC",
+                        "in Bearbeitung",
+                        "10.01.2018",
+                        "10.05.2018",
                         "NULL",
-                        "NULL"});
-#line 58
- testRunner.And("Content of Pendenzen Detail area should be", ((string)(null)), table5, "And ");
+                        "Task 20180817-8 text"});
+#line 42
+ testRunner.Then("Data of Task grid should be", ((string)(null)), table5, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("03 Edit Un-Successfully", new string[] {
-                "EditPendenzen"}, SourceLine=62)]
-        public virtual void _03EditUn_Successfully()
+        [TechTalk.SpecRun.ScenarioAttribute("02 Check Filter by \'Fällig\' field", new string[] {
+                "FilterPendenzen"}, SourceLine=46)]
+        public virtual void _02CheckFilterByFalligField()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03 Edit Un-Successfully", null, new string[] {
-                        "EditPendenzen"});
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02 Check Filter by \'Fällig\' field", null, new string[] {
+                        "FilterPendenzen"});
+#line 47
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 2
+ this.FeatureBackground();
+#line 48
+ testRunner.Given("User has logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 49
+ testRunner.And("Page Pendenzen is redirected to", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 50
+ testRunner.When("Click search icon in Fällig field, choose option Kleiner als and input 10.10.2018" +
+                    "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 51
+ testRunner.Then("Task grid does not have data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("03 Check Filter by \'Fällig\' field", new string[] {
+                "FilterPendenzen"}, SourceLine=53)]
+        public virtual void _03CheckFilterByFalligField()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03 Check Filter by \'Fällig\' field", null, new string[] {
+                        "FilterPendenzen"});
+#line 54
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 2
+ this.FeatureBackground();
+#line 55
+ testRunner.Given("User has logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 56
+ testRunner.And("Page Pendenzen is redirected to", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 57
+ testRunner.When("Click search icon in Fällig field, choose option Größer als and input 10.10.2018", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Fällig",
+                        "Betreff",
+                        "Leistung",
+                        "Fallträger",
+                        "Fallnummer",
+                        "Person",
+                        "Ersteller",
+                        "Empfänger",
+                        "Status",
+                        "Erfasst",
+                        "Bearbeitung",
+                        "Erledigt",
+                        "Antwort"});
+            table6.AddRow(new string[] {
+                        "10.01.2020",
+                        "Task 20180817-01",
+                        "F",
+                        "Person test-1, NT (BPS1)",
+                        "BPS1",
+                        "Person test-1, NT",
+                        "NULL",
+                        "test_admin_1 - Global, CMC",
+                        "Pendent",
+                        "10.01.2018",
+                        "NULL",
+                        "NULL",
+                        "Task 20180817-1 text"});
+#line 58
+ testRunner.Then("Data of Task grid should be", ((string)(null)), table6, "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("04 Check Filter by \'Fällig\' field", new string[] {
+                "FilterPendenzen"}, SourceLine=62)]
+        public virtual void _04CheckFilterByFalligField()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("04 Check Filter by \'Fällig\' field", null, new string[] {
+                        "FilterPendenzen"});
 #line 63
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 3
+#line 2
  this.FeatureBackground();
 #line 64
  testRunner.Given("User has logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 65
  testRunner.And("Page Pendenzen is redirected to", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 66
- testRunner.And("User choose row 1 on Grid Task", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("Click search icon in Fällig field, choose option Ist gleich and input 10.10.2018", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Fällig",
+                        "Betreff",
+                        "Leistung",
+                        "Fallträger",
+                        "Fallnummer",
+                        "Person",
+                        "Ersteller",
+                        "Empfänger",
+                        "Status",
+                        "Erfasst",
+                        "Bearbeitung",
+                        "Erledigt",
+                        "Antwort"});
+            table7.AddRow(new string[] {
+                        "10.10.2018",
+                        "Task 20180817-08",
+                        "K",
+                        "Person test-2 (BPS1)",
+                        "BPS1",
+                        "Person test-1, NT",
+                        "test_admin_1 - Global, CMC",
+                        "test_admin_1 - Global, CMC",
+                        "in Bearbeitung",
+                        "10.01.2018",
+                        "10.05.2018",
+                        "NULL",
+                        "Task 20180817-8 text"});
 #line 67
- testRunner.And("User clicked on button Bearbeiten", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 68
- testRunner.When("User clear data in textbox Betreff of Pendenzen Detail area", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 69
- testRunner.And("User click on button Speichern", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 70
- testRunner.Then("Display error message Das Feld \'Betreff\' darf nicht leer bleiben ! at below of te" +
-                    "xtbox Betreff", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Data of Task grid should be", ((string)(null)), table7, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

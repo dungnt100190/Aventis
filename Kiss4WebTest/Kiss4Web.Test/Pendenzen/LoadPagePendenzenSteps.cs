@@ -35,7 +35,21 @@ namespace Kiss4Web.Test.Pendenzen
                 throw;
             }
         }
-        
+
+        [Given(@"these XModuls")]
+        public void GivenTheseXModuls(Table table)
+        {
+            try
+            {
+                TestDataManager.Insert<XModul>(table);
+            }
+            catch (Exception)
+            {
+                Cleanup();
+                throw;
+            }
+        }
+
         [Given(@"these FaLeistungs")]
         public void GivenTheseFaLeistungs(Table table)
         {
@@ -126,19 +140,19 @@ namespace Kiss4Web.Test.Pendenzen
             }
         }
         
-        [Then(@"data of grid view Task should be")]
+        [Then(@"Data of Task grid should be")]
         public void ThenDataOfGridViewTaskShouldBe(Table table)
         {
             Dictionary<string, string> xPaths = new Dictionary<string, string>();
             xPaths.Add(XPathPendenzen.GridTaskFields, null);
 
-            Dictionary<string, string> fieldMapping = new Dictionary<string, string>();
-            fieldMapping.Add("Fallträger", "BaPersonID");
-            fieldMapping.Add("Fallnummer", "BaPersonID");
+            Dictionary<string, string> idFieldMapping = new Dictionary<string, string>();
+            idFieldMapping.Add("Fallträger", "BaPersonID");
+            idFieldMapping.Add("Fallnummer", "BaPersonID");
 
             try
             {
-                TestDataManager.CheckTableData(table, xPaths, refFieldMapping: fieldMapping);
+                TestDataManager.CheckTableData(table, xPaths, idFieldMapping: idFieldMapping);
             }
             catch (Exception)
             {

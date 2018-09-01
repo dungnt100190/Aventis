@@ -117,64 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ButtonCancel" xml:space="preserve">
-    <value>//*[@id='app-content3-header-body-button-Abbrechen']</value>
-  </data>
-  <data name="ButtonCreate" xml:space="preserve">
-    <value>//*[@id='app-content3-header-body-button-NeuePendenz']</value>
-  </data>
-  <data name="ButtonEdit" xml:space="preserve">
-    <value>//*[@id='app-content3-header-body-button-Bearbeiten']</value>
-  </data>
-  <data name="ButtonNo" xml:space="preserve">
-    <value>//*[contains(@class,'dx-button-content')]//*[contains(text(),'Nein')]</value>
-  </data>
-  <data name="ButtonSave" xml:space="preserve">
-    <value>//*[@id='app-content3-header-body-button-Speichern']</value>
-  </data>
-  <data name="ButtonYes" xml:space="preserve">
-    <value>//*[contains(@class,'dx-button-content')]//*[contains(text(),'Ja')]</value>
-  </data>
-  <data name="GridTask" xml:space="preserve">
-    <value>//*[@id='gridContainer']</value>
-  </data>
-  <data name="GridTaskFields" xml:space="preserve">
-    <value>//*[@id='gridContainer']//*[@class='dx-datagrid-content']//td[contains(@aria-label,'Column {0}')]</value>
-  </data>
-  <data name="GridTaskFieldsHeader" xml:space="preserve">
-    <value>//*[@id='gridContainer']//*[contains(@class,'dx-datagrid-filter-row')]//*[contains(@aria-label,'Column {0}')]</value>
-  </data>
-  <data name="NavbarItems" xml:space="preserve">
-    <value>//li[@data-item-id='{0}']//span</value>
-  </data>
-  <data name="NavbarMenu" xml:space="preserve">
-    <value>//kiss-pendenzen-left-nav//dx-tree-view</value>
-  </data>
-  <data name="SearchArea" xml:space="preserve">
-    <value>//*[@id='content1']</value>
-  </data>
-  <data name="TaskDetailAreaEdit" xml:space="preserve">
-    <value>//*[@id='app-content3-body']</value>
-  </data>
-  <data name="TaskDetailAreaView" xml:space="preserve">
-    <value>//*[@id='app-content3-body-lable']</value>
-  </data>
-  <data name="TaskDetailFields1" xml:space="preserve">
-    <value>//*[@id='app-content3-body']//*[@id='app-content3-body-form-{0}']//*[@_ngcontent-c10]</value>
-  </data>
-  <data name="TaskDetailFields2" xml:space="preserve">
-    <value>//*[@id='app-content3-body']//*[@ng-reflect-data-field='{0}']//*[@_ngcontent-c10]</value>
-  </data>
-  <data name="TaskDetailLabelFields1" xml:space="preserve">
-    <value>//*[@id='app-content3-body-lable']//*[@id='app-content3-body-form-{0}']//*[@_ngcontent-c10]</value>
-  </data>
-  <data name="TaskDetailLabelFields2" xml:space="preserve">
-    <value>//*[@id='app-content3-body-lable']//*[@ng-reflect-data-field='{0}']//*[@_ngcontent-c10]</value>
-  </data>
-  <data name="TaskDetailLabelFields3" xml:space="preserve">
-    <value>//*[@id='app-content3-body-lable']//*[@id='app-content3-body-form-{0}']//textarea</value>
-  </data>
-  <data name="TopContentValidateMessage" xml:space="preserve">
-    <value>//*[@id='error-container']//*[contains(@class,'error-content')]//*[contains(@class,'error-message')]</value>
+  <data name="Date" xml:space="preserve">
+    <value>dd.MM.yyyy</value>
   </data>
 </root>
