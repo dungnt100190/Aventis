@@ -36,34 +36,34 @@
 	
 @FilterPendenzen
 Scenario: 01 Check Filter by 'Fällig' field
-	Given User has logon with username is test_admin_1, password is 123456
-	And Page Pendenzen is redirected to
-	When Click search icon in Fällig field, choose option Ist nicht gleich and input 10.01.2020
-	Then Data of Task grid should be
+	Given logon with username is test_admin_1, password is 123456
+	And go to page Pendenzen
+	When on grid Pendenzen: click button search in Fällig field, choose option Ist nicht gleich and input 10.01.2020
+	Then data of grid Pendenzen should be
 	| Fällig     | Betreff          | Leistung | Fallträger               | Fallnummer | Person            | Ersteller                  | Empfänger                  | Status         | Erfasst    | Bearbeitung | Erledigt | Antwort               |
 	| 10.10.2018 | Task 20180817-08 | K        | Person test-2 (BPS1)     | BPS1       | Person test-1, NT | test_admin_1 - Global, CMC | test_admin_1 - Global, CMC | in Bearbeitung | 10.01.2018 | 10.05.2018  | NULL     | Task 20180817-8 text  |
 
 @FilterPendenzen
 Scenario: 02 Check Filter by 'Fällig' field
-	Given User has logon with username is test_admin_1, password is 123456
-	And Page Pendenzen is redirected to
-	When Click search icon in Fällig field, choose option Kleiner als and input 10.10.2018
-	Then Task grid does not have data
+	Given logon with username is test_admin_1, password is 123456
+	And go to page Pendenzen
+	When on grid Pendenzen: click button search in Fällig field, choose option Kleiner als and input 10.10.2018
+	Then grid Pendenzen does not have data
 
 @FilterPendenzen
 Scenario: 03 Check Filter by 'Fällig' field
-	Given User has logon with username is test_admin_1, password is 123456
-	And Page Pendenzen is redirected to
-	When Click search icon in Fällig field, choose option Größer als and input 10.10.2018
-	Then Data of Task grid should be
+	Given logon with username is test_admin_1, password is 123456
+	And go to page Pendenzen
+	When on grid Pendenzen: click button search in Fällig field, choose option Größer als and input 10.10.2018
+	Then data of grid Pendenzen should be
 	| Fällig     | Betreff          | Leistung | Fallträger               | Fallnummer | Person            | Ersteller                  | Empfänger                  | Status         | Erfasst    | Bearbeitung | Erledigt | Antwort               |
 	| 10.01.2020 | Task 20180817-01 | F        | Person test-1, NT (BPS1) | BPS1       | Person test-1, NT | NULL                       | test_admin_1 - Global, CMC | Pendent        | 10.01.2018 | NULL        | NULL     | Task 20180817-1 text  |
 		
 @FilterPendenzen
 Scenario: 04 Check Filter by 'Fällig' field
-	Given User has logon with username is test_admin_1, password is 123456
-	And Page Pendenzen is redirected to
-	When Click search icon in Fällig field, choose option Ist gleich and input 10.10.2018
-	Then Data of Task grid should be
+	Given logon with username is test_admin_1, password is 123456
+	And go to page Pendenzen
+	When on grid Pendenzen: click button search in Fällig field, choose option Ist gleich and input 10.10.2018
+	Then data of grid Pendenzen should be
 	| Fällig     | Betreff          | Leistung | Fallträger               | Fallnummer | Person            | Ersteller                  | Empfänger                  | Status         | Erfasst    | Bearbeitung | Erledigt | Antwort               |
 	| 10.10.2018 | Task 20180817-08 | K        | Person test-2 (BPS1)     | BPS1       | Person test-1, NT | test_admin_1 - Global, CMC | test_admin_1 - Global, CMC | in Bearbeitung | 10.01.2018 | 10.05.2018  | NULL     | Task 20180817-8 text  |

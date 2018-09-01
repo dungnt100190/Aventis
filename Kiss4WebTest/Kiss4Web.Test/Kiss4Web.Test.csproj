@@ -88,31 +88,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\CommonSteps.cs" />
     <Compile Include="Pendenzen\CreatePendenzen.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CreatePendenzen.feature</DependentUpon>
     </Compile>
-    <Compile Include="Pendenzen\CreatePendenzenSteps.cs" />
     <Compile Include="Pendenzen\EditPendenzen.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EditPendenzen.feature</DependentUpon>
     </Compile>
-    <Compile Include="Pendenzen\EditPendenzenSteps.cs" />
     <Compile Include="Pendenzen\LoadPagePendenzen.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LoadPagePendenzen.feature</DependentUpon>
     </Compile>
-    <Compile Include="Pendenzen\LoadPagePendenzenSteps.cs" />
+    <Compile Include="Pendenzen\PendenzenSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pendenzen\FilterPendenzen.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FilterPendenzen.feature</DependentUpon>
     </Compile>
-    <Compile Include="Pendenzen\FilterPendenzenSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -158,9 +156,7 @@
       <Name>Kiss4Web.Test.TestInfrastructure</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Common\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

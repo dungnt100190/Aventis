@@ -45,17 +45,17 @@
 
 @LoadPendenzen
 Scenario: 01 Get count of navbar items
-	Given User has logon with username is test_admin_1, password is 123456
-	And Page Pendenzen is redirected to
-	Then the count of navbar items should be
+	Given logon with username is test_admin_1, password is 123456
+	And go to page Pendenzen
+	Then data of tree LeftNavMenu should be
 	| Meine fällige | Meine offene | Meine in Bearbeitung | Meine selber erstellte | Meine erhaltene | Meine zu visierende | Erstellte fällige | Erstellte offene | Erstellte allgemeine | Erstellte zu visierende | 
 	| fällige (2)   | offene (7)   | in Bearbeitung (3)   | selber erstellte (1)   | erhaltene (6)   | zu visierende (1)   | fällige (1)       | offene (4)       | allgemeine (3)       | zu visierende (1)       | 
 
 @LoadPendenzen
 Scenario: 02 Get Pendenzen data
-	Given User has logon with username is test_admin_1, password is 123456
-	And Page Pendenzen is redirected to
-	Then Data of Task grid should be
+	Given logon with username is test_admin_1, password is 123456
+	And go to page Pendenzen
+	Then data of grid Pendenzen should be
 	| Fällig     | Betreff          | Leistung | Fallträger               | Fallnummer | Person            | Ersteller                  | Empfänger                  | Status         | Erfasst    | Bearbeitung | Erledigt | Antwort               |
 	| 10.01.2020 | Task 20180817-01 | F        | Person test-1, NT (BPS1) | BPS1       | Person test-1, NT | NULL                       | test_admin_1 - Global, CMC | Pendent        | 10.01.2018 | NULL        | NULL     | Task 20180817-1 text  |
 	| 10.05.2018 | Task 20180817-02 | K        | Person test-1, NT (BPS2) | BPS2       | Person test-2     | NULL                       | test_admin_1 - Global, CMC | Pendent        | 10.01.2018 | NULL        | NULL     | Task 20180817-2 text  |

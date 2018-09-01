@@ -37,34 +37,34 @@
 
 @EditPendenzen
 Scenario: 01 Switch to edit mode of status in Bearbeitung 
-	Given User has logon with username is test_admin_1, password is 123456
-	And Page Pendenzen is redirected to
-	And User choose row 2 on Grid Task
-	When User click on button Bearbeiten 
-	Then These items are disabled: NavbarMenu, SearchArea, GridTask
-	And Pendenzen Detail area switches to edit mode of status in Bearbeitung
+	Given logon with username is test_admin_1, password is 123456
+	And go to page Pendenzen
+	And choose row 2 on grid Pendenzen
+	When click on button Bearbeiten 
+	Then these items are disabled: LeftNavMenu, SearchArea, GridTask
+	And Pendenzen detail area switches to edit mode of status in Bearbeitung
 
 @EditPendenzen
 Scenario: 02 Edit Pendenzen of status in Bearbeitung 
-	Given User has logon with username is test_admin_1, password is 123456
-	And Page Pendenzen is redirected to
-	And User choose row 2 on Grid Task
-	And User clicked on button Bearbeiten
-	When User choose F - Fallführung (10.01.2018 -) in dropdown Leistung 
-	And User input Update 20180817-8 text into textarea Antwort
-	And User click on button Speichern
-	Then These items are enabled: NavbarMenu, SearchArea, GridTask
-	And Pendenzen Detail area switches to view mode
-	And Content of Pendenzen Detail area should be
+	Given logon with username is test_admin_1, password is 123456
+	And go to page Pendenzen
+	And choose row 2 on grid Pendenzen
+	And click on button Bearbeiten
+	When choose F - Fallführung (10.01.2018 -) in dropdown Leistung 
+	And input Update 20180817-8 text into textarea Antwort
+	And click on button Speichern
+	Then these items are enabled: LeftNavMenu, SearchArea, GridTask
+	And Pendenzen detail area switches to view mode
+	And content of Pendenzen detail area should be
 	| Status         | Pendenz Typ | Betreff          | Beschreibung             | Ersteller                  | Empfänger                  | Fallträger               | Leistung                       | Leistungsverantw.          | betrifft Person   | Antwort                | Erfasst    | Fällig     | Bearbeitung | Erledigt |
 	| in Bearbeitung | Fristablauf | Task 20180817-08 | Task 20180817-8 autotest | test_admin_1 - Global, CMC | test_admin_1 - Global, CMC | Person test-1, NT (BPS1) | F - Fallführung (10.01.2018 -) | test_admin_1 - Global, CMC | Person test-1, NT | Update 20180817-8 text | 10.05.2018 | 10.10.2018 | NULL        | NULL     |
 
 @EditPendenzen 
 Scenario: 03 Edit Un-Successfully
-	Given User has logon with username is test_admin_1, password is 123456
-	And Page Pendenzen is redirected to
-	And User choose row 1 on Grid Task
-	And User clicked on button Bearbeiten
-	When User clear data in textbox Betreff of Pendenzen Detail area
-	And User click on button Speichern
-	Then Display error message Das Feld 'Betreff' darf nicht leer bleiben ! at below of textbox Betreff
+	Given logon with username is test_admin_1, password is 123456
+	And go to page Pendenzen
+	And choose row 1 on grid Pendenzen
+	And click on button Bearbeiten
+	When clear data in textbox Betreff
+	And click on button Speichern
+	Then display error message at below of textbox Betreff with content is: Das Feld 'Betreff' darf nicht leer bleiben ! 

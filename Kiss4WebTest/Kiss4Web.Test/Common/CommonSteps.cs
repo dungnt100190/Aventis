@@ -1,16 +1,15 @@
-﻿using Kiss4Web.Resource;
-using Kiss4Web.Test.DataAccess;
+﻿using Kiss4Web.Test.DataAccess;
 using Kiss4Web.Test.TestInfrastructure;
 using System;
 using System.Collections.Generic;
 using TechTalk.SpecFlow;
 
-namespace Kiss4Web.Test.Pendenzen
+namespace Kiss4Web.Test.Common
 {
     [Binding]
-    public class LoadPagePendenzenSteps
+    public class CommonSteps
     {
-        [BeforeScenario("LoadPendenzen")]
+        [BeforeScenario()]
         private void Setup()
         {
             TestDataManager.Setup();
@@ -21,7 +20,7 @@ namespace Kiss4Web.Test.Pendenzen
         {
             TestDataManager.Insert<XUser>(table);
         }
-        
+
         [Given(@"these BaPersons")]
         public void GivenTheseBaPersons(Table table)
         {
@@ -65,7 +64,7 @@ namespace Kiss4Web.Test.Pendenzen
                 throw;
             }
         }
-        
+
         [Given(@"these XTasks")]
         public void GivenTheseXTasks(Table table)
         {
@@ -83,9 +82,9 @@ namespace Kiss4Web.Test.Pendenzen
                 throw;
             }
         }
-        
-        [Given(@"User has logon with username is (.*), password is (.*)")]
-        public void WhenUserLoginWithUsernameIsPasswordIs(string p0, string p1)
+
+        [Given(@"logon with username is (.*), password is (.*)")]
+        public void LogonWithUsernameIsPasswordIs(string p0, string p1)
         {
             try
             {
@@ -97,62 +96,13 @@ namespace Kiss4Web.Test.Pendenzen
                 throw;
             }
         }
-        
-        [Given(@"Page Pendenzen is redirected to")]
-        public void ThenPagePendenzenIsRedirectedTo()
+
+        [Then(@"the record of the inputted info is inserted into table XTask in database")]
+        public void RecordOfInputtedInfoIsInsertedIntoTableXTaskInDatabase()
         {
             try
             {
-                TestDataManager.CheckUrl(Urls.UrlPendenzen);
-            }
-            catch (Exception)
-            {
-                Cleanup();
-                throw;
-            }
-        }
-        
-        [Then(@"the count of navbar items should be")]
-        public void ThenTheCountOfNavbarItemsShouldBe(Table table)
-        {
-            Dictionary<string, string> xPaths = new Dictionary<string, string>();
-            xPaths.Add(XPathPendenzen.NavbarItems, null);
-
-            Dictionary<string, string> screenMapping = new Dictionary<string, string>();
-            screenMapping.Add("Meine fällige", "1_1");
-            screenMapping.Add("Meine offene", "1_2");
-            screenMapping.Add("Meine in Bearbeitung", "1_3");
-            screenMapping.Add("Meine selber erstellte", "1_4");
-            screenMapping.Add("Meine erhaltene", "1_5");
-            screenMapping.Add("Meine zu visierende", "1_6");
-            screenMapping.Add("Erstellte fällige", "2_1");
-            screenMapping.Add("Erstellte offene", "2_2");
-            screenMapping.Add("Erstellte allgemeine", "2_3");
-            screenMapping.Add("Erstellte zu visierende", "2_4");
-            try
-            {
-                TestDataManager.CheckTableData(table, xPaths, screenMapping: screenMapping);
-            }
-            catch (Exception)
-            {
-                Cleanup();
-                throw;
-            }
-        }
-        
-        [Then(@"Data of Task grid should be")]
-        public void ThenDataOfGridViewTaskShouldBe(Table table)
-        {
-            Dictionary<string, string> xPaths = new Dictionary<string, string>();
-            xPaths.Add(XPathPendenzen.GridTaskFields, null);
-
-            Dictionary<string, string> idFieldMapping = new Dictionary<string, string>();
-            idFieldMapping.Add("Fallträger", "BaPersonID");
-            idFieldMapping.Add("Fallnummer", "BaPersonID");
-
-            try
-            {
-                TestDataManager.CheckTableData(table, xPaths, idFieldMapping: idFieldMapping);
+                TestDataManager.CheckEntityExistsInDB<XTask>(TestDataManager.TempAddedEntities[TestDataManager.TempAddedEntities.Count - 1]);
             }
             catch (Exception)
             {
@@ -161,7 +111,21 @@ namespace Kiss4Web.Test.Pendenzen
             }
         }
 
-        [AfterScenario("LoadPendenzen")]
+        [Then(@"the record of the inputted info is not inserted into table XTask in database")]
+        public void RecordOfInputtedInfoIsNotInsertedIntoTableXTaskInDatabase()
+        {
+            try
+            {
+                TestDataManager.CheckEntityExistsInDB<XTask>(TestDataManager.TempAddedEntities[TestDataManager.TempAddedEntities.Count - 1], false);
+            }
+            catch (Exception)
+            {
+                Cleanup();
+                throw;
+            }
+        }
+
+        [AfterScenario()]
         private void Cleanup()
         {
             TestDataManager.Cleanup();

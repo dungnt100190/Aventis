@@ -268,12 +268,12 @@ this.ScenarioInitialize(scenarioInfo);
 #line 2
  this.FeatureBackground();
 #line 39
- testRunner.Given("User has logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 40
- testRunner.And("Page Pendenzen is redirected to", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("go to page Pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 41
- testRunner.When("Click search icon in Fällig field, choose option Ist nicht gleich and input 10.01" +
-                    ".2020", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("on grid Pendenzen: click button search in Fällig field, choose option Ist nicht gleich" +
+                    " and input 10.01.2020", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                         "Fällig",
@@ -304,7 +304,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "NULL",
                         "Task 20180817-8 text"});
 #line 42
- testRunner.Then("Data of Task grid should be", ((string)(null)), table5, "Then ");
+ testRunner.Then("data of grid Pendenzen should be", ((string)(null)), table5, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -321,14 +321,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 2
  this.FeatureBackground();
 #line 48
- testRunner.Given("User has logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 49
- testRunner.And("Page Pendenzen is redirected to", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("go to page Pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 50
- testRunner.When("Click search icon in Fällig field, choose option Kleiner als and input 10.10.2018" +
-                    "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("on grid Pendenzen: click button search in Fällig field, choose option Kleiner als and " +
+                    "input 10.10.2018", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 51
- testRunner.Then("Task grid does not have data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("grid Pendenzen does not have data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -345,11 +345,12 @@ this.ScenarioInitialize(scenarioInfo);
 #line 2
  this.FeatureBackground();
 #line 55
- testRunner.Given("User has logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 56
- testRunner.And("Page Pendenzen is redirected to", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("go to page Pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 57
- testRunner.When("Click search icon in Fällig field, choose option Größer als and input 10.10.2018", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("on grid Pendenzen: click button search in Fällig field, choose option Größer als and i" +
+                    "nput 10.10.2018", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                         "Fällig",
@@ -380,7 +381,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "NULL",
                         "Task 20180817-1 text"});
 #line 58
- testRunner.Then("Data of Task grid should be", ((string)(null)), table6, "Then ");
+ testRunner.Then("data of grid Pendenzen should be", ((string)(null)), table6, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -397,11 +398,12 @@ this.ScenarioInitialize(scenarioInfo);
 #line 2
  this.FeatureBackground();
 #line 64
- testRunner.Given("User has logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 65
- testRunner.And("Page Pendenzen is redirected to", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("go to page Pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 66
- testRunner.When("Click search icon in Fällig field, choose option Ist gleich and input 10.10.2018", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("on grid Pendenzen: click button search in Fällig field, choose option Ist gleich and i" +
+                    "nput 10.10.2018", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                         "Fällig",
@@ -432,7 +434,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "NULL",
                         "Task 20180817-8 text"});
 #line 67
- testRunner.Then("Data of Task grid should be", ((string)(null)), table7, "Then ");
+ testRunner.Then("data of grid Pendenzen should be", ((string)(null)), table7, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

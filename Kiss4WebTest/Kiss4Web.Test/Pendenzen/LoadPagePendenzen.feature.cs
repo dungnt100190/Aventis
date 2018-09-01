@@ -412,9 +412,9 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
  this.FeatureBackground();
 #line 48
- testRunner.Given("User has logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 49
- testRunner.And("Page Pendenzen is redirected to", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("go to page Pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                         "Meine fällige",
@@ -439,7 +439,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "allgemeine (3)",
                         "zu visierende (1)"});
 #line 50
- testRunner.Then("the count of navbar items should be", ((string)(null)), table5, "Then ");
+ testRunner.Then("data of tree LeftNavMenu should be", ((string)(null)), table5, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -456,9 +456,9 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
  this.FeatureBackground();
 #line 56
- testRunner.Given("User has logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 57
- testRunner.And("Page Pendenzen is redirected to", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("go to page Pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                         "Fällig",
@@ -573,7 +573,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "NULL",
                         "Task 20180817-10 text"});
 #line 58
- testRunner.Then("Data of Task grid should be", ((string)(null)), table6, "Then ");
+ testRunner.Then("data of grid Pendenzen should be", ((string)(null)), table6, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
