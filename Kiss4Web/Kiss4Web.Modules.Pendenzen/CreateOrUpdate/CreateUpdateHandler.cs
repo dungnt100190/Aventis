@@ -13,9 +13,9 @@ namespace Kiss4Web.Modules.Pendenzen.CreateOrUpdate
     {
         private readonly SqlConnection _dbConnection;
         private readonly Queryable<XUser> _xUsers;
-        private readonly IRepository<Xtask> _xTask;
+        private readonly IRepository<XTask> _xTask;
 
-        public CreateUpdateHandler(SqlConnection dbConnection, Queryable<XUser> xUsers, IRepository<Xtask> xTask)
+        public CreateUpdateHandler(SqlConnection dbConnection, Queryable<XUser> xUsers, IRepository<XTask> xTask)
         {
             _dbConnection = dbConnection;
             _xUsers = xUsers;
@@ -74,7 +74,7 @@ namespace Kiss4Web.Modules.Pendenzen.CreateOrUpdate
             }
             else
             {
-                var task = new Xtask()
+                var task = new XTask()
                 {
                     TaskStatusCode = query.status,
                     TaskTypeCode = query.pendenzTyp,

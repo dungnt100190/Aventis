@@ -75,7 +75,7 @@ namespace Kiss4Web.Model
             VmSachversicherung = new HashSet<VmSachversicherung>();
             VmSozialversicherung = new HashSet<VmSozialversicherung>();
             WhAsvseintrag = new HashSet<WhAsvseintrag>();
-            Xtask = new HashSet<Xtask>();
+            Xtask = new HashSet<XTask>();
         }
 
         public int BaPersonId { get; set; }
@@ -343,7 +343,7 @@ namespace Kiss4Web.Model
         public ICollection<VmSachversicherung> VmSachversicherung { get; set; }
         public ICollection<VmSozialversicherung> VmSozialversicherung { get; set; }
         public ICollection<WhAsvseintrag> WhAsvseintrag { get; set; }
-        public ICollection<Xtask> Xtask { get; set; }
+        public ICollection<XTask> Xtask { get; set; }
         public int Id => BaPersonId;
         public byte[] RowVersion => BaPersonTs;
     }

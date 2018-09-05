@@ -54,7 +54,7 @@ namespace Kiss4Web.Sozialhilfe.Test.Pendenzen
         [Given(@"these Tasks for SearchPendenzen feature")]
         public async Task GivenTheseTasks(Table table)
         {
-            await _testDataManager.Insert<Xtask>(table);
+            await _testDataManager.Insert<XTask>(table);
         }
 
         [Given(@"SearchPendenzen client has LogonName is (.*), PasswordHash is (.*)")]

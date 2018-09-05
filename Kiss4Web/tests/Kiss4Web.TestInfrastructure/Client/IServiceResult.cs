@@ -6,5 +6,6 @@ namespace Kiss4Web.TestInfrastructure.Client
     {
         string Error { get; set; }
         HttpStatusCode HttpResult { get; set; }
+        bool IsSuccess { get; set; }
     }
 }

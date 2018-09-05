@@ -28,12 +28,12 @@ namespace Kiss4Web.TestInfrastructure.Client
                 if (contentType == typeof(ErrorDto[]).GetTypeName().Content)
                 {
                     var errors = await response.Content.ReadAsAsync<ErrorDto[]>().ConfigureAwait(false);
-                    return new ServiceResult<ErrorDto[]>(response.StatusCode, errors);
+                    return new ServiceResult<ErrorDto[]>(response.StatusCode, errors, false);
                 }
                 if (contentType == typeof(QuestionDto).GetTypeName().Content)
                 {
                     var errors = await response.Content.ReadAsAsync<QuestionDto>().ConfigureAwait(false);
-                    return new ServiceResult<QuestionDto>(response.StatusCode, errors);
+                    return new ServiceResult<QuestionDto>(response.StatusCode, errors, false);
                 }
             }
 

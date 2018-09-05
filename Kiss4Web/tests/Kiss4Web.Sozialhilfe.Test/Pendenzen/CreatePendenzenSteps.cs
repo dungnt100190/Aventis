@@ -43,7 +43,7 @@ namespace Kiss4Web.Sozialhilfe.Test.Pendenzen
         [Given(@"these Tasks for CreatePendenzen feature")]
         public async Task GivenTheseTasksForCreatePendenzenFeature(Table table)
         {
-            await _testDataManager.Insert<Xtask>(table);
+            await _testDataManager.Insert<XTask>(table);
         }
 
         [Given(@"CreatePendenzen client has LogonName is (.*), PasswordHash is (.*)")]
@@ -75,7 +75,7 @@ namespace Kiss4Web.Sozialhilfe.Test.Pendenzen
         [Then(@"the created Pendenzen is after (\w+) and should be")]
         public async Task ThenTheCreatedPendenzenShouldBe(string taskLogicalName, Table table)
         {
-            _preTaskId = _testDataManager.Lookup<Xtask>(taskLogicalName);
+            _preTaskId = _testDataManager.Lookup<XTask>(taskLogicalName);
             var outputPendenzen = await _client.GetAsJsonAsync<PendenzenDetailItem>(string.Format(Url.GetPendenzenDetail, _preTaskId + 1), null);
 
             var detailPendenzenReceived = new List<PendenzenDetailItem>();
@@ -86,7 +86,7 @@ namespace Kiss4Web.Sozialhilfe.Test.Pendenzen
             var expected = _testDataManager.CreateSetWithLookup<PendenzenDetailItem>(table).ToList();
             detailPendenzenReceived.ShouldBePartially(expected, table.Header);
 
-            _testDataManager.Delete<Xtask>(_preTaskId + 1);
+            _testDataManager.Delete<XTask>(_preTaskId + 1);
             await _testDataManager.Cleanup();
         }
 

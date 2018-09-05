@@ -17,11 +17,11 @@ namespace Kiss4Web.TestInfrastructure.Client
             IsSuccess = false;
         }
 
-        public ServiceResult(HttpStatusCode httpResult, T result)
+        public ServiceResult(HttpStatusCode httpResult, T result, bool isSuccess = true)
         {
             HttpResult = httpResult;
             Result = result;
-            IsSuccess = true;
+            IsSuccess = isSuccess;
         }
 
         public string Error { get; set; }

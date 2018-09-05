@@ -45,7 +45,7 @@ namespace Kiss4Web.Sozialhilfe.Test.Pendenzen
         [Given(@"these Tasks for EditPendenzen feature")]
         public async Task GivenTheseTasksForEditPendenzenFeature(Table table)
         {
-            await _testDataManager.Insert<Xtask>(table);
+            await _testDataManager.Insert<XTask>(table);
         }
 
         [Given(@"EditPendenzen client has LogonName is (.*), PasswordHash is (.*)")]
@@ -58,7 +58,7 @@ namespace Kiss4Web.Sozialhilfe.Test.Pendenzen
         public void GivenThisNewDataForPendenzen(string taskLogicalName, string receiverLogicalName, Table table)
         {
             _inputPendenzen = _testDataManager.CreateSetWithLookup<CreateUpdateQuery>(table).First();
-            _inputPendenzen.id = _testDataManager.Lookup<Xtask>(taskLogicalName);
+            _inputPendenzen.id = _testDataManager.Lookup<XTask>(taskLogicalName);
             _inputPendenzen.empfangerId = _testDataManager.Lookup<XUser>(receiverLogicalName);
         }
 
@@ -86,7 +86,7 @@ namespace Kiss4Web.Sozialhilfe.Test.Pendenzen
             var expected = _testDataManager.CreateSetWithLookup<PendenzenDetailItem>(table).ToList();
             detailPendenzenReceived.ShouldBePartially(expected, table.Header);
 
-            _testDataManager.Delete<Xtask>(_inputPendenzen.id);
+            _testDataManager.Delete<XTask>(_inputPendenzen.id);
             for (int i = 0; i < _listUser.Count; ++i)
             {
                 _testDataManager.Delete<XUser>(_listUser[i].UserId);

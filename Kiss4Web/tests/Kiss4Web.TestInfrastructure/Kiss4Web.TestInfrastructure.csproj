@@ -10,6 +10,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="2.0.2" />
+    <PackageReference Include="NUnit" Version="3.10.1" />
     <PackageReference Include="Shouldly" Version="3.0.0" />
     <PackageReference Include="SpecFlow" Version="2.2.1" />
     <PackageReference Include="xunit" Version="2.3.1" />
@@ -18,6 +19,21 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Kiss4Web.IdentityServer\Kiss4Web.IdentityServer.csproj" />
     <ProjectReference Include="..\..\Kiss4Web\Kiss4Web.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\Format.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Format.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Format.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Format.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

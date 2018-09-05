@@ -101,8 +101,8 @@ namespace Kiss4Web.Model
             XorgUnitRepresentative = new HashSet<XOrgUnit>();
             XorgUnitUser = new HashSet<XOrgUnit_User>();
             XsearchControlTemplate = new HashSet<XsearchControlTemplate>();
-            XtaskUserIdErledigtNavigation = new HashSet<Xtask>();
-            XtaskUserIdInBearbeitungNavigation = new HashSet<Xtask>();
+            XtaskUserIdErledigtNavigation = new HashSet<XTask>();
+            XtaskUserIdInBearbeitungNavigation = new HashSet<XTask>();
             XuserArchive = new HashSet<XuserArchive>();
             XuserBdeuserGroup = new HashSet<XuserBdeuserGroup>();
             XuserStundenansatz = new HashSet<XuserStundenansatz>();
@@ -268,8 +268,8 @@ namespace Kiss4Web.Model
         public ICollection<XOrgUnit> XorgUnitRepresentative { get; set; }
         public ICollection<XOrgUnit_User> XorgUnitUser { get; set; }
         public ICollection<XsearchControlTemplate> XsearchControlTemplate { get; set; }
-        public ICollection<Xtask> XtaskUserIdErledigtNavigation { get; set; }
-        public ICollection<Xtask> XtaskUserIdInBearbeitungNavigation { get; set; }
+        public ICollection<XTask> XtaskUserIdErledigtNavigation { get; set; }
+        public ICollection<XTask> XtaskUserIdInBearbeitungNavigation { get; set; }
         public ICollection<XuserArchive> XuserArchive { get; set; }
         public ICollection<XuserBdeuserGroup> XuserBdeuserGroup { get; set; }
         public ICollection<XuserStundenansatz> XuserStundenansatz { get; set; }

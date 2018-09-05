@@ -13,9 +13,9 @@ namespace Kiss4Web.Modules.Pendenzen.GetPendenzenDetail
     public class PendenzenDetailHandler : TypedMessageHandler<PendenzenDetailQuery, PendenzenDetailItem>
     {
         private readonly SqlConnection _dbConnection;
-        private readonly IQueryable<Xtask> _xtasks;
+        private readonly IQueryable<XTask> _xtasks;
         private readonly IQueryable<FaPendenzgruppe> _faPendenzgruppe;
-        public PendenzenDetailHandler(SqlConnection dbConnection, IQueryable<Xtask> xtasks, IQueryable<FaPendenzgruppe> faPendenzgruppe)
+        public PendenzenDetailHandler(SqlConnection dbConnection, IQueryable<XTask> xtasks, IQueryable<FaPendenzgruppe> faPendenzgruppe)
         {
             _dbConnection = dbConnection;
             _xtasks = xtasks;

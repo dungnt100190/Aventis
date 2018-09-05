@@ -97,7 +97,7 @@ namespace Kiss4Web.Model
             VmTestament = new HashSet<VmTestament>();
             VmVaterschaft = new HashSet<VmVaterschaft>();
             WhAsvseintrag = new HashSet<WhAsvseintrag>();
-            Xtask = new HashSet<Xtask>();
+            Xtask = new HashSet<XTask>();
         }
 
         public int FaLeistungId { get; set; }
@@ -250,7 +250,7 @@ namespace Kiss4Web.Model
         public ICollection<VmTestament> VmTestament { get; set; }
         public ICollection<VmVaterschaft> VmVaterschaft { get; set; }
         public ICollection<WhAsvseintrag> WhAsvseintrag { get; set; }
-        public ICollection<Xtask> Xtask { get; set; }
+        public ICollection<XTask> Xtask { get; set; }
         public int Id => FaLeistungId;
         public byte[] RowVersion => FaLeistungTs;
     }

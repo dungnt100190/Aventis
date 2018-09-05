@@ -51,7 +51,7 @@ namespace Kiss4Web.Sozialhilfe.Test.Pendenzen
         [Given(@"these Tasks for GetPendenzenDetail feature")]
         public async Task GivenTheseTasks(Table table)
         {
-            await _testDataManager.Insert<Xtask>(table);
+            await _testDataManager.Insert<XTask>(table);
         }
 
         [Given(@"GetPendenzenDetail client has LogonName is (.*), PasswordHash is (.*)")]
@@ -63,7 +63,7 @@ namespace Kiss4Web.Sozialhilfe.Test.Pendenzen
         [When(@"call GetPendenzenDetail of Task (\w+)")]
         public async Task WhenCallGetPendenzenDetailOfTask(string taskLogicalName)
         {
-            var taskId = _testDataManager.Lookup<Xtask>(taskLogicalName);
+            var taskId = _testDataManager.Lookup<XTask>(taskLogicalName);
             _detailPendenzen = await _client.GetAsJsonAsync<PendenzenDetailItem>(string.Format(Url.GetPendenzenDetail, taskId), null);
         }
         

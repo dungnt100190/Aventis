@@ -53,7 +53,7 @@ namespace Kiss4Web.Model
         public XUser UserIdCreatorNavigation { get; set; }
         public XUser UserIdVerantwortlichRdNavigation { get; set; }
         public XUser UserIdVerantwortlichSarNavigation { get; set; }
-        public Xtask XtaskIdSarNavigation { get; set; }
+        public XTask XtaskIdSarNavigation { get; set; }
         public ICollection<FaWeisungBaPerson> FaWeisungBaPerson { get; set; }
         public ICollection<FaWeisungProtokoll> FaWeisungProtokoll { get; set; }
     }

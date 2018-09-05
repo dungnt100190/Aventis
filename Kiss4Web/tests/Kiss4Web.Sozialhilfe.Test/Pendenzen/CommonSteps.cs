@@ -49,7 +49,7 @@ namespace Kiss4Web.Sozialhilfe.Test.Pendenzen
         [Given(@"these Tasks")]
         public async Task GivenTheseTasks(Table table)
         {
-            await _testDataManager.Insert<Xtask>(table);
+            await _testDataManager.Insert<XTask>(table);
         }
 
         [AfterScenario]
