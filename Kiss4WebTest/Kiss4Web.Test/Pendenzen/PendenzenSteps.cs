@@ -369,16 +369,16 @@ namespace Kiss4Web.Test.Pendenzen
             xPaths.Add(XPathPendenzen.NavbarItems, null);
 
             Dictionary<string, string> screenMapping = new Dictionary<string, string>();
-            screenMapping.Add("Meine fällige", "1_1");
-            screenMapping.Add("Meine offene", "1_2");
-            screenMapping.Add("Meine in Bearbeitung", "1_3");
-            screenMapping.Add("Meine selber erstellte", "1_4");
-            screenMapping.Add("Meine erhaltene", "1_5");
-            screenMapping.Add("Meine zu visierende", "1_6");
-            screenMapping.Add("Erstellte fällige", "2_1");
-            screenMapping.Add("Erstellte offene", "2_2");
-            screenMapping.Add("Erstellte allgemeine", "2_3");
-            screenMapping.Add("Erstellte zu visierende", "2_4");
+            screenMapping.Add("Meine Pendenzen/fällige", "1_1");
+            screenMapping.Add("Meine Pendenzen/offene", "1_2");
+            screenMapping.Add("Meine Pendenzen/in Bearbeitung", "1_3");
+            screenMapping.Add("Meine Pendenzen/selber erstellte", "1_4");
+            screenMapping.Add("Meine Pendenzen/erhaltene", "1_5");
+            screenMapping.Add("Meine Pendenzen/zu visierende", "1_6");
+            screenMapping.Add("Erstellte Pendenzen/fällige", "2_1");
+            screenMapping.Add("Erstellte Pendenzen/offene", "2_2");
+            screenMapping.Add("Erstellte Pendenzen/allgemeine", "2_3");
+            screenMapping.Add("Erstellte Pendenzen/zu visierende", "2_4");
             try
             {
                 TestDataManager.CheckTableData(xPaths, table, screenMapping: screenMapping);

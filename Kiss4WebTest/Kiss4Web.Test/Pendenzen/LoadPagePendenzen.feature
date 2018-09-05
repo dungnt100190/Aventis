@@ -48,8 +48,8 @@ Scenario: 01 Get data of tree LeftNavMenu
 	Given logon with username is 'test_admin_1', password is '123456'
 	And go to page Pendenzen
 	Then content of tree LeftNavMenu should be
-	| Meine fällige | Meine offene | Meine in Bearbeitung | Meine selber erstellte | Meine erhaltene | Meine zu visierende | Erstellte fällige | Erstellte offene | Erstellte allgemeine | Erstellte zu visierende | 
-	| fällige (2)   | offene (7)   | in Bearbeitung (3)   | selber erstellte (1)   | erhaltene (6)   | zu visierende (1)   | fällige (1)       | offene (4)       | allgemeine (3)       | zu visierende (1)       | 
+	| Meine Pendenzen/fällige | Meine Pendenzen/offene | Meine Pendenzen/in Bearbeitung | Meine Pendenzen/selber erstellte | Meine Pendenzen/erhaltene | Meine Pendenzen/zu visierende | Erstellte Pendenzen/fällige | Erstellte Pendenzen/offene | Erstellte Pendenzen/allgemeine | Erstellte Pendenzen/zu visierende | 
+	| fällige (2)             | offene (7)             | in Bearbeitung (3)             | selber erstellte (1)             | erhaltene (6)             | zu visierende (1)             | fällige (1)                 | offene (4)                 | allgemeine (3)                 | zu visierende (1)                 | 
 
 @LoadPendenzen
 Scenario: 02 Get Pendenzen data

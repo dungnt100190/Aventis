@@ -417,16 +417,16 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("go to page Pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Meine fällige",
-                        "Meine offene",
-                        "Meine in Bearbeitung",
-                        "Meine selber erstellte",
-                        "Meine erhaltene",
-                        "Meine zu visierende",
-                        "Erstellte fällige",
-                        "Erstellte offene",
-                        "Erstellte allgemeine",
-                        "Erstellte zu visierende"});
+                        "Meine Pendenzen/fällige",
+                        "Meine Pendenzen/offene",
+                        "Meine Pendenzen/in Bearbeitung",
+                        "Meine Pendenzen/selber erstellte",
+                        "Meine Pendenzen/erhaltene",
+                        "Meine Pendenzen/zu visierende",
+                        "Erstellte Pendenzen/fällige",
+                        "Erstellte Pendenzen/offene",
+                        "Erstellte Pendenzen/allgemeine",
+                        "Erstellte Pendenzen/zu visierende"});
             table5.AddRow(new string[] {
                         "fällige (2)",
                         "offene (7)",
