@@ -17,8 +17,8 @@ namespace Kiss4Web.Test.Pendenzen
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("Load page Pendenzen", Description="\tLoad page Pendenzen", SourceFile="Pendenzen\\LoadPagePendenzen.feature", SourceLine=0)]
-    public partial class LoadPagePendenzenFeature
+    [TechTalk.SpecRun.FeatureAttribute("Pendenzen - Load page Pendenzen", Description="\tLoad page Pendenzen", SourceFile="Pendenzen\\LoadPagePendenzen.feature", SourceLine=0)]
+    public partial class Pendenzen_LoadPagePendenzenFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -30,7 +30,7 @@ namespace Kiss4Web.Test.Pendenzen
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Load page Pendenzen", "\tLoad page Pendenzen", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Pendenzen - Load page Pendenzen", "\tLoad page Pendenzen", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -122,7 +122,7 @@ namespace Kiss4Web.Test.Pendenzen
                         "0",
                         "258000"});
 #line 4
- testRunner.Given("these XUsers", ((string)(null)), table1, "Given ");
+ testRunner.Given("these XUser", ((string)(null)), table1, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "BaPersonID",
@@ -137,7 +137,7 @@ namespace Kiss4Web.Test.Pendenzen
                         "Person test-2",
                         "NULL"});
 #line 9
- testRunner.And("these BaPersons", ((string)(null)), table2, "And ");
+ testRunner.And("these BaPerson", ((string)(null)), table2, "And ");
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                         "FaLeistungID",
@@ -195,7 +195,7 @@ namespace Kiss4Web.Test.Pendenzen
                         "0",
                         "2018-04-10 00:00:00.000"});
 #line 26
- testRunner.And("these FaLeistungs", ((string)(null)), table3, "And ");
+ testRunner.And("these FaLeistung", ((string)(null)), table3, "And ");
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "XTaskID",
@@ -396,15 +396,15 @@ namespace Kiss4Web.Test.Pendenzen
                         "1",
                         "2"});
 #line 33
- testRunner.And("these XTasks", ((string)(null)), table4, "And ");
+ testRunner.And("these XTask", ((string)(null)), table4, "And ");
 #line hidden
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("01 Get count of navbar items", new string[] {
+        [TechTalk.SpecRun.ScenarioAttribute("01 Get data of tree LeftNavMenu", new string[] {
                 "LoadPendenzen"}, SourceLine=46)]
-        public virtual void _01GetCountOfNavbarItems()
+        public virtual void _01GetDataOfTreeLeftNavMenu()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01 Get count of navbar items", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01 Get data of tree LeftNavMenu", null, new string[] {
                         "LoadPendenzen"});
 #line 47
 this.ScenarioInitialize(scenarioInfo);
@@ -412,7 +412,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
  this.FeatureBackground();
 #line 48
- testRunner.Given("logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("logon with username is \'test_admin_1\', password is \'123456\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 49
  testRunner.And("go to page Pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -456,7 +456,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
  this.FeatureBackground();
 #line 56
- testRunner.Given("logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("logon with username is \'test_admin_1\', password is \'123456\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 57
  testRunner.And("go to page Pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden

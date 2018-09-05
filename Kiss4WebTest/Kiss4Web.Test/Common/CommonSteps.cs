@@ -15,14 +15,14 @@ namespace Kiss4Web.Test.Common
             TestDataManager.Setup();
         }
 
-        [Given(@"these XUsers")]
-        public void GivenTheseXUsers(Table table)
+        [Given(@"these XUser")]
+        public void GivenTheseXUser(Table table)
         {
             TestDataManager.Insert<XUser>(table);
         }
 
-        [Given(@"these BaPersons")]
-        public void GivenTheseBaPersons(Table table)
+        [Given(@"these BaPerson")]
+        public void GivenTheseBaPerson(Table table)
         {
             try
             {
@@ -35,8 +35,8 @@ namespace Kiss4Web.Test.Common
             }
         }
 
-        [Given(@"these XModuls")]
-        public void GivenTheseXModuls(Table table)
+        [Given(@"these XModul")]
+        public void GivenTheseXModul(Table table)
         {
             try
             {
@@ -49,8 +49,8 @@ namespace Kiss4Web.Test.Common
             }
         }
 
-        [Given(@"these FaLeistungs")]
-        public void GivenTheseFaLeistungs(Table table)
+        [Given(@"these FaLeistung")]
+        public void GivenTheseFaLeistung(Table table)
         {
             Dictionary<string, string> fieldMapping = new Dictionary<string, string>();
             fieldMapping.Add("FaFallID", "BaPersonID");
@@ -65,8 +65,8 @@ namespace Kiss4Web.Test.Common
             }
         }
 
-        [Given(@"these XTasks")]
-        public void GivenTheseXTasks(Table table)
+        [Given(@"these XTask")]
+        public void GivenTheseXTask(Table table)
         {
             Dictionary<string, string> fieldMapping = new Dictionary<string, string>();
             fieldMapping.Add("SenderID", "UserID");
@@ -83,7 +83,7 @@ namespace Kiss4Web.Test.Common
             }
         }
 
-        [Given(@"logon with username is (.*), password is (.*)")]
+        [Given(@"logon with username is '(.*)', password is '(.*)'")]
         public void LogonWithUsernameIsPasswordIs(string p0, string p1)
         {
             try

@@ -30,7 +30,7 @@ namespace Kiss4Web.Test.Pendenzen
             }
         }
 
-        [When(@"on grid Pendenzen: click button search in (.*) field, choose option (.*) and input (.*)")]
+        [When(@"on grid Pendenzen: click button search in field '(.*)', choose option '(.*)' and input '(.*)'")]
         public void FilterOnGridTask(string field, string filterOption, string filterValue)
         {
             try
@@ -132,7 +132,7 @@ namespace Kiss4Web.Test.Pendenzen
             }
         }
 
-        [When(@"choose (.*) in dropdown Leistung")]
+        [When(@"choose '(.*)' in dropdown Leistung")]
         public void ChooseOptionInDropdownLeistung(string option)
         {
             try
@@ -146,7 +146,7 @@ namespace Kiss4Web.Test.Pendenzen
             }
         }
 
-        [When(@"input (.*) into textarea Antwort")]
+        [When(@"input '(.*)' into textarea Antwort")]
         public void InputIntoTextareaAntwort(string text)
         {
             try
@@ -334,7 +334,7 @@ namespace Kiss4Web.Test.Pendenzen
             }
         }
 
-        [Then(@"on tree LeftNavMenu: value of Meine Pendenzen/offene is (.*)")]
+        [Then(@"on tree LeftNavMenu: value of Meine Pendenzen/offene is '(.*)'")]
         public void OnTreeLeftNavMenuValueOfMeinePendenzenOffeneIs(string value)
         {
             try
@@ -348,7 +348,7 @@ namespace Kiss4Web.Test.Pendenzen
             }
         }
 
-        [Then(@"on tree LeftNavMenu: value of Erstellte Pendenzen/offene is (.*)")]
+        [Then(@"on tree LeftNavMenu: value of Erstellte Pendenzen/offene is '(.*)'")]
         public void OnTreeLeftNavMenuValueOfErstelltePendenzenOffeneIs(string value)
         {
             try
@@ -461,7 +461,7 @@ namespace Kiss4Web.Test.Pendenzen
             }
         }
 
-        [Then(@"display error message at below of textbox Betreff with content is: (.*)")]
+        [Then(@"display error message at below of textbox Betreff with content is: '(.*)'")]
         public void DisplayErrorMessageAtElementBetreff(string message)
         {
             try
@@ -476,7 +476,7 @@ namespace Kiss4Web.Test.Pendenzen
             }
         }
 
-        [Then(@"display error message at top of page content with content is: (.*)")]
+        [Then(@"display error message at top of page content with content is: '(.*)'")]
         public void DisplayErrorMessageAtTopOfPageContentWithContentIs(string message)
         {
             try

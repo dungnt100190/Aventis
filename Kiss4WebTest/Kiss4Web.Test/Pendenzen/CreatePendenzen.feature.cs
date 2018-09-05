@@ -17,8 +17,8 @@ namespace Kiss4Web.Test.Pendenzen
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("Create Pendenzen", Description="\tCreate a new Task", SourceFile="Pendenzen\\CreatePendenzen.feature", SourceLine=0)]
-    public partial class CreatePendenzenFeature
+    [TechTalk.SpecRun.FeatureAttribute("Pendenzen - Create Pendenzen", Description="\tCreate a new Task", SourceFile="Pendenzen\\CreatePendenzen.feature", SourceLine=0)]
+    public partial class Pendenzen_CreatePendenzenFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
@@ -30,7 +30,7 @@ namespace Kiss4Web.Test.Pendenzen
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Create Pendenzen", "\tCreate a new Task", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Pendenzen - Create Pendenzen", "\tCreate a new Task", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -122,7 +122,7 @@ namespace Kiss4Web.Test.Pendenzen
                         "0",
                         "258000"});
 #line 4
- testRunner.Given("these XUsers", ((string)(null)), table1, "Given ");
+ testRunner.Given("these XUser", ((string)(null)), table1, "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "BaPersonID",
@@ -137,21 +137,9 @@ namespace Kiss4Web.Test.Pendenzen
                         "Person test-2",
                         "NULL"});
 #line 9
- testRunner.And("these BaPersons", ((string)(null)), table2, "And ");
+ testRunner.And("these BaPerson", ((string)(null)), table2, "And ");
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
-                        "ModulID",
-                        "ShortName"});
-            table3.AddRow(new string[] {
-                        "MOD1",
-                        "M1"});
-            table3.AddRow(new string[] {
-                        "MOD2",
-                        "M2"});
-#line 14
- testRunner.And("these XModuls", ((string)(null)), table3, "And ");
-#line hidden
-            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "FaLeistungID",
                         "BaPersonID",
                         "FaFallID",
@@ -162,7 +150,7 @@ namespace Kiss4Web.Test.Pendenzen
                         "IkSchuldnerMahnen",
                         "WiederholteSpezifischeErmittlungEAF",
                         "DatumVon"});
-            table4.AddRow(new string[] {
+            table3.AddRow(new string[] {
                         "LEI1",
                         "BPS1",
                         "BPS1",
@@ -173,7 +161,7 @@ namespace Kiss4Web.Test.Pendenzen
                         "1",
                         "0",
                         "2018-01-10 00:00:00.000"});
-            table4.AddRow(new string[] {
+            table3.AddRow(new string[] {
                         "LEI2",
                         "BPS1",
                         "BPS2",
@@ -184,7 +172,7 @@ namespace Kiss4Web.Test.Pendenzen
                         "1",
                         "0",
                         "2018-02-10 00:00:00.000"});
-            table4.AddRow(new string[] {
+            table3.AddRow(new string[] {
                         "LEI3",
                         "BPS2",
                         "BPS1",
@@ -195,7 +183,7 @@ namespace Kiss4Web.Test.Pendenzen
                         "1",
                         "0",
                         "2018-03-10 00:00:00.000"});
-            table4.AddRow(new string[] {
+            table3.AddRow(new string[] {
                         "LEI4",
                         "BPS2",
                         "BPS2",
@@ -207,9 +195,9 @@ namespace Kiss4Web.Test.Pendenzen
                         "0",
                         "2018-04-10 00:00:00.000"});
 #line 26
- testRunner.And("these FaLeistungs", ((string)(null)), table4, "And ");
+ testRunner.And("these FaLeistung", ((string)(null)), table3, "And ");
 #line hidden
-            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "XTaskID",
                         "BaPersonID",
                         "TaskStatusCode",
@@ -227,7 +215,7 @@ namespace Kiss4Web.Test.Pendenzen
                         "ResponseText",
                         "TaskReceiverCode",
                         "TaskSenderCode"});
-            table5.AddRow(new string[] {
+            table4.AddRow(new string[] {
                         "TSK1",
                         "BPS1",
                         "1",
@@ -245,7 +233,7 @@ namespace Kiss4Web.Test.Pendenzen
                         "Task 20180817-1 text",
                         "1",
                         ""});
-            table5.AddRow(new string[] {
+            table4.AddRow(new string[] {
                         "TSK2",
                         "BPS1",
                         "2",
@@ -264,7 +252,7 @@ namespace Kiss4Web.Test.Pendenzen
                         "1",
                         "1"});
 #line 33
- testRunner.And("these XTasks", ((string)(null)), table5, "And ");
+ testRunner.And("these XTask", ((string)(null)), table4, "And ");
 #line hidden
         }
         
@@ -280,13 +268,13 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
  this.FeatureBackground();
 #line 40
- testRunner.Given("logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("logon with username is \'test_admin_1\', password is \'123456\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 41
  testRunner.And("go to page Pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 42
  testRunner.And("click on button Neus Pendenz", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-            TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                         "Pendenz Typ",
                         "Betreff",
                         "Beschreibung",
@@ -295,7 +283,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "Leistung",
                         "betrifft Person",
                         "Fällig"});
-            table6.AddRow(new string[] {
+            table5.AddRow(new string[] {
                         "Anfrage",
                         "Insert 20180830",
                         "Insert 20180830 autotest",
@@ -305,22 +293,18 @@ this.ScenarioInitialize(scenarioInfo);
                         "NULL",
                         "01.11.2120 dd.MM.yyyy"});
 #line 43
- testRunner.When("input into Pendenzen detail area as below", ((string)(null)), table6, "When ");
+ testRunner.When("input into Pendenzen detail area as below", ((string)(null)), table5, "When ");
 #line 46
  testRunner.And("click on button Speichern", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 47
- testRunner.Then("the record of the inputted info is inserted into table XTask in database", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("on grid Pendenzen: click button search in field \'Fällig\', choose option \'Ist glei" +
+                    "ch\' and input \'01.11.2120\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 48
- testRunner.And("Pendenzen detail area switches to view mode", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("choose row 1 on grid Pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 49
- testRunner.And("on tree LeftNavMenu: value of Meine Pendenzen/offene is offene (3)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 50
- testRunner.And("on tree LeftNavMenu: value of Erstellte Pendenzen/offene is offene (2)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 51
- testRunner.When("on grid Pendenzen: click button search in Fällig field, choose option Ist gleich " +
-                    "and input 01.11.2120", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Then("the record of the inputted info is inserted into table XTask in database", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-            TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                         "Fällig",
                         "Betreff",
                         "Leistung",
@@ -334,7 +318,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "Bearbeitung",
                         "Erledigt",
                         "Antwort"});
-            table7.AddRow(new string[] {
+            table6.AddRow(new string[] {
                         "01.11.2120",
                         "Insert 20180830",
                         "NULL",
@@ -348,12 +332,12 @@ this.ScenarioInitialize(scenarioInfo);
                         "NULL",
                         "NULL",
                         "NULL"});
-#line 52
- testRunner.Then("data of grid Pendenzen should be", ((string)(null)), table7, "Then ");
-#line 55
- testRunner.When("choose row 1 on grid Pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 50
+ testRunner.And("data of grid Pendenzen should be", ((string)(null)), table6, "And ");
+#line 53
+ testRunner.And("Pendenzen detail area switches to view mode", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-            TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                         "Status",
                         "Pendenz Typ",
                         "Betreff",
@@ -369,7 +353,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "Fällig",
                         "Bearbeitung",
                         "Erledigt"});
-            table8.AddRow(new string[] {
+            table7.AddRow(new string[] {
                         "Pendent",
                         "Anfrage",
                         "Insert 20180830",
@@ -385,8 +369,12 @@ this.ScenarioInitialize(scenarioInfo);
                         "01.11.2120",
                         "NULL",
                         "NULL"});
-#line 56
- testRunner.Then("content of Pendenzen detail area should be", ((string)(null)), table8, "Then ");
+#line 54
+ testRunner.And("content of Pendenzen detail area should be", ((string)(null)), table7, "And ");
+#line 57
+ testRunner.And("on tree LeftNavMenu: value of Meine Pendenzen/offene is \'offene (3)\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 58
+ testRunner.And("on tree LeftNavMenu: value of Erstellte Pendenzen/offene is \'offene (2)\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -403,13 +391,13 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
  this.FeatureBackground();
 #line 62
- testRunner.Given("logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("logon with username is \'test_admin_1\', password is \'123456\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 63
  testRunner.And("go to page Pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 64
  testRunner.And("click on button Neus Pendenz", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-            TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                         "Pendenz Typ",
                         "Betreff",
                         "Beschreibung",
@@ -418,7 +406,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "Leistung",
                         "betrifft Person",
                         "Fällig"});
-            table9.AddRow(new string[] {
+            table8.AddRow(new string[] {
                         "Anfrage",
                         "NULL",
                         "Insert 20180830 autotest",
@@ -428,12 +416,12 @@ this.ScenarioInitialize(scenarioInfo);
                         "NULL",
                         "NULL"});
 #line 65
- testRunner.When("input into Pendenzen detail area as below", ((string)(null)), table9, "When ");
+ testRunner.When("input into Pendenzen detail area as below", ((string)(null)), table8, "When ");
 #line 68
  testRunner.And("click on button Speichern", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 69
- testRunner.Then("display error message at top of page content with content is: Das Feld \'Betreff\' " +
-                    "darf nicht leer bleiben !", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("display error message at top of page content with content is: \'Das Feld \'Betreff\'" +
+                    " darf nicht leer bleiben !\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -450,13 +438,13 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
  this.FeatureBackground();
 #line 73
- testRunner.Given("logon with username is test_admin_1, password is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("logon with username is \'test_admin_1\', password is \'123456\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 74
  testRunner.And("go to page Pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 75
  testRunner.And("click on button Neus Pendenz", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-            TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
                         "Pendenz Typ",
                         "Betreff",
                         "Beschreibung",
@@ -465,7 +453,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "Leistung",
                         "betrifft Person",
                         "Fällig"});
-            table10.AddRow(new string[] {
+            table9.AddRow(new string[] {
                         "Anfrage",
                         "Insert 20180830",
                         "Insert 20180830 autotest",
@@ -475,7 +463,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "NULL",
                         "01.11.2020 dd.MM.yyyy"});
 #line 76
- testRunner.When("input into Pendenzen detail area as below", ((string)(null)), table10, "When ");
+ testRunner.When("input into Pendenzen detail area as below", ((string)(null)), table9, "When ");
 #line 79
  testRunner.And("click on button Abbrechen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 80
@@ -485,7 +473,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 82
  testRunner.And("Pendenzen detail area switches to view mode", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-            TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                         "Fällig",
                         "Betreff",
                         "Leistung",
@@ -499,7 +487,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "Bearbeitung",
                         "Erledigt",
                         "Antwort"});
-            table11.AddRow(new string[] {
+            table10.AddRow(new string[] {
                         "01.10.2020",
                         "Task 20180817-01",
                         "F",
@@ -513,7 +501,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "NULL",
                         "NULL",
                         "Task 20180817-1 text"});
-            table11.AddRow(new string[] {
+            table10.AddRow(new string[] {
                         "01.10.2018",
                         "Task 20180817-08",
                         "K",
@@ -528,11 +516,11 @@ this.ScenarioInitialize(scenarioInfo);
                         "NULL",
                         "Task 20180817-8 text"});
 #line 83
- testRunner.And("data of grid Pendenzen should be", ((string)(null)), table11, "And ");
+ testRunner.And("data of grid Pendenzen should be", ((string)(null)), table10, "And ");
 #line 87
- testRunner.And("on tree LeftNavMenu: value of Meine Pendenzen/offene is offene (2)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("on tree LeftNavMenu: value of Meine Pendenzen/offene is \'offene (2)\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 88
- testRunner.And("on tree LeftNavMenu: value of Erstellte Pendenzen/offene is offene (1)", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("on tree LeftNavMenu: value of Erstellte Pendenzen/offene is \'offene (1)\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
