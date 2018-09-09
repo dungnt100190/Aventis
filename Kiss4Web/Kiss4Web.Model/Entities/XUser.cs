@@ -110,7 +110,7 @@ namespace Kiss4Web.Model
             XuserXdocTemplate = new HashSet<XuserXdocTemplate>();
         }
 
-        public int UserId { get; set; }
+        public int UserID { get; set; }
         public int? ChiefId { get; set; }
         public int? PrimaryUserId { get; set; }
         public int? PermissionGroupId { get; set; }
@@ -275,7 +275,7 @@ namespace Kiss4Web.Model
         public ICollection<XuserStundenansatz> XuserStundenansatz { get; set; }
         public ICollection<XUserUserGroup> XuserUserGroup { get; set; }
         public ICollection<XuserXdocTemplate> XuserXdocTemplate { get; set; }
-        public int Id => UserId;
+        public int Id => UserID;
         public byte[] RowVersion => XUserTs;
     }
 }

@@ -228,11 +228,11 @@ namespace Kiss4Web.Test.Pendenzen
                         "2018-01-10 00:00:00.000",
                         "2020-01-10 00:00:00.000",
                         "",
-                        "NULL",
+                        "",
                         "Task 20180817-1 autotest",
                         "Task 20180817-1 text",
                         "1",
-                        ""});
+                        "1"});
             table4.AddRow(new string[] {
                         "TSK2",
                         "BPS2",
@@ -246,11 +246,11 @@ namespace Kiss4Web.Test.Pendenzen
                         "2018-01-10 00:00:00.000",
                         "2018-05-10 00:00:00.000",
                         "",
-                        "NULL",
+                        "",
                         "Task 20180817-2 autotest",
                         "Task 20180817-2 text",
                         "1",
-                        ""});
+                        "1"});
             table4.AddRow(new string[] {
                         "TSK3",
                         "BPS1",
@@ -264,11 +264,11 @@ namespace Kiss4Web.Test.Pendenzen
                         "2018-01-10 00:00:00.000",
                         "2018-10-10 00:00:00.000",
                         "2018-04-10 00:00:00.000",
-                        "NULL",
+                        "",
                         "Task 20180817-3 autotest",
                         "Task 20180817-3 text",
                         "1",
-                        ""});
+                        "1"});
             table4.AddRow(new string[] {
                         "TSK4",
                         "BPS2",
@@ -282,11 +282,11 @@ namespace Kiss4Web.Test.Pendenzen
                         "2018-01-10 00:00:00.000",
                         "2018-07-10 00:00:00.000",
                         "2018-06-10 00:00:00.000",
-                        "NULL",
+                        "",
                         "Task 20180817-4 autotest",
                         "Task 20180817-4 text",
                         "1",
-                        ""});
+                        "1"});
             table4.AddRow(new string[] {
                         "TSK5",
                         "BPS2",
@@ -300,7 +300,7 @@ namespace Kiss4Web.Test.Pendenzen
                         "2018-01-10 00:00:00.000",
                         "2019-02-10 00:00:00.000",
                         "",
-                        "NULL",
+                        "",
                         "Task 20180817-5 autotest",
                         "Task 20180817-5 text",
                         "1",
@@ -318,7 +318,7 @@ namespace Kiss4Web.Test.Pendenzen
                         "2018-01-10 00:00:00.000",
                         "2018-06-10 00:00:00.000",
                         "2018-03-10 00:00:00.000",
-                        "NULL",
+                        "",
                         "Task 20180817-6 autotest",
                         "Task 20180817-6 text",
                         "1",
@@ -336,7 +336,7 @@ namespace Kiss4Web.Test.Pendenzen
                         "2018-01-10 00:00:00.000",
                         "2018-09-10 00:00:00.000",
                         "2018-05-10 00:00:00.000",
-                        "NULL",
+                        "",
                         "Task 20180817-7 autotest",
                         "Task 20180817-7 text",
                         "1",
@@ -354,7 +354,7 @@ namespace Kiss4Web.Test.Pendenzen
                         "2018-01-10 00:00:00.000",
                         "2018-10-10 00:00:00.000",
                         "2018-05-10 00:00:00.000",
-                        "NULL",
+                        "",
                         "Task 20180817-8 autotest",
                         "Task 20180817-8 text",
                         "1",
@@ -372,11 +372,11 @@ namespace Kiss4Web.Test.Pendenzen
                         "2018-01-10 00:00:00.000",
                         "2018-11-10 00:00:00.000",
                         "",
-                        "NULL",
+                        "",
                         "Task 20180817-9 autotest",
                         "Task 20180817-9 text",
                         "1",
-                        "2"});
+                        "1"});
             table4.AddRow(new string[] {
                         "TSK10",
                         "BPS2",
@@ -390,11 +390,11 @@ namespace Kiss4Web.Test.Pendenzen
                         "2018-01-10 00:00:00.000",
                         "2018-12-10 00:00:00.000",
                         "",
-                        "NULL",
+                        "",
                         "Task 20180817-10 autotest",
                         "Task 20180817-10 text",
                         "1",
-                        "2"});
+                        "1"});
 #line 33
  testRunner.And("these XTask", ((string)(null)), table4, "And ");
 #line hidden
@@ -481,7 +481,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "Person test-1, NT (BPS1)",
                         "BPS1",
                         "Person test-1, NT",
-                        "NULL",
+                        "test_admin_2 - Soft, CMC",
                         "test_admin_1 - Global, CMC",
                         "Pendent",
                         "10.01.2018",
@@ -495,7 +495,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "Person test-1, NT (BPS2)",
                         "BPS2",
                         "Person test-2",
-                        "NULL",
+                        "test_admin_2 - Soft, CMC",
                         "test_admin_1 - Global, CMC",
                         "Pendent",
                         "10.01.2018",
@@ -509,7 +509,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "Person test-2 (BPS2)",
                         "BPS2",
                         "Person test-1, NT",
-                        "NULL",
+                        "test_admin_2 - Soft, CMC",
                         "test_admin_1 - Global, CMC",
                         "in Bearbeitung",
                         "10.01.2018",
@@ -523,7 +523,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "Person test-2 (BPS1)",
                         "BPS1",
                         "Person test-2",
-                        "NULL",
+                        "test_admin_2 - Soft, CMC",
                         "test_admin_1 - Global, CMC",
                         "in Bearbeitung",
                         "10.01.2018",
@@ -551,7 +551,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "Person test-2 (BPS2)",
                         "BPS2",
                         "Person test-1, NT",
-                        "NULL",
+                        "test_admin_2 - Soft, CMC",
                         "test_admin_1 - Global, CMC",
                         "Pendent",
                         "10.01.2018",
@@ -565,7 +565,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "Person test-2 (BPS2)",
                         "BPS2",
                         "Person test-2",
-                        "NULL",
+                        "test_admin_2 - Soft, CMC",
                         "test_admin_1 - Global, CMC",
                         "Pendent",
                         "10.01.2018",

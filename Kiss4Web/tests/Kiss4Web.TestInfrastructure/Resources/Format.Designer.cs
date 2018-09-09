@@ -61,7 +61,7 @@ namespace Kiss4Web.TestInfrastructure.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to dd.MM.yyyy.
+        ///   Looks up a localized string similar to yyyy-MM-dd.
         /// </summary>
         public static string Date {
             get {

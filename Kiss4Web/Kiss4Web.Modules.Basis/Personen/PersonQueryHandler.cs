@@ -21,7 +21,7 @@ namespace Kiss4Web.Modules.Basis.Personen
         public override async Task<BaPerson> Handle(PersonQuery query)
         {
             _warningsCollector.AddWarning($"Get person with Id {query.BaPersonId}");
-            return await _personen.FirstOrDefaultAsync(prs => prs.BaPersonId == query.BaPersonId);
+            return await _personen.FirstOrDefaultAsync(prs => prs.BaPersonID == query.BaPersonId);
         }
     }
 }

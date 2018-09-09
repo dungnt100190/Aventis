@@ -52,11 +52,11 @@ namespace Kiss4Web.Test.Common
         [Given(@"these FaLeistung")]
         public void GivenTheseFaLeistung(Table table)
         {
-            Dictionary<string, string> fieldMapping = new Dictionary<string, string>();
-            fieldMapping.Add("FaFallID", "BaPersonID");
+            Dictionary<string, string> idFieldMapping = new Dictionary<string, string>();
+            idFieldMapping.Add("FaFallID", "BaPersonID");
             try
             {
-                TestDataManager.Insert<FaLeistung>(table, fieldMapping);
+                TestDataManager.Insert<FaLeistung>(table, idFieldMapping);
             }
             catch (Exception)
             {
@@ -68,13 +68,13 @@ namespace Kiss4Web.Test.Common
         [Given(@"these XTask")]
         public void GivenTheseXTask(Table table)
         {
-            Dictionary<string, string> fieldMapping = new Dictionary<string, string>();
-            fieldMapping.Add("SenderID", "UserID");
-            fieldMapping.Add("ReceiverID", "UserID");
-            fieldMapping.Add("FaFallID", "BaPersonID");
+            Dictionary<string, string> idFieldMapping = new Dictionary<string, string>();
+            idFieldMapping.Add("SenderID", "UserID");
+            idFieldMapping.Add("ReceiverID", "UserID");
+            idFieldMapping.Add("FaFallID", "BaPersonID");
             try
             {
-                TestDataManager.Insert<XTask>(table, fieldMapping);
+                TestDataManager.Insert<XTask>(table, idFieldMapping);
             }
             catch (Exception)
             {
@@ -84,11 +84,11 @@ namespace Kiss4Web.Test.Common
         }
 
         [Given(@"logon with username is '(.*)', password is '(.*)'")]
-        public void LogonWithUsernameIsPasswordIs(string p0, string p1)
+        public void LogonWithUsernameIsPasswordIs(string username, string password)
         {
             try
             {
-                TestDataManager.Login(p0, p1);
+                TestDataManager.Login(username, password);
             }
             catch (Exception)
             {
@@ -102,7 +102,7 @@ namespace Kiss4Web.Test.Common
         {
             try
             {
-                TestDataManager.CheckEntityExistsInDB<XTask>(TestDataManager.TempAddedEntities[TestDataManager.TempAddedEntities.Count - 1]);
+                TestDataManager.CheckAddUpdateEntityExistsInDB<XTask>();
             }
             catch (Exception)
             {
@@ -116,7 +116,7 @@ namespace Kiss4Web.Test.Common
         {
             try
             {
-                TestDataManager.CheckEntityExistsInDB<XTask>(TestDataManager.TempAddedEntities[TestDataManager.TempAddedEntities.Count - 1], false);
+                TestDataManager.CheckAddUpdateEntityExistsInDB<XTask>(isExists: false);
             }
             catch (Exception)
             {

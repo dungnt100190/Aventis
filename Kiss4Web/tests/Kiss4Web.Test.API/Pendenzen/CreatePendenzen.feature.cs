@@ -17,17 +17,17 @@ namespace SpecFlow.GeneratedTests.Pendenzen
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class GetPendenzenDetailFeature : Xunit.IClassFixture<GetPendenzenDetailFeature.FixtureData>, System.IDisposable
+    public partial class CreatePendenzenFeature : Xunit.IClassFixture<CreatePendenzenFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "GetPendenzenDetail.feature"
+#line 1 "CreatePendenzen.feature"
 #line hidden
         
-        public GetPendenzenDetailFeature(GetPendenzenDetailFeature.FixtureData fixtureData, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public CreatePendenzenFeature(CreatePendenzenFeature.FixtureData fixtureData, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -36,7 +36,7 @@ namespace SpecFlow.GeneratedTests.Pendenzen
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "GetPendenzenDetail", "\tGet detail data of a Pendenzen ", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CreatePendenzen", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -68,9 +68,9 @@ namespace SpecFlow.GeneratedTests.Pendenzen
         
         public virtual void FeatureBackground()
         {
-#line 3
+#line 2
  #line hidden
-            TechTalk.SpecFlow.Table table17 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "UserID",
                         "PermissionGroupID",
                         "GrantPermGroupID",
@@ -87,7 +87,7 @@ namespace SpecFlow.GeneratedTests.Pendenzen
                         "KeinBDEExport",
                         "MigUserFix",
                         "VerID"});
-            table17.AddRow(new string[] {
+            table1.AddRow(new string[] {
                         "USR1",
                         "9",
                         "9",
@@ -104,7 +104,7 @@ namespace SpecFlow.GeneratedTests.Pendenzen
                         "0",
                         "0",
                         "257000"});
-            table17.AddRow(new string[] {
+            table1.AddRow(new string[] {
                         "USR2",
                         "9",
                         "9",
@@ -120,31 +120,26 @@ namespace SpecFlow.GeneratedTests.Pendenzen
                         "1",
                         "0",
                         "0",
-                        "258000"});
-#line 4
- testRunner.Given("these UserAdmin for GetPendenzenDetail feature", ((string)(null)), table17, "Given ");
+                        "257000"});
+#line 3
+ testRunner.Given("these XUser", ((string)(null)), table1, "Given ");
 #line hidden
-            TechTalk.SpecFlow.Table table18 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "BaPersonID",
                         "Name",
                         "Vorname"});
-            table18.AddRow(new string[] {
+            table2.AddRow(new string[] {
                         "BPS1",
                         "Person-1",
                         "NT"});
-#line 9
- testRunner.And("these BaPerson for GetPendenzenDetail feature", ((string)(null)), table18, "And ");
-#line hidden
-            TechTalk.SpecFlow.Table table19 = new TechTalk.SpecFlow.Table(new string[] {
-                        "BaPersonID",
-                        "Name"});
-            table19.AddRow(new string[] {
+            table2.AddRow(new string[] {
                         "BPS2",
-                        "Person 2"});
-#line 13
- testRunner.And("these BaPerson for GetPendenzenDetail feature", ((string)(null)), table19, "And ");
+                        "Person 2",
+                        "NULL"});
+#line 8
+ testRunner.And("these BaPerson", ((string)(null)), table2, "And ");
 #line hidden
-            TechTalk.SpecFlow.Table table20 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                         "FaLeistungID",
                         "BaPersonID",
                         "FaFallID",
@@ -155,7 +150,7 @@ namespace SpecFlow.GeneratedTests.Pendenzen
                         "IkSchuldnerMahnen",
                         "WiederholteSpezifischeErmittlungEAF",
                         "DatumVon"});
-            table20.AddRow(new string[] {
+            table3.AddRow(new string[] {
                         "LEI1",
                         "BPS1",
                         "BPS1",
@@ -166,7 +161,7 @@ namespace SpecFlow.GeneratedTests.Pendenzen
                         "1",
                         "0",
                         "2018-01-10 00:00:00.000"});
-            table20.AddRow(new string[] {
+            table3.AddRow(new string[] {
                         "LEI2",
                         "BPS1",
                         "BPS2",
@@ -177,7 +172,7 @@ namespace SpecFlow.GeneratedTests.Pendenzen
                         "1",
                         "0",
                         "2018-02-10 00:00:00.000"});
-            table20.AddRow(new string[] {
+            table3.AddRow(new string[] {
                         "LEI3",
                         "BPS2",
                         "BPS1",
@@ -188,7 +183,7 @@ namespace SpecFlow.GeneratedTests.Pendenzen
                         "1",
                         "0",
                         "2018-03-10 00:00:00.000"});
-            table20.AddRow(new string[] {
+            table3.AddRow(new string[] {
                         "LEI4",
                         "BPS2",
                         "BPS2",
@@ -199,10 +194,10 @@ namespace SpecFlow.GeneratedTests.Pendenzen
                         "1",
                         "0",
                         "2018-04-10 00:00:00.000"});
-#line 17
- testRunner.And("these FaLeistung for GetPendenzenDetail feature", ((string)(null)), table20, "And ");
+#line 18
+ testRunner.And("these FaLeistung", ((string)(null)), table3, "And ");
 #line hidden
-            TechTalk.SpecFlow.Table table21 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "XTaskID",
                         "BaPersonID",
                         "TaskStatusCode",
@@ -220,7 +215,7 @@ namespace SpecFlow.GeneratedTests.Pendenzen
                         "ResponseText",
                         "TaskReceiverCode",
                         "TaskSenderCode"});
-            table21.AddRow(new string[] {
+            table4.AddRow(new string[] {
                         "TSK1",
                         "BPS1",
                         "1",
@@ -237,45 +232,9 @@ namespace SpecFlow.GeneratedTests.Pendenzen
                         "Task 20180817-1 autotest",
                         "Task 20180817-1 text",
                         "1",
-                        ""});
-            table21.AddRow(new string[] {
-                        "TSK2",
-                        "BPS2",
-                        "1",
-                        "4",
-                        "Task 20180817-02",
-                        "USR2",
-                        "USR1",
-                        "BPS2",
-                        "LEI2",
-                        "2018-01-10 00:00:00.000",
-                        "2018-05-10 00:00:00.000",
-                        "",
-                        "",
-                        "Task 20180817-2 autotest",
-                        "Task 20180817-2 text",
-                        "1",
-                        ""});
-            table21.AddRow(new string[] {
-                        "TSK3",
-                        "BPS1",
-                        "2",
-                        "6",
-                        "Task 20180817-03",
-                        "USR2",
-                        "USR1",
-                        "BPS2",
-                        "LEI4",
-                        "2018-01-10 00:00:00.000",
-                        "2018-10-10 00:00:00.000",
-                        "2018-04-10 00:00:00.000",
-                        "",
-                        "Task 20180817-3 autotest",
-                        "Task 20180817-3 text",
-                        "1",
-                        ""});
-#line 24
- testRunner.And("these Tasks for GetPendenzenDetail feature", ((string)(null)), table21, "And ");
+                        "2"});
+#line 25
+ testRunner.And("these XTask", ((string)(null)), table4, "And ");
 #line hidden
         }
         
@@ -284,57 +243,55 @@ namespace SpecFlow.GeneratedTests.Pendenzen
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Get Pendenzen detail")]
-        [Xunit.TraitAttribute("FeatureTitle", "GetPendenzenDetail")]
-        [Xunit.TraitAttribute("Description", "Get Pendenzen detail")]
+        [Xunit.FactAttribute(DisplayName="01 Create new Pendenzen")]
+        [Xunit.TraitAttribute("FeatureTitle", "CreatePendenzen")]
+        [Xunit.TraitAttribute("Description", "01 Create new Pendenzen")]
         [Xunit.TraitAttribute("Category", "servicetest")]
-        public virtual void GetPendenzenDetail()
+        public virtual void _01CreateNewPendenzen()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get Pendenzen detail", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01 Create new Pendenzen", new string[] {
                         "servicetest"});
-#line 31
+#line 30
 this.ScenarioSetup(scenarioInfo);
-#line 3
+#line 2
  this.FeatureBackground();
-#line 32
- testRunner.Given("GetPendenzenDetail client has LogonName is test_admin_1, PasswordHash is 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 33
- testRunner.When("call GetPendenzenDetail of Task TSK1", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 31
+ testRunner.Given("init client with username is \'test_admin_1\', password is \'123456\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-            TechTalk.SpecFlow.Table table22 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                        "id",
                         "status",
                         "pendenzTyp",
-                        "TaskTypeName",
                         "betreff",
                         "beschreibung",
-                        "Ersteller",
-                        "empfangerName",
-                        "LeistungModul",
-                        "LeistungsverantName",
-                        "BetrifftPersonName",
+                        "empfangerId",
+                        "falltrager",
+                        "leistung",
+                        "PersonId",
                         "antwort",
-                        "erfasst",
                         "fallig",
-                        "BearbeitungName",
-                        "ErledigtName"});
-            table22.AddRow(new string[] {
+                        "erfasst"});
+            table5.AddRow(new string[] {
+                        "NULL",
                         "1",
-                        "4",
-                        "Fristablauf",
-                        "Task 20180817-01",
-                        "Task 20180817-1 autotest",
-                        "test_admin_2 - Soft, CMC",
-                        "test_admin_1 - Global, CMC",
-                        "S - Sozialhilfe (10.01.2018 -)",
-                        "test_admin_1 - Global, CMC",
-                        "Person-1, NT",
-                        "Task 20180817-1 text",
-                        "NULL",
-                        "10.01.2020 00:00:00",
-                        "NULL",
-                        "NULL"});
-#line 34
- testRunner.Then("the detail data of Task should be", ((string)(null)), table22, "Then ");
+                        "2",
+                        "Insert 20180817-01",
+                        "Insert 20180817-1 autotest",
+                        "USR2",
+                        "BPS1",
+                        "LEI3",
+                        "BPS2",
+                        "Insert 20180817-1 text",
+                        "06/10/2019 00:00:00",
+                        "06/10/2018 00:00:00"});
+#line 32
+ testRunner.When("call API CreateUpdateTask in CreatePendenzen with input data as below", ((string)(null)), table5, "When ");
+#line 35
+ testRunner.Then("the call is successful", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 36
+ testRunner.And("the return value of API CreateUpdateTask should be true", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 37
+ testRunner.And("the record of the inputted info is inserted into table XTask in database", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -346,12 +303,12 @@ this.ScenarioSetup(scenarioInfo);
             
             public FixtureData()
             {
-                GetPendenzenDetailFeature.FeatureSetup();
+                CreatePendenzenFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                GetPendenzenDetailFeature.FeatureTearDown();
+                CreatePendenzenFeature.FeatureTearDown();
             }
         }
     }

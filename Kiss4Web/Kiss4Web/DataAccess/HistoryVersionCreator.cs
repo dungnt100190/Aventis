@@ -28,7 +28,7 @@ namespace Kiss4Web.DataAccess
             _authenticatedUsername = authenticatedUsername;
         }
 
-        public async Task AuditEntities(IEnumerable<EntityEntry> entities, IDbContext dbContext)
+        public void AuditEntities(IEnumerable<EntityEntry> entities, IDbContext dbContext)
         {
             var historyVersionNecessary = entities.Any(ent => (ent.State == EntityState.Added
                                                             || ent.State == EntityState.Modified
@@ -46,7 +46,7 @@ namespace Kiss4Web.DataAccess
                                                                              "Kiss4Web",
                                                                              "kiss3", // HACK: hardcoded
                                                                              _authenticatedUsername);
-                await insertHistoryVersion.ExecuteNonQueryAsync();
+                insertHistoryVersion.ExecuteNonQuery();
             }
         }
 

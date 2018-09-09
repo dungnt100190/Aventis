@@ -18,11 +18,9 @@ namespace Kiss4Web.Infrastructure.DataAccess.Validation
             _validator = validator;
         }
 
-        public async Task AuditEntities(IEnumerable<EntityEntry> entities, IDbContext dbContext)
+        public void AuditEntities(IEnumerable<EntityEntry> entities, IDbContext dbContext)
         {
-            var results = await Task.WhenAll(entities.Where(ent => ent.State == EntityState.Added
-                                                                || ent.State == EntityState.Modified)
-                                                     .Select(ent => _validator.Validate(ent.Entity)));
+            var results = entities.Where(ent => ent.State == EntityState.Added || ent.State == EntityState.Modified).Select(ent => _validator.Validate(ent.Entity).Result);
             var errors = results.Where(res => res?.IsValid == false)
                                 .ToList();
 

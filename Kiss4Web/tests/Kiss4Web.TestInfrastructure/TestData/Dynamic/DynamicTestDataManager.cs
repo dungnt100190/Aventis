@@ -247,19 +247,6 @@ namespace Kiss4Web.TestInfrastructure.TestData.Dynamic
             }
         }
 
-        public bool Delete<TEntity>(object key) where TEntity : class
-        {
-            var context = CreateDbContext();
-            var dbSet = context.Set<TEntity>();
-            TEntity entity = dbSet.Find(key);
-            if (context.Entry(entity).State == EntityState.Detached)
-            {
-                dbSet.Attach(entity);
-            }
-            dbSet.Remove(entity);
-            return context.SaveChanges() >= 1;
-        }
-
         public int Lookup<TEntity>(string logicalName)
         {
             var id = _identifierLookup.Lookup(typeof(TEntity).Name.Normalize())?.Lookup(logicalName);

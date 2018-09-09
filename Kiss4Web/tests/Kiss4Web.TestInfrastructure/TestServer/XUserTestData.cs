@@ -36,12 +36,12 @@ namespace Kiss4Web.TestInfrastructure.TestServer
 
         protected override void ResetAutoIdentity(XUser entity)
         {
-            entity.UserId = 0;
+            entity.UserID = 0;
         }
 
         protected override bool CopyProperties(XUser existingEntity, XUser testDataEntity)
         {
-            testDataEntity.UserId = existingEntity.Id;
+            testDataEntity.UserID = existingEntity.Id;
             return false;
         }
     }

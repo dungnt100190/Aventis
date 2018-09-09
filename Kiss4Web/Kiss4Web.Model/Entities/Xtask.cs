@@ -12,9 +12,9 @@ namespace Kiss4Web.Model
         }
 
         public int XTaskID { get; set; }
-        public int? BaPersonId { get; set; }
-        public int? FaFallId { get; set; }
-        public int? FaLeistungId { get; set; }
+        public int? BaPersonID { get; set; }
+        public int? FaFallID { get; set; }
+        public int? FaLeistungID { get; set; }
         public int? UserIdErledigt { get; set; }
         public int? UserIdInBearbeitung { get; set; }
         public int? FaAktennotizId { get; set; }
@@ -27,9 +27,9 @@ namespace Kiss4Web.Model
         public DateTime? DoneDate { get; set; }
         public string Subject { get; set; }
         public string TaskDescription { get; set; }
-        public int? SenderId { get; set; }
+        public int? SenderID { get; set; }
         public int? TaskSenderCode { get; set; }
-        public int? ReceiverId { get; set; }
+        public int? ReceiverID { get; set; }
         public int? TaskReceiverCode { get; set; }
         public string ResponseText { get; set; }
         public int? TaskResponseCode { get; set; }

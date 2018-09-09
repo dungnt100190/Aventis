@@ -14,7 +14,7 @@ namespace Kiss4Web.Infrastructure.Authorization.Test.Rights
     [Binding]
     public class GetRightsSteps : IntegrationTest
     {
-        private DynamicTestDataManager _testDataManager;
+        private TestDataManager _testDataManager;
         private ServiceResult<IEnumerable<Kiss4UserRight>> _result;
 
         public GetRightsSteps(TestServerFixture integrationTestEnvironment)

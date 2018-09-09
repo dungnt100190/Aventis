@@ -78,7 +78,7 @@ namespace Kiss4Web.Model
             Xtask = new HashSet<XTask>();
         }
 
-        public int BaPersonId { get; set; }
+        public int BaPersonID { get; set; }
         public int? StatusPersonCode { get; set; }
         public string Titel { get; set; }
         public string Name { get; set; }
@@ -344,7 +344,7 @@ namespace Kiss4Web.Model
         public ICollection<VmSozialversicherung> VmSozialversicherung { get; set; }
         public ICollection<WhAsvseintrag> WhAsvseintrag { get; set; }
         public ICollection<XTask> Xtask { get; set; }
-        public int Id => BaPersonId;
+        public int Id => BaPersonID;
         public byte[] RowVersion => BaPersonTs;
     }
 }

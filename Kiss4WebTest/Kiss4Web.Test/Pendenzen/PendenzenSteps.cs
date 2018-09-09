@@ -174,6 +174,51 @@ namespace Kiss4Web.Test.Pendenzen
             }
         }
 
+        [When(@"choose '(.*)' in datebox Bearbeitung from")]
+        public void WhenChooseInDateboxBearbeitungFrom(string option)
+        {
+            try
+            {
+                TestDataManager.InputDatebox(string.Format(XPathPendenzen.SearchFields2, "processing-box-item1"), option);
+                TestDataManager.Click(XPathPendenzen.PageHeaderLeft, waitingTime: 2);
+            }
+            catch (Exception)
+            {
+                Cleanup();
+                throw;
+            }
+        }
+
+        [When(@"choose '(.*)' in datebox Bearbeitung to")]
+        public void WhenChooseInDateboxBearbeitungTo(string option)
+        {
+            try
+            {
+                TestDataManager.InputDatebox(string.Format(XPathPendenzen.SearchFields2, "processing-box-item3"), option);
+                TestDataManager.Click(XPathPendenzen.PageHeaderLeft, waitingTime: 2);
+            }
+            catch (Exception)
+            {
+                Cleanup();
+                throw;
+            }
+        }
+
+        [When(@"choose '(.*)' in dropdown Ersteller")]
+        public void WhenChooseInDropdownErsteller(string option)
+        {
+            try
+            {
+                TestDataManager.InputGridDropdown(string.Format(XPathPendenzen.SearchFields1, "creator"), option);
+                TestDataManager.Click(XPathPendenzen.PageHeaderLeft, waitingTime: 2);
+            }
+            catch (Exception)
+            {
+                Cleanup();
+                throw;
+            }
+        }
+
         [When(@"input into Pendenzen search area as below")]
         public void InputIntoSearchAreaAsBelow(Table table)
         {
@@ -230,12 +275,12 @@ namespace Kiss4Web.Test.Pendenzen
                 screenMapping.Add("Fällig", "fallig");
 
                 TestDataManager.InputTableData(new string[] { XPathPendenzen.TaskDetailFields1 }, table, elementType, screenMapping);
-
                 Dictionary<string, string> fieldMapping = new Dictionary<string, string>();
                 fieldMapping.Add("Betreff", "Subject");
                 fieldMapping.Add("Beschreibung", "TaskDescription");
                 fieldMapping.Add("Fällig", "ExpirationDate");
-                TestDataManager.TempAddedEntities.AddRange(TestDataManager.CreateSetWithLookup<XTask>(table, fieldMapping: fieldMapping));
+
+                TestDataManager.AddToTempEntities<XTask>(table, fieldMapping: fieldMapping);
             }
             catch (Exception)
             {

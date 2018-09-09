@@ -163,7 +163,7 @@ namespace Kiss4Web
             services.EnableSimpleInjectorCrossWiring(_container);
             services.AddSingleton(x => _container.GetInstance<IExceptionTranslator>());
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            var httpsCertificate = new X509Certificate2("localhost.pfx", "TFHbiWtjzrraFBwAWvTWLjyfNhtdTogTJzPQQWcnBqGyBXUbANniJUQswwpnJzWe");
+            //var httpsCertificate = new X509Certificate2("localhost.pfx", "TFHbiWtjzrraFBwAWvTWLjyfNhtdTogTJzPQQWcnBqGyBXUbANniJUQswwpnJzWe");
             //services.Configure<KestrelServerOptions>(o =>
             //{
             //    o.AddServerHeader = false;

@@ -21,10 +21,22 @@ namespace Kiss4Web.Infrastructure.DataAccess.Context
             {
                 foreach (var auditor in _auditors)
                 {
-                    await auditor.AuditEntities(ChangeTracker.Entries(), this);
+                    auditor.AuditEntities(ChangeTracker.Entries(), this);
                 }
             }
             await base.SaveChangesAsync();
+        }
+
+        public override int SaveChanges()
+        {
+            if (_auditors != null)
+            {
+                foreach (var auditor in _auditors)
+                {
+                    auditor.AuditEntities(ChangeTracker.Entries(), this);
+                }
+            }
+            return base.SaveChanges();
         }
 
         public void ExecuteSqlCommand(string sql)

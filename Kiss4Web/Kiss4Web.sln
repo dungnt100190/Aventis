@@ -87,6 +87,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kiss4Web.Infrastructure.Rep
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kiss4Web.Modules.Pendenzen", "Kiss4Web.Modules.Pendenzen\Kiss4Web.Modules.Pendenzen.csproj", "{649D7383-31CE-4E31-A996-F5F604C3DCA1}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kiss4Web.Test.API", "tests\Kiss4Web.Test.API\Kiss4Web.Test.API.csproj", "{C1695E00-E5DD-411A-AD17-547ADFC70C86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -233,6 +235,10 @@ Global
 		{649D7383-31CE-4E31-A996-F5F604C3DCA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{649D7383-31CE-4E31-A996-F5F604C3DCA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{649D7383-31CE-4E31-A996-F5F604C3DCA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1695E00-E5DD-411A-AD17-547ADFC70C86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1695E00-E5DD-411A-AD17-547ADFC70C86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1695E00-E5DD-411A-AD17-547ADFC70C86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1695E00-E5DD-411A-AD17-547ADFC70C86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -265,6 +271,7 @@ Global
 		{E70CB3A2-42A1-45B7-B896-BF57B61178AC} = {C15EC769-8757-4A10-9BC7-7B19AA8F6E46}
 		{D4DA1EA0-4C22-4530-8FF8-A1B0959837C4} = {C15EC769-8757-4A10-9BC7-7B19AA8F6E46}
 		{5ACE2E49-6B72-4ED9-B7D8-C48C4B3476D6} = {21043CF7-BE51-41D6-A13C-951242422AAD}
+		{C1695E00-E5DD-411A-AD17-547ADFC70C86} = {21043CF7-BE51-41D6-A13C-951242422AAD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {313DBDC2-CAC3-463F-A3A1-2687734A0541}

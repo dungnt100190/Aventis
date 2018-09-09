@@ -1,5 +1,4 @@
 ﻿using System;
-using Kiss4Web.TestInfrastructure.TestData.Dynamic;
 using Xunit;
 
 namespace Kiss4Web.TestInfrastructure.TestServer
@@ -10,12 +9,12 @@ namespace Kiss4Web.TestInfrastructure.TestServer
         public IntegrationTest(TestServerFixture integrationTestEnvironment)
         {
             IntegrationTestEnvironment = integrationTestEnvironment;
-            TestDataManager = integrationTestEnvironment.CreateTestDataManager();
+            TestDataManager = integrationTestEnvironment.CreateTestDataManager(integrationTestEnvironment);
         }
 
         protected TestServerFixture IntegrationTestEnvironment { get; }
 
-        protected DynamicTestDataManager TestDataManager { get; }
+        protected TestDataManager TestDataManager { get; }
 
         public void Dispose()
         {

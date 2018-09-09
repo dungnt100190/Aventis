@@ -27,7 +27,7 @@ namespace Kiss4Web.DataAccess.Test
             var testUser = IntegrationTestEnvironment.TestData<XUserTestData>().Administrator;
             var testAdresse = new BaAdresse
             {
-                UserId = testUser.UserId,
+                UserId = testUser.UserID,
                 Bemerkung = "testadresse"
             };
 
@@ -71,7 +71,7 @@ namespace Kiss4Web.DataAccess.Test
             using (new EnsureExecutionScope(IntegrationTestEnvironment.Container))
             {
                 var personen = IntegrationTestEnvironment.Container.GetInstance<IRepository<BaPerson>>();
-                person = await personen.GetById(testPerson.BaPersonId);
+                person = await personen.GetById(testPerson.BaPersonID);
             }
 
             var originalName = person.Name;
@@ -83,8 +83,8 @@ namespace Kiss4Web.DataAccess.Test
             {
                 var context = IntegrationTestEnvironment.Container.GetInstance<Kiss4DbContext>();
                 var personen = IntegrationTestEnvironment.Container.GetInstance<IRepository<BaPerson>>();
-                personen.Remove(prs => prs.BaPersonId == testPerson.BaPersonId);
-                person = await personen.GetById(testPerson.BaPersonId);
+                personen.Remove(prs => prs.BaPersonID == testPerson.BaPersonID);
+                person = await personen.GetById(testPerson.BaPersonID);
                 await context.SaveChangesAsync();
             }
 
@@ -109,7 +109,7 @@ namespace Kiss4Web.DataAccess.Test
 
                 // Assert
                 person.ShouldNotBeNull("Person not found");
-                person.BaPersonId.ShouldBe(expectedPerson.Id);
+                person.BaPersonID.ShouldBe(expectedPerson.Id);
                 person.Name.ShouldBe(expectedPerson.Name);
                 person.Vorname.ShouldBe(expectedPerson.Vorname);
             }
@@ -130,7 +130,7 @@ namespace Kiss4Web.DataAccess.Test
 
                 // Assert
                 context.ChangeTracker.DetectChanges();
-                var entry = context.ChangeTracker.Entries<BaPerson>().FirstOrDefault(prs => prs.Entity.BaPersonId == person.Id);
+                var entry = context.ChangeTracker.Entries<BaPerson>().FirstOrDefault(prs => prs.Entity.BaPersonID == person.Id);
                 entry.ShouldNotBeNull();
 
                 entry.State.ShouldBe(EntityState.Unchanged);
@@ -170,7 +170,7 @@ namespace Kiss4Web.DataAccess.Test
             using (new EnsureExecutionScope(IntegrationTestEnvironment.Container))
             {
                 var personen = IntegrationTestEnvironment.Container.GetInstance<IRepository<BaPerson>>();
-                var personAssert = await personen.GetById(person.BaPersonId);
+                var personAssert = await personen.GetById(person.BaPersonID);
                 personAssert.ShouldBeNull("Durch das implizite Transaktionshandling des DbContext dürfte das Insert der Person nicht commited werden");
             }
         }
@@ -187,7 +187,7 @@ namespace Kiss4Web.DataAccess.Test
             var adresse = new BaAdresse
             {
                 BaPerson = person,
-                BaPersonId = person.BaPersonId,
+                BaPersonId = person.BaPersonID,
                 DatumVon = DateTime.MinValue, // invalid because SQL datetime.Min is 01.01.1753
             };
 
@@ -206,7 +206,7 @@ namespace Kiss4Web.DataAccess.Test
             using (new EnsureExecutionScope(IntegrationTestEnvironment.Container))
             {
                 var personen = IntegrationTestEnvironment.Container.GetInstance<IRepository<BaPerson>>();
-                var personAssert = await personen.GetById(person.BaPersonId);
+                var personAssert = await personen.GetById(person.BaPersonID);
                 personAssert.ShouldBeNull("Durch das implizite Transaktionshandling des DbContext dürfte das Insert der Person nicht commited werden");
             }
         }
@@ -228,7 +228,7 @@ namespace Kiss4Web.DataAccess.Test
                 await personen.InsertOrUpdateEntity(person);
 
                 await context.SaveChangesAsync();
-                baPersonId = person.BaPersonId;
+                baPersonId = person.BaPersonID;
             }
 
             // Assert
@@ -262,7 +262,7 @@ namespace Kiss4Web.DataAccess.Test
                 await personen.InsertOrUpdateEntity(person);
 
                 await context.SaveChangesAsync();
-                baPersonId = person.BaPersonId;
+                baPersonId = person.BaPersonID;
             }
 
             // Assert
@@ -305,12 +305,12 @@ namespace Kiss4Web.DataAccess.Test
 
             // Arrange
             const string strasse = "Teststrasse";
-            var baPersonId = testPerson.BaPersonId;
+            var baPersonId = testPerson.BaPersonID;
 
             var adresse = new BaAdresse
             {
                 BaPerson = testPerson,
-                BaPersonId = testPerson.BaPersonId,
+                BaPersonId = testPerson.BaPersonID,
                 Strasse = strasse
             };
 
@@ -357,7 +357,7 @@ namespace Kiss4Web.DataAccess.Test
             using (new EnsureExecutionScope(IntegrationTestEnvironment.Container))
             {
                 var personen = IntegrationTestEnvironment.Container.GetInstance<IRepository<BaPerson>>();
-                var personAssert = await personen.GetById(person.BaPersonId);
+                var personAssert = await personen.GetById(person.BaPersonID);
                 personAssert.ShouldBeNull();
             }
         }
@@ -375,7 +375,7 @@ namespace Kiss4Web.DataAccess.Test
                 var context = IntegrationTestEnvironment.Container.GetInstance<IDbContext>();
                 var personen = IntegrationTestEnvironment.Container.GetInstance<IRepository<BaPerson>>();
 
-                var personAct = await personen.GetById(person.BaPersonId);
+                var personAct = await personen.GetById(person.BaPersonID);
                 newVorname = personAct.Vorname + "-test";
                 personAct.Vorname = newVorname;
                 //await personen.InsertOrUpdateEntity(personAct);
@@ -387,7 +387,7 @@ namespace Kiss4Web.DataAccess.Test
             using (new EnsureExecutionScope(IntegrationTestEnvironment.Container))
             {
                 var personen = IntegrationTestEnvironment.Container.GetInstance<IRepository<BaPerson>>();
-                var personAssert = await personen.GetById(person.BaPersonId);
+                var personAssert = await personen.GetById(person.BaPersonID);
                 personAssert.Vorname.ShouldBe(newVorname);
             }
         }
@@ -408,7 +408,7 @@ namespace Kiss4Web.DataAccess.Test
                 var context = IntegrationTestEnvironment.Container.GetInstance<IDbContext>();
                 var personen = IntegrationTestEnvironment.Container.GetInstance<IRepository<BaPerson>>();
 
-                var personAct = await personen.GetById(person.BaPersonId);
+                var personAct = await personen.GetById(person.BaPersonID);
                 newVorname = personAct.Vorname + "-test";
                 personAct.Vorname = newVorname;
                 //await personen.InsertOrUpdateEntity(personAct);
@@ -420,7 +420,7 @@ namespace Kiss4Web.DataAccess.Test
             using (new EnsureExecutionScope(IntegrationTestEnvironment.Container))
             {
                 var personen = IntegrationTestEnvironment.Container.GetInstance<IRepository<BaPerson>>();
-                var personAssert = await personen.GetById(person.BaPersonId);
+                var personAssert = await personen.GetById(person.BaPersonID);
                 personAssert.Vorname.ShouldBe(newVorname);
                 personAssert.Modified.ShouldBe(now);
             }
@@ -442,7 +442,7 @@ namespace Kiss4Web.DataAccess.Test
                 var context = IntegrationTestEnvironment.Container.GetInstance<IDbContext>();
                 var personen = IntegrationTestEnvironment.Container.GetInstance<IRepository<BaPerson>>();
 
-                var personAct = await personen.GetById(person.BaPersonId);
+                var personAct = await personen.GetById(person.BaPersonID);
                 newVorname = personAct.Vorname + "-test";
                 personAct.Vorname = newVorname;
                 //await personen.InsertOrUpdateEntity(personAct);
@@ -454,7 +454,7 @@ namespace Kiss4Web.DataAccess.Test
             using (new EnsureExecutionScope(IntegrationTestEnvironment.Container))
             {
                 var personen = IntegrationTestEnvironment.Container.GetInstance<IRepository<BaPerson>>();
-                var personAssert = await personen.GetById(person.BaPersonId);
+                var personAssert = await personen.GetById(person.BaPersonID);
                 personAssert.Vorname.ShouldBe(newVorname);
                 personAssert.Created.ShouldBeWithSqlDateTimePrecision(createdBefore);
             }
@@ -473,7 +473,7 @@ namespace Kiss4Web.DataAccess.Test
             using (new EnsureExecutionScope(IntegrationTestEnvironment.Container))
             {
                 var personen = IntegrationTestEnvironment.Container.GetInstance<IRepository<BaPerson>>();
-                personGet = await personen.GetById(person.BaPersonId);
+                personGet = await personen.GetById(person.BaPersonID);
                 personGet.Bemerkung += "bla";
             }
 
@@ -483,7 +483,7 @@ namespace Kiss4Web.DataAccess.Test
                 var context = IntegrationTestEnvironment.Container.GetInstance<IDbContext>();
                 var personen = IntegrationTestEnvironment.Container.GetInstance<IRepository<BaPerson>>();
 
-                var personQuick = await personen.GetById(person.BaPersonId);
+                var personQuick = await personen.GetById(person.BaPersonID);
                 personQuick.Bemerkung += "blabla";
                 //await personen.InsertOrUpdateEntity(person);
                 await context.SaveChangesAsync();
@@ -512,7 +512,7 @@ namespace Kiss4Web.DataAccess.Test
                 var context = IntegrationTestEnvironment.Container.GetInstance<IDbContext>();
                 var personen = IntegrationTestEnvironment.Container.GetInstance<IRepository<BaPerson>>();
 
-                var person = await personen.GetById(testPerson.BaPersonId);
+                var person = await personen.GetById(testPerson.BaPersonID);
                 rowversionBefore = testPerson.BaPersonTs;
                 person.Vorname += "test";
                 await personen.InsertOrUpdateEntity(person);
@@ -525,7 +525,7 @@ namespace Kiss4Web.DataAccess.Test
             {
                 var personen = IntegrationTestEnvironment.Container.GetInstance<IRepository<BaPerson>>();
 
-                var personAssert = await personen.GetById(testPerson.BaPersonId);
+                var personAssert = await personen.GetById(testPerson.BaPersonID);
                 personAssert.ShouldNotBeNull();
                 var rowversionAfter = personAssert.BaPersonTs;
                 rowversionAfter.ShouldNotBe(rowversionBefore);

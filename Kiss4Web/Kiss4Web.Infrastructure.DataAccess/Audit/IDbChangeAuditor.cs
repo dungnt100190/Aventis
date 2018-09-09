@@ -16,6 +16,6 @@ namespace Kiss4Web.Infrastructure.DataAccess.Audit
         /// </summary>
         /// <param name="entities"></param>
         /// <param name="dbContext"></param>
-        Task AuditEntities(IEnumerable<EntityEntry> entities, IDbContext dbContext);
+        void AuditEntities(IEnumerable<EntityEntry> entities, IDbContext dbContext);
     }
 }

@@ -17,34 +17,15 @@ namespace Kiss4Web.Test.TestInfrastructure
 {
     public static class TestDataManager
     {
-        private static readonly IDictionary<string, string> _IdConventionExceptions = new Dictionary<string, string>
-        {
-            {"XUser", "UserID"},
-            {"XUserGroup", "UserGroupID"},
-            {"XRight", "RightID"},
-            {"XModul", "ModulID"},
-        };
-
-        private static readonly List<string> _NoneIdentityEntities = new List<string>
-        {
-            "XModul"
-        };
-
-        public static IWebDriver Driver { get; private set; }
-        public static List<object> TempAddedEntities { get; private set; } = new List<object>();
-
-        private static readonly IDictionary<string, List<object>> _createdEntities = new Dictionary<string, List<object>>();
-        private static readonly IDictionary<string, IDictionary<string, int>> _identifierLookup = new Dictionary<string, IDictionary<string, int>>();
-
         /// <summary>
         /// Setup TestDataManager
         /// </summary>
         public static void Setup()
         {
-            Driver = null;
-            TempAddedEntities.Clear();
-            _createdEntities.Clear();
-            _identifierLookup.Clear();
+            TestDataPool.Driver = null;
+            TestDataPool.TempEntities.Clear();
+            TestDataPool.CreatedEntities.Clear();
+            TestDataPool.IdentifierLookup.Clear();
         }
 
         /// <summary>
@@ -56,7 +37,7 @@ namespace Kiss4Web.Test.TestInfrastructure
         public static int Lookup<TEntity>(string logicalName)
             where TEntity : class
         {
-            var id = _identifierLookup.Lookup(typeof(TEntity).Name.Normalize())?.Lookup(logicalName);
+            var id = TestDataPool.IdentifierLookup.Lookup(typeof(TEntity).Name.Normalize())?.Lookup(logicalName);
             if (id == null)
             {
                 throw new KeyNotFoundException($"Logical name {logicalName} not found. Have you set up test data?");
@@ -86,12 +67,11 @@ namespace Kiss4Web.Test.TestInfrastructure
             }
 
             properties = table.Header.ToList();
-            var entities = table.CreateSet<T>().ToList();
-            var result = new List<T>();
+            List<T> result = new List<T>();
 
             for (var i = 0; i < table.RowCount; i++)
             {
-                var entity = entities[i];
+                T entity = Activator.CreateInstance<T>();
                 foreach (var prop in properties)
                 {
                     var value = table.Rows[i][prop];
@@ -103,41 +83,78 @@ namespace Kiss4Web.Test.TestInfrastructure
                     {
                         // value of property is null
                         property.SetValue(entity, null);
+                        continue;
                     }
-                    else
-                    {
-                        string refFieldName = null;
-                        if (prop.EndsWith("ID", StringComparison.InvariantCultureIgnoreCase) && !int.TryParse(value, out var id1))
-                        {
-                            refFieldName = prop;
-                        }
-                        if (idFieldMapping != null && idFieldMapping.ContainsKey(prop) && !int.TryParse(value, out var id2))
-                        {
-                            refFieldName = idFieldMapping[prop];
-                        }
 
-                        if (!string.IsNullOrEmpty(refFieldName))
+                    string refFieldName = null;
+                    if (prop.EndsWith("ID", StringComparison.InvariantCultureIgnoreCase) && !int.TryParse(value, out var id1))
+                    {
+                        refFieldName = prop;
+                    }
+                    if (idFieldMapping != null && idFieldMapping.ContainsKey(prop) && !int.TryParse(value, out var id2))
+                    {
+                        refFieldName = idFieldMapping[prop];
+                    }
+                    if (!string.IsNullOrEmpty(refFieldName))
+                    {
+                        // value is the logical name of entity (which should already be created)
+                        var refEntityName = GetEntityNameFromHeader(refFieldName);
+                        var lookup = TestDataPool.IdentifierLookup.Lookup(refEntityName);
+                        foreach (var item in lookup)
                         {
-                            // value is the logical name of entity (which should already be created)
-                            var refEntityName = GetEntityNameFromHeader(refFieldName);
-                            var lookup = _identifierLookup.Lookup(refEntityName);
-                            foreach (var item in lookup)
+                            if (value.Contains(item.Key))
                             {
-                                if (value.Contains(item.Key))
+                                value = value.Replace(item.Key, item.Value.ToString());
+                                if (value.Equals(item.Value.ToString()) && (property.PropertyType == typeof(int) || property.PropertyType == typeof(int?)))
                                 {
-                                    value = value.Replace(item.Key, item.Value.ToString());
+                                    property.SetValue(entity, item.Value);
+                                }
+                                else
+                                {
+                                    property.SetValue(entity, value);
                                 }
                             }
-                            property.SetValue(entity, value);
                         }
-                        else if (property.PropertyType == typeof(DateTime) || property.PropertyType == typeof(DateTime?))
+                        continue;
+                    }
+
+                    if (property.PropertyType == typeof(string))
+                    {
+                        property.SetValue(entity, value);
+                        continue;
+                    }
+
+                    if (property.PropertyType == typeof(int) || property.PropertyType == typeof(int?))
+                    {
+                        property.SetValue(entity, int.Parse(value));
+                        continue;
+                    }
+
+                    if (property.PropertyType == typeof(double) || property.PropertyType == typeof(double?))
+                    {
+                        property.SetValue(entity, double.Parse(value));
+                        continue;
+                    }
+
+                    if (property.PropertyType == typeof(DateTime) || property.PropertyType == typeof(DateTime?))
+                    {
+                        var givenDateInfo = value.Split(' ');
+                        string dateFormat = null;
+                        string dateValue = value;
+                        if (givenDateInfo.Count() > 1
+                            && (givenDateInfo[givenDateInfo.Count() - 1].Contains("d")
+                                || givenDateInfo[givenDateInfo.Count() - 1].Contains("M")
+                                || givenDateInfo[givenDateInfo.Count() - 1].Contains("y")
+                                || givenDateInfo[givenDateInfo.Count() - 1].Contains("H")
+                                || givenDateInfo[givenDateInfo.Count() - 1].Contains("m")
+                                || givenDateInfo[givenDateInfo.Count() - 1].Contains("s")))
                         {
-                            var givenDateInfo = value.Split(' ');
-                            string dateFormat = null;
-                            if (givenDateInfo.Count() > 1) dateFormat = givenDateInfo[1];
-                            DateTime givenDate = DateTime.ParseExact(givenDateInfo[0], string.IsNullOrEmpty(dateFormat) ? Format.Date : dateFormat, CultureInfo.InvariantCulture);
-                            property.SetValue(entity, givenDate);
+                            dateFormat = givenDateInfo[givenDateInfo.Count() - 1];
+                            dateValue = value.Replace(dateFormat, string.Empty).Trim();
                         }
+                        DateTime givenDate = DateTime.ParseExact(dateValue, string.IsNullOrEmpty(dateFormat) ? Format.Date : dateFormat, CultureInfo.InvariantCulture);
+                        property.SetValue(entity, givenDate);
+                        continue;
                     }
                 }
 
@@ -153,14 +170,13 @@ namespace Kiss4Web.Test.TestInfrastructure
         /// <typeparam name="TEntity">name of table in database</typeparam>
         /// <param name="table"></param>
         /// <param name="idFieldMapping">set of field name of this table and ID field name of other table that it’s data refer to</param>
-        /// <param name="isView">this table is View in database</param>
-        public static void Insert<TEntity>(Table table, Dictionary<string, string> idFieldMapping = null, bool isView = false)
+        public static void Insert<TEntity>(Table table, Dictionary<string, string> idFieldMapping = null)
             where TEntity : class
         {
             var entities = table.CreateSet<TEntity>().ToList(); // Assumption: order remains as in the table
             var entityProperties = typeof(TEntity).GetProperties();
             var entityTypeName = typeof(TEntity).Name;
-            var entityIdPropertyName = _IdConventionExceptions.Lookup(entityTypeName) ?? $"{entityTypeName}ID"; // convention
+            var entityIdPropertyName = ConstantData.IdConventionExceptions.Lookup(entityTypeName) ?? $"{entityTypeName}ID"; // convention
             var logicalNameLookup = new Dictionary<object, string>();
 
             var properties = table.Header.ToList();
@@ -182,7 +198,7 @@ namespace Kiss4Web.Test.TestInfrastructure
                         else if (prop.EndsWith("ID", StringComparison.InvariantCultureIgnoreCase) && !int.TryParse(value, out var id))
                         {
                             // lookup instead of id
-                            if (string.Equals(prop, entityIdPropertyName, StringComparison.InvariantCultureIgnoreCase) && !isView)
+                            if (string.Equals(prop, entityIdPropertyName, StringComparison.InvariantCultureIgnoreCase))
                             {
                                 // value is the logical name of this entity that will be created
                                 logicalNameLookup.Add(entity, value);
@@ -209,7 +225,7 @@ namespace Kiss4Web.Test.TestInfrastructure
                                     refFieldName = idFieldMapping[prop];
                                 }
                                 var refEntityName = GetEntityNameFromHeader(refFieldName);
-                                var lookup = _identifierLookup[refEntityName];
+                                var lookup = TestDataPool.IdentifierLookup[refEntityName];
                                 var referencedEntityId = lookup[value.Normalize()];
                                 property.SetValue(entity, referencedEntityId);
                             }
@@ -221,7 +237,7 @@ namespace Kiss4Web.Test.TestInfrastructure
             }
 
             // get ids for lookup & add created entity to data pool
-            var entityLookup = _identifierLookup.LookupAddIfMissing(typeof(TEntity).Name.Normalize(), () => new Dictionary<string, int>());
+            var entityLookup = TestDataPool.IdentifierLookup.LookupAddIfMissing(typeof(TEntity).Name.Normalize(), () => new Dictionary<string, int>());
             var createdEntities = new List<object>();
             foreach (var entity in entities.OfType<IEntity>())
             {
@@ -244,29 +260,30 @@ namespace Kiss4Web.Test.TestInfrastructure
             where TEntity : class
         {
             var entityTypeName = typeof(TEntity).Name;
-            if (_createdEntities.ContainsKey(entityTypeName))
+            if (TestDataPool.CreatedEntities.ContainsKey(entityTypeName))
             {
-                _createdEntities[entityTypeName].AddRange(entities);
+                TestDataPool.CreatedEntities[entityTypeName].AddRange(entities);
             }
             else
             {
-                _createdEntities.Add(entityTypeName, entities);
+                TestDataPool.CreatedEntities.Add(entityTypeName, entities);
             }
         }
 
         /// <summary>
         /// Check record does exists in database or not, if exists then add to data pool of TestDataManager
         /// </summary>
-        /// <typeparam name="TEntity"></typeparam>
+        /// <typeparam name="TEntity">name of table in database</typeparam>
         /// <param name="entity"></param>
         /// <param name="isExists"></param>
-        public static void CheckEntityExistsInDB<TEntity>(object entity, bool isExists = true)
+        /// <param name="isUpdated">determine that this record is not inserted (just be updated)</param>
+        public static void CheckEntityExistsInDB<TEntity>(object entity, bool isExists = true, bool isInserted = true)
             where TEntity : class
         {
             bool actual = false;
 
             var entityTypeName = typeof(TEntity).Name;
-            var entityIdPropertyName = _IdConventionExceptions.Lookup(entityTypeName) ?? $"{entityTypeName}ID"; // convention
+            var entityIdPropertyName = ConstantData.IdConventionExceptions.Lookup(entityTypeName) ?? $"{entityTypeName}ID"; // convention
 
             StringBuilder sql = new StringBuilder();
             sql.Append($"SELECT {entityIdPropertyName} FROM {entityTypeName} WHERE 1 = 1 ");
@@ -274,6 +291,7 @@ namespace Kiss4Web.Test.TestInfrastructure
             var entityProperties = entity.GetType().GetProperties();
             foreach (var property in entityProperties)
             {
+                if (property.Name.Equals("Id")) continue;
                 if (property.PropertyType == typeof(string))
                 {
                     var value = property.GetValue(entity);
@@ -306,14 +324,17 @@ namespace Kiss4Web.Test.TestInfrastructure
             if (dbEntities != null && dbEntities.Count > 0)
             {
                 actual = true;
-                var createdEntities = new List<object>();
-                foreach (int id in dbEntities)
+                if (isInserted)
                 {
-                    object dbEntity = Activator.CreateInstance<TEntity>();
-                    dbEntity.GetType().GetProperty(entityIdPropertyName).SetValue(dbEntity, id);
-                    createdEntities.Add(dbEntity);
+                    var createdEntities = new List<object>();
+                    foreach (int id in dbEntities)
+                    {
+                        object dbEntity = Activator.CreateInstance<TEntity>();
+                        dbEntity.GetType().GetProperty(entityIdPropertyName).SetValue(dbEntity, id);
+                        createdEntities.Add(dbEntity);
+                    }
+                    TrackEntity<TEntity>(createdEntities);
                 }
-                TrackEntity<TEntity>(createdEntities);
             }
 
             try
@@ -327,6 +348,22 @@ namespace Kiss4Web.Test.TestInfrastructure
             }
         }
 
+        public static void CheckAddUpdateEntityExistsInDB<TEntity>(bool isExists = true, bool isInserted = true)
+            where TEntity : class
+        {
+            foreach (var entity in TestDataPool.TempEntities)
+            {
+                CheckEntityExistsInDB<TEntity>(entity, isExists, isInserted);
+            }
+
+        }
+
+        public static void AddToTempEntities<TEntity>(Table givenData, Dictionary<string, string> fieldMapping = null, Dictionary<string, string> idFieldMapping = null)
+            where TEntity : class
+        {
+            TestDataPool.TempEntities.AddRange(CreateSetWithLookup<TEntity>(givenData, fieldMapping: fieldMapping, idFieldMapping: idFieldMapping));
+        }
+
         /// <summary>
         /// Implement Login
         /// </summary>
@@ -337,13 +374,13 @@ namespace Kiss4Web.Test.TestInfrastructure
             ChromeOptions options = new ChromeOptions();
             options.AddArguments("--incognito");
             options.AddArguments("--start-maximized");
-            Driver = new ChromeDriver(options);
+            TestDataPool.Driver = new ChromeDriver(options);
 
-            Driver.Url = Urls.UrlLogin;
+            TestDataPool.Driver.Url = Urls.UrlLogin;
             System.Threading.Thread.Sleep(5000);
-            Driver.FindElement(By.XPath(XPathLogin.InputUsername)).SendKeys(username);
-            Driver.FindElement(By.XPath(XPathLogin.InputPassword)).SendKeys(password);
-            Driver.FindElement(By.XPath(XPathLogin.ButtonLogin)).Click();
+            TestDataPool.Driver.FindElement(By.XPath(XPathLogin.InputUsername)).SendKeys(username);
+            TestDataPool.Driver.FindElement(By.XPath(XPathLogin.InputPassword)).SendKeys(password);
+            TestDataPool.Driver.FindElement(By.XPath(XPathLogin.ButtonLogin)).Click();
             System.Threading.Thread.Sleep(10000);
         }
 
@@ -358,7 +395,7 @@ namespace Kiss4Web.Test.TestInfrastructure
             if (index < 1) throw new ArgumentOutOfRangeException("index must be >= 1");
             if (waitingTime < 0) throw new NotSupportedException("waitingTime must be >= 0");
 
-            var elements = Driver.FindElements(By.XPath(xpath));
+            var elements = TestDataPool.Driver.FindElements(By.XPath(xpath));
             elements[index - 1].Click();
             if (waitingTime > 0)
             {
@@ -378,8 +415,8 @@ namespace Kiss4Web.Test.TestInfrastructure
             if (index < 1) throw new ArgumentOutOfRangeException("index must be >= 1");
             if (waitingTime < 0) throw new NotSupportedException("waitingTime must be >= 0");
 
-            Driver.FindElements(By.XPath(xpath))[index - 1].Clear();
-            Driver.FindElements(By.XPath(xpath))[index - 1].SendKeys(inputText);
+            TestDataPool.Driver.FindElements(By.XPath(xpath))[index - 1].Clear();
+            TestDataPool.Driver.FindElements(By.XPath(xpath))[index - 1].SendKeys(inputText);
             if (waitingTime > 0)
             {
                 System.Threading.Thread.Sleep(waitingTime * 1000);
@@ -446,11 +483,10 @@ namespace Kiss4Web.Test.TestInfrastructure
         /// Implement choose option in datebox element
         /// </summary>
         /// <param name="xpath">xPath of datebox element</param>
-        /// <param name="option">the date that want to choose</param>
-        /// <param name="format">format of the date that want to choose</param>
+        /// <param name="option">the date that want to choose, format is <date-value> <date-format>, <date-format> is optional</param>
         /// <param name="index">specify element in found elements, default is the first element</param>
         /// <param name="waitingTime">waiting time (second) after implement action</param>
-        public static void InputDatebox(string xpath, string option, string format = null, int index = 1, int waitingTime = 1)
+        public static void InputDatebox(string xpath, string option, int index = 1, int waitingTime = 1)
         {
             if (index < 1) throw new ArgumentOutOfRangeException("index must be >= 1");
             if (waitingTime < 0) throw new NotSupportedException("waitingTime must be >= 0");
@@ -461,13 +497,16 @@ namespace Kiss4Web.Test.TestInfrastructure
             Click(XPath0DevExtreme.AutogenElement + XPath0DevExtreme.CalendarDateRangeButton);
 
             // get date, month, year from expected value
-            DateTime givenDate = DateTime.ParseExact(option, string.IsNullOrEmpty(format) ? Format.Date : format, CultureInfo.InvariantCulture);
+            var givenDateInfo = option.Split(' ');
+            string dateFormat = null;
+            if (givenDateInfo.Count() > 1) dateFormat = givenDateInfo[1];
+            DateTime givenDate = DateTime.ParseExact(givenDateInfo[0], string.IsNullOrEmpty(dateFormat) ? Format.Date : dateFormat, CultureInfo.InvariantCulture);
 
             // choose year range
             bool isContainYear = false;
             while (isContainYear == false)
             {
-                var yearRangeElements = Driver.FindElements(By.XPath(XPath0DevExtreme.AutogenElement + XPath0DevExtreme.CalendarCellOption));
+                var yearRangeElements = TestDataPool.Driver.FindElements(By.XPath(XPath0DevExtreme.AutogenElement + XPath0DevExtreme.CalendarCellOption));
                 for (int i = 1; i < yearRangeElements.Count - 1; ++i)
                 {
                     var rangeValue = yearRangeElements[i].GetAttribute("innerText");
@@ -503,7 +542,7 @@ namespace Kiss4Web.Test.TestInfrastructure
             }
 
             // choose year 
-            var yearElements = Driver.FindElements(By.XPath(XPath0DevExtreme.AutogenElement + XPath0DevExtreme.CalendarCellOption));
+            var yearElements = TestDataPool.Driver.FindElements(By.XPath(XPath0DevExtreme.AutogenElement + XPath0DevExtreme.CalendarCellOption));
             for (int i = 1; i < yearElements.Count - 1; ++i)
             {
                 var yearValue = int.Parse(yearElements[i].GetAttribute("innerText"));
@@ -516,7 +555,7 @@ namespace Kiss4Web.Test.TestInfrastructure
             }
 
             // choose month
-            var monthElements = Driver.FindElements(By.XPath(XPath0DevExtreme.AutogenElement + XPath0DevExtreme.CalendarCellOption));
+            var monthElements = TestDataPool.Driver.FindElements(By.XPath(XPath0DevExtreme.AutogenElement + XPath0DevExtreme.CalendarCellOption));
             for (int i = 0; i < monthElements.Count; ++i)
             {
                 var monthValue = int.Parse(monthElements[i].GetAttribute("data-value").Split('/')[1]);
@@ -529,7 +568,7 @@ namespace Kiss4Web.Test.TestInfrastructure
             }
 
             // choose day
-            var dayElements = Driver.FindElements(By.XPath(XPath0DevExtreme.AutogenElement + XPath0DevExtreme.CalendarCellOption));
+            var dayElements = TestDataPool.Driver.FindElements(By.XPath(XPath0DevExtreme.AutogenElement + XPath0DevExtreme.CalendarCellOption));
             for (int i = 0; i < dayElements.Count; ++i)
             {
                 if (dayElements[i].GetAttribute("class").Contains("dx-calendar-other-month")) continue;
@@ -579,7 +618,7 @@ namespace Kiss4Web.Test.TestInfrastructure
                     }
                     foreach (var xpath in xPaths)
                     {
-                        var element = Driver.FindElements(By.XPath(string.Format(xpath, logicalName)));
+                        var element = TestDataPool.Driver.FindElements(By.XPath(string.Format(xpath, logicalName)));
                         if (element != null && element.Count > 0)
                         {
                             if (elementType != null)
@@ -598,10 +637,7 @@ namespace Kiss4Web.Test.TestInfrastructure
                                             InputGridDropdown(string.Format(xpath, logicalName), givenValue, waitingTime: waitingTime);
                                             break;
                                         case InputElementType.Datebox:
-                                            var givenDateInfo = givenValue.Split(' ');
-                                            string dateFormat = null;
-                                            if (givenDateInfo.Count() > 1) dateFormat = givenDateInfo[1];
-                                            InputDatebox(string.Format(xpath, logicalName), givenDateInfo[0], dateFormat, waitingTime: waitingTime);
+                                            InputDatebox(string.Format(xpath, logicalName), givenValue, waitingTime: waitingTime);
                                             break;
                                         default:
                                             Input(string.Format(xpath + XPath0Common.Textbox, logicalName), givenValue, waitingTime: waitingTime);
@@ -635,7 +671,7 @@ namespace Kiss4Web.Test.TestInfrastructure
             if (index < 1) throw new ArgumentOutOfRangeException("index must be >= 1");
             if (waitingTime < 0) throw new NotSupportedException("waitingTime must be >= 0");
 
-            Driver.FindElements(By.XPath(xpath))[index - 1].Clear();
+            TestDataPool.Driver.FindElements(By.XPath(xpath))[index - 1].Clear();
             if (waitingTime > 0)
             {
                 System.Threading.Thread.Sleep(waitingTime * 1000);
@@ -650,11 +686,11 @@ namespace Kiss4Web.Test.TestInfrastructure
         {
             try
             {
-                Assert.That(Driver.Url.Equals(expectedUrl));
+                Assert.That(TestDataPool.Driver.Url.Equals(expectedUrl));
             }
             catch (AssertionException)
             {
-                string message = $"Expected Url: {expectedUrl} \nBut was: {Driver.Url}";
+                string message = $"Expected Url: {expectedUrl} \nBut was: {TestDataPool.Driver.Url}";
                 throw new AssertionException(message);
             }
         }
@@ -670,7 +706,7 @@ namespace Kiss4Web.Test.TestInfrastructure
             if (index < 1) throw new ArgumentOutOfRangeException("index must be >= 1");
 
             bool actual = true;
-            var elements = Driver.FindElements(By.XPath(xpath));
+            var elements = TestDataPool.Driver.FindElements(By.XPath(xpath));
             if (elements == null 
                 || (elements != null && elements.Count == 0)
                 || (elements != null && elements.Count > 0 && elements.Count < index))
@@ -701,7 +737,7 @@ namespace Kiss4Web.Test.TestInfrastructure
 
             if (isDisplayed != null)
             {
-                bool actualStatus = Driver.FindElements(By.XPath(xpath))[index - 1].Displayed;
+                bool actualStatus = TestDataPool.Driver.FindElements(By.XPath(xpath))[index - 1].Displayed;
                 try
                 {
                     Assert.That(actualStatus == isDisplayed.Value);
@@ -714,7 +750,7 @@ namespace Kiss4Web.Test.TestInfrastructure
             }
             if (isEnabled != null)
             {
-                bool actualStatus = Driver.FindElements(By.XPath(xpath))[index - 1].Enabled;
+                bool actualStatus = TestDataPool.Driver.FindElements(By.XPath(xpath))[index - 1].Enabled;
                 try
                 {
                     Assert.That(actualStatus == isEnabled.Value);
@@ -738,7 +774,7 @@ namespace Kiss4Web.Test.TestInfrastructure
         {
             if (index < 1) throw new ArgumentOutOfRangeException("index must be >= 1");
 
-            var element = Driver.FindElements(By.XPath(xpath))[index - 1];
+            var element = TestDataPool.Driver.FindElements(By.XPath(xpath))[index - 1];
             string actualValue = element.GetAttribute(string.IsNullOrEmpty(valueAttribute) ? "innerText" : valueAttribute);
             try
             {
@@ -790,7 +826,7 @@ namespace Kiss4Web.Test.TestInfrastructure
                         if (!string.IsNullOrEmpty(refFieldName))
                         {
                             var refEntityName = GetEntityNameFromHeader(refFieldName);
-                            var lookup = _identifierLookup.Lookup(refEntityName);
+                            var lookup = TestDataPool.IdentifierLookup.Lookup(refEntityName);
                             foreach (var item in lookup)
                             {
                                 if (expectedValue.Contains(item.Key))
@@ -810,7 +846,7 @@ namespace Kiss4Web.Test.TestInfrastructure
                     }
                     foreach (var xpath in xPathAndAttribute)
                     {
-                        var element = Driver.FindElements(By.XPath(string.Format(xpath.Key, logicalName)));
+                        var element = TestDataPool.Driver.FindElements(By.XPath(string.Format(xpath.Key, logicalName)));
                         if (element != null && element.Count > 0)
                         {
                             actualValue = element[i].GetAttribute(string.IsNullOrEmpty(xpath.Value) ? "innerText" : xpath.Value);
@@ -847,16 +883,16 @@ namespace Kiss4Web.Test.TestInfrastructure
         /// </summary>
         public static void Cleanup()
         {
-            if (Driver != null) Driver.Quit();
-            if (_createdEntities.Count > 0)
+            if (TestDataPool.Driver != null) TestDataPool.Driver.Quit();
+            if (TestDataPool.CreatedEntities.Count > 0)
             {
                 var context = _CreateDbContext();
-                for (int i = _createdEntities.Count - 1; i >= 0; --i)
+                for (int i = TestDataPool.CreatedEntities.Count - 1; i >= 0; --i)
                 {
-                    var entityTypeName = _createdEntities.ElementAt(i).Key;
-                    foreach (var entity in _createdEntities.ElementAt(i).Value)
+                    var entityTypeName = TestDataPool.CreatedEntities.ElementAt(i).Key;
+                    foreach (var entity in TestDataPool.CreatedEntities.ElementAt(i).Value)
                     {
-                        string entityIdPropertyName = _IdConventionExceptions.Lookup(entityTypeName) ?? $"{entityTypeName}ID";
+                        string entityIdPropertyName = ConstantData.IdConventionExceptions.Lookup(entityTypeName) ?? $"{entityTypeName}ID";
                         var value = entity.GetType().GetProperty(entityIdPropertyName).GetValue(entity);
 
                         string sql = $"DELETE {entityTypeName} WHERE {entityIdPropertyName} = {value};";
@@ -866,14 +902,14 @@ namespace Kiss4Web.Test.TestInfrastructure
                     }
                 }
             }
-            TempAddedEntities.Clear();
-            _createdEntities.Clear();
-            _identifierLookup.Clear();
+            TestDataPool.TempEntities.Clear();
+            TestDataPool.CreatedEntities.Clear();
+            TestDataPool.IdentifierLookup.Clear();
         }
 
         private static string GetEntityNameFromHeader(string idProperty)
         {
-            var exception = _IdConventionExceptions.Where(kvp => kvp.Value == idProperty)
+            var exception = ConstantData.IdConventionExceptions.Where(kvp => kvp.Value == idProperty)
                                                   .Select(kvp => kvp.Key)
                                                   .FirstOrDefault();
             return (exception ?? idProperty.Substring(0, idProperty.Length - 2)).Normalize();

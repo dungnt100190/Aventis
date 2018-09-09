@@ -34,7 +34,7 @@ namespace Kiss4Web.DataAccess
         /// </summary>
         /// <param name="entities">Anstehende DB-Änderungen</param>
         /// <param name="dbContext"></param>
-        public Task AuditEntities(IEnumerable<EntityEntry> entities, IDbContext dbContext)
+        public void AuditEntities(IEnumerable<EntityEntry> entities, IDbContext dbContext)
         {
             var now = _dateTimeProvider.Now;
             var addedEntities = entities.Where(ent => ent.State == EntityState.Added)
@@ -56,8 +56,6 @@ namespace Kiss4Web.DataAccess
                 addedEntity.Modified = now;
                 addedEntity.Modifier = _authenticatedUsername;
             }
-
-            return Task.CompletedTask;
         }
     }
 }

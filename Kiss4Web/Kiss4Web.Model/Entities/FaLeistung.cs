@@ -100,11 +100,11 @@ namespace Kiss4Web.Model
             Xtask = new HashSet<XTask>();
         }
 
-        public int FaLeistungId { get; set; }
-        public int BaPersonId { get; set; }
-        public int FaFallId { get; set; }
-        public int ModulId { get; set; }
-        public int UserId { get; set; }
+        public int FaLeistungID { get; set; }
+        public int BaPersonID { get; set; }
+        public int FaFallID { get; set; }
+        public int ModulID { get; set; }
+        public int UserID { get; set; }
         public int? SachbearbeiterId { get; set; }
         public int? SchuldnerBaPersonId { get; set; }
         public int? FaProzessCode { get; set; }
@@ -251,7 +251,7 @@ namespace Kiss4Web.Model
         public ICollection<VmVaterschaft> VmVaterschaft { get; set; }
         public ICollection<WhAsvseintrag> WhAsvseintrag { get; set; }
         public ICollection<XTask> Xtask { get; set; }
-        public int Id => FaLeistungId;
+        public int Id => FaLeistungID;
         public byte[] RowVersion => FaLeistungTs;
     }
 }

@@ -70,9 +70,10 @@ Scenario: 02 Search by Betreff
 Scenario: 03 Search by Erfasst
 	Given logon with username is 'test_admin_1', password is '123456'
 	And go to page Pendenzen
-	When input into Pendenzen search area as below
-	| Bearbeitung from | Bearbeitung to | 
-	| 10.03.2018       | 10.05.2018     | 
+	When choose '10.03.2018' in datebox Bearbeitung from
+	And choose '10.05.2018' in datebox Bearbeitung to
+	#| Bearbeitung from | Bearbeitung to | 
+	#| 10.03.2018       | 10.05.2018     | 
 	Then data of grid Pendenzen should be
 	| Fällig     | Betreff          | Leistung | Fallträger               | Fallnummer | Person            | Ersteller                  | Empfänger                  | Status         | Erfasst    | Bearbeitung | Erledigt | Antwort               |
 	| 10.10.2018 | Task 20180817-03 | F        | Person test-2 (BPS2)     | BPS2       | Person test-1, NT | NULL                       | test_admin_1 - Global, CMC | in Bearbeitung | 10.01.2018 | 10.04.2018  | NULL     | Task 20180817-3 text  |
@@ -82,9 +83,7 @@ Scenario: 03 Search by Erfasst
 Scenario: 04 Search by Ersteller
 	Given logon with username is 'test_admin_1', password is '123456'
 	And go to page Pendenzen
-	When input into Pendenzen search area as below
-	| Ersteller                            | 
-	| Kurzel=test_admin_1/Name=Global, CMC | 
+	When choose 'Kurzel=test_admin_1/Name=Global, CMC' in dropdown Ersteller 
 	Then data of grid Pendenzen should be
 	| Fällig     | Betreff          | Leistung | Fallträger               | Fallnummer | Person            | Ersteller                  | Empfänger                  | Status         | Erfasst    | Bearbeitung | Erledigt | Antwort               |
 	| 10.10.2018 | Task 20180817-08 | K        | Person test-2 (BPS1)     | BPS1       | Person test-1, NT | test_admin_1 - Global, CMC | test_admin_1 - Global, CMC | in Bearbeitung | 10.01.2018 | 10.05.2018  | NULL     | Task 20180817-8 text  |

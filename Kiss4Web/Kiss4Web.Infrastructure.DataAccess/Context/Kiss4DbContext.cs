@@ -2001,12 +2001,12 @@ namespace Kiss4Web.Infrastructure.DataAccess.Context
 
                 entity.HasIndex(e => new { e.Name, e.Vorname });
 
-                entity.HasIndex(e => new { e.Name, e.Vorname, e.BaPersonId })
+                entity.HasIndex(e => new { e.Name, e.Vorname, e.BaPersonID })
                     .HasName("IX_BaPerson_BaPersonID_Name_Vorname");
 
-                entity.HasIndex(e => new { e.BaPersonId, e.Name, e.Vorname, e.Geburtsdatum });
+                entity.HasIndex(e => new { e.BaPersonID, e.Name, e.Vorname, e.Geburtsdatum });
 
-                entity.Property(e => e.BaPersonId).HasColumnName("BaPersonID");
+                entity.Property(e => e.BaPersonID).HasColumnName("BaPersonID");
 
                 entity.Property(e => e.Ahvnummer)
                     .HasColumnName("AHVNummer")
@@ -5346,7 +5346,7 @@ namespace Kiss4Web.Infrastructure.DataAccess.Context
 
             modelBuilder.Entity<FaLeistung>(entity =>
             {
-                entity.HasIndex(e => e.BaPersonId);
+                entity.HasIndex(e => e.BaPersonID);
 
                 entity.HasIndex(e => e.DatumBis);
 
@@ -5356,42 +5356,42 @@ namespace Kiss4Web.Infrastructure.DataAccess.Context
 
                 entity.HasIndex(e => e.SchuldnerBaPersonId);
 
-                entity.HasIndex(e => e.UserId);
+                entity.HasIndex(e => e.UserID);
 
                 entity.HasIndex(e => e.VufaFallId);
 
-                entity.HasIndex(e => new { e.BaPersonId, e.FaLeistungId, e.ModulId, e.DatumVon });
+                entity.HasIndex(e => new { e.BaPersonID, e.FaLeistungID, e.ModulID, e.DatumVon });
 
-                entity.HasIndex(e => new { e.FaFallId, e.FaProzessCode, e.BaPersonId, e.DatumVon })
+                entity.HasIndex(e => new { e.FaFallID, e.FaProzessCode, e.BaPersonID, e.DatumVon })
                     .HasName("IX_FaLeistung_BaPersonID_DatumVon_FaFallID_FaProzessCode");
 
-                entity.HasIndex(e => new { e.FaFallId, e.ModulId, e.GemeindeCode, e.DatumVon });
+                entity.HasIndex(e => new { e.FaFallID, e.ModulID, e.GemeindeCode, e.DatumVon });
 
-                entity.HasIndex(e => new { e.FaLeistungId, e.FaFallId, e.DatumBis, e.ModulId })
+                entity.HasIndex(e => new { e.FaLeistungID, e.FaFallID, e.DatumBis, e.ModulID })
                     .HasName("IX_FaLeistung_ModulID_FaLeistungID_FaFallID_DatumBis");
 
-                entity.HasIndex(e => new { e.FaLeistungId, e.UserId, e.BaPersonId, e.ModulId });
+                entity.HasIndex(e => new { e.FaLeistungID, e.UserID, e.BaPersonID, e.ModulID });
 
-                entity.HasIndex(e => new { e.FaProzessCode, e.FaLeistungId, e.UserId, e.BaPersonId });
+                entity.HasIndex(e => new { e.FaProzessCode, e.FaLeistungID, e.UserID, e.BaPersonID });
 
-                entity.HasIndex(e => new { e.UserId, e.FaLeistungId, e.BaPersonId, e.DatumBis });
+                entity.HasIndex(e => new { e.UserID, e.FaLeistungID, e.BaPersonID, e.DatumBis });
 
-                entity.HasIndex(e => new { e.FaLeistungId, e.BaPersonId, e.ModulId, e.DatumVon, e.DatumBis });
+                entity.HasIndex(e => new { e.FaLeistungID, e.BaPersonID, e.ModulID, e.DatumVon, e.DatumBis });
 
-                entity.HasIndex(e => new { e.ModulId, e.FaLeistungId, e.BaPersonId, e.UserId, e.DatumVon });
+                entity.HasIndex(e => new { e.ModulID, e.FaLeistungID, e.BaPersonID, e.UserID, e.DatumVon });
 
-                entity.HasIndex(e => new { e.BaPersonId, e.ModulId, e.FaLeistungId, e.DatumVon, e.DatumBis, e.Visdat36Fallid, e.Visdat36Area })
+                entity.HasIndex(e => new { e.BaPersonID, e.ModulID, e.FaLeistungID, e.DatumVon, e.DatumBis, e.Visdat36Fallid, e.Visdat36Area })
                     .HasName("IX_FaLeistung_BaPersonID_ModulID_FaLeistungID_DatumVon_DatumBis_VisDatFallID_visdat36Area");
 
-                entity.HasIndex(e => new { e.FaLeistungId, e.BaPersonId, e.ModulId, e.SchuldnerBaPersonId, e.DatumBis, e.GemeindeCode, e.DatumVon })
+                entity.HasIndex(e => new { e.FaLeistungID, e.BaPersonID, e.ModulID, e.SchuldnerBaPersonId, e.DatumBis, e.GemeindeCode, e.DatumVon })
                     .HasName("IX_FaLeistung_GemeindeCode_DatumVon_FaLeistungID_BaPersonID_ModulID_SchuldnerBaPersonID_DatumBis");
 
-                entity.HasIndex(e => new { e.BaPersonId, e.ModulId, e.UserId, e.SachbearbeiterId, e.FaProzessCode, e.DatumVon, e.DatumBis, e.FaFallId })
+                entity.HasIndex(e => new { e.BaPersonID, e.ModulID, e.UserID, e.SachbearbeiterId, e.FaProzessCode, e.DatumVon, e.DatumBis, e.FaFallID })
                     .HasName("IX_FaLeistung_FaFallID_BaPersonID_ModulID_DatumVon_DatumBis_UserID_SachbearbeiterID");
 
-                entity.Property(e => e.FaLeistungId).HasColumnName("FaLeistungID");
+                entity.Property(e => e.FaLeistungID).HasColumnName("FaLeistungID");
 
-                entity.Property(e => e.BaPersonId).HasColumnName("BaPersonID");
+                entity.Property(e => e.BaPersonID).HasColumnName("BaPersonID");
 
                 entity.Property(e => e.Bemerkung).IsUnicode(false);
 
@@ -5418,7 +5418,7 @@ namespace Kiss4Web.Infrastructure.DataAccess.Context
                     .HasMaxLength(20)
                     .IsUnicode(false);
 
-                entity.Property(e => e.FaFallId).HasColumnName("FaFallID");
+                entity.Property(e => e.FaFallID).HasColumnName("FaFallID");
 
                 entity.Property(e => e.FaLeistungTs)
                     .IsRequired()
@@ -5456,7 +5456,7 @@ namespace Kiss4Web.Infrastructure.DataAccess.Context
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.ModulId).HasColumnName("ModulID");
+                entity.Property(e => e.ModulID).HasColumnName("ModulID");
 
                 entity.Property(e => e.OldUnitId).HasColumnName("OldUnitID");
 
@@ -5466,7 +5466,7 @@ namespace Kiss4Web.Infrastructure.DataAccess.Context
 
                 entity.Property(e => e.SchuldnerBaPersonId).HasColumnName("SchuldnerBaPersonID");
 
-                entity.Property(e => e.UserId).HasColumnName("UserID");
+                entity.Property(e => e.UserID).HasColumnName("UserID");
 
                 entity.Property(e => e.Visdat36Area)
                     .HasColumnName("visdat36Area")
@@ -5489,13 +5489,13 @@ namespace Kiss4Web.Infrastructure.DataAccess.Context
 
                 entity.HasOne(d => d.BaPerson)
                     .WithMany(p => p.FaLeistungBaPerson)
-                    .HasForeignKey(d => d.BaPersonId)
+                    .HasForeignKey(d => d.BaPersonID)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_FaLeistung_BaPerson");
 
                 entity.HasOne(d => d.Modul)
                     .WithMany(p => p.FaLeistung)
-                    .HasForeignKey(d => d.ModulId)
+                    .HasForeignKey(d => d.ModulID)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_FaLeistung_XModul");
 
@@ -5511,7 +5511,7 @@ namespace Kiss4Web.Infrastructure.DataAccess.Context
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.FaLeistungUser)
-                    .HasForeignKey(d => d.UserId)
+                    .HasForeignKey(d => d.UserID)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_FaLeistung_XUser");
             });
@@ -19882,27 +19882,27 @@ namespace Kiss4Web.Infrastructure.DataAccess.Context
             {
                 entity.ToTable("XTask");
 
-                entity.HasIndex(e => e.FaFallId);
+                entity.HasIndex(e => e.FaFallID);
 
                 entity.HasIndex(e => new { e.XTaskID, e.TaskTypeCode });
 
-                entity.HasIndex(e => new { e.BaPersonId, e.FaFallId, e.TaskSenderCode })
+                entity.HasIndex(e => new { e.BaPersonID, e.FaFallID, e.TaskSenderCode })
                     .HasName("IX_XTask_TaskSenderCode_FaFallID_BaPersonID");
 
-                entity.HasIndex(e => new { e.SenderId, e.TaskSenderCode, e.TaskStatusCode })
+                entity.HasIndex(e => new { e.SenderID, e.TaskSenderCode, e.TaskStatusCode })
                     .HasName("IX_XTask_SenderID");
 
-                entity.HasIndex(e => new { e.ReceiverId, e.TaskReceiverCode, e.TaskStatusCode, e.ExpirationDate });
+                entity.HasIndex(e => new { e.ReceiverID, e.TaskReceiverCode, e.TaskStatusCode, e.ExpirationDate });
 
-                entity.HasIndex(e => new { e.FaFallId, e.XTaskID, e.CreateDate, e.TaskSenderCode, e.BaPersonId });
+                entity.HasIndex(e => new { e.FaFallID, e.XTaskID, e.CreateDate, e.TaskSenderCode, e.BaPersonID });
 
-                entity.HasIndex(e => new { e.TaskTypeCode, e.XTaskID, e.TaskStatusCode, e.ReceiverId, e.TaskReceiverCode });
+                entity.HasIndex(e => new { e.TaskTypeCode, e.XTaskID, e.TaskStatusCode, e.ReceiverID, e.TaskReceiverCode });
 
-                entity.HasIndex(e => new { e.SenderId, e.TaskSenderCode, e.TaskStatusCode, e.XTaskID, e.TaskTypeCode, e.ExpirationDate, e.ReceiverId, e.TaskReceiverCode });
+                entity.HasIndex(e => new { e.SenderID, e.TaskSenderCode, e.TaskStatusCode, e.XTaskID, e.TaskTypeCode, e.ExpirationDate, e.ReceiverID, e.TaskReceiverCode });
 
                 entity.Property(e => e.XTaskID).HasColumnName("XTaskID");
 
-                entity.Property(e => e.BaPersonId).HasColumnName("BaPersonID");
+                entity.Property(e => e.BaPersonID).HasColumnName("BaPersonID");
 
                 entity.Property(e => e.CreateDate)
                     .HasColumnType("datetime")
@@ -19916,21 +19916,21 @@ namespace Kiss4Web.Infrastructure.DataAccess.Context
 
                 entity.Property(e => e.FaDokumenteId).HasColumnName("FaDokumenteID");
 
-                entity.Property(e => e.FaFallId).HasColumnName("FaFallID");
+                entity.Property(e => e.FaFallID).HasColumnName("FaFallID");
 
-                entity.Property(e => e.FaLeistungId).HasColumnName("FaLeistungID");
+                entity.Property(e => e.FaLeistungID).HasColumnName("FaLeistungID");
 
                 entity.Property(e => e.JumpToPath)
                     .HasMaxLength(1500)
                     .IsUnicode(false);
 
-                entity.Property(e => e.ReceiverId).HasColumnName("ReceiverID");
+                entity.Property(e => e.ReceiverID).HasColumnName("ReceiverID");
 
                 entity.Property(e => e.ResponseText)
                     .HasMaxLength(2500)
                     .IsUnicode(false);
 
-                entity.Property(e => e.SenderId).HasColumnName("SenderID");
+                entity.Property(e => e.SenderID).HasColumnName("SenderID");
 
                 entity.Property(e => e.StartDate).HasColumnType("datetime");
 
@@ -19955,12 +19955,12 @@ namespace Kiss4Web.Infrastructure.DataAccess.Context
 
                 entity.HasOne(d => d.BaPerson)
                     .WithMany(p => p.Xtask)
-                    .HasForeignKey(d => d.BaPersonId)
+                    .HasForeignKey(d => d.BaPersonID)
                     .HasConstraintName("FK_XTask_BaPerson");
 
                 entity.HasOne(d => d.FaLeistung)
                     .WithMany(p => p.Xtask)
-                    .HasForeignKey(d => d.FaLeistungId)
+                    .HasForeignKey(d => d.FaLeistungID)
                     .HasConstraintName("FK_XTask_FaLeistung");
 
                 entity.HasOne(d => d.UserIdErledigtNavigation)
@@ -20233,7 +20233,7 @@ namespace Kiss4Web.Infrastructure.DataAccess.Context
 
             modelBuilder.Entity<XUser>(entity =>
             {
-                entity.HasKey(e => e.UserId);
+                entity.HasKey(e => e.UserID);
 
                 entity.ToTable("XUser");
 
@@ -20255,20 +20255,20 @@ namespace Kiss4Web.Infrastructure.DataAccess.Context
 
                 entity.HasIndex(e => new { e.LastName, e.FirstName });
 
-                entity.HasIndex(e => new { e.UserId, e.IsUserAdmin, e.IsUserBiagadmin });
+                entity.HasIndex(e => new { e.UserID, e.IsUserAdmin, e.IsUserBiagadmin });
 
-                entity.HasIndex(e => new { e.UserId, e.LastName, e.FirstName, e.LogonName });
+                entity.HasIndex(e => new { e.UserID, e.LastName, e.FirstName, e.LogonName });
 
-                entity.HasIndex(e => new { e.UserId, e.LastName, e.FirstName, e.ShortName, e.LogonName });
+                entity.HasIndex(e => new { e.UserID, e.LastName, e.FirstName, e.ShortName, e.LogonName });
 
-                entity.HasIndex(e => new { e.UserId, e.LogonName, e.FirstName, e.LastName, e.IsLocked })
+                entity.HasIndex(e => new { e.UserID, e.LogonName, e.FirstName, e.LastName, e.IsLocked })
                     .HasName("IX_XUser_IsLocked");
 
-                entity.HasIndex(e => new { e.UserId, e.MitarbeiterNr, e.FirstName, e.LastName, e.IsUserAdmin });
+                entity.HasIndex(e => new { e.UserID, e.MitarbeiterNr, e.FirstName, e.LastName, e.IsUserAdmin });
 
-                entity.HasIndex(e => new { e.UserId, e.MitarbeiterNr, e.FirstName, e.LastName, e.LohntypCode });
+                entity.HasIndex(e => new { e.UserID, e.MitarbeiterNr, e.FirstName, e.LastName, e.LohntypCode });
 
-                entity.Property(e => e.UserId).HasColumnName("UserID");
+                entity.Property(e => e.UserID).HasColumnName("UserID");
 
                 entity.Property(e => e.Austrittsdatum).HasColumnType("datetime");
 

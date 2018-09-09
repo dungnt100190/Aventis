@@ -99,6 +99,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EditPendenzen.feature</DependentUpon>
     </Compile>
+    <Compile Include="Pendenzen\FilterPendenzen.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FilterPendenzen.feature</DependentUpon>
+    </Compile>
     <Compile Include="Pendenzen\LoadPagePendenzen.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -111,11 +116,6 @@
       <DependentUpon>SearchPendenzen.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Pendenzen\FilterPendenzen.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FilterPendenzen.feature</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -131,6 +131,10 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>EditPendenzen.feature.cs</LastGenOutput>
     </None>
+    <None Include="Pendenzen\FilterPendenzen.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>FilterPendenzen.feature.cs</LastGenOutput>
+    </None>
     <None Include="Pendenzen\LoadPagePendenzen.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>LoadPagePendenzen.feature.cs</LastGenOutput>
@@ -145,10 +149,6 @@
     </None>
     <None Include="SpecRunTestProfile_2011_09.xsd">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="Pendenzen\FilterPendenzen.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>FilterPendenzen.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,6 @@
 ﻿using Kiss4Web.DataAccess;
+using Kiss4Web.Infrastructure;
+using Kiss4Web.Infrastructure.DataAccess;
 using Kiss4Web.Infrastructure.DataAccess.Audit;
 using Kiss4Web.Infrastructure.DataAccess.Context;
 using Kiss4Web.Model.Entities;
@@ -14,47 +16,50 @@ using System.Globalization;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
+using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 
 namespace Kiss4Web.TestInfrastructure
 {
-    public static class TestDataManager
+    public class TestDataManager : IDisposable
     {
-        private static readonly IDictionary<string, string> _IdConventionExceptions = new Dictionary<string, string>
+        private readonly TestServerFixture _integrationTestEnvironment;
+        private readonly ConnectionString _connectionString;
+        private readonly IDateTimeProvider _dateTimeProvider;
+
+        public TestDataManager(ConnectionString connectionString, IDateTimeProvider dateTimeProvider, TestServerFixture integrationTestEnvironment)
         {
-            {"XUser", "UserID"},
-            {"XUserGroup", "UserGroupID"},
-            {"XRight", "RightID"},
-            {"XModul", "ModulID"},
-        };
+            _connectionString = connectionString;
+            _dateTimeProvider = dateTimeProvider;
+            _integrationTestEnvironment = integrationTestEnvironment;
+        }
 
-        private static readonly List<string> _NoneIdentityEntities = new List<string>
+        public void Dispose()
         {
-            "XModul"
-        };
-
-        public static HttpClient Client { get; private set; }
-        public static List<object> TempAddedEntities { get; private set; } = new List<object>();
-
-        private static readonly IDictionary<string, List<object>> _createdEntities = new Dictionary<string, List<object>>();
-        private static readonly IDictionary<string, IDictionary<string, int>> _identifierLookup = new Dictionary<string, IDictionary<string, int>>();
-        private static readonly TestServerFixture _integrationTestEnvironment = new TestServerFixture();
-
-        private static IServiceResult _callResult;
-        private static List<object> _returnData;
+            Cleanup();
+        }
 
         /// <summary>
-        /// Setup TestDataManager
+        /// Setup TestDataHandler
         /// </summary>
-        public static void Setup()
+        public void Setup()
         {
-            Client = null;
-            TempAddedEntities.Clear();
-            _createdEntities.Clear();
-            _identifierLookup.Clear();
-            _callResult = null;
-            _returnData = new List<object>();
+            TestDataPool.TempEntities.Clear();
+            TestDataPool.CreatedEntities.Clear();
+            TestDataPool.IdentifierLookup.Clear();
+            TestDataPool.ReturnData.Clear();
+        }
+
+        /// <summary>
+        /// Initial client
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
+        public void InitClient(string username, string password)
+        {
+            TestDataPool.Client = _integrationTestEnvironment.GetClient(username, password).Result;
         }
 
         /// <summary>
@@ -63,10 +68,10 @@ namespace Kiss4Web.TestInfrastructure
         /// <typeparam name="TEntity">Entity type name</typeparam>
         /// <param name="logicalName">logical name of field id in testcase</param>
         /// <returns></returns>
-        public static int Lookup<TEntity>(string logicalName)
+        public int Lookup<TEntity>(string logicalName)
             where TEntity : class
         {
-            var id = _identifierLookup.Lookup(typeof(TEntity).Name.Normalize())?.Lookup(logicalName);
+            var id = TestDataPool.IdentifierLookup.Lookup(typeof(TEntity).Name.Normalize())?.Lookup(logicalName);
             if (id == null)
             {
                 throw new KeyNotFoundException($"Logical name {logicalName} not found. Have you set up test data?");
@@ -83,7 +88,7 @@ namespace Kiss4Web.TestInfrastructure
         /// <param name="fieldMapping">set of field name of given table and field name of entity type</param>
         /// <param name="idFieldMapping">set of field name of given table and ID field name of table in database that it’s data refer to</param>
         /// <returns></returns>
-        public static IEnumerable<T> CreateSetWithLookup<T>(Table table, Dictionary<string, string> fieldMapping = null, Dictionary<string, string> idFieldMapping = null)
+        public IEnumerable<T> CreateSetWithLookup<T>(Table table, Dictionary<string, string> fieldMapping = null, Dictionary<string, string> idFieldMapping = null)
             where T : class
         {
             var properties = table.Header.ToList();
@@ -96,12 +101,11 @@ namespace Kiss4Web.TestInfrastructure
             }
 
             properties = table.Header.ToList();
-            var entities = table.CreateSet<T>().ToList();
-            var result = new List<T>();
+            List<T> result = new List<T>();
 
             for (var i = 0; i < table.RowCount; i++)
             {
-                var entity = entities[i];
+                T entity = Activator.CreateInstance<T>();
                 foreach (var prop in properties)
                 {
                     var value = table.Rows[i][prop];
@@ -113,41 +117,84 @@ namespace Kiss4Web.TestInfrastructure
                     {
                         // value of property is null
                         property.SetValue(entity, null);
+                        continue;
                     }
-                    else
-                    {
-                        string refFieldName = null;
-                        if (prop.EndsWith("ID", StringComparison.InvariantCultureIgnoreCase) && !int.TryParse(value, out var id1))
-                        {
-                            refFieldName = prop;
-                        }
-                        if (idFieldMapping != null && idFieldMapping.ContainsKey(prop) && !int.TryParse(value, out var id2))
-                        {
-                            refFieldName = idFieldMapping[prop];
-                        }
 
-                        if (!string.IsNullOrEmpty(refFieldName))
+                    string refFieldName = null;
+                    if (prop.EndsWith("ID", StringComparison.InvariantCultureIgnoreCase) && !int.TryParse(value, out var id1))
+                    {
+                        refFieldName = prop;
+                    }
+                    if (idFieldMapping != null && idFieldMapping.ContainsKey(prop) && !int.TryParse(value, out var id2))
+                    {
+                        refFieldName = idFieldMapping[prop];
+                    }
+                    if (!string.IsNullOrEmpty(refFieldName))
+                    {
+                        // value is the logical name of entity (which should already be created)
+                        var refEntityName = GetEntityNameFromHeader(refFieldName);
+                        var lookup = TestDataPool.IdentifierLookup.Lookup(refEntityName);
+                        foreach (var item in lookup)
                         {
-                            // value is the logical name of entity (which should already be created)
-                            var refEntityName = GetEntityNameFromHeader(refFieldName);
-                            var lookup = _identifierLookup.Lookup(refEntityName);
-                            foreach (var item in lookup)
+                            if (value.Contains(item.Key))
                             {
-                                if (value.Contains(item.Key))
+                                value = value.Replace(item.Key, item.Value.ToString());
+                                if (value.Equals(item.Value.ToString()) && (property.PropertyType == typeof(int) || property.PropertyType == typeof(int?)))
                                 {
-                                    value = value.Replace(item.Key, item.Value.ToString());
+                                    property.SetValue(entity, item.Value);
+                                }
+                                else
+                                {
+                                    property.SetValue(entity, value);
                                 }
                             }
-                            property.SetValue(entity, value);
                         }
-                        else if (property.PropertyType == typeof(DateTime) || property.PropertyType == typeof(DateTime?))
+                        continue;
+                    }
+
+                    if (property.PropertyType == typeof(string))
+                    {
+                        property.SetValue(entity, value);
+                        continue;
+                    }
+
+                    if (property.PropertyType == typeof(char) || property.PropertyType == typeof(char?))
+                    {
+                        property.SetValue(entity, char.Parse(value));
+                        continue;
+                    }
+
+                    if (property.PropertyType == typeof(int) || property.PropertyType == typeof(int?))
+                    {
+                        property.SetValue(entity, int.Parse(value));
+                        continue;
+                    }
+
+                    if (property.PropertyType == typeof(double) || property.PropertyType == typeof(double?))
+                    {
+                        property.SetValue(entity, double.Parse(value));
+                        continue;
+                    }
+
+                    if (property.PropertyType == typeof(DateTime) || property.PropertyType == typeof(DateTime?))
+                    {
+                        var givenDateInfo = value.Split(' ');
+                        string dateFormat = null;
+                        string dateValue = value;
+                        if (givenDateInfo.Count() > 1
+                            && (givenDateInfo[givenDateInfo.Count() - 1].Contains("d")
+                                || givenDateInfo[givenDateInfo.Count() - 1].Contains("M")
+                                || givenDateInfo[givenDateInfo.Count() - 1].Contains("y")
+                                || givenDateInfo[givenDateInfo.Count() - 1].Contains("H")
+                                || givenDateInfo[givenDateInfo.Count() - 1].Contains("m")
+                                || givenDateInfo[givenDateInfo.Count() - 1].Contains("s")))
                         {
-                            var givenDateInfo = value.Split(' ');
-                            string dateFormat = null;
-                            if (givenDateInfo.Count() > 1) dateFormat = givenDateInfo[1];
-                            DateTime givenDate = DateTime.ParseExact(givenDateInfo[0], string.IsNullOrEmpty(dateFormat) ? Format.Date : dateFormat, CultureInfo.InvariantCulture);
-                            property.SetValue(entity, givenDate);
+                            dateFormat = givenDateInfo[givenDateInfo.Count() - 1];
+                            dateValue = value.Replace(dateFormat, string.Empty).Trim();
                         }
+                        DateTime givenDate = DateTime.ParseExact(dateValue, string.IsNullOrEmpty(dateFormat) ? Format.Date : dateFormat, CultureInfo.InvariantCulture);
+                        property.SetValue(entity, givenDate);
+                        continue;
                     }
                 }
 
@@ -163,14 +210,13 @@ namespace Kiss4Web.TestInfrastructure
         /// <typeparam name="TEntity">name of table in database</typeparam>
         /// <param name="table"></param>
         /// <param name="idFieldMapping">set of field name of this table and ID field name of other table that it’s data refer to</param>
-        /// <param name="isView">this table is View in database</param>
-        public static void Insert<TEntity>(Table table, Dictionary<string, string> idFieldMapping = null, bool isView = false)
+        public void Insert<TEntity>(Table table, Dictionary<string, string> idFieldMapping = null)
             where TEntity : class
         {
             var entities = table.CreateSet<TEntity>().ToList(); // Assumption: order remains as in the table
             var entityProperties = typeof(TEntity).GetProperties();
             var entityTypeName = typeof(TEntity).Name;
-            var entityIdPropertyName = _IdConventionExceptions.Lookup(entityTypeName) ?? $"{entityTypeName}ID"; // convention
+            var entityIdPropertyName = TestDataPool.IdConventionExceptions.Lookup(entityTypeName) ?? $"{entityTypeName}ID"; // convention
             var logicalNameLookup = new Dictionary<object, string>();
 
             var properties = table.Header.ToList();
@@ -191,7 +237,7 @@ namespace Kiss4Web.TestInfrastructure
                         else if (prop.EndsWith("ID", StringComparison.InvariantCultureIgnoreCase) && !int.TryParse(value, out var id))
                         {
                             // lookup instead of id
-                            if (string.Equals(prop, entityIdPropertyName, StringComparison.InvariantCultureIgnoreCase) && !isView)
+                            if (string.Equals(prop, entityIdPropertyName, StringComparison.InvariantCultureIgnoreCase))
                             {
                                 // value is the logical name of this entity that will be created
                                 logicalNameLookup.Add(entity, value);
@@ -218,19 +264,21 @@ namespace Kiss4Web.TestInfrastructure
                                     refFieldName = idFieldMapping[prop];
                                 }
                                 var refEntityName = GetEntityNameFromHeader(refFieldName);
-                                var lookup = _identifierLookup[refEntityName];
+                                var lookup = TestDataPool.IdentifierLookup[refEntityName];
                                 var referencedEntityId = lookup[value.Normalize()];
                                 property.SetValue(entity, referencedEntityId);
                             }
                         }
                     }
 
-                    context.Add(entity);
+                    context.Set<TEntity>().Add(entity);
+                    context.Entry(entity).State = EntityState.Added;
+                    context.SaveChanges();
                 }
             }
 
             // get ids for lookup & add created entity to data pool
-            var entityLookup = _identifierLookup.LookupAddIfMissing(typeof(TEntity).Name.Normalize(), () => new Dictionary<string, int>());
+            var entityLookup = TestDataPool.IdentifierLookup.LookupAddIfMissing(typeof(TEntity).Name.Normalize(), () => new Dictionary<string, int>());
             var createdEntities = new List<object>();
             foreach (var entity in entities.OfType<IEntity>())
             {
@@ -249,33 +297,34 @@ namespace Kiss4Web.TestInfrastructure
         /// </summary>
         /// <typeparam name="TEntity">name of table in database</typeparam>
         /// <param name="entity"></param>
-        public static void TrackEntity<TEntity>(List<object> entities)
+        public void TrackEntity<TEntity>(List<object> entities)
             where TEntity : class
         {
             var entityTypeName = typeof(TEntity).Name;
-            if (_createdEntities.ContainsKey(entityTypeName))
+            if (TestDataPool.CreatedEntities.ContainsKey(entityTypeName))
             {
-                _createdEntities[entityTypeName].AddRange(entities);
+                TestDataPool.CreatedEntities[entityTypeName].AddRange(entities);
             }
             else
             {
-                _createdEntities.Add(entityTypeName, entities);
+                TestDataPool.CreatedEntities.Add(entityTypeName, entities);
             }
         }
 
         /// <summary>
         /// Check record does exists in database or not, if exists then add to data pool of TestDataManager
         /// </summary>
-        /// <typeparam name="TEntity"></typeparam>
+        /// <typeparam name="TEntity">name of table in database</typeparam>
         /// <param name="entity"></param>
         /// <param name="isExists"></param>
-        public static void CheckEntityExistsInDB<TEntity>(object entity, bool isExists = true)
+        /// <param name="isUpdated">determine that this record is not inserted (just be updated)</param>
+        public void CheckEntityExistsInDB<TEntity>(object entity, bool isExists = true, bool isInserted = true)
             where TEntity : class
         {
             bool actual = false;
 
             var entityTypeName = typeof(TEntity).Name;
-            var entityIdPropertyName = _IdConventionExceptions.Lookup(entityTypeName) ?? $"{entityTypeName}ID"; // convention
+            var entityIdPropertyName = TestDataPool.IdConventionExceptions.Lookup(entityTypeName) ?? $"{entityTypeName}ID"; // convention
 
             StringBuilder sql = new StringBuilder();
             sql.Append($"SELECT {entityIdPropertyName} FROM {entityTypeName} WHERE 1 = 1 ");
@@ -283,6 +332,7 @@ namespace Kiss4Web.TestInfrastructure
             var entityProperties = entity.GetType().GetProperties();
             foreach (var property in entityProperties)
             {
+                if (property.Name.Equals("Id")) continue;
                 if (property.PropertyType == typeof(string))
                 {
                     var value = property.GetValue(entity);
@@ -324,64 +374,113 @@ namespace Kiss4Web.TestInfrastructure
             if (dbEntities != null && dbEntities.Count > 0)
             {
                 actual = true;
-                var createdEntities = new List<object>();
-                foreach (int id in dbEntities)
+                if (isInserted)
                 {
-                    object dbEntity = Activator.CreateInstance<TEntity>();
-                    dbEntity.GetType().GetProperty(entityIdPropertyName).SetValue(dbEntity, id);
-                    createdEntities.Add(dbEntity);
+                    var createdEntities = new List<object>();
+                    foreach (int id in dbEntities)
+                    {
+                        object dbEntity = Activator.CreateInstance<TEntity>();
+                        dbEntity.GetType().GetProperty(entityIdPropertyName).SetValue(dbEntity, id);
+                        createdEntities.Add(dbEntity);
+                    }
+                    TrackEntity<TEntity>(createdEntities);
                 }
-                TrackEntity<TEntity>(createdEntities);
             }
 
             actual.ShouldBe(isExists, "should be " + (isExists ? "exists" : "not exists") + ", but was " + (actual ? "exists" : "not exists"));
         }
 
-        /// <summary>
-        /// Initial client
-        /// </summary>
-        /// <param name="username"></param>
-        /// <param name="password"></param>
-        /// <returns></returns>
-        public static void InitClient(string username, string password)
+        public void CheckAddUpdateEntityExistsInDB<TEntity>(bool isExists = true, bool isInserted = true)
+            where TEntity : class
         {
-            Client = _integrationTestEnvironment.GetClient(username, password).Result;
+            foreach (var entity in TestDataPool.TempEntities)
+            {
+                CheckEntityExistsInDB<TEntity>(entity, isExists, isInserted);
+            }
+
+        }
+
+        public void AddToTempEntities<TEntity>(Table table, Dictionary<string, string> fieldMapping = null, Dictionary<string, string> idFieldMapping = null)
+            where TEntity : class
+        {
+            TestDataPool.TempEntities.AddRange(CreateSetWithLookup<TEntity>(table, fieldMapping: fieldMapping, idFieldMapping: idFieldMapping));
         }
 
         /// <summary>
-        /// Call API of type GET
+        /// Call API of type GET return single object
         /// </summary>
         /// <typeparam name="TResult">type of return data</typeparam>
         /// <param name="url">url of API</param>
         /// <param name="parameters">additional input parameters</param>
-        public static void CallApiGet<TResult>(string url, object parameters = null, bool isAddToResult = true)
+        public void CallApiGetReturnObject<TResult>(string url, object parameters = null, bool isAddToResult = true)
         {
-            var result = Client.GetAsJsonAsync<IEnumerable<TResult>>(url, parameters).Result;
-            _callResult = result;
-            if (isAddToResult == true)
+            var result = TestDataPool.Client.GetAsJsonAsync<TResult>(url, parameters).Result;
+            TestDataPool.CallResult = result;
+            if (result.Result != null && isAddToResult == true)
+            {
+                TestDataPool.ReturnData.Add(result.Result);
+            }
+        }
+
+        /// <summary>
+        /// Call API of type GET return list object
+        /// </summary>
+        /// <typeparam name="TResult">type of return data</typeparam>
+        /// <param name="url">url of API</param>
+        /// <param name="parameters">additional input parameters</param>
+        public void CallApiGetReturnList<TResult>(string url, object parameters = null, bool isAddToResult = true)
+        {
+            var result = TestDataPool.Client.GetAsJsonAsync<IEnumerable<TResult>>(url, parameters).Result;
+            TestDataPool.CallResult = result;
+            if (result.Result != null && result.Result.Count() > 0 && isAddToResult == true)
             {
                 foreach (var item in result.Result.ToList())
                 {
-                    _returnData.Add(item);
+                    TestDataPool.ReturnData.Add(item);
                 }
             }
         }
 
         /// <summary>
-        /// Call API of type POST
+        /// Call API of type POST return single object
         /// </summary>
         /// <typeparam name="TInput">type of input data</typeparam>
         /// <typeparam name="TResult">type of return data</typeparam>
         /// <param name="url">url of API</param>
         /// <param name="input">input data</param>
         /// <param name="parameters">additional input parameters</param>
-        public static void CallApiPost<TInput, TResult>(string url, TInput input, object parameters = null, bool isAddToResult = true)
+        public void CallApiPostReturnObject<TInput, TResult>(string url, TInput input, object parameters = null, bool isAddToResult = true)
         {
-            var result = Client.PostAsJsonAsync<TInput, TResult>(url, value: input, parameters: parameters).Result as ServiceResult<TResult>;
-            _callResult = result;
-            if (isAddToResult == true)
+            var callResult = TestDataPool.Client.PostAsJsonAsync<TInput, TResult>(url, value: input, parameters: parameters).Result as ServiceResult<TResult>;
+            TestDataPool.CallResult = callResult;
+
+            var result = callResult as ServiceResult<TResult>;
+            if (result != null && isAddToResult == true)
             {
-                _returnData.Add(result.Result);
+                TestDataPool.ReturnData.Add(result.Result);
+            }
+        }
+
+        /// <summary>
+        /// Call API of type POST return list object
+        /// </summary>
+        /// <typeparam name="TInput">type of input data</typeparam>
+        /// <typeparam name="TResult">type of return data</typeparam>
+        /// <param name="url">url of API</param>
+        /// <param name="input">input data</param>
+        /// <param name="parameters">additional input parameters</param>
+        public void CallApiPostReturnList<TInput, TResult>(string url, TInput input, object parameters = null, bool isAddToResult = true)
+        {
+            var callResult = TestDataPool.Client.PostAsJsonAsync<TInput, IEnumerable<TResult>>(url, value: input, parameters: parameters).Result;
+            TestDataPool.CallResult = callResult;
+
+            var result = callResult as ServiceResult<IEnumerable<TResult>>;
+            if (result != null && isAddToResult == true)
+            {
+                foreach (var item in result.Result.ToList())
+                {
+                    TestDataPool.ReturnData.Add(item);
+                }
             }
         }
 
@@ -392,9 +491,9 @@ namespace Kiss4Web.TestInfrastructure
         /// <param name="url">url of API</param>
         /// <param name="input">input data</param>
         /// <param name="parameters">additional input parameters</param>
-        public static void CallApiPostNoReturn<TInput>(string url, TInput input, object parameters = null)
+        public void CallApiPostNoReturn<TInput>(string url, TInput input, object parameters = null)
         {
-            _callResult = Client.PostAsJsonAsync<TInput>(url, value: input, parameters: parameters).Result;
+            TestDataPool.CallResult = TestDataPool.Client.PostAsJsonAsync<TInput>(url, value: input, parameters: parameters).Result;
         }
 
         /// <summary>
@@ -404,26 +503,26 @@ namespace Kiss4Web.TestInfrastructure
         /// <param name="url">url of API</param>
         /// <param name="input">input data</param>
         /// <param name="parameters">additional input parameters</param>
-        public static void CallApiPutNoReturn<TInput>(string url, TInput input, object parameters = null)
+        public void CallApiPutNoReturn<TInput>(string url, TInput input, object parameters = null)
         {
-            _callResult = Client.PutAsJsonAsync<TInput>(url, value: input, parameters: parameters).Result;
+            TestDataPool.CallResult = TestDataPool.Client.PutAsJsonAsync<TInput>(url, value: input, parameters: parameters).Result;
         }
 
         /// <summary>
         /// Check return status of the call API
         /// </summary>
         /// <param name="isSuccess">default is true (success)</param>
-        public static void CheckCallApiStatus(bool isSuccess = true)
+        public void CheckCallApiStatus(bool isSuccess = true)
         {
-            if (_callResult != null)
+            if (TestDataPool.CallResult != null)
             {
                 if (isSuccess)
                 {
-                    _callResult.IsSuccess.ShouldBeTrue(_callResult.Error);
+                    TestDataPool.CallResult.IsSuccess.ShouldBeTrue(TestDataPool.CallResult.Error);
                 }
                 else
                 {
-                    _callResult.IsSuccess.ShouldBeFalse(_callResult.Error);
+                    TestDataPool.CallResult.IsSuccess.ShouldBeFalse(TestDataPool.CallResult.Error);
                 }
             }
             else
@@ -435,14 +534,14 @@ namespace Kiss4Web.TestInfrastructure
         /// <summary>
         /// Check return data of the call API
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="expectedData"></param>
-        /// <param name="fieldMapping"></param>
-        /// <param name="idFieldMapping"></param>
-        public static void CheckCallApiReturnData<T>(Table expectedData, Dictionary<string, string> fieldMapping = null, Dictionary<string, string> idFieldMapping = null)
+        /// <typeparam name="T">type of element in actual data</typeparam>
+        /// <param name="expectedData">expected data</param>
+        /// <param name="fieldMapping">set of field name of given expected data table and field name of actual data type</param>
+        /// <param name="idFieldMapping">set of field name of given expected data table and ID field name of table in database that it’s data refer to</param>
+        public void CheckCallApiReturnData<T>(Table expectedData, Dictionary<string, string> fieldMapping = null, Dictionary<string, string> idFieldMapping = null)
             where T : class
         {
-            var actualData = ConvertListType<T>(_returnData);
+            var actualData = ConvertListType<T>(TestDataPool.ReturnData);
             CheckReturnData<T>(actualData, expectedData, fieldMapping, idFieldMapping);
         }
 
@@ -454,7 +553,7 @@ namespace Kiss4Web.TestInfrastructure
         /// <param name="expectedData">expected data</param>
         /// <param name="fieldMapping">set of field name of given expected data table and field name of actual data type</param>
         /// <param name="idFieldMapping">set of field name of given expected data table and ID field name of table in database that it’s data refer to</param>
-        public static void CheckReturnData<T>(List<T> actualData, Table expectedData, Dictionary<string, string> fieldMapping = null, Dictionary<string, string> idFieldMapping = null)
+        public void CheckReturnData<T>(List<T> actualData, Table expectedData, Dictionary<string, string> fieldMapping = null, Dictionary<string, string> idFieldMapping = null)
             where T : class
         {
             actualData.ShouldNotBeNull();
@@ -468,9 +567,9 @@ namespace Kiss4Web.TestInfrastructure
         /// Check return value of the call API
         /// </summary>
         /// <param name="expected"></param>
-        public static void CheckCallApiReturnValue(object expected)
+        public void CheckCallApiReturnValue(object expected)
         {
-            CheckReturnValue(_returnData[0], expected);
+            CheckReturnValue(TestDataPool.ReturnData[0], expected);
         }
 
         /// <summary>
@@ -478,7 +577,7 @@ namespace Kiss4Web.TestInfrastructure
         /// </summary>
         /// <param name="actual">actual value</param>
         /// <param name="expected">expected value</param>
-        public static void CheckReturnValue(object actual, object expected)
+        public void CheckReturnValue(object actual, object expected)
         {
             var actualValue = actual != null ? actual.ToString() : "null";
             var expectedValue = expected != null ? expected.ToString() : "null";
@@ -486,20 +585,20 @@ namespace Kiss4Web.TestInfrastructure
         }
 
         /// <summary>
-        /// Delete all records of tables in database that correspond with records in data pool of TestDataManager 
-        /// and close driver and clear data pool of TestDataManager 
+        /// Delete all records of tables in database that correspond with records in data pool 
+        /// and clear data pool 
         /// </summary>
-        public static void Cleanup()
+        public void Cleanup()
         {
-            if (_createdEntities.Count > 0)
+            if (TestDataPool.CreatedEntities.Count > 0)
             {
                 var context = _CreateDbContext();
-                for (int i = _createdEntities.Count - 1; i >= 0; --i)
+                for (int i = TestDataPool.CreatedEntities.Count - 1; i >= 0; --i)
                 {
-                    var entityTypeName = _createdEntities.ElementAt(i).Key;
-                    foreach (var entity in _createdEntities.ElementAt(i).Value)
+                    var entityTypeName = TestDataPool.CreatedEntities.ElementAt(i).Key;
+                    foreach (var entity in TestDataPool.CreatedEntities.ElementAt(i).Value)
                     {
-                        string entityIdPropertyName = _IdConventionExceptions.Lookup(entityTypeName) ?? $"{entityTypeName}ID";
+                        string entityIdPropertyName = TestDataPool.IdConventionExceptions.Lookup(entityTypeName) ?? $"{entityTypeName}ID";
                         var value = entity.GetType().GetProperty(entityIdPropertyName).GetValue(entity);
 
                         string sql = $"DELETE {entityTypeName} WHERE {entityIdPropertyName} = {value};";
@@ -509,26 +608,25 @@ namespace Kiss4Web.TestInfrastructure
                     }
                 }
             }
-            TempAddedEntities.Clear();
-            _createdEntities.Clear();
-            _identifierLookup.Clear();
-            _callResult = null;
-            _returnData.Clear();
+            TestDataPool.TempEntities.Clear();
+            TestDataPool.CreatedEntities.Clear();
+            TestDataPool.IdentifierLookup.Clear();
+            TestDataPool.ReturnData.Clear();
         }
 
         private static string GetEntityNameFromHeader(string idProperty)
         {
-            var exception = _IdConventionExceptions.Where(kvp => kvp.Value == idProperty)
+            var exception = TestDataPool.IdConventionExceptions.Where(kvp => kvp.Value == idProperty)
                                                   .Select(kvp => kvp.Key)
                                                   .FirstOrDefault();
             return (exception ?? idProperty.Substring(0, idProperty.Length - 2)).Normalize();
         }
 
-        private static Kiss4DbContext _CreateDbContext()
+        private Kiss4DbContext _CreateDbContext()
         {
             var options = new DbContextOptionsBuilder();
-            options.UseSqlServer(_integrationTestEnvironment.ConnectionString);
-            var ccmmAuditor = new CcmmAuditor("Test runner", _integrationTestEnvironment.DateTime);
+            options.UseSqlServer(_connectionString);
+            var ccmmAuditor = new CcmmAuditor("Test runner", _dateTimeProvider);
             var historyAuditor = new HistoryVersionCreator("Test runner");
             return new Kiss4DbContext(options.Options, new IDbChangeAuditor[] { ccmmAuditor, historyAuditor });
         }
@@ -543,5 +641,6 @@ namespace Kiss4Web.TestInfrastructure
             }
             return outputList;
         }
+
     }
 }

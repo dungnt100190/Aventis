@@ -72,6 +72,8 @@
     <Compile Include="Extensions\LinqExtensionMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestDataManager.cs" />
+    <Compile Include="ConstantData.cs" />
+    <Compile Include="TestDataPool.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

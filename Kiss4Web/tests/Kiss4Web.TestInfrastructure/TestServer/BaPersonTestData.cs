@@ -21,12 +21,12 @@ namespace Kiss4Web.TestInfrastructure.TestServer
 
         protected override void ResetAutoIdentity(BaPerson entity)
         {
-            entity.BaPersonId = 0;
+            entity.BaPersonID = 0;
         }
 
         protected override bool CopyProperties(BaPerson existingEntity, BaPerson testDataEntity)
         {
-            testDataEntity.BaPersonId = existingEntity.Id;
+            testDataEntity.BaPersonID = existingEntity.Id;
             testDataEntity.BaPersonTs = existingEntity.RowVersion;
             return false;
         }

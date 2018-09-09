@@ -542,15 +542,76 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("logon with username is \'test_admin_1\', password is \'123456\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 72
  testRunner.And("go to page Pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 73
+ testRunner.When("choose \'10.03.2018\' in datebox Bearbeitung from", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 74
+ testRunner.And("choose \'10.05.2018\' in datebox Bearbeitung to", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Bearbeitung from",
-                        "Bearbeitung to"});
+                        "Fällig",
+                        "Betreff",
+                        "Leistung",
+                        "Fallträger",
+                        "Fallnummer",
+                        "Person",
+                        "Ersteller",
+                        "Empfänger",
+                        "Status",
+                        "Erfasst",
+                        "Bearbeitung",
+                        "Erledigt",
+                        "Antwort"});
             table8.AddRow(new string[] {
-                        "10.03.2018",
-                        "10.05.2018"});
-#line 73
- testRunner.When("input into Pendenzen search area as below", ((string)(null)), table8, "When ");
+                        "10.10.2018",
+                        "Task 20180817-03",
+                        "F",
+                        "Person test-2 (BPS2)",
+                        "BPS2",
+                        "Person test-1, NT",
+                        "NULL",
+                        "test_admin_1 - Global, CMC",
+                        "in Bearbeitung",
+                        "10.01.2018",
+                        "10.04.2018",
+                        "NULL",
+                        "Task 20180817-3 text"});
+            table8.AddRow(new string[] {
+                        "10.10.2018",
+                        "Task 20180817-08",
+                        "K",
+                        "Person test-2 (BPS1)",
+                        "BPS1",
+                        "Person test-1, NT",
+                        "test_admin_1 - Global, CMC",
+                        "test_admin_1 - Global, CMC",
+                        "in Bearbeitung",
+                        "10.01.2018",
+                        "10.05.2018",
+                        "NULL",
+                        "Task 20180817-8 text"});
+#line 77
+ testRunner.Then("data of grid Pendenzen should be", ((string)(null)), table8, "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("04 Search by Ersteller", new string[] {
+                "SearchPendenzen"}, SourceLine=82)]
+        public virtual void _04SearchByErsteller()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("04 Search by Ersteller", null, new string[] {
+                        "SearchPendenzen"});
+#line 83
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 3
+ this.FeatureBackground();
+#line 84
+ testRunner.Given("logon with username is \'test_admin_1\', password is \'123456\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 85
+ testRunner.And("go to page Pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 86
+ testRunner.When("choose \'Kurzel=test_admin_1/Name=Global, CMC\' in dropdown Ersteller", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
                         "Fällig",
@@ -568,20 +629,6 @@ this.ScenarioInitialize(scenarioInfo);
                         "Antwort"});
             table9.AddRow(new string[] {
                         "10.10.2018",
-                        "Task 20180817-03",
-                        "F",
-                        "Person test-2 (BPS2)",
-                        "BPS2",
-                        "Person test-1, NT",
-                        "NULL",
-                        "test_admin_1 - Global, CMC",
-                        "in Bearbeitung",
-                        "10.01.2018",
-                        "10.04.2018",
-                        "NULL",
-                        "Task 20180817-3 text"});
-            table9.AddRow(new string[] {
-                        "10.10.2018",
                         "Task 20180817-08",
                         "K",
                         "Person test-2 (BPS1)",
@@ -594,65 +641,8 @@ this.ScenarioInitialize(scenarioInfo);
                         "10.05.2018",
                         "NULL",
                         "Task 20180817-8 text"});
-#line 76
+#line 87
  testRunner.Then("data of grid Pendenzen should be", ((string)(null)), table9, "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [TechTalk.SpecRun.ScenarioAttribute("04 Search by Ersteller", new string[] {
-                "SearchPendenzen"}, SourceLine=81)]
-        public virtual void _04SearchByErsteller()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("04 Search by Ersteller", null, new string[] {
-                        "SearchPendenzen"});
-#line 82
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 3
- this.FeatureBackground();
-#line 83
- testRunner.Given("logon with username is \'test_admin_1\', password is \'123456\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 84
- testRunner.And("go to page Pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-            TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Ersteller"});
-            table10.AddRow(new string[] {
-                        "Kurzel=test_admin_1/Name=Global, CMC"});
-#line 85
- testRunner.When("input into Pendenzen search area as below", ((string)(null)), table10, "When ");
-#line hidden
-            TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Fällig",
-                        "Betreff",
-                        "Leistung",
-                        "Fallträger",
-                        "Fallnummer",
-                        "Person",
-                        "Ersteller",
-                        "Empfänger",
-                        "Status",
-                        "Erfasst",
-                        "Bearbeitung",
-                        "Erledigt",
-                        "Antwort"});
-            table11.AddRow(new string[] {
-                        "10.10.2018",
-                        "Task 20180817-08",
-                        "K",
-                        "Person test-2 (BPS1)",
-                        "BPS1",
-                        "Person test-1, NT",
-                        "test_admin_1 - Global, CMC",
-                        "test_admin_1 - Global, CMC",
-                        "in Bearbeitung",
-                        "10.01.2018",
-                        "10.05.2018",
-                        "NULL",
-                        "Task 20180817-8 text"});
-#line 88
- testRunner.Then("data of grid Pendenzen should be", ((string)(null)), table11, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -1,20 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Threading.Tasks;
-using IdentityModel.Client;
+﻿using IdentityModel.Client;
 using Kiss4Web.Infrastructure;
 using Kiss4Web.Infrastructure.DataAccess;
 using Kiss4Web.Model;
 using Kiss4Web.TestInfrastructure.IntegrationTests;
 using Kiss4Web.TestInfrastructure.TestData;
-using Kiss4Web.TestInfrastructure.TestData.Dynamic;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Shouldly;
 using SimpleInjector;
+using System;
+using System.Collections.Generic;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace Kiss4Web.TestInfrastructure.TestServer
 {
@@ -72,9 +71,9 @@ namespace Kiss4Web.TestInfrastructure.TestServer
 
         public Microsoft.AspNetCore.TestHost.TestServer TestServer { get; }
 
-        public DynamicTestDataManager CreateTestDataManager()
+        public TestDataManager CreateTestDataManager(TestServerFixture integrationTestEnvironment)
         {
-            return new DynamicTestDataManager(ConnectionString, DateTime);
+            return new TestDataManager(ConnectionString, DateTime, integrationTestEnvironment);
         }
 
         public void Dispose()

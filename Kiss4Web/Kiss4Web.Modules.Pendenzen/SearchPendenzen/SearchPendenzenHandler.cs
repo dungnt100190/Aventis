@@ -80,7 +80,7 @@ namespace Kiss4Web.Modules.Pendenzen.SearchPendenzen
                       LEFT  JOIN BaPerson         PRS ON PRS.BaPersonID = IsNull(LEI.BaPersonID, FAL.BaPersonID)
                       LEFT  JOIN vwUser           USR ON USR.UserID = IsNull(LEI.UserID, FAL.UserID)
                       LEFT  JOIN XOrgUnit_User    OUU ON OUU.UserID = USR.UserID
-                                                     AND OUU.OrgUnitMemberCode = 2 --2: Mitglied
+                                                     AND OUU.OrgUnitMemberCode = 2 
                       LEFT  JOIN XModul           MOD ON MOD.ModulID = LEI.ModulID
 
                       LEFT  JOIN vwPersonSimple   PRB ON PRB.BaPersonID = TSK.BaPersonID ";
