@@ -66,6 +66,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>SearchPendenzen.feature</DependentUpon>
     </Compile>
+    <Compile Update="Url.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Url.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Url.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Url.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
