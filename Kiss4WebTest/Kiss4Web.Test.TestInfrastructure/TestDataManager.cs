@@ -3,6 +3,8 @@ using Kiss4Web.Test.DataAccess;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
+using Shouldly;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -417,6 +419,25 @@ namespace Kiss4Web.Test.TestInfrastructure
         }
 
         /// <summary>
+        /// Implement action click, apply only for element is button with the type Submit
+        /// </summary>
+        /// <param name="xpath">xPath of element</param>
+        /// <param name="index">specify element in found elements, default is the first element</param>
+        /// <param name="waitingTime">waiting time (second) after implement action</param>
+        public static void Submit(string xpath, int index = 1, int waitingTime = 1)
+        {
+            if (index < 1) throw new ArgumentOutOfRangeException("index must be >= 1");
+            if (waitingTime < 0) throw new NotSupportedException("waitingTime must be >= 0");
+
+            var elements = TestDataPool.Driver.FindElements(By.XPath(xpath));
+            elements[index - 1].Submit();
+            if (waitingTime > 0)
+            {
+                System.Threading.Thread.Sleep(waitingTime * 1000);
+            }
+        }
+
+        /// <summary>
         /// Implement action input text
         /// </summary>
         /// <param name="xpath">xPath of element</param>
@@ -674,6 +695,15 @@ namespace Kiss4Web.Test.TestInfrastructure
         }
 
         /// <summary>
+        /// Open a specified URL in the browser
+        /// </summary>
+        /// <param name="url"></param>
+        public static void GoToUrl(string url)
+        {
+            TestDataPool.Driver.Url = url;
+        }
+
+        /// <summary>
         /// Implement clear text in element
         /// </summary>
         /// <param name="xpath"></param>
@@ -692,7 +722,64 @@ namespace Kiss4Web.Test.TestInfrastructure
         }
 
         /// <summary>
-        /// Compare current url in web driver with given Url
+        /// Implement click-and-hold at the location of the source element, moves to the location of the target element, then releases the mouse
+        /// </summary>
+        /// <param name="sourceXPath">xPath for source element</param>
+        /// <param name="targetXPath">xPath for target element</param>
+        /// <param name="waitingTime">waiting time (second) after implement action</param>
+        public static void DragAndDrop(string sourceXPath, string targetXPath, int waitingTime = 1)
+        {
+            Actions action = new Actions(TestDataPool.Driver);
+            IWebElement sourceElement = TestDataPool.Driver.FindElement(By.XPath(sourceXPath));
+            IWebElement targetElement = TestDataPool.Driver.FindElement(By.XPath(targetXPath));
+
+            action.DragAndDrop(sourceElement, targetElement);
+            action.Build().Perform();
+            if (waitingTime > 0)
+            {
+                System.Threading.Thread.Sleep(waitingTime * 1000);
+            }
+        }
+
+        /// <summary>
+        /// Implement click-and-hold at the location of the source element, moves to given offset, then releases the mouse
+        /// </summary>
+        /// <param name="sourceXPath">xPath for source element</param>
+        /// <param name="xOffset"></param>
+        /// <param name="yOffset"></param>
+        /// <param name="waitingTime">waiting time (second) after implement action</param>
+        public static void DragAndDropToOffset(string sourceXPath, int xOffset, int yOffset, int waitingTime = 1)
+        {
+            Actions action = new Actions(TestDataPool.Driver);
+            IWebElement sourceElement = TestDataPool.Driver.FindElement(By.XPath(sourceXPath));
+
+            action.DragAndDropToOffset(sourceElement, xOffset, yOffset);
+            action.Build().Perform();
+            if (waitingTime > 0)
+            {
+                System.Threading.Thread.Sleep(waitingTime * 1000);
+            }
+        }
+
+        /// <summary>
+        /// Scroll browser to specific element
+        /// </summary>
+        /// <param name="targetXPath">xPath for target element</param>
+        /// <param name="waitingTime"></param>
+        public static void ScrollToElement(string targetXPath, int waitingTime = 1)
+        {
+            var targetElement = TestDataPool.Driver.FindElement(By.XPath(targetXPath));
+            Actions actions = new Actions(TestDataPool.Driver);
+            actions.MoveToElement(targetElement);
+            actions.Perform();
+            if (waitingTime > 0)
+            {
+                System.Threading.Thread.Sleep(waitingTime * 1000);
+            }
+        }
+
+        /// <summary>
+        /// Check current url in web driver
         /// </summary>
         /// <param name="expectedUrl"></param>
         public static void CheckUrl(string expectedUrl)
@@ -738,7 +825,7 @@ namespace Kiss4Web.Test.TestInfrastructure
         }
 
         /// <summary>
-        /// Compare status of element with given status 
+        /// Check enable & visible status of element
         /// </summary>
         /// <param name="xpath">xPath of this element on screen</param>
         /// <param name="isDisplayed">display status of this element</param>
@@ -777,7 +864,19 @@ namespace Kiss4Web.Test.TestInfrastructure
         }
 
         /// <summary>
-        /// Compare value of specific attribute in element with given value
+        /// Check element is selected, apply for checkbox, radio button, and select operation
+        /// </summary>
+        /// <param name="xpath"></param>
+        /// <param name="isSelected"></param>
+        /// <param name="index"></param>
+        public static void CheckControlSelected(string xpath, bool isSelected = true, int index = 1)
+        {
+            bool actualStatus = TestDataPool.Driver.FindElements(By.XPath(xpath))[index - 1].Selected;
+            actualStatus.ShouldBe(isSelected, $"should be {isSelected}, but was {actualStatus}");
+        }
+
+        /// <summary>
+        /// Check value of specific attribute in element
         /// </summary>
         /// <param name="xpath">xPath of this element on screen</param>
         /// <param name="expectedValue"></param>
@@ -801,7 +900,7 @@ namespace Kiss4Web.Test.TestInfrastructure
         }
 
         /// <summary>
-        /// Compare value of each field in each row in given expected data table with value of that field in that row on screen 
+        /// Check value of each field in each row in grid or value of multi fields in an area 
         /// </summary>
         /// <param name="xPathAndAttribute">set of xPath for elements of fields in table and the attribute to get value</param>
         /// <param name="expectedData">expected data for elements</param>
