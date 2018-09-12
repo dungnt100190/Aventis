@@ -66,7 +66,11 @@ Scenario: 02 Create new a task unsuccessfully when no input into Betreff field
 	| Pendenz Typ | Betreff | Beschreibung             | Empfänger                            | Fallträger | Leistung | betrifft Person | Fällig |
 	| Anfrage     | NULL    | Insert 20180830 autotest | Kurzel=test_admin_1/Name=Global, CMC | NULL       | NULL     | NULL            | NULL   |
 	And click on button Speichern
-	Then display error message at top of page content with content is: 'Das Feld 'Betreff' darf nicht leer bleiben !'
+	Then display error message at top of page content with content is: 
+	"""
+	Das Feld 'Betreff' darf nicht 
+	leer bleiben !
+	"""
 	
 @CreatePendenzen
 Scenario: 03 Create new a task unsuccessfully when cancel 

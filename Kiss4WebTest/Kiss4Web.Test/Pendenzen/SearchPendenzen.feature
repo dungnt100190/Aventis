@@ -70,7 +70,7 @@ Scenario: 02 Search by Betreff
 Scenario: 03 Search by Erfasst
 	Given logon with username is 'test_admin_1', password is '123456'
 	And go to page Pendenzen
-	When choose '10.03.2018' in datebox Bearbeitung from
+	When choose '10.March.2018 dd.MMMMM.yyyy' in datebox Bearbeitung from
 	And choose '10.05.2018' in datebox Bearbeitung to
 	#| Bearbeitung from | Bearbeitung to | 
 	#| 10.03.2018       | 10.05.2018     | 

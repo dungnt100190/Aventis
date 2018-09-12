@@ -543,7 +543,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 72
  testRunner.And("go to page Pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 73
- testRunner.When("choose \'10.03.2018\' in datebox Bearbeitung from", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("choose \'10.March.2018 dd.MMMMM.yyyy\' in datebox Bearbeitung from", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 74
  testRunner.And("choose \'10.05.2018\' in datebox Bearbeitung to", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden

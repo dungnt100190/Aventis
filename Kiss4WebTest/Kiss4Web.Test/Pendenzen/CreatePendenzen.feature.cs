@@ -419,29 +419,29 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("input into Pendenzen detail area as below", ((string)(null)), table8, "When ");
 #line 68
  testRunner.And("click on button Speichern", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
 #line 69
- testRunner.Then("display error message at top of page content with content is: \'Das Feld \'Betreff\'" +
-                    " darf nicht leer bleiben !\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("display error message at top of page content with content is:", "Das Feld \'Betreff\' darf nicht \r\nleer bleiben !", ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [TechTalk.SpecRun.ScenarioAttribute("03 Create new a task unsuccessfully when cancel", new string[] {
-                "CreatePendenzen"}, SourceLine=71)]
+                "CreatePendenzen"}, SourceLine=75)]
         public virtual void _03CreateNewATaskUnsuccessfullyWhenCancel()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03 Create new a task unsuccessfully when cancel", null, new string[] {
                         "CreatePendenzen"});
-#line 72
+#line 76
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 3
  this.FeatureBackground();
-#line 73
+#line 77
  testRunner.Given("logon with username is \'test_admin_1\', password is \'123456\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 74
+#line 78
  testRunner.And("go to page Pendenzen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 75
+#line 79
  testRunner.And("click on button Neus Pendenz", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
@@ -462,15 +462,15 @@ this.ScenarioInitialize(scenarioInfo);
                         "NULL",
                         "NULL",
                         "01.11.2020 dd.MM.yyyy"});
-#line 76
- testRunner.When("input into Pendenzen detail area as below", ((string)(null)), table9, "When ");
-#line 79
- testRunner.And("click on button Abbrechen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 80
+ testRunner.When("input into Pendenzen detail area as below", ((string)(null)), table9, "When ");
+#line 83
+ testRunner.And("click on button Abbrechen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 84
  testRunner.And("click on button Ja", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 81
+#line 85
  testRunner.Then("the record of the inputted info is not inserted into table XTask in database", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 82
+#line 86
  testRunner.And("Pendenzen detail area switches to view mode", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
@@ -515,11 +515,11 @@ this.ScenarioInitialize(scenarioInfo);
                         "10.05.2018",
                         "NULL",
                         "Task 20180817-8 text"});
-#line 83
- testRunner.And("data of grid Pendenzen should be", ((string)(null)), table10, "And ");
 #line 87
+ testRunner.And("data of grid Pendenzen should be", ((string)(null)), table10, "And ");
+#line 91
  testRunner.And("on tree LeftNavMenu: value of Meine Pendenzen/offene is \'offene (2)\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 88
+#line 92
  testRunner.And("on tree LeftNavMenu: value of Erstellte Pendenzen/offene is \'offene (1)\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();

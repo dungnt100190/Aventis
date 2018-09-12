@@ -447,7 +447,7 @@ namespace Kiss4Web.Test.Pendenzen
 
             try
             {
-                TestDataManager.CheckTableData(xPaths, table, idFieldMapping: idFieldMapping);
+                TestDataManager.CheckTableData(xPathAndAttribute: xPaths, expectedData: table, idFieldMapping: idFieldMapping);
             }
             catch (Exception)
             {
@@ -492,12 +492,12 @@ namespace Kiss4Web.Test.Pendenzen
             screenMapping.Add("Erfasst", "erfasst");
             screenMapping.Add("Fällig", "fallig");
 
-            Dictionary<string, string> fieldMapping = new Dictionary<string, string>();
-            fieldMapping.Add("Fallträger", "BaPersonID");
+            Dictionary<string, string> idFieldMapping = new Dictionary<string, string>();
+            idFieldMapping.Add("Fallträger", "BaPersonID");
 
             try
             {
-                TestDataManager.CheckTableData(xPaths, table, screenMapping: screenMapping, idFieldMapping: fieldMapping);
+                TestDataManager.CheckTableData(xPathAndAttribute: xPaths, expectedData: table, screenMapping: screenMapping, idFieldMapping: idFieldMapping);
             }
             catch (Exception)
             {
@@ -521,7 +521,7 @@ namespace Kiss4Web.Test.Pendenzen
             }
         }
 
-        [Then(@"display error message at top of page content with content is: '(.*)'")]
+        [Then(@"display error message at top of page content with content is:")]
         public void DisplayErrorMessageAtTopOfPageContentWithContentIs(string message)
         {
             try

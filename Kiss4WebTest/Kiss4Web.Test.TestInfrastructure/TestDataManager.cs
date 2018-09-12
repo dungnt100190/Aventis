@@ -165,7 +165,7 @@ namespace Kiss4Web.Test.TestInfrastructure
         }
 
         /// <summary>
-        /// Insert all row in table to database and add to data pool of TestDataManager
+        /// Insert all row in table to database and add to data pool
         /// </summary>
         /// <typeparam name="TEntity">name of table in database</typeparam>
         /// <param name="table"></param>
@@ -252,7 +252,7 @@ namespace Kiss4Web.Test.TestInfrastructure
         }
 
         /// <summary>
-        /// Add records to data pool of TestDataManager
+        /// Add records to data pool
         /// </summary>
         /// <typeparam name="TEntity">name of table in database</typeparam>
         /// <param name="entity"></param>
@@ -348,6 +348,12 @@ namespace Kiss4Web.Test.TestInfrastructure
             }
         }
 
+        /// <summary>
+        /// Check added or updated Record exists in database, if exists then add to data pool
+        /// </summary>
+        /// <typeparam name="TEntity"></typeparam>
+        /// <param name="isExists"></param>
+        /// <param name="isInserted"></param>
         public static void CheckAddUpdateEntityExistsInDB<TEntity>(bool isExists = true, bool isInserted = true)
             where TEntity : class
         {
@@ -358,6 +364,13 @@ namespace Kiss4Web.Test.TestInfrastructure
 
         }
 
+        /// <summary>
+        /// Add the added or updated Record to Temporary Entities Pool in data pool
+        /// </summary>
+        /// <typeparam name="TEntity"></typeparam>
+        /// <param name="givenData"></param>
+        /// <param name="fieldMapping"></param>
+        /// <param name="idFieldMapping"></param>
         public static void AddToTempEntities<TEntity>(Table givenData, Dictionary<string, string> fieldMapping = null, Dictionary<string, string> idFieldMapping = null)
             where TEntity : class
         {
