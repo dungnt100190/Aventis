@@ -982,7 +982,7 @@ namespace Kiss4Web.Test.TestInfrastructure
                     }
                     catch (AssertionException)
                     {
-                        string message = $"Expected: {expectedValue} \nBut was: {actualValue}";
+                        string message = $"Expected: {expectedValue} \nBut was: {actualValue} for field {prop} in row {i + 1}";
                         throw new AssertionException(message);
                     }
                 }
