@@ -2,8 +2,6 @@
 using Kiss4Web.TestInfrastructure;
 using Kiss4Web.TestInfrastructure.TestServer;
 using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 
 namespace Kiss4Web.Test.API
