@@ -86,7 +86,7 @@ namespace Kiss4Web.Modules.Pendenzen.SearchPendenzen
                       LEFT  JOIN vwPersonSimple   PRB ON PRB.BaPersonID = TSK.BaPersonID ";
             switch (query.IdMenu)
             {
-                case "1_1":
+                case "SC001_left-menu_meine-pendenzen_fallige":
                     strQuery += " WHERE ((TaskReceiverCode = 2 AND EXISTS (SELECT TOP 1 1 FROM dbo.FaPendenzgruppe_User WHERE UserID = {0} AND FaPendenzgruppeID = ReceiverID)) OR (TaskReceiverCode = 1 AND ReceiverID = {0})) AND TaskStatusCode IN (1, 2) AND ExpirationDate <= GetDate()";
                     break;
                 case "1_3":

@@ -26,7 +26,7 @@ namespace Kiss4Web.Modules.Pendenzen.GetPendenzenData
 				searchCommand += " WHERE ";
 				switch (query.ItemType)
 				{
-					case "1_1": // set load condition of case Meine Pendenzen - fällige
+					case "SC001_left-menu_meine-pendenzen_fallige": // set load condition of case Meine Pendenzen - fällige
 						searchCommand += GetPendenzenCommand.FilterPendenzen_11;
 						break;
 					case "1_2": // set load condition of case Meine Pendenzen - offene
