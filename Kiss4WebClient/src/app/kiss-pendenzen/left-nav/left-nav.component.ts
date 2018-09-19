@@ -53,7 +53,7 @@ export class LeftNavComponent extends BaseComponent implements OnInit {
             html: "<span style='font-size:18px; font-weight: 500; color: #39474f;'>Meine Pendenzen</span>",
             expanded: true,
             items: [{
-              id: "1_1",
+              id: "SC001_left-menu_meine-pendenzen_fallige",
               text: "fällige (" + this.navBarItems.itmMeineFaellig + ")",
             },
             {

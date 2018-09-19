@@ -9,13 +9,13 @@
         <div class="float-right">
           <div class="row">
             <div class="col-md-12">
-              <dx-button id="app-content3-header-body-button-inBearbeitung" height="30" text="{{ 'Button.Status.Inprogress' | translate }}"
+              <dx-button id="SC001_detail-header_in-bearbeitung" height="30" text="{{ 'Button.Status.Inprogress' | translate }}"
                 [type]="'default'" (onClick)="onClickInProcessing()" [disabled]="disableBtnInProcessing"></dx-button>
-              <dx-button id="app-content3-header-body-button-zurMaske" height="30" text="{{ 'Button.Status.TotheMask' | translate }}" [type]="'default'"
+              <dx-button id="SC001_detail_zur-maske" height="30" text="{{ 'Button.Status.TotheMask' | translate }}" [type]="'default'"
                 [disabled]=true></dx-button>
-              <dx-button id="app-content3-header-body-button-Weiterleiten" height="30" text="{{ 'Button.Status.Forward' | translate }}"
+              <dx-button id="SC001_detail-header_weiterleiten" height="30" text="{{ 'Button.Status.Forward' | translate }}"
                 [type]="'default'" (onClick)="showAssigneePopup()" [disabled]="disableBtnAssign"></dx-button>
-              <dx-button id="app-content3-header-body-button-Erledigt" height="30" text="{{ 'Button.Status.Done' | translate }}" [type]="'default'"
+              <dx-button id="SC001_detail-header_erledigt" height="30" text="{{ 'Button.Status.Done' | translate }}" [type]="'default'"
                 (onClick)="onClickFinishTask()" [visible]="visibleBtnFinish" [disabled]="disableBtnFinish"></dx-button>
               <dx-button height="30" [text]="'Anfangszustandsdossier erstellen'" [type]="'default'" (onClick)="onClickAnfangszustandsdossier()"
                 [visible]="visibleBtnAnfangszustandsdossier" [disabled]="disableBtnAnfangszustandsdossier"></dx-button>
@@ -23,13 +23,13 @@
                 [disabled]="true"></dx-button>
               <dx-button height="30" [text]="'Ablehnen'" [type]="'default'" (onClick)="onClickRejectTask()" [visible]="visibleBtnReject"
                 [disabled]="true"></dx-button>
-              <dx-button id="app-content3-header-body-button-NeuePendenz" height="30" text="{{ 'Button.Add' | translate }}" [type]="'default'"
+              <dx-button id="SC001_detail-header_neue-pendenz" height="30" text="{{ 'Button.Add' | translate }}" [type]="'default'"
                 [visible]="visibleBtnAddNewTask" [disabled]="disableBtnAddNewTask" (onClick)="onClickAddNewTask()"></dx-button>
-              <dx-button id="app-content3-header-body-button-Bearbeiten" height="30" text="{{ 'Button.Edit' | translate }}" [type]="'default'"
+              <dx-button id="SC001_detail-header_bearbeiten" height="30" text="{{ 'Button.Edit' | translate }}" [type]="'default'"
                 [visible]="visibleBtnEditTask" [disabled]="disableBtnEditTask" (onClick)="onClickEditTask()"></dx-button>
-              <dx-button id="app-content3-header-body-button-Speichern" height="30" text="{{ 'Button.Save' | translate }}" [type]="'default'"
+              <dx-button id="SC001_detail-header_speichern" height="30" text="{{ 'Button.Save' | translate }}" [type]="'default'"
                 [visible]="visibleBtnSave" (onClick)="onClickSave()"></dx-button>
-              <dx-button id="app-content3-header-body-button-Abbrechen" height="30" text="{{ 'Button.Cancel' | translate }}" [type]="'default'"
+              <dx-button id="SC001_detail-header_abbrechen" height="30" text="{{ 'Button.Cancel' | translate }}" [type]="'default'"
                 [visible]="visibleBtnCancel" (onClick)="onClickCancel()"></dx-button>
               <span style="vertical-align: middle;">
                 <i class="dx-icon dx-icon-overflow" id="app-content3-header-body-icon-overflow" style="font-size:24px;"></i>
@@ -44,37 +44,37 @@
   <!-- Begin body -->
   <div class="app-content3-body" id="app-content3-body" style="display: none">
     <dx-form id="content3" [showColonAfterLabel]=false [(formData)]="pendenzenDetail">
-      <dxi-item itemType="group" id="app-content3-body-form-item" [colCount]="2">
+      <dxi-item itemType="group" id="SC001_detail_edit_item" [colCount]="2">
         <!-- left col -->
-        <dxi-item itemType="group" id="app-content3-body-form-item-group1">
-          <dxi-item dataField="status" id="app-content3-body-form-status" [label]="{text: 'Status'}">
+        <dxi-item itemType="group" id="SC001_detail_edit_item-group1">
+          <dxi-item dataField="status" id="SC001_detail_edit_status" [label]="{text: 'Status'}">
             <dx-text-box [value]="valueStatus" [disabled]="isReadOnlyStatus">
             </dx-text-box>
           </dxi-item>
-          <dxi-item id="app-content3-body-form-pendenzTyp" dataField="pendenzTyp" [label]="{text: 'Pendenz Typ'}">
+          <dxi-item id="SC001_detail_edit_pendenz-typ" dataField="pendenzTyp" [label]="{text: 'Pendenz Typ'}">
             <dx-select-box [(value)]="pendenzenDetail.pendenzTyp" [placeholder]="'Auswählen...'" [disabled]="isReadOnlyPendenzTyp" [dataSource]="dataTaskType"
               valueExpr="value" displayExpr="name" (onValueChanged)="onChangeTaskType('pendenzTyp',$event)" [noDataText]="'Keine Daten verfügbar'">
             </dx-select-box>
           </dxi-item>
-          <dxi-item id="app-content3-body-form-betreff" dataField="betreff" [label]="{text: 'Betreff'}">
+          <dxi-item id="SC001_detail_edit_betreff" dataField="betreff" [label]="{text: 'Betreff'}">
             <dx-text-box [(value)]="pendenzenDetail.betreff" [disabled]="isReadOnlyBetreff" [showClearButton]="!isReadOnlyBetreff" [maxLength]="maxLengthSubject"
-              [showClearButton]="!isReadOnlyBetreff" [(isValid)]="isBetreffValid" [(validationError)]="betreffValidationError"
+              [showClearButton]="!isReadOnlyBetreff" [(isValid)]="isBetreffValid" [(validationError)]="betreffValidationError" placeholder="Betreff..."
               (onValueChanged)="onBetreffValueChanged('betreff',$event)">
               <!-- <dx-validator>
                 <dxi-validation-rule type="required" message="Das Feld 'Betreff' darf nicht leer bleiben !"></dxi-validation-rule>
               </dx-validator> -->
             </dx-text-box>
           </dxi-item>
-          <dxi-item id="app-content3-body-form-beschreibung" dataField="beschreibung" [label]="{text: 'Beschreibung'}">
-            <dx-text-area [(value)]="pendenzenDetail.beschreibung" [height]="90" [maxLength]="valueMaxlengthDescription" [disabled]="isReadOnlyBeschreibung"
+          <dxi-item id="SC001_detail_edit_beschreibung" dataField="beschreibung" [label]="{text: 'Beschreibung'}">
+            <dx-text-area [(value)]="pendenzenDetail.beschreibung" [height]="90" [maxLength]="valueMaxlengthDescription" [disabled]="isReadOnlyBeschreibung" placeholder="Beschreibung..."
               [(isValid)]="isDescriptionValid" [(validationError)]="descriptionValidationError" (onValueChanged)="onDescriptionValueChanged('beschreibung', $event)">
             </dx-text-area>
           </dxi-item>
-          <dxi-item id="app-content3-body-form-Ersteller" dataField="" [label]="{text: 'Ersteller'}">
+          <dxi-item id="SC001_detail_edit_ersteller" dataField="" [label]="{text: 'Ersteller'}">
             <dx-text-box [(value)]="pendenzenDetail.ersteller" [disabled]="isReadOnlyErsteller" (onValueChanged)="onChanged('ersteller',$event)">`
             </dx-text-box>
           </dxi-item>
-          <dxi-item id="app-content3-body-form-empfanger" dataField="empfanger" [label]="{text: 'Empfänger'}">
+          <dxi-item id="SC001_detail_edit_empfanger" dataField="empfanger" [label]="{text: 'Empfänger'}">
             <dx-drop-down-box [dataSource]="gridReceiverData" [(value)]="grid31BoxValue" [(opened)]="isGridReceiverOpened" valueExpr="id"
               placeholder="Auswählen..." [showClearButton]="!isReadOnlyEmpfanger" [displayExpr]="grid31Box_displayExpr" [disabled]="isReadOnlyEmpfanger"
               [(isValid)]="isEmpfangerValid" [(validationError)]="empfangerValidationError" (onValueChanged)="onEmpfangerValueChanged('empfanger', $event)">
@@ -82,7 +82,7 @@
                 <dxi-validation-rule type="required" message="Das Feld 'Empfänger' darf nicht leer bleiben !"></dxi-validation-rule>
               </dx-validator> -->
               <div *dxTemplate="let data of 'content'">
-                <dx-data-grid #empfangerDatagrid id="app-content3-body-form-drop-down-box-empfanger-grid" [dataSource]="gridReceiverData"
+                <dx-data-grid #empfangerDatagrid id="SC001_detail_edit_drop-down-box-empfanger-grid" [dataSource]="gridReceiverData"
                   [columns]="['typ', 'kurzel', 'name', 'abteilung']" [selection]="{ mode: 'single' }" [hoverStateEnabled]="true"
                   [scrolling]="{ mode: 'infinite' }" [height]="345" [(selectedRowKeys)]="grid31SelectedRowKeys" [showBorders]="true"
                   (onSelectionChanged)="onGrid31SelectionChanged($event)" [(sorting)]="sortingLabel" [noDataText]="'Keine Daten'">
@@ -95,12 +95,12 @@
               </div>
             </dx-drop-down-box>
           </dxi-item>
-          <dxi-item id="app-content3-body-form-falltrager" dataField="falltrager" [label]="{text: 'Fallträger'}">
+          <dxi-item id="SC001_detail_edit_falltrager" dataField="falltrager" [label]="{text: 'Fallträger'}">
             <dx-drop-down-box [dataSource]="gridFalltragerData" [(value)]="grid32BoxValue" [(opened)]="isgrid32Opened" valueExpr="id"
               placeholder="Auswählen..." [showClearButton]="true" [displayExpr]="grid32Box_displayExpr" [disabled]="isReadOnlyFalltrager"
               (onValueChanged)="onChanged('falltrager',$event)">
               <div *dxTemplate="let data of 'content'">
-                <dx-data-grid #falltragerDatagrid id="app-content3-body-form-drop-down-box-falltrager-grid" [dataSource]="gridFalltragerData"
+                <dx-data-grid #falltragerDatagrid id="SC001_detail_edit_drop-down-box-falltrager-grid" [dataSource]="gridFalltragerData"
                   [columns]="['id', 'name', 'vorname', 'benutzer']" [selection]="{ mode: 'single' }" [hoverStateEnabled]="true"
                   [scrolling]="{ mode: 'infinite' }" [height]="345" [(selectedRowKeys)]="grid32SelectedRowKeys" [showBorders]="true"
                   (onSelectionChanged)="onGrid32SelectionChanged($event)" [(sorting)]="sortingLabel" [noDataText]="'Keine Daten'">
@@ -113,7 +113,7 @@
               </div>
             </dx-drop-down-box>
           </dxi-item>
-          <dxi-item id="app-content3-body-form-leistung" dataField="leistung" [label]="{text: 'Leistung'}">
+          <dxi-item id="SC001_detail_edit_leistung" dataField="leistung" [label]="{text: 'Leistung'}">
             <dx-select-box [(value)]="pendenzenDetail.leistung" [placeholder]="'Auswählen...'" [disabled]="isReadOnlyLeistung" [dataSource]="dataLeistung"
               editorType="dxSelectBox" [searchEnabled]="true" valueExpr="value" displayExpr="name" (onValueChanged)="onChangeLeistung('leistung', $event)"
               [noDataText]="'Keine Daten verfügbar'">
@@ -122,39 +122,39 @@
           </dxi-item>
         </dxi-item>
         <!-- right col -->
-        <dxi-item itemType="group" id="app-content3-body-form-item-group2">
-          <dxi-item dataField="leistungsverantw" [label]="{text: 'Leistungsverantw.'}">
-            <dx-text-box id="app-content3-body-form-leistungsverantw" [value]="pendenzenDetail.leistungsverantName" [disabled]="true">
+        <dxi-item itemType="group" id="SC001_detail_edit_item-group2">
+          <dxi-item id="SC001_detail_edit_leistungsverantw" dataField="leistungsverantw" [label]="{text: 'Leistungsverantw.'}">
+            <dx-text-box id="SC001_detail_edit_leistungsverantw" [value]="pendenzenDetail.leistungsverantName" [disabled]="true">
             </dx-text-box>
           </dxi-item>
-          <dxi-item id="app-content3-body-form-betrifftPerson" [label]="{text: 'betrifft Person'}" editorType="dxSelectBox">
+          <dxi-item id="SC001_detail_edit_betrifft-person" [label]="{text: 'betrifft Person'}" editorType="dxSelectBox">
             <dx-select-box [(value)]="pendenzenDetail.personId" [placeholder]="'Auswählen...'" [disabled]="isReadOnlyBetrifftPerson"
               [dataSource]="dataBetrifftPerson" editorType="dxSelectBox" [searchEnabled]="true" valueExpr="value" displayExpr="name"
               (onValueChanged)="onChangeBetrifftPerson('betrifftPerson', $event)" [noDataText]="'Keine Daten verfügbar'">
             </dx-select-box>
           </dxi-item>
-          <dxi-item id="app-content3-body-form-antwort" dataField="antwort" [label]="{text: 'Antwort'}">
+          <dxi-item id="SC001_detail_edit_antwort" dataField="antwort" [label]="{text: 'Antwort'}">
             <dx-text-area [(value)]="pendenzenDetail.antwort" [height]="90" [maxLength]="valueMaxlengthAnswer" [disabled]="isReadOnlyAntwort"
               [(isValid)]="isAnswerValid" [(validationError)]="answerValidationError" (onValueChanged)="onAnswerValueChanged('antwort', $event)">
             </dx-text-area>
           </dxi-item>
-          <dxi-item id="app-content3-body-form-erfasst" dataField="erfasst" [label]="{text: 'Erfasst'}">
+          <dxi-item id="SC001_detail_edit_erfasst" dataField="erfasst" [label]="{text: 'Erfasst'}">
             <dx-date-box [(value)]="pendenzenDetail.erfasst" type="date" displayFormat="dd.MM.yyyy" width="50%" [showClearButton]="true"
               [disabled]="isReadOnlyErfasst" [showClearButton]="!isReadOnlyErfasst" (onInitialized)="onInitializedDateBox($event)">
             </dx-date-box>
           </dxi-item>
-          <dxi-item id="app-content3-body-form-fallig" dataField="fallig" [label]="{text: 'Fällig'}">
-            <dx-date-box [(value)]="pendenzenDetail.fallig" type="date" displayFormat="dd.MM.yyyy" width="50%" [showClearButton]="true"
+          <dxi-item id="SC001_detail_edit_fallig" dataField="fallig" [label]="{text: 'Fällig'}">
+            <dx-date-box [(value)]="pendenzenDetail.fallig" type="date" displayFormat="dd.MM.yyyy" width="50%" [showClearButton]="true" placeholder="DD.MM.YYYY"
               [acceptCustomValue]="false" [disabled]="isReadOnlyFallig" [showClearButton]="!isReadOnlyFallig" (onValueChanged)="onChanged('fallig', $event)"
               (onInitialized)="onInitializedDateBox($event)">
             </dx-date-box>
           </dxi-item>
-          <dxi-item id="app-content3-body-form-Bearbeitung" dataField="" [label]="{text: 'Bearbeitung'}">
+          <dxi-item id="SC001_detail_edit_bearbeitung" dataField="" [label]="{text: 'Bearbeitung'}">
             <div class="pt10">
               {{pendenzenDetail.bearbeitungName}}
             </div>
           </dxi-item>
-          <dxi-item id="app-content3-body-form-Erledigt" dataField="" [label]="{text: 'Erledigt'}">
+          <dxi-item id="SC001_detail_edit_erledigt" dataField="" [label]="{text: 'Erledigt'}">
             <div class="pt10">
               {{pendenzenDetail.erledigtName}}
             </div>
@@ -166,69 +166,64 @@
 
   <div class="app-content3-body" id="app-content3-body-lable">
     <dx-form id="content3" [showColonAfterLabel]=false [(formData)]="pendenzenDetail">
-      <dxi-item itemType="group" id="app-content3-body-form-item" [colCount]="2">
+      <dxi-item itemType="group" id="SC001_detail_item" [colCount]="2">
         <!-- left col -->
-        <dxi-item itemType="group" id="app-content3-body-form-item-group1">
-          <dxi-item dataField="status" id="app-content3-body-form-status" [label]="{text: 'Status'}">
-            <div>{{valueStatus}}</div>
+        <dxi-item itemType="group" id="SC001_detail_item-group1">
+          <dxi-item dataField="status" id="SC001_detail_status" [label]="{text: 'Status'}">
+            <span>{{valueStatus}}</span>
           </dxi-item>
-          <dxi-item id="app-content3-body-form-pendenzTyp" dataField="pendenzTyp" [label]="{text: 'Pendenz Typ'}">
-            <div>{{pendenzenDetail.taskTypeName}}</div>
+          <dxi-item id="SC001_detail_pendenz-typ" dataField="pendenzTyp" [label]="{text: 'Pendenz Typ'}">
+            <span>{{pendenzenDetail.taskTypeName}}</span>
           </dxi-item>
-          <dxi-item id="app-content3-body-form-betreff" dataField="betreff" [label]="{text: 'Betreff'}">
-
-            <div>{{pendenzenDetail.betreff}}</div>
+          <dxi-item id="SC001_detail_betreff" dataField="betreff" [label]="{text: 'Betreff'}">
+            <span>{{pendenzenDetail.betreff}}</span>
           </dxi-item>
-          <dxi-item id="app-content3-body-form-beschreibung" dataField="beschreibung" [label]="{text: 'Beschreibung'}">
+          <dxi-item id="SC001_detail_beschreibung" dataField="beschreibung" [label]="{text: 'Beschreibung'}">
             <dx-text-area [(value)]="pendenzenDetail.beschreibung" [height]="90" [readOnly]="true">
             </dx-text-area>
           </dxi-item>
-          <dxi-item id="app-content3-body-form-Ersteller" dataField="" [label]="{text: 'Ersteller'}">
-
-            <div>{{pendenzenDetail.ersteller}}</div>
+          <dxi-item id="SC001_detail_ersteller" dataField="" [label]="{text: 'Ersteller'}">
+            <span>{{pendenzenDetail.ersteller}}</span>
           </dxi-item>
-          <dxi-item id="app-content3-body-form-empfanger" dataField="empfanger" [label]="{text: 'Empfänger'}">
-
-            <div>{{pendenzenDetail.empfangerName}}</div>
+          <dxi-item id="SC001_detail_empfanger" dataField="empfanger" [label]="{text: 'Empfänger'}">
+            <span>{{pendenzenDetail.empfangerName}}</span>
           </dxi-item>
-          <dxi-item id="app-content3-body-form-falltrager" dataField="falltrager" [label]="{text: 'Fallträger'}">
-
-            <div>{{pendenzenDetail.falltragerName}}</div>
+          <dxi-item id="SC001_detail_falltrager" dataField="falltrager" [label]="{text: 'Fallträger'}">
+            <span>{{pendenzenDetail.falltragerName}}</span>
           </dxi-item>
-          <dxi-item id="app-content3-body-form-leistung" dataField="leistung" [label]="{text: 'Leistung'}">
-
-            <div>{{pendenzenDetail.leistungName}}</div>
+          <dxi-item id="SC001_detail_leistung" dataField="leistung" [label]="{text: 'Leistung'}">
+            <span>{{pendenzenDetail.leistungName}}</span>
 
           </dxi-item>
         </dxi-item>
         <!-- right col -->
-        <dxi-item itemType="group" id="app-content3-body-form-item-group2">
-          <dxi-item dataField="leistungsverantw" [label]="{text: 'Leistungsverantw.'}">
+        <dxi-item itemType="group" id="SC001_detail_item-group2">
+          <dxi-item id="SC001_detail_leistungsverantw" dataField="leistungsverantw" [label]="{text: 'Leistungsverantw.'}">
 
             <div>{{pendenzenDetail.leistungsverantName}}</div>
           </dxi-item>
-          <dxi-item id="app-content3-body-form-betrifftPerson" dataField="betrifftPerson" [label]="{text: 'betrifft Person'}" editorType="dxSelectBox">
+          <dxi-item id="SC001_detail_betrifft-person" dataField="betrifftPerson" [label]="{text: 'betrifft Person'}" editorType="dxSelectBox">
 
             <div>{{pendenzenDetail.betrifftPersonName}}</div>
           </dxi-item>
-          <dxi-item id="app-content3-body-form-antwort" dataField="antwort" [label]="{text: 'Antwort'}">
+          <dxi-item id="SC001_detail_antwort" dataField="antwort" [label]="{text: 'Antwort'}">
             <dx-text-area [(value)]="pendenzenDetail.antwort" [height]="90" [readOnly]="true">
             </dx-text-area>
           </dxi-item>
-          <dxi-item id="app-content3-body-form-erfasst" dataField="erfasst" [label]="{text: 'Erfasst'}">
+          <dxi-item id="SC001_detail_erfasst" dataField="erfasst" [label]="{text: 'Erfasst'}">
 
             <div>{{erfasstLabel}}</div>
           </dxi-item>
-          <dxi-item id="app-content3-body-form-fallig" dataField="fallig" [label]="{text: 'Fällig'}">
+          <dxi-item id="SC001_detail_fallig" dataField="fallig" [label]="{text: 'Fällig'}">
 
             <div>{{falligLabel}}</div>
           </dxi-item>
-          <dxi-item id="app-content3-body-form-Bearbeitung" dataField="" [label]="{text: 'Bearbeitung'}">
+          <dxi-item id="SC001_detail_bearbeitung" dataField="" [label]="{text: 'Bearbeitung'}">
             <div class="pt10">
               {{pendenzenDetail.bearbeitungName}}
             </div>
           </dxi-item>
-          <dxi-item id="app-content3-body-form-Erledigt" dataField="" [label]="{text: 'Erledigt'}">
+          <dxi-item id="SC001_detail_erledigt" dataField="" [label]="{text: 'Erledigt'}">
             <div class="pt10">
               {{pendenzenDetail.erledigtName}}
             </div>

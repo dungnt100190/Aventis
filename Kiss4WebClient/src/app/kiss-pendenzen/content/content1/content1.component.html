@@ -3,7 +3,7 @@
     <div class="app-content1-header" id="search-app-content-header">
         <div class="row" id="search-row">
             <div class="col-md-6" style="padding-top: 4px;" id="search-row-col-1">
-                <span id="search-text-view">Suche</span>
+                <span id="SC001_search_label-suche">Suche</span>
             </div>
             <!-- <div class="col-md-6" style="text-align: right;" id="search-row-col-2">
                 <dx-button [disabled]="isDisabled" id="search-search-button" height="30" [text]="'Suche'" [type]="'default'" (onClick)="search()"></dx-button>
@@ -12,13 +12,13 @@
     </div>
     <!-- end header -->
     <!-- begin body -->
-    <div class="app-content1-body" id="search-app-content-body">
+    <div class="app-content1-body" id="SC001_search">
         <dx-form  [disabled]="isDisabled" id="content1" [showColonAfterLabel]=false [(formData)] = "frmSearchOption">
             <dxi-item id="search-body" itemType="group" [colCount]="2">
                 <!-- begin left body -->
                 <dxi-item itemType="group" id="search-body-left">
-                    <dxi-item id="search-body-left-status" dataField="Status" [label]="{text: 'Status'}" editorType="dxSelectBox">
-                        <dx-select-box id="search-body-left-status-select"
+                    <dxi-item id="SC001_search_status" dataField="Status" [label]="{text: 'Status'}" editorType="dxSelectBox">
+                        <dx-select-box id="SC001_search_status-select"
                             placeholder="Auswählen..."
                             [dataSource]="itemsStatus"
                             valueExpr="value"
@@ -30,8 +30,8 @@
                             [(value)]="idStatusSelected">
                         </dx-select-box>
                     </dxi-item>
-                    <dxi-item id="search-body-left-type" dataField="Pendenz Typ" [label]="{text: 'Pendenz Typ'}" editorType="dxSelectBox">
-                        <dx-select-box id="search-body-left-type-select"
+                    <dxi-item id="SC001_search_pendenz-typ" dataField="Pendenz Typ" [label]="{text: 'Pendenz Typ'}" editorType="dxSelectBox">
+                        <dx-select-box id="SC001_search_type-select"
                             placeholder="Auswählen..."
                             [dataSource]="itemsPendenzTyp"
                             valueExpr="value"
@@ -43,10 +43,10 @@
                             [(value)]="idPendenzType">
                         </dx-select-box>
                     </dxi-item>
-                    <dxi-item id="search-body-left-subject" dataField="betreff" [label]="{text: 'Betreff'}" [editorOptions]="{ onValueChanged: onValueChangedBetreff }"></dxi-item> <!--[editorOptions]="{ onValueChanged: handleBetreffChanged }"-->
+                    <dxi-item id="SC001_search_betreff" dataField="Betreff" [label]="{text: 'Betreff'}" placeholder="Betreff..." [editorOptions]="{ onValueChanged: onValueChangedBetreff }"></dxi-item> <!--[editorOptions]="{ onValueChanged: handleBetreffChanged }"-->
                     <!-- Ersteller grid1 -->
-                    <dxi-item id="search-body-left-creator" dataField="Ersteller" [label]="{text: 'Ersteller'}">
-                        <dx-drop-down-box id="search-body-left-creator-dropdown"
+                    <dxi-item id="SC001_search_ersteller" dataField="Ersteller" [label]="{text: 'Ersteller'}">
+                        <dx-drop-down-box id="SC001_search_creator-dropdown"
                         [dataSource]="grid1DataSource"
                         [(opened)]="isgrid1Opened"
                         [(value)]="grid1BoxValue"
@@ -54,8 +54,8 @@
                         [placeholder]="'Auswählen...'"
                         [showClearButton]="true"
                         [displayExpr]="grid1Box_displayExpr">
-                            <div id="search-body-left-creator-dropdown-content" *dxTemplate="let data of 'content'">
-                                <dx-data-grid id="search-body-left-creator-dropdown-grid"
+                            <div id="SC001_search_creator-dropdown-content" *dxTemplate="let data of 'content'">
+                                <dx-data-grid id="SC001_search_creator-dropdown-grid"
                                     [dataSource]="grid1DataSource"
                                     [columns]="['typ', 'name', 'kurzel', 'abteilung']"
                                     [selection]="{ mode: 'single' }"
@@ -77,8 +77,8 @@
                         </dx-drop-down-box>
                     </dxi-item>
                     <!-- Empfänger grid2 -->
-                    <dxi-item id="search-body-left-receiver"  dataField="Empfänger" [label]="{text: 'Empfänger'}">
-                        <dx-drop-down-box id="search-body-left-receiver-dropdown"
+                    <dxi-item id="SC001_search_empfanger"  dataField="Empfänger" [label]="{text: 'Empfänger'}">
+                        <dx-drop-down-box id="SC001_search_receiver-dropdown"
                         [dataSource]="grid2DataSource"
                         [(value)]="grid2BoxValue"
                         [(opened)]="isgrid2Opened"
@@ -87,7 +87,7 @@
                         [showClearButton]="true"
                         [displayExpr]="grid1Box_displayExpr">
                             <div *dxTemplate="let data of 'content'">
-                                <dx-data-grid id="search-body-left-receiver-dropdown-grid"
+                                <dx-data-grid id="SC001_search_receiver-dropdown-grid"
                                     [dataSource]="grid2DataSource"
                                     [columns]="['typ', 'kurzel', 'name', 'abteilung']"
                                     [selection]="{ mode: 'single' }"
@@ -109,16 +109,16 @@
                         </dx-drop-down-box>
                     </dxi-item>
 
-                    <dxi-item id="search-body-left-name" dataField="nameKlientIn" [label]="{text: 'Name Klient/in'}" [editorOptions]="{ onValueChanged: onNameKlientInValueChanged }"></dxi-item>  <!--[editorOptions]="{ onValueChanged: handleNameChanged }"-->
-                    <dxi-item id="search-body-left-firstname" dataField="vornameKlientIn" [label]="{text: 'Vorname Klient/in'}" [editorOptions]="{ onValueChanged: onVornameKlientInValueChanged }"></dxi-item> <!--[editorOptions]="{ onValueChanged: handleVornameChanged }"-->
+                    <dxi-item id="SC001_search_name-klient-in" dataField="Name Klient/in" [label]="{text: 'Name Klient/in'}" [editorOptions]="{ onValueChanged: onNameKlientInValueChanged }"></dxi-item>  <!--[editorOptions]="{ onValueChanged: handleNameChanged }"-->
+                    <dxi-item id="SC001_search_vorname-klient-in" dataField="Vorname Klient/in" [label]="{text: 'Vorname Klient/in'}" [editorOptions]="{ onValueChanged: onVornameKlientInValueChanged }"></dxi-item> <!--[editorOptions]="{ onValueChanged: handleVornameChanged }"-->
                 </dxi-item>
                 <!-- end left body -->
                 <!-- begin right body -->
                 <dxi-item id="search-body-right" itemType="group">
-                    <dxi-item id="search-body-right-fallnummer" dataField="fallnummer" [label]="{text: 'Fallnummer'}" [editorOptions]="{ onValueChanged: onFallnummerValueChanged, mask: '999999999', maskChar: ' '}"></dxi-item> <!--[editorOptions]="{ onValueChanged: handleFallnummerChanged }"-->
+                    <dxi-item id="SC001_search_fallnummer" dataField="fallnummer" [label]="{text: 'Fallnummer'}" [editorOptions]="{ onValueChanged: onFallnummerValueChanged, mask: '999999999', maskChar: ' '}"></dxi-item> <!--[editorOptions]="{ onValueChanged: handleFallnummerChanged }"-->
                     <!-- Leistungsverantw grid3 -->
-                    <dxi-item id="search-body-right-leistungsverantw" dataField="Leistungsverantw" [label]="{text: 'Leistungsverantw.'}">
-                        <dx-drop-down-box id="search-body-right-leistungsverantw-dropdown"
+                    <dxi-item id="SC001_search_leistungsverantw" dataField="Leistungsverantw" [label]="{text: 'Leistungsverantw.'}">
+                        <dx-drop-down-box id="SC001_search_leistungsverantw-dropdown"
                         [dataSource]="grid3DataSource"
                         [(value)]="grid3BoxValue"
                         [(opened)]="isgrid3Opened"
@@ -127,7 +127,7 @@
                         [showClearButton]="true"
                         [displayExpr]="grid3Box_displayExpr">
                             <div *dxTemplate="let data of 'content'">
-                                <dx-data-grid id="search-body-right-leistungsverantw-dropdown-grid"
+                                <dx-data-grid id="SC001_search_leistungsverantw-dropdown-grid"
                                     [dataSource]="grid3DataSource"
                                     [columns]="['name', 'logonName', 'displayText']"
                                     [selection]="{ mode: 'single' }"
@@ -149,8 +149,8 @@
                         </dx-drop-down-box>
                     </dxi-item>
 
-                    <dxi-item id="search-body-right-organization" dataField="Organisationseinheit" [label]="{text: 'Organisationseinheit'}" editorType="dxSelectBox">
-                        <dx-select-box id="search-body-right-organization-select"
+                    <dxi-item id="SC001_search_organisationseinheit" dataField="Organisationseinheit" [label]="{text: 'Organisationseinheit'}" editorType="dxSelectBox">
+                        <dx-select-box id="SC001_search_organization-select"
                             [placeholder]="'Auswählen...'"
                             [dataSource]="itemsOrganisationseinheit"
                             valueExpr="value"
@@ -163,73 +163,73 @@
                         </dx-select-box>
                     </dxi-item>
 
-                    <dxi-item id="search-body-right-detected" dataField="Erfasst" [label]="{text: 'Erfasst'}" itemType="group" [colCount]="2">
-                        <dx-box id="search-body-right-detected-box" direction="row" width="100%">
-                            <dxi-item id="search-body-right-detected-box-item1" [ratio]="5">
-                                <dx-date-box id="search-body-right-detected-box-item1-date" type="date" displayFormat="dd.MM.yyyy" width="100%" [showClearButton]="true" [(value)]="strFromErfasst" [acceptCustomValue]="false" (onInitialized)="onInitializedDateBox($event)" (onValueChanged)="onErfasstFromValueChanged($event)">
+                    <dxi-item id="SC001_search_erfasst" dataField="Erfasst" [label]="{text: 'Erfasst'}" itemType="group" [colCount]="2">
+                        <dx-box id="SC001_search_detected-box" direction="row" width="100%">
+                            <dxi-item id="SC001_search_erfasst-from" [ratio]="5">
+                                <dx-date-box id="SC001_search_detected-box-item1-date" type="date" displayFormat="dd.MM.yyyy" width="100%" [showClearButton]="true" [(value)]="strFromErfasst" [acceptCustomValue]="false" (onInitialized)="onInitializedDateBox($event)" (onValueChanged)="onErfasstFromValueChanged($event)">
                                 </dx-date-box>
                             </dxi-item>
-                            <dxi-item id="search-body-right-detected-box-item2" [ratio]="1">
-                                <div id="search-body-right-detected-bridge" class="two-date-bridge">
-                                    <label id="search-body-right-detected-bridge-label">-</label>
+                            <dxi-item id="SC001_search_detected-box-item2" [ratio]="1">
+                                <div id="SC001_search_detected-bridge" class="two-date-bridge">
+                                    <label id="SC001_search_detected-bridge-label">-</label>
                                 </div>
                             </dxi-item>
-                            <dxi-item id="search-body-right-detected-box-item3" [ratio]="5">
-                                <dx-date-box id="search-body-right-detected-box1-item3-date" type="date" displayFormat="dd.MM.yyyy" width="100%" [showClearButton]="true" [(value)]="strToErfasst" [acceptCustomValue]="false" (onInitialized)="onInitializedDateBox($event)" (onValueChanged)="onErfasstToValueChanged($event)">
+                            <dxi-item id="SC001_search_erfasst-to" [ratio]="5">
+                                <dx-date-box id="SC001_search_detected-box1-item3-date" type="date" displayFormat="dd.MM.yyyy" width="100%" [showClearButton]="true" [(value)]="strToErfasst" [acceptCustomValue]="false" (onInitialized)="onInitializedDateBox($event)" (onValueChanged)="onErfasstToValueChanged($event)">
                                 </dx-date-box>
                             </dxi-item>
                         </dx-box>
                     </dxi-item>
 
-                    <dxi-item id="search-body-right-due" dataField="Fällig" [label]="{text: 'Fällig'}" itemType="group" [colCount]="2">
-                        <dx-box id="search-body-right-due-box" direction="row" width="100%">
-                            <dxi-item id="search-body-right-due-box-item1" [ratio]="5">
-                                <dx-date-box id="search-body-right-due-box-item1-date" type="date" displayFormat="dd.MM.yyyy" width="100%" [showClearButton]="true" [(value)]="strFromFallig" [acceptCustomValue]="false" (onInitialized)="onInitializedDateBox($event)" (onValueChanged)="onFalligFromValueChanged($event)">
+                    <dxi-item id="SC001_search_fallig" dataField="Fällig" [label]="{text: 'Fällig'}" itemType="group" [colCount]="2">
+                        <dx-box id="SC001_search_due-box" direction="row" width="100%">
+                            <dxi-item id="SC001_search_fallig-from" [ratio]="5">
+                                <dx-date-box id="SC001_search_due-box-item1-date" type="date" displayFormat="dd.MM.yyyy" width="100%" [showClearButton]="true" [(value)]="strFromFallig" [acceptCustomValue]="false" (onInitialized)="onInitializedDateBox($event)" (onValueChanged)="onFalligFromValueChanged($event)">
                                 </dx-date-box>
                             </dxi-item>
-                            <dxi-item id="search-body-right-due-box-item2" [ratio]="1">
-                                <div id="search-body-right-due-bridge" class="two-date-bridge">
+                            <dxi-item id="SC001_search_due-box-item2" [ratio]="1">
+                                <div id="SC001_search_due-bridge" class="two-date-bridge">
                                     <label>-</label>
                                 </div>
                             </dxi-item>
-                            <dxi-item id="search-body-right-due-box-item3" [ratio]="5">
-                                <dx-date-box id="search-body-right-due-box-item3-date" type="date" displayFormat="dd.MM.yyyy" width="100%" [showClearButton]="true" [(value)]="strToFallig" [acceptCustomValue]="false" (onInitialized)="onInitializedDateBox($event)" (onValueChanged)="onFalligToValueChanged($event)">
+                            <dxi-item id="SC001_search_fallig-to" [ratio]="5">
+                                <dx-date-box id="SC001_search_due-box-item3-date" type="date" displayFormat="dd.MM.yyyy" width="100%" [showClearButton]="true" [(value)]="strToFallig" [acceptCustomValue]="false" (onInitialized)="onInitializedDateBox($event)" (onValueChanged)="onFalligToValueChanged($event)">
                                 </dx-date-box>
                             </dxi-item>
                         </dx-box>
                     </dxi-item>
 
-                    <dxi-item id="search-body-right-processing" dataField="Bearbeitung" [label]="{text: 'Bearbeitung'}" itemType="group" [colCount]="2">
-                        <dx-box id="search-body-right-processing-box" direction="row" width="100%">
-                            <dxi-item id="search-body-right-processing-box-item1" [ratio]="5">
-                                <dx-date-box id="search-body-right-processing-box-item1-date" type="date" displayFormat="dd.MM.yyyy" width="100%" [showClearButton]="true" [(value)]="strFromBearbeitung" [acceptCustomValue]="false" (onInitialized)="onInitializedDateBox($event)" (onValueChanged)="onBearbeitungFromValueChanged($event)">
+                    <dxi-item id="SC001_search_bearbeitung" dataField="Bearbeitung" [label]="{text: 'Bearbeitung'}" itemType="group" [colCount]="2">
+                        <dx-box id="SC001_search_processing-box" direction="row" width="100%">
+                            <dxi-item id="SC001_search_bearbeitung-from" [ratio]="5">
+                                <dx-date-box id="SC001_search_processing-box-item1-date" type="date" displayFormat="dd.MM.yyyy" width="100%" [showClearButton]="true" [(value)]="strFromBearbeitung" [acceptCustomValue]="false" (onInitialized)="onInitializedDateBox($event)" (onValueChanged)="onBearbeitungFromValueChanged($event)">
                                 </dx-date-box>
                             </dxi-item>
-                            <dxi-item id="search-body-right-processing-box-item2" [ratio]="1">
-                                <div id="search-body-right-processing-bridge" class="two-date-bridge">
-                                    <label id="search-body-right-processing-bridge-label">-</label>
+                            <dxi-item id="SC001_search_processing-box-item2" [ratio]="1">
+                                <div id="SC001_search_processing-bridge" class="two-date-bridge">
+                                    <label id="SC001_search_processing-bridge-label">-</label>
                                 </div>
                             </dxi-item>
-                            <dxi-item id="search-body-right-processing-box-item3" [ratio]="5">
-                                <dx-date-box id="search-body-right-processing-box-item3-date" type="date" displayFormat="dd.MM.yyyy" width="100%" [showClearButton]="true" [(value)]="strToBearbeitung" [acceptCustomValue]="false" (onInitialized)="onInitializedDateBox($event)" (onValueChanged)="onBearbeitungToValueChanged($event)">
+                            <dxi-item id="SC001_search_bearbeitung-to" [ratio]="5">
+                                <dx-date-box id="SC001_search_processing-box-item3-date" type="date" displayFormat="dd.MM.yyyy" width="100%" [showClearButton]="true" [(value)]="strToBearbeitung" [acceptCustomValue]="false" (onInitialized)="onInitializedDateBox($event)" (onValueChanged)="onBearbeitungToValueChanged($event)">
                                 </dx-date-box>
                             </dxi-item>
                         </dx-box>
                     </dxi-item>
 
-                    <dxi-item id="search-body-right-done" dataField="Erledigt" [label]="{text: 'Erledigt'}" itemType="group" [colCount]="2" >
-                        <dx-box id="search-body-right-done-box" direction="row" width="100%">
-                            <dxi-item id="search-body-right-done-box-item1" [ratio]="5">
-                                <dx-date-box id="search-body-right-done-box-item1-date" type="date" displayFormat="dd.MM.yyyy" width="100%" [showClearButton]="true" [(value)]="strFromErledigt" [acceptCustomValue]="false" (onInitialized)="onInitializedDateBox($event)" (onValueChanged)="onErledigtFromValueChanged($event)">
+                    <dxi-item id="SC001_search_erledigt" dataField="Erledigt" [label]="{text: 'Erledigt'}" itemType="group" [colCount]="2" >
+                        <dx-box id="SC001_search_done-box" direction="row" width="100%">
+                            <dxi-item id="SC001_search_erledigt-from" [ratio]="5">
+                                <dx-date-box id="SC001_search_done-box-item1-date" type="date" displayFormat="dd.MM.yyyy" width="100%" [showClearButton]="true" [(value)]="strFromErledigt" [acceptCustomValue]="false" (onInitialized)="onInitializedDateBox($event)" (onValueChanged)="onErledigtFromValueChanged($event)">
                                 </dx-date-box>
                             </dxi-item>
-                            <dxi-item id="search-body-right-done-box-item2" [ratio]="1">
-                                <div id="search-body-right-done-bridge" class="two-date-bridge">
-                                    <label id="search-body-right-done-bridge-label">-</label>
+                            <dxi-item id="SC001_search_done-box-item2" [ratio]="1">
+                                <div id="SC001_search_done-bridge" class="two-date-bridge">
+                                    <label id="SC001_search_done-bridge-label">-</label>
                                 </div>
                             </dxi-item>
-                            <dxi-item id="search-body-right-done-box-item3"  [ratio]="5">
-                                <dx-date-box id="search-body-right-done-box-item3-date" type="date" displayFormat="dd.MM.yyyy" width="100%" [showClearButton]="true" [(value)]="strToErledigt" [acceptCustomValue]="false" (onInitialized)="onInitializedDateBox($event)" (onValueChanged)="onErledigtToValueChanged($event)">
+                            <dxi-item id="SC001_search_erledigt-to"  [ratio]="5">
+                                <dx-date-box id="SC001_search_done-box-item3-date" type="date" displayFormat="dd.MM.yyyy" width="100%" [showClearButton]="true" [(value)]="strToErledigt" [acceptCustomValue]="false" (onInitialized)="onInitializedDateBox($event)" (onValueChanged)="onErledigtToValueChanged($event)">
                                 </dx-date-box>
                             </dxi-item>
                         </dx-box>

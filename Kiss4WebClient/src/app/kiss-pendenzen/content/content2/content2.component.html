@@ -1,7 +1,7 @@
 <div id="filter-app-content" class="app-content2">
 
     <div id="filter-body" class="app-content2-body">
-        <dx-data-grid #pendenzenDatagrid id="gridContainer" [dataSource]="pendenzenData" keyExpr="id" (onCellClick)="onSelectionChanged($event)"
+        <dx-data-grid #pendenzenDatagrid id="SC001_grid" [dataSource]="pendenzenData" keyExpr="id" (onCellClick)="onSelectionChanged($event)"
             [columnAutoWidth]="true" [rowAlternationEnabled]="true" [allowColumnResizing]="true" [showBorders]="true" [(sorting)]="sortingLabel"
             [noDataText]="'Keine Daten'" [selectedRowKeys]="selectedKeys" [disabled]="isDisabled"> 
             <!-- (onEditorPrepared)="onEditorPreparingDatagrid($event)"  -->

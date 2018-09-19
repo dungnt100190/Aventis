@@ -82,11 +82,11 @@ export class ContentComponent implements OnInit {
   }
 
   closeErrorMessageArea() {
-    document.getElementById('error-container').style.display = 'none';
+    document.getElementById('SC001_error-container').style.display = 'none';
   }
 
   showErrorMessageArea() {
-    document.getElementById('error-container').style.display = 'block';
+    document.getElementById('SC001_error-container').style.display = 'block';
   }
 
   receiveValidationSummary() {
