@@ -27,7 +27,9 @@ namespace Kiss4Web.TestInfrastructure.TestServer
 
         public TestServerFixture()
         {
-            const string connectionString = "server=CMC-DUNGNT31;initial catalog=KiSS_Ivos_TestDB_R4929_1;user id=testKiss;";
+            //const string connectionString = "server=192.168.35.155,1433;initial catalog=KiSS_Standard_R41016_MIKA_DEV;user id=sa;password=123456a@";
+            //const string connectionString = "server=192.168.35.205,1433;initial catalog=KiSS_Ivos_TestDB_R4929_1;user id=testKiss";
+            const string connectionString = "server=CMC-DUNGNT31;initial catalog=KiSS_Standard_R41016_MIKA;user id=sa;password=123456";
             DockerStarter.TryStartDbContainer(connectionString);
             DateTime = new TestDateTimeProvider();
 
