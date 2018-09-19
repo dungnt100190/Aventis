@@ -35,7 +35,7 @@ namespace Kiss4Web.Test.API
                 throw;
             }
         }
-        
+
         [Given(@"these BaPerson")]
         public void GivenTheseBaPerson(Table table)
         {
@@ -53,11 +53,9 @@ namespace Kiss4Web.Test.API
         [Given(@"these FaLeistung")]
         public void GivenTheseFaLeistung(Table table)
         {
-            Dictionary<string, string> fieldMapping = new Dictionary<string, string>();
-            fieldMapping.Add("FaFallID", "BaPersonID");
             try
             {
-                TestDataManager.Insert<FaLeistung>(table, fieldMapping);
+                TestDataManager.Insert<FaLeistung>(table);
             }
             catch (Exception)
             {
@@ -69,13 +67,9 @@ namespace Kiss4Web.Test.API
         [Given(@"these XTask")]
         public void GivenTheseXTask(Table table)
         {
-            Dictionary<string, string> fieldMapping = new Dictionary<string, string>();
-            fieldMapping.Add("SenderID", "UserID");
-            fieldMapping.Add("ReceiverID", "UserID");
-            fieldMapping.Add("FaFallID", "BaPersonID");
             try
             {
-                TestDataManager.Insert<XTask>(table, fieldMapping);
+                TestDataManager.Insert<XTask>(table);
             }
             catch (Exception)
             {
@@ -98,40 +92,26 @@ namespace Kiss4Web.Test.API
             }
         }
 
-        [Then(@"the call is successful")]
-        public void ThenTheCallIsSuccessful()
-        {
-            try
-            {
-                TestDataManager.CheckCallApiStatus();
-            }
-            catch (Exception)
-            {
-                Cleanup();
-                throw;
-            }
-        }
-
-        [Then(@"the record of the inputted info is updated into table XTask in database")]
-        public void ThenTheRecordOfTheInputtedInfoIsUpdatedIntoTableXTaskInDatabase()
-        {
-            try
-            {
-                TestDataManager.CheckAddUpdateEntityExistsInDB<XTask>(isInserted: false);
-            }
-            catch (Exception)
-            {
-                Cleanup();
-                throw;
-            }
-        }
-
         [Then(@"the record of the inputted info is inserted into table XTask in database")]
         public void ThenTheRecordOfTheInputtedInfoIsInsertedIntoTableXTaskInDatabase()
         {
             try
             {
                 TestDataManager.CheckAddUpdateEntityExistsInDB<XTask>();
+            }
+            catch (Exception)
+            {
+                Cleanup();
+                throw;
+            }
+        }
+
+        [Then(@"the call is successful")]
+        public void ThenTheCallIsSuccessful()
+        {
+            try
+            {
+                TestDataManager.CheckCallApiStatus();
             }
             catch (Exception)
             {

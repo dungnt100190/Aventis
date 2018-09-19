@@ -11,12 +11,9 @@ using Microsoft.EntityFrameworkCore;
 using Shouldly;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Globalization;
 using System.Linq;
-using System.Net.Http;
 using System.Text;
-using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 
@@ -86,21 +83,12 @@ namespace Kiss4Web.TestInfrastructure
         /// <typeparam name="T">entity type in set</typeparam>
         /// <param name="table"></param>
         /// <param name="fieldMapping">set of field name of given table and field name of entity type</param>
-        /// <param name="idFieldMapping">set of field name of given table and ID field name of table in database that it’s data refer to</param>
         /// <returns></returns>
-        public IEnumerable<T> CreateSetWithLookup<T>(Table table, Dictionary<string, string> fieldMapping = null, Dictionary<string, string> idFieldMapping = null)
+        public IEnumerable<T> CreateSetWithLookup<T>(Table table, Dictionary<string, string> fieldMapping = null)
             where T : class
         {
+            var entityProperties = typeof(T).GetProperties();
             var properties = table.Header.ToList();
-            foreach (var prop in properties)
-            {
-                if (fieldMapping != null && fieldMapping.ContainsKey(prop))
-                {
-                    table.RenameColumn(prop, fieldMapping[prop]);
-                }
-            }
-
-            properties = table.Header.ToList();
             List<T> result = new List<T>();
 
             for (var i = 0; i < table.RowCount; i++)
@@ -110,34 +98,31 @@ namespace Kiss4Web.TestInfrastructure
                 {
                     var value = table.Rows[i][prop];
 
-                    var property = typeof(T).GetProperty(prop);
+                    // Get property
+                    var propName = prop;
+                    if (fieldMapping != null && fieldMapping.ContainsKey(prop))
+                    {
+                        propName = fieldMapping[prop];
+                    }
+                    var property = entityProperties.Where(prp => string.Equals(prp.Name, propName, StringComparison.InvariantCultureIgnoreCase))?.FirstOrDefault();
                     if (property == null) continue;
 
+                    // value is null
                     if (string.Equals(value, "NULL", StringComparison.OrdinalIgnoreCase))
                     {
-                        // value of property is null
-                        property.SetValue(entity, null);
+                        if (property.PropertyType == typeof(string)) property.SetValue(entity, null);
                         continue;
                     }
 
-                    string refFieldName = null;
-                    if (prop.EndsWith("ID", StringComparison.InvariantCultureIgnoreCase) && !int.TryParse(value, out var id1))
+                    // value contains the logical name of entity (which should already be created)
+                    bool isContainsId = false;
+                    foreach (var lookup in TestDataPool.IdentifierLookup)
                     {
-                        refFieldName = prop;
-                    }
-                    if (idFieldMapping != null && idFieldMapping.ContainsKey(prop) && !int.TryParse(value, out var id2))
-                    {
-                        refFieldName = idFieldMapping[prop];
-                    }
-                    if (!string.IsNullOrEmpty(refFieldName))
-                    {
-                        // value is the logical name of entity (which should already be created)
-                        var refEntityName = GetEntityNameFromHeader(refFieldName);
-                        var lookup = TestDataPool.IdentifierLookup.Lookup(refEntityName);
-                        foreach (var item in lookup)
+                        foreach (var item in lookup.Value)
                         {
                             if (value.Contains(item.Key))
                             {
+                                isContainsId = true;
                                 value = value.Replace(item.Key, item.Value.ToString());
                                 if (value.Equals(item.Value.ToString()) && (property.PropertyType == typeof(int) || property.PropertyType == typeof(int?)))
                                 {
@@ -149,8 +134,8 @@ namespace Kiss4Web.TestInfrastructure
                                 }
                             }
                         }
-                        continue;
                     }
+                    if (isContainsId == true) continue;
 
                     if (property.PropertyType == typeof(string))
                     {
@@ -161,6 +146,12 @@ namespace Kiss4Web.TestInfrastructure
                     if (property.PropertyType == typeof(char) || property.PropertyType == typeof(char?))
                     {
                         property.SetValue(entity, char.Parse(value));
+                        continue;
+                    }
+
+                    if (property.PropertyType == typeof(bool) || property.PropertyType == typeof(bool?))
+                    {
+                        property.SetValue(entity, value == "1" ? true : false);
                         continue;
                     }
 
@@ -209,8 +200,7 @@ namespace Kiss4Web.TestInfrastructure
         /// </summary>
         /// <typeparam name="TEntity">name of table in database</typeparam>
         /// <param name="table"></param>
-        /// <param name="idFieldMapping">set of field name of this table and ID field name of other table that it’s data refer to</param>
-        public void Insert<TEntity>(Table table, Dictionary<string, string> idFieldMapping = null)
+        public void Insert<TEntity>(Table table)
             where TEntity : class
         {
             var entities = table.CreateSet<TEntity>().ToList(); // Assumption: order remains as in the table
@@ -228,11 +218,19 @@ namespace Kiss4Web.TestInfrastructure
                     foreach (var prop in properties)
                     {
                         var value = table.Rows[i][prop];
-                        var property = entityProperties.First(prp => string.Equals(prp.Name, prop, StringComparison.InvariantCultureIgnoreCase));
+
+                        // Get property
+                        var property = entityProperties.Where(prp => string.Equals(prp.Name, prop, StringComparison.InvariantCultureIgnoreCase))?.FirstOrDefault();
+                        if (property == null)
+                        {
+                            throw new KeyNotFoundException($"Field {prop} is not exists in table {entityTypeName}, please recheck name of this field in file feature");
+                        }
+
                         if (string.Equals(value, "NULL", StringComparison.OrdinalIgnoreCase))
                         {
                             // value of property is null
                             property.SetValue(entity, null);
+                            continue;
                         }
                         else if (prop.EndsWith("ID", StringComparison.InvariantCultureIgnoreCase) && !int.TryParse(value, out var id))
                         {
@@ -243,30 +241,32 @@ namespace Kiss4Web.TestInfrastructure
                                 logicalNameLookup.Add(entity, value);
 
                                 // determine that key of this entity is not identity => set key value for this new record = key value of last created record + 1
-                                object[] attrs = typeof(TEntity).GetProperty(prop).GetCustomAttributes(true);
-                                foreach (object attr in attrs)
+                                if (TestDataPool.NoneIdentityEntities.Contains(entityTypeName))
                                 {
-                                    DatabaseGeneratedAttribute dbGenAttr = attr as DatabaseGeneratedAttribute;
-                                    if (dbGenAttr != null && dbGenAttr.DatabaseGeneratedOption == DatabaseGeneratedOption.None)
-                                    {
-                                        var lastRecord = context.Set<TEntity>().OrderByField(prop, false).FirstOrDefault();
-                                        int lastRecordId = int.Parse(property.GetValue(lastRecord).ToString());
-                                        property.SetValue(entity, lastRecordId + 1);
-                                    }
+                                    var lastRecord = context.Set<TEntity>().OrderByField(prop, false).FirstOrDefault();
+                                    int lastRecordId = int.Parse(property.GetValue(lastRecord).ToString());
+                                    property.SetValue(entity, lastRecordId + 1);
                                 }
                             }
                             else
                             {
                                 // value is the logical name of another entity (which should already be created)
-                                var refFieldName = prop;
-                                if (idFieldMapping != null && idFieldMapping.ContainsKey(prop))
+                                bool isContainsId = false;
+                                foreach (var lookup in TestDataPool.IdentifierLookup)
                                 {
-                                    refFieldName = idFieldMapping[prop];
+                                    foreach (var item in lookup.Value)
+                                    {
+                                        if (value.Contains(item.Key))
+                                        {
+                                            isContainsId = true;
+                                            property.SetValue(entity, item.Value);
+                                        }
+                                    }
                                 }
-                                var refEntityName = GetEntityNameFromHeader(refFieldName);
-                                var lookup = TestDataPool.IdentifierLookup[refEntityName];
-                                var referencedEntityId = lookup[value.Normalize()];
-                                property.SetValue(entity, referencedEntityId);
+                                if (isContainsId == false)
+                                {
+                                    throw new KeyNotFoundException($"Identifier for {value} is never created, please recheck dummy test data in file feature");
+                                }
                             }
                         }
                     }
@@ -277,17 +277,22 @@ namespace Kiss4Web.TestInfrastructure
                 }
             }
 
-            // get ids for lookup & add created entity to data pool
+            // get ids for lookup
             var entityLookup = TestDataPool.IdentifierLookup.LookupAddIfMissing(typeof(TEntity).Name.Normalize(), () => new Dictionary<string, int>());
-            var createdEntities = new List<object>();
             foreach (var entity in entities.OfType<IEntity>())
             {
-                createdEntities.Add(entity);
                 var logicalName = logicalNameLookup.Lookup(entity);
                 if (logicalName != null)
                 {
                     entityLookup.Add(logicalName.Normalize(), entity.Id);
                 }
+            }
+
+            // add created entity to data pool
+            var createdEntities = new List<object>();
+            foreach (var entity in entities)
+            {
+                createdEntities.Add(entity);
             }
             TrackEntity<TEntity>(createdEntities);
         }
@@ -329,32 +334,56 @@ namespace Kiss4Web.TestInfrastructure
             StringBuilder sql = new StringBuilder();
             sql.Append($"SELECT {entityIdPropertyName} FROM {entityTypeName} WHERE 1 = 1 ");
 
-            var entityProperties = entity.GetType().GetProperties();
+            var entityProperties = typeof(TEntity).GetProperties();
             foreach (var property in entityProperties)
             {
                 if (property.Name.Equals("Id")) continue;
                 if (property.PropertyType == typeof(string))
                 {
-                    var value = property.GetValue(entity);
-                    if (value != null && !string.IsNullOrEmpty(value.ToString()))
+                    var value = property.GetValue(entity) as string;
+                    if (!string.IsNullOrEmpty(value))
                     {
                         sql.Append($"AND {property.Name} = '{value.ToString()}' ");
                     }
                 }
+                if (property.PropertyType == typeof(char) || property.PropertyType == typeof(char?))
+                {
+                    var value = property.GetValue(entity) as char?;
+                    if (value != null && value.Value != '\0')
+                    {
+                        sql.Append($"AND {property.Name} = '{value.ToString()}' ");
+                    }
+                }
+                if (property.PropertyType == typeof(bool) || property.PropertyType == typeof(bool?))
+                {
+                    var value = property.GetValue(entity) as bool?;
+                    if (value != null)
+                    {
+                        sql.Append($"AND {property.Name} = " + (value.Value == true ? 1 : 0).ToString());
+                    }
+                }
                 if (property.PropertyType == typeof(int) || property.PropertyType == typeof(int?))
                 {
-                    var value = property.GetValue(entity);
-                    if (value != null && !string.IsNullOrEmpty(value.ToString()) && int.Parse(value.ToString()) != 0)
+                    var value = property.GetValue(entity) as int?;
+                    if (value != null && value.Value != 0)
                     {
                         sql.Append($"AND {property.Name} = {value.ToString()} ");
                     }
                 }
                 if (property.PropertyType == typeof(double) || property.PropertyType == typeof(double?))
                 {
-                    var value = property.GetValue(entity);
-                    if (value != null && !string.IsNullOrEmpty(value.ToString()) && double.Parse(value.ToString()) != 0)
+                    var value = property.GetValue(entity) as double?;
+                    if (value != null && value.Value != 0)
                     {
                         sql.Append($"AND {property.Name} = {value.ToString()} ");
+                    }
+                }
+                if (property.PropertyType == typeof(DateTime) || property.PropertyType == typeof(DateTime?))
+                {
+                    var value = property.GetValue(entity) as DateTime?;
+                    if (value != null && value.Value.Year != 1)
+                    {
+                        sql.Append($"AND {property.Name} = '{value.Value.ToString("yyyy-MM-dd HH:mm:ss.fff")}' ");
                     }
                 }
             }
@@ -380,7 +409,8 @@ namespace Kiss4Web.TestInfrastructure
                     foreach (int id in dbEntities)
                     {
                         object dbEntity = Activator.CreateInstance<TEntity>();
-                        dbEntity.GetType().GetProperty(entityIdPropertyName).SetValue(dbEntity, id);
+                        var idProperty = entityProperties.First(prp => string.Equals(prp.Name, entityIdPropertyName, StringComparison.InvariantCultureIgnoreCase));
+                        idProperty.SetValue(dbEntity, id);
                         createdEntities.Add(dbEntity);
                     }
                     TrackEntity<TEntity>(createdEntities);
@@ -390,6 +420,12 @@ namespace Kiss4Web.TestInfrastructure
             actual.ShouldBe(isExists, "should be " + (isExists ? "exists" : "not exists") + ", but was " + (actual ? "exists" : "not exists"));
         }
 
+        /// <summary>
+        /// Check added or updated Record exists in database, if exists then add to data pool
+        /// </summary>
+        /// <typeparam name="TEntity"></typeparam>
+        /// <param name="isExists"></param>
+        /// <param name="isInserted"></param>
         public void CheckAddUpdateEntityExistsInDB<TEntity>(bool isExists = true, bool isInserted = true)
             where TEntity : class
         {
@@ -400,10 +436,16 @@ namespace Kiss4Web.TestInfrastructure
 
         }
 
-        public void AddToTempEntities<TEntity>(Table table, Dictionary<string, string> fieldMapping = null, Dictionary<string, string> idFieldMapping = null)
+        /// <summary>
+        /// Add the added or updated Record to Temporary Entities Pool in data pool
+        /// </summary>
+        /// <typeparam name="TEntity"></typeparam>
+        /// <param name="givenData"></param>
+        /// <param name="fieldMapping"></param>
+        public void AddToTempEntities<TEntity>(Table table, Dictionary<string, string> fieldMapping = null)
             where TEntity : class
         {
-            TestDataPool.TempEntities.AddRange(CreateSetWithLookup<TEntity>(table, fieldMapping: fieldMapping, idFieldMapping: idFieldMapping));
+            TestDataPool.TempEntities.AddRange(CreateSetWithLookup<TEntity>(table, fieldMapping: fieldMapping));
         }
 
         /// <summary>
@@ -537,12 +579,11 @@ namespace Kiss4Web.TestInfrastructure
         /// <typeparam name="T">type of element in actual data</typeparam>
         /// <param name="expectedData">expected data</param>
         /// <param name="fieldMapping">set of field name of given expected data table and field name of actual data type</param>
-        /// <param name="idFieldMapping">set of field name of given expected data table and ID field name of table in database that it’s data refer to</param>
-        public void CheckCallApiReturnData<T>(Table expectedData, Dictionary<string, string> fieldMapping = null, Dictionary<string, string> idFieldMapping = null)
+        public void CheckCallApiReturnData<T>(Table expectedData, Dictionary<string, string> fieldMapping = null)
             where T : class
         {
             var actualData = ConvertListType<T>(TestDataPool.ReturnData);
-            CheckReturnData<T>(actualData, expectedData, fieldMapping, idFieldMapping);
+            CheckReturnData<T>(actualData, expectedData, fieldMapping);
         }
 
         /// <summary>
@@ -552,14 +593,13 @@ namespace Kiss4Web.TestInfrastructure
         /// <param name="actualData">actual data</param>
         /// <param name="expectedData">expected data</param>
         /// <param name="fieldMapping">set of field name of given expected data table and field name of actual data type</param>
-        /// <param name="idFieldMapping">set of field name of given expected data table and ID field name of table in database that it’s data refer to</param>
-        public void CheckReturnData<T>(List<T> actualData, Table expectedData, Dictionary<string, string> fieldMapping = null, Dictionary<string, string> idFieldMapping = null)
+        public void CheckReturnData<T>(List<T> actualData, Table expectedData, Dictionary<string, string> fieldMapping = null)
             where T : class
         {
             actualData.ShouldNotBeNull();
             actualData.ShouldNotBeEmpty();
 
-            var expected = CreateSetWithLookup<T>(expectedData, fieldMapping, idFieldMapping).ToList();
+            var expected = CreateSetWithLookup<T>(expectedData, fieldMapping).ToList();
             actualData.ShouldBePartially(expected, expectedData.Header);
         }
 
@@ -599,7 +639,9 @@ namespace Kiss4Web.TestInfrastructure
                     foreach (var entity in TestDataPool.CreatedEntities.ElementAt(i).Value)
                     {
                         string entityIdPropertyName = TestDataPool.IdConventionExceptions.Lookup(entityTypeName) ?? $"{entityTypeName}ID";
-                        var value = entity.GetType().GetProperty(entityIdPropertyName).GetValue(entity);
+                        var entityProperties = entity.GetType().GetProperties();
+                        var idProperty = entityProperties.First(prp => string.Equals(prp.Name, entityIdPropertyName, StringComparison.InvariantCultureIgnoreCase));
+                        var value = idProperty.GetValue(entity);
 
                         string sql = $"DELETE {entityTypeName} WHERE {entityIdPropertyName} = {value};";
 
@@ -616,7 +658,7 @@ namespace Kiss4Web.TestInfrastructure
 
         private static string GetEntityNameFromHeader(string idProperty)
         {
-            var exception = TestDataPool.IdConventionExceptions.Where(kvp => kvp.Value == idProperty)
+            var exception = TestDataPool.IdConventionExceptions.Where(kvp => string.Equals(kvp.Value, idProperty, StringComparison.InvariantCultureIgnoreCase))
                                                   .Select(kvp => kvp.Key)
                                                   .FirstOrDefault();
             return (exception ?? idProperty.Substring(0, idProperty.Length - 2)).Normalize();
@@ -626,8 +668,8 @@ namespace Kiss4Web.TestInfrastructure
         {
             var options = new DbContextOptionsBuilder();
             options.UseSqlServer(_connectionString);
-            var ccmmAuditor = new CcmmAuditor("Test runner", _dateTimeProvider);
-            var historyAuditor = new HistoryVersionCreator("Test runner");
+            var ccmmAuditor = new CcmmAuditor("Test API runner", _dateTimeProvider);
+            var historyAuditor = new HistoryVersionCreator("Test API runner");
             return new Kiss4DbContext(options.Options, new IDbChangeAuditor[] { ccmmAuditor, historyAuditor });
         }
 
