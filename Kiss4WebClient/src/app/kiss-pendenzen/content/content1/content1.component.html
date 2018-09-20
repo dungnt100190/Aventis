@@ -17,7 +17,7 @@
             <dxi-item id="search-body" itemType="group" [colCount]="2">
                 <!-- begin left body -->
                 <dxi-item itemType="group" id="search-body-left">
-                    <dxi-item id="SC001_search_status" dataField="Status" [label]="{text: 'Status'}" editorType="dxSelectBox">
+                    <dxi-item id="SC001_search_status" dataField="status" [label]="{text: 'Status'}" editorType="dxSelectBox">
                         <dx-select-box id="SC001_search_status-select"
                             placeholder="Auswählen..."
                             [dataSource]="itemsStatus"
@@ -30,7 +30,7 @@
                             [(value)]="idStatusSelected">
                         </dx-select-box>
                     </dxi-item>
-                    <dxi-item id="SC001_search_pendenz-typ" dataField="Pendenz Typ" [label]="{text: 'Pendenz Typ'}" editorType="dxSelectBox">
+                    <dxi-item id="SC001_search_pendenz-typ" dataField="pendenzTyp" [label]="{text: 'Pendenz Typ'}" editorType="dxSelectBox">
                         <dx-select-box id="SC001_search_type-select"
                             placeholder="Auswählen..."
                             [dataSource]="itemsPendenzTyp"
@@ -43,9 +43,9 @@
                             [(value)]="idPendenzType">
                         </dx-select-box>
                     </dxi-item>
-                    <dxi-item id="SC001_search_betreff" dataField="Betreff" [label]="{text: 'Betreff'}" placeholder="Betreff..." [editorOptions]="{ onValueChanged: onValueChangedBetreff }"></dxi-item> <!--[editorOptions]="{ onValueChanged: handleBetreffChanged }"-->
+                    <dxi-item id="SC001_search_betreff" dataField="betreff" [label]="{text: 'Betreff'}" placeholder="Betreff..." [editorOptions]="{ onValueChanged: onValueChangedBetreff }"></dxi-item> <!--[editorOptions]="{ onValueChanged: handleBetreffChanged }"-->
                     <!-- Ersteller grid1 -->
-                    <dxi-item id="SC001_search_ersteller" dataField="Ersteller" [label]="{text: 'Ersteller'}">
+                    <dxi-item id="SC001_search_ersteller" dataField="ersteller" [label]="{text: 'Ersteller'}">
                         <dx-drop-down-box id="SC001_search_creator-dropdown"
                         [dataSource]="grid1DataSource"
                         [(opened)]="isgrid1Opened"
@@ -77,7 +77,7 @@
                         </dx-drop-down-box>
                     </dxi-item>
                     <!-- Empfänger grid2 -->
-                    <dxi-item id="SC001_search_empfanger"  dataField="Empfänger" [label]="{text: 'Empfänger'}">
+                    <dxi-item id="SC001_search_empfanger"  dataField="empfanger" [label]="{text: 'Empfänger'}">
                         <dx-drop-down-box id="SC001_search_receiver-dropdown"
                         [dataSource]="grid2DataSource"
                         [(value)]="grid2BoxValue"
@@ -109,15 +109,15 @@
                         </dx-drop-down-box>
                     </dxi-item>
 
-                    <dxi-item id="SC001_search_name-klient-in" dataField="Name Klient/in" [label]="{text: 'Name Klient/in'}" [editorOptions]="{ onValueChanged: onNameKlientInValueChanged }"></dxi-item>  <!--[editorOptions]="{ onValueChanged: handleNameChanged }"-->
-                    <dxi-item id="SC001_search_vorname-klient-in" dataField="Vorname Klient/in" [label]="{text: 'Vorname Klient/in'}" [editorOptions]="{ onValueChanged: onVornameKlientInValueChanged }"></dxi-item> <!--[editorOptions]="{ onValueChanged: handleVornameChanged }"-->
+                    <dxi-item id="SC001_search_name-klient-in" dataField="nameKlientin" [label]="{text: 'Name Klient/in'}" [editorOptions]="{ onValueChanged: onNameKlientInValueChanged }"></dxi-item>  <!--[editorOptions]="{ onValueChanged: handleNameChanged }"-->
+                    <dxi-item id="SC001_search_vorname-klient-in" dataField="vornameKlientin" [label]="{text: 'Vorname Klient/in'}" [editorOptions]="{ onValueChanged: onVornameKlientInValueChanged }"></dxi-item> <!--[editorOptions]="{ onValueChanged: handleVornameChanged }"-->
                 </dxi-item>
                 <!-- end left body -->
                 <!-- begin right body -->
                 <dxi-item id="search-body-right" itemType="group">
                     <dxi-item id="SC001_search_fallnummer" dataField="fallnummer" [label]="{text: 'Fallnummer'}" [editorOptions]="{ onValueChanged: onFallnummerValueChanged, mask: '999999999', maskChar: ' '}"></dxi-item> <!--[editorOptions]="{ onValueChanged: handleFallnummerChanged }"-->
                     <!-- Leistungsverantw grid3 -->
-                    <dxi-item id="SC001_search_leistungsverantw" dataField="Leistungsverantw" [label]="{text: 'Leistungsverantw.'}">
+                    <dxi-item id="SC001_search_leistungsverantw" dataField="leistungsverantw" [label]="{text: 'Leistungsverantw.'}">
                         <dx-drop-down-box id="SC001_search_leistungsverantw-dropdown"
                         [dataSource]="grid3DataSource"
                         [(value)]="grid3BoxValue"
@@ -149,7 +149,7 @@
                         </dx-drop-down-box>
                     </dxi-item>
 
-                    <dxi-item id="SC001_search_organisationseinheit" dataField="Organisationseinheit" [label]="{text: 'Organisationseinheit'}" editorType="dxSelectBox">
+                    <dxi-item id="SC001_search_organisationseinheit" dataField="organisationseinheit" [label]="{text: 'Organisationseinheit'}" editorType="dxSelectBox">
                         <dx-select-box id="SC001_search_organization-select"
                             [placeholder]="'Auswählen...'"
                             [dataSource]="itemsOrganisationseinheit"
@@ -163,7 +163,7 @@
                         </dx-select-box>
                     </dxi-item>
 
-                    <dxi-item id="SC001_search_erfasst" dataField="Erfasst" [label]="{text: 'Erfasst'}" itemType="group" [colCount]="2">
+                    <dxi-item id="SC001_search_erfasst" dataField="erfasst" [label]="{text: 'Erfasst'}" itemType="group" [colCount]="2">
                         <dx-box id="SC001_search_detected-box" direction="row" width="100%">
                             <dxi-item id="SC001_search_erfasst-from" [ratio]="5">
                                 <dx-date-box id="SC001_search_detected-box-item1-date" type="date" displayFormat="dd.MM.yyyy" width="100%" [showClearButton]="true" [(value)]="strFromErfasst" [acceptCustomValue]="false" (onInitialized)="onInitializedDateBox($event)" (onValueChanged)="onErfasstFromValueChanged($event)">
@@ -181,7 +181,7 @@
                         </dx-box>
                     </dxi-item>
 
-                    <dxi-item id="SC001_search_fallig" dataField="Fällig" [label]="{text: 'Fällig'}" itemType="group" [colCount]="2">
+                    <dxi-item id="SC001_search_fallig" dataField="fallig" [label]="{text: 'Fällig'}" itemType="group" [colCount]="2">
                         <dx-box id="SC001_search_due-box" direction="row" width="100%">
                             <dxi-item id="SC001_search_fallig-from" [ratio]="5">
                                 <dx-date-box id="SC001_search_due-box-item1-date" type="date" displayFormat="dd.MM.yyyy" width="100%" [showClearButton]="true" [(value)]="strFromFallig" [acceptCustomValue]="false" (onInitialized)="onInitializedDateBox($event)" (onValueChanged)="onFalligFromValueChanged($event)">
@@ -199,7 +199,7 @@
                         </dx-box>
                     </dxi-item>
 
-                    <dxi-item id="SC001_search_bearbeitung" dataField="Bearbeitung" [label]="{text: 'Bearbeitung'}" itemType="group" [colCount]="2">
+                    <dxi-item id="SC001_search_bearbeitung" dataField="bearbeitung" [label]="{text: 'Bearbeitung'}" itemType="group" [colCount]="2">
                         <dx-box id="SC001_search_processing-box" direction="row" width="100%">
                             <dxi-item id="SC001_search_bearbeitung-from" [ratio]="5">
                                 <dx-date-box id="SC001_search_processing-box-item1-date" type="date" displayFormat="dd.MM.yyyy" width="100%" [showClearButton]="true" [(value)]="strFromBearbeitung" [acceptCustomValue]="false" (onInitialized)="onInitializedDateBox($event)" (onValueChanged)="onBearbeitungFromValueChanged($event)">
@@ -217,7 +217,7 @@
                         </dx-box>
                     </dxi-item>
 
-                    <dxi-item id="SC001_search_erledigt" dataField="Erledigt" [label]="{text: 'Erledigt'}" itemType="group" [colCount]="2" >
+                    <dxi-item id="SC001_search_erledigt" dataField="erledigt" [label]="{text: 'Erledigt'}" itemType="group" [colCount]="2" >
                         <dx-box id="SC001_search_done-box" direction="row" width="100%">
                             <dxi-item id="SC001_search_erledigt-from" [ratio]="5">
                                 <dx-date-box id="SC001_search_done-box-item1-date" type="date" displayFormat="dd.MM.yyyy" width="100%" [showClearButton]="true" [(value)]="strFromErledigt" [acceptCustomValue]="false" (onInitialized)="onInitializedDateBox($event)" (onValueChanged)="onErledigtFromValueChanged($event)">
